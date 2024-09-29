@@ -3,6 +3,9 @@ layout: base
 title: Home
 ---
 
-$\sqrt{x}$
+# Linear Algebra
 
-$$\sqrt{x}$$
+* [Exponential, Cosine and Sine Functions](linear-algebra/exponential-cosine-sine-functions.md)
+* Complex Numbers
+* Vectors
+* Vector Spaces
