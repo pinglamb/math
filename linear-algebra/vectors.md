@@ -228,7 +228,7 @@ with $0 \le \theta \le \pi$ with definition similar to dot product (non-reflex a
 
 3. $\mathbf{a} \times \mathbf{b}$ has the direction defined by "right-hand rule" ($\mathbf{a}$ - index finger, $\mathbf{b}$ - second finger, $\mathbf{a} \times \mathbf{b}$ - thumb)
 
-<p align="center"><img src="../.gitbook/assets/vector-product.png" alt=""></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/72e22713-a95f-4669-a054-fd55797a74be" alt=""></p>
 
 Consider a triangle with vertices $O, A, B$, we have area of $OAB$ equals to ${1 \over 2}\|\mathbf{a}\|\|\mathbf{b}\| \sin \theta = {1 \over 2}\|\mathbf{a} \times \mathbf{b}\|$,
 and area of parallelogram $OACB$ equals to $\|\mathbf{a} \times \mathbf{b}\|$, with the direction of $\mathbf{a} \times \mathbf{b}$ orthogonal to the triangle/parallelogram.
@@ -269,7 +269,7 @@ The vector product $\mathbf{\hat{a}} \times \mathbf{b}$ can be constructed by tw
 First project $\mathbf{b}$ onto a plane orthogonal to $\mathbf{\hat{a}}$ and then rotate the projection $\mathbf{b'}$ by $\pi/2$ in "anti-clockwise" direction
 (when looking in the opposite direction of $\mathbf{\hat{a}}$) to form $\mathbf{b''}$.
 
-<p align="center"><img src="../.gitbook/assets/Screenshot 2024-09-27 at 5.08.53 PM.png" alt=""></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/5eac629b-5ea6-4bb8-85b8-8fb42ef0d2e4" alt=""></p>
 
 We can see that $\|\mathbf{b}''\| = \|\mathbf{b'}\| = \|\mathbf{b}\| \sin \theta$.
 By construction, $\mathbf{b''} = \mathbf{\hat{a}} \times \mathbf{b}$.
