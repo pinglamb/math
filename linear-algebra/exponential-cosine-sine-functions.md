@@ -3,6 +3,8 @@ layout: base
 title: Exponential, Cosine and Sine Functions
 ---
 
+# Exponential, Cosine and Sine Functions
+
 The intuition on the meaning of $e^x$ with $x \in \mathbb{Z}_{>0}$ is multiplying $e$ by itself $x$ times and we also have $e^{-x} = 1/e^x$.
 However, when $$x$$ is irrational, or even complex, this definition is not clear and hence we need a better definition which caters for that.
 Similarily, the trigonometric functions $\cos(x)$ and $\sin(x)$ can also be extended beyond $x$ being some sort of angles, e.g. $x \in \mathbb{C}$.
