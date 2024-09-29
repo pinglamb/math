@@ -2,7 +2,7 @@ title: Math Notebook
 author:
   name: pinglamb
 
-remote_theme: minima
+remote_theme: jekyll/minima
 
 header_pages:
   - README.md
