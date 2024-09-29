@@ -283,7 +283,95 @@ with a similar argument as the proof in dot product.
 
 ## Triple Products
 
+### Scalar Triple Product
+
+The scalar triple product is defined by
+
+$$
+[\mathbf{a}, \mathbf{b}, \mathbf{c}] = \mathbf{a} \cdot(\mathbf{b} \times \mathbf{c})
+$$
+
+Assume $\mathbf{a}, \mathbf{b}, \mathbf{c}$ have the sense of the right-hand rule,
+the volume of a parallelepiped is given by $[\mathbf{a}, \mathbf{b}, \mathbf{c}]$.
+
+<p align="center"><img src="https://github.com/user-attachments/assets/6e5060f2-f1a6-4ec5-8527-3026620d1f61" alt=""></p>
+
+Since the order of $\mathbf{a}, \mathbf{b}, \mathbf{c}$ doesn't affect the volume, we have
+
+$$
+[\mathbf{a}, \mathbf{b}, \mathbf{c}] = [\mathbf{b}, \mathbf{c}, \mathbf{a}] = [\mathbf{c}, \mathbf{a}, \mathbf{b}] = -[\mathbf{b}, \mathbf{a}, \mathbf{c}] = - [\mathbf{a}, \mathbf{c}, \mathbf{b}] = - [\mathbf{c}, \mathbf{b}, \mathbf{a}]
+$$
+
+As $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \mathbf{c} \cdot (\mathbf{a} \times \mathbf{b})$ and dot product is commutative, we have
+
+$$
+\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}
+$$
+
+### Vector Triple Product
+
+The vector triple product is defined by
+
+$$
+(\mathbf{a} \times \mathbf{b}) \times \mathbf{c} = - \mathbf{c} \times (\mathbf{a} \times \mathbf{b}) = - (\mathbf{b} \times \mathbf{a}) \times \mathbf{c} = \mathbf{c} \times (\mathbf{b} \times \mathbf{a})
+$$
+
 ## Bases and Components
+
+### Linear Dependency
+
+In $\mathbb{R}^3$ (similar argument for $\mathbb{R}^2$, the vector
+
+$$
+\mathbf{d} = \lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}
+$$
+
+is described as a linear combination of $\mathbf{a},\mathbf{b}, \mathbf{c}$.
+
+If for vectors $\mathbf{a},\mathbf{b}, \mathbf{c}$,
+
+$$
+\lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}= \mathbf{0} \iff \lambda = \mu = \nu = 0
+$$
+
+then $\mathbf{a},\mathbf{b}, \mathbf{c}$ are linear independent. The reason for that is if let say $\lambda \not = 0$,
+we can write $\mathbf{a} = -{\mu \over \lambda}\mathbf{b} - {\nu \over \lambda}\mathbf{c}$,
+which is a linear combination of other vectors and therefore they are linearly dependent.
+
+### Spanning Set and Basis
+
+A set of vectors $\\{\mathbf{a}, \mathbf{b}\\}$ is a spanning set which spans $\mathbb{R}^2$ if for all vectors $\mathbf{r} \in \mathbb{R}^2$, there exists some $\lambda, \mu \in \mathbb{R}$ such that
+
+$$
+\mathbf{r} = \lambda\mathbf{a} + \mu\mathbf{b}
+$$
+
+$\\{\mathbf{a}, \mathbf{b}\\}$ spans $\mathbb{R}^2$ if $\mathbf{a} \times \mathbf{b} = \mathbf{0}$ (non-parallel).
+
+For any vector $\mathbf{r} \in \mathbb{R}^2$, the components $(\lambda, \mu)$ are _unique_.
+
+We said $\\{\mathbf{a}, \mathbf{b}\\}$ is a basis of the set of vectors in $\mathbb{R}^2$ if it is a spanning set and linear independent.
+
+In $\mathbb{R}^2$, to find $\lambda$ and $\mu$ for $\vec{OP}$ geometrically, we can draw a line through $P$ which is parallel to $OA$ and intersects with $OB$ (or its extension) at $N$.
+We have $\vec{OP} = \vec{ON} + \vec{NP} = \mu\mathbf{b} + \lambda\mathbf{a}$.
+
+The same concept can be extended to $\mathbb{R}^3$,
+a set of vectors $\\{\mathbf{a}, \mathbf{b}\\}, \mathbf{c}\\}$ is a spanning set which spans $\mathbb{R}^3$ if for all vectors $\mathbf{r} \in \mathbb{R}^3$, there exists some $\lambda, \mu, \nu \in \mathbb{R}$ such that
+
+$$
+\mathbf{r} = \lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}
+$$
+
+$\\{\mathbf{a}, \mathbf{b}, \mathbf{c}\\}$ spans $\mathbb{R}^3$ if $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = 0$ (non-coplanar) and is a basis of $\mathbb{R}^3$.
+
+The components $(\lambda, \mu, \nu)$ are _unique_.
+For any $\mathbf{r} = \lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c}$, we have
+
+$$
+\mathbf{r} \cdot (\mathbf{b} \times \mathbf{c}) = \lambda \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) + \mu \mathbf{b} \cdot (\mathbf{b} \times \mathbf{c}) + \nu \mathbf{c} \cdot (\mathbf{b} \times \mathbf{c}) = \lambda \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})
+$$
+
+Therefore, $\lambda = [\mathbf{r}, \mathbf{b}, \mathbf{c}]/[\mathbf{a}, \mathbf{b}, \mathbf{c}]$ which is unique and similarily for $\mu, \nu$.
 
 ## Vector Equations
 
