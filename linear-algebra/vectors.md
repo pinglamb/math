@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Vectors
+title: Vectors | Linear Algebra
 ---
 
 # Vectors
@@ -402,7 +402,7 @@ $$
 For unit vector $\mathbf{\hat{v}}$, we can write
 
 $$
-\mathbf{\hat{t}} = (\cos \alpha, \cos \beta, \cos \gamma)
+\mathbf{\hat{v}} = (\cos \alpha, \cos \beta, \cos \gamma)
 $$
 
 which is called the direction cosines of $\mathbf{\hat{v}}$.
