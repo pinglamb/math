@@ -1,6 +1,7 @@
 title: Math Notebook
 author:
   name: pinglamb
+markdown: kramdown
 
 remote_theme: jekyll/minima
 
