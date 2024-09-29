@@ -1,1 +1,11 @@
+title: Math Notebook
+author:
+  name: pinglamb
+
 theme: minima
+
+header_pages:
+  - summary.md
+
+minima:
+  skin: dark
