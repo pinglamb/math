@@ -2,10 +2,13 @@ title: Math Notebook
 author:
   name: pinglamb
 
-theme: minima
+remote_theme: minima
 
 header_pages:
-  - summary.md
+  - README.md
 
 minima:
   skin: dark
+
+plugins:
+  - jekyll-remote-theme
