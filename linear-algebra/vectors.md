@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Vectors | Linear Algebra
+title: Vectors &#124; Linear Algebra
 ---
 
 # Vectors
@@ -382,12 +382,12 @@ For a Cartesian basis, we have the basis vectors being the unit vectors along th
 With that, we have
 
 $$
-\begin{align*}
+\begin{gather}
 \mathbf{i} \cdot \mathbf{i} = \mathbf{j} \cdot \mathbf{j} = \mathbf{k} \cdot \mathbf{k} = 1 \\
 \mathbf{i} \cdot \mathbf{j} = \mathbf{j} \cdot \mathbf{k} = \mathbf{k} \cdot \mathbf{i} = 0 \\
 \mathbf{i} \times \mathbf{j} = \mathbf{k} \quad \mathbf{j} \times \mathbf{k} = \mathbf{i} \quad \mathbf{k} \times \mathbf{i} = \mathbf{j} \\
 [\mathbf{i}, \mathbf{j}, \mathbf{k}] = 1
-\end{align*}
+\end{gather}
 $$
 
 For any point $P$ with coordinates $(x, y, z)$, we can see that $\vec{OP} = \mathbf{v} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$,
