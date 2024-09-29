@@ -2,9 +2,9 @@ title: My Math Journey
 author:
   name: pinglamb
 
-markdown: kramdown
-kramdown:
-  input: GFM
+# markdown: kramdown
+# kramdown:
+#   input: GFM
 
 header_pages:
   - index.md
