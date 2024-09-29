@@ -1,8 +1,3 @@
----
-layout: base
-title: Home
----
+# My Math Journey
 
-$\sqrt{x}$
-
-$$\sqrt{x}$$
+https://blog.pinglamb.com/math/
