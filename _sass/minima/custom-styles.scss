@@ -1,3 +1,7 @@
+.wrapper {
+  max-width: calc(964px - (30px * 2));
+}
+
 .site-header {
   border-top: none;
   border-bottom: 1px solid #222222;
@@ -8,8 +12,11 @@
   }
 }
 
+.site-header .wrapper {
+}
+
 .site-title {
-  color: #efefef !default;
+  color: #efefef;
   @include relative-font-size(1.25);
   font-weight: bold;
 }
