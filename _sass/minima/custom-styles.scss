@@ -12,11 +12,8 @@
   }
 }
 
-.site-header .wrapper {
-}
-
-.site-title {
-  color: #efefef;
+.site-title, .site-title:visited {
+  color: #efefef !important;
   @include relative-font-size(1.25);
   font-weight: bold;
 }
