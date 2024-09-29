@@ -373,6 +373,40 @@ $$
 
 Therefore, $\lambda = [\mathbf{r}, \mathbf{b}, \mathbf{c}]/[\mathbf{a}, \mathbf{b}, \mathbf{c}]$ which is unique and similarily for $\mu, \nu$.
 
+## Cartesian/Standard Basis
+
+Although any three vectors can be as basis in $mathbb{R}^3$ as long as $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = 0$,
+things can be simplified if the basis vectors are orthogonal, have unit magnitude.
+For a Cartesian basis, we have the basis vectors being the unit vectors along the $x, y, z$ axes, and denoted by $\mathbf{i}, \mathbf{j}, \mathbf{k}$.
+
+With that, we have
+
+$$
+\begin{align*}
+\mathbf{i} \cdot \mathbf{i} = \mathbf{j} \cdot \mathbf{j} = \mathbf{k} \cdot \mathbf{k} = 1 \\
+\mathbf{i} \cdot \mathbf{j} = \mathbf{j} \cdot \mathbf{k} = \mathbf{k} \cdot \mathbf{i} = 0 \\
+\mathbf{i} \times \mathbf{j} = \mathbf{k} \quad \mathbf{j} \times \mathbf{k} = \mathbf{i} \quad \mathbf{k} \times \mathbf{i} = \mathbf{j} \\
+[\mathbf{i}, \mathbf{j}, \mathbf{k}] = 1
+\end{align*}
+$$
+
+For any point $P$ with coordinates $(x, y, z)$, we can see that $\vec{OP} = \mathbf{v} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$,
+hence we can have the notation $\mathbf{v} = (x, y, z)$ and it is called the Cartesian components of $\mathbf{v}$.
+
+Also, by "dotting" $\mathbf{v}$ by $\mathbf{i}, \mathbf{j}, \mathbf{k}$ respectively, we can conclude
+
+$$
+\mathbf{v} = (\mathbf{v} \cdot \mathbf{i}, \mathbf{v} \cdot \mathbf{j},\mathbf{v} \cdot \mathbf{k})
+$$
+
+For unit vector $\mathbf{\hat{v}}$, we can write
+
+$$
+\mathbf{\hat{t}} = (\cos \alpha, \cos \beta, \cos \gamma)
+$$
+
+which is called the direction cosines of $\mathbf{\hat{v}}$.
+
 ## Vector Equations
 
 ## Lines, Planes and Spheres
