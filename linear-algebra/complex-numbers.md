@@ -108,7 +108,7 @@ $$
 
 ### Definition
 
-The _modulus_ $|z|$ of $z$ is defined by
+The _modulus_ $\|z\|$ of $z$ is defined by
 
 $$
 |z| = \sqrt{a^2 + b^2}
@@ -175,7 +175,7 @@ $$
 
 ### By Cosine/Sine Functions
 
-For $z = x + yi$, base on the definition of modulus $r = |z|$ and argument $\theta = \arg(z)$, we have
+For $z = x + yi$, base on the definition of modulus $r = \|z\|$ and argument $\theta = \arg(z)$, we have
 
 $$
 \begin{align*}
@@ -222,7 +222,7 @@ $$
 z_1z_2 = (r_1e^{i\theta_1})(r_2e^{i\theta_2}) = r_1r_2e^{i(\theta_1 + \theta_2)}
 $$
 
-Hence, geometrically, multiplication of $z_1$ by $z_2$ scales $z_1$ by $|z_2|$ and rotates $z_1$ by $\arg(z_2)$.
+Hence, geometrically, multiplication of $z_1$ by $z_2$ scales $z_1$ by $\|z_2\|$ and rotates $z_1$ by $\arg(z_2)$.
 
 ### Properties
 
@@ -373,13 +373,13 @@ $$
 |z - u|^2 = |z - v|^2
 $$
 
-is a straight line. As $|z - u|^2 = (z - u)(\bar{z} - \bar{u})$ and $|z - v|^2 = (z - v)(\bar{z} - \bar{v})$, we have
+is a straight line. As $\|z - u\|^2 = (z - u)(\bar{z} - \bar{u})$ and $\|z - v\|^2 = (z - v)(\bar{z} - \bar{v})$, we have
 
 $$
 (\bar{v} - \bar{u})z + (v - u)\bar{z} + |u|^2 + |v|^2 = 0
 $$
 
-Hence, let $a = v -u$ and $b = |u|^2 + |v|^2 \in \mathbb{R}$, we have a general representation
+Hence, let $a = v -u$ and $b = \|u\|^2 + \|v\|^2 \in \mathbb{R}$, we have a general representation
 
 $$
 \bar{a}z + a\bar{z} + b = 0
@@ -407,7 +407,7 @@ $$
 |z - w| = r
 $$
 
-Since $r^2 = |z - w|^2 = (z - w)(\bar{z} - \bar{w})$,
+Since $r^2 = \|z - w\|^2 = (z - w)(\bar{z} - \bar{w})$,
 
 $$
 z\bar{z} - (z\bar{w} + \bar{z}w) + |w|^2 = r^2
