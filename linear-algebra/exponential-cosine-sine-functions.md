@@ -10,7 +10,7 @@ However, when $$x$$ is irrational, or even complex, this definition is not clear
 Similarily, the trigonometric functions $\cos(x)$ and $\sin(x)$ can also be extended beyond $x$ being some sort of angles, e.g. $x \in \mathbb{C}$.
 The definition of them by power series provides a great extension to evaluate them on different kinds of numbers, with the basic properties preserved.
 
-# Exponential Function
+## Exponential Function
 
 The exponential function, $\exp(x)$, is defined by the power series
 
@@ -61,7 +61,7 @@ $$
 \exp(z) = \sum_{n=0}^{\infty} {z^n \over n!}
 $$
 
-# Trigonometric Functions
+## Trigonometric Functions
 
 Similarily, we have the definion of cosine and sine base on power series
 
@@ -75,7 +75,7 @@ $$
 
 which allows us to extend the definition to having $x \in \mathbb{C}$.
 
-# Relationship between them
+## Relationship between them
 
 When $x \in \mathbb{R}$, we don't really see a relationship between them as $\exp(x)$ appears to be ever-growing function and $\cos(x)$ and $\sin(x)$ are periodic functions oscillating between $1$ and $-1$.
 
@@ -103,7 +103,7 @@ $$
 e^{i\pi} = -1
 $$
 
-# Remarks
+## Remarks
 
 Most of the proof above aims to illustrate the ideas behind and should not be considered rigorous.
 As the power series are infinite sum, a rigorous proof has to consider the convergence of the series in different situations.
