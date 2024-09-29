@@ -1,13 +1,15 @@
 title: Math Notebook
 author:
   name: pinglamb
-markdown: kramdown
 
-remote_theme: jekyll/minima
+markdown: kramdown
+kramdown:
+  input: GFM
 
 header_pages:
   - README.md
 
+remote_theme: jekyll/minima
 minima:
   skin: dark
 
