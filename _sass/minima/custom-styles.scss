@@ -1,0 +1,9 @@
+.site-header {
+  border-top: none;
+  border-bottom: 1px solid $border-color-01;
+}
+
+.site-title {
+  @include relative-font-size(1.25);
+  font-weight: bold;
+}
