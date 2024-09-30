@@ -507,6 +507,47 @@ $$
 
 We can see that the resulting vector has no component in direction $\mathbf{a}$ (outside the parentheses) because the resulting vector after the last vector multiplication by $\mathbf{a}$ is orthogonal to $\mathbf{a}$.
 
+## Vector Geometry
+
+### Lines
+
+Similar to point-slope form, let $P$ be a point on the line passing through $A$ and parallel to $\mathbf{t}$, we have
+
+$$
+\vec{OP} = \vec{OA} + \vec{AP}
+$$
+
+or
+
+$$
+\mathbf{x} = \mathbf{a} + \lambda\mathbf{t}
+$$
+
+with $\lambda \in \mathbb{R}$.
+
+As $\mathbf{x} - \mathbf{a} = \lambda\mathbf{t}$, an alternative form of the line is
+
+$$
+(\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}
+$$
+
+For a line passing through two points $A$ and $B$, as $\mathbf{t} = \mathbf{b} - \mathbf{a}$ represents a vector parallel to the line,
+according to the above we have the following parametric form
+
+$$
+\mathbf{x} = \mathbf{a} + \lambda(\mathbf{b} - \mathbf{a}) = (1 - \lambda)\mathbf{a} + \lambda\mathbf{b}
+$$
+
+or after eliminating $\lambda$,
+
+$$
+(\mathbf{x} - \mathbf{a}) \times (\mathbf{b} - \mathbf{a}) = \mathbf{0}
+$$
+
+### Planes
+
+### Spheres
+
 ## Vector Equations
 
 We use vector manipulation on the equation so to simplify the terms, normally by dotting or crossing the equation with some vectors.
@@ -524,8 +565,6 @@ $$
 $$
 
 This is another technique [here](https://math.stackexchange.com/questions/3879932/how-to-solve-the-vector-equation-mathbfr-mathbfr-times-mathbfd-m).
-
-## Lines, Planes and Spheres
 
 ## References
 
