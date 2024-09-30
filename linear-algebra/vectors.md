@@ -509,6 +509,22 @@ We can see that the resulting vector has no component in direction $\mathbf{a}$ 
 
 ## Vector Equations
 
+We use vector manipulation on the equation so to simplify the terms, normally by dotting or crossing the equation with some vectors.
+
+For example,
+
+$$
+\mathbf{x} - (\mathbf{x} \times \mathbf{a}) \times \mathbf{b} = \mathbf{c}
+$$
+
+After dotting with $\mathbf{b}$ and some substitutions, we will have
+
+$$
+\mathbf{x} = {\mathbf{c} + (\mathbf{c} \cdot \mathbf{b})a \over 1 + \mathbf{a} \cdot \mathbf{b}}
+$$
+
+This is another technique [here](https://math.stackexchange.com/questions/3879932/how-to-solve-the-vector-equation-mathbfr-mathbfr-times-mathbfd-m).
+
 ## Lines, Planes and Spheres
 
 ## References
