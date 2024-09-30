@@ -3,6 +3,10 @@ layout: base
 title: Home
 ---
 
+## Geometry
+
+* [Apollonian Circles](geometry/apollonian-circles.md)
+
 ## Linear Algebra
 
 * [Exponential, Cosine and Sine Functions](linear-algebra/exponential-cosine-sine-functions.md)
