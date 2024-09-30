@@ -332,6 +332,12 @@ $$
 (\mathbf{a} \times \mathbf{b}) \times \mathbf{c} = - \mathbf{c} \times (\mathbf{a} \times \mathbf{b}) = - (\mathbf{b} \times \mathbf{a}) \times \mathbf{c} = \mathbf{c} \times (\mathbf{b} \times \mathbf{a})
 $$
 
+We will later see that
+
+$$
+\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c}
+$$
+
 ## Bases and Components
 
 ### Linear Dependency
@@ -422,6 +428,84 @@ $$
 $$
 
 which is called the direction cosines of $\mathbf{\hat{v}}$.
+
+### Vector Component Identities
+
+With the use of standard basis, some of the numeric operations of vectors can be simplified.
+Given
+
+$$
+\begin{align*}
+\mathbf{a} &= a_x\mathbf{i} + a_y\mathbf{j} + a_z\mathbf{k} \\
+\mathbf{b} &= b_x\mathbf{i} + b_y\mathbf{j} + b_z\mathbf{k} \\
+\mathbf{c} &= c_x\mathbf{i} + c_y\mathbf{j} + c_z\mathbf{k}
+\end{align*}
+$$
+
+For addition,
+
+$$
+\lambda\mathbf{a} + \mu\mathbf{b} = (\lambda a_x + \mu b_x)\mathbf{i} + (\lambda a_y + \mu b_y)\mathbf{j} + (\lambda c_x + \mu c_x)\mathbf{k}
+$$
+
+For scalar product,
+
+$$
+\mathbf{a} \cdot \mathbf{b} = a_x b_x + a_y b_y + a_z b_z
+$$
+
+For vector product,
+
+$$
+\mathbf{a} \times \mathbf{b} = (a_y b_z - a_z b_y)\mathbf{i} + (a_z b_x - a_x b_z)\mathbf{j} + (a_x b_y - a_y b_x)\mathbf{k}
+$$
+
+or
+
+$$
+\mathbf{a} \times \mathbf{b} = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+a_x & a_y & a_z \\
+b_x & b_y & b_z \\
+\end{vmatrix}
+$$
+
+For scalar triple product,
+
+$$
+[\mathbf{a}, \mathbf{b}, \mathbf{c}] = a_x b_y c_z + a_y b_z c_x + a_z b_x c_y - a_x b_z c_y - a_y b_x c_z - a_z b_y c_x
+$$
+
+or
+
+$$
+[\mathbf{a}, \mathbf{b}, \mathbf{c}] = \begin{vmatrix}
+a_x & a_y & a_z \\
+b_x & b_y & b_z \\
+c_x & c_y & c_z \\
+\end{vmatrix}
+$$
+
+For vector product, consider the $x$-component of the product
+
+$$
+\begin{align*}
+\left(\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) \right)_x = \left( \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) \right) \cdot \mathbf{i} &= a_y(\mathbf{b} \times \mathbf{c})_z - a_z(\mathbf{b} \times \mathbf{c})_y \\
+&= a_y(b_x c_y - b_y c_x) - a_z(b_z c_x - b_x c_z) \\
+&= (a_y c_y + a_z c_z)b_x - (a_z b_z + a_y c_y)c_x + a_x b_x c_x - a_x b_x c_x \\
+&= (\mathbf{a} \cdot \mathbf{c})b_x - (\mathbf{a} \cdot \mathbf{b})c_x \\
+&= \left( (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c} \right) \cdot \mathbf{i} \\
+&= \left( (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c} \right)_x \\
+\end{align*}
+$$
+
+Similar results will be arrived for $y$-component and $z$-component, hence
+
+$$
+\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c}
+$$
+
+We can see that the resulting vector has no component in direction $\mathbf{a}$ (outside the parentheses) because the resulting vector after the last vector multiplication by $\mathbf{a}$ is orthogonal to $\mathbf{a}$.
 
 ## Vector Equations
 
