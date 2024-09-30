@@ -214,6 +214,22 @@ $$
 
 In fact, as scalar multiplication of vectors in real vector spaces is commutative, we also have linearity in the first argument (which might not be true in other vector spcaes).
 
+### Cauchy-Schwarz Inequality
+
+For all $\mathbf{a}, \mathbf{b} \in \mathbb{R}^2$/,
+
+$$
+| \mathbf{a} \cdot \mathbf{b} | \le | \mathbf{a}| | \mathbf{b}|
+$$
+
+By definition,
+
+$$
+|\mathbf{a} \cdot \mathbf{b}| = |\mathbf{a}||\mathbf{b}||\cos \theta| \le |\mathbf{a}||\mathbf{b}|
+$$
+
+with equality holds when $\mathbf{a} = \mathbf{0}$ or $\mathbf{b} = \mathbf{0}$ or $\mathbf{a} = \lambda\mathbf{b}$.
+
 ## Vector Product
 
 The vector/cross product $\mathbf{a} \times \mathbf{b}$ of an ordered pair $\mathbf{a}, \mathbf{b}$ is a vector such that
