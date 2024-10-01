@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Exponential, Cosine and Sine Functions
+title: Exponential, Cosine and Sine Functions &#124; Linear Algebra
 ---
 
 # Exponential, Cosine and Sine Functions

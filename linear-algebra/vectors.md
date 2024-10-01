@@ -7,7 +7,7 @@ title: Vectors &#124; Linear Algebra
 
 The discussion here focuses on vectors in 2D and 3D spaces, i.e. $\mathbb{R}^2$ and $\mathbb{R}^3$.
 It begins from defining vectors and various operations among them geometrically.
-It then can be extended to algebraic definitions and generalized to the concept of [vector spaces](linear-algebra/vector-spaces.md).
+It then can be extended to algebraic definitions and generalized to the concept of [vector spaces](vector-spaces.md).
 
 ## Definition
 
@@ -511,13 +511,13 @@ We can see that the resulting vector has no component in direction $\mathbf{a}$ 
 
 ### Lines
 
-Similar to point-slope form, let $P$ be a point on the line passing through $A$ and parallel to $\mathbf{t}$, we have
+Similar to point-slope form, let $P$ be a point on the line that passes through $A$ and parallel to $\mathbf{t}$, we have
 
 $$
 \vec{OP} = \vec{OA} + \vec{AP}
 $$
 
-or
+therefore
 
 $$
 \mathbf{x} = \mathbf{a} + \lambda\mathbf{t}
@@ -546,7 +546,48 @@ $$
 
 ### Planes
 
-### Spheres
+Let $P$ be a point on the plane that passes through $A$ and orthogonal to a unit vector $\mathbf{n}$, we have
+
+$$
+\vec{AP} \cdot \mathbf{n} = 0
+$$
+
+therefore
+
+$$
+(\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0
+$$
+
+and $\mathbf{n}$ is called the normal of the plane.
+
+Consider a point $Q$ on the plane such that $vec{OQ}$ is parallel to $\mathbf{n}$, i.e. $\vec{OQ} = d \mathbf{n}$, we have
+
+$$
+(d\mathbf{n} - \mathbf{a}) \cdot \mathbf{n} = 0 \implies \mathbf{a} \cdot \mathbf{n} = d (\mathbf{n} \cdot \mathbf{n}) = d
+$$
+
+Hence, $\mathbf{a} \cdot \mathbf{n}$ is the distance of the plane from the origin.
+
+Alternatively, if $\mathbf{a}, \mathbf{b}, \mathbf{c}$ are points on a plane, $(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})$ is orthogonal to the plane, hence
+
+$$
+(\mathbf{x} - \mathbf{a}) \cdot [(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})] = 0
+$$
+
+On the other hand, as any two non-parallel vectors form a basis for a 2D space, we can represent any points on the plane by
+
+$$
+\begin{align*}
+\mathbf{x} &= \mathbf{a} + \lambda(\mathbf{b} - \mathbf{a}) + \mu(\mathbf{c} - \mathbf{a}) \\
+&= (1 - \lambda - \mu)\mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}
+\end{align*}
+$$
+
+which is the parametric form of the plane.
+
+### Other Geometry Problems
+
+More can be found in [Vector Geometry](vector-geometry.md).
 
 ## Vector Equations
 

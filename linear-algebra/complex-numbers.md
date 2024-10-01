@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Complex Numbers
+title: Complex Numbers &#124; Linear Algebra
 ---
 
 # Complex Numbers
