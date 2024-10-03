@@ -79,6 +79,30 @@ $$
 
 ### Distance between Skew Lines
 
+Two lines are said to be _skew_ if they do not lie in any plane.
+
+Let $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{u} = \mathbf{0}$ be two skew lines.
+
+Consider the two planes
+
+$$
+\Pi_1: (\mathbf{x} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
+$$
+
+and
+
+$$
+\Pi_2: (\mathbf{x} - \mathbf{b}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
+$$
+
+We can see that points in $L_1$ has the form $\mathbf{x} = \mathbf{a} + \lambda\mathbf{t}$ are all on $\Pi_1$, and similarily for $L_2$ and $\Pi_2$.
+Also, $\Pi_1$ and $\Pi_2$ are parallel planes as they have the common normal $\mathbf{t} \times \mathbf{u}$.
+Therefore, $L_1$ and $L_2$ are skew if they lie in a pair of parallel planes, and their distance is
+
+$$
+d = {|(\mathbf{b} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u})| \over |\mathbf{t} \times \mathbf{u}|}
+$$
+
 ### Intersection between Lines
 
 Let $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{u} = \mathbf{0}$ be two lines.
