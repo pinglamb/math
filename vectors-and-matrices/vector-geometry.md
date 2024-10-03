@@ -140,6 +140,8 @@ $$
 
 ## Planes
 
+### Vector Equations
+
 Let $A$ be a point with $\vec{OA} = \mathbf{a}$ and $\mathbf{n}$ be a non-zero vector.
 The vector equation of the plane $\Pi$ which contains $\mathbf{a}$ and has normal in the direction of $mathbf{n}$ is
 
@@ -169,6 +171,90 @@ $$
            &= (1 - \lambda - \mu)\mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}
 \end{align*}
 $$
+
+### Distance between Point and Plane
+
+Suppose $\mathbf{n}$ is a unit vector.
+Let $\mathbf{x_O}$ be the closest point on the plane $\Pi$ to the origin, we have
+
+$$
+(\mathbf{x_O} - \mathbf{a}) \cdot \mathbf{n} = 0
+$$
+
+Also, $\mathbf{x_O}$ must be orthogonal to the plane and therefore parallel to $\mathbf{n}$, i.e.
+
+$$
+\mathbf{x_O} = d\mathbf{n}
+$$
+
+Hence,
+
+$$
+\mathbf{x_O} \cdot \mathbf{n} = d |\mathbf{n}|^2 = d = \mathbf{a} \cdot \mathbf{n}
+$$
+
+Therefore, when $\mathbf{n}$ is a unit vector, the equation
+
+$$
+\mathbf{x} \cdot \mathbf{n} = d
+$$
+
+is a plane which has distance $d$ from origin and has normal to the direction of $\mathbf{n}$.
+
+Let $Y$ be a point with $\vec{OY} = \mathbf{y}$. Supposethe distance of $\mathbf{y}$ from the plane is $\|t\|$,
+then $\mathbf{y} + t\mathbf{n}$ is a point on the plane.
+
+Hence,
+
+$$
+(\mathbf{y} + t\mathbf{n}) \cdot \mathbf{n} = d
+$$
+
+and
+
+$$
+t = |d - \mathbf{y} \cdot \mathbf{n}|
+$$
+
+### Distance between Parallel Planes
+
+Given two parallel planes $(\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0$ and $(\mathbf{x} - \mathbf{b}) \cdot \mathbf{n} = 0$,
+where $\mathbf{n}$ is a unit vector.
+
+According to the above, shortest distance $d$ between them is
+
+$$
+d = |\mathbf{b} \cdot \mathbf{n} - \mathbf{a} \cdot \mathbf{n}| = |(\mathbf{b} - \mathbf{a}) \cdot \mathbf{n}|
+$$
+
+### Intersection of Two Planes (Line)
+
+Given two planes $\mathbf{x} \cdot \mathbf{n_1} = d_1$ and $\mathbf{x} \cdot \mathbf{n_2} = d_2$,
+their line of intersection $L$ must be in the direction that is orthogonal to both $\mathbf{n_1}$ and $\mathbf{n_2}$, i.e. $\mathbf{n_1} \times \mathbf{n_2}$.
+
+Therefore, the equation of $L$ is of the form
+
+$$
+\mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) = \mathbf{c}
+$$
+
+As $\mathbf{x}$ is on both planes, we have
+
+$$
+\begin{align*}
+\mathbf{c} &= \mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) \\
+           &= (\mathbf{x} \cdot \mathbf{n_2}) \mathbf{n_1} - (\mathbf{x} \cdot \mathbf{n_1}) \mathbf{n_n} \\
+           &= d_2\mathbf{n_1} - d_1\mathbf{n_2}
+\end{align*}
+$$
+
+Hence, the equation of the line of intersection is
+
+$$
+\mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) = d_2\mathbf{n_1} - d_1\mathbf{n_2}
+$$
+
+### Intersection of Three Planes (Point)
 
 ## References
 
