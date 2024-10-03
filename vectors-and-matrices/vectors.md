@@ -634,6 +634,49 @@ $$
 \epsilon_{123} = \epsilon_{231} = \epsilon_{312} = -\epsilon_{213} = -\epsilon_{132} = -\epsilon_{321}
 $$
 
+For a symmetric tensor $s_{ij}$,
+
+$$
+\epsilon_{ijk} s_{ij} = \epsilon_{jik} s_{ji} = - \epsilon_{ijk} s_{ij}
+$$
+
+Hence,
+
+$$
+\epsilon_{ijk} s_{ij} = 0
+$$
+
+By expansion of the formula, we have
+
+$$
+(\mathbf{a} \times \mathbf{b})_i = \epsilon_{ijk} a_j b_k
+$$
+
+The following is an useful identity
+
+$$
+\epsilon_{ijk}\epsilon_{ipq} = \delta_{jp}\delta_{kq} - \delta_{jq}\delta_{kp}
+$$
+
+With the above, ths scalar triple product is given by
+
+$$
+\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \epsilon_{ijk} a_i b_j c_k
+$$
+
+and vector triple product
+
+$$
+\begin{align*}
+\mathbf{a} \times (\mathbf{b} \times \mathbf{c})_i &= \epsilon_{ijk} a_j (\mathbf{b} \times \mathbf{c})_k \\
+&= \epsilon_{ijk} a_j \epsilon_{klm} b_l c_m \\
+&= -\epsilon_{kji} \epsilon_{klm} a_j b_l c_m \\
+&= -(\delta_{jl}\delta_{im} - \delta_{jm}\delta_{il}) a_j b_l c_m \\
+&= a_j b_i c_j - a_j b_j c_i \\
+&= ((\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c})_i
+\end{align*}
+$$
+
 ## References
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 2](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
