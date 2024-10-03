@@ -193,7 +193,7 @@ $$
 
 According to the following graph,
 
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dot_product_distributive_law.svg/320px-Dot_product_distributive_law.svg.png" alt=""></p>
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dot_product_distributive_law.svg/320px-Dot_product_distributive_law.svg.png" alt="" /></p>
 
 We can see that $\mathbf{b}^{\perp} + \mathbf{c}^{\perp} = (\mathbf{b} + \mathbf{c})^{\perp}$.
 Hence,
@@ -244,7 +244,7 @@ with $0 \le \theta \le \pi$ with definition similar to dot product (non-reflex a
 
 3. $\mathbf{a} \times \mathbf{b}$ has the direction defined by "right-hand rule" ($\mathbf{a}$ - index finger, $\mathbf{b}$ - second finger, $\mathbf{a} \times \mathbf{b}$ - thumb)
 
-<p align="center"><img src="https://github.com/user-attachments/assets/72e22713-a95f-4669-a054-fd55797a74be" alt=""></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/72e22713-a95f-4669-a054-fd55797a74be" alt="" /></p>
 
 Consider a triangle with vertices $O, A, B$, we have area of $OAB$ equals to ${1 \over 2}\|\mathbf{a}\|\|\mathbf{b}\| \sin \theta = {1 \over 2}\|\mathbf{a} \times \mathbf{b}\|$,
 and area of parallelogram $OACB$ equals to $\|\mathbf{a} \times \mathbf{b}\|$, with the direction of $\mathbf{a} \times \mathbf{b}$ orthogonal to the triangle/parallelogram.
@@ -284,8 +284,6 @@ $$
 The vector product $\mathbf{\hat{a}} \times \mathbf{b}$ can be constructed by two steps.
 First project $\mathbf{b}$ onto a plane orthogonal to $\mathbf{\hat{a}}$ and then rotate the projection $\mathbf{b'}$ by $\pi/2$ in "anti-clockwise" direction
 (when looking in the opposite direction of $\mathbf{\hat{a}}$) to form $\mathbf{b''}$.
-
-<p align="center"><img src="https://github.com/user-attachments/assets/5eac629b-5ea6-4bb8-85b8-8fb42ef0d2e4" alt=""></p>
 
 We can see that $\|\mathbf{b}''\| = \|\mathbf{b'}\| = \|\mathbf{b}\| \sin \theta$.
 By construction, $\mathbf{b''} = \mathbf{\hat{a}} \times \mathbf{b}$.
@@ -509,85 +507,7 @@ We can see that the resulting vector has no component in direction $\mathbf{a}$ 
 
 ## Vector Geometry
 
-### Lines
-
-Similar to point-slope form, let $P$ be a point on the line that passes through $A$ and parallel to $\mathbf{t}$, we have
-
-$$
-\vec{OP} = \vec{OA} + \vec{AP}
-$$
-
-therefore
-
-$$
-\mathbf{x} = \mathbf{a} + \lambda\mathbf{t}
-$$
-
-with $\lambda \in \mathbb{R}$.
-
-As $\mathbf{x} - \mathbf{a} = \lambda\mathbf{t}$, an alternative form of the line is
-
-$$
-(\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}
-$$
-
-For a line passing through two points $A$ and $B$, as $\mathbf{t} = \mathbf{b} - \mathbf{a}$ represents a vector parallel to the line,
-according to the above we have the following parametric form
-
-$$
-\mathbf{x} = \mathbf{a} + \lambda(\mathbf{b} - \mathbf{a}) = (1 - \lambda)\mathbf{a} + \lambda\mathbf{b}
-$$
-
-or after eliminating $\lambda$,
-
-$$
-(\mathbf{x} - \mathbf{a}) \times (\mathbf{b} - \mathbf{a}) = \mathbf{0}
-$$
-
-### Planes
-
-Let $P$ be a point on the plane that passes through $A$ and orthogonal to a unit vector $\mathbf{n}$, we have
-
-$$
-\vec{AP} \cdot \mathbf{n} = 0
-$$
-
-therefore
-
-$$
-(\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0
-$$
-
-and $\mathbf{n}$ is called the normal of the plane.
-
-Consider a point $Q$ on the plane such that $vec{OQ}$ is parallel to $\mathbf{n}$, i.e. $\vec{OQ} = d \mathbf{n}$, we have
-
-$$
-(d\mathbf{n} - \mathbf{a}) \cdot \mathbf{n} = 0 \implies \mathbf{a} \cdot \mathbf{n} = d (\mathbf{n} \cdot \mathbf{n}) = d
-$$
-
-Hence, $\mathbf{a} \cdot \mathbf{n}$ is the distance of the plane from the origin.
-
-Alternatively, if $\mathbf{a}, \mathbf{b}, \mathbf{c}$ are points on a plane, $(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})$ is orthogonal to the plane, hence
-
-$$
-(\mathbf{x} - \mathbf{a}) \cdot [(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})] = 0
-$$
-
-On the other hand, as any two non-parallel vectors form a basis for a 2D space, we can represent any points on the plane by
-
-$$
-\begin{align*}
-\mathbf{x} &= \mathbf{a} + \lambda(\mathbf{b} - \mathbf{a}) + \mu(\mathbf{c} - \mathbf{a}) \\
-&= (1 - \lambda - \mu)\mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}
-\end{align*}
-$$
-
-which is the parametric form of the plane.
-
-### Other Geometry Problems
-
-More can be found in [Vector Geometry](vector-geometry.md).
+See [Vector Geometry](vector-geometry.md).
 
 ## Vector Equations
 
@@ -606,6 +526,113 @@ $$
 $$
 
 This is another technique [here](https://math.stackexchange.com/questions/3879932/how-to-solve-the-vector-equation-mathbfr-mathbfr-times-mathbfd-m).
+
+## Suffix Noatation and Tensors
+
+Some examples of suffix notation:
+
+$$
+(\mathbf{a} \cdot \mathbf{b}) \mathbf{c} = \mathbf{d} \quad \equiv \quad a_i b_i c_j = d_j
+$$
+
+$$
+\begin{align*}
+((\mathbf{a} \cdot \mathbf{c})\mathbf{b} - (\mathbf{a} \cdot \mathbf{b})\mathbf{c}) &\equiv a_i c_i b_j - a_k b_k c_j \\
+&\equiv a_i c_i b_j - a_i b_i c_j \\
+&\equiv a_i (c_i b_j - b_i c_j)
+\end{align*}
+$$
+
+### Kronecker Delta
+
+The Kronecker delta $\delta_{ij}$ is a tensor, defined by in matrix form
+
+$$
+\begin{pmatrix}
+\delta_{11} & \delta_{12} & \delta_{13} \\
+\delta_{21} & \delta_{22} & \delta_{23} \\
+\delta_{31} & \delta_{32} & \delta_{33}
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+
+which is an identity matrix. Hence, $\delta_{ij}$ is _symmetric_, i.e.
+
+$$
+\delta_{ij} = \delta_{ji}
+$$
+
+Also,
+
+$$
+\begin{gather}
+a_i \delta_{ij} = \sum_i a_i \delta_{ij} = a_j \\
+\delta_{ij} a_j = \sum_j \delta_{ij} a_j = a_i
+\end{gather}
+$$
+
+$$
+\delta_{ij}\delta_{jk} = \sum_{j} \delta_{ij}\delta_{jk} = \delta_{ik}
+$$
+
+$$
+\delta_{ii} = \sum_{i} \delta_{ii} = 3
+$$
+
+$$
+a_i \delta_{ij} b_j = a_i b_i = a_j b_j = \mathbf{a} \cdot \mathbf{b}
+$$
+
+## Basis Vectors
+
+In general, we can write $\mathbf{e_1} = \mathbf{i}$, $\mathbf{e_2} = \mathbf{j}$ and $\mathbf{e_3} = \mathbf{k}$ as the basis vectors of $\mathbb{R}^3$.
+
+Hence,
+
+$$
+\mathbf{e_i} \cdot \mathbf{e_j} = \delta_{ij}
+$$
+
+$$
+\mathbf{a} \cdot \mathbf{e_i} = a_i
+$$
+
+$$
+(\mathbf{e_i})_j = (\mathbf{e_j})_i = \delta_{ij}
+$$
+
+### Levi-Civita Symbol / Alternating Tensor
+
+Define
+
+$$
+\epsilon_{ijk} = \begin{cases}
++1 &\quad ijk \text{ is even permutation} \\
+-1 &\quad ijk \text{ is odd permutation} \\
+0  &\quad \text{otherwise (i.e. repeated suffices)}
+\end{cases}
+$$
+
+Therefore,
+
+$$
+\begin{align*}
+\epsilon_{123} = \epsilon_{231} = \epsilon_{312} &= +1 \\
+\epsilon_{213} = \epsilon_{132} = \epsilon_{321} &= -1 \\
+\epsilon_{111} = \epsilon_{112} = \,... &= 0 \\
+\end{align*}
+$$
+
+Hence,
+
+$$
+\epsilon_{123} = \epsilon_{231} = \epsilon_{312} = -\epsilon_{213} = -\epsilon_{132} = -\epsilon_{321}
+$$
 
 ## References
 
