@@ -280,6 +280,28 @@ $$
 
 ### Intersection of Three Planes (Point)
 
+Suppose three planes $\Pi_1: \mathbf{x} \cdot \mathbf{n_1} = d_1$, $\Pi_2: \mathbf{x} \cdot \mathbf{n_2} = d_2$, $\Pi_3: \mathbf{x} \cdot \mathbf{n_3} = d_3$
+intersect at one point, then their normals can't be co-planar, i.e.
+
+$$
+[\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}] \not = 0
+$$
+
+Therefore, any point $\mathbf{p}$ in the 3D space can be expressed as
+
+$$
+\mathbf{p} =
+  {\mathbf{p} \cdot \mathbf{n_1} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_2} \times \mathbf{n_3})
++ {\mathbf{p} \cdot \mathbf{n_2} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_3} \times \mathbf{n_1})
++ {\mathbf{p} \cdot \mathbf{n_3} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_1} \times \mathbf{n_2})
+$$
+
+Hence, for the intersection point $x$,
+
+$$
+\mathbf{x} = {d_1(\mathbf{n_2} \times \mathbf{n_3}) + d_2(\mathbf{n_3} \times \mathbf{n_1}) + d_3(\mathbf{n_1} \times \mathbf{n_2}) \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]}
+$$
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Section 4.7
