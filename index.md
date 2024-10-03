@@ -7,10 +7,10 @@ title: Home
 
 * [Apollonian Circles](geometry/apollonian-circles.md)
 
-## Linear Algebra
+## Vectors and Matrices
 
-* [Exponential, Cosine and Sine Functions](linear-algebra/exponential-cosine-sine-functions.md)
-* [Complex Numbers](linear-algebra/complex-numbers.md)
-* [Vectors](linear-algebra/vectors.md)
-* [Vector Geometry](linear-algebra/vector-geometry.md)
-* [Vector Spaces](linear-algebra/vector-spaces.md)
+* [Exponential, Cosine and Sine Functions](vectors-and-matrices/exponential-cosine-sine-functions.md)
+* [Complex Numbers](vectors-and-matrices/complex-numbers.md)
+* [Vectors](vectors-and-matrices/vectors.md)
+* [Vector Geometry](vectors-and-matrices/vector-geometry.md)
+* [Vector Spaces](vectors-and-matrices/vector-spaces.md)

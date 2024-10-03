@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Vector Geometry &#124; Linear Algebra
+title: Vector Geometry &#124; Vectors and Matrices
 ---
 
 # Vector Geometry
@@ -38,7 +38,10 @@ $$
 or alternatively
 
 $$
-\mathbf{x} = (1 - \lambda)\mathbf{a} + \lambda\mathbf{b}
+\begin{align*}
+\mathbf{x} &= \mathbf{a} + \lambda(\mathbf{b} - \mathbf{a}) \\
+           &= (1 - \lambda)\mathbf{a} + \lambda\mathbf{b}
+\end{align*}
 $$
 
 ### Distance between Point and Line
@@ -74,6 +77,8 @@ $$
 d = {|(\mathbf{b} - \mathbf{a}) \times \mathbf{t}| \over |\mathbf{t}|}
 $$
 
+### Distance between Skew Lines
+
 ### Intersection between Lines
 
 Let $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{u} = \mathbf{0}$ be two lines.
@@ -100,12 +105,14 @@ $$
 (\mathbf{b} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
 $$
 
-Conversely, if the above is true, $\mathbf{b} -\mathbf{a}$ is on the plane through the origin that is spanned by $\mathbf{t}$ and $\mathbf{u}$,
-therefore, there exists $\lambda, \mu \in \mathbb{R}$ such that
+Conversely, if the above is true, the plane $\Pi$ passes through the origin as the distance of the plane from origin is $0$,
+hence, we can express $\mathbf{b} - \mathbf{a}$ as
 
 $$
-\mathbf{b} - \mathbf{a} = \lambda \mathbf{t} + \mu \mathbf{u}
+\mathbf{b} - \mathbf{a} = \mathbf{0} + \lambda \mathbf{t} + \mu \mathbf{u}
 $$
+
+for some $\lambda, \mu \in \mathbb{R}$.
 
 Let $\mathbf{x}$ be a point such that
 
@@ -113,7 +120,7 @@ $$
 \mathbf{x} = \mathbf{a} + \lambda\mathbf{t} = \mathbf{b} - \mu\mathbf{u}
 $$
 
-We can see that $\mathbf{x}$ is a point on both $L_1$ and $L_2$ and hence is their intersection.
+We can see that $\mathbf{x}$ is a point on both $L_1$ and $L_2$ and therefore it is the intersection of $L_1$ and $L_2$.
 
 To solve for $\mathbf{x}$, we have
 
@@ -129,6 +136,38 @@ Hence,
 
 $$
 \mathbf{x} = \mathbf{a} + {[\mathbf{t} \times \mathbf{u}, \mathbf{b} - \mathbf{a}, \mathbf{u}] \over |\mathbf{t} \times \mathbf{u}|^2}\mathbf{t}
+$$
+
+## Planes
+
+Let $A$ be a point with $\vec{OA} = \mathbf{a}$ and $\mathbf{n}$ be a non-zero vector.
+The vector equation of the plane $\Pi$ which contains $\mathbf{a}$ and has normal in the direction of $mathbf{n}$ is
+
+A point $X$ with $\vec{OX} = \mathbf{x}$ is on $\Pi$ if and only if $(\mathbf{x} - \mathbf{a}) \perp \mathbf{n}$, i.e.
+
+$$
+(\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0
+$$
+
+Given three points $\mathbf{a}, \mathbf{b}, \mathbf{c}$, the equation for the plane $\Pi$ which contains all three points is
+
+$$
+(\mathbf{x} - \mathbf{a}) \cdot [(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})] = [\mathbf{x} - \mathbf{a}, \mathbf{b} - \mathbf{a}, \mathbf{c} - \mathbf{a}] = 0
+$$
+
+or alternatively
+
+$$
+[\mathbf{x}, \mathbf{b}, \mathbf{c}] + [\mathbf{a}, \mathbf{x}, \mathbf{c}] + [\mathbf{a}, \mathbf{b}, \mathbf{x}] = [\mathbf{a}, \mathbf{b}, \mathbf{c}]
+$$
+
+As $\mathbf{b} - \mathbf{a}$ and $\mathbf{c} - \mathbf{a}$ are non-parallel, we can represent any point on the plane as
+
+$$
+\begin{align*}
+\mathbf{x} &= \mathbf{a} + \lambda(\mathbf{b} - \mathbf{a}) + \mu(\mathbf{c} - \mathbf{a}) \\
+           &= (1 - \lambda - \mu)\mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}
+\end{align*}
 $$
 
 ## References

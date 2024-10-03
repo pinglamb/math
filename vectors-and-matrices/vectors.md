@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Vectors &#124; Linear Algebra
+title: Vectors &#124; Vectors and Matrices
 ---
 
 # Vectors
