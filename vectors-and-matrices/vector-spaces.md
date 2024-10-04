@@ -79,6 +79,12 @@ Base on our study of [vectors](vectors.md) in $\mathbb{R}^2$/$\mathbb{R}^3$, we 
 
 ## Properties
 
+## Scalar Product
+
+### Properties
+
+### Norm
+
 ## Dimension
 
 ## R^n
