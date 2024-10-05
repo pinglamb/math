@@ -133,9 +133,66 @@ Assume $a \not = 0\_V$, then $\lambda a = 0\_V$ for all other $a \in V$ only whe
 
 ## Scalar Product
 
-### Properties
+The scalar/inner product of vectors $a, b \in V$, denoted by $a \cdot b$ or $\langle a \mid b \rangle$,
+is a map $V \times V \to \mathbb{R}$ that satisfies the following properties:
+
+* _Symmetric_, i.e.
+
+$$
+a \cdot b = b \cdot a
+$$
+
+* Linearilty in the second argument
+
+$$
+a \cdot (\lambda b + \mu c) = \lambda (a \cdot b) + \mu (a \cdot c)
+$$
+
+* Non-negativity, with equality holds iff $a = 0_V$, i.e.
+
+$$
+a \cdot a \ge 0_\mathbb{R}
+$$
+
+This definition is only for real vector spaces. For complex vector spaces, we have a different set of axioms.
 
 ### Norm
+
+The _norm_ of a vector, denoted by $\|a\|$ or $\\\|a\\\|$ is defined as
+
+$$
+|a| = \|a\| = \sqrt{a \cdot a}
+$$
+
+### Cauchy-Schwarz inequality
+
+The Cauchy-Schwarz inequality
+
+$$
+\|a \cdot b\| \le \|a\|\|b\|
+$$
+
+can be generalized by proving that algebraically.
+
+Consider the expression $\\\|a + \lambda b\\\|^2$, from the above axioms about scalar product, we have
+
+$$
+\begin{align*}
+\|a + \lambda b\|^2 &\ge 0 \\
+(a + \lambda b) \cdot (a + \lambda b) &\ge 0 \\
+\|b\|^2 \lambda^2 + 2 (a \cdot b) \lambda + \|a\|^2 &\ge 0
+\end{align*}
+$$
+
+Viewing this as a quadratic equation in $\lambda$, as it is always non-negative, it has at most one root. Hence,
+
+$$
+\Delta = (2 a \cdot b)^2 - 4\|a\|^2\|b\|^2 \le 0
+$$
+
+$$
+\|a \cdot b\| \le \|a\|\|b\|
+$$
 
 ## Dimension
 
