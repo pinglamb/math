@@ -194,11 +194,146 @@ $$
 \|a \cdot b\| \le \|a\|\|b\|
 $$
 
-## Dimension
+## Basis and Dimensions
 
-## $R^n$
+### Linear Independence
 
-## $C^n$
+A set of $m$ vectors $\Set{v_1, v_2, ..., v_m}$ of vector space $V$ is _linearly independent_ if for all scalars $\lambda \in \mathbb{F}$,
+
+$$
+\sum_i \lambda_i v_i = 0_V \quad \implies \quad \lambda_i = 0_{\mathbb{F}}
+$$
+
+Otherwise, we can see that we can express a vector in the set by other vectors in the same set.
+
+### Spanning Set
+
+A set of $m$ vectors $\Set{v_1, v_2, ..., v_m}$ of vector space $V$ is a _spanning set_ for V if for every vector $v \in V$,
+there exists scalars $\lambda_i \in \mathbb{F}$ such that
+
+$$
+v = \lambda_1 v_1 + \lambda_2 v_2 + ... + \lambda_m v_m
+$$
+
+We state that $m \ge n$ so the set can span $V$.
+
+### Basis
+
+We then define a linearly independent subset of vectors that spans $V$ is a _basis_ of V.
+
+If $S = \Set{v_1, v_2, ..., v_n}$ is a basis of $\mathbb{R}^n$, then there exists unique scalars $\lambda_i \in \mathbb{R}$,
+which we called them _components_, such that
+
+$$
+v = \lambda_1 v_1 + \lambda_2 v_2 + ... + \lambda_n v_n
+$$
+
+### Dimension
+
+The _dimension_ of a space is defined by the number of vectors in a basis of the space.
+
+Hence, $\dim \mathbb{R}^2 = 2$, $\dim \mathbb{R}^3 = 3$ and $\dim \mathbb{R}^n = n$.
+
+## n-dimensional Real Space
+
+### Definition
+
+We define $\mathbb{R}^n$ to be the set of all n-tuples
+
+$$
+\Set{\mathbf{x} = (x_1, x_2, ..., x_n) \mid x_i \in \mathbb{R} \text{ with } i = 1, 2, ..., n}
+$$
+
+For $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ and $\lambda \in \mathbb{R}$, we define
+
+$$
+\begin{gather}
+\mathbf{x} + \mathbf{y} = (x_1 + y_1, x_2 + y_2, ..., x_n + y_n) \\
+\lambda \mathbf{x} = (\lambda x_1, \lambda x_2, ..., \lambda x_n) \\
+\mathbf{0} = (0, 0, ..., 0) \\
+\mathbf{-x} = (-x_1, -x_2, ..., -x_3)
+\end{gather}
+$$
+
+We can see that $\mathbb{R}^n$ over $\mathbf{R}$ satifies the above axioms and hence is a vector space over $\mathbb{R}$.
+
+### Scalar Product
+
+We define the scalar product on $\mathbb{R}^n$ for $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ as
+
+$$
+\mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^n x_i y_i = x_1 y_1 + x_2 y_2 + ... + x_n y_n
+$$
+
+which satisfies the axioms of scalar/inner product of vector space.
+
+This definition is consistent with that of $\mathbb{R}^3$ only when we are dealing with standard basis.
+
+### Norm
+
+For $\mathbf{x} \in \mathbb{R}^n$,
+
+$$
+\|x\| = (\mathbf{x} \cdot \mathbf{x})^{1 \over 2} = \left( \sum_{i=1}^n x_i^2 \right)^{1 \over 2}
+$$
+
+while the interior angle $\theta$ between vectors $\mathbf{x}$ and $\mathbf{y}$ is defined to be
+
+$$
+\theta = \arccos \left( {\mathbf{x} \cdot \mathbf{y} \over \|x\|\|y\| } \right)
+$$
+
+and we state $\mathbf{x}, \mathbf{y}$ is orthogonal if $\mathbf{x} \cdot \mathbf{y} = 0$
+
+## n-dimensional Complex Space
+
+### Definition
+
+We define $\mathbb{C}^n$ to be the set of all n-tuples
+
+$$
+\Set{\mathbf{x} = (z_1, z_2, ..., z_n) \mid z_i \in \mathbb{C} \text{ with } i = 1, 2, ..., n}
+$$
+
+For $\mathbf{x}, \mathbf{y} \in \mathbb{C}^n$ and $\lambda \in \mathbb{C}$, we define
+
+$$
+\begin{gather}
+\mathbf{x} + \mathbf{y} = (x_1 + y_1, x_2 + y_2, ..., x_n + y_n) \\
+\lambda \mathbf{x} = (\lambda x_1, \lambda x_2, ..., \lambda x_n) \\
+\mathbf{0} = (0, 0, ..., 0) \\
+\mathbf{-x} = (-x_1, -x_2, ..., -x_3)
+\end{gather}
+$$
+
+We can see that $\mathbb{C}^n$ over $\mathbf{C}$ satifies the axioms as well and hence is a vector space over $\mathbb{C}$.
+
+The standard basis of $\mathbb{R}^n$ can serve as standard basis of $\mathbb{C}^n$, hence $\dim \mathbb{C}^n = n$.
+
+### Scalar Product
+
+We define the scalar product on $\mathbb{C}^n$ for $\mathbf{x}, \mathbf{y} \in \mathbb{C}^n$ as
+
+$$
+\mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^n x_i^{\ast} y_i = x_1^{\ast} y_1 + x_2^{\ast} y_2 + ... + x_n^{\ast} y_n
+$$
+
+The set axioms are different than that of $\mathbb{R}^n$, which is as follow
+
+$$
+\begin{gather}
+\mathbf{x} \cdot \mathbf{y} = (\mathbf{y} \cdot \mathbf{x})^{\ast} \\
+\mathbf{x} \cdot (\lambda \mathbf{y} + \mu \mathbf{z}) = \lambda (\mathbf{x} \cdot \mathbf{y}) + \mu (\mathbf{x} \cdot \mathbf{z}) \\
+\mathbf{x} \cdot \mathbf{x} \ge 0
+\end{gather}
+$$
+
+The axioms are reqally similar except that scalar product on $\mathbb{C}^n$ is not symmetric,
+hence we can't derive the linearity of the first argument, i.e.
+
+$$
+(\lambda\mathbf{x} + \mu\mathbf{y}) \cdot \mathbf{z} \not = \lambda\mathbf{x} \cdot \mathbf{y} + \mu \mathbf{x} \cdot \mathbf{z}
+$$
 
 ## Subspaces
 
