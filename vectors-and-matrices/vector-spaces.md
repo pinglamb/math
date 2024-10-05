@@ -79,6 +79,58 @@ Base on our study of [vectors](vectors.md) in $\mathbb{R}^2$/$\mathbb{R}^3$, we 
 
 ## Properties
 
+We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove them algebraically.
+
+As vector addition of vector spaces is abelian group, we have
+
+* additive identity $0 \in V$ is unique
+* additive inverse $-a \in V$ is unique
+* subtraction is defined by addition of additive inverse, i.e.
+
+$$
+a - b = a + (-b)
+$$
+
+Also, scalar multiplication by $0 \in \mathbb{F}$ yields the additive identity
+
+$$
+\begin{align*}
+0_{\mathbb{F}} a &= 0_{\mathbb{F}} a + 0_{V} \\
+&= 0_{\mathbb{F}} a + a + (-a) \\
+&= (0_{\mathbb{F}} + 1) a + (-a) \\
+&= a + (-a) \\
+&= 0_{V}
+\end{align*}
+$$
+
+and scalar multiplication by $-1$ yields the additive inverse.
+
+$$
+\begin{align*}
+(-1)a &= (-1)a + 0_{V} \\
+&= (-1)a + a + (-a) \\
+&= (-1 + 1) a + (-a) \\
+&= 0_{\mathbb{F}}a + (-a) \\
+&= 0_{V} + (-a) \\
+&= -a
+\end{align*}
+$$
+
+Furthermore, scalar multiplifcation with zero vector $0\_V$ yields $0\_V$, i.e. $\lambda 0_V = 0_V$ as
+
+$$
+\lambda 0_V + \lambda a = \lambda (0_V + a) = \lambda a
+$$
+
+If $\lambda a = 0$, either $\lambda = 0\_{\mathbb{F}}$ or $a = 0\_V$.
+Assume $\lambda \not = 0_{\mathbb{F}}$, there exists $\lambda^{-1}$ such that
+
+$$
+a = (\lambda^{-1}\lambda)a = \lambda^{-1}0_V = 0_V
+$$
+
+Assume $a \not = 0\_V$, then $\lambda a = 0\_V$ for all other $a \in V$ only when $\lambda = 0_\mathbb{F}$.
+
 ## Scalar Product
 
 ### Properties
@@ -87,9 +139,9 @@ Base on our study of [vectors](vectors.md) in $\mathbb{R}^2$/$\mathbb{R}^3$, we 
 
 ## Dimension
 
-## R^n
+## $R^n$
 
-## C^n
+## $C^n$
 
 ## Subspaces
 
