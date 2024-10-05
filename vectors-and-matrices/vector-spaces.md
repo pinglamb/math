@@ -337,6 +337,16 @@ $$
 
 ## Subspaces
 
+A non-empty subset $U$ of the vectors of a vector space $V$ is called a _subspace_ of $V$ if $U$ is a vector space under the same operations (i.e. vector addition and scalar multiplication) as are used to define $V$.
+
+A _proper subspace_ is a subspace of $V$ that is not $V$ or $\Set{0_V}$.
+
+A non-empty subset $U$ is a subspace of $V$ if and only if $U$ is closed under vector addition and scalar multiplication, i.e.
+
+$$
+\forall a, b \in U, \forall \lambda, \mu \in \mathbb{F}, \lambda a + \mu b \in U
+$$
+
 ## Reference
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 7
