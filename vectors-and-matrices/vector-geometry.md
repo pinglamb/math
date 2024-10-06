@@ -251,6 +251,31 @@ $$
 d = |\mathbf{b} \cdot \mathbf{n} - \mathbf{a} \cdot \mathbf{n}| = |(\mathbf{b} - \mathbf{a}) \cdot \mathbf{n}|
 $$
 
+### Intersection between Line and Plane
+
+Given a line $L: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and a plane $\Pi: \mathbf{x} \cdot \mathbf{n} = 0$.
+
+If $\mathbf{n} \cdot \mathbf{t} = 0$, $L$ and $\Pi$ are parallel so either $L$ is on the plane $\Pi$ or there is no solution.
+$L$ is on $\Pi$ if $\mathbf{a}$ is on $\Pi$, hence $\mathbf{a} \cdot \mathbf{n} = 0$.
+
+If $\mathbf{n} \cdot \mathbf{t} \not = 0$, we have
+
+$$
+\begin{align*}
+\mathbf{n} \times (\mathbf{x} \times \mathbf{t}) &= \mathbf{n} \times (\mathbf{a} \times \mathbf{t}) \\
+(\mathbf{n} \cdot \mathbf{t}) \mathbf{x} - (\mathbf{n} \cdot \mathbf{x}) \mathbf{t} &= (\mathbf{n} \cdot \mathbf{t}) \mathbf{a} - (\mathbf{n} \cdot \mathbf{a}) \mathbf{t} \\
+\end{align*}
+$$
+
+Hence,
+
+$$
+\begin{align*}
+\mathbf{x} &= {(\mathbf{n} \cdot \mathbf{t}) \mathbf{a} - (\mathbf{n} \cdot \mathbf{a}) \mathbf{t} + (\mathbf{n} \cdot \mathbf{x}) \mathbf{t} \over \mathbf{n} \cdot \mathbf{t}} \\
+&= \mathbf{a} + {d - \mathbf{n} \cdot \mathbf{a} \over \mathbf{n} \cdot \mathbf{t}} \mathbf{t}
+\end{align*}
+$$
+
 ### Intersection of Two Planes (Line)
 
 Given two planes $\mathbf{x} \cdot \mathbf{n_1} = d_1$ and $\mathbf{x} \cdot \mathbf{n_2} = d_2$,
