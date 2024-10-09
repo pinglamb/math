@@ -87,3 +87,23 @@ Let $\mathcal{T}: V \to W$ be a linear map, then
 $$
 r(\mathcal{T}) + n(\mathcal{T}) = \dim V
 $$
+
+## Composition of Maps
+
+Let $\mathcal{S}: U \to V$ and $\mathcal{T}: V \to W$ be linear maps,
+
+$$
+u \mapsto v = \mathcal{S}(u) \qquad v \mapsto w = \mathcal{T}(v)
+$$
+
+The _composite_ or _product_ map $\mathcal{TS}$ is the map $\mathcal{TS}: U \to W$ such that
+
+$$
+u \mapsto w = \mathcal{T}(\mathcal{S}(u))
+$$
+
+For the map to be well defined, the domain of $\mathcal{T}$ must include the image of $\mathcal{S}$.
+
+## References
+
+* [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 3](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
