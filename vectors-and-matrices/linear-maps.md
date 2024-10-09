@@ -104,6 +104,83 @@ $$
 
 For the map to be well defined, the domain of $\mathcal{T}$ must include the image of $\mathcal{S}$.
 
+## Bases of Maps
+
+Let $\Set{e_j \mid j = 1, ..., n}, \Set{f_i \mid i = 1, ..., m}$ be the bases of vector spaces $V$ and $W$ respectively.
+
+Consider a linear map $\mathcal{A}: V \to W$, i.e. $x \mapsto x' = \mathcal{A}(x)$, we have
+
+$$
+x' = \mathcal{A}\left( \sum_{j=1}^n x_j e_j \right) = \sum_{j=1}^n x_j \mathcal{A}(e_j) = \sum_{j=1}^n x_j e_j'
+$$
+
+As $e_j' \in W$,
+
+$$
+e_j' = \sum_{i=1}^m A_{ij} f_i
+$$
+
+Hence, combining the above,
+
+$$
+x' = \sum_{j=1}^n x_j \left( \sum_{i=1}^m A_{ij} f_i \right) = \sum_{i=1}^m \left( \sum_{j=1}^n A_{ij} x_j \right) f_i
+$$
+
+So, the $i$-th component of the image $x'$ under $\mathcal{A}$ is
+
+$$
+(x')_i = \sum_{j=1}^n A_{ij} x_j
+$$
+
+Alternatively, in expanded form, we have
+
+$$
+\begin{gather}
+x_1' = A_{11}x_1 + A_{12}x_2 + \dots + A_{1n}x_n \\
+x_2' = A_{21}x_1 + A_{22}x_2 + \dots + A_{2n}x_n \\
+\vdots \\
+x_m' = A_{m1}x_1 + A_{m2}x_2 + \dots + A_{mn}x_n
+\end{gather}
+$$
+
+## Matrix Representation
+
+Let $\mathsf{x}$ and $\mathsf{x}'$ be column matrices,
+
+$$
+\mathsf{x} = (x_1, x_2, ..., x_n) \qquad \mathsf{x}' = (x_1', x_2', ..., x_n')
+$$
+
+The linear map $\mathcal{A}: V \to W$ can be represented by the matrix
+
+$$
+\mathsf{A} = \begin{pmatrix}
+A_{11} & A_{12} & \dots & A_{1n} \\
+A_{21} & A_{22} & \dots & A_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+A_{m1} & A_{m2} & \dots & A_{mn} \\
+\end{pmatrix}
+$$
+
+and we have
+
+$$
+\mathsf{x}' = \mathsf{A}\mathsf{x}
+$$
+
+Recall that for a vector, the component form represents an actual coordinates only after we have specifed the basis.
+If we change the components, we get a different vector.
+If we change the basis, we get a different representation of the same vector.
+
+The matrix $\mathsf{A}$ above is of the same nature, i.e. the component of the linear map $\mathcal{A}: V \to W$.
+It represents an actual "coordinates" of the map only if we have specified the bases, i.e. the bases of $V$ and $W$.
+If we change the components, we get a different map.
+If we change the bases, we get a different representation of the same map.
+
+It means a linear map can have many matrix representations, but once the bases are chosen, we can find a unique matrix $\mathsf{A}$ as the components.
+
+## Examples
+
 ## References
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 3](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
