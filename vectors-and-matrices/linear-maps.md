@@ -39,3 +39,51 @@ $$
 $$
 
 Hence, $\mathcal{T}(0_V) = 0_W$.
+
+## Rank, Kernel and Nullity
+
+### Definition
+
+Let $\mathcal{T}: V \to W$, as discussed above, $\mathcal{T}(V)$ is the image of $V$ under $T$ and is a subspace of $W$.
+
+The _rank_ of $\mathcal{T}$ is the dimension of the image, i.e.
+
+$$
+r(\mathcal{T}) = \dim \mathcal{T}(V)
+$$
+
+<hr />
+
+The _kernel_ or _null space_ of $\mathcal{T}$ is the subset of $V$ that maps to the zero element in $W$.
+
+$$
+\ker \mathcal{T} = \Set{x \in V \mid \mathcal{T}(x) = 0_W}
+$$
+
+As stated above, $\mathcal{T}(0_V) = 0_W$ so $0_V \in \ker \mathcal{T}$.
+
+Suppose $a, b \in \ker \mathcal{T}$, as
+
+$$
+\mathcal{T}(\lambda a + \mu b) = \lambda \mathcal{T}(a) + \mu \mathcal{T}(b) = 0_W
+$$
+
+$\lambda a + \mu b \in \ker \mathcal{T}$.
+
+Hence $\ker \mathcal{T}$ is a subspace of $V$.
+
+<hr />
+
+The _nullity_ of $\mathcal{T}$ is the dimension of the kernel, i.e.
+
+$$
+n(\mathcal{T}) = \dim \ker \mathcal{T}
+$$
+
+### Rank-Nullity Theorem
+
+Let $\mathcal{T}: V \to W$ be a linear map, then
+
+$$
+r(\mathcal{T}) + n(\mathcal{T}) = \dim V
+$$
