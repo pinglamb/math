@@ -158,3 +158,79 @@ $$
 For Hermitian and skew-Hermitian matrices, the diagonal elements are real and pure imaginary respectively.
 
 ## Trace
+
+The _trace_ of a square matrix is equal to the sum of the diagonal elements, i.e.
+
+$$
+Tr(\mathsf{A}) = A_{ii}
+$$
+
+Let $\mathsf{B}$ be $m \times n$ matrix and $\mathsf{C}$ be $n \times m$ matrix,
+though $\mathsf{BC}$ and $\mathsf{CB}$ are not necessary equal (or even of different sizes),
+
+$$
+Tr(\mathsf{BC}) = (\mathsf{BC})_{ii} = B_{ij}C_{ji} = C_{ij}B_{ji} = (\mathsf{CB})_{ii} = Tr(\mathsf{CB})
+$$
+
+## Identity Matrix
+
+The _unit_ or _identity_ matrix is defined to be
+
+$$
+\mathsf{I} = \begin{pmatrix}
+1 & 0 & \dots & 0 \\
+0 & 1 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \dots & 1 \\
+\end{pmatrix} = \Set{\delta_{ij}}
+$$
+
+We have
+
+$$
+\begin{align*}
+(\mathsf{IA})_{ij} &= \delta_{ik}A_{kj} = A_{ij} \\
+(\mathsf{AI})_{ij} &= A_{ik}\delta_{kj} = A_{ij}
+\end{align*}
+$$
+
+Hence,
+
+$$
+\mathsf{IA} = \mathsf{AI} = \mathsf{A}
+$$
+
+## Decomposition of Square Matrix
+
+For a square matrix $\mathsf{B}$, we construct
+
+$$
+\begin{align*}
+\mathsf{A} &= {1 \over 2} \left( \mathsf{B} - \mathsf{B}^\intercal \right) \\
+\mathsf{S} &= {1 \over 2} \left( \mathsf{B} + \mathsf{B}^\intercal \right)
+\end{align*}
+$$
+
+As
+
+$$
+\begin{align*}
+\mathsf{A}^\intercal &= {1 \over 2} \left( \mathsf{B}^\intercal - \mathsf{B} \right) = -\mathsf{A} \\
+\mathsf{S}^\intercal &= {1 \over 2} \left( \mathsf{B}^\intercal + \mathsf{B} \right) = \mathsf{S} \\
+\mathsf{A} + \mathsf{S} &= \mathsf{B} \\
+\end{align*}
+$$
+
+Let $n\sigma = Tr(\mathsf{S})$, so $\sigma = {1 \over n}S_{ii}$, and write
+
+$$
+\mathsf{E} = \mathsf{S} - \sigma\mathsf{I}
+$$
+
+$\mathsf{E}$ is a trace-free symmetric tensor, and
+
+$$
+\mathsf{B} = \sigma\mathsf{I} + \mathsf{E} + \mathsf{A}
+$$
+
+which represents the decomposition of a square matrix into _isotropic_, _symmetric trace-free_ and _antisymmetric_ parts.
