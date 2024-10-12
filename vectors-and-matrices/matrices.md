@@ -69,3 +69,92 @@ $$
 $$
 
 Matrix multiplication is _associative_ but _not commutative_.
+
+## Transpose
+
+### Definition
+
+Let $\mathsf{A} = \Set{A_{ij}}$ be a $m \times n$ matrix.
+The _transpose_ $\mathsf{A}^\intercal$ of $\mathsf{A}$ is defined to be a $n \times m$ matrix with
+
+$$
+(\mathsf{A}^\intercal)_{ij} = (\mathsf{A})_{ji} = A_{ji}
+$$
+
+From definition, we can see that
+
+$$
+(\mathsf{A}^\intercal)^\intercal = \mathsf{A}
+$$
+
+Also,
+
+$$
+\begin{align*}
+((\mathsf{A}\mathsf{B})^\intercal)_{ik} &= (\mathsf{A}\mathsf{B})_{ki} \\
+&= \mathsf{A}_{kj} \mathsf{B}_{ji} \\
+&= (\mathsf{B}^\intercal)_{ij} (\mathsf{A}^\intercal)_{jk} \\
+&= (\mathsf{B}^\intercal \mathsf{A}^\intercal)_{ik}
+\end{align*}
+$$
+
+Hence,
+
+$$
+(\mathsf{A}\mathsf{B})^\intercal = \mathsf{B}^\intercal \mathsf{A}^\intercal
+$$
+
+### Hermitian Conjugate
+
+Let $\mathsf{A} = \Set{A_{ij}}$ be a matrix, with $A_{ij} \in \mathbb{C}$.
+The _Hermitian conjugate_ or _conjugate transpose_ or _adjoint_ is defined to be
+
+$$
+\mathsf{A}^\dagger = (\mathsf{A}^\intercal)^\ast = (\mathsf{A}^\ast)^\intercal
+$$
+
+We also have
+
+$$
+\mathsf{A}^{\dagger\dagger} = \mathsf{A}
+$$
+
+and
+
+$$
+(\mathsf{A}\mathsf{B})^\dagger = \mathsf{B}^\dagger \mathsf{A}^\dagger
+$$
+
+### Symmetric Matrices
+
+A square matrix is _symmetric_ if
+
+$$
+\mathsf{A} = \mathsf{A}^\intercal \iff A_{ij} = A_{ji}
+$$
+
+and is _antisymmetric_ if
+
+$$
+\mathsf{A} = -\mathsf{A}^\intercal \iff A_{ij} = -A_{ji}
+$$
+
+For an antisymmetric matrix, as $A_{11} = -A_{11}, A_{22} = -A_{22}, ...$, the diagonal elements have to be zero.
+
+### Hermitian Matrices
+
+A square complex matrix is _Hermitian_ if
+
+$$
+\mathsf{A} = \mathsf{A}^\dagger \iff A_{ij} = A_{ji}^\ast
+$$
+
+and is _skew-Hermitian_ if
+
+$$
+\mathsf{A} = -\mathsf{A}^\dagger \iff A_{ij} = -A_{ji}^\ast
+$$
+
+For Hermitian and skew-Hermitian matrices, the diagonal elements are real and pure imaginary respectively.
+
+## Trace
