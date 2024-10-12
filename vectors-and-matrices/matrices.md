@@ -30,3 +30,27 @@ $$
 $$
 
 ## Multiplication by Scalar
+
+Let $\mathcal{A}: V \to W$ be a linear map.
+For a given $\lambda \in \mathbb{F}$, the linear map $\lambda\mathcal{A}$ is defined by
+
+$$
+(\lambda\mathcal{A})(\mathbf{x}) = \lambda(\mathcal{A}(\mathbf{x}))
+$$
+
+We have
+
+$$
+(\lambda\mathsf{A})_{ij} x_j = (\lambda\mathsf{A})(\mathbf{x})_i = \lambda(\mathsf{A}(\mathbf{x})_i) = \lambda(\mathsf{A}_{ij} x_j) = (\lambda\mathsf{A}_{ij}) x_j
+
+$$
+
+Hence,
+
+$$
+\lambda\mathsf{A} = \Set{\lambda\mathsf{A}_{ij}}
+$$
+
+We can see that with the above definitions, after some checks, matrix forms a vector space.
+
+### Matrix Multiplication
