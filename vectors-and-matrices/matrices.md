@@ -54,3 +54,18 @@ $$
 We can see that with the above definitions, after some checks, matrix forms a vector space.
 
 ### Matrix Multiplication
+
+Let $\mathcal{S}: U \to V$ and $\mathcal{T}: V \to W$ be linear maps.
+Consider the composite map $\mathcal{T}\mathcal{S}: U \to W$, we have
+
+$$
+(\mathsf{T}\mathsf{S})_{ik} x_k = (\mathcal{T}\mathcal{S})(\mathbf{x})_i = \mathcal{T}(\mathcal{S}(\mathbf{x}))_i = \mathsf{T}_{ij}(\mathsf{S}_{jk} x_k) = (\mathsf{T}_{ij}\mathsf{S}_{jk}) x_k
+$$
+
+Hence,
+
+$$
+(\mathsf{T}\mathsf{S})_{ik} = \mathsf{T}_{ij}\mathsf{S}_{jk}
+$$
+
+Matrix multiplication is _associative_ but _not commutative_.
