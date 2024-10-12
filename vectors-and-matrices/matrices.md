@@ -234,3 +234,79 @@ $$
 $$
 
 which represents the decomposition of a square matrix into _isotropic_, _symmetric trace-free_ and _antisymmetric_ parts.
+
+## Inverse
+
+Let $\mathsf{A}$ be a $m \times n$ matrix.
+A $n \times m$ matrix $\mathsf{B}$ is a left inverse of $\mathsf{A}$ if $\mathsf{BA} = \mathsf{I}$ ($n \times n$).
+A $n \times m$ matrix $\mathsf{C}$ is a right inverse of $\mathsf{A}$ if $\mathsf{AC} = \mathsf{I}$ ($m \times m$).
+
+If both the left inverse $\mathsf{B}$ and right inverse $\mathsf{C}$ exist, then
+
+$$
+\mathsf{B} = \mathsf{BI} = \mathsf{BAC} = \mathsf{IC} = \mathsf{C}
+$$
+
+Let $\mathsf{A}$ be a square matrix. $\mathsf{A}$ is _invertible_ if there exists a matrix $\mathsf{A}^{-1}$, which is unique, such that
+
+$$
+\mathsf{A}^{-1}\mathsf{A} = \mathsf{A}\mathsf{A}^{-1} = \mathsf{I}
+$$
+
+We have
+
+$$
+(\mathsf{A}^{-1})^{-1} = \mathsf{A}
+$$
+
+and
+
+$$
+\mathsf{AB}^{-1} = \mathsf{B}^{-1}\mathsf{A}^{-1}
+$$
+
+## Orthogonal Matrix
+
+A real square matrix is _orthogonal_ if
+
+$$
+\mathsf{A}\mathsf{A}^\intercal = \mathsf{I} = \mathsf{A}^\intercal\mathsf{A}
+$$
+
+i.e. if $\mathsf{A}$ is invertible and $\mathsf{A}^{-1} = \mathsf{A}^\intercal$
+
+As
+
+$$
+(\mathsf{A}\mathsf{A}^\intercal)_{ij} = \mathsf{A}_{ik}(\mathsf{A}^\intercal)_{kj} = \mathsf{A}_{ik}\mathsf{A}_{jk} = \delta_{ij}
+$$
+
+it means the product of the $i$-th row with other rows is $0$ and product with itself is $1$.
+It implies that the rows (and columns) of $\mathsf{A}$ form an orthonormal set.
+
+A map $\mathcal{A}$ with orthogonal matrix $\mathsf{A}$ with repsect to an orthonormal basis transforms $\Set{\mathbf{e}_i}$ to an orthonormal set
+(which may be right-handed or left handed depending on the sign of $\det \mathsf{A}$.
+
+Rotation and reflection matrices are examples of orthogonal matrix.
+
+The scalar product is preserved after the mapping represented by an orthogonal matrix with respect to an orthonormal basis as ($\mathbf{x} \cdot \mathbf{y} = \mathsf{x}^\intercal \mathsf{y}$ if the basis is orthonormal)
+
+$$
+\begin{align*}
+\mathbf{x}' \cdot \mathbf{y}' &= (\mathsf{x}')^\intercal \mathsf{y}' \\
+&= (\mathsf{x}^\intercal \mathsf{A}^\intercal) (\mathsf{A} \mathsf{y}) \\
+&= \mathsf{x}^\intercal \mathsf{I} \mathsf{y} \\
+&= \mathsf{x}^\intercal \mathsf{y} \\
+&= \mathbf{x} \cdot \mathbf{y} \\
+\end{align*}
+$$
+
+Hence, the map is an _isometry_, i.e. distances are preserved.
+
+For a complex square matrix to be _unitary_ if its Hermitian conjugate is equal to its inverse, i.e.
+
+$$
+\mathsf{A}^\dagger = \mathsf{A}^{-1}
+$$
+
+which has similar properties as orthogonal real matrix.
