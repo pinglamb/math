@@ -445,6 +445,34 @@ Hence, $\det \mathsf{A} = \pm 1$.
 
 ## Minors and cofactors
 
+### Definition
+
+Let $\mathsf{A}$ be a $n \times n$ matrix, define $\mathsf{A}^{ij}$ be the matrix omitting the $i$-th row and $j$-th column of $\mathsf{A}$.
+
+The _minor_ $M_{ij}$ of the $ij$-th element of $\mathsf{A}$ is defined by
+
+$$
+M_{ij} = \det \mathsf{A}^{ij}
+$$
+
+The _cofactor_ $\Delta_{ij}$ of the $ij$-th element of $\mathsf{A}$ is defined by
+
+$$
+\Delta_{ij} = (-)^{i - j} M_{ij} = (-)^{i - j} \det \mathsf{A}^{ij}
+$$
+
+### Laplace Expansion Formula
+
+The _Laplace expansion formula_ is given by
+
+$$
+\det \mathsf{A} = \sum_{k = 1}^{n} A_{Ik} \Delta_{Ik} = \sum_{k = 1}^{n} A_{kI} \Delta_{kI}
+$$
+
+for a chosen $1 \le I \le n$.
+
+It expresses $\det \mathsf{A}$ as a sum of $n$ determinants of one less row and column than the original.
+
 ## References
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 3](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
