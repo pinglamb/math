@@ -310,3 +310,70 @@ $$
 $$
 
 which has similar properties as orthogonal real matrix.
+
+## Determinants
+
+### 3-by-3
+
+Let $\mathcal{A}: \mathbb{R}^3 \to \mathbb{R}^3$ with matrix representation $\mathsf{A}$ be a linear map with standard orthonormal basis $\Set{\mathbf{e}_i}$.
+Consider the effect of the linear map to the volume of the unit cube, which is
+
+$$
+\begin{align*}
+\mathbf{e}_1' \cdot (\mathbf{e}_2') \times \mathbf{e}_3') &= \epsilon_{ijk} (\mathbf{e}_1')_i (\mathbf{e}_2')_j (\mathbf{e}_3')_k \\
+&= \epsilon_{ijk} (\mathsf{A}_{il} (\mathbf{e}_1)_l) (\mathsf{A}_{jm} (\mathbf{e}_2)_m) (\mathsf{A}_{kn} (\mathbf{e}_3)_n) \\
+&= \epsilon_{ijk} (\mathsf{A}_{il} \delta_{1l}) (\mathsf{A}_{jm} \delta_{2m}) (\mathsf{A}_{kn} \delta_{3n}) \\
+&= \epsilon_{ijk} \mathsf{A}_{i1} \mathsf{A}_{j2} \mathsf{A}_{k3} \\
+\end{align*}
+
+$$
+
+The determinant $\det \mathsf{A}$ of $\mathsf{A}$ is given by
+
+$$
+\det \mathsf{A} \equiv |\mathsf{A}| \equiv \begin{vmatrix}
+A_{11} & A_{12} & A_{13} \\
+A_{21} & A_{22} & A_{23} \\
+A_{31} & A_{32} & A_{33} \\
+\end{vmatrix} = \epsilon_{ijk} \mathsf{A}_{i1} \mathsf{A}_{j2} \mathsf{A}_{k3} = \epsilon_{ijk} \mathsf{A}_{1i} \mathsf{A}_{2j} \mathsf{A}_{3k}
+$$
+
+which represents the volume of the transformed unit cube.
+A linear map is _volume preserving_ if and only if $\det \mathsf{A} = \pm 1$ (with respect to orthonormal basis).
+
+If $\Set{\mathbf{e}_i}$ is right-handed basis, then the transformed basis is right-handed if $\det \mathsf{A} > 0$, and left-handed if $\det \mathsf{A} < 0$.
+
+### 2-by-2
+
+By setting $A_{13} = A_{31} = A_{23} = A{32} = 0$ and $A_{33} = 1$, we have the determinant for a $2 \times 2$ matrix
+
+$$
+\det \mathsf{A} = \begin{vmatrix}
+A_{11} & A_{12} \\
+A_{21} & A_{22} \\
+\end{vmatrix} = A_{11}A_{22} - A_{12}A_{21}
+$$
+
+Similarily, $\mathsf{A}$ is _area preseving_ if and only if $\det \mathsf{A} = \pm 1$.
+
+### n-by-n
+
+The determinant of a $n \times n$ matrix $\mathsf{A}$ is defined by
+
+$$
+\det \mathsf{A} = \epsilon_{i_1 i_2 ... i_n} A_{i_1 1} A_{i_2 2} ... A_{i_n n}
+$$
+
+Let $S_n$ be the set of permutations of $\Set{1, 2, ..., n}$ and $\epsilon(\sigma)$ be the sign of permutation $\sigma \in S_n$, then
+
+$$
+\det \mathsf{A} = \sum_{\sigma \in S_n} \epsilon(\sigma) A_{\sigma(1) 1} A_{\sigma(2) 2} ... A_{\sigma(n) n}
+$$
+
+### Properties
+
+### Minors and cofactors
+
+## References
+
+* [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 3](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)

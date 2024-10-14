@@ -129,7 +129,7 @@ $$
 So, the $i$-th component of the image $x'$ under $\mathcal{A}$ is
 
 $$
-(x')_i = \sum_{j=1}^n A_{ij} x_j
+x_i' = A_{ij} x_j
 $$
 
 Alternatively, in expanded form, we have
