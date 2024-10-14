@@ -370,9 +370,80 @@ $$
 \det \mathsf{A} = \sum_{\sigma \in S_n} \epsilon(\sigma) A_{\sigma(1) 1} A_{\sigma(2) 2} ... A_{\sigma(n) n}
 $$
 
-### Properties
+## Properties of Determinants
 
-### Minors and cofactors
+### Transpose
+
+Let $\rho$ be a permutation, we have
+
+$$
+A_{\sigma(1) 1} A_{\sigma(2) 2} ... A_{\sigma(n) n} = A_{\sigma(\rho(1)) \rho(1)} A_{\sigma(\rho(2)) \rho(2)} ... A_{\sigma(\rho(n)) \rho(n)}
+$$
+
+because the R.H.S. is just a reordering of L.H.S.
+
+By choosing $\rho = \sigma^{-1}$,
+
+$$
+\det \mathsf{A} = \sum_{\sigma \in S_n} \epsilon(\sigma^{-1}) A_{1 \sigma^{-1}(1)} A_{2 \sigma^{-1}(2)} ... A_{n \sigma^{-1}(n)}
+$$
+
+As $\epsilon(\sigma^{-1}) = \epsilon(\sigma)$ and every permutation has an unique inverse,
+
+$$
+\det \mathsf{A} = \sum_{\sigma \in S_n} \epsilon(\sigma) A_{1 \sigma(1)} A_{2 \sigma(2)} ... A_{n \sigma(n)} = \det \mathsf{A}^\intercal
+$$
+
+Hence, we can also write
+
+$$
+\det \mathsf{A} = \det \mathsf{A}^\intercal = \epsilon_{j_1 j_2 ... j_n} A_{1 j_1} A_{2 j_2} ... A_{n j_n}
+$$
+
+### Scalar product
+
+Let $\mathsf{A}$ be a $n \times n$ matrix,
+
+$$
+\mathsf{B} = \lambda \mathsf{A} \implies \det \mathsf{B} = \lambda^n \det \mathsf{A}
+$$
+
+### Interchanges
+
+If $\mathsf{B}$ is obtained from interchanging two rows/columns of $\mathsf{A}$,
+then $\det \mathsf{B} = - \det \mathsf{A}$.
+
+Hence, if two rows/columns are identical, $\det \mathsf{A} = 0$.
+
+### Row/Column Operations
+
+If $\mathsf{B}$ is obtained from adding to a row/column of $\mathsf{A}$ by multiple of another row/column, then $\det \mathsf{B} = \det \mathsf{A}$.
+
+### Linear Dependent Rows/Columns
+
+If the rows or columns of $\mathsf{A}$ are linearly dependent, then $\det \mathsf{A} = 0$.
+
+If $\det \mathsf{A} \not = 0$, then rows/columns $\mathsf{A}$ are linear independent (the contrapositive).
+
+Conversely, if $\det \mathsf{A} = 0$, then rows/columns are linearly dependent, is also true.
+
+### Matrix product
+
+If $\mathsf{A}$ and $\mathsf{B}$ are square matrix, then
+
+$$
+\det \mathsf{AB} = \det \mathsf{A} \det \mathsf{B}
+$$
+
+From that, if $\mathsf{A}$ is orthogonal,
+
+$$
+(\det \mathsf{A})^2 = \det \mathsf{A} \det \mathsf{A}^\intercal = \det \mathsf{I} = 1
+$$
+
+Hence, $\det \mathsf{A} = \pm 1$.
+
+## Minors and cofactors
 
 ## References
 
