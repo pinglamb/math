@@ -12,6 +12,7 @@ title: Home
 * [Vector Spaces](vectors-and-matrices/vector-spaces.md)
 * [Linear Maps](vectors-and-matrices/linear-maps.md)
 * [Matrices](vectors-and-matrices/matrices.md)
+* [Suffix Notation](vectors-and-matrices/suffix-notation.md)
 
 ## Geometry
 

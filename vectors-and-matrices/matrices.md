@@ -320,10 +320,10 @@ Consider the effect of the linear map to the volume of the unit cube, which is
 
 $$
 \begin{align*}
-\mathbf{e}_1' \cdot (\mathbf{e}_2') \times \mathbf{e}_3') &= \epsilon_{ijk} (\mathbf{e}_1')_i (\mathbf{e}_2')_j (\mathbf{e}_3')_k \\
-&= \epsilon_{ijk} (\mathsf{A}_{il} (\mathbf{e}_1)_l) (\mathsf{A}_{jm} (\mathbf{e}_2)_m) (\mathsf{A}_{kn} (\mathbf{e}_3)_n) \\
-&= \epsilon_{ijk} (\mathsf{A}_{il} \delta_{1l}) (\mathsf{A}_{jm} \delta_{2m}) (\mathsf{A}_{kn} \delta_{3n}) \\
-&= \epsilon_{ijk} \mathsf{A}_{i1} \mathsf{A}_{j2} \mathsf{A}_{k3} \\
+\mathbf{e}_1' \cdot (\mathbf{e}_2' \times \mathbf{e}_3') &= \varepsilon_{ijk} (\mathbf{e}_1')_i (\mathbf{e}_2')_j (\mathbf{e}_3')_k \\
+&= \varepsilon_{ijk} (\mathsf{A}_{il} (\mathbf{e}_1)_l) (\mathsf{A}_{jm} (\mathbf{e}_2)_m) (\mathsf{A}_{kn} (\mathbf{e}_3)_n) \\
+&= \varepsilon_{ijk} (\mathsf{A}_{il} \delta_{1l}) (\mathsf{A}_{jm} \delta_{2m}) (\mathsf{A}_{kn} \delta_{3n}) \\
+&= \varepsilon_{ijk} \mathsf{A}_{i1} \mathsf{A}_{j2} \mathsf{A}_{k3} \\
 \end{align*}
 
 $$
