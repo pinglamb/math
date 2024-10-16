@@ -64,7 +64,6 @@ m = \lim_{h \to 0} {f(a + h) - f(a) \over h}
 $$
 
 Thus, the number $m$ is uniquely determinted and it is called the _derivative_ of $f$ at $a$, denoted by $f'(a)$.
-It also means the tangent line is the _only_ line that gives a good linear approximation.
 
 Coversely, if the limit $m$ exists, we set $E(h) = f(a + h) - f(a) - mh$ and
 
@@ -92,6 +91,44 @@ Some general properties are as follow (suppose $h \to 0$):
 * If $f(h) = o(h)$ then $cf(h) = o(h)$
 * If $f_1(h) = o(f_2(h))$ and $f_2(h) = o(f_3(h))$ then $f_1(h) = o(f_3(h))$
 * If $f(h) = o(h^a)$ where $a \in \mathbb{N}$ then $f(h) = o(h)$
+
+Base on the definition, we can see that $E(h) = o(h)$ and we have the following theorem:
+
+If $f$ is differentiable at $x = a$, then
+
+$$
+f(a + h) = f(a) + f'(a)h + o(h)
+$$
+
+Conversely, if there exist constants $A$ and $B$ such that
+
+$$
+f(a + h) = A + Bh + o(h)
+$$
+
+then $f$ is differentiable at $a$, with $A = f(a)$ and $B = f'(a)$.
+
+This theorem means that the tangent line is a good linear approximation to $f$ and the tangent line is the _only_ line that gives such a good approximation.
+
+This notation is handy for deriving basic laws of differentiation. For example, the product rule:
+
+If $f$ and $g$ are differentiable at $x = a$, then
+
+$$
+f(a + h) = f(a) + f'(a)h + o(h) \quad \text{ and } \quad g(a + h) = g(a) + g'(a)h + o(h)
+$$
+
+Hence,
+
+$$
+\begin{align*}
+f(a + h)g(a + h) &= [f(a) + f'(a)h + o(h)][g(a) + g'(a)h + o(h)] \\
+&= f(a)g(a) + [f(a)g'(a) + f'(a)g(a)]h + \left\{ [f(a) + f'(a)h]o(h) + [g(a) + g'(a)h]o(h) + o(h^2) \right\} \\
+&= f(a)g(a) + [f(a)g'(a) + f'(a)g(a)]h + o(h)
+\end{align*}
+$$
+
+According to the theorem, $fg$ is differentiable at $x = a$ and it derivative is $f(a)g'(a) + f'(a)g(a)$.
 
 ## References
 
