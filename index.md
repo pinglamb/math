@@ -14,6 +14,10 @@ title: Home
 * [Matrices](vectors-and-matrices/matrices.md)
 * [Suffix Notation](vectors-and-matrices/suffix-notation.md)
 
+## Differential Equations
+
+* [Differentiability](differential-equations/differentiability.md)
+
 ## Geometry
 
 * [Apollonian Circles](geometry/apollonian-circles.md)
