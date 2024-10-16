@@ -64,6 +64,7 @@ m = \lim_{h \to 0} {f(a + h) - f(a) \over h}
 $$
 
 Thus, the number $m$ is uniquely determinted and it is called the _derivative_ of $f$ at $a$, denoted by $f'(a)$.
+It also means the tangent line is the _only_ line that gives a good linear approximation.
 
 Coversely, if the limit $m$ exists, we set $E(h) = f(a + h) - f(a) - mh$ and
 
@@ -73,7 +74,24 @@ $$
 
 so $\eqref{eq1}$ holds and it is like the usual definition.
 
-Also, as $E(h) / h$ vanishes as $h \to 0$, so as $E(h)$ itself and hence so does $f(a + h) - f(a)$. It means differentiability at $a$ implies continuity at $a$.
+Also, as $E(h) / h$ vanishes as $h \to 0$, so as $E(h)$ itself and hence so does $f(a + h) - f(a)$.
+It means differentiability at $a$ implies continuity at $a$.
+
+## Little-o notation
+
+The statement $f(h) = o(g(h))$ as $h \to 0$ means that
+
+$$
+\lim_{h \to 0} {f(h) \over g(h)} = 0
+$$
+
+Some general properties are as follow (suppose $h \to 0$):
+
+* If $f(h) = o(h^a)$ and $g(h) = o(h^a)$ then $f(h) + g(h) = o(h^a)$
+* If $f(h) = o(h^a)$ and $g(h) = o(h^b)$ then $f(h)g(h) = o(h^{a+b})$
+* If $f(h) = o(h)$ then $cf(h) = o(h)$
+* If $f_1(h) = o(f_2(h))$ and $f_2(h) = o(f_3(h))$ then $f_1(h) = o(f_3(h))$
+* If $f(h) = o(h^a)$ where $a \in \mathbb{N}$ then $f(h) = o(h)$
 
 ## References
 
