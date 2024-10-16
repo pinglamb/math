@@ -110,12 +110,14 @@ then $f$ is differentiable at $a$, with $A = f(a)$ and $B = f'(a)$.
 
 This theorem means that the tangent line is a good linear approximation to $f$ and the tangent line is the _only_ line that gives such a good approximation.
 
-This notation is handy for deriving basic laws of differentiation. For example, the product rule:
+This notation is handy for deriving basic laws of differentiation.
+
+### Product rule proof
 
 If $f$ and $g$ are differentiable at $x = a$, then
 
 $$
-f(a + h) = f(a) + f'(a)h + o(h) \quad \text{ and } \quad g(a + h) = g(a) + g'(a)h + o(h)
+f(a + h) = f(a) + f'(a)h + o(h) \quad \text{and} \quad g(a + h) = g(a) + g'(a)h + o(h)
 $$
 
 Hence,
@@ -128,7 +130,32 @@ f(a + h)g(a + h) &= [f(a) + f'(a)h + o(h)][g(a) + g'(a)h + o(h)] \\
 \end{align*}
 $$
 
-According to the theorem, $fg$ is differentiable at $x = a$ and it derivative is $f(a)g'(a) + f'(a)g(a)$.
+By the theorem, $fg$ is differentiable at $x = a$ and its derivative is $f(a)g'(a) + f'(a)g(a)$.
+
+### Chain rule proof
+
+If $f$ is differentiable at $x = a$ and $g$ is differentiable at $x = f(a)$, we have
+
+$$
+f(a + h) = f(a) + f'(a)h + o(h) \quad \text{and} \quad g(f(a) + k) = g(f(a)) + g'(f(a))k + o(k)
+$$
+
+Substitude $k = f(a + h) - f(a)$ in the second formula,
+
+$$
+g(f(a + h)) = g(f(a)) + g'(f(a))[f(a + h) - f(a)] + o(f(a + h) - f(a))
+$$
+
+Then substitude $f(a + h) - f(a) = f'(a)h + o(h)$,
+
+$$
+\begin{align*}
+g(f(a + h)) &= g(f(a)) + g'(f(a))[f'(a)h + o(h)] + o(f'(a)h + o(h))
+&= g(f(a)) + [g'(f(a))f'(a)]h + o(h)
+\end{align*}
+$$
+
+By the theorem, $g \circ f$ is differentiable at $x = a$ and its derivative is $g'(f(a))f'(a)$.
 
 ## References
 
