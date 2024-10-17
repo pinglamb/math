@@ -17,6 +17,7 @@ title: Home
 ## Differential Equations
 
 * [Differentiability](differential-equations/differentiability.md)
+* [Exponential Function](differential-equations/exponential-function.md)
 
 ## Geometry
 

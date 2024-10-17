@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Exponential, Cosine and Sine Functions &#124; Linear Algebra
+title: Exponential, Cosine and Sine Functions &#124; Vectors and Matrices
 ---
 
 # Exponential, Cosine and Sine Functions
