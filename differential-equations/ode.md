@@ -106,7 +106,55 @@ $$
 
 which is a general solution for the equation.
 
+## Integrating Factors
+
+Consider the linear differential equation
+
+$$
+y' + p(x)y = q(x)
+$$
+
+Multiplying both sides by a factor of $I(x)$ and we have
+
+$$
+I(x)y' + I(x)p(x)y = I(x)q(x)
+$$
+
+Consider the derivative of $I(x)y$, by product rule,
+
+$$
+{\mathrm{d} \over \mathrm{d}x}I(x)y = I(x)y' + I'(x)y
+$$
+
+Thus, in order for the L.H.S. to be grouped together, we need to have
+
+$$
+I(x)p(x) = I'(x)
+$$
+
+which is a separable equation, i.e.
+
+$$
+\int {1 \over I} \mathrm{d}I = \int p(x) \mathrm{d}x
+$$
+
+and we have the integrating factor
+
+$$
+I(x) = e^{\int p(x) \mathrm{d}x}
+$$
+
+Back to the linear differential equation, the general solution is
+
+$$
+\begin{align*}
+{\mathrm{d} \over \mathrm{d}x} I(x)y &= I(x)q(x) \\
+I(x)y &= \int I(x)q(x) \mathrm{d}x \\
+y &= {1 \over I(x)} \int I(x)q(x) \mathrm{d}x
+\end{align*}
+$$
+
 ## References
 
-* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 8
+* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 8, 9
 * [https://youtu.be/u0vbm1T420g](https://youtu.be/u0vbm1T420g)
