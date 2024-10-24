@@ -106,7 +106,9 @@ $$
 
 which is a general solution for the equation.
 
-## Integrating Factors
+## Linear Equations
+
+### By Integrating Factors
 
 Consider the linear differential equation
 
@@ -233,6 +235,28 @@ $$
 $$
 
 depends only on $x$, it becomes a seprable equation and we can solve for $I(x)$.
+
+## Bernoulli Equations
+
+For equations of the form
+
+$$
+{\mathrm{d}y \over \mathrm{d} x} + p(x)y = q(x)y^n
+$$
+
+If $n = 0, 1$, it is a linear equation and can be solved by finding the integrating factors.
+
+If $n \ge 2$, let $u = y^{1-n}$, $u' = (1 - n) y^{-n} y'$.
+Hence, by multiplying $(1 - n) y^{-n}$ to the equation, we have
+
+$$
+\begin{align*}
+(1 - n) y^{-n} y' + (1 - n) p(x) y^{1-n} &= (1 - n)q(x) \\
+u' + (1 - n) p(x) u &= (1 - n)q(x)
+\end{align*}
+$$
+
+which becomes a linear differential equation and can be solved by integrating factors.
 
 ## References
 
