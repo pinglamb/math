@@ -3,7 +3,7 @@ layout: base
 title: Ordinary Differential Equations &#124; Differential Equations
 ---
 
-# Ordinary Differential Equations
+# First Order Ordinary Differential Equations
 
 ## Existence and Uniqueness
 

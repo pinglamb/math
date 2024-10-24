@@ -19,7 +19,8 @@ title: Home
 * [Differentiability](differential-equations/differentiability.md)
 * [Taylor's Theorem](differential-equations/taylor-theorem.md)
 * [Exponential Function](differential-equations/exponential-function.md)
-* [Ordinary Differential Equations](differential-equations/ode.md)
+* [First Order Ordinary Differential Equations](differential-equations/first-order-ode.md)
+* [Second Order Ordinary Differential Equations](differential-equations/second-order-ode.md)
 
 ## Geometry
 
