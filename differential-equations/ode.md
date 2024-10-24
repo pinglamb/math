@@ -154,6 +154,46 @@ y &= {1 \over I(x)} \int I(x)q(x) \mathrm{d}x
 \end{align*}
 $$
 
+## Exact Equations
+
+For equations of the form
+
+$$
+f(x, y) + g(x, y){\mathrm{d}y \over \mathrm{d}x} = 0
+$$
+
+Consider an implicit relation between $x, y$ of the form $F(x, y) = c$, by chain rule,
+
+$$
+{\mathbf{d}F \over \mathrm{d}x} = {\partial F \over \partial x} {\mathrm{d}x \over \mathrm{d}x} + {\partial F \over \partial y} {\mathrm{d}y \over \mathrm{d}x} = 0
+$$
+
+Hence, comparing to the differential equation, we have
+
+$$
+{\partial F \over \partial x} = f(x, y) \quad \text{and} \quad {\partial F \over \partial y} = g(x, y)
+$$
+
+In order to check if there exists such $F(x, y) = c$, we can use the property that $F_{xy} = F_{yx}$, i.e.
+
+$$
+{\partial \over \partial y} f(x, y) = {\partial \over \partial x} g(x, y)
+$$
+
+If that is the case, we can then have
+
+$$
+F(x, y) = \int f(x, y) dx + C(y)
+$$
+
+and
+
+$$
+{\partial \over \partial y} F(x, y) = {\partial \over \partial y} \int f(x, y) dx + {\mathrm{d} C \over \mathrm{d} y} = g(x, y)
+$$
+
+and we should be able to resolve $F(x, y) = c$ as the solution.
+
 ## References
 
 * James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 8, 9
