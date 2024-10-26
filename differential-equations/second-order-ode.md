@@ -26,6 +26,45 @@ the the initial conditions and the differential equation.
 
 ## Linearity
 
+Define
+
+$$
+L[y] = {\mathrm{d}^2y \over \mathrm{d}x^2} + p(x) {\mathrm{d}y \over \mathrm{d}x} + q(x) y
+$$
+
+which is a function of $x$.
+
+Consider a homogeneous second order linear differential equation
+
+$$
+{\mathrm{d}^2y \over \mathrm{d}x^2} + p(x) {\mathrm{d}y \over \mathrm{d}x} + q(x) y = 0
+$$
+
+which we can simplify it as
+
+$$
+L[y] = 0
+$$
+
+Suppose $y_1$ and $y_2$ are solutions to the equation, we have
+
+$$
+\begin{align*}
+L[\alpha y_1 + \beta y_2]
+&= {\mathrm{d}^2 \over \mathrm{d}x^2}(\alpha y_1 + \beta y_2) + p(x) {\mathrm{d} \over \mathrm{d}x}(\alpha y_1 + \beta y_2) + q(x) (\alpha y_1 + \beta y_2) \\
+&= \alpha \left[ {\mathrm{d}^2 y_1 \over \mathrm{d}x^2} + p(x) {\mathrm{d} y_1 \over \mathrm{d}x} + q(x) y_1) \right] + \beta \left[ {\mathrm{d}^2 y_2 \over \mathrm{d}x^2} + p(x) {\mathrm{d} y_2 \over \mathrm{d}x} + q(x) y_2) \right] \\
+&= \alpha L[y_1] + \beta L[y_2] = 0
+\end{align*}
+$$
+
+We can see that the differential operator $L$ is linear and we can express the general solution of the equation as
+
+$$
+y(x) = \alpha y_1(x) + \beta y_2(x)
+$$
+
+for linear independent solutions $y_1$ and $y_2$.
+
 ## Linear Independence
 
 ### The Wronskian
