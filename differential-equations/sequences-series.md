@@ -113,22 +113,14 @@ _Proof_. If $\Set{a_n}$ is bounded above, there exists a least upper bound $L$.
 Given $\varepsilon > 0$, $L - \varepsilon$ is not an upper bound, hence for some integer $N$
 
 $$
-a_N > L - \varepsilon
+L - \varepsilon < a_N \le L
 $$
 
-As $a_n$ is increasing, $a_n > a_N$ for all $n > N$. Thus,
+As $a_n$ is increasing, $a_n ge a_N$ for all $n > N$. Thus,
 
 $$
-a_n > L - \varepsilon
+L - \varepsilon < a_n \le L
 $$
-
-which implies
-
-$$
-0 \le L - a_n < \varepsilon
-$$
-
-as $a_n \le L$
 
 Hence,
 
