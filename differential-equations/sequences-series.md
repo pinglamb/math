@@ -128,6 +128,30 @@ $$
 \lim_{n \to \infty} a_n = L
 $$
 
+## Series
+
+A series is the infinite sum of a sequence $a_n$. Let $s_n$ denote its $n$th partial sum
+
+$$
+s_n = a_1 + a_2 + ... + a_n
+$$
+
+$\Set{s_n}$ is a sequence and $s$ is the sum of the series if the series is convergent and $\lim_{n \to \infty} s_n = s$.
+
+If the series is convergent, it implies the underlying sequence $\Set{a_n}$ has limit $\lim_{n \to \infty} a_n = 0$ as
+
+$$
+\lim_{n \to \infty} a_n = \lim_{n \to \infty} (s_n - s_{n-1}) = s - s = 0
+$$
+
+The converse is not true though for example the harmonic series has the terms approaching $0$ but the sum is divergent.
+
+The counterpositive can be a test for divergence, i.e. if $\lim_{n \to \infty} a_n \not = 0$, $\Set{s_n}$ is divergent.
+
+### Integral Test
+
+### Comparison Test
+
 ## References
 
 * James Stewart _Single Variable Calculus_, 2015 - Chapter 11
