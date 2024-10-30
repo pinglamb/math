@@ -150,6 +150,61 @@ The counterpositive can be a test for divergence, i.e. if $\lim_{n \to \infty} a
 
 ### Integral Test
 
+Consider the series
+
+$$
+\sum_{n=1}^{\infty} {1 \over n^2} = {1 \over 1^2} + {1 \over 2^2} + {1 \over 3^2} + ...
+$$
+
+Geometrically, we can form rectangles under the graph of $y = 1/x^2$, each with a unit width and height eqauls to the value of function.
+The sum of the area of the rectangles equals to the sum of the series. Consider all the terms excluding the first one $1/1^2$,
+it has to be less than the area under the function from $1$ to $\infty$. Hence,
+
+$$
+\sum_{n=1}^{\infty} {1 \over n^2} < {1 \over 1^2} + \int_{1}^{\infty} { 1 \over x^2} \mathrm{d}x = 1 + 1 = 2
+$$
+
+As the partial sum $\Set{s_n}$ is increasing and bounded above, the series is convengent.
+
+<p align="center"><img src="../images/integral-test-below.png" alt="" /></p>
+
+On the other hand, we can also form rectangles with tops lie above the curve to show the series is divergent. Consider the series
+
+$$
+\sum_{n=1}^{\infty} {1 \over \sqrt{n}} = {1 \over \sqrt{1}} + {1 \over \sqrt{2}} + {1 \over \sqrt{3}} + ...
+$$
+
+We have
+
+$$
+\sum_{n=1}^{\infty} {1 \over \sqrt{n}} > \int_{1}^{\infty} {1 \over \sqrt{x}} \mathrm{d}x = \infty
+$$
+
+So, the series is divergent.
+
+<p align="center"><img src="../images/integral-test-above.png" alt="" /></p>
+
+Therefore, we can conclude that with $f$ being a continuous, positive, decreasing function on $[1, \infty)$ and $f(n) = a_n$,
+if $\int_{1}^{\infty} f(x) \mathrm{d}x$ is convengent/divergent, so as $\sum_{n=1}^{\infty} a_n$.
+
+We can also use the integral to estimate the sum, let $R_n$ be the remainder of the partial sum $s_n$, i.e.
+
+$$
+R_n = s - s_n = a_{n+1} + a_{n+2} + ...
+$$
+
+By forming rectangles with top above and below the curve, we have
+
+$$
+\int_{n+1}^{\infty} f(x) \mathrm{d}x \le R_n \le \int_{n}^{\infty} f(x) \mathrm{d}x
+$$
+
+Adding $s_n$ to the inequalities, we can find an upper bound and a lower bound for $s$.
+
+$$
+s_n + \int_{n+1}^{\infty} f(x) \mathrm{d}x \le s \le s_n + \int_{n}^{\infty} f(x) \mathrm{d}x
+$$
+
 ### Comparison Test
 
 ## References
