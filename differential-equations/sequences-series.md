@@ -241,6 +241,28 @@ $$
 
 and we can find the upper bound of $R_n$ by estimating/finding $T_n$.
 
+## Alternating Series
+
+If the alternating series
+
+$$
+\sum_{n=1}^{\infty} (-1)^{n-1} a_n = a_1 - a_2 + a_3 - a_4 + ...
+$$
+
+with $a_n > 0$ satisfies
+
+$$
+a_{n+1} < a_n \quad \text{and} \quad \lim_{n \to \infty} a_n = 0
+$$
+
+then the series is convergent.
+
+The remainder of the $n$th partial sum estimation is
+
+$$
+|R_n| \le a_{n+1}
+$$
+
 ## References
 
 * James Stewart _Single Variable Calculus_, 2015 - Chapter 11
