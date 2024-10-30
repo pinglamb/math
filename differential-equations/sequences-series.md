@@ -146,7 +146,9 @@ $$
 
 The converse is not true though for example the harmonic series has the terms approaching $0$ but the sum is divergent.
 
-The counterpositive can be a test for divergence, i.e. if $\lim_{n \to \infty} a_n \not = 0$, $\Set{s_n}$ is divergent.
+## Divergence Test
+
+The counterpositive of the above statement is test for divergence, i.e. if $\lim_{n \to \infty} a_n \not = 0$, $\Set{s_n}$ is divergent.
 
 ### Integral Test
 
@@ -262,6 +264,35 @@ The remainder of the $n$th partial sum estimation is
 $$
 |R_n| \le a_{n+1}
 $$
+
+## Absolute Convergence
+
+A series $\sum a_n$ is called absolutely convergent if the series of absolute values $\sum \| a_n \|$ is convergent.
+
+A convergent series is not necessary absolutely convergent, for that we called the series conditionally convergent.
+For example, alternating harmonic series is conditionally convergent.
+
+However, if a series is absolutely convergent, then it is convergent.
+
+_Proof_. Consider
+
+$$
+0 \le a_n + |a_n| \le 2|a_n|
+$$
+
+By comparison test, we have $\sum a_n + \|a_n\|$ convergent.
+
+Also, we can write
+
+$$
+\sum a_n = \sum (a_n + |a_n|) - \sum |a_n|
+$$
+
+which is the difference of two convergent series and therefore the series itself is convergent.
+
+## Ratio/Root Test
+
+## Rearrangements
 
 ## References
 
