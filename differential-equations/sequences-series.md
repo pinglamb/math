@@ -292,7 +292,30 @@ which is the difference of two convergent series and therefore the series itself
 
 ## Ratio/Root Test
 
+To check for absolute convergence, we can use the ratio/root test.
+
+For ratio test, given a series $\sum a_n$. Suppose
+
+$$
+\lim_{n \to \infty} \left| {a_{n+1} \over a_n} \right| = L
+$$
+
+If $L < 1$, then the series is absolutely convergent. If $L > 1$, then the series is divergent. If $L = 1$, the test is inconclusive.
+
+When $n$ appears in the power, the root test will be useful.
+Similarily, given a series $\sum a_n$. Suppose
+
+$$
+\lim_{n \to \infty} \sqrt[n]{\left| a_n \right|} = L
+$$
+
+If $L < 1$, then the series is absolutely convergent. If $L > 1$, then the series is divergent. If $L = 1$, the test is inconclusive.
+
 ## Rearrangements
+
+As series involve infinite sums, rearrangement of the terms might affect the results.
+By Riemann, if $\sum a_n$ is conditionally convergent, then there is a rearrangement that has a sum equals to any real number.
+However, if $\sum a_n$ is absolutely convergent, then rearrangement will not check the sum.
 
 ## References
 
