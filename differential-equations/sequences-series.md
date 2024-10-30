@@ -207,6 +207,40 @@ $$
 
 ### Comparison Test
 
+For series $\sum a_n$ and $\sum b_n$ with positive terms,
+if $a_n le b_n$ for all $n > N$ and $\sum b_n$ is convergent, $\sum a_n$ is convergent,
+if $a_n ge b_n$ for all $n > N$ and $\sum b_n$ is divergent, $\sum a_n$ is divergent.
+
+For example, ${ln k \over k } > {1 \over k}$ for $k \ge 3$ and $\sum {1 \over k}$ is divergent, hence $\sum {\ln k \over k}$ is divergent.
+
+We can also check the limit
+
+$$
+\lim_{n \to \infty} {a_n \over b_n}
+$$
+
+If the limit exists and equals to a finite number $c > 0$, then either both series are convergent or divergent.
+
+If we have $\sum a_n$ converges because of the comparison test with $\sum b_n$, consider the remainder of the two series
+
+$$
+R_n = s - s_n = a_{n+1} + a_{n+2} + ...
+$$
+
+and
+
+$$
+T_n = t - t_n = b_{n+1} + b_{n+2} + ...
+$$
+
+We have
+
+$$
+R_n \le T_n
+$$
+
+and we can find the upper bound of $R_n$ by estimating/finding $T_n$.
+
 ## References
 
 * James Stewart _Single Variable Calculus_, 2015 - Chapter 11
