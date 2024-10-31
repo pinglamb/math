@@ -189,6 +189,8 @@ So, the series is divergent.
 Therefore, we can conclude that with $f$ being a continuous, positive, decreasing function on $[1, \infty)$ and $f(n) = a_n$,
 if $\int_{1}^{\infty} f(x) \mathrm{d}x$ is convengent/divergent, so as $\sum_{n=1}^{\infty} a_n$.
 
+## Estimation
+
 We can also use the integral to estimate the sum, let $R_n$ be the remainder of the partial sum $s_n$, i.e.
 
 $$
@@ -222,6 +224,8 @@ $$
 $$
 
 If the limit exists and equals to a finite number $c > 0$, then either both series are convergent or divergent.
+
+## Estimation
 
 If we have $\sum a_n$ converges because of the comparison test with $\sum b_n$, consider the remainder of the two series
 
@@ -258,6 +262,22 @@ a_{n+1} < a_n \quad \text{and} \quad \lim_{n \to \infty} a_n = 0
 $$
 
 then the series is convergent.
+
+To find the limit of the alternating series, for example
+
+$$
+s_n = \sum_{n=1}^{\infty} (-1)^{n-1} a_n
+$$
+
+We have to find the limit of even partial sum $s_{2n}$. As
+
+$$
+\lim_{n \to \infty} s_{2n+1} = \lim_{n \to \infty} s_{2n} + \lim_{n \to \infty} a_{2n+1} = s + 0 = s
+$$
+
+The odd partial sum will always approach the same limit.
+
+### Estimation
 
 The remainder of the $n$th partial sum estimation is
 
