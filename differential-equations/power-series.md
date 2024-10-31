@@ -145,6 +145,51 @@ From this, we can see that $R_n(h) = o(h^{n+1})$ if $f^{n+1}$ exists.
 
 ## Binomial series
 
+For $f(x) = (1 + x)^k$ where $k$ can be any real number, we have
+
+$$
+\begin{align*}
+f(0) &= 1 \\
+f'(0) &= k \\
+f''(0) &= k(k-1) \\
+\end{align*}
+$$
+
+Therefore, the Taylor series of $f(x)$, which is called binomial series, is
+
+$$
+(1 + x)^k = \sum_{n=0}^\infty {k \choose n} x^n
+$$
+
+When $k$ is non-negative integer, the series is finite as the terms with $n > k$ is $0$ and it is the same as the typical binonial expansion.
+
+Otherwise, the series is infinite and by Ratio test,
+
+$$
+\lim_{n \to \infty} \left| {a_{n+1} \over a_n}\right| = \lim_{n \to \infty} {|k - n| \over n + 1}|x| = |x|
+$$
+
+so the series converge if $\|x\| < 1$.
+
+It is possible to prove that the remainder term $R_n(x)$ approaches $0$, but it turns out to be difficult.
+
+There is an easier method to prove that they equal to each other (works for other series as well).
+Let $g(x)$ be the series, and $h(x) = g(x) / f(x)$. If $h'(x) = 0$, $h(x)$ is a constant function and $h(0) = 1$, we can conclude $f(x) = g(x)$.
+
+For example, by differentiating $g(x) = \sum_{n=0}^{\infty} {k \choose n} x^n$, we have
+
+$$
+g'(x) = {k g(x) \over 1 + x}
+$$
+
+Let $h(x) = (1 + x)^{-k}g(x)$, we have
+
+$$
+h'(x) = -(1+x)^{-k}{k g(x) \over 1+x} + (1+x)^{-k}g'(x) = 0
+$$
+
+and $h(0) = 1$. Hence, $h(x) = 1$ and $(1 + x)^k = \sum_{n=0}^{\infty} {k \choose n} x^n$.
+
 ## List of important series
 
 $$
