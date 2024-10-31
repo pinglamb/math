@@ -73,39 +73,96 @@ $$
 
 Substitude $x = 0$, we have $C = \ln 1 = 0$ and the radius of convergence is $R = 1$.
 
-## Taylor's Theorem
+## Taylor series
 
-Taylor's Theorem is a higher-order version of the tangent line approximation discussed in [differentiability](differentiability.md).
-It states that a function $f$ of class $C^k$ on an interval $I$ containing the point $x = a$ is the sum of a certain polynomial of degree $k$
-and a remainder term that vanishes more rapidly than $\|x-a\|^k$ as $x \to a$ (i.e. $o(h^k)$).
-
-## Definition
-
-The $k$-th order _Taylor polynomial_ $P_{a, k}$ for $f$ based at $a$ is defined by
+In terms of general function $f(x)$, assume it can be represented by a power series, keep differentiating them we will find that
 
 $$
-P_{a,k}(h) = \sum_{j=0}^k {f^{(j)}(a) \over j!} h^j
+c_n = {f^{(n)}(a) \over n!}
 $$
 
-We have $P^{(j)}(0) = f^{(j)}(a)$ for $0 \le j \le k$.
-
-The $k$-th order _Taylor remainder_ $R_{a, k}$ is the difference
+Substituding it back we will get the Taylor series of the function $f$ about $a$, which is
 
 $$
-R_{a, k}(h) = f(a + h) - P_{a, k}(h) = f(a + h) - \sum_{j=0}^k {f^{(j)}(a) \over j!} h^j
+f(x) = f(a) + {f'(a) \over 1!}(x - a) + {f''(a) \over 2!}(x - a)^2 + ...
 $$
 
-## Integral Remainer I
+## Taylor polynomial
 
-Suppose that $f$ is of class $C^{k+1}$ on an interval $I \subset \mathbb{R}$ and $a \in I$, i.e. $f^{j}$ exists and is continuous on $I$ for $0 \le j \le k + 1$.
-Then the remainder $R_{a,k}$ is given by
+The question now is at what circumstances is a function $f$ equal to the sum of its Taylor series, provided $f$ has derivatives of all orders.
+
+The $n$th order _Taylor polynomial_ $T_n$ for $f$ about $a$ is defined by
 
 $$
-R_{a,k}(h) = {h^{k+1} \over k!} \int_0^1 (1 - t)^k f^{k+1}(a + th) dt
+T_n(x) = \sum_{j=0}^{n} {f^{(j)}(a) \over j!} (x - a)^j
 $$
 
-From this, we can see that $R_{a,k}(h) = o(h^{k+1})$ if $f^{k+1}$ exists.
+The $n$th order _Taylor remainder_ $R_n$ is the difference
+
+$$
+R_n(x) = f(x) - T_n(x)
+$$
+
+Therefore, if $\lim_{n \to \infty} R_n(x) = 0$ for $\|x - a\| < R$
+
+$$
+\lim_{n \to \infty} T_n(x) = f(x) - \lim_{n \to \infty} R_n(x) = f(x)
+$$
+
+which means $f(x)$ is the sum of its power series.
+
+### Taylor's inequality
+
+If
+
+$$
+|f^{(n+1)}(x)| \le M \quad \text{for} \quad |x - a| \le d
+$$
+
+then the remainder of the Taylor series satifies the inequality
+
+$$
+|R_n(x)| \le {M \over (n+1)!}|x - a|^{n+1} \quad \text{for} \quad |x - a| \le d
+$$
+
+It means if we can find a bound of $(n+1)$-th derivative, we can use that to bound $R_n(x)$ and potentially prove its limit is $0$ by Squeeze Theorem.
+
+### Integral Remainer I
+
+Taylor's Theorem can be thought as a higher-order version of the tangent line approximation discussed in [differentiability](differentiability.md).
+It states that a function $f$ of class $C^n$ on an interval $I$ containing the point $x = a$ is the sum of a certain polynomial of degree $n$
+and a remainder term that vanishes more rapidly than $\|x-a\|^n$ as $x \to a$ (i.e. $o(h^n)$).
+
+Suppose that $f$ is of class $C^{n+1}$ on an interval $I \subset \mathbb{R}$ and $a \in I$,
+i.e. $f^{j}$ exists and is continuous on $I$ for $0 \le j \le n + 1$.
+Then the remainder $R_n$ is given by
+
+$$
+R_n(h) = {h^{n+1} \over n!} \int_0^1 (1 - t)^n f^{n+1}(a + th) \mathrm{d}t
+$$
+
+From this, we can see that $R_n(h) = o(h^{n+1})$ if $f^{n+1}$ exists.
+
+## Binomial series
+
+## List of important series
+
+$$
+\begin{align*}
+{1 \over 1-x} &= \sum_{n=0}^\infty x^n = 1 + x + x^2 + x^3 + ... \quad (R = 1) \\
+e^x &= \sum_{n=0}^\infty {x^n \over n!} = 1 + {x \over 1!} + {x^2 \over 2!} + {x^3 \over 3!} + ... \quad (R = \infty) \\
+\sin x &= \sum_{n=0}^\infty (-1)^n {x^{2n+1} \over (2n+1)!} = x - {x^3 \over 3!} + {x^5 \over 5!} - {x^7 \over 7!} + ... \quad (R = \infty) \\
+\cos x &= \sum_{n=0}^\infty (-1)^n {x^{2n} \over (2n)!} = 1 - {x^2 \over 2!} + {x^4 \over 4!} - {x^6 \over 6!} + ... \quad (R = \infty) \\
+\tan^{-1} x &= \sum_{n=0}^\infty (-1)^n {x^{2n+1} \over 2n+1} = x - {x^3 \over 3} + {x^5 \over 5} - {x^7 \over 7} + ... \quad (R = 1) \\
+\ln (1+x) &= \sum_{n=1}^\infty (-1)^{n-1}{x^n \over n} = x - {x^2 \over 2} + {x^3 \over 3} - {x^4 \over 4} + ... \quad (R = 1) \\
+(1+x)^k &= \sum_{n=0}^\infty {k \choose n} x^n = 1 + kx + {k(k-1) \over 2!}x^2 + {k(k-1)(k-2) \over 3!}x^3 + ... \quad (R = 1) \\
+\end{align*}
+$$
+
+The above series can be multiplied and divided to form new series,
+i.e. if $f(x) = \sum a_n x^n$ and $g(x) = \sum b_n x^n$ converges for $\|x\| < R$ then their product also converges for $\|x\| < R$ and represents $f(x)g(x)$
 
 ## References
 
+* James Stewart _Single Variable Calculus_, 2015 - Chapter 11.10
 * [Gerald B. Folland _Advanced Calculus_, 2022 - Chapter 2.7](http://www.math.washington.edu/~folland/Homepage/AdvCalc24.pdf)
