@@ -19,6 +19,8 @@ title: Home
 * [Differentiability](differential-equations/differentiability.md)
 * [Sequences and Series](differential-equations/sequences-series.md)
 * [Power Series](differential-equations/power-series.md)
+* [Partial Derivatives](differential-equations/partial-derivatives.md)
+* [Directional Derivatives](differential-equations/directional-derivatives.md)
 * [Exponential Function](differential-equations/exponential-function.md)
 * [First Order ODE](differential-equations/first-order-ode.md)
 * [Second Order ODE](differential-equations/second-order-ode.md)
