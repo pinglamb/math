@@ -24,6 +24,7 @@ title: Home
 * [Exponential Function](differential-equations/exponential-function.md)
 * [First Order ODE](differential-equations/first-order-ode.md)
 * [Second Order ODE](differential-equations/second-order-ode.md)
+* [Practical Examples](differential-equations/practical-examples.md)
 
 ## Geometry
 
