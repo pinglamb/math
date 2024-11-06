@@ -63,6 +63,38 @@ s &= t_0 + {\ln p \over k}
 \end{align*}
 $$
 
+## Population Model
+
+Instead of pure expoential growth, we impose a maximum sustainable size of the population (becaue of limitation of resources).
+
+Therefore, we have the _logistic equation_
+
+$$
+{\mathrm{d}p \over \mathrm{d} t} = kp \left( 1 - {p \over M} \right)
+$$
+
+where $M > 0$ is the maximum sustainable population.
+
+By separating of variables,
+
+$$
+\begin{align*}
+\int_{p_0}^{p} {M \over p(M - p)} \mathrm{d}p &= \int_{t_0}^t k \, \mathrm{d}t \\
+\int_{p_0}^{p} {1 \over p} + {1 \over (M - p)} \mathrm{d}p &= \int_{t_0}^t k \, \mathrm{d}t \\
+\ln p - \ln p_0 - \ln |M-p| + \ln |M - p_0| &= kt - kt_0 \\
+{p |M - p_0| \over p_0 |M-p|} &= e^{k(t - t_0)}
+\end{align*}
+$$
+
+As $\|M - p_0\|$ and $\|M - p\|$ always has the same sign base on the equation,
+we can remove the absolute sign and rearrange the terms, i.e.
+
+$$
+p(t) = M \left( {p_0e^{k(t - t_0)} \over M - p_0 + p_0e^{k(t - t_0)} } \right)
+$$
+
+From the equation, we can deduce that $p \to M$ as $t \to \infty$.
+
 ## References
 
-* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 1
+* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 1, 8.5
