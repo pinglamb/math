@@ -5,7 +5,7 @@ title: Practical Examples &#124; Differential Equations
 
 # Practical Examples
 
-## Radioactive Decay
+## Radioactive decay
 
 Let $N(t)$ denote the number of radioactive atoms in some material at time $t$. Then,
 
@@ -48,7 +48,7 @@ t_h &= {\ln 2 \over k}
 \end{align*}
 $$
 
-### Carbon Dating
+### Carbon dating
 
 The essence of the method is that for living matter, the carbon-14 to carbon-12 ratio is constant.
 But once dead, the carbon-14 atoms will begin to decay.
@@ -63,7 +63,7 @@ s &= t_0 + {\ln p \over k}
 \end{align*}
 $$
 
-## Population Model
+## Population model
 
 Instead of pure expoential growth, we impose a maximum sustainable size of the population (becaue of limitation of resources).
 
@@ -94,6 +94,31 @@ p(t) = M \left( {p_0e^{k(t - t_0)} \over M - p_0 + p_0e^{k(t - t_0)} } \right)
 $$
 
 From the equation, we can deduce that $p \to M$ as $t \to \infty$.
+
+## Free falling with air resistance
+
+## Newton's law of cooling
+
+The temperature $T(t)$ of an object in surroundings of temperature $A(t)$ can be modeled by
+
+$$
+{\mathrm{d} T \over \mathrm{d} t} = -k(T(t) - A(t))
+$$
+
+In case of constant surrounding temperature $A$, we have
+
+$$
+{\mathrm{d} T \over \mathrm{d} t} + kT = kA
+$$
+
+The integrating factor is $e^{kt}$. Suppose we know the temperatures of the object at $t_1$ and $t_2$, integrating both side with that give us
+
+$$
+\begin{align*}
+\int_{t_1}^{t_2} {\mathrm{d} \over \mathrm{d}t} \left( Te^{kt} \right) \mathrm{d}t &= \int_{t_1}^{t_2} kAe^{kt} \mathrm{d}t \\
+T(t_2)e^{kt_2} - T(t_1)e^{kt_1} &= A(e^{kt_2} - e^{kt_1})
+\end{align*}
+$$
 
 ## References
 
