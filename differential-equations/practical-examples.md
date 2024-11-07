@@ -116,10 +116,29 @@ The integrating factor is $e^{kt}$. Suppose we know the temperatures of the obje
 $$
 \begin{align*}
 \int_{t_1}^{t_2} {\mathrm{d} \over \mathrm{d}t} \left( Te^{kt} \right) \mathrm{d}t &= \int_{t_1}^{t_2} kAe^{kt} \mathrm{d}t \\
-T(t_2)e^{kt_2} - T(t_1)e^{kt_1} &= A(e^{kt_2} - e^{kt_1})
+T(t_2)e^{kt_2} - T(t_1)e^{kt_1} &= A(e^{kt_2} - e^{kt_1}) \\
+T(t_2) - A &= (T(t_1) - A)e^{-k(t_2 - t_1)}
 \end{align*}
+$$
+
+Hence, we can solve for $k$ and estimate the temperature at other time $t$.
+
+In case of varying surrounding temperature, similarily, we have
+
+$$
+\begin{align*}
+\int_{0}^{t} {\mathrm{d} \over \mathrm{d}t} \left( Te^{kt} \right) \mathrm{d}t &= \int_{0}^{t} kA(t)e^{kt} \mathrm{d}t \\
+T(t)e^{kt} - T(0) &= k \int_{0}^{t} A(t)e^{kt} \mathrm{d}t \\
+T(t) &= T(0)e^{-kt} + ke^{-kt} \int_{0}^{t} A(t)e^{kt} \mathrm{d}t \\
+\end{align*}
+$$
+
+One way to model the varying temperature is as a regular oscillation about an average temperature $\mu$, i.e.
+
+$$
+A(t) = \mu + a \cos \omega t
 $$
 
 ## References
 
-* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 1, 8.5
+* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 1, 8.5, 9.4
