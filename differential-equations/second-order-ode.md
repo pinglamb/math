@@ -69,7 +69,74 @@ for linear independent solutions $y_1$ and $y_2$.
 
 ### The Wronskian
 
-## Homogeneous with constant coefficient
+## Homogeneous linear equations with constant coefficient
+
+For differential equation like
+
+$$
+ay'' + by' + cy = 0
+$$
+
+we guess the solution is of the form $y = e^{kt}$, substituding it into the equation we have
+
+$$
+(ak^2 + bk + c) e^{kt} = 0
+$$
+
+Since $e^{kt}$ is non-zero, we can divide both side with that and end up with a quadratic equation
+
+$$
+ak^2 + bk + c = 0
+$$
+
+which is called the _auxiliary equation_ or _characteristic equation_.
+
+The quadratic equation can either have 2 real roots, 1 repeated real root and 2 complex roots,
+which correspond to 3 different cases.
+
+For 2 real roots $k_1, k_2$, the general solution is
+
+$$
+y = Ae^{k_1 t} + Be^{k_2 t}
+$$
+
+For 1 repeated root $k$, the general solution is
+
+$$
+y = Ae^{kt} + Bte^{kt}
+$$
+
+For 2 complex root $k = \rho \pm \omega i$, the general solution is
+
+$$
+y = e^{\rho t}(A \cos \omega t + B \sin \omega t)
+$$
+
+To derive the general solution for the case of complex roots, we start by treating them like they are real roots, i.e.
+
+$$
+y = Ce^{(\rho + \omega i)t} + De^{(\rho - \omega i)t}
+$$
+
+We want to restrict the solutions to be real. As $e^{(\rho - \omega i)t}$ is the complex conjugate of $e^{(\rho + \omega i)t}$,
+by having $D$ being complex comjungate of $C$, we will restrict the right hand side to be real.
+
+Therefore, let $C = \alpha + \beta i$,
+
+$$
+\begin{align*}
+y &= 2 \text{Re}[Ce^{(\rho + \omega i)t}] \\
+&= 2e^{\rho t} \text{Re}[(\alpha + \beta i)(\cos \omega t + i \sin \omega t)] \\
+&= 2e^{\rho t} (\alpha \cos \omega t - \beta \sin \omega t) \\
+&= e^{\rho t} (A \cos \omega t + B \sin \omega t)
+\end{align*}
+$$
+
+We can combine $A \cos \omega t + B \sin \omega t$ to one oscillating term $M \cos (\omega t - \theta)$,
+the amplitude is controlled by the sign of $\rho$.
+If $\rho < 0$, the solution decays to $0$.
+If $\rho = 0$, we have pure oscillations.
+If $\rho > 0$, the solution grows exponentially fast.
 
 ## References
 
