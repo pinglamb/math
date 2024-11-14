@@ -139,6 +139,12 @@ $$
 A(t) = \mu + a \cos \omega t
 $$
 
+### Combining two oscillating terms
+
+## Oscillation
+
+## Resonance
+
 ## References
 
-* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 1, 8.5, 9.4
+* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 1, 8.5, 9.4, 13, 16

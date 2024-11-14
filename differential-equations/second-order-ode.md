@@ -138,6 +138,31 @@ If $\rho < 0$, the solution decays to $0$.
 If $\rho = 0$, we have pure oscillations.
 If $\rho > 0$, the solution grows exponentially fast.
 
+## Inhomogeneous linear equation with constant coefficients
+
+For differential equation like
+
+$$
+L[x] = ay'' + by' + c = f(x)
+$$
+
+Let $y_h$ be the solution of $L[x] = 0$, the homogeneous version of the equation,
+and $y_p$ be a particular solution of $L[x] = f(x)$. We have
+
+$$
+L[y_h + y_p] = L[y_h] + L[y_p] = f(x)
+$$
+
+which is the general solution of the differential equation.
+
+$y_h$ is called the _complimentary function_ which provides the two free variables for the initial conditions and
+$y_p$ is called the _particular integral_.
+
+Finding $y_p$ involves some educated guess, and in case $y_p$ is one of the function is $y_h$,
+we can multiply it by $t$ or $t^2$ to form a new particular integral.
+
+## Reduction of order
+
 ## References
 
-* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 11, 12
+* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 11, 12, 14, 17
