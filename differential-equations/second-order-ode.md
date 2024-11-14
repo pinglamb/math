@@ -69,6 +69,70 @@ for linear independent solutions $y_1$ and $y_2$.
 
 ### The Wronskian
 
+As stated above, the general solution of the differential equation can be writted as
+
+$$
+y = \alpha y_1 + \beta y_2
+$$
+
+where $y_1$ and $y_2$ are linear independent. It means $\alpha = \beta = 0$ is the only solution to $\alpha y_1 + \beta y_2 = 0$
+
+Differentiating it gives us
+
+$$
+\alpha y_1' + \beta y_2' = 0
+$$
+
+Combining these two conditions, we have
+
+$$
+\begin{pmatrix}
+y_1 & y_2 \\
+y_1' & y_2' \\
+\end{pmatrix}
+\begin{pmatrix}
+\alpha  \\
+\beta \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 \\
+0 \\
+\end{pmatrix}
+$$
+
+The Wronskian of $y_1$ and $y_2$, which is a function of $x$, is defined by
+
+$$
+W[y_1, y_2](x) = \begin{vmatrix}
+y_1 & y_2 \\
+y_1' & y_2' \\
+\end{vmatrix}
+$$
+
+Base on the equations above, for any two solutions $y_1$ and $y_2$ of the differential equation,
+if $W[y_1, y_2](x) \not = 0$, we will find that $\alpha = \beta = 0$ is the only solution to the simultaneous equation,
+which implies $y_1$ and $y_2$ are linear independent.
+
+Conversely, if $W[y_1, y_2](x_0) = 0$ for some $x_0$, it implies $y_1 = cy_2$ for all $x$ and hence they are not linear independent.
+
+To conclude, the two solutions $y_1$ and $y_2$ are linear independent if and only if $W[x_1, x_2](x) = 0$
+
+Consider $W(x) = y_1 y_2' - y_1' y_2$ and $W'(x) = y_1 y_2'' - y_1'' y_2$, we have
+
+$$
+\begin{align*}
+W'(x) + p(x)W(x) &= y_1 (y_2'' + p(x)y_2') - y_2 (y_1'' + p(x)y_1') \\
+&= y_1(-q(x)y_2) - y_2(-q(x)y_1) \\
+&= 0
+\end{align*}
+$$
+
+Hence, if $W(x) = 0$, $W'(x) = 0$, meaning $W(x) = 0$ for all $x$.
+If $W(x) \not = 0$, $\|W(x)\| = e^{\int -p(x) \mathrm{d}x}$, meaning $W(x) \not = 0$ for all $x$.
+
+This method of verifying if two functions are linear independent only works if they are both solutions of a differential equation.
+
 ## Homogeneous linear equations with constant coefficient
 
 For differential equation like
@@ -189,7 +253,7 @@ $$
 [a(t)u(t)]z' + [2a(t)u'(t) + b(t)u(t)]z = 0
 $$
 
-which is a first order differential equation which we are able to solve by the method of integrating factors.
+which is a first order differential equation that can be solved by the method of integrating factors.
 
 ## References
 
