@@ -1,9 +1,9 @@
 ---
 layout: base
-title: Partial Derivatives &#124; Differential Equations
+title: Partial Differentiation &#124; Differential Equations
 ---
 
-# Partial Derivatives
+# Partial Differentiation
 
 ## Clairaut's Theorem
 
