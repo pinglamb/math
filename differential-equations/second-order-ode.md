@@ -143,14 +143,14 @@ If $\rho > 0$, the solution grows exponentially fast.
 For differential equation like
 
 $$
-L[x] = ay'' + by' + c = f(x)
+L[t] = ay'' + by' + c = f(t)
 $$
 
-Let $y_h$ be the solution of $L[x] = 0$, the homogeneous version of the equation,
-and $y_p$ be a particular solution of $L[x] = f(x)$. We have
+Let $y_h$ be the solution of $L[t] = 0$, the homogeneous version of the equation,
+and $y_p$ be a particular solution of $L[t] = f(t)$. We have
 
 $$
-L[y_h + y_p] = L[y_h] + L[y_p] = f(x)
+L[y_h + y_p] = L[y_h] + L[y_p] = f(t)
 $$
 
 which is the general solution of the differential equation.
@@ -162,6 +162,34 @@ Finding $y_p$ involves some educated guess, and in case $y_p$ is one of the func
 we can multiply it by $t$ or $t^2$ to form a new particular integral.
 
 ## Reduction of order
+
+For a more general case of having coefficients as functions of $t$ for homogeneous linear differential equations
+
+$$
+a(t)y'' + b(t)y' + c(t)y = 0
+$$
+
+In case we know a particular solution $u(t)$ to the equation, let $y(t) = u(t)v(t)$, we have
+
+$$
+y' = u'v + v'u \quad \text{and} \quad y'' = u''v + 2u'v' + v''u
+$$
+
+Substituding it back and grouping the terms containing $v$, we have
+
+$$
+a(t)[v''u + 2u'v'] + b(t)[v'u] = v[a(t)u'' + b(t)u' + c(t)u] = 0
+$$
+
+as $u(t)$ is a solution of the equation.
+
+Thus, by letting $z = v'$
+
+$$
+[a(t)u(t)]z' + [2a(t)u'(t) + b(t)u(t)]z = 0
+$$
+
+which is a first order differential equation which we are able to solve by the method of integrating factors.
 
 ## References
 
