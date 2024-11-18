@@ -182,6 +182,19 @@ $$
 a \ast b = b \ast a
 $$
 
+## Finite Group
+
+A group $G$ is _finite_ if there are finite number of elements.
+Then the _order_ of $G$ is $\|G\|$, the number of elements.
+
+## Examples
+
+* $(\mathbb{Z}, +)$
+* $(\mathbb{Z}/n\mathbb{Z}, +)$
+* $(\mathbb{Q}^\ast = \mathbb{Q} \backslash \\{0\\}, \times)$
+* Regular $n$-gon, which is isophomorphic to dihedral group $D_{2n}$
+* $2 \times 2$ invertible matrices with matrix multiplication, i.e. $\text{GL}_2(\mathbb{R})$
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.2 (P2)
