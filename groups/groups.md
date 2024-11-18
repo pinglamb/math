@@ -195,6 +195,50 @@ Then the _order_ of $G$ is $\|G\|$, the number of elements.
 * Regular $n$-gon, which is isophomorphic to dihedral group $D_{2n}$
 * $2 \times 2$ invertible matrices with matrix multiplication, i.e. $\text{GL}_2(\mathbb{R})$
 
+## Subgroups
+
+A _subgroup_ $(H, \ast) \le (G, \ast)$ is a subset $H \subseteq G$ such that $H$ is still a group under the operation $\ast$.
+If $H \le G$ and $H \not = G$, then $H$ is a proper subgroup.
+
+### Usual subgroup criterion
+
+Let $(G, \ast)$ be a group and let $H \subseteq G$ be a subset. Then $H \le G$ if and only if
+
+(i) [Identity] $e \in H$
+
+(ii) [Closed] for $a, b \in H$, also $a \ast b \in H$
+
+(iii) [Inverse] for $a \in H$, also $a^{-1} \in H$
+
+_[Proof]_ Note that associativity in $H$ is inherited from $G$ and these criterion ensures other group axioms for $H$.
+
+Conversely, suppose $(H, \ast)$ is a group.
+Firstly, let $e_H$ be the identity element in $H$, we have $e_H \ast e_H = e_H$ in $H$, so as in $G$.
+Thus $e_H = e_H \ast e = e_H \ast (e_H \ast e_H^{-1}) = (e_H \ast e_H) \ast e_H^{-1} = e_H \ast e_H^{-1} = e$.
+Hence, the identity of $H$ has to be the same as $G$, (i) is true.
+Secondary, (ii) is true as $H$ has to be closed.
+Finally, as inverse is unique, the inverse of $a$ in $H$ has to be the same as that in $G$.
+
+The first criteria can be omitted if we know $H$ is non-empty subset.
+As if $H$ is non-empty, there is some element $a \in H$ and by (iii) then (ii), $a \ast a^{-1} = e \in H$.
+
+### Super-efficient subgroup criterion
+
+Let $(G, \ast)$ be a group and let $H \subseteq G$ be a subset. Then $H \le G$ if and only if
+
+(i) H is non-empty
+(ii) Given $a, b \in H$, also $a \ast b^{-1} \in H$
+
+_[Proof]_ Similar to the above, $H$ is non-empty implies $e \in H$ (identity).
+For all $b \in H$, by (ii) and setting $a = e$, we have $e \ast b^{-1} = b^{-1} \in H$ (inverse).
+For all $a, b \in H$, we have $b^{-1} \in H$, therefore by (ii), $a \ast (b^{-1})^{-1} = a \ast b \in H$ (closed).
+
+### Examples
+
+* $(\mathbb{Z}, +) \le (\mathbb{Q}, +) \le (\mathbb{R}, +) \le (\mathbb{C}, +)$
+* $(\set{e}, \ast) \le (G, \ast)$ (trivial subgroup)
+* For $n \in \mathbb{Z}$, ($n\mathbb{Z}, +) \le (\mathbb{Z}, +)$
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.2 (P2)
