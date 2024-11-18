@@ -39,7 +39,7 @@ we have the associative rule $(x \ast y) \ast z = x \ast (y \ast z)$.
 
 With the above, we can define the axioms of a group.
 
-## Axioms
+## Abstract Definition - Group Axioms
 
 **[Definition of binary operation]** A (binary) operation is a ways of combining two elements to get a new element.
 Formally, it is a map $\ast: S \times S \to S$.
@@ -147,15 +147,16 @@ By uniqueness of inverse, $(a \ast b)^{-1} = b^{-1} \ast a^{-1}$.
 For $a, b, c \in G$,
 
 $$
-ac = bc \implies a = b
+a \ast c = b \ast c \implies a = b
 $$
 
-as $(ac)c^{-1} = (bc)c^{-1}$. Similarily, if $ca = cb$, then $a = b$.
+as $(a \ast c) \ast c^{-1} = (b \ast c) \ast c^{-1}$. Similarily, if $c \ast a = c \ast b$, then $a = b$.
 
-From that, we can derive that the equation $ax = b$ has a unique solution, namely $a^{-1}b$.
-Similarily, for $xa = b$, the unique solution is $ba^{-1}$.
+From that, we can derive that the equation $a \ast x = b$ has a unique solution, namely $a^{-1} \ast b$.
+Similarily, for $x \ast a = b$, the unique solution is $b \ast a^{-1}$.
 
-Suppose $x_1$ and $x_2$ are the solutions, we have $ax_1 = b = ax_2$, by cancellation law, we have $x_1 = x_2$ and hence the solution is unique.
+Suppose $x_1$ and $x_2$ are the solutions, we have $a \ast x_1 = b = a \ast x_2$,
+by cancellation law, we have $x_1 = x_2$ and hence the solution is unique.
 
 Also,
 
@@ -163,7 +164,23 @@ $$
 x^2 = x \implies x = e
 $$
 
-as $x^2 = xx = x = xe$, by cancellation law, $x = e$ is the only solution.
+as
+
+$$
+x^2 = x \ast x = x = x \ast e
+$$
+
+By cancellation law, $x = e$ is the only solution.
+
+## Commutative/Abelian Group
+
+A _commutative/abelian group_ is a group with
+
+4\. **[Commutativity]** For all $a, b \in G$, we have
+
+$$
+a \ast b = b \ast a
+$$
 
 ## References
 
