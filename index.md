@@ -3,6 +3,11 @@ layout: base
 title: Home
 ---
 
+## Groups
+
+* [Groups](groups/groups.md)
+* [Homomorphisms](groups/homomorphisms.md)
+
 ## Vectors and Matrices
 
 * [Exponential, Cosine and Sine Functions](vectors-and-matrices/exponential-cosine-sine-functions.md)
