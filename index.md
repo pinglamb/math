@@ -7,6 +7,7 @@ title: Home
 
 * [Groups](groups/groups.md)
 * [Homomorphisms](groups/homomorphisms.md)
+* [Permutations](groups/permutations.md)
 
 ## Vectors and Matrices
 
