@@ -199,6 +199,58 @@ Hence, a set of automorphisms is also a group as it is symmetries of something.
 
 ## Examples
 
+### Exponential Map
+
+In Power Series form:
+
+$$
+\exp(x) = 1 + x + {x^2 \over 2!} + {x^3 \over 3!} + ...
+$$
+
+which has the property
+
+$$
+\exp(a + b) = \exp(a)\exp(b)
+$$
+
+It is a homomorphism from $(\mathbb{R}, +)$ to $(\mathbb{R}^{\ast}, \times)$, but not an isomorphism as it is not surjective.
+However, it is an isomorphism between $(\mathbb{R}, +)$ and $(\mathbb{R}\_{> 0}, \times)$, and the inverse is the logarithmic map $\log(x)$.
+$\text{im} \exp = \mathbb{R}_{> 0}$ and $\ker \exp = \set{0}$.
+
+### Determinants
+
+In linear algebra, using 2-by-2 matrices as example, we have
+
+$$
+\det(A) = ad - bc
+$$
+
+which has the property
+
+$$
+\det(AB) = \det(A) \det(B)
+$$
+
+It is a homomorphism from $(\text{GL}\_n(\mathbb{R}), \times)$ to $(\mathbb{R}^{\ast}, \times)$. $\ker \det = \text{SL}_n(\mathbb{R})$.
+
+### Integers modulo m
+
+In number theory, using $(\mathbb{Z}/5\mathbb{Z})^\times$ as example, it possesses a primitive root of unity $g$ where
+
+$$
+(\mathbb{Z}/5\mathbb{Z})^\times = \set{ g^n : n \in \mathbb{Z}/4\mathbb{Z} }
+$$
+
+meaning every elements can be represented by some powers of $g$. We also have
+
+$$
+g^{a + b} = (g^a)(g^b)
+$$
+
+Therefore, it is a homomorphism from $(\mathbb{Z}/4\mathbb{Z}, +)$ to $((\mathbb{Z}/5\mathbb{Z})^\times, \times)$.
+
+On the other hand, let $f(a) = 2a$, then $f$ is an automorphism of $(\mathbb{Z}/5\mathbb{Z}, +)$ with inverse $f^{-1}(a) = 3a$.
+
 ## References
 
 * [Dexter Chua _Part IA - Groups_, 2014 - Chapter 1.2](https://dec41.user.srcf.net/notes/IA\_M/groups.pdf)
