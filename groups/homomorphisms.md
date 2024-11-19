@@ -155,6 +155,24 @@ $$
 
 Hence, $aka^{-1} \in \ker f$ and $\ker f$ is a _normal subgroup_ of $G$.
 
+### Injection via Kernel
+
+A homomorphism $f: G \to H$ is
+
+* injective iff $\ker f = \set{e_G}$
+
+* surjective iff $\text{im}\, f = H$
+
+_[Proof]_ If $\ker f = \set{e_G}$, given $a, b \in G$ such that $f(a) = f(b)$,
+
+$$
+f(e_G) = f(a \ast a^{-1}) = f(a) \times f(a^{-1}) = f(b) \times f(a^{-1}) = f(b \ast a^{-1}) = e_H
+$$
+
+Hence, $b \ast a^{-1} = e$ and $b = a$.
+
+Conversely, if $f$ is injective, for $k \in \ker f$, $f(k) = e_H = f(e_G) \implies k = e_G$.
+
 ## Isomorphisms
 
 ## Endomorphisms and Automorphisms
