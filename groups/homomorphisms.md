@@ -175,7 +175,27 @@ Conversely, if $f$ is injective, for $k \in \ker f$, $f(k) = e_H = f(e_G) \impli
 
 ## Isomorphisms
 
+Isomorphisms are bijective homomorphisms. Two groups $G$ and $H$ are isomorphic if there exists an isomorphism between them, denoted as $G \cong H$.
+
+Also, the inverse of isomorphism $f^{-1}: H \to G$ is also an isomorphism.
+
+_[Proof]_ As $f$ is bijective, $f^{-1}: H \to G$ exists and is bijective, and
+
+$$
+f^{-1}(h_1 \times h_2) = f^{-1}(f(g_1 \ast g_2)) = g_1 \ast g_2 = f^{-1}(h_1) \ast f^{-1}(h_2)
+$$
+
+$f^{-1}$ is a bijective homomorphism and therefore an isomorphism.
+
+Isomorphic groups are considered to be "the same", except the elements and operations are being relabeled.
+
 ## Endomorphisms and Automorphisms
+
+Endomorphisms are homomorphisms that has the same domain as codomain, meaning it is a mapping to itself.
+Automorphisms are isomorphisms that are also endomorphic.
+
+Automorphism can be thought as a symmetry of the group as it is a bijection to itself preserving the structure.
+Hence, a set of automorphisms is also a group as it is symmetries of something.
 
 ## Examples
 
