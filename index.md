@@ -8,6 +8,7 @@ title: Home
 * [Groups](groups/groups.md)
 * [Homomorphisms](groups/homomorphisms.md)
 * [Permutations](groups/permutations.md)
+* [Symmetric Groups](groups/symmetric-groups.md)
 
 ## Vectors and Matrices
 

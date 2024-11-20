@@ -241,6 +241,6 @@ For all $a, b \in H$, we have $b^{-1} \in H$, therefore by (ii), $a \ast (b^{-1}
 
 ## References
 
-* Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.2 (P2)
+* Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.2
 * [Dexter Chua _Part IA - Groups_, 2014 - Chapter 0](https://dec41.user.srcf.net/notes/IA\_M/groups.pdf)
 * [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 1](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
