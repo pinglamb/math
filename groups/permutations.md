@@ -21,6 +21,31 @@ $$
 \end{pmatrix}
 $$
 
+Composition can be done by reordering the next permutation, e.g.
+
+$$
+\begin{pmatrix}
+1 & 2 & 3 \\
+2 & 3 & 1
+\end{pmatrix} \circ
+\begin{pmatrix}
+1 & 2 & 3 \\
+2 & 1 & 3
+\end{pmatrix} =
+\begin{pmatrix}
+2 & 1 & 3 \\
+3 & 2 & 1
+\end{pmatrix} \circ
+\begin{pmatrix}
+1 & 2 & 3 \\
+2 & 1 & 3
+\end{pmatrix} =
+\begin{pmatrix}
+1 & 2 & 3 \\
+3 & 2 & 1
+\end{pmatrix}
+$$
+
 ## Cycle notation
 
 ## Sign of permutation

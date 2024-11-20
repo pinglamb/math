@@ -13,10 +13,14 @@ $\text{Sym} X$ with composition forms a group.
 
 _[Proof]_
 
+## Properties
+
 If $X$ is finite, say $\|X\| = n$, we usually write $X = \set{1, 2, ..., n}$ and $\text{Sym} X = S_n$,
 and the _degree_ of the symmetric group is $n$.
 
 The order of $S_n$, denoted by $\|S_n\|$ is $n!$.
+
+$S_n$ can be viewed as subgroup of $S_m$ with $m \ge n$, by fixing $n+1, n+2, ..., m$.
 
 ## Examples
 
