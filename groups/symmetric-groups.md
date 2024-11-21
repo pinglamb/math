@@ -22,6 +22,25 @@ The order of $S_n$, denoted by $\|S_n\|$ is $n!$.
 
 $S_n$ can be viewed as subgroup of $S_m$ with $m \ge n$, by fixing $n+1, n+2, ..., m$.
 
+## sgn as homomorphism
+
+We have $\text{sgn}: S_n \to \set{\pm 1}$ being a homomorphism as
+
+$$
+\text{sgn}(\sigma_1\sigma_2) = (-1)^{k_1 + k_2} = (-1)^{k_1}(-1)^{k_2} = \text{sgn}(\sigma_1)\text{sgn}(\sigma_2)
+$$
+
+It is surjective as we always have $\text{sgn}(e) = 1$ and $\text{sgn}((1\;2)) = -1$.
+
+We can see that product of even permutations is even, and inverse is also even,
+hence all even permutations form a subgroup, which is called the _alternating group_ $A_n$.
+
+We also have
+
+$$
+\ker \text{sgn} = A_n
+$$
+
 ## Examples
 
 ### Symmetric group of degree 3 ($S_3$)
