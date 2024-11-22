@@ -6,6 +6,7 @@ title: Home
 ## Groups
 
 * [Groups](groups/groups.md)
+* [Subgroups, Cosets and Lagrange's Theorem](groups/subgroups-cosets-lagrange-theorem.md)
 * [Homomorphisms](groups/homomorphisms.md)
 * [Permutations](groups/permutations.md)
 * [Symmetric Groups](groups/symmetric-groups.md)
