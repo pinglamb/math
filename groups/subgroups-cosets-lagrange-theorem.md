@@ -75,7 +75,7 @@ If $a \in H$, for any $h \in H$, $ah \in H$ (closure), so $aH \subseteq H$.
 
 We also have $a^{-1} \in H$, for any $h \in H$, $a^{-1}h \in H$ (closure), $a(a^{-1}h) = h \in aH$, so $H \subseteq aH$.
 
-Hence, $a \in H iff aH = H$.
+Hence, $a \in H \iff aH = H$.
 
 Given $H \le G$ and $a, b \in G$, $aH$ and $bH$ is either the same or disjoint.
 
@@ -103,6 +103,18 @@ Given $H \le G$, $G$ is the union of all the left cosets of $H$.
 _[Proof]_ For any $a \in G$, as $e \in H$, $a \in aH$. Hence, the union of all of the left cosets is $G$.
 
 All the above properties is applicable to the right cosets.
+
+### Coset as equivalence classes
+
+Let $H \le G$, defining $a \sim b$ if $b^{-1}a \in H$ gives an equivalence relation on $G$, whose equivalence classes are the left cosets of $H$.
+
+_[Proof]_ The conditions for equivalence relation
+
+* [Reflexive] $a \sim a$ as $a^{-1}a = e \in H$
+
+* [Symmetric] $a \sim b \implies b \sim a$ as $(b^{-1}a)^{-1} = a^{-1}b \in H$
+
+* [Transitive] $a \sim b$ and $b \sim c \implies a \sim c$ as $(c^{-1}b)(b^{-1}a) = c^{-1}a \in H$.
 
 ## Lagrange's Theorem
 
