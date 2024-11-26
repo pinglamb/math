@@ -195,6 +195,31 @@ Then the _order_ of $G$ is $\|G\|$, the number of elements.
 * Regular $n$-gon, which is isophomorphic to dihedral group $D_{2n}$
 * $2 \times 2$ invertible matrices with matrix multiplication, i.e. $\text{GL}_2(\mathbb{R})$
 
+## Cartesian Products
+
+Groups can be combined to form new product group or decomposed to simpler groups for analysis.
+
+Given $G_1$ and $G_2$ are groups, the product $G_1 \times G_2$ is a group under operation
+
+$$
+(a_1, a_2) \ast (b_1, b_2) = (a_1 \ast_1 b_1, a_2 \ast_2 b_2)
+$$
+
+where $a_1, b_1 \in G_1$ and $a_2, b_2 \in G_2$.
+
+_[Proof]_ As $c_1 = a_1 \ast_1 b_1 \in G_1$ and $c_2 = a_2 \ast_2 b_2 \in G_2$, $(c_1, c_2) \in G_1 \times G_2$ and is closed.
+$(e_1, e_2)$ is the identity element and $(a^{-1}, b^{-1})$ is the inverse.
+
+$$
+\begin{align*}
+((a_1, a_2) \ast (b_1, b_2)) \ast (c_1, c_2) &= ((a_1 \ast_1 b_1) \ast_1 c_1, (a_2 \ast_2 b_2) \ast_2 c_2) \\
+&= (a_1 \ast_1 (b_1 \ast_1 c_1), a_2 \ast_2 (b_2 \ast_2 c_2)) \\
+&= (a_1, a_2) \ast ((b_1, b_2) \ast (c_1, c_2))
+\end{align*}
+$$
+
+and is associative. Hence, $G_1 \times G_2$ is a group.
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.2
