@@ -187,6 +187,13 @@ $$
 A group $G$ is _finite_ if there are finite number of elements.
 Then the _order_ of $G$ is $\|G\|$, the number of elements.
 
+## Order of element
+
+The _order_ of an element $a \in G$, denoted by $\text{ord}(a)$ is the smallest positive integer $n$ such that $a^n = e$.
+If no such $n$ exists, then $a$ is of infinite order.
+
+Later on, by [Lagrange Theorem](subgroups-cosets-lagrange-theorem.md), we will see that $\text{ord}(a) \mid \|G\|$.
+
 ## Examples
 
 * $(\mathbb{Z}, +)$
