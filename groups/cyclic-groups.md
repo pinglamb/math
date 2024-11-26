@@ -75,6 +75,19 @@ So to conclude, there is only one cyclic group of order $n$, and is usually deno
 
 ## Cyclic groups are abelian
 
+All cyclic groups are abelian.
+
+_[Proof]_ Let $G$ be a cyclic group and $g \in G$ generates $G$.
+For any two elements $a = g^m$ and $b = g^n$, we have
+
+$$
+ab = (g^m)(g^n) = g^{m+n} = g^{n+m} = (g^n)(g^m) = ba
+$$
+
+Hence, $G$ is abelian.
+
+In short, as $C_n \cong \mathbb{Z}_n$, $C_n$ shares the commutativity with additive group $\mathbb{Z}_n$.
+
 ## Subgroups of cyclic group
 
 A subgroup of cyclic group is cyclic.
