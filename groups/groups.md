@@ -220,6 +220,34 @@ $$
 
 and is associative. Hence, $G_1 \times G_2$ is a group.
 
+### Direct Product Theorem
+
+In order to check if a group is direct product of two groups, we have the following conditions:
+
+Let $H_1, H_2 \le G$ such that
+
+1. $H_1 \cap H_2 = \set{e}$
+
+2. $\forall a_1 \in H_1$ and $\forall a_2 \in H_2$, $a_1a_2 = a_2a_1$
+
+3. $\forall a \in G$, $\exists a_1 \in H_1$ and $\exists a_2 \in H_2$, $a = a_1a_2$
+
+Then $G \cong H_1 \times H_2$.
+
+_[Proof]_ Let $f: H_1 \times H_2 \to G$ defined by $f((a_1, a_2)) = a_1a_2$. $G \cong H_1 \times H_2$ if $f$ is an isomorphism.
+
+$$
+f((a_1, a_2)(b_1, b_2)) = f((a_1b_1, a_2b_2)) = a_1b_1a_2b_2 = a_1a_2b_1b_2 = f((a_1, a_2))f((b_1, b_2))
+$$
+
+by (2) and hence $f$ is a homomorphism.
+
+By (3), $f$ is surjective.
+
+When $f((a_1, a_2)) = a_1a_2 = e$, $a_2 = a_1^{-1}$. By (1), it is only possible if $a_1 = a_2 = e$. Hence, $\ker f = \set{(e, e)}$ and $f$ is injective.
+
+Therefore, $f$ is a bijection and $G \cong H_1 \times H_2$.
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.2
