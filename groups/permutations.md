@@ -104,7 +104,9 @@ All cycles are disjoint as $\sigma$ is bijection.
 
 By construction, $\sigma$ is a product of disjoint cycles and is called the _standard representation_ of $\sigma$.
 
-With this represetnation, the order of $\sigma$ is the least common multiple of the different cycle lengths.
+## Order of permutation
+
+With the cycle represetnation, the order of $\sigma$ is the least common multiple of the different cycle lengths.
 
 _[Proof]_ Let $\sigma = \tau_1\tau_2...\tau_k$, as disjoint cycles commute, we have
 
@@ -183,25 +185,6 @@ $$
 $$
 
 and $\text{sgn}(\sigma) = 1$ means even and $\text{sgn}(\sigma) = -1$ means odd.
-
-### sgn as homomorphism
-
-We have $\text{sgn}: S_n \to \set{\pm 1}$ being a homomorphism as
-
-$$
-\text{sgn}(\sigma_1\sigma_2) = (-1)^{k_1 + k_2} = (-1)^{k_1}(-1)^{k_2} = \text{sgn}(\sigma_1)\text{sgn}(\sigma_2)
-$$
-
-It is surjective as we always have $\text{sgn}(e) = 1$ and $\text{sgn}((1\;2)) = -1$.
-
-We can see that product of even permutations is even, and inverse is also even,
-hence all even permutations form a subgroup, which is called the _alternating group_ $A_n$.
-
-We also have
-
-$$
-\ker \text{sgn} = A_n
-$$
 
 ### Properties
 
