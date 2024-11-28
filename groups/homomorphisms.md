@@ -98,6 +98,24 @@ $$
 
 $f(a^{-1})$ is the inverse of $f(a)$ in $H$, i.e. $f(a^{-1}) = f(a)^{-1}$.
 
+### Order of image element
+
+Let $G$ be a finite group and $f: G \to H$ be a homomorphism. For $a \in G$, let $\text{ord}(a) = k$, we have
+
+$$
+f(e_G) = f(a^k) = [f(a)]^k = e_H
+$$
+
+Hence, $\text{ord}(a)$ is finite, say is $l$. Let $k = ml + r$, where $0 \le r < l$. We have
+
+$$
+[f(a)]^k = [f(a)]^{ml}[f(a)]^{r} = [f(a)]^{r} = e_H
+$$
+
+which implies $r = 0$ and therefore $k = ml$ and $\text{ord}(f(a)) \mid \text{ord}(a)$.
+
+* Source: Groups Example Sheet 1 2016 Q9
+
 ### Composition is homomorphism
 
 Let $f: G_1 \to G_2$ and $g: G_2 \to G_3$ be homomorphisms, then for $a, b \in G_1$,
