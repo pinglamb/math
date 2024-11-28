@@ -106,6 +106,8 @@ By construction, $\sigma$ is a product of disjoint cycles and is called the _sta
 
 ## Order of permutation
 
+The _order_ of permutation $\sigma$ is the smallest positive integer $m$ such that $\sigma^m = I$, the identity map.
+
 With the cycle represetnation, the order of $\sigma$ is the least common multiple of the different cycle lengths.
 
 _[Proof]_ Let $\sigma = \tau_1\tau_2...\tau_k$, as disjoint cycles commute, we have
