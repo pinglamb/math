@@ -102,7 +102,7 @@ There are a few choices of generating set for $S_n$.
   \ker \text{sgn} = A_n
   $$
 >
-> which [is a subgroup](homomorphisms.md#kernel-image-subgroup).
+> which [is a subgroup](homomorphisms.md#kernel-is-subgroup).
 
 > *Theorem.*{: .thm}
 > The order of $A_n$ is $n!/2$.
