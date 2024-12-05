@@ -4,6 +4,7 @@ title: Groups &#124; Groups
 ---
 
 # Groups
+{: .page-title}
 
 A group is the set of symmetries of something,
 and symmetry of something is just a way of mapping something to itself preserving all the structures.
