@@ -137,7 +137,7 @@ $$
 
 ## Sign of permutation
 
-> *Lemma.*{: .lmm}
+> *Lemma.*{: .lem}
 > Every permutation is a product of transpositions.
 >
 > *Proof.*{: .prf}
@@ -232,27 +232,17 @@ The representation by transpositions isn't unique. However,
 >
 > Therefore, $l + k$ is even which means either both $k$ and $l$ are even or odd.
 
-Suppose $\sigma = \tau_1\tau_2...\tau_k$, we can write
+> *Definition.*{: .def}
+> Suppose $\sigma = \tau_1\tau_2...\tau_k$, the **sign** of $\sigma$ is defined by
+>
+> $$
+  \text{sgn}(\sigma) = (-1)^{k}
+  $$
+>
+> $\text{sgn}(\sigma) = 1$ means even and $\text{sgn}(\sigma) = -1$ means odd.
 
-$$
-\text{sgn}(\sigma) = (-1)^{k}
-$$
-
-and $\text{sgn}(\sigma) = 1$ means even and $\text{sgn}(\sigma) = -1$ means odd.
-
-### Properties
-
-For permutation $\sigma$ that can be written as $k$-cycle, as the number of transpositions is $k-1$,
-if $k$ is odd, $\sigma$ is even, if $k$ is even, $\sigma$ is odd.
-
-As every permutations can be written as product of disjoint cycles,
-assume there are $m$ of them, each of them is a $k_i$-cycle, we have
-
-$$
-\#(\sigma) = \sum_{i=1}^{m} k_i - 1 = n - m
-$$
-
-where $\\#(\sigma)$ is the number of transpositions and $k_1 + k_2 + ... k_m = n$ (as the cycles are disjoint).
+> *Corollary.*{: .cor}
+> The number of transpositions of $k$-cycle is $k-1$, so odd length cycles are even and even length cycles are odd.
 
 ## References
 
