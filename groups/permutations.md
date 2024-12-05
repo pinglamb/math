@@ -68,17 +68,17 @@ $$
 >
 > Hence, $\alpha$ has to fix $k'$ as well and $\alpha\beta = \beta\alpha$.
 
-## Cycle Notation
+## Disjoint Cycle Notation
 
 > *Definition.*{: .def}
 > A k-cycle $(a_1\;a_2\;...\;a_k)$ is the permutation
 >
 > $$
-> (a_1\;a_2\;...\;a_k) = \begin{pmatrix}
-> a_1 & a_2 & \cdots & a_{k-1} & a_k \\
-> a_2 & a_3 & \cdots & a_k & a_1 \\
-> \end{pmatrix}
-> $$
+  (a_1\;a_2\;...\;a_k) = \begin{pmatrix}
+  a_1 & a_2 & \cdots & a_{k-1} & a_k \\
+  a_2 & a_3 & \cdots & a_k & a_1 \\
+  \end{pmatrix}
+  $$
 >
 > which has order $k$.
 
@@ -89,24 +89,24 @@ $$
 > Two cycles are _disjoint_ if no numbers appear in both.
 
 > *Theorem.*{: .thm}
-> Every permutation in $S_n$ can be written as a product of disjoint cycles (unique up to orders).
+> Every finite permutation can be written as a product of disjoint cycles (unique up to orders).
 >
 > *Proof.*{: .prf}
 >
-> Let $\sigma \in S_n$. We start with
+> Let $\sigma$ be a permutation. We start with
 >
 > $$
-> (1\;\sigma(1)\;\sigma^2(1)\;\sigma^3(1)\;...)
-> $$
+  (1\;\sigma(1)\;\sigma^2(1)\;\sigma^3(1)\;...)
+  $$
 >
-> As $S_n$ is finite, there is some $\sigma^p(1) = \sigma^q(1)$.
+> As $\sigma$ is finite, there is some $\sigma^p(1) = \sigma^q(1)$.
 > As $\sigma$ is bijection, $\sigma^{p-q}(1) = 1$.
 >
 > Let $k$ be the smallest positive integer such that $\sigma^k(1) = 1$, and we will have
 >
 > $$
-> (1\;\sigma(1)\;\sigma^2(1)\;...\;\sigma^{k-1}(1))
-> $$
+  (1\;\sigma(1)\;\sigma^2(1)\;...\;\sigma^{k-1}(1))
+  $$
 >
 > being the first cycle.
 >
@@ -128,8 +128,8 @@ $$
 > Let $\sigma = \tau_1\tau_2...\tau_k$, as disjoint cycles commute, we have
 >
 > $$
-> \sigma^m = \tau_1^m\tau_2^m...\tau_k^m
-> $$
+  \sigma^m = \tau_1^m\tau_2^m...\tau_k^m
+  $$
 >
 > If $\tau_i$ has length $l_i$, $\tau_i^{l_i} = e$. Therefore, for $\tau_i^m = e \implies l_i \mid m$.
 >
@@ -145,8 +145,8 @@ $$
 > As any permutation can be represented by disjoint cycles, and for any cycle
 >
 > $$
-> (a_1\;a_2\;a_3\;...\;a_k) = (a_1\;a_k)(a_1\;a_{k-1})...(a_1\;a_3)(a_1\;a_2)
-> $$
+  (a_1\;a_2\;a_3\;...\;a_k) = (a_1\;a_k)(a_1\;a_{k-1})...(a_1\;a_3)(a_1\;a_2)
+  $$
 >
 > so every perumutation can be expressed as a product of transpositions.
 
@@ -159,6 +159,31 @@ The representation by transpositions isn't unique. However,
 > *Proof 1.*{: .prf}
 > _Effect of a transpoition to the sign of permutation._
 >
+> Let $\phi(\sigma)$ be the number of cycles in disjoint cycle notation, including _singleton cycles_, i.e. $\phi(e) = n$ and $\phi((1\;2)) = n - 1$.
+> Consider multiplying a transposition $\tau = (c\;d)$ to $\sigma$, either $c$ and $d$ are in the same cycle and
+>
+> $$
+  (c\;\;a_2\;...\;a_{k-1}\;d\;a_{k+1}\;...\;a_{k+l})(c\;d) = (c\;a_{k+1}\;...\;a_{k+l})(d\;a_2\;...\;a_{k-1})
+  $$
+>
+> and $\phi(\sigma\tau) = \phi(\sigma) + 1$ or $c$ and $d$ are in different cycles and
+>
+> $$
+  (c\;a_2\;...\;a_{k-1})(d\;b_2\;...\;b_{l-1})(c\;d) = (c\;b_2\;...\;b_{l-1}\;d\;a_2\;...\;a_{k-1})
+  $$
+>
+> and $\phi(\sigma\tau) = \phi(\sigma) - 1$. So, $\phi(\sigma\tau) = \phi(\sigma) + 1\;\text{(mod }2\text{)}$.
+>
+> Suppose $\sigma = \tau_1\tau_2...\tau_k = \rho_1\rho_2...\rho_l$, as $\phi(\sigma)$ is completely determined by the disjoint cycle notation of $\sigma$,
+>
+> $$
+  \begin{align*}
+  \phi(\sigma) &\equiv \phi(e) + k \equiv n + k \; \text{(mod }2\text{)} \\
+  \phi(\sigma) &\equiv \phi(e) + l \equiv n + l \; \text{(mod }2\text{)}
+  \end{align*}
+> $$
+>
+> and hence $k \equiv l \; \text{(mod }2\text{)}$.
 
 > *Proof 2.*{: .prf}
 > _From $\text{sgn}(e)$ is even._
@@ -166,8 +191,8 @@ The representation by transpositions isn't unique. However,
 > When $n = 2$, suppose $e_2 = \tau_1\tau_2...\tau_k$, where $\tau_i$ is a transposition. As the only transposition is $(1\;2)$ for $S_2$, we have
 >
 > $$
-> e_2 = (1\;2)^k
-> $$
+  e_2 = (1\;2)^k
+  $$
 >
 > and therefore $k$ must be even.
 >
@@ -178,35 +203,34 @@ The representation by transpositions isn't unique. However,
 > Consider the rightmost transpositions, and assume $\tau_k$ doesn't fix $n$, there are 4 cases
 >
 > $$
-> \tau_{k-1}\tau_k = \begin{cases}
-> (a\;b)(n\;a) = (n\;b\;a) = (n\;b)(a\;b) \\
-> (n\;b)(n\;a) = (n\;a\;b) = (n\;a)(a\;b) \\
-> (b\;c)(n\;a) = (n\;a)(b\;c) \\
-> (n\;a)(n\;a) = e = (a\;b)(a\;b) \\
-> \end{cases}
-> $$
+  \tau_{k-1}\tau_k = \begin{cases}
+  (a\;b)(n\;a) = (n\;b\;a) = (n\;b)(a\;b) \\
+  (n\;b)(n\;a) = (n\;a\;b) = (n\;a)(a\;b) \\
+  (b\;c)(n\;a) = (n\;a)(b\;c) \\
+  (n\;a)(n\;a) = e = (a\;b)(a\;b) \\
+  \end{cases}
+  $$
 >
 > From the above, no matter which cases, we can also rewrite $\tau_k$ such that it fixes $n$ so we can assume it is the case, i.e. $\tau_k(n) = n$.
 > We then repeat this process up to $\tau_2$, with $\tau_2,\tau_3,...,\tau_k$ all fixes $n$.
 > However, as
 >
 > $$
-> e(n) = \tau_1\tau_2...\tau_k(n) = n
-> $$
+  e(n) = \tau_1\tau_2...\tau_k(n) = n
+  $$
 >
 > $\tau_1$ has to fix $n$ as well.
 >
-> As a result, for any transpositions of $e_m$, we can rewrite them such that all the transpositions fixes $m$.
+> As a result, for any transpositions of $e_m$, we can rewrite them such that all the transpositions fixes $m$ and only involves $1, 2, ..., m-1$.
 > By the induction hypothesis, $\tau_1\tau_2...\tau_k$ has to be even and therefore $e_n$ is even.
-
-With this result, suppose $\sigma = \tau_1\tau_2...\tau_k = \rho_1\rho_2...\rho_l$, then
-
-$$
-\rho_l...\rho_2\rho_1\tau_1\tau_2...\tau_k = e
-$$
-
-So there are even number of transpositions so either both $k$ and $l$ are even or odd,
-meaning no matter how we write the transpositions, the sign is well defined.
+>
+> With this result, suppose $\sigma = \tau_1\tau_2...\tau_k = \rho_1\rho_2...\rho_l$, then
+>
+> $$
+  \rho_l...\rho_2\rho_1\tau_1\tau_2...\tau_k = e
+  $$
+>
+> Therefore, $l + k$ is even which means either both $k$ and $l$ are even or odd.
 
 Suppose $\sigma = \tau_1\tau_2...\tau_k$, we can write
 
