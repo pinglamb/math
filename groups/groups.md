@@ -211,7 +211,7 @@ A group $G$ is _finite_ if there are finite number of elements.
 > The **order** of an element $a \in G$, denoted by $\text{ord}(a)$, is the smallest positive integer $n$ such that $a^n = e$.
 > If no such $n$ exists, then $a$ is of infinite order.
 
-Later on, by [Lagrange Theorem](subgroups-cosets-lagrange-theorem.md#lagrange-theorem), we will see that $\text{ord}(a) \mid \|G\|$.
+Later on, by [Lagrange Theorem](subgroups-cosets-lagrange-theorem.md#lagranges-theorem), we will see that $\text{ord}(a) \mid \|G\|$.
 
 ## Examples
 
