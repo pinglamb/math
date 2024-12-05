@@ -5,12 +5,10 @@ title: Groups &#124; Groups
 
 # Groups
 
-## Concrete Definition
-
 A group is the set of symmetries of something,
 and symmetry of something is just a way of mapping something to itself preserving all the structures.
 
-For example, consider the symmetries of an equilateral triangles.
+For example, consider the symmetries of an equilateral triangle.
 
 ![Equilateral Triangle](../images/equilateral-triangle.png)
 
@@ -39,36 +37,38 @@ we have the associative rule $(x \ast y) \ast z = x \ast (y \ast z)$.
 
 With the above, we can define the axioms of a group.
 
-## Abstract Definition - Group Axioms
+## Group Axioms
 
-**[Definition of binary operation]** A (binary) operation is a ways of combining two elements to get a new element.
-Formally, it is a map $\ast: S \times S \to S$.
+> *Definition.*{: .def}
+> A (binary) operation is a way of combining two elements to get a new element.
+> Formally, it is a map $\ast: S \times S \to S$.
 
-**[Definition of Group]** A group is a set $G$ with a binary operation $\ast$ satifying the following axioms:
-
-0\. **[Closure]** For all $a, b \in G$, we have
-
-$$
-a \ast b \in G
-$$
-
-1\. **[Identity]** There is a unique $e \in G$ such that for all $a \in G$, we have
-
-$$
-a \ast e = e \ast a = a
-$$
-
-2\. **[Inverse]** For all $a \in G$, there is some $a^{-1} \in G$ such that
-
-$$
-a^{-1} \ast a = a \ast a^{-1} = e
-$$
-
-3\. **[Associativity]** For all $a, b, c \in G$, we have
-
-$$
-(a \ast b) \ast c = a \ast (b \ast c)
-$$
+> *Definition.*{: .def}
+> A group is a set $G$ with a binary operation $\ast$ satifying the following axioms:
+>
+> 0\. **[Closure]** For all $a, b \in G$, we have
+>
+> $$
+  a \ast b \in G
+  $$
+>
+> 1\. **[Identity]** There is a unique $e \in G$ such that for all $a \in G$, we have
+>
+> $$
+  a \ast e = e \ast a = a
+  $$
+>
+> 2\. **[Inverse]** For all $a \in G$, there is some $a^{-1} \in G$ such that
+>
+> $$
+  a^{-1} \ast a = a \ast a^{-1} = e
+  $$
+>
+> 3\. **[Associativity]** For all $a, b, c \in G$, we have
+>
+> $$
+  (a \ast b) \ast c = a \ast (b \ast c)
+  $$
 
 Technically, the closure axiom is always true by the definition of binary operation $\ast$ so sometimes we will just omit it.
 However, in practice it is something we might have to check to make sure it is true.
@@ -87,112 +87,131 @@ Also, with this abstract definition, we can already study lots of properties abo
 
 With the above axioms, we can prove some of the properties about groups.
 
-### Uniqueness of Identity
+> *Lemma.*{: .lem}
+> The identity $e$ of a group is unique.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $e$ and $e'$ are both identities, we have
+>
+> $$
+  e = e \ast (e') = (e) \ast e' = e'
+  $$
+>
+> (the one with bracket is treated as the identity)
 
-_[Proof]_ Suppose $e$ and $e'$ are both identities, we have
+> *Lemma.*{: .lem}
+> The inverse $a^{-1}$ of $a$ in a group is unique.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $b$ and $b'$ are both inverses of $a$, we have
+>
+> $$
+  b = b \ast e = b \ast (a \ast b') = (b \ast a) \ast b' = e \ast b' = b'
+  $$
 
-$$
-e = e \ast (e') = (e) \ast e' = e'
-$$
+> *Lemma.*{: .lem}
+> The inverse of inverse $a^{-1}$ is $a$ itself, i.e.
+>
+> $$
+  (a^{-1})^{-1} = a
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Given $a^{-1}$ being the inverse of $a$, we have
+>
+> $$
+  a \ast a^{-1} = e = a^{-1} \ast a
+  $$
+>
+> So $a$ is the element that matches the definition of inverse of $a^{-1}$.
+> By uniqueness of inverse, $(a^{-1})^{-1} = a$.
 
-(the one with bracket above is treated as the identity)
+> *Lemma.*{: .lem}
+> The inverse of $a \ast b$ is given by
+>
+> $$
+  (a \ast b)^{-1} = b^{-1} \ast a^{-1}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  (a \ast b) \ast (b^{-1} \ast a^{-1}) = a \ast ((b \ast b^{-1}) \ast a^{-1}) = a \ast (e \ast a^{-1}) = a \ast a^{-1} = e
+  $$
+>
+> $$
+  (b^{-1} \ast a^{-1}) \ast (a \ast b) = b^{-1} \ast ((a^{-1} \ast a) \ast b) = b^{-1} \ast (e \ast b) = b^{-1} \ast b = e
+  $$
+>
+> By uniqueness of inverse, $(a \ast b)^{-1} = b^{-1} \ast a^{-1}$.
 
-### Uniqueness of Inverse
+> *Theorem.*{: .thm}
+> For $a, b, c \in G$,
+>
+> $$
+  a \ast c = b \ast c \implies a = b
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  a \ast c &= b \ast c \\
+  (a \ast c) \ast c^{-1} &= (b \ast c) \ast c^{-1} \\
+  a &= b
+  \end{align*}
+  $$
+>
+> Similarily, $c \ast a = c \ast b \implies a = b$.
 
-_[Proof]_ Suppose $b$ and $b'$ are both inverses of $a$, we have
+> *Corollary.*{: .cor}
+> The equation $a \ast x = b$ has a unique solution, namely $a^{-1} \ast b$.
+> Similarily, for $x \ast a = b$, the unique solution is $b \ast a^{-1}$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $x_1$ and $x_2$ are the solutions, we have $a \ast x_1 = b = a \ast x_2$,
+> by cancellation law, we have $x_1 = x_2$ and hence the solution is unique.
 
-$$
-b = b \ast e = b \ast (a \ast b') = (b \ast a) \ast b' = e \ast b' = b'
-$$
-
-### Inverse of Inverse
-
-The inverse of inverse $a^{-1}$ is $a$ itself, i.e.
-
-$$
-(a^{-1})^{-1} = a
-$$
-
-_[Proof]_ Given $a^{-1}$ being the inverse of $a$, we have
-
-$$
-a \ast a^{-1} = e = a^{-1} \ast a
-$$
-
-So $a$ is the element that matches the definition of inverse of $a^{-1}$.
-By uniqueness of inverse, $(a^{-1})^{-1} = a$.
-
-### Inverse of $ab$
-
-The inverse of $a \ast b$ is given by
-
-$$
-(a \ast b)^{-1} = b^{-1} \ast a^{-1}
-$$
-
-_[Proof]_
-
-$$
-(a \ast b) \ast (b^{-1} \ast a^{-1}) = a \ast ((b \ast b^{-1}) \ast a^{-1}) = a \ast (e \ast a^{-1}) = a \ast a^{-1} = e
-$$
-
-$$
-(b^{-1} \ast a^{-1}) \ast (a \ast b) = b^{-1} \ast ((a^{-1} \ast a) \ast b) = b^{-1} \ast (e \ast b) = b^{-1} \ast b = e
-$$
-
-By uniqueness of inverse, $(a \ast b)^{-1} = b^{-1} \ast a^{-1}$.
-
-### Cancellation Law
-
-For $a, b, c \in G$,
-
-$$
-a \ast c = b \ast c \implies a = b
-$$
-
-as $(a \ast c) \ast c^{-1} = (b \ast c) \ast c^{-1}$. Similarily, if $c \ast a = c \ast b$, then $a = b$.
-
-From that, we can derive that the equation $a \ast x = b$ has a unique solution, namely $a^{-1} \ast b$.
-Similarily, for $x \ast a = b$, the unique solution is $b \ast a^{-1}$.
-
-Suppose $x_1$ and $x_2$ are the solutions, we have $a \ast x_1 = b = a \ast x_2$,
-by cancellation law, we have $x_1 = x_2$ and hence the solution is unique.
-
-Also,
-
-$$
-x^2 = x \implies x = e
-$$
-
-as
-
-$$
-x^2 = x \ast x = x = x \ast e
-$$
-
-By cancellation law, $x = e$ is the only solution.
+> *Corollary.*{: .cor}
+> The only solution of $x^2 = x$ is $x = e$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  x^2 = x \ast x = x \ast e = x
+  $$
+>
+> By cancellation law, $x = e$ is the only solution.
 
 ## Commutative/Abelian Group
 
-A _commutative/abelian group_ is a group with
-
-4\. **[Commutativity]** For all $a, b \in G$, we have
-
-$$
-a \ast b = b \ast a
-$$
+> *Definition.*{: .def}
+> A _commutative/abelian group_ is a group with
+>
+> 4\. **[Commutativity]** For all $a, b \in G$, we have
+>
+> $$
+  a \ast b = b \ast a
+  $$
 
 ## Finite Group
 
+> *Definition.*{: .def}
+> The **order** of a group $G$, denoted by $\vert G \vert$, is the number of elements in $G$.
+
 A group $G$ is _finite_ if there are finite number of elements.
-Then the _order_ of $G$ is $\|G\|$, the number of elements.
 
-## Order of element
+## Order of Element
 
-The _order_ of an element $a \in G$, denoted by $\text{ord}(a)$ is the smallest positive integer $n$ such that $a^n = e$.
-If no such $n$ exists, then $a$ is of infinite order.
+> *Definition.*{: .def}
+> The **order** of an element $a \in G$, denoted by $\text{ord}(a)$, is the smallest positive integer $n$ such that $a^n = e$.
+> If no such $n$ exists, then $a$ is of infinite order.
 
-Later on, by [Lagrange Theorem](subgroups-cosets-lagrange-theorem.md), we will see that $\text{ord}(a) \mid \|G\|$.
+Later on, by [Lagrange Theorem](subgroups-cosets-lagrange-theorem.md#lagrange-theorem), we will see that $\text{ord}(a) \mid \|G\|$.
 
 ## Examples
 
@@ -206,57 +225,70 @@ Later on, by [Lagrange Theorem](subgroups-cosets-lagrange-theorem.md), we will s
 
 Groups can be combined to form new product group or decomposed to simpler groups for analysis.
 
-Given $G_1$ and $G_2$ are groups, the product $G_1 \times G_2$ is a group under operation
-
-$$
-(a_1, a_2) \ast (b_1, b_2) = (a_1 \ast_1 b_1, a_2 \ast_2 b_2)
-$$
-
-where $a_1, b_1 \in G_1$ and $a_2, b_2 \in G_2$.
-
-_[Proof]_ As $c_1 = a_1 \ast_1 b_1 \in G_1$ and $c_2 = a_2 \ast_2 b_2 \in G_2$, $(c_1, c_2) \in G_1 \times G_2$ and is closed.
-$(e_1, e_2)$ is the identity element and $(a^{-1}, b^{-1})$ is the inverse.
-
-$$
-\begin{align*}
-((a_1, a_2) \ast (b_1, b_2)) \ast (c_1, c_2) &= ((a_1 \ast_1 b_1) \ast_1 c_1, (a_2 \ast_2 b_2) \ast_2 c_2) \\
-&= (a_1 \ast_1 (b_1 \ast_1 c_1), a_2 \ast_2 (b_2 \ast_2 c_2)) \\
-&= (a_1, a_2) \ast ((b_1, b_2) \ast (c_1, c_2))
-\end{align*}
-$$
-
-and is associative. Hence, $G_1 \times G_2$ is a group.
+> *Theorem.*{: .thm}
+> Given $G_1$ and $G_2$ are groups, the product $G_1 \times G_2$ is a group under operation
+>
+> $$
+  (a_1, a_2) \ast (b_1, b_2) = (a_1 \ast_1 b_1, a_2 \ast_2 b_2)
+  $$
+>
+> where $a_1, b_1 \in G_1$ and $a_2, b_2 \in G_2$.
+>
+> *Proof.*{: .prf}
+>
+> 0\. As $c_1 = a_1 \ast_1 b_1 \in G_1$ and $c_2 = a_2 \ast_2 b_2 \in G_2$, $(c_1, c_2) \in G_1 \times G_2$ and is closed.
+>
+> 1\. $(e_1, e_2)$ is the identity element
+>
+> 2\. $(a^{-1}, b^{-1})$ is the inverse.
+>
+> 3\. $G_1 \times G_2$ is associative as
+>
+> $$
+  \begin{align*}
+  ((a_1, a_2) \ast (b_1, b_2)) \ast (c_1, c_2) &= ((a_1 \ast_1 b_1) \ast_1 c_1, (a_2 \ast_2 b_2) \ast_2 c_2) \\
+  &= (a_1 \ast_1 (b_1 \ast_1 c_1), a_2 \ast_2 (b_2 \ast_2 c_2)) \\
+  &= (a_1, a_2) \ast ((b_1, b_2) \ast (c_1, c_2))
+  \end{align*}
+  $$
+>
+> Hence, $G_1 \times G_2$ is a group.
 
 ### Direct Product Theorem
 
 In order to check if a group is direct product of two groups, we have the following conditions:
 
-Let $H_1, H_2 \le G$ such that
-
-1. $H_1 \cap H_2 = \set{e}$
-
-2. $\forall a_1 \in H_1$ and $\forall a_2 \in H_2$, $a_1a_2 = a_2a_1$
-
-3. $\forall a \in G$, $\exists a_1 \in H_1$ and $\exists a_2 \in H_2$, $a = a_1a_2$
-
-Then $G \cong H_1 \times H_2$.
-
-_[Proof]_ Let $f: H_1 \times H_2 \to G$ defined by $f((a_1, a_2)) = a_1a_2$. $G \cong H_1 \times H_2$ if $f$ is an isomorphism.
-
-$$
-f((a_1, a_2)(b_1, b_2)) = f((a_1b_1, a_2b_2)) = a_1b_1a_2b_2 = a_1a_2b_1b_2 = f((a_1, a_2))f((b_1, b_2))
-$$
-
-by (2) and hence $f$ is a homomorphism.
-
-By (3), $f$ is surjective.
-
-When $f((a_1, a_2)) = a_1a_2 = e$, $a_2 = a_1^{-1}$. By (1), it is only possible if $a_1 = a_2 = e$. Hence, $\ker f = \set{(e, e)}$ and $f$ is injective.
-
-Therefore, $f$ is a bijection and $G \cong H_1 \times H_2$.
+> *Theorem.*{: .thm}
+> Let $H_1, H_2 \le G$ such that
+>
+> 1. $H_1 \cap H_2 = \set{e}$
+>
+> 2. $\forall a_1 \in H_1$ and $\forall a_2 \in H_2$, $a_1a_2 = a_2a_1$
+>
+> 3. $\forall a \in G$, $\exists a_1 \in H_1$ and $\exists a_2 \in H_2$, $a = a_1a_2$
+>
+> Then $G \cong H_1 \times H_2$.
+>
+> *Proof.*{: .prf}
+>
+> Let $f: H_1 \times H_2 \to G$ defined by $f((a_1, a_2)) = a_1a_2$. $G \cong H_1 \times H_2$ if $f$ is an isomorphism.
+>
+> By (2),
+>
+> $$
+  f((a_1, a_2)(b_1, b_2)) = f((a_1b_1, a_2b_2)) = a_1b_1a_2b_2 = a_1a_2b_1b_2 = f((a_1, a_2))f((b_1, b_2))
+  $$
+>
+> and hence $f$ is a homomorphism.
+>
+> By (3), $f$ is surjective.
+>
+> When $f((a_1, a_2)) = a_1a_2 = e$, $a_2 = a_1^{-1}$. By (1), it is only possible if $a_1 = a_2 = e$. Hence, $\ker f = \set{(e, e)}$ and $f$ is injective.
+>
+> Therefore, $f$ is a bijection and $G \cong H_1 \times H_2$.
 
 ## References
 
-* Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.2
+* Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 1.2, 12.7
 * [Dexter Chua _Part IA - Groups_, 2014 - Chapter 0](https://dec41.user.srcf.net/notes/IA\_M/groups.pdf)
 * [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 1](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)

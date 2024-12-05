@@ -235,7 +235,7 @@ Isomorphic groups are considered to be "the same", except the elements and opera
 > Automorphisms are isomorphisms that are also endomorphic.
 
 Automorphism can be thought as a symmetry of the group as it is a bijection to itself preserving the structure.
-Hence, a set of automorphisms is also a group as it is symmetries of something.
+Hence, a set of automorphisms is also a group as it is the set of symmetries of something.
 
 ## Examples
 

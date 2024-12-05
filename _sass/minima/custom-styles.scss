@@ -46,6 +46,16 @@
     margin-top: 40px;
   }
 
+  p:has(img) {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+
+    img {
+      max-height: 280px;
+    }
+  }
+
   blockquote {
     background-color: #202020;
     padding: 20px 15px;
