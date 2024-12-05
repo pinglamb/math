@@ -20,7 +20,7 @@ and the _degree_ of the symmetric group is $n$.
 
 The order of $S_n$, denoted by $\|S_n\|$ is $n!$.
 
-$S_n$ can be viewed as subgroup of $S_m$ with $m \ge n$, by fixing $n+1, n+2, ..., m$.
+$S_n$ can be viewed as subgroup of $S_m$ with $n \le m$, by fixing $n+1, n+2, ..., m$.
 
 ## sgn as homomorphism
 
@@ -40,6 +40,18 @@ We also have
 $$
 \ker \text{sgn} = A_n
 $$
+
+## Subgroup of $S_n$
+
+Any subgroup of $S_n$ contains either no odd permutations, or exactly half.
+
+_[Proof]_ Let $G \le S_n$ and $a_1, a_2, ..., a_n$ be the even elements in $G$.
+
+It is a subgroup of $A_n$ if there are no odd elements.
+
+If there is an odd element $g \in G$, then the elements $ga_1, ga_2, ga_3, ..., ga_n$ are all odd.
+Also, if $ga_i = ga_j$ for some $i, j$, $g^{-1}(ga_i) = g^{-1}(ga_j)$ and $a_i = a_j$. Thus, they are all distinct.
+Hence, $G$ has either no odd elements, or exactly half of them are odd.
 
 ## Examples
 
