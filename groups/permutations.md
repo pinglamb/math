@@ -149,6 +149,7 @@ $$
   $$
 >
 > so every perumutation can be expressed as a product of transpositions.
+{: #permutation-transpositions}
 
 The representation by transpositions isn't unique. However,
 
@@ -241,8 +242,30 @@ The representation by transpositions isn't unique. However,
 >
 > $\text{sgn}(\sigma) = 1$ means even and $\text{sgn}(\sigma) = -1$ means odd.
 
-> *Corollary.*{: .cor}
+> *Theorem.*{: .thm}
+> $\text{sgn}$ is multiplicative, i.e. $\text{sgn}(\sigma_1\sigma_2) = \text{sgn}(\sigma_1)\text{sgn}(\sigma_2)$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \text{sgn}(\sigma_1\sigma_2) = (-1)^{k_1 + k_2} = (-1)^{k_1}(-1)^{k_2} = \text{sgn}(\sigma_1)\text{sgn}(\sigma_2)
+  $$
+
+> *Lemma.*{: .lem}
 > The number of transpositions of $k$-cycle is $k-1$, so odd length cycles are even and even length cycles are odd.
+
+> *Corollary.*{: .cor}
+> A permutation is even if and only if the number of disjoint cycles of even length is even.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $\sigma = \tau_1\tau_2...\tau_k$, where the length of $\tau_i$ is $l_i$, we have
+>
+> $$
+  \text{sgn}(\sigma) = (-1)^{l_1 - 1}(-1)^{l_2 - 1}...(-1)^{l_k - 1}
+  $$
+>
+> so it is even if there are even number of even length cycles.
 
 ## References
 

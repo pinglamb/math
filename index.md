@@ -4,6 +4,7 @@ title: Home
 ---
 
 ## Groups
+{: .left}
 
 * [Groups](groups/groups.md)
 * [Subgroups, Cosets and Lagrange's Theorem](groups/subgroups-cosets-lagrange-theorem.md)
@@ -17,6 +18,7 @@ title: Home
 * [Quotient Groups](groups/mobius-groups.md)
 
 ## Vectors and Matrices
+{: .left}
 
 * [Exponential, Cosine and Sine Functions](vectors-and-matrices/exponential-cosine-sine-functions.md)
 * [Complex Numbers](vectors-and-matrices/complex-numbers.md)
@@ -28,6 +30,7 @@ title: Home
 * [Suffix Notation](vectors-and-matrices/suffix-notation.md)
 
 ## Differential Equations
+{: .left}
 
 * [Differentiability](differential-equations/differentiability.md)
 * [Sequences and Series](differential-equations/sequences-series.md)
