@@ -36,6 +36,43 @@ The theory about quotient groups is one of the most important idea about groups.
 > Also, we have $a^{-1}k(a^{-1})^{-1} = a^{-1}ka = k'$ for some $k' \in K$, so $ka = ak'$ and $Ka \subseteq aK$.
 > Hence, $aK = Ka$.
 
+> *Lemma.*{: .lem}
+> $K \trianglelefteq G \iff \forall a \in G, aKa^{-1} = K$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Leftarrow$) If for all $a \in G$, $aKa^{-1} = K$,
+> then for all $k \in K$, $aka^{-1} = k'$ for some $k' \in K$. By definition, $K \trianglelefteq G$.
+>
+> ($\Rightarrow$) If $K \trianglelefteq G$, for all $a \in G$ and $k \in K$, $aka^{-1} \in K$,
+> we have $aka^{-1} \in K$ so $aKa^{-1} \subseteq K$.
+> Also, we have $a^{-1}ka \in K$, so $a(a^{-1}ka)a^{-1} = k \in aKa^{-1}$ and $K \subseteq aKa^{-1}$.
+> Hence, $aKa^{-1} = K$.
+
+> *Theorem.*{: .thm}
+> Any subgroup of index $2$ is normal.
+>
+> *Proof.*{: .prf}
+>
+> If $K \le G$ is of index $2$, the only possible cosets are $K$ and $G \setminus K$ because $eK$/$Ke$ is one of the cosets and cosets are disjoint.
+> As $eK = Ke$, the other right coset is also $G \setminus K$. So the left cosets and right cosets of $K$ are the same and $K \trianglelefteq G$.
+
+> *Theorem.*{: .thm}
+> Any subgroup of an abelian group is normal.
+>
+> *Proof.*{: .prf}
+>
+> For a subgroup $K \le G$, for all $a \in G$ and $k \in K$, $aka^{-1} = aa^{-1}k = k \in K$.
+> Also, as $K$ is abelian, obviously $aK = Ka$ for all $a \in G$.
+
+> *Theorem.*{: .thm}
+> Every kernel is a normal subgroup.
+>
+> *Proof.*{: .prf}
+>
+> Let $f: G \to H$ be a homomorphism, $K = \ker f$ are the elements $k \in G$ such that $f(k) = e_H$.
+> Therefore, for all $a \in G$, $f(aka^{-1}) = f(a)f(k)f(a^{-1}) = f(a)f(a)^{-1} = e_H$, so $aka^{-1} \in K$ and $\ker f \trianglelefteq G$.
+
 ## References
 
 * [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 5](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
