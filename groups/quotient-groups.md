@@ -73,6 +73,52 @@ The theory about quotient groups is one of the most important idea about groups.
 > Let $f: G \to H$ be a homomorphism, $K = \ker f$ are the elements $k \in G$ such that $f(k) = e_H$.
 > Therefore, for all $a \in G$, $f(aka^{-1}) = f(a)f(k)f(a^{-1}) = f(a)f(a)^{-1} = e_H$, so $aka^{-1} \in K$ and $\ker f \trianglelefteq G$.
 
+## Quotients
+
+The left cosets of normal subgroups form a group in a natural way.
+
+> *Definition.*{: .def}
+> If $X$ and $Y$ are subsets of $G$, the product $XY$ of them is the set of all products $xy$ where $x \in X$ and $y \in Y$.
+
+> *Lemma.*{: .lem}
+> The product of two left cosets of a normal subgroup is again a left coset, i.e.
+>
+> $$
+  (xK)(yK) = xyK
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Each element of $(xK)(yK)$ has the form $xkyk'$ for some $k, k' \in K$. Rewrite this as
+>
+> $$
+  xy(y^{-1}ky)k'
+  $$
+>
+> As $K$ is a normal subgroup, by definition, $y^{-1}ky = k'' \in K$. Hence,
+>
+> $$
+  xkyk' = xy(y^{-1}ky)k' = xy(k''k')
+  $$
+>
+> and therefore $(xK)(yK) \subseteq xyK$.
+>
+> Conversely, for any $xyk \in xyK$, $xyk = (xe)(yk) \in (xK)(yK)$. Hence, $xyK \subseteq (xK)(yK)$.
+
+> *Theorem.*{: .thm}
+> If $K$ is a normal subgroup of $G$, the set of all left cosets of $K$ in $G$ forms a group under multiplication.
+>
+> *Proof.*{: .prf}
+>
+> The above lemma shows that the multiplication of left cosets is closed.
+> $(eK)(aK) = aK$ is the identity element.
+> $(a^{-1}K)(aK) = eK$ so $a^{-1}K$ is the inverse of $aK$.
+> Associativity is inherited from associativity in $G$.
+> Hence, it is a group.
+
+> *Definition.*{: .def}
+> The **quotient group** (of factor group) of $G$ by $K$ is the group of left cosets of $K$ under multiplication, denoted by $G/K$.
+
 ## References
 
 * [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 5](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
