@@ -13,9 +13,9 @@ title: Home
 * [Symmetric Groups](groups/symmetric-groups.md)
 * [Cyclic Groups](groups/cyclic-groups.md)
 * [Dihedral Groups](groups/dihedral-groups.md)
+* [Quotient Groups](groups/quotient-groups.md)
 * [Matrix Groups](groups/matrix-groups.md)
 * [Mobius Groups](groups/mobius-groups.md)
-* [Quotient Groups](groups/mobius-groups.md)
 
 ## Vectors and Matrices
 {: .left}
