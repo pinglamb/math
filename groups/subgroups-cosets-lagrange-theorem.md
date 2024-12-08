@@ -134,7 +134,59 @@ The following are some examples of subgroups:
 >
 > For any $a \in G$, as $e \in H$, $a \in aH$. Hence, the union of all of the left cosets is $G$.
 
-All the above properties is applicable to the right cosets.
+All the above properties is applicable to the right cosets. However
+
+> *Theorem.*{: .thm}
+> Left cosets and right cosets are of same size, i.e.
+>
+> $$
+  \left|\set{aH : a \in G}\right| = \left|\set{Ha : a \in G}|\right|
+  $$
+>
+> but in general they partition $G$ differently.
+>
+> *Proof.*{: .prf}
+>
+> Let $H \le G$ and $\phi$ be a mapping from the left cosets to right cosets defined as
+>
+> $$
+  \forall a \in G, \phi(aH) = Ha^{-1}
+  $$
+>
+> Assume $aH = bH$, we have
+>
+> $$
+  aH = bH \implies b^{-1}a = b^{-1}(a^{-1})^{-1} \in H \implies Ha^{-1} = Hb^{-1}
+  $$
+>
+> by the lemma above. Hence, $\phi$ is well-defined.
+>
+> Suppose $\phi(aH) = \phi(bH)$, we have
+>
+> $$
+  Ha^{-1} = Hb^{-1} \implies b^{-1}(a^{-1})^{-1} = b^{-1}a \in H \implies aH = bH
+  $$
+>
+> Hence, $\phi$ is injective.
+>
+> For all $a \in G$,
+>
+> $$
+  Ha = H(a^{-1})^{-1} = \phi(a^{-1}H)
+  $$
+>
+> Hence, $\phi$ is surjective.
+>
+> In conclusion, $\phi$ is a bijection and therefore the sizes of left cosets and right cosets are the same.
+>
+> Left cosets and right cosets in general partition $G$ differently. For example, let $H = \set{e, s} \le D_6$, we have
+>
+> $$
+  \begin{align*}
+  \set{aH: a \in D_6} &= \set{\set{e, s}, \set{r, rs}, \set{r^2, r^2s}} \\
+  \set{Ha: a \in D_6} &= \set{\set{e, s}, \set{r, sr = r^2s}, \set{r^2, sr^2 = rs}}
+  \end{align*}
+  $$
 
 ### Coset as equivalence classes
 
