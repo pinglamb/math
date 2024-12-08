@@ -188,6 +188,16 @@ All the above properties is applicable to the right cosets. However
   \end{align*}
   $$
 
+For the above theorem, $f(aH) = Ha$ is not a candidate for the proof because it is not well-defined.
+Consider the same example $H = \set{e, s} \le D_6$, we have
+
+$$
+\begin{align*}
+rH = \set{r, rs} &= \set{sr^2s, sr^2} = sr^2H \\
+Hr = \set{r, sr} &\not= \set{sr^2, r^2} = Hsr^2
+\end{align*}
+$$
+
 ### Coset as equivalence classes
 
 > *Theorem.*{: .thm}
