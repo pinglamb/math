@@ -137,7 +137,7 @@ The following are some examples of subgroups:
 All the above properties is applicable to the right cosets. However
 
 > *Theorem.*{: .thm}
-> Left cosets and right cosets are of same size, i.e.
+> The number of left cosets and right cosets are the same, i.e.
 >
 > $$
   \left|\set{aH : a \in G}\right| = \left|\set{Ha : a \in G}|\right|
@@ -177,7 +177,7 @@ All the above properties is applicable to the right cosets. However
 >
 > Hence, $\phi$ is surjective.
 >
-> In conclusion, $\phi$ is a bijection and therefore the sizes of left cosets and right cosets are the same.
+> In conclusion, $\phi$ is a bijection and therefore the number of left cosets and right cosets are the same.
 >
 > Left cosets and right cosets in general partition $G$ differently. For example, let $H = \set{e, s} \le D_6$, we have
 >
