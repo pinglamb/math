@@ -119,6 +119,12 @@ The left cosets of normal subgroups form a group in a natural way.
 > *Definition.*{: .def}
 > The **quotient group** (of factor group) of $G$ by $K$ is the group of left cosets of $K$ under multiplication, denoted by $G/K$.
 
+## Isomorphism Theorem
+
+The isomorphism theorem is about the relationship between normal subgroups, homomorphisms and quotients.
+
+![Isomorphism Theorem](../images/isomorphism-theorem.png)
+
 ## References
 
 * [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 5](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
