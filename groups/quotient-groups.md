@@ -137,8 +137,33 @@ The isomorphism theorem is about the relationship between normal subgroups, quot
 > Let $f: G \to H$ be a homomorphism, $K = \ker f$ are the elements $k \in G$ such that $f(k) = e_H$.
 > Therefore, for all $a \in G$, $f(aka^{-1}) = f(a)f(k)f(a^{-1}) = f(a)f(a)^{-1} = e_H$, so $aka^{-1} \in K$ and $\ker f \trianglelefteq G$.
 
+We have already shown that [the image of a homomorphism is a subgroup](homomorphisms.md#image-is-subgroup). Furthermore,
 
-![Isomorphism Theorem](../images/isomorphism-theorem.png)
+> *Theorem.*{: .thm}
+> The image of a homomorphism $f: G \to H$ is isomorphic to the quotient group $G/K$, where $K = \ker f$, i.e. $\text{im}\,f \cong G/K$.
+>
+> *Proof.*{: .prf}
+>
+> ![Isomorphism Theorem](../images/isomorphism-theorem.png)
+>
+> Define $\bar{f}: G/K \to H$ by $\bar{f}(aK) = f(a)$ (so that $\bar{f}q = f$).
+>
+> If $aK = bK$, we have $b^{-1}a \in K$, so $f(b^{-1}a) = f(b)^{-1}f(a) = e$ and $f(a) = f(b)$.
+> Therefore, $aK = bK \implies \bar{f}(aK) = \bar{f}(bK)$ so $\bar{f}$ is well-defined.
+>
+> If $\bar{f}(aK) = \bar{f}(bK)$, we have $f(a) = f(b) \implies f(b^{-1}a) = e$ and $b^{-1}a \in K$.
+> Therefore, $aK = bK$ and $\bar{f}$ is injective.
+>
+> By definition, $\bar{f}$ is clearly surjective onto $\text{im}\,f$.
+>
+> So, $\bar{f}$ is an isomorphism and $G/K \cong \text{im}\,f$ ($\le H$).
+
+In particular,
+if $f: G \to H$ is injective, then $\ker f = \set{e}$ ([injectivity via kernel](homomorphisms.md#injectivity-via-kernel)),
+so $G/K \cong G$ and $G$ is isomorphic to a subgroup of $H$, denoted by $G \lesssim H$.
+If $f: G \to H$ is surjective, then $\text{im} f = H$,
+so $G/K \cong H$.
+
 
 ## References
 

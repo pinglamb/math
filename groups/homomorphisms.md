@@ -169,6 +169,7 @@ The composite of bijections is a bijection.
   $$
 >
 > By super-efficient subgroup criterion, $\text{im}\, f \le H$.
+{: #image-is-subgroup}
 
 > *Theorem.*{: .thm}
 > Kernel is a subgroup $G$, i.e. $\ker f \le G$.
@@ -185,7 +186,7 @@ The composite of bijections is a bijection.
 > Hence, $g_1 \ast g_2^{-1} \in \ker f$. By super-efficient subgroup criterion, $\ker f \le G$.
 {: #kernel-is-subgroup}
 
-## Injection via Kernel
+## Injectivity via Kernel
 
 > *Theorem.*{: .thm}
 > A homomorphism $f: G \to H$ is
