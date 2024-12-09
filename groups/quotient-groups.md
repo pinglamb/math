@@ -65,45 +65,37 @@ The theory about quotient groups is one of the most important idea about groups.
 > For a subgroup $K \le G$, for all $a \in G$ and $k \in K$, $aka^{-1} = aa^{-1}k = k \in K$.
 > Also, as $K$ is abelian, obviously $aK = Ka$ for all $a \in G$.
 
-> *Theorem.*{: .thm}
-> Every kernel is a normal subgroup.
->
-> *Proof.*{: .prf}
->
-> Let $f: G \to H$ be a homomorphism, $K = \ker f$ are the elements $k \in G$ such that $f(k) = e_H$.
-> Therefore, for all $a \in G$, $f(aka^{-1}) = f(a)f(k)f(a^{-1}) = f(a)f(a)^{-1} = e_H$, so $aka^{-1} \in K$ and $\ker f \trianglelefteq G$.
-
 ## Quotients
 
 The left cosets of normal subgroups form a group in a natural way.
 
 > *Definition.*{: .def}
-> If $X$ and $Y$ are subsets of $G$, the product $XY$ of them is the set of all products $xy$ where $x \in X$ and $y \in Y$.
+> If $A$ and $B$ are subsets of $G$, the product $AB$ is the set of all products $ab$ where $a \in A$ and $b \in B$.
 
 > *Lemma.*{: .lem}
 > The product of two left cosets of a normal subgroup is again a left coset, i.e.
 >
 > $$
-  (xK)(yK) = xyK
+  (aK)(bK) = abK
   $$
 >
 > *Proof.*{: .prf}
 >
-> Each element of $(xK)(yK)$ has the form $xkyk'$ for some $k, k' \in K$. Rewrite this as
+> Each element of $(aK)(bK)$ has the form $akbk'$ for some $k, k' \in K$. Rewrite this as
 >
 > $$
-  xy(y^{-1}ky)k'
+  ab(b^{-1}kb)k'
   $$
 >
-> As $K$ is a normal subgroup, by definition, $y^{-1}ky = k'' \in K$. Hence,
+> As $K$ is a normal subgroup, by definition, $b^{-1}kb = k'' \in K$. Hence,
 >
 > $$
-  xkyk' = xy(y^{-1}ky)k' = xy(k''k')
+  akbk' = ab(b^{-1}kb)k' = ab(k''k')
   $$
 >
-> and therefore $(xK)(yK) \subseteq xyK$.
+> and therefore $(aK)(bK) \subseteq abK$.
 >
-> Conversely, for any $xyk \in xyK$, $xyk = (xe)(yk) \in (xK)(yK)$. Hence, $xyK \subseteq (xK)(yK)$.
+> Conversely, for any $abk \in abK$, $abk = (ae)(bk) \in (aK)(bK)$. Hence, $abK \subseteq (aK)(bK)$.
 
 > *Theorem.*{: .thm}
 > If $K$ is a normal subgroup of $G$, the set of all left cosets of $K$ in $G$ forms a group under multiplication.
@@ -121,7 +113,30 @@ The left cosets of normal subgroups form a group in a natural way.
 
 ## Isomorphism Theorem
 
-The isomorphism theorem is about the relationship between normal subgroups, homomorphisms and quotients.
+The isomorphism theorem is about the relationship between normal subgroups, quotients and homomorphisms.
+
+> *Theorem.*{: .thm}
+> Every normal subgroup is the kernel of some homomorphisms, specifically,
+> given $K \trianglelefteq G$, the map $q: G \to G/K$ sending $a$ to $aK$ is a surjective group homomorphism, called the **quotient map**.
+>
+> *Proof.*{: .prf}
+>
+> By definition,
+>
+> $$
+  q(ab) = abK = (aK)(bK) = q(a)q(b)
+  $$
+>
+> so $q$ is a homomorphism. $G/K$ is the group of all left cosets of $K$ so clearly $q$ is surjective.
+
+> *Theorem.*{: .thm}
+> Every kernel of homomorphisms is a normal subgroup.
+>
+> *Proof.*{: .prf}
+>
+> Let $f: G \to H$ be a homomorphism, $K = \ker f$ are the elements $k \in G$ such that $f(k) = e_H$.
+> Therefore, for all $a \in G$, $f(aka^{-1}) = f(a)f(k)f(a^{-1}) = f(a)f(a)^{-1} = e_H$, so $aka^{-1} \in K$ and $\ker f \trianglelefteq G$.
+
 
 ![Isomorphism Theorem](../images/isomorphism-theorem.png)
 
