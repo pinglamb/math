@@ -180,13 +180,16 @@ $$
 
 Therefore,
 
-$$
-z = r(\cos\theta + i\sin\theta)
-$$
+> *Definition.*{: .def}
+> The polar form of a complex number $z$ is
+>
+> $$
+  z = r(\cos\theta + i\sin\theta)
+  $$
 
 ### By Exponential Function
 
-Consider the [Taylor's expansion](linear-algebra/exponential-cosine-and-sine-functions.md) of $e^x$/$\exp(x)$, $\sin(x)$ and $\cos(x)$, we have
+Consider the [Taylor's expansion](./exponential-cosine-sine-functions.md) of $\exp(x)$, $\sin(x)$ and $\cos(x)$, we have
 
 $$
 e^{i\theta} = \cos \theta + i \sin \theta
@@ -194,9 +197,12 @@ $$
 
 Hence,
 
-$$
-z = re^{i \theta}
-$$
+> *Definition.*{: .def}
+> Alternatively, a complex number $z$ can be expressed as
+>
+> $$
+  z = re^{i \theta}
+  $$
 
 ### Geometric Interpretation of Multiplication
 
@@ -220,10 +226,10 @@ Hence, geometrically, multiplication of $z_1$ by $z_2$ scales $z_1$ by $\|z_2\|$
 
 ### Properties
 
-As the complex conjugate of $z$ is $\bar{z} = a - bi$, base on the polar representation, we can see that $\arg(\bar{z}) = -\arg(z)$, therefore
+As the complex conjugate of $z$ is $z^\ast = a - bi$, base on the polar representation, we can see that $\arg(z^\ast) = -\arg(z)$, therefore
 
 $$
-\bar{z} = re^{-i\theta} = r(\cos\theta - i\sin\theta)
+z^\ast = re^{-i\theta} = r(\cos\theta - i\sin\theta)
 $$
 
 As $e^{i\theta} = \cos\theta + i\sin\theta$ and $e^{-i\theta} = \cos\theta - i\sin\theta$,
@@ -239,20 +245,37 @@ On the other hand, consider $z = r(\cos\theta + i\sin\theta) = re^{i\theta} =1$,
 
 ## Roots of Unity
 
-Let $n$ be a positive integer. The n-th roots of unity are the distinct complex numbers $1, \omega, \omega^2, ..., \omega^{n-1}$, where $\omega = e^{2\pi i/n}$, which are the $n$ distinct solutions of $z^n = 1$.
-
-\[Proof] $\omega^n = e^{2\pi i} = 1$.
-Let $k \in \{0, 1, 2, ..., n-1\}$, $(\omega^k)^n = (\omega^n)^k = 1$.
-Therefore, $1, \omega, \omega^2, ..., \omega^{n-1}$ are solutions of $z^n = 1$.
-They are obviously distinct because $\arg(\omega^k) = 2\pi k/n$.
-Conversely, suppose $z = re^{i\theta}$ is a solution of $z^n = 1$, we have $z^n = r^ne^{in\theta} = 1$.
-Therefore, $r^n = 1$ and $n\theta = 2k\pi$ with $k \in \mathbb{Z}$.
-Hence, we have $r = 1$ and by limiting $0 \le \theta < 2\pi$, $\theta = 2k\pi/n$ with $k = 0, 1, 2, ..., n-1$.
+> *Theorem.*{: .thm}
+> Let $n$ be a positive integer.
+> The **n-th roots of unity** are the distinct complex numbers
+>
+> $$
+  1, \omega, \omega^2, ..., \omega^{n-1}
+  $$
+>
+> where $\omega = e^{2\pi i/n}$, which are the $n$ distinct solutions of $z^n = 1$.
+>
+> *Proof.*{: .prf}
+>
+> Firstly, we have $\omega^n = e^{2\pi i} = 1$.
+>
+> Let $k \in \set{0, 1, 2, ..., n-1\}$,
+>
+> $$
+  (\omega^k)^n = (\omega^n)^k = 1
+  $$
+>
+> Therefore, $1, \omega, \omega^2, ..., \omega^{n-1}$ are solutions of $z^n = 1$.
+> They are obviously distinct because $\arg(\omega^k) = 2\pi k/n$.
+>
+> Conversely, suppose $z = re^{i\theta}$ is a solution of $z^n = 1$, we have $z^n = r^ne^{in\theta} = 1$.
+> Therefore, $r^n = 1$ and $n\theta = 2k\pi$ with $k \in \mathbb{Z}$.
+> Hence, we have $r = 1$ and by limiting $0 \le \theta < 2\pi$, $\theta = 2k\pi/n$ with $k = 0, 1, 2, ..., n-1$.
 
 The result can be generalized to equation $z^n = w$ with $w \not= 0$.
 Let $w = re^{i\theta}$ and $z_0 = r^{1/n}e^{i\theta/n}$, then $z_0^n = w$.
 Therefore, $(z/z_0)^n = 1$.
-Hence, $z_0, z_0\omega, z_0\omega^2, ..., z_0\omega^{n-1}$ are the n distinct solutions.
+Hence, $z_0, z_0\omega, z_0\omega^2, ..., z_0\omega^{n-1}$ are the $n$ distinct solutions.
 
 Furthermore, following from the sum of geometric series and $\omega^n = 1$,
 
@@ -264,24 +287,23 @@ Geometrically, the n-th roots of unity are the vertices of a regular n-gon on th
 
 ## Logarithms and Powers
 
-### Definition
-
-For $z \in \mathbb{C}$, $\log(z)$ is defined as "the" solution $w$ of $e^w = z$.
-Hence, by definion, we have
-
-$$
-\exp(\log(z)) = z
-$$
-
-and given $w = \log(z)$,
-
-$$
-\begin{align*}
-\log(\exp(w)) &= \log[\exp(\log(z))] \\
-              &= \log[z] \\
-              &= w
-\end{align*}
-$$
+> *Definition.*{: .def}
+> For $z \in \mathbb{C}$, $\log(z)$ is defined as "the" solution $w$ of $e^w = z$.
+> Hence, by definition, we have
+>
+> $$
+  \exp(\log(z)) = z
+  $$
+>
+> and given $w = \log(z)$,
+>
+> $$
+  \begin{align*}
+  \log(\exp(w)) &= \log(\exp(\log(z))) \\
+                &= \log(z) \\
+                &= w
+  \end{align*}
+  $$
 
 Let $z = re^{i\theta}$ and $w = x + yi$, by definition, we have $e^{x + yi} = (e^x)(e^{iy}) = re^{i\theta}$, therefore
 
@@ -294,50 +316,53 @@ $$
 
 Hence,
 
-$$
-\log(z) = \log(|z|) + i\arg(z)
-$$
+> *Lemma.*{: .lem}
+> $\log(z) = \log(\|z\|) + i\arg(z)$
 
 which is multi-valued as $\arg(z)$ is multi-valued function.
 The principal value of $\log(z)$ is $-\pi < \arg(z) = \text{Im}(\log(z)) \le \pi$.
 
-With complex logarithms, we can have $\log(-1) = \log(1) + i\pi$, which has no solution in real.
+$\log(-1)$ has no solution in real, but with complex logarithms, we have
 
-### Properties
+> *Lemma.*{: .lem}
+> $\log(-1) = \log(1) + i\pi$.
 
 Similar to $\log(x)$ with $x \in \mathbb{R}$, we have
 
-$$
-\log(z_1z_2) = \log(z_1) + \log(z_2)
-$$
+> *Lemma.*{: .lem}
+> $\log(z_1z_2) = \log(z_1) + \log(z_2)$
 
-### Complex Powers
+Similar to $x^a = e^{a\log x} = \exp(a \log x)$ with $x \in \mathbb{R}_{> 0}$, we have
 
-Similar to $x^a = e^{a\log x} = \exp(a \log x)$ with $x \in \mathbb{R}_{> 0}$, we have for $z \not = 0$ and $z, w \in \mathbb{C}$,
-
-$$
-z^w = e^{w \log z}
-$$
+> *Definition.*{: .def}
+> For $z \not = 0$ and $z, w \in \mathbb{C}$, $z$ to the _complex power_ of $w$ is
+>
+> $$
+  z^w = e^{w \log z}
+  $$
 
 Since $\log(z)$ is multi-valued, $z^w$ is only defined to an arbitrary multiple of $e^{2k\pi i w}$.
 
 ## De Moivre's Theorem
 
-For $\theta \in \mathbb{R}$ and $n \in \mathbb{Z}$,
-
-$$
-\cos n\theta + i\sin n\theta = (\cos \theta + i\sin \theta)^n
-$$
-
-\[Proof] As $\cos \theta + i\sin \theta = e^{i\theta}$, we have
-
-$$
-\begin{align*}
-\cos n\theta + i \sin n\theta &= e^{i(n\theta)} \\
-                              &= (e^{i\theta})^n \\
-                              &= (\cos \theta + i \sin \theta)^n
-\end{align*}
-$$
+> *Theorem.*{: .thm}
+> For $\theta \in \mathbb{R}$ and $n \in \mathbb{Z}$,
+>
+> $$
+  \cos n\theta + i\sin n\theta = (\cos \theta + i\sin \theta)^n
+  $$
+>
+> *Proof.*{: .prf}
+>
+> As $\cos \theta + i\sin \theta = e^{i\theta}$, we have
+>
+> $$
+  \begin{align*}
+  \cos n\theta + i \sin n\theta &= e^{i(n\theta)} \\
+                                &= (e^{i\theta})^n \\
+                                &= (\cos \theta + i \sin \theta)^n
+  \end{align*}
+  $$
 
 The theorem can be extended to $\theta, n \in \mathbb{C}$ with $\cos n \theta + i \sin n \theta$ equals to one of the values of $(\cos \theta + i\sin \theta)^n$.
 
@@ -345,39 +370,52 @@ The theorem can be extended to $\theta, n \in \mathbb{C}$ with $\cos n \theta + 
 
 ### Lines
 
-For $z_0, w \in \mathbb{C}$ with $w \not = 0$ and varying $\lambda \in \mathbb{R}$, the equation
+> *Theorem.*{: .thm}
+> For $z_0, w \in \mathbb{C}$ with $w \not = 0$ and varying $\lambda \in \mathbb{R}$, the equation
+>
+> $$
+  z = z_0 + \lambda w
+  $$
+>
+> represents points on a straight line passing through $z_0$ and parallel to $w$, which is similar to point-slope form.
+
+As $\lambda \in \mathbb{R}$, $\lambda = \lambda^\ast$, we have
 
 $$
-z = z_0 + \lambda w
+{z - z_0 \over w} = {z^\ast - z_0^\ast \over w^\ast}
 $$
 
-represents points on a straight line passing through $z_0$ and parallel to $w$, which is similar to point slope form.
+Hence,
 
-As $\lambda \in \mathbb{R}$, $\lambda = \bar{\lambda}$, we have ${z - z_0 \over w} = {\bar{z} - \bar{z_0} \over \bar{w}}$, therefore
+> *Theorem.*{: .thm}
+> An alternative representation of a line passing through $z_0$ and parallel to $w$ in complex plane is
+>
+> $$
+  zw^\ast -z^\ast w = z_0w^\ast - z_0^\ast w
+  $$
 
-$$
-z\bar{w} -\bar{z}w = z_0\bar{w} - \bar{z_0}w
-$$
-
-is an alternative representation of the line.
-
-Also, given $u, v \in \mathbb{C}$, the points that are equidistant from them form a straight line. Therefore,
+Also, given $u, v \in \mathbb{C}$, the points that are equidistant from them, i.e.
 
 $$
 |z - u|^2 = |z - v|^2
 $$
 
-is a straight line. As $\|z - u\|^2 = (z - u)(\bar{z} - \bar{u})$ and $\|z - v\|^2 = (z - v)(\bar{z} - \bar{v})$, we have
+form a straight line. As $\|z - u\|^2 = (z - u)(z^\ast - u^\ast)$ and $\|z - v\|^2 = (z - v)(z^\ast - v^\ast)$, we have
 
 $$
-(\bar{v} - \bar{u})z + (v - u)\bar{z} + |u|^2 + |v|^2 = 0
+(v^\ast - u^\ast)z + (v - u)z^\ast + |u|^2 + |v|^2 = 0
 $$
 
-Hence, let $a = v -u$ and $b = \|u\|^2 + \|v\|^2 \in \mathbb{R}$, we have a general representation
+Hence,
 
-$$
-\bar{a}z + a\bar{z} + b = 0
-$$
+> *Theorem.*{: .thm}
+> The general representation of a line is
+>
+> $$
+  a^\ast z + az^\ast + b = 0
+  $$
+>
+> Given two points $u, v \in \mathbb{C}$, then $a = v -u$ and $b = \|u\|^2 + \|v\|^2 \in \mathbb{R}$.
 
 Practically, it will be more useful to represent the straight line passing through two points $u$ and $v$ as parametric form
 
@@ -395,17 +433,18 @@ Details about different forms can be found [here](https://www.landonlehman.com/p
 
 ### Circles
 
-The points on a circle in the complex plane with centre $$w$$ and radius $r$ is given by the equation
-
-$$
-|z - w| = r
-$$
-
-Since $r^2 = \|z - w\|^2 = (z - w)(\bar{z} - \bar{w})$,
-
-$$
-z\bar{z} - (z\bar{w} + \bar{z}w) + |w|^2 = r^2
-$$
+> *Theorem.*{: .thm}
+> The points on a circle in the complex plane with centre $w$ and radius $r$ is given by the equation
+>
+> $$
+  |z - w| = r
+  $$
+>
+> Since $r^2 = \|z - w\|^2 = (z - w)(z^\ast - w^\ast)$,
+>
+> $$
+  zz^\ast - (zw^\ast + z^\ast w) + |w|^2 = r^2
+  $$
 
 ## References
 
