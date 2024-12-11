@@ -1,14 +1,14 @@
 ---
 layout: base
-title: Complex Numbers &#124; Linear Algebra
+title: Complex Numbers &#124; Vectors and Matrices
 ---
 
 # Complex Numbers
+{: .page-title}
 
-## Definition
-
-A complex number is a number $z \in \mathbb{C}$ of the form $z = a + bi$ with $a, b \in \mathbb{R}$.
-We called $a = \text{Re}(z)$ the real part and $b = \text{Im}(z)$$ the imaginary part.
+> *Definition.*{: .def}
+> A **complex number** is a number $z \in \mathbb{C}$ of the form $z = a + bi$ with $a, b \in \mathbb{R}$.
+> We called $a = \text{Re}(z)$ the real part and $b = \text{Im}(z)$ the imaginary part.
 
 ## Basic Arithmetic
 
@@ -53,123 +53,117 @@ $$
 
 ## Complex Conjugate
 
-### Definition
-
-The complex conjugate $\bar{z}$ of $z = a + bi$ is
-
-$$
-\bar{z} = a - bi
-$$
+> *Definition.*{: .def}
+> The **complex conjugate** $z^\ast$ (or $\bar{z}$) of $z = a + bi$ is
+>
+> $$
+  z^{\ast} = a - bi
+  $$
 
 Geometrically, $z$ and $\bar{z}$ are mirror images of each other in the real axis.
 
 Base on definition, we have
 
-$$
-\overline{(\bar{z})} = z
-$$
+> *Lemma.*{: .lem}
+> $(z^\ast)^\ast = z$.
 
-### Properties
-
-Conjugation is _distributive_ over addition, subtraction, multiplication and division, hence
-
-$$
-\begin{align*}
-\overline{z_1 \pm z_2} &= \overline{z_1} \pm \overline{z_2} \\
-\overline{z_1z_2} &= \overline{z_1} \cdot \overline{z_2} \\
-\overline{\left({z_1 \over z_2}\right)} &= {\overline{z_1} \over \overline{z_2}}
-\end{align*}
-$$
+> *Lemma.*{: .lem}
+> Conjugation is _distributive_ over addition, subtraction, multiplication and division, i.e.
+>
+> $$
+  \begin{align*}
+  (z_1 \pm z_2)^\ast &= z_1^\ast \pm z_2^\ast \\
+  (z_1z_2)^\ast &= z_1^\ast z_2^\ast \\
+  \left({z_1 \over z_2}\right)^\ast &= {z_1^\ast \over z_2^\ast}
+  \end{align*}
+  $$
 
 From the above, we can conclude the following as well
 
-$$
-\begin{align*}
-\overline{z^{-1}} &= (\overline{z})^{-1} \\
-\overline{z^n} &= (\overline{z})^n
-\end{align*}
-$$
+> *Lemma.*{: .lem}
+> $(z^{-1})^\ast = (z^\ast)^{-1}$.
+
+> *Lemma.*{: .lem}
+> $(z^n)^\ast = (z^\ast)^n$.
 
 Also, base on the definition, we have
 
-$$
-z\bar{z} = a^2 + b^2
-$$
+> *Lemma.*{: .lem}
+> $zz^\ast = a^2 + b^2$,
 
 which is always real and non-negative.
 
 With that, we can convert complex fraction to a complex number by
 
 $$
-{ z_1 \over z_2 } = {z_1 \over z_2} \cdot {\overline{z_2} \over \overline{z_2}} = {ac + bd \over c^2 + d^2} + {bc - ad \over c^2 + d^2}i
+{z_1 \over z_2} = \left({z_1 \over z_2}\right) \left({z_2^\ast \over z_2^\ast}\right) = {ac + bd \over c^2 + d^2} + {bc - ad \over c^2 + d^2}i
 $$
 
 ## Modulus
 
-### Definition
+> *Definition.*{: .def}
+> The **modulus** $\vert z \vert$ of $z$ is defined by
+>
+> $$
+  |z| = \sqrt{a^2 + b^2}
+  $$
 
-The _modulus_ $\|z\|$ of $z$ is defined by
-
-$$
-|z| = \sqrt{a^2 + b^2}
-$$
-
-which is the length of line segment from $0$ to $z$.
-
-### Properties
+Geometrically, it is equal to length of line segment from $0$ to $z$.
 
 From the definition, we can see that
 
-$$
-\begin{align*}
-|\bar{z}| &= |z| \\
-z\overline{z} &= |z|^2 \\
-|z_1z_2| &= |z_1||z_2|
-\end{align*}
-$$
+> *Lemma.*{: .lem}
+> $\vert z^\ast \vert = \vert z \vert$.
 
-Geometrically, $|z_1 - z_2|$ **is the distance between the two points $z_1$ and $z_2$**.
-We have the following inequalities about modulus:
+> *Lemma.*{: .lem}
+> $zz^\ast = \vert z \vert^2$.
 
-$$
-\begin{align*}
-|\text{Re}(z)| &\le |z| \\
-|\text{Im}(z)| &\le |z| \\
-|z_1 + z_2 + ... + z_n| &\le |z_1| + |z_2| + ... + |z_n| \\
-|z_1 - z_3| &\le |z_1 - z_2| + |z_2 + z_3| \\
-||z_1| - |z_2|| &\le |z_1 \pm z_2|
-\end{align*}
-$$
+> *Lemma.*{: .lem}
+> $\vert z_1z_2 \vert = \vert z_1 \vert \vert z_2 \vert$.
+
+> *Lemma.*{: .lem}
+> Geometrically, $\vert z_1 - z_2 \vert$ is the _distance_ between the two points $z_1$ and $z_2$,
+> hence we have the following inequalities about modulus:
+>
+> $$
+  \begin{align*}
+  |\text{Re}(z)| &\le |z| \\
+  |\text{Im}(z)| &\le |z| \\
+  |z_1 + z_2 + ... + z_n| &\le |z_1| + |z_2| + ... + |z_n| \\
+  |z_1 - z_3| &\le |z_1 - z_2| + |z_2 + z_3| \\
+  ||z_1| - |z_2|| &\le |z_1 \pm z_2|
+  \end{align*}
+  $$
 
 ## Argument
 
-### Definition
+> *Definition.*{: .def}
+> The **argument** $\arg(z)$ of $z$ is defined by
+>
+> $$
+  \arg(z) = \tan^{-1}\left({b \over a}\right)
+  $$
 
-The _argument_ $\arg(z)$ of $z$ is defined by
+Geometrically, it is the angle $\theta$ between the positive real axis and the line segment from $0$ to $z$ measured in the anti-clockwise direction.
 
-$$
-\arg(z) = \tan^{-1}\left({b \over a}\right)
-$$
+$\arg(z)$ has a period of $2\pi$ and $\tan^{-1}$ is single valued on the interval $(-{\pi \over 2}, {\pi \over 2})$, hence
 
-which is the angle $\theta$ between the positive real axis and the line segment from $0$ to $z$ measured in the anti-clockwise direction.
+> *Lemma.*{: .def}
+> The principal value of $\theta \in (-\pi, \pi]$ is
+>
+> $$
+  \theta = 2\tan^{-1} \left( {b \over a + |z|} \right)
+  $$
 
-$\arg(z)$ has a period of $2\pi$ and $\tan^{-1}$ is single valued on the interval $(-{\pi \over 2}, {\pi \over 2})$,
-the following formula gives the principal value of $\theta \in (-\pi, \pi]$:
-
-$$
-\theta = 2\tan^{-1} \left( {b \over a + |z|} \right)
-$$
-
-### Properties
-
-We can later see that with the polar representation of complex number,
-
-$$
-\begin{align*}
-\arg(z_1z_2) = \arg(z_1) + \arg(z_2) \\
-\arg(z^{-1}) = \arg(\bar{z}) = - \arg(z)
-\end{align*}
-$$
+> *Lemma.*{: .def}
+> With the polar representation of complex number,
+>
+> $$
+  \begin{align*}
+  \arg(z_1z_2) &= \arg(z_1) + \arg(z_2) \\
+  \arg(z^{-1}) &= \arg(z^\ast) = - \arg(z)
+  \end{align*}
+  $$
 
 ## Polar Representation
 
