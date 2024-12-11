@@ -78,6 +78,10 @@
     strong {
       color: #f0f6fc;
     }
+
+    mjx-container:last-child {
+      margin-bottom: 0;
+    }
   }
 
   p > .MathJax {

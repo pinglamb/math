@@ -4,19 +4,21 @@ title: Exponential, Cosine and Sine Functions &#124; Vectors and Matrices
 ---
 
 # Exponential, Cosine and Sine Functions
+{: .page-title}
 
 The intuition on the meaning of $e^x$ with $x \in \mathbb{Z}_{>0}$ is multiplying $e$ by itself $x$ times and we also have $e^{-x} = 1/e^x$.
-However, when $$x$$ is irrational, or even complex, this definition is not clear and hence we need a better definition which caters for that.
+However, when $x$ is irrational, or even complex, this definition is not clear and hence we need a better definition which caters for that.
 Similarily, the trigonometric functions $\cos(x)$ and $\sin(x)$ can also be extended beyond $x$ being some sort of angles, e.g. $x \in \mathbb{C}$.
 The definition of them by power series provides a great extension to evaluate them on different kinds of numbers, with the basic properties preserved.
 
 ## Exponential Function
 
-The exponential function, $\exp(x)$, is defined by the power series
-
-$$
-\exp(x) = \sum_{n=0}^{\infty} {x^n \over n!} = 1 + x + {x^2 \over 2!} + ...
-$$
+> *Definition.*{: .def}
+> The exponential function, $\exp(x)$, is defined by the power series
+>
+> $$
+  \exp(x) = \sum_{n=0}^{\infty} {x^n \over n!} = 1 + x + {x^2 \over 2!} + ...
+  $$
 
 For $x, y \in \mathbb{R}$,
 
@@ -63,15 +65,18 @@ $$
 
 ## Trigonometric Functions
 
-Similarily, we have the definion of cosine and sine base on power series
+Similarily, we have
 
-$$
-\cos(x) = \sum_{n=0}^{\infty} (-1)^n {x^{2n} \over (2n)!}
-$$
-
-$$
-\sin(x) = \sum_{n=0}^{\infty} (-1)^n {x^{2n+1} \over (2n+1)!}
-$$
+> *Definition.*{: .def}
+> The cosine and sine functions are defined by the power series
+>
+> $$
+  \cos(x) = \sum_{n=0}^{\infty} (-1)^n {x^{2n} \over (2n)!}
+  $$
+>
+> $$
+  \sin(x) = \sum_{n=0}^{\infty} (-1)^n {x^{2n+1} \over (2n+1)!}
+  $$
 
 which allows us to extend the definition to having $x \in \mathbb{C}$.
 
@@ -81,21 +86,20 @@ When $x \in \mathbb{R}$, we don't really see a relationship between them as $\ex
 
 However, with the extension of defintion to complex number, we see an astonishing connection between them:
 
-$$
-\begin{align*}
-\exp(ix) &= \sum_{n=0}^{\infty} {(ix)^n \over n!} \\
-         &= 1 + ix - {x^2 \over 2!} - i{x^3 \over 3!} + ... \\
-         &= \left( 1 - {x^2 \over 2!} + {x^4 \over 4!} + ...\right) + i\left( x - { x^3 \over 3!} + {x^5 \over 5!} + ... \right) \\
-         &= \sum_{n=0}^{\infty} (-1)^n {x^{2n} \over (2n)!} + i \sum_{n=0}^{\infty} (-1)^n {x^{2n+1} \over (2n+1)!} \\
-         &= \cos(x) + i\sin(x)
-\end{align*}
-$$
-
-It is such an important result that we have to state again,
-
-$$
-\exp(ix) = e^{ix} = \cos x + i \sin x
-$$
+> *Theorem.*{: .thm}
+> $\exp(ix) = \cos(x) + i\sin(x)$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \exp(ix) &= \sum_{n=0}^{\infty} {(ix)^n \over n!} \\
+           &= 1 + ix - {x^2 \over 2!} - i{x^3 \over 3!} + ... \\
+           &= \left( 1 - {x^2 \over 2!} + {x^4 \over 4!} + ...\right) + i\left( x - { x^3 \over 3!} + {x^5 \over 5!} + ... \right) \\
+           &= \sum_{n=0}^{\infty} (-1)^n {x^{2n} \over (2n)!} + i \sum_{n=0}^{\infty} (-1)^n {x^{2n+1} \over (2n+1)!} \\
+           &= \cos(x) + i\sin(x)
+  \end{align*}
+  $$
 
 It produces what is probably the most striking formula in mathematics, namely
 
