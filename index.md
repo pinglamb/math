@@ -16,6 +16,7 @@ title: Home
 * [Dihedral Groups](groups/dihedral-groups.md)
 * [Matrix Groups](groups/matrix-groups.md)
 * [Mobius Groups](groups/mobius-groups.md)
+* [Group Actions](groups/group-actions.md)
 
 ## Vectors and Matrices
 {: .left}
