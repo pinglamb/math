@@ -67,6 +67,50 @@ which satisfies the 3 conditions.
 
 It means the elements of $g$ is distinguishable by their action of $X$ alone.
 
+## Orbits and Stabilizers
+
+> *Definition.*{: .def}
+> Given $G$ acts on $X$, the **orbit** of an element $x \in X$ is
+>
+> $$
+  \text{orb}(x) = G(x) = \set{y \in X : \exists g \in G, g(x) = y} \subseteq X
+  $$
+
+It is a subset of elements in $X$ that $x$ can get mapped to by $G$.
+
+> *Definition.*{: .def}
+> Given $G$ acts on $X$, the **stabilizer** of an element $x \in X$ is
+>
+> $$
+  \text{stab}(x) = G_x = \set{g \in G : g(x) = x} \subseteq G
+  $$
+
+It is the subset of elements in $G$ that fixes $x$.
+
+> *Lemma.*{: .lem}
+> $\text{stab}(x) \le G$.
+>
+> *Proof.*{: .prf}
+>
+> By definition, $e_G \in \text{stab}(x)$.
+> For $a, b \in \text{stab}(x)$, $b^{-1}$ fixes $x$ and so as $ab^{-1}$, so $ab^{-1} \in \text{stab}(x)$.
+
+> *Definition.*{: .def}
+> An action is **transitive** if for all $x \in X$, $\text{orb}(x) = X$.
+
+> *Lemma.*{: .lem}
+> The orbits of an action partition $X$, i.e. they cover all elements in $X$ and are either the same or disjoint.
+>
+> *Proof.*{: .prf}
+>
+> $\forall x \in X$, $x \in \text{orb}(x)$ as $e(x) = x$ ($x$ is always in its own orbit because of the identity of $G$).
+>
+> Suppose $z \in \text{orb}(x)$ and $z \in \text{orb}(y)$, we have $z = g_1(x) = g_2(y)$ for some $g_1, g_2 \in G$ and $y = g_2^{-1}g_1(x)$.
+> So for any $w \in \text{orb}(y)$, $w = g(y) = g(g_2^{-1}g_1(x)) \in \text{orb}(x)$, so $\text{orb}(y) \subseteq \text{orb}(x)$.
+> Similarily, $\text{orb}(x) \subseteq \text{orb}(y)$ so $\text{orb}(x) = \text{orb}(y)$.
+
+It means any element can reach any element in $X$.
+
 ## References
 
 * [Dexter Chua _Part IA - Groups_, 2014 - Chapter 5](https://dec41.user.srcf.net/notes/IA\_M/groups.pdf)
