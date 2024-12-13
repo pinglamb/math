@@ -59,6 +59,14 @@ Conversely, if $\varphi$ is a homomorphism, for example $\varphi = \set{(e, 1_X)
 we have $\theta = \set{((e, 1), 1), ((e, 2), 2), ((e, 3), 3), ((a, 1), 3), ((a, 2), 2), ((a, 3), 1)}$
 which satisfies the 3 conditions.
 
+> *Definition.*{: .def}
+> The _kernel_ of an action is the kernal of the homomorphism $\varphi: G \to \text{Sym}\,X$.
+
+> *Definition.*{: .def}
+> An action is **faithful** if $\varphi$ is injective, i.e. $\varphi(g) = \varphi(h) \implies g = h$ and kernel of action is $\set{e}$.
+
+It means the elements of $g$ is distinguishable by their action of $X$ alone.
+
 ## References
 
 * [Dexter Chua _Part IA - Groups_, 2014 - Chapter 5](https://dec41.user.srcf.net/notes/IA\_M/groups.pdf)
