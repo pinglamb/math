@@ -186,7 +186,7 @@ Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagr
 > For any $x, y \in G$, as $yx^{-1} \in G$, $(yx^{-1})x = y$ so the action is transitive.
 
 > *Theorem.*{: .thm}
-> **Cayley's Theorem**
+> **Cayley's Theorem**.
 > Every group is isomorphic to a subgroup of some symmetric group.
 >
 > *Proof.*{: .prf}
@@ -206,7 +206,7 @@ Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagr
 > 1\. $e(aH) = aH$ for all $aH$
 >
 > 2\. $g_1(g_2(aH)) = g_1(g_2aH) = (g_1g_2)aH$ by associativity of group
-
+>
 > So it is an action.
 > For any $aH$ and $bH$, as $ba^{-1} \in G$, $ba^{-1}aH = bH$ so the action is transitive.
 
