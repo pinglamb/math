@@ -166,6 +166,34 @@ Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagr
 >
 > For any $x \in X$, $\vert \text{orb}(x) \vert = \vert X \vert$, so $\vert \text{Stab}(x) \vert = \vert G \vert / \vert X \vert$.
 
+## Left Multiplication Actions
+
+### Left regular action
+
+> *Lemma.*{: .lem}
+> Every group $G$ acts on itself by left multiplication faithfully and transitively.
+>
+> *Proof.*{: .prf}
+>
+> 0\. $\forall g \in G, x \in G, gx \in G$ (closure)
+>
+> 1\. $\forall x \in G, ex = x$ (identity)
+>
+> 2\. $g(hx) = (gh)x$ (associativity)
+>
+> So it is an action.
+> By the uniqueness of identity, $gx = x$ iff $g = e$, so the action is faithful.
+> For any $x, y \in G$, as $yx^{-1} \in G$, so $(yx^{-1})x = y$ and the action is transitive.
+
+> *Theorem.*{: .thm}
+> **Cayley's Theorem**
+> Every group is isomorphic to a subgroup of some symmetric group.
+>
+> *Proof.*{: .prf}
+>
+> As $G$ actis on itself by left multiplication, there is a homomorphism $\varphi: G \to \text{Sym}\,G$ with $\ker \varphi = \set{e}$.
+> By the Isomorphism Theorem, $G \cong \text{Im}\,\varphi \le \text{Sym}\,G$.
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 14
