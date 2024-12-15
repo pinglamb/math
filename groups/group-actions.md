@@ -82,21 +82,23 @@ It is a subset of elements in $X$ that $x$ can get mapped to by $G$.
 > Given $G$ acts on $X$, the **stabilizer** of an element $x \in X$ is
 >
 > $$
-  \text{stab}(x) = G_x = \set{g \in G : g(x) = x} \subseteq G
+  \text{Stab}(x) = G_x = \set{g \in G : g(x) = x} \subseteq G
   $$
 
 It is the subset of elements in $G$ that fixes $x$.
 
 > *Lemma.*{: .lem}
-> $\text{stab}(x) \le G$.
+> $\text{Stab}(x) \le G$.
 >
 > *Proof.*{: .prf}
 >
-> By definition, $e_G \in \text{stab}(x)$.
-> For $a, b \in \text{stab}(x)$, $b^{-1}$ fixes $x$ and so as $ab^{-1}$, so $ab^{-1} \in \text{stab}(x)$.
+> By definition, $e_G \in \text{Stab}(x)$.
+> For $a, b \in \text{Stab}(x)$, $b^{-1}$ fixes $x$ and so as $ab^{-1}$, so $ab^{-1} \in \text{Stab}(x)$.
 
 > *Definition.*{: .def}
 > An action is **transitive** if for all $x \in X$, $\text{orb}(x) = X$.
+
+It means any element can reach any element in $X$.
 
 > *Lemma.*{: .lem}
 > The orbits of an action partition $X$, i.e. they cover all elements in $X$ and are either the same or disjoint.
@@ -109,9 +111,43 @@ It is the subset of elements in $G$ that fixes $x$.
 > So for any $w \in \text{orb}(y)$, $w = g(y) = g(g_2^{-1}g_1(x)) \in \text{orb}(x)$, so $\text{orb}(y) \subseteq \text{orb}(x)$.
 > Similarily, $\text{orb}(x) \subseteq \text{orb}(y)$ so $\text{orb}(x) = \text{orb}(y)$.
 
-It means any element can reach any element in $X$.
+> *Lemma.*{: .lem}
+> Suppose that $G$ acts on $X$ and that $g(x) = y$, where $x, y \in X$ and $g \in G$, then
+>
+> $$
+  g\text{Stab}(x) = \set{h \in G : h(x) = y} = \text{Stab}(x)g
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $H = \set{h \in G : h(x) = y}$.
+> For any $h \in g\text{Stab}(x)$, $gh(x) = g(x) = y$, so $h \in H$ and $g\text{Stab}(x) \subseteq H$.
+> For any $h \in H$, $g^{-1}h(x) = x$, so $h = g(g^{-1}h) \in g\text{Stab}(x)$ and $H \subseteq g\text{Stab}(x)$.
+
+> *Theorem.*{: .thm}
+> **Orbit-Stabilizer Theorem**. Let $G$ be a finite group acting on a finite set $X$. Then, for any $x \in X$,
+>
+> $$
+  \vert \text{orb}(x) \vert \vert \text{Stab}(x) \vert = \vert G \vert
+  $$
+>
+> *Proof.*{: .prf}
+>
+> For any $x \in X$, let the orbit of $x$ be $\set{g_1(x), g_2(x), ..., g_k(x)}$, so $\vert \text{orb}(x) \vert = k$.
+> According to the above, $g_i\text{Stab}(x)$ is the subset of $G$ that maps $x$ to $g_i(x)$, so
+>
+> $$
+  G = g_1\text{Stab}(x) \cup g_2\text{Stab}(x) \cup \dots \cup g_k\text{Stab}(x)
+  $$
+>
+> where they are pairwise disjoint. Thus,
+>
+> $$
+  \vert G \vert = k \vert \text{Stab}(x) \vert = \vert \text{orb}(x) \vert \vert \text{Stab}(x) \vert
+  $$
 
 ## References
 
+* Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 14
 * [Dexter Chua _Part IA - Groups_, 2014 - Chapter 5](https://dec41.user.srcf.net/notes/IA\_M/groups.pdf)
 * [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 6](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
