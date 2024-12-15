@@ -103,7 +103,7 @@ Recall the properties of transpose $A^\intercal$ of $A$,
 > so it is surjective.
 
 > *Definition.*{: .def}
-> The **special orthogonal group** is the kernel of $\det$, i.e.
+> The **special orthogonal group** is the kernel of $\det: \text{O}_n \to \set{\pm 1}$, i.e.
 >
 > $$
   \text{SO}_n = \set{A \in \text{O}_n : \det(A) = 1}
@@ -127,6 +127,60 @@ The geometric property of orthogonal matrices is the following:
 > $$
   \vert Ax \vert^2 = (Ax)^\intercal (Ax) = x^\intercal x = \vert x \vert
   $$
+
+## Unitary Group
+
+Unitary group is the variation of orthogonal group over complex numbers, base on the Hermitian conjugate $(A^\dagger)\_{ij} = (A^\ast)\_{ji}$.
+We still have
+
++ $(AB)^\dagger = B^\dagger A^\dagger$
+
++ $(A^{-1})^\dagger = (A^\dagger)^{-1}$
+
++ $A^\dagger A = I \iff A A^\dagger = I \iff A^\dagger = A^{-1}$
+
++ $\det A^\dagger = (\det A)^\ast$
+
+> *Definition.*{: .def}
+> The **unitary group** is defined by
+>
+> $$
+  \text{U}_n = \set{A \in \text{GL}_n(\mathbb{C}) : A^\dagger A = I}
+  $$
+
+With similar proof as orthogonal group, $\text{U}_n$ is a group.
+
+Let $S^1 = \set{z \in \mathbb{C} : \vert z \vert = 1}$, which is the unit circle in complex plane and forms a group under complex multiplication.
+We have
+
+> *Lemma.*{: .lem}
+> $\det: \text{U}_n \to S^1$ is a surjective homomorphism.
+>
+> *Proof.*{: .prf}
+>
+> For any $A \in \text{O}_n$, $\det A \det A^\dagger = \vert \det A \vert^2 = 1$, so $\det A \in S^1 $ and it is a homomorphism.
+>
+> Similarily, given $z \in S^1$,
+>
+> $$
+  \det \begin{pmatrix}
+  z \\
+  & 1 & 0 \\
+  & 0 & \ddots \\
+  &  &  & 1 \\
+  \end{pmatrix} = z
+  $$
+>
+> so it is surjective.
+
+> *Definition.*{: .def}
+> The **special unitary group** is the kernel of $\det: \text{U}_n \to S^1$, i.e.
+>
+> $$
+  \text{SU}_n = \set{A \in \text{U}_n : \det(A) = 1}
+  $$
+
+Equivalently, unitary matrices preserve the complex dot product $x^\dagger y = x_1^\ast y_1 + x_2^\ast y_2 + ... + x_n^\ast y_n$.
 
 ## References
 
