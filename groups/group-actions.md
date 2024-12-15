@@ -183,7 +183,7 @@ Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagr
 >
 > So it is an action.
 > By the uniqueness of identity, $gx = x$ iff $g = e$, so the action is faithful.
-> For any $x, y \in G$, as $yx^{-1} \in G$, so $(yx^{-1})x = y$ and the action is transitive.
+> For any $x, y \in G$, as $yx^{-1} \in G$, $(yx^{-1})x = y$ so the action is transitive.
 
 > *Theorem.*{: .thm}
 > **Cayley's Theorem**
@@ -193,6 +193,22 @@ Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagr
 >
 > As $G$ actis on itself by left multiplication, there is a homomorphism $\varphi: G \to \text{Sym}\,G$ with $\ker \varphi = \set{e}$.
 > By the Isomorphism Theorem, $G \cong \text{Im}\,\varphi \le \text{Sym}\,G$.
+
+### Left coset action
+
+> *Lemma.*{: .lem}
+> Let $H \le G$. Then $G$ acts on the left cosets of $H$ by left multiplication transitively.
+>
+> *Proof.*{: .prf}
+>
+> 0\. $g(aH) = gaH$ is a left coset of $H$
+>
+> 1\. $e(aH) = aH$ for all $aH$
+>
+> 2\. $g_1(g_2(aH)) = g_1(g_2aH) = (g_1g_2)aH$ by associativity of group
+
+> So it is an action.
+> For any $aH$ and $bH$, as $ba^{-1} \in G$, $ba^{-1}aH = bH$ so the action is transitive.
 
 ## References
 
