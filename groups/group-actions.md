@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Groups &#124; Groups
+title: Group Actions &#124; Groups
 ---
 
 # Group Actions
