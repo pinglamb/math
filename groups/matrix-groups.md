@@ -20,8 +20,6 @@ Hence, we have the following definition of a group containing these matrices:
   \text{GL}_n(F) = \set{A \in M_{n \times n}(F) : \det(A) \not = 0}
   $$
 
-## Special Linear Group
-
 > *Lemma.*{: .lem}
 > $\det: \text{GL}_n(F) \to F^\ast$ is a surjective homomorphism.
 >
@@ -33,9 +31,9 @@ Hence, we have the following definition of a group containing these matrices:
 > $$
   \det \begin{pmatrix}
   x \\
-   & 1 & 0 \\
-   & 0 & \ddots \\
-   &  &  & 1 \\
+  & 1 & 0 \\
+  & 0 & \ddots \\
+  &  &  & 1 \\
   \end{pmatrix} = x
   $$
 >
@@ -73,3 +71,63 @@ Recall the properties of transpose $A^\intercal$ of $A$,
 > $$
   \text{O}_n = \set{A \in \text{GL}_n(\mathbb{R}) : A^\intercal A = I}
   $$
+
+> *Lemma.*{: .lem}
+> Orthogonal group is a group.
+>
+> *Proof.*{: .prf}
+>
+> For any $A, B \in \text{O}_n$, $(AB)^\intercal(AB) = B^\intercal A^\intercal A B = I$, so $AB \in \text{O}_n$ and it is closed under matrix multiplication.
+> $I$ is the identity element.
+> For $A \in \text{O}_n$, $(A^\intercal)^\intercal A^\intercal = A A^\intercal = I$, so $A^\intercal \in \text{O}_n$ and $A^{-1} = A^\intercal$ is the inverse.
+> Matrix multiplication is associative.
+
+> *Lemma.*{: .lem}
+> $\det: \text{O}_n \to \set{\pm 1}$ is a surjective homomorphism.
+>
+> *Proof.*{: .prf}
+>
+> For any $A \in \text{O}_n$, $\det A \det A^\intercal = (\det A)^2 = \det I = 1$, so $\det A = \pm 1$ and it is a homomorphism.
+>
+> Similarily,
+>
+> $$
+  \det \begin{pmatrix}
+  -1 \\
+  & 1 & 0 \\
+  & 0 & \ddots \\
+  &  &  & 1 \\
+  \end{pmatrix} = -1
+  $$
+>
+> so it is surjective.
+
+> *Definition.*{: .def}
+> The **special orthogonal group** is the kernel of $\det$, i.e.
+>
+> $$
+  \text{SO}_n = \set{A \in \text{O}_n : \det(A) = 1}
+  $$
+
+The geometric property of orthogonal matrices is the following:
+
+> *Lemma.*{: .lem}
+> Orthogonal matrices are isometries, i.e.
+>
+> 1. $A$ preserves dot product, $(Ax)^\intercal (Ay) = x^\intercal y$.
+>
+> 2. $A$ preserves length, $\vert Ax \vert = \vert x \vert$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  (Ax)^\intercal (Ay) = x^\intercal A^\intercal A y = x^\intercal I y = x^\intercal y
+  $$
+>
+> $$
+  \vert Ax \vert^2 = (Ax)^\intercal (Ax) = x^\intercal x = \vert x \vert
+  $$
+
+## References
+
+* [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 4](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
