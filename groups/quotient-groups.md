@@ -65,6 +65,9 @@ The theory about quotient groups is one of the most important idea about groups.
 > For a subgroup $K \le G$, for all $a \in G$ and $k \in K$, $aka^{-1} = aa^{-1}k = k \in K$.
 > Also, as $K$ is abelian, obviously $aK = Ka$ for all $a \in G$.
 
+> *Definition.*{: .def}
+> A group $G$ is **simple** if it has no non-trivial proper normal subgroups (i.e. only $\set{e}$ and G).
+
 ## Quotients
 
 The left cosets of normal subgroups form a group in a natural way.
@@ -163,7 +166,6 @@ if $f: G \to H$ is injective, then $\ker f = \set{e}$ ([injectivity via kernel](
 so $G/K \cong G$ and $G$ is isomorphic to a subgroup of $H$, denoted by $G \lesssim H$.
 If $f: G \to H$ is surjective, then $\text{im} f = H$,
 so $G/K \cong H$.
-
 
 ## References
 

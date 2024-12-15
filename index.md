@@ -12,11 +12,12 @@ title: Home
 * [Permutations](groups/permutations.md)
 * [Symmetric Groups](groups/symmetric-groups.md)
 * [Quotient Groups](groups/quotient-groups.md)
+* [Group Actions](groups/group-actions.md)
+* [Conjugacy](groups/conjugacy.md)
 * [Cyclic Groups](groups/cyclic-groups.md)
 * [Dihedral Groups](groups/dihedral-groups.md)
 * [Matrix Groups](groups/matrix-groups.md)
 * [Mobius Groups](groups/mobius-groups.md)
-* [Group Actions](groups/group-actions.md)
 
 ## Vectors and Matrices
 {: .left}
