@@ -159,6 +159,13 @@ The orbit of $x$ is the set of $y$ that $x$ can reach, it can map bijectively to
 By construction, the set is obviously pairwise disjoint (equivalently cosets are pairwise disjoint), has the same size as $\text{orb}(x)$ and any $g \in G$ is in one of its element.
 Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagrange's Theorem.
 
+> *Corollary.*{: .cor}
+> If the action is transitive, then all the stabilizers have the same size.
+>
+> *Proof.*{: .prf}
+>
+> For any $x \in X$, $\vert \text{orb}(x) \vert = \vert X \vert$, so $\vert \text{Stab}(x) \vert = \vert G \vert / \vert X \vert$.
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 14
