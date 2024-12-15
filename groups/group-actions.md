@@ -95,6 +95,8 @@ It is the subset of elements in $G$ that fixes $x$.
 > By definition, $e_G \in \text{Stab}(x)$.
 > For $a, b \in \text{Stab}(x)$, $b^{-1}$ fixes $x$ and so as $ab^{-1}$, so $ab^{-1} \in \text{Stab}(x)$.
 
+In fact, conversely, every subgroup is a stabilizer that fixes some elements in $X$.
+
 > *Definition.*{: .def}
 > An action is **transitive** if for all $x \in X$, $\text{orb}(x) = X$.
 
@@ -140,11 +142,22 @@ It means any element can reach any element in $X$.
   G = g_1\text{Stab}(x) \cup g_2\text{Stab}(x) \cup \dots \cup g_k\text{Stab}(x)
   $$
 >
-> where they are pairwise disjoint. Thus,
+> in which they are pairwise disjoint. Thus,
 >
 > $$
   \vert G \vert = k \vert \text{Stab}(x) \vert = \vert \text{orb}(x) \vert \vert \text{Stab}(x) \vert
   $$
+
+The orbit and stabilizers provide a geometric view of [subgroups, cosets and Lagrange's Theorem](subgroups-cosets-lagrange-theorem.md).
+Let $H = \set{h \in G : h(x) = y}$, $H$ is the subset of elements in $G$ that maps $x$ to $y$.
+From the above, we have $H = g\text{Stab}(x)$, which is a coset of the subgroup $\text{Stab}(x)$,
+so a coset is actually the subset of elements in $G$ that maps a certain $x$ to the same $y$.
+Conversely, for any $h_1, h_2 \in H$, we have $h_1^{-1}(h_2(x)) = x$,
+which means if we apply $h_2$ then $h_1^{-1}$ to $x$ we will get back to $x$ as both of them maps $x$ to $y$,
+so we can say the subgroup $\text{Stab}(x)$ is formed by elements in $H$ and every subgroup is a stablizer of some elements in $X$ formed in this way.
+The orbit of $x$ is the set of $y$ that $x$ can reach, it can map bijectively to one of the element in the set $\set{g_1\text{Stab}(x), g_2\text{Stab}(x), ...}$.
+By construction, the set is obviously pairwise disjoint (equivalently cosets are pairwise disjoint), has the same size as $\text{orb}(x)$ and any $g \in G$ is in one of its element.
+Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagrange's Theorem.
 
 ## References
 
