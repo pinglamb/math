@@ -13,7 +13,7 @@ title: Conjugacy &#124; Groups
 > The **conjugacy class** of $g$, denoted by $[g]$, is the set of all conjugates of $g$, i.e.
 >
 > $$
-  [g] = \set{hgh^{-1} : h \in G}
+  [g] = \set{hgh^{-1} \in G : h \in G}
   $$
 
 As $heh^{-1} = e$ for all $h \in G$, $[e] = \set{e}$.
@@ -35,6 +35,69 @@ As $ege^{-1} = g$, $g \in [g]$.
 >
 > so $a^n = e$ if and only if $b^n = e$.
 
+## Normal Subgroups
+
+Conjugacy and normal subgroups are very closely related.
+
+Consider the conjugacy class $[g]$, in general $[g] = \set{g}$ iff $g$ commutes with every element of $G$.
+The conjugates of $g$ are giving us important information about the element $g$, for example, the more elements $g$ commutes with, the smaller $[g]$ is.
+This idea can be extended to subgroups, which leads to an alternative definition of normal subgroups.
+
+> *Definition.*{: .def}
+> A subgroup $K$ of $G$ is a **normal**, or **self-conjugate**,
+> if every conjugate subgroup of $H$ is equal to $H$, i.e. $gHg^{-1} = H$ for every $g \in G$.
+
+## Conjugacy classes as equivalence classes
+
+## Conjugation Action
+
+> *Lemma.*{: .lem}
+> Any group $G$ acts on itself by conjugation, i.e. $\varphi: G \times G \to G$ defined by $\varphi(g)(x) = g(x) = gxg^{-1}$.
+>
+> *Proof.*{: .prf}
+>
+> 0\. $g(x) = gxg^{-1} \in G$ for all $g, x \in G$.
+>
+> 1\. $e(x) = exe^{-1} = x$ for all $x \in G$.
+>
+> 2\. $g(h(x)) = g(hxh^{-1}) = ghxh^{-1}g^{-1} = (gh)x(gh)^{-1} = gh(x)$
+>
+> So it is indeed an action.
+
+The kernel, orbits and stabilizers of it has special names.
+
+> *Definition.*{: .def}
+> The kernel of this action is the **centre** of $G$,
+>
+> $$
+  Z(G) = \set{g \in G : gag^{-1} = a, \forall a \in G} = \set{g \in G : ga = ag, \forall a \in G}
+  $$
+>
+> which are the elements that commute with everything.
+
+> *Definition.*{: .def}
+> The orbits of this action are the **conjugacy classes** like that defined above, i.e.
+>
+> $$
+  [g] = \set{g' \in G : \exists h \in G, hgh^{-1} = g'}
+  $$
+
+> *Definition.*{: .def}
+> The stabilizers of this action are called **centralisers**,
+>
+> $$
+  C_G(g) = \set{h \in G : hgh^{-1} = g} = \set{h \in G : hg = gh}
+  $$
+>
+> which are the elements that commute with $g$.
+
+> *Lemma.*{: .lem}
+> $Z(G) = \bigcap_{g \in G} C_G(g)$.
+>
+> *Proof.*{: .prf}
+>
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 12.10
+* [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 7](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
