@@ -65,6 +65,21 @@ This idea can be extended to subgroups, which leads to an alternative definition
 > A subgroup $K$ of $G$ is a **normal**, or **self-conjugate**,
 > if every conjugate subgroup of $H$ is equal to $H$, i.e. $gHg^{-1} = H$ for every $g \in G$.
 
+It also provides a way to check if a subgroup is normal.
+
+> *Theorem.*{: .thm}
+> A subgroup $K$ of $G$ is a normal subgroup iff it is a union of conjugacy classes.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Suppose $K \trianglelefteq G$, for every $g \in G$, $gKg^{-1} = K$ and $gkg^{-1} \in K$.
+> Thus, $[k] = \set{gkg^{-1} : g \in G} \subset K$ and $K$ is a union of conjugacy classes.
+>
+> ($\Leftarrow$) Suppose $K$ is a union of conjugacy classes, i.e. for any $k in K$, $[k] \subset K$.
+> For all $g \in G$, $gkg^{-1} \in [k]$ so if $k \in K$ then $gkg^{-1} \in K$.
+> Thus, for all $g in G$, $gKg^{-1} \subset K$. By replacing $g$ by $g^{-1}$, we have $g^{-1}Kg \subset K \implies gKg^{-1} \subset K$.
+> Hence, $gKg^{-1} = K$ and $K$ is a normal subgroup of $G$.
+
 ## Conjugation Action
 
 > *Lemma.*{: .lem}
