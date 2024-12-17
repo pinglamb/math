@@ -4,6 +4,7 @@ title: Conjugacy &#124; Groups
 ---
 
 # Conjugacy
+{: .page-title}
 
 Conjugacy is to study elements of a group that cannot be distinguished by using only group structure,
 which means the elements that are conjugate to each other is essentially the "same" but are just viewed from a different "perspectives".
@@ -63,10 +64,25 @@ It means such element "looks the same from every perspective".
 >
 > So $\sim$ is a equivalence relation and hence the conjugacy classes partition $G$.
 
+Conjugacy classes provide a way to check if a subgroup is normal.
+
+> *Theorem.*{: .thm}
+> A subgroup $K$ of $G$ is a normal subgroup iff it is a union of conjugacy classes.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Suppose $K \trianglelefteq G$, for every $g \in G$, $gKg^{-1} = K$ and $gkg^{-1} \in K$.
+> Thus, $[k] = \set{gkg^{-1} : g \in G} \subset K$ and $K$ is a union of conjugacy classes.
+>
+> ($\Leftarrow$) Suppose $K$ is a union of conjugacy classes, i.e. for any $k in K$, $[k] \subset K$.
+> For all $g \in G$, $gkg^{-1} \in [k]$ so if $k \in K$ then $gkg^{-1} \in K$.
+> Thus, for all $g in G$, $gKg^{-1} \subset K$. By replacing $g$ by $g^{-1}$, we have $g^{-1}Kg \subset K \implies gKg^{-1} \subset K$.
+> Hence, $gKg^{-1} = K$ and $K$ is a normal subgroup of $G$.
+
 ## Conjugation Action
 
 > *Lemma.*{: .lem}
-> Any group $G$ acts on itself by conjugation, i.e. $\varphi: G \times G \to G$ defined by $\varphi(g)(x) = g(x) = gxg^{-1}$.
+> Any group $G$ acts on itself by conjugation, defined by $g(x) = gxg^{-1}$.
 >
 > *Proof.*{: .prf}
 >
@@ -78,7 +94,7 @@ It means such element "looks the same from every perspective".
 >
 > So it is indeed an action.
 
-This action allows us to study the "similarity" of elements in the group by looking at the kernel, orbits and stabilizers, which all have special names.
+This action allows us to study the "similarity" of elements in the group by looking at the kernel, orbits and stabilisers, which all have special names.
 
 > *Definition.*{: .def}
 > The kernel of this action is the **centre** of $G$,
@@ -101,7 +117,7 @@ i.e. $g \in Z(G) \iff [g] = \set{g}$.
   $$
 
 > *Definition.*{: .def}
-> The stabilizers of this action are called **centralisers**,
+> The stabilisers of this action are called **centralisers**,
 >
 > $$
   C_G(g) = \set{h \in G : hgh^{-1} = g} = \set{h \in G : hg = gh}
@@ -156,15 +172,13 @@ Instead of studying individual elements, we study the "similarity" of subgroups 
 > 2\. $g_1(g_2(H)) = g_1g_2Hg_2^{-1}g_1^{-1} = (g_1g_2)H(g_1g_2)^{-1}$
 >
 > So this is indeed an action.
-> *Lemma.*{: .lem}
-> Let $X$ be the set of subgroups of $G$. Then $G$ acts by conjugation on $X$, defined by $g(H) = gHg^{-1}$.
 
 ### Normal Subgroups
 
 The kernel of this action is exactly the normal subgroups.
 It gives a very nice intuition about normal subgroups: they are subgroups that "looks the same under every perspectives".
 Their conjugacy class contains only the subgroup itself, i.e. $[K] = \set{K}$ or $gHg^{-1} = H$ for every $g \in G$.
-They commute with every $g \in G$, i.e. $gH = Hg$ so every left cosets are the right cosets.
+They commute with every $g \in G$, i.e. $gH = Hg$ so left cosets are same as right cosets.
 
 We can therefore have an alternative definition of normal subgroups:
 
@@ -172,20 +186,25 @@ We can therefore have an alternative definition of normal subgroups:
 > A subgroup $K$ of $G$ is a **normal**, or **self-conjugate**,
 > if every conjugate subgroup of $H$ is equal to $H$, i.e. $gHg^{-1} = H$ for every $g \in G$.
 
-It also provides a way to check if a subgroup is normal.
+In conclusion, we have
 
 > *Theorem.*{: .thm}
-> A subgroup $K$ of $G$ is a normal subgroup iff it is a union of conjugacy classes.
+> If $K \trianglelefteq G$, the following are equivalent:
 >
-> *Proof.*{: .prf}
+> 1. $gHg^{-1} = H$ for all $g \in G$.
 >
-> ($\Rightarrow$) Suppose $K \trianglelefteq G$, for every $g \in G$, $gKg^{-1} = K$ and $gkg^{-1} \in K$.
-> Thus, $[k] = \set{gkg^{-1} : g \in G} \subset K$ and $K$ is a union of conjugacy classes.
+> 2. $gH = Hg$ for all $g \in G$.
 >
-> ($\Leftarrow$) Suppose $K$ is a union of conjugacy classes, i.e. for any $k in K$, $[k] \subset K$.
-> For all $g \in G$, $gkg^{-1} \in [k]$ so if $k \in K$ then $gkg^{-1} \in K$.
-> Thus, for all $g in G$, $gKg^{-1} \subset K$. By replacing $g$ by $g^{-1}$, we have $g^{-1}Kg \subset K \implies gKg^{-1} \subset K$.
-> Hence, $gKg^{-1} = K$ and $K$ is a normal subgroup of $G$.
+> 3. Left cosets are same as right cosets.
+>
+> 4. $K$ is kernel of some homomorphism.
+>
+> 5. $K$ is union of conjugacy classes of $G$.
+
+### Isomorphic Subgroups
+
+$\text{orb}(H)$ is the set of conjugate subgroups,
+so they are the subgroups that are isomorphic to $H$ as proved above.
 
 ### Normalisers
 
@@ -195,6 +214,16 @@ It also provides a way to check if a subgroup is normal.
 > $$
   N_G(H) = \set{g \in G : gHg^{-1} = H}
   $$
+>
+> which is the largest subgroup of $G$ such that $H \trianglelefteq N_G(H)$.
+
+## Examples
+
+### Conjugate stabilisers
+
+### Conjugacy classes in $S_n$
+
+### Conjugacy in $A_n$
 
 ## References
 
