@@ -101,6 +101,17 @@ To complete the definiton of $D_{2n}$, it is necessary to show that any two grou
 >
 > Combining the above, $G$ matches the definition of dihedral group.
 
+## Properties
+
+> *Lemma.*{: .lem}
+> The reflections $sr^k \in D_{2n}$ has order $2$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  (sr^k)(sr^k) = (sr^k)(r^{n-k}s) = e
+  $$
+
 ## Relationship with cyclic groups
 
 As $r$ has order $n$ and $s$ has order $2$, it looks like $D_{2n} \cong C_n \times C_2$.

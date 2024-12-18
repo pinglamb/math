@@ -85,10 +85,34 @@ We can see them in practice in the study of groups of small orders.
 >
 > *Proof.*{: .prf}
 >
-> For $H \le G$, by Lagrange's Theorem, $\|H\|$ divides $\|G\| = p$, hence $\|H\| = 1$ or $p$.
-> When $\|H\| = 1$, $H = \set{e}$. When $\|H\| = p$, $H = G$. For any $a \in G$, $\text{ord}(a) = p$ and generates $G$.
+> For any $a \in G$, by Lagrange, $\text{ord}(a) = p$ and generates $G$, so $G$ is cyclic.
+>
+> For $H \le G$, by Lagrange, $\|H\|$ divides $\|G\| = p$, hence $\|H\| = 1$ or $p$.
+> When $\|H\| = 1$, $H = \set{e}$. When $\|H\| = p$, $H = G$. .
 
 ## Groups of order 2p
+
+> *Theorem.*{: .thm}
+> Every group of order $2p$, where $p$ is prime, is either or dihedral.
+>
+> *Proof.*{: .prf}
+>
+> When $p = 2$, the group is of order $4$ and as shown above it is either cyclic or dihedral.
+>
+> Assume $p > 2$, by Lagrange, the order of every element is either $1, 2, p$ or $2p$.
+> If there is an element of order $2p$, then $G \cong C_{2p}$.
+>
+> If there is no element of order $2p$, elements other than identity can only have orders $2$ or $p$.
+> There must be an element $y$ of order $p$, otherwise every element is of order $2$ and the order of group has to be powers of $2$.
+> $\langle y \rangle$ is a normal subgroup as it has index $2$.
+> Also, there must be an element $x$ of order $2$ as the order of $G$ is even.
+> Therefore, we have $xyx^{-1} \in \langle y \rangle$ so $xyx^{-1} = y^k$ for $0 \le k \le p - 1$
+>
+> + $xyx^{-1} = e$, $y = e$ which is not possible, or
+>
+> + $xyx^{-1} = y$, $xy = yx$ so $(xy)^m$ = $x^my^m$ and $xy$ is of order $6$ (can't be $2$ or $3$) and $G \cong C_6$, or
+>
+> + $xyx^{-1} = y^2 = y^{-1}$, so $xy = y^{-1}x$, together with $x^2 = y^3 = e$, $G \cong D_6$.
 
 ## References
 
