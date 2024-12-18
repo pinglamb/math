@@ -57,9 +57,36 @@ We can see them in practice in the study of groups of small orders.
 
 ## Groups of order 6
 
-## Groups of order 10
+> *Theorem.*{: .thm}
+> Every group of order $6$ is either or dihedral.
+>
+> *Proof.*{: .prf}
+>
+> By Lagrange, the order of every element is either $1, 2, 3$ or $6$.
+> If there is an element of order $6$, then $G \cong C_6$.
+>
+> If there is no element of order $6$, elements other than identity can only have orders $2$ or $3$.
+> There must be an element $y$ of order $3$, otherwise every element is of order $2$ and the order of group has to be powers of $2$.
+> $\langle y \rangle$ is a normal subgroup as it has index $2$.
+> Also, there must be an element $x$ of order $2$ as the order of $G$ is even.
+> Therefore, we have $xyx^{-1} \in \langle y \rangle$ and
+>
+> + $xyx^{-1} = e$, $y = e$ which is not possible, or
+>
+> + $xyx^{-1} = y$, $xy = yx$ so $(xy)^m$ = $x^my^m$ and $xy$ is of order $6$ (can't be $2$ or $3$) and $G \cong C_6$, or
+>
+> + $xyx^{-1} = y^2 = y^{-1}$, so $xy = y^{-1}x$, together with $x^2 = y^3 = e$, $G \cong D_6$.
 
 ## Groups of order p
+
+> *Theorem.*{: .thm}
+> Suppose $G$ is a finite group of order $p$, where $p$ is prime.
+> Then $G$ is cyclic and the only subgroups are $\set{e}$ and $G$.
+>
+> *Proof.*{: .prf}
+>
+> For $H \le G$, by Lagrange's Theorem, $\|H\|$ divides $\|G\| = p$, hence $\|H\| = 1$ or $p$.
+> When $\|H\| = 1$, $H = \set{e}$. When $\|H\| = p$, $H = G$. For any $a \in G$, $\text{ord}(a) = p$ and generates $G$.
 
 ## Groups of order 2p
 
