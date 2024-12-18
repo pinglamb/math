@@ -16,6 +16,7 @@ title: Home
 * [Conjugacy](groups/conjugacy.md)
 * [Cyclic Groups](groups/cyclic-groups.md)
 * [Dihedral Groups](groups/dihedral-groups.md)
+* [Groups of Small Orders](groups/groups-of-small-orders.md)
 * [Matrix Groups](groups/matrix-groups.md)
 * [Mobius Groups](groups/mobius-groups.md)
 
