@@ -39,6 +39,30 @@ We can see them in practice in the study of groups of small orders.
 > By pairing every element in $G$ with its inverse, we will have at least 2 sets having only one element, one of which is $\set{e}$.
 > The element in another set will have order $2$.
 
+## Groups of order 3
+
+> *Theorem.*{: .thm}
+> Every group of order $3$ is cyclic.
+>
+> *Proof.*{: .prf}
+>
+> Every group of prime order is cyclic. But we will analyze it from first principles.
+>
+> Let $G = \set{e, x, y}$ be a group of order $3$.
+> We have $yx \not = x$ and $yx \not = y$ so $yx = e$.
+> By Langrange's Corollary, $x^3 = e$, so $y = yx^3 = x^2$.
+> Hence, $G = \set{e, x, x^2}$ is a cyclic group.
+
+## Groups of order 4
+
+## Groups of order 6
+
+## Groups of order 10
+
+## Groups of order p
+
+## Groups of order 2p
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 12.1, 12.9
