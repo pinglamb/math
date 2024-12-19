@@ -9,6 +9,7 @@ title: Home
 * [Groups](groups/groups.md)
 * [Subgroups, Cosets and Lagrange's Theorem](groups/subgroups-cosets-lagrange-theorem.md)
 * [Homomorphisms](groups/homomorphisms.md)
+* [Product Groups](groups/product-groups.md)
 * [Permutations](groups/permutations.md)
 * [Symmetric Groups](groups/symmetric-groups.md)
 * [Quotient Groups](groups/quotient-groups.md)
@@ -16,7 +17,9 @@ title: Home
 * [Conjugacy](groups/conjugacy.md)
 * [Cyclic Groups](groups/cyclic-groups.md)
 * [Dihedral Groups](groups/dihedral-groups.md)
+* [Quaternions](groups/quaternions.md)
 * [Groups of Small Orders](groups/groups-of-small-orders.md)
+* [Polyherdral Groups](groups/polyhedral-groups.md)
 * [Matrix Groups](groups/matrix-groups.md)
 * [Mobius Groups](groups/mobius-groups.md)
 

@@ -6,7 +6,7 @@ title: Group Actions &#124; Groups
 # Group Actions
 {: .page-title}
 
-[Groups](groups.md) are symmetries of something, so far we abstract away the "things" part and focus on studying the properties of different kinds of groups.
+[Groups are symmetries of something](groups.md), so far we abstract away the "things" part and focus on studying the properties of different kinds of groups.
 _Group actions_ recapture the idea by making each group element correspond to some function to the "things".
 
 > *Definition.*{: .def}
