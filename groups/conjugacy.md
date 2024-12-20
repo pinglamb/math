@@ -147,15 +147,6 @@ i.e. $g \in Z(G) \iff [g] = \set{g}$.
 
 ## Conjugation on Subgroups
 
-> *Definition.*{: .def}
-> Let $H_1, H_2 \le G$. $H_1$ and $H_2$ are **conjugate subgroups** of $G$ if for some $h \in G$, $H_1 = hH_2h^{-1}$.
-
-> *Lemma.*{: .lem}
-> Conjugate subgroups are isomorphic.
->
-> *Proof.*{: .prf}
->
-
 Conjugation can also acts on the set of subgroups of $G$.
 Instead of studying individual elements, we study the "similarity" of subgroups from different "perspectives" of $G$.
 
@@ -202,7 +193,29 @@ In conclusion, we have
 >
 > 5. $K$ is union of conjugacy classes of $G$.
 
-### Isomorphic Subgroups
+### Conjugate Subgroups
+
+> *Definition.*{: .def}
+> Let $H_1, H_2 \le G$. $H_1$ and $H_2$ are **conjugate subgroups** of $G$ if for some $g \in G$, $H_1 = gH_2g^{-1}$.
+
+> *Lemma.*{: .lem}
+> Conjugate subgroups are isomorphic.
+>
+> *Proof.*{: .prf}
+>
+> Let $H_1, H_2$ be two conjugate subgroups of $G$, i.e. for some $g \in G$, $H_2 = gH_1g^{-1}$,
+> which means for all $h_2 in H_2$, there exists $h_1 \in H_1$ such that $h_2 = gh_1g^{-1}$.
+>
+> Let $\phi: H_1 \to H_2$ defined by $\phi(h_1) = gh_1g^{-1}$.
+> It is a homomorphism because
+>
+> $$
+  \phi(h_1h_1') = gh_1h_1'g^{-1} = gh_1g^{-1}gh_1'g^{-1} = \phi(h_1)\phi(h_1')
+  $$
+>
+> If $gh_1g^{-1} = gh_1'g^{-1}$, then $h_1 = h_1'$ so it is injective.
+> Also, it is surjective by definition.
+> Hence, $\phi$ is an isomorphism and $H_1 \cong H_2$.
 
 $\text{orb}(H)$ is the set of conjugate subgroups,
 so they are the subgroups that are isomorphic to $H$ as proved above.
