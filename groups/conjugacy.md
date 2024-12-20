@@ -94,7 +94,7 @@ Conjugacy classes provide a way to check if a subgroup is normal.
 >
 > So it is indeed an action.
 
-This action allows us to study the "similarity" of elements in the group by looking at the kernel, orbits and stabilisers, which all have special names.
+This action allows us to study the "similarity" of elements in the group by looking at the kernel, orbits and stabilizers, which all have special names.
 
 > *Definition.*{: .def}
 > The kernel of this action is the **centre** of $G$,
@@ -117,7 +117,7 @@ i.e. $g \in Z(G) \iff [g] = \set{g}$.
   $$
 
 > *Definition.*{: .def}
-> The stabilisers of this action are called **centralisers**,
+> The stabilizers of this action are called **centralizers**,
 >
 > $$
   C_G(g) = \set{h \in G : hgh^{-1} = g} = \set{h \in G : hg = gh}
@@ -130,6 +130,7 @@ i.e. $g \in Z(G) \iff [g] = \set{g}$.
 >
 > *Proof.*{: .prf}
 >
+> By the fact the [kernel is the intersection of stabilizers](group-actions.md#kernel-is-intersection-of-stabilizers).
 
 > *Lemma.*{: .lem}
 > $G$ acts by conjugation on a subgroup $K$ if $K \trianglelefteq G$.
@@ -209,7 +210,7 @@ so they are the subgroups that are isomorphic to $H$ as proved above.
 ### Normalisers
 
 > *Definition.*{: .def}
-> The stabilisers of this action is called **normalisers**, i.e.
+> The stabilizers of this action is called **normalisers**, i.e.
 >
 > $$
   N_G(H) = \set{g \in G : gHg^{-1} = H}
@@ -219,7 +220,7 @@ so they are the subgroups that are isomorphic to $H$ as proved above.
 
 ## Examples
 
-### Conjugate stabilisers
+### Conjugate stabilizers
 
 ### Conjugacy classes in $S_n$
 

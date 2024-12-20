@@ -67,7 +67,7 @@ which satisfies the 3 conditions.
 
 It means the elements of $g$ is distinguishable by their action of $X$ alone.
 
-## Orbits and Stabilisers
+## Orbits and Stabilizers
 
 > *Definition.*{: .def}
 > Given $G$ acts on $X$, the **orbit** of an element $x \in X$ is
@@ -79,7 +79,7 @@ It means the elements of $g$ is distinguishable by their action of $X$ alone.
 It is a subset of elements in $X$ that $x$ can get mapped to by $G$.
 
 > *Definition.*{: .def}
-> Given $G$ acts on $X$, the **stabiliser** of an element $x \in X$ is
+> Given $G$ acts on $X$, the **stabilizer** of an element $x \in X$ is
 >
 > $$
   \text{Stab}(x) = G_x = \set{g \in G : g(x) = x} \subseteq G
@@ -95,7 +95,16 @@ It is the subset of elements in $G$ that fixes $x$.
 > By definition, $e_G \in \text{Stab}(x)$.
 > For $a, b \in \text{Stab}(x)$, $b^{-1}$ fixes $x$ and so as $ab^{-1}$, so $ab^{-1} \in \text{Stab}(x)$.
 
-In fact, conversely, every subgroup is a stabiliser that fixes some elements in $X$.
+> *Lemma.*{: .lem}
+> Given $G$ acts on $X$, the kernel of the action is given by the intersection of stabilizers for all $x \in X$.
+>
+> *Proof.*{: .prf}
+>
+> The kernel of the action is the set of elements of $G$ that fixes every $x \in X$.
+> Intuitively, it is the intersection of the sets of elements that fix each $x \in X$, which is by definition the $\text{Stab}(x)$ of each $x$.
+{: #kernel-is-intersection-of-stabilizers}
+
+In fact, conversely, every subgroup is a stabilizer that fixes some elements in $X$.
 
 > *Definition.*{: .def}
 > An action is **transitive** if for all $x \in X$, $\text{orb}(x) = X$.
@@ -127,7 +136,7 @@ It means any element can reach any element in $X$.
 > For any $h \in H$, $g^{-1}h(x) = x$, so $h = g(g^{-1}h) \in g\text{Stab}(x)$ and $H \subseteq g\text{Stab}(x)$.
 
 > *Theorem.*{: .thm}
-> **Orbit-Stabiliser Theorem**. Let $G$ be a finite group acting on a finite set $X$. Then, for any $x \in X$,
+> **Orbit-Stabilizer Theorem**. Let $G$ be a finite group acting on a finite set $X$. Then, for any $x \in X$,
 >
 > $$
   \vert \text{orb}(x) \vert \vert \text{Stab}(x) \vert = \vert G \vert
@@ -148,7 +157,7 @@ It means any element can reach any element in $X$.
   \vert G \vert = k \vert \text{Stab}(x) \vert = \vert \text{orb}(x) \vert \vert \text{Stab}(x) \vert
   $$
 
-The orbit and stabilisers provide a geometric view of [subgroups, cosets and Lagrange's Theorem](subgroups-cosets-lagrange-theorem.md).
+The orbit and stabilizers provide a geometric view of [subgroups, cosets and Lagrange's Theorem](subgroups-cosets-lagrange-theorem.md).
 Let $H = \set{h \in G : h(x) = y}$, $H$ is the subset of elements in $G$ that maps $x$ to $y$.
 From the above, we have $H = g\text{Stab}(x)$, which is a coset of the subgroup $\text{Stab}(x)$,
 so a coset is actually the subset of elements in $G$ that maps a certain $x$ to the same $y$.
@@ -157,10 +166,10 @@ which means if we apply $h_2$ then $h_1^{-1}$ to $x$ we will get back to $x$ as 
 so we can say the subgroup $\text{Stab}(x)$ is formed by elements in $H$ and every subgroup is a stablizer of some elements in $X$ formed in this way.
 The orbit of $x$ is the set of $y$ that $x$ can reach, it can map bijectively to one of the element in the set $\set{g_1\text{Stab}(x), g_2\text{Stab}(x), ...}$.
 By construction, the set is obviously pairwise disjoint (equivalently cosets are pairwise disjoint), has the same size as $\text{orb}(x)$ and any $g \in G$ is in one of its element.
-Thus, the orbit-stabiliser theorem concluded from it is a geometric form of Lagrange's Theorem.
+Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagrange's Theorem.
 
 > *Corollary.*{: .cor}
-> If the action is transitive, then all the stabilisers have the same size.
+> If the action is transitive, then all the stabilizers have the same size.
 >
 > *Proof.*{: .prf}
 >
