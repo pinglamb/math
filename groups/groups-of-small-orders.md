@@ -55,17 +55,29 @@ We can see them in practice in the study of groups of small orders.
 
 ## Groups of order 4
 
+> *Theorem.*{: .thm}
+> Every group of order $6$ is either cyclic or dihedral.
+>
+> *Proof.*{: .prf}
+>
+> By Lagrange, the order of every element is either $1, 2$ or $4$.
+> If there is an element of order $4$, then $G \cong C_4$.
+>
+> If there is no element of order $4$, all elements other than the identity have order $2$.
+> Therefore, $G$ is abelian. Picking any two elements we have $x^2 = y^2 = e$ and $xy = yx = y^{-1}x$.
+> So, $G \confg D_4$.
+
 ## Groups of order 6
 
 > *Theorem.*{: .thm}
-> Every group of order $6$ is either or dihedral.
+> Every group of order $6$ is either cyclic or dihedral.
 >
 > *Proof.*{: .prf}
 >
 > By Lagrange, the order of every element is either $1, 2, 3$ or $6$.
 > If there is an element of order $6$, then $G \cong C_6$.
 >
-> If there is no element of order $6$, elements other than identity can only have orders $2$ or $3$.
+> If there is no element of order $6$, elements other than the identity can only have orders $2$ or $3$.
 > There must be an element $y$ of order $3$, otherwise every element is of order $2$ and the order of group has to be powers of $2$.
 > $\langle y \rangle$ is a normal subgroup as it has index $2$.
 > Also, there must be an element $x$ of order $2$ as the order of $G$ is even.
@@ -93,7 +105,7 @@ We can see them in practice in the study of groups of small orders.
 ## Groups of order 2p
 
 > *Theorem.*{: .thm}
-> Every group of order $2p$, where $p$ is prime, is either or dihedral.
+> Every group of order $2p$, where $p$ is prime, is either cyclic or dihedral.
 >
 > *Proof.*{: .prf}
 >
@@ -106,7 +118,8 @@ We can see them in practice in the study of groups of small orders.
 > There must be an element $y$ of order $p$, otherwise every element is of order $2$ and the order of group has to be powers of $2$.
 > $\langle y \rangle$ is a normal subgroup as it has index $2$.
 > Also, there must be an element $x$ of order $2$ as the order of $G$ is even.
-> Therefore, we have $xyx^{-1} \in \langle y \rangle$ so $xyx^{-1} = y^k$ for $0 \le k \le p - 1$
+> Therefore, we have $xyx^{-1} \in \langle y \rangle$ so $xyx^{-1} = y^k$ for $0 \le k \le p - 1$.
+> Furthermore, $y = xy^kx = (xyx)^k = y^{k^2}$ so $k^2 = 1$.
 >
 > + $xyx^{-1} = e$, $y = e$ which is not possible, or
 >
