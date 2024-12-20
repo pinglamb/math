@@ -235,6 +235,18 @@ so they are the subgroups that are isomorphic to $H$ as proved above.
 
 ### Conjugate stabilizers
 
+> *Theorem.*{: .thm}
+> The stabilizers of elements in same orbit are conjugate to each other.
+>
+> *Proof.*{: .prf}
+>
+> Let $G$ acts on $X$, and let $g \in G, x \in X$ and $y = g(x)$.
+> If $h \in \text{Stab}(x)$, $ghg^{-1}(y) = gh(x) = g(x) = y$, so $ghg^{-1}$ fixes $y$ and $g\text{Stab}(x)g^{-1} \subseteq \text{Stab}(y)$.
+> If $k \in \text{Stab}(y)$, $kg(x) = g(x) \implies g^{-1}kg(x) = x$, so $g^{-1}kg$ fixes $x$ and $g(g^{-1}kg)g^{-1} = k \in g\text{Stab}(x)g^{-1} \implies \text{Stab}(y) \subseteq g\text{Stab}(x)g^{-1}$.
+> Hence, $\text{Stab}(g(x)) = g \text{Stab}(x) g^{-1}$.
+>
+> It implies that the stabilizers of elements in the same orbits are isomorphic.
+
 ### Conjugacy classes in $S_n$
 
 ### Conjugacy in $A_n$
