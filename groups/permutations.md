@@ -115,7 +115,15 @@ $$
 >
 > By construction, $\sigma$ is a product of disjoint cycles and is called the _standard representation_ of $\sigma$.
 
-## Order of permutation
+## Cycle Type of Permutation
+
+> *Definition.*{: .def}
+> The **cycle type** of a permutation $\sigma$ is the list of cycle lengths of $\sigma$ in disjoint cycle notation.
+{: #cycle-type}
+
+For example, $(1\,2)$ has cycle type $2$ and $(1\,2\,3)(4\,5)$ has cycle type $3,2$.
+
+## Order of Permutation
 
 > *Definition.*{: .def}
 > The **order** of permutation $\sigma$ is the smallest positive integer $m$ such that $\sigma^m = I$, the identity map.
@@ -135,7 +143,7 @@ $$
 >
 > In order for $\sigma^m = e$, we need $l_i \mid m$ for all $i$ and hence $m = [l_1, l_2, ..., l_k]$.
 
-## Sign of permutation
+## Sign of Permutation
 
 > *Lemma.*{: .lem}
 > Every permutation is a product of transpositions.

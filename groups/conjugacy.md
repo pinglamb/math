@@ -247,9 +247,13 @@ so they are the subgroups that are isomorphic to $H$ as proved above.
 >
 > It implies that the stabilizers of elements in the same orbits are isomorphic.
 
-### Conjugacy classes in $S_n$
+### Conjugacy in $S_n$
+
+See [Symmetric Group](symmetric-groups.md#conjugacy-in-symmetric-group).
 
 ### Conjugacy in $A_n$
+
+See [Symmetric Group](symmetric-groups.md#conjugacy-in-alternating-group).
 
 ## References
 

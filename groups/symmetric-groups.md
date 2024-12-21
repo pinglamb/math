@@ -149,6 +149,42 @@ $$
 
 From the above, we can see $S_3 \cong D_6$.
 
+## Conjugacy in $S_n$
+{: #conjugacy-in-symmetric-group}
+
+> *Theorem.*{: .thm}
+> Two permutations are conjugate iff they have the same cycle type.
+>
+> *Proof.*{: .prf}
+>
+> If $(a_1\,a_2\,...\,a_k)$ is a $k$-cycle and $\rho \in S_n$, then
+>
+> $$
+  \rho(a_1\,a_2\,...\,a_k)\rho^{-1} = (\rho(a_1)\,\rho(a_2)\,...\,\rho(a_k))
+  $$
+>
+> Suppose $\sigma = \sigma_1 \sigma_2 ... \sigma_l$, where $\sigma_i$ are disjoint cycles, then
+>
+> $$
+  \rho\sigma\rho^{-1} = (\rho\sigma_1\rho^{-1})(\rho\sigma_2\rho^{-1})...(\rho\sigma_l\rho^{-1})
+  $$
+>
+> which has the same cycle type as $\sigma$.
+>
+> Conversely, if $\sigma, \tau \in S_n$ have the same cycle type, then
+>
+> $$
+  \rho = \begin{pmatrix}
+  a_1 & a_2 & \cdots & a_n \\
+  b_1 & b_2 & \cdots & b_n \\
+  \end{pmatrix}
+  $$
+>
+> is the permutation that satisfies $\rho\sigma\rho^{-1} = \tau$.
+
+## Conjugacy in $A_n$
+{: #conjugacy-in-alternating-group}
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.3, 1.4
