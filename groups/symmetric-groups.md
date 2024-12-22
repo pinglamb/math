@@ -203,8 +203,39 @@ order | elements | quotients $S_4/K$
 
 (order $2, 3, 6, 8$ is not possible because there is no sum of sizes of conjugacy classes that equal to them.)
 
+### $S_5$
+
 ## Conjugacy in $A_n$
 {: #conjugacy-in-alternating-group}
+
+As $A_n \subseteq S_n \implies [\sigma]\_{A_n} \subseteq [\sigma]\_{S_n}$ and $\vert A_n \vert = \vert S_n \vert / 2$, by Orbit-Stabilizer, there are two options:
+
++ $[\sigma]\_{A_n} = [\sigma]\_{S_n}$ and $\vert C\_{A_n}(\sigma) \vert = \vert C\_{S_n}(\sigma) \vert / 2$
+
++ $\vert [\sigma]\_{A_n} \vert = \vert [\sigma]\_{A_n} \vert / 2$ and $C\_{S_n}(\sigma) = C\_{A_n}(\sigma)$
+
+> *Definition.*{: .def}
+> If $\vert [\sigma]\_{A_n} \vert = \vert [\sigma]\_{A_n} \vert / 2$, we say that the conjugacy class of $\sigma$ **splits** in $A_n$.
+
+> *Lemma.*{: .lem}
+> For $\sigma \in A_n$, $[\sigma]$ splits in $A_n$ iff no odd permutation commutes with $\sigma$, meaning $C\_{S_n}(\sigma)$ has no odd elements.
+>
+> *Proof.*{: .prf}
+>
+> As $\vert [\sigma]\_{A_n} \vert = \vert [\sigma]\_{A_n} \vert / 2$ iff $C\_{S_n}(\sigma) = C\_{A_n}(\sigma)$.
+> It is only possible if $C\_{S_n}(\sigma)$ has no odd elements.
+
+### $A_4$
+
+conjugacy class | cycle type | $\vert [\sigma]\_{S_4} \vert$ | odd elements in $C\_{S_4}$ | $\vert [\sigma]\_{A_4} \vert$
+$e$              | 1111 | 1 | yes, e.g. $(1\,2)$ | 1
+$[(1\,2)(3\,4)]$ | 22   | 3 | yes, e.g. $(1\,2)$ | 3
+$[(1\,2\,3)]$    | 31   | 8 | no                 | 4 + 4
+
+(As $\vert C\_{S_4}([(1\,2\,3)]) \vert = 3$ and all powers of $(1\,2\,3)$ commutes with itself (three of them),
+so $C\_{S_4}([(1\,2\,3)]) = \langle (1\,2\,3) \rangle$.)
+
+### $A_5$
 
 ## References
 

@@ -67,6 +67,7 @@ The theory about quotient groups is one of the most important idea about groups.
 
 > *Definition.*{: .def}
 > A group $G$ is **simple** if it has no non-trivial proper normal subgroups (i.e. only $\set{e}$ and G).
+{: #simple-group}
 
 ## Quotients
 
