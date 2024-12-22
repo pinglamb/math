@@ -186,12 +186,12 @@ From the above, we can see $S_3 \cong D_6$.
 
 The conjugacy classes are as follow base on the cycle type:
 
-conjugacy class | cycle type | size | size of centralizer | sign
-$e$              | 1111 | 1 | 24 | +
-$[(1\,2)]$       | 211  | 6 | 4  | -
-$[(1\,2)(3\,4)]$ | 22   | 3 | 8  | +
-$[(1\,2\,3)]$    | 31   | 8 | 3  | +
-$[(1\,2\,3\,4)]$ | 4    | 6 | 4  | -
+conjugacy class  | cycle type | size | size of centralizer | sign
+$e$              | 1111       | 1    | 24                  | +
+$[(1\,2)]$       | 211        | 6    | 4                   | -
+$[(1\,2)(3\,4)]$ | 22         | 3    | 8                   | +
+$[(1\,2\,3)]$    | 31         | 8    | 3                   | +
+$[(1\,2\,3\,4)]$ | 4          | 6    | 4                   | -
 
 It is useful for finding the normal subgroups of $S_4$ as a normal subgroup needs to have order divides $\vert S_4 \vert = 24$ and is a union of conjugacy classes.
 
@@ -204,6 +204,15 @@ order | elements | quotients $S_4/K$
 (order $2, 3, 6, 8$ is not possible because there is no sum of sizes of conjugacy classes that equal to them.)
 
 ### $S_5$
+
+conjugacy class     | cycle type | size | size of centralizer | sign
+$e$                 | 11111      | 1    | 120                 | +
+$[(1\,2)]$          | 2111       | 10   | 12                  | -
+$[(1\,2)(3\,4)]$    | 221        | 15   | 8                   | +
+$[(1\,2\,3)]$       | 311        | 20   | 6                   | +
+$[(1\,2\,3)(4\,5)]$ | 32         | 20   | 6                   | -
+$[(1\,2\,3\,4)]$    | 41         | 30   | 4                   | -
+$[(1\,2\,3\,4\,5)]$ | 5          | 24   | 5                   | +
 
 ## Conjugacy in $A_n$
 {: #conjugacy-in-alternating-group}
@@ -227,15 +236,35 @@ As $A_n \subseteq S_n \implies [\sigma]\_{A_n} \subseteq [\sigma]\_{S_n}$ and $\
 
 ### $A_4$
 
-conjugacy class | cycle type | $\vert [\sigma]\_{S_4} \vert$ | odd elements in $C\_{S_4}$ | $\vert [\sigma]\_{A_4} \vert$
-$e$              | 1111 | 1 | yes, e.g. $(1\,2)$ | 1
-$[(1\,2)(3\,4)]$ | 22   | 3 | yes, e.g. $(1\,2)$ | 3
-$[(1\,2\,3)]$    | 31   | 8 | no                 | 4 + 4
+conjugacy class  | cycle type | $\vert [\sigma]\_{S_4} \vert$ | odd elements in $C\_{S_4}$ | $\vert [\sigma]\_{A_4} \vert$
+$e$              | 1111       | 1                             | yes, e.g. $(1\,2)$         | 1
+$[(1\,2)(3\,4)]$ | 22         | 3                             | yes, e.g. $(1\,2)$         | 3
+$[(1\,2\,3)]$    | 31         | 8                             | no                         | 4 + 4
 
 (As $\vert C\_{S_4}([(1\,2\,3)]) \vert = 3$ and all powers of $(1\,2\,3)$ commutes with itself (three of them),
 so $C\_{S_4}([(1\,2\,3)]) = \langle (1\,2\,3) \rangle$.)
 
 ### $A_5$
+
+conjugacy class     | cycle type | $\vert [\sigma]\_{S_5} \vert$ | odd elements in $C\_{S_5}$ | $\vert [\sigma]\_{A_5} \vert$
+$e$                 | 1111       | 1                             | yes, e.g. $(1\,2)$         | 1
+$[(1\,2)(3\,4)]$    | 22         | 15                            | yes, e.g. $(1\,2)$         | 15
+$[(1\,2\,3)]$       | 31         | 20                            | yes, e.g. $(4\,5)$         | 20
+$[(1\,2\,3\,4\,5)]$ | 5          | 24                            | no                         | 12 + 12
+
+(As $\vert C\_{S_5}([(1\,2\,3\,4\,5)]) \vert = 5$ and all powers of $(1\,2\,3\,4\,5)$ commutes with itself (five of them),
+so $C\_{S_5}([(1\,2\,3\,4\,5)]) = \langle (1\,2\,3\,4\,5) \rangle$.)
+
+> *Theorem.*{: .thm}
+> $A_5$ is [simple](quotient-groups.md#simple-group).
+>
+> *Proof.*{: .prf}
+>
+> The order of a normal subgroup of $A_5$ must divides $\vert A_5 \vert = 60$.
+> Base on the orders of conjugacy classes, the only possible combinations are $1$ and $60$.
+> So only $\set{e} \trianglelefteq A_5$ and $A_5 \trianglelefteq A_5$.
+
+In fact, all $A_n$ for $n \ge 5$ are simple.
 
 ## References
 
