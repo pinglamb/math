@@ -65,7 +65,7 @@ We can see them in practice in the study of groups of small orders.
 >
 > If there is no element of order $4$, all elements other than the identity have order $2$.
 > Therefore, $G$ is abelian. Picking any two elements we have $x^2 = y^2 = e$ and $xy = yx = y^{-1}x$.
-> So, $G \confg D_4$.
+> So, $G \cong D_4 \cong V_4$.
 
 ## Groups of order 6
 

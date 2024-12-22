@@ -70,7 +70,30 @@ In order to check if a group is direct product of two groups, we have the follow
 >
 > Therefore, $f$ is a bijection and $G \cong H_1 \times H_2$.
 
+## Klein Four-group
+
+> *Definition.*{: .def}
+> The Klein four-group, denoted by $V_4$, is a group with four elements, in which all of them is of order $2$.
+
+> *Lemma.*{: .lem}
+> $V_4 \cong D_4 \cong C_2 \times C_2$.
+>
+> *Proof.*{: .prf}
+>
+> $V_4$ is abelian as all elements have order $2$.
+> For $a, b \in V_4$, $a^2 = b^2 = e$ and $ab = ba = b^{-1}a$. So, $V_4 \cong D_4$.
+>
+> For $a, b, c \in V_4$,
+>
+> + $\langle a \rangle = \set{e, a}$ and $\langle b \rangle = \set{e, b}$ so $\langle a \rangle \cup \langle b \rangle = \set{e}$
+>
+> + $ab = ba$
+>
+> + $c = ab$
+>
+> Hence, by Direct Product Theorem, $V_4 \cong C_2 \times C_2$.
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 12.7
-* [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 1](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
+* [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 1, 3](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
