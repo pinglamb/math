@@ -182,6 +182,27 @@ From the above, we can see $S_3 \cong D_6$.
 >
 > is the permutation that satisfies $\rho\sigma\rho^{-1} = \tau$.
 
+### $S_4$
+
+The conjugacy classes are as follow base on the cycle type:
+
+conjugacy class | cycle type | size | size of centralizer | sign
+$e$              | 1111 | 1 | 24 | +
+$[(1\,2)]$       | 211  | 6 | 4  | -
+$[(1\,2)(3\,4)]$ | 22   | 3 | 8  | +
+$[(1\,2\,3)]$    | 31   | 8 | 3  | +
+$[(1\,2\,3\,4)]$ | 4    | 6 | 4  | -
+
+It is useful for finding the normal subgroups of $S_4$ as a normal subgroup needs to have order divides $\vert S_4 \vert = 24$ and is a union of conjugacy classes.
+
+order | elements | quotients $S_4/K$
+1     | $\set{e}$ | $S_4$
+4     | $\set{e, (1\,2)(3\,4), (1\,3)(2\,4), (1\,4)(2\,3)} = V_4$ | $S_3 \cong D_6$
+12    | $A_4$ | $C_2$
+24    | $S_4$ | $\set{e}$
+
+(order $2, 3, 6, 8$ is not possible because there is no sum of sizes of conjugacy classes that equal to them.)
+
 ## Conjugacy in $A_n$
 {: #conjugacy-in-alternating-group}
 
@@ -189,4 +210,4 @@ From the above, we can see $S_3 \cong D_6$.
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Section 1.3, 1.4
 * M.A. Armstrong _Groups and Symmetry_, 1988 - Chapter 6
-* [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 2](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
+* [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 2, 7](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
