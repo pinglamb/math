@@ -35,6 +35,21 @@ title: Home
 * [Matrices](vectors-and-matrices/matrices.md)
 * [Suffix Notation](vectors-and-matrices/suffix-notation.md)
 
+## Numbers and Sets
+{: .left}
+
+* [Sets](numbers-and-sets/sets.md)
+* [Functions](numbers-and-sets/functions.md)
+* [Relations](numbers-and-sets/relations.md)
+* [Natural Numbers](numbers-and-sets/natural-numbers.md)
+* [Primes](numbers-and-sets/primes.md)
+* [Combinations](numbers-and-sets/congruences.md)
+* [Congruences](numbers-and-sets/congruences.md)
+* [Fermat's Theorem](numbers-and-sets/fermat-theorem.md)
+* [Real Numbers](numbers-and-sets/real-numbers.md)
+* [Sequences and Series](numbers-and-sets/sequences-series.md)
+* [Countability](numbers-and-set/countability.md)
+
 ## Differential Equations
 {: .left}
 
