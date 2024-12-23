@@ -9,51 +9,7 @@ title: Homomorphisms &#124; Groups
 When considering sets, functions are allowed to do anything, as we can map any element in domain to any element in codomain.
 However, as groups have some additional structure on top of sets, we are more interested in functions that respect/preserve the group structure, and they are called **homomorphisms**.
 
-Before studying the relations between groups, we first revise the definition of functions and some of its properties.
-
-## Functions
-
-> *Definition.*{: .def}
-> Given $X, Y$ be two sets, a function $f: X \to Y$ maps $x \in X$ to **exactly one** $y \in Y$.
-> $X$ is called the **domain** of $f$ and $Y$ is called the **codomain** of $f$.
-
-### Composition of Functions
-
-> *Definition.*{: .def}
-> Functions can be composed by by applying one after another, e.g. let $f: X \to Y$ and $g: Y \to Z$ be two functions, then $g \circ f: X \to Z$ is a function with $(g \circ f)(x) = g(f(x))$.
-
-Function composition is _associative_, i.e.
-
-$$
-(h \circ (g \circ f))(x) = h(g(f(x))) = (h \circ g)(f(x)) = ((h \circ g) \circ f)(x)
-$$
-
-It is NOT commutative, e.g. $f(x) = x + 1$, $g(x) = 2x$, $(g \circ f)(x) = 2x + 2$ but $(f \circ g)(x) = 2x + 1$.
-
-### Injection, Surjection and Bijection
-
-> *Definition.*{: .def}
-> A function $f$ is **injective** if it maps everything in $Y$ **at most once**, i.e. $\forall x, y \in X$
->
-> $$
-  f(x) = f(y) \implies x = y
-  $$
-
-> *Definition.*{: .def}
-> A function $f$ is **surjective** if it maps everything in $Y$ **at least once**, i.e.
->
-> $$
-  (\forall y \in Y, \exists x \in X) \, f(x) = y
-  $$
-
-> *Definition.*{: .def}
-> A function $f$ is **bijective** if it is both injective and surjective, i.e. it hits everything **exactly once**.
-
-A function has inverse $f^{-1}$ iff $f$ is bijective, i.e. $(f \circ f^{-1}) = 1_Y$ and $(f^{-1} \circ f) = 1_X$.
-
-The composite of bijections is a bijection.
-
-## Group Homomorphisms
+The definition of [functions](../numbers-and-sets/functions.md) should be revised first.
 
 > *Definition.*{: .def}
 > Let $(G, \ast)$ and $(H, \times)$ be two groups. A function $f$ is a **group homomorphism** iff
@@ -61,6 +17,8 @@ The composite of bijections is a bijection.
 > $$
   (\forall a, b \in G) \, f(a \ast b) = f(a) \times f(b)
   $$
+
+## Properties
 
 > *Theorem.*{: .thm}
 > Homomorphism has identity preserved, i.e.
