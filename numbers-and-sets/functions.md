@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Sets &#124; Numbers and Sets
+title: Functions &#124; Numbers and Sets
 ---
 
 # Functions
