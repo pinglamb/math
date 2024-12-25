@@ -104,6 +104,46 @@ $$
 
 but subtraction and division is not well-defined, which leads to the following kinds of "numbers".
 
+## Integers
+
+> *Definition.*{: .def}
+> The **integers** $\mathbb{Z}$ is obtained from $\mathbb{N}$ by allowing subtraction.
+> Formally, $\mathbb{Z}$ is defined to be the equivalence classes of $\mathbb{N} \times \mathbb{N}$ under the relation
+>
+> $$
+  (a, b) \sim (c, d) \iff a + d = b + c
+  $$
+
+Intuitively, $(a, b)$ is $a - b$, $a = [(a, 0)]$ and $-a = [(0, a)]$. We define
+
+$$
+\begin{align*}
+(a, b) + (c, d) &= (a + c, b + d) \\
+(a, b) \times (c, d) &= (ac + bd, bd + ad)
+\end{align*}
+$$
+
+## Rationals
+
+> *Definition.*{: .def}
+> The **rationals** $\mathbb{Q}$ is obtained from $\mathbb{Z}$ by allowing division.
+> Formally, $\mathbb{Q}$ is defined to be the equivalence classes of $\mathbb{Z} \times \mathbb{N}$ under the relation
+>
+> $$
+  (a, b) \sim (c, d) \iff ad = bc
+  $$
+
+Intuitively, $a/b = [(a, b)]$. We define
+
+$$
+\begin{align*}
+(a, b) + (c, d) &= (ad + bc, bd) \\
+(a, b) \times (c, d) &= (ac, bd)
+\end{align*}
+$$
+
+Algebraically, $\mathbb{Q}$ is a _totally ordered field_.
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1
