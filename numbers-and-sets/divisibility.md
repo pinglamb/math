@@ -50,6 +50,26 @@ The concept of the divisibility of one integer by another is central in number t
 
 > *Definition.*{: .def}
 > The **greatest common divisor** of two integers $a, b$, denoted by $(a, b)$, is the largest integer that divides both $a$ and $b$.
+
+> *Definition.*{: .def}
+> The integers $a$ and $b$ are **relatively prime** if $a$ and $b$ have greatest common divisor $(a, b) = 1$.
+
+> *Theorem.*{: .thm}
+> Let $a$ and $b$ be integers with $(a, b) = d$, then $(a/d, b/d) = 1$, i.e. $a/d$ and $b/d$ are relatively prime.
+>
+> *Proof.*{: .prf}
+>
+> Assume $e \mid a/d$ and $e \mid b/d$, $a = edm$ and $b = edn$, we have $(a, b) = ed = d$.
+> Hence, $(a/d, b/d) = 1$.
+
+> *Corollary.*{: .cor}
+> The rational $a/b = p/q$ for some integers $p, q$ where $(p, q) = 1$.
+> $p/q$ is said to be in _lowest terms_.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $(a, b) = d$, then set $p = a/d$ and $q = b/d$ we have $p/q = (a/d)/(b/d) = a/b$ with $(p, q) = 1$.
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1, 3.3
