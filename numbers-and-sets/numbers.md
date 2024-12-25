@@ -84,6 +84,26 @@ Before digging into the well-ordering principle, we need to define what is means
 
 By similar technique, we can also show that weak induction is equivalent to well-ordering principle.
 
+We can define recursively addition as
+
+$$
+\begin{align*}
+n + 0 &= n \\
+n + S(m) &= S(n + m)
+\end{align*}
+$$
+
+and mulitplication as
+
+$$
+\begin{align*}
+n \times 0 &= 0 \\
+n \times S(m) &= n \times m + n
+\end{align*}
+$$
+
+but subtraction and division is not well-defined, which leads to the following kinds of "numbers".
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1
