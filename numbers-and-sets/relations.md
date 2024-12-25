@@ -26,6 +26,14 @@ title: Relations &#124; Numbers and Sets
   $$
 
 > *Definition.*{: .def}
+> A relation is **antisymmetric** if
+>
+> $$
+  (\forall x, y)\, xRy \land yRx \implies x = y
+  $$
+{: #definition-of-antisymmetric}
+
+> *Definition.*{: .def}
 > A relation is **transitive** if
 >
 > $$

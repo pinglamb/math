@@ -1,0 +1,90 @@
+---
+layout: base
+title: Numbers &#124; Numbers and Sets
+---
+
+# Numbers
+{: .page-title}
+
+The philosophical goal is to define the "real numbers" rigorously as a set with some operations that satisfies some particular properties, known as _axioms_.
+The approach is to have explicit construction of different kinds of "numbers" and prove them they satisfy certain properties (and not satisfying some so we have to continue to extend that).
+
+## Natural Numbers
+
+> *Definition.*{: .def}
+> The **natural numbers** $\mathbb{N}$ is defined by _Peano's axioms_.
+> which is a set having a special element $0$ and a map $S: \mathbb{N} \to \mathbb{N}$ that maps $n$ to its successor (+1) such that
+>
+> + $S(n) \not= 0$ for all $n \in \mathbb{N}$.
+>
+> + $(\forall n, m \in \mathbb{N})\, S(m) = S(n) \implies m = n$.
+>
+> + For any $A \subseteq \mathbb{N}$, if $0 \in A$ and $n \in A \implies S(n) \in A$, then $A = N$.
+
+The last axiom is the axiom of induction, which implies the following theorem:
+
+> *Theorem.*{: .thm}
+> **[Weak Principle of Induction]** Let $P(n)$ be a statement about the natural number $n$. Suppose that
+>
+> + $P(1)$ is true
+>
+> + $(\forall n)\,P(n) \implies P(n+1)$
+>
+> Then $P(n)$ is true for all $n \ge 1$.
+
+A slight variant of the principle of induction is also sometimes useful in proofs.
+
+> *Theorem.*{: .thm}
+> **[Strong Principle of Induction]** Let $P(n)$ be a statement about the natural number $n$. Suppose that
+>
+> + $P(1)$ is true
+>
+> + $(\forall n \in \mathbb(N))$, if $P(k)$ is true $\forall k \le n$ then $P(k + 1)$ is true
+>
+> Then $P(n)$ is true for all $n \in N$.
+
+They are disinct in the sense that weak induction is base on succession ($+1$) and strong induction is base on ordering of natural numbers.
+Before digging into the well-ordering principle, we need to define what is means to be an order.
+
+> *Definition.*{: .def}
+> A **partial order** on a set is a reflexive, [antisymmetric](relations.md#definition-of-antisymmetric) and transitive relation.
+
+> *Definition.*{: .def}
+> A **total order** is a partial order where $\forall x \not= y$, exactly one of $xRy$ or $yRx$ holds.
+> This means that every two elements must be related.
+
+> *Definition.*{: .def}
+> A total order is **well-ordered** if every non-empty subset has a minimal element, i.e.
+>
+> $$
+  S \not = \emptyset \implies \exists m \in S, x < m \implies x \not \in S
+  $$
+
+> *Theorem.*{: .thm}
+> **[Well-ordering Principle]** $\mathbb{N}$ is well-ordered under the usual order,
+> i.e. every non-empty subset of $\mathbb{N}$ has a minimal element.
+
+> *Theorem.*{: .thm}
+> Well-ordering principle is equivalent to strong induction.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Suppose $P(k)$ is true $\forall k < n$ implies $P(n)$ is true.
+> Assume $P(n)$ is not true for all $n \in \mathbb{N}$, i.e. the set $S = \set{n \in \mathbb{N} : \neg P(n)}$ is non-empty and has a minimal element $m$ by the Well-ordering principle.
+> Since $m$ is the minimal counterexample to $P$, $P(k)$ is true $\forall k < m$.
+> However, it implies $P(m)$ is true, which is a contradiction.
+> Hence, $P(n)$ is true for all $n$.
+>
+> ($\Leftarrow$) Suppose $S \subseteq \mathbb{N}$ has no minimal element.
+> Let $P(n)$ be the statement $n \not \in S$.
+> $P(1)$ is true otherwise $1$ is the minimal element in $S$.
+> Assume $P(k)$ is true $\forall k < n$, which means $\forall k < n, k \not \in S$.
+> $P(n)$ is true otherwise $n$ is the minimal element in $S$.
+> By strong induction, $P(n)$ is true for all $n$ and $S$ can only be empty.
+
+By similar technique, we can also show that weak induction is equivalent to well-ordering principle.
+
+## References
+
+* Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1
+* [Dexter Chua _Part IA - Numbers and Sets_, 2014 - Chapter 6](https://dec41.user.srcf.net/notes/IA_M/numbers_and_sets.pdf)
