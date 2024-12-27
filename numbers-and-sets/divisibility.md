@@ -55,7 +55,7 @@ The concept of the divisibility of one integer by another is central in number t
 > The integers $a$ and $b$ are **relatively prime** if $a$ and $b$ have greatest common divisor $(a, b) = 1$.
 
 > *Theorem.*{: .thm}
-> Let $a$ and $b$ be integers with $(a, b) = d$, then $(a/d, b/d) = 1$, i.e. $a/d$ and $b/d$ are relatively prime.
+> Suppose $(a, b) = d$, then $(a/d, b/d) = 1$, i.e. $a/d$ and $b/d$ are relatively prime.
 >
 > *Proof.*{: .prf}
 >
@@ -69,6 +69,45 @@ The concept of the divisibility of one integer by another is central in number t
 > *Proof.*{: .prf}
 >
 > Suppose $(a, b) = d$, then set $p = a/d$ and $q = b/d$ we have $p/q = (a/d)/(b/d) = a/b$ with $(p, q) = 1$.
+
+> *Theorem.*{: .thm}
+> $(a + bc, b) = (a, b)$.
+>
+> *Proof.*{: .prf}
+>
+> Let $d$ be a common divisor of $a$ and $b$, then $d$ divides $a + bc$ and is a common disivor of $a + bc$ and $b$.
+> Let $e$ be a common divisor of $a + bc$ and $b$, then $e$ divides $(a + bc) - bc = a$ and is a common divisor of $a$ and $b$.
+> Hence, they have the same set of common divisors and $(a + bc, b) = (a, b)$.
+
+> *Theorem.*{: .thm}
+> $(a, b)$ is the least positive integer that is linear combination of $a$ and $b$.
+>
+> *Proof.*{: .prf}
+>
+> Let $S = \set{ma + nb \ge 0 : m, n \in \mathbb{Z}}$, $S$ is non-empty as either $a + 0b$ or $-a + 0b$ is positive so $S$ has a least element $d = ma + nb$.
+>
+> By division algorithm, $a = dq + r$, where $0 \le r < d$. We have
+>
+> $$
+  r = a - dq = a - q(ma + nb) = a(1 - qm) - b(qn)
+  $$
+>
+> so $r$ is also a linear combination of $a$ and $b$. As $d$ is the least, $r = 0$ and $d \mid a$.
+> Similarily, we have $d \mid b$.
+>
+> Thus, $d$ is a common divisor of $a$ and $b$. As any $c$ that $c \mid a$ and $c \mid b$, $c \mid ma + nb$ and $c \mid d$, so $d = (a, b)$.
+
+> *Theorem.*{: .thm}
+> **[Bezout's Identity]** $ma + nb = (a, b)$ for some integers $m, n$.
+>
+> *Proof.*{: .prf}
+>
+
+> *Theorem.*{: .thm}
+> All linear combinations of $a$ and $b$ are multiples of $(a, b)$.
+>
+> *Proof.*{: .prf}
+>
 
 ## References
 
