@@ -97,17 +97,20 @@ The concept of the divisibility of one integer by another is central in number t
 >
 > Thus, $d$ is a common divisor of $a$ and $b$. As any $c$ that $c \mid a$ and $c \mid b$, $c \mid ma + nb$ and $c \mid d$, so $d = (a, b)$.
 
-> *Theorem.*{: .thm}
+> *Corollary.*{: .cor}
 > **[Bezout's Identity]** $ma + nb = (a, b)$ for some integers $m, n$.
->
-> *Proof.*{: .prf}
->
+
+> *Corollary.*{: .cor}
+> $a$ and $b$ are relatively prime iff there are integers $m$ and $n$ such that $ma + nb = 1$.
 
 > *Theorem.*{: .thm}
 > All linear combinations of $a$ and $b$ are multiples of $(a, b)$.
 >
 > *Proof.*{: .prf}
 >
+> For $d = (a, b)$, by definition, $d \mid a$ and $d \mid b$. Hence, $d \mid ma + nb$ and all linear combinations are multiples of $(a, b)$.
+>
+> As there are integers $m$ and $n$ such that $d = ma + nb$, so we have $kd = (km)a + (kn)b$ for $k \in \mathbb{Z}$ and all multiples of $(a, b)$ can be expressed as linear combination.
 
 ## References
 
