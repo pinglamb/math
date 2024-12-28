@@ -41,14 +41,13 @@ title: Home
 * [Sets](numbers-and-sets/sets.md)
 * [Functions](numbers-and-sets/functions.md)
 * [Relations](numbers-and-sets/relations.md)
-* [Numbers](numbers-and-sets/numbers.md)
 * [Divisibility](numbers-and-sets/divisibility.md)
 * [Primes](numbers-and-sets/primes.md)
+* [Countability](numbers-and-set/countability.md)
 * [Congruences](numbers-and-sets/congruences.md)
 * [Fermat's Theorem](numbers-and-sets/fermat-theorem.md)
 * [Real Numbers](numbers-and-sets/real-numbers.md)
 * [Sequences and Series](numbers-and-sets/sequences-series.md)
-* [Countability](numbers-and-set/countability.md)
 
 ## Differential Equations
 {: .left}
