@@ -74,9 +74,130 @@ The following lemma shows that we can stop when we reach $\sqrt{n}$.
 
 ## Special Primes
 
+### Mersenne Primes
+
+> *Definition.*{: .def}
+> **Mersenne primes** are primes of the form $2^p - 1$, where $p$ is prime.
+
+> *Theorem.*{: .thm}
+> If $2^m - 1$ is prime, $m$ must be prime.
+>
+> *Proof.*{: .prf}
+>
+> Assume $m = ab$, then
+>
+> $$
+  2^m - 1 = 2^{ab} - 1 = (2^a - 1)(2^{a(b -1)} + 2^{a(b-2)} + ... + 1)
+  $$
+>
+> which is composite, so $m$ must be prime.
+
+Conversely, it is not true though, for example, $p = 11$ is prime but $2^{11} - 1 = 2047 = 23 \cdot 199$ is composite.
+
+### Fermat Primes
+
+> *Definition.*{: .def}
+> **Fermat primes** are primes of the form $2^{2^n} + 1$.
+
+> *Theorem.*{: .thm}
+> $2^m + 1$ is composite if $m$ has an odd divisor.
+>
+> *Proof.*{: .prf}
+>
+> If $m$ is a odd prime, then
+>
+> $$
+  2^m + 1 = (2 + 1)(2^{m-1} - 2^{m-2} + 2^{m-3} + ... + 1)
+  $$
+>
+> which is composite.
+>
+> If $m = ab$ where $a$ is odd, then
+>
+> $$
+  2^{ab} + 1 = (2^b + 1)(2^{b(a-1)} - 2^{b(a-2)} + 2^{b(a-3)} + ... + 1)
+  $$
+>
+> which is also composite.
+
+Not all of number of this form are primes though, for example, $2^{2^5} + 1$ is divisible by $641$.
+
 ## Fundamental Theorem of Arithmetic
 
+The fundamental theorem of arithmetic shows that primes are the multiplicative building blocks of the integers.
+
+> *Lemma.*{: .lem}
+> If $(a, b) = 1$ and $a \mid bc$, then $a \mid c$.
+>
+> *Proof.*{: .prf}
+>
+> As $(a, b) = 1$, there are integers such that $ma + nb = 1$, multiplying both sides by $c$ we have $mac + nbc = c$.
+> As $a \mid mac + nbc$, $a \mid c$.
+
+> *Lemma.*{: .lem}
+> If $p$ is a prime divides $a_1a_2...a_n$, which are positive integers, then there is an $a_i$ such that $p \mid a_i$ .
+>
+> *Proof.*{: .prf}
+>
+> When $n = 1$, it is trivial.
+> Assume it is true for $n$.
+> Consider the case $a_1a_2...a_na_{n+1}$ that is divisible by $p$, either $(p, a_1a_2...a_n) = 1$ or $(p, a_1a_2...a_n) = p$.
+> If $(p, a_1a_2...a_n) = 1$, then $p \mid a_{n+1}$. If $(p, a_1a_2...a_n) = p$, then by assumption, $p$ divides one of the $a_i$.
+> By induction, it is true for all $n$.
+
+> *Theorem.*{: .thm}
+> Every positive integer greater than $1$ can be written uniquely as a product of primes, up to order.
+>
+> *Proof.*{: .prf}
+>
+> Assume there are some positive integers that cannot be written as product of primes, let $n$ be the least one.
+> $n$ must be composite otherwise $n$ is obviously a product of primes.
+> Let $n = ab$, as $a < n$ and $b < n$, $a$ and $b$ are products of primes, so is $n$, which contradicts with the assumption.
+> Hence, every positive integer can be written as product of primes.
+>
+> Assume there are two different factorization into primes, i.e.
+>
+> $$
+  n = p_1p_2...p_s = q_1q_2...q_t
+  $$
+>
+> where $p_i$ and $q_j$ are all primes.
+> Assume one of the $p_i$ on the left hand side doesn't appear on the right hand side,
+> by the above lemma, $p_i$ has to divide one of the $q_j$, which is not possible as they are all primes
+> Hence, $p_i$ must equal to some $q_j$ and vice verse, and the factorization is unique.
+
+The other way of expressing it by Euler is base on the following factorization of _Riemann Zeta Function_:
+
+$$
+\begin{align*}
+\zeta(s) &= {1 \over 1^s} + {1 \over 2^s} + {1 \over 3^s} + ... \\
+         &= \begin{aligned}
+            &(1 + 1/2^s + 1/4^s + 1/8^s + ...) \\
+            &(1 + 1/3^s + 1/9^s + ...) \\
+            &(1 + 1/5^s + 1/25^s + ...) \\
+            &\vdots
+            \end{aligned} \\
+         &= {1 \over 1 - 2^{-s}}{1 \over 1 - 3^{-s}}{1 \over 1 - 5^{-s}} ...
+\end{align*}
+$$
+
+As an example, as $12 = 2^2 \cdot 3$, we can see that $1/12^s$ is the product of the terms $1/4^s$, $1/3^s$ and many $1$s.
+Therefore, the above factorization is true when every integers can be written as product of primes.
+
+It also implies that there are infinitely many primes because by substituding $s = 1$, $\zeta(1)$ is the harmonic series which is infinite.
+However, if there are finite number of terms, the factorized form will equal to a finite value.
+Hence, there are infinitely many primes.
+
 ## Distribution of Primes
+
+> *Definition.*{: .def}
+> The function $\pi(x)$, where $x$ is a positive real number, denotes the number of primes not exceeding $x$.
+
+> *Theorem.*{: .thm}
+> **[Prime Number Theorem]**
+> The ratio of $\pi(x)$ to $x/log(x)$ approaches $1$ as $x$ grows without bound.
+
+The proof involves the use of complex analysis.
 
 ## References
 
