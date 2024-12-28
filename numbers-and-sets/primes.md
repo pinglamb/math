@@ -166,7 +166,12 @@ The fundamental theorem of arithmetic shows that primes are the multiplicative b
 > by the above lemma, $p_i$ has to divide one of the $q_j$, which is not possible as they are all primes
 > Hence, $p_i$ must equal to some $q_j$ and vice verse, and the factorization is unique.
 
-The other way of expressing it by Euler is base on the following factorization of _Riemann Zeta Function_:
+The unique factorization is a special property of the set of integers that might not be shared by some systems of numbers.
+For example, the set of numbers of the form $a + b\sqrt{5}$.
+A prime in this form is the numbers that cannot be written as a product of two other numbers other thatn $\pm 1$, for example, $1 \pm \sqrt{5}$.
+Note that $6 = 2 \cdot 3 = (1 + \sqrt{5})(1 - \sqrt{5})$, where the factorization is not unique.
+
+The other way of expressing the theorem by Euler is base on the following factorization of _Riemann Zeta Function_:
 
 $$
 \begin{align*}
