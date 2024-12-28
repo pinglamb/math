@@ -99,6 +99,87 @@ All sets form a [group](../groups/groups.md) under symmetric difference.
 >
 > which can be extend to $n$ products.
 
+## Counting
+
+> *Definition.*{: .def}
+> Let $X$ be a set. For each $A \subseteq X$, the **indicator function** or **characteristic function** of $A$ is the function
+> $i_A : X \to \set{0, 1}$ such that
+>
+> $$
+  i_A(x) = \begin{cases}
+  1 & \text{if } x \in A \\
+  0 & \text{otherwise}
+  \end{cases}
+  $$
+>
+> Therefore, we also have $\vert A \vert = \sum_{x \in X} i_A(x)$.
+
+> *Lemma.*{: .lem}
+> Let $X$ be a set and $A, B \subseteq X$, we have
+>
+> + $i_A = i_B \iff A = B$
+>
+> + $i_{A \cap B} = i_A i_B$
+>
+> + $i_{X \setminus A} = 1 - i_A$
+>
+> + $i_{A \cup B} = 1 - i_{X \setminus (A \cup B)} = 1 - i_{(X \setminus A) \cap (X \setminus B)} = 1 - (1 - i_A)(1 - i_B) = i_A + i_B - i_{A \cap B}$
+>
+> + $i_{A \setminus B} = i_{A \cap (X \setminus B)} = i_A(1 - i_B) = i_A - i_{A \cap B}$
+
+> *Theorem.*{: .thm}
+> $\vert A \cup B \vert = \vert A \vert + \vert B \vert - \vert A \cap B \vert$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \vert A \cup B \vert &= \sum_{x \in X} i_{A \cup B}(x) \\
+  &= \sum_{x \in X} i_A(x) + i_B(x) - i_{A \cap B}(x) \\
+  &= \vert A \vert + \vert B \vert - \vert A \cap B \vert
+  \end{align*}
+  $$
+
+> *Theorem.*{: .thm}
+> **[Inclusion-Exclusion Principle]**
+> Let $A_i$ be the subsets of a finite set $X$, for $1 \le i \le n$. Then
+>
+> $$
+  \vert A_1 \cup \cdots \cup A_n \vert = \sum_i \vert A_i \vert - \sum_{i < j} \vert A_i \cap A_j \vert + \cdots + (-1)^{n-1} \vert A_1 \cap \cdots \cap A_n \vert
+  $$
+>
+> or
+>
+> $$
+  \vert (X \setminus A_1) \cap \cdots \cap (X \setminus A_n) \vert = \vert X \vert - \sum_i \vert A_i \vert + \sum_{i < j} \vert A_i \cap A_j \vert + \cdots + (-1)^{n} \vert A_1 \cap \cdots \cap A_n \vert
+  $$
+>
+> since $\vert A_1 \cup \cdots \cup A_n \vert = \vert X \vert - \vert (X \setminus A_1) \cap \cdots \cap (X \setminus A_n) \vert$.
+>
+> *Proof.*{: .prf}
+>
+> Using the indicator functions,
+>
+> $$
+  \begin{align*}
+  i_{(X \setminus A_1) \cap \cdots \cap (X \setminus A_n)} &= \prod_j i_{X \setminus A_j} \\
+  &= \prod_j (1 - i_{A_j}) \\
+  &= 1 - \sum_i i_{A_i} + \sum_{i < j} i_{A_i}i_{A_j} + \cdots + (-1)^n i_{A_1}i_{A_2}...i_{A_n} \\
+  &= 1 - \sum_i i_{A_i} + \sum_{i < j} i_{A_i \cap A_j} + \cdots + (-1)^n i_{A_1 \cap \cdots \cap A_n}
+  \end{align*}
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  \vert (X \setminus A_1) \cap \cdots \cap (X \setminus A_n) \vert &=
+  \sum_{x \in X} i_{(X \setminus A_1) \cap \cdots \cap (X \setminus A_n)}(x) \\
+  &= \sum_x 1 - \sum_i i_{A_i} + \sum_{i < j} \sum_x i_{A_i \cap A_j}(x) + \cdots + (-1)^n \sum_x i_{A_1 \cap \cdots \cap A_n}(x) \\
+  &= \vert X \vert - \sum_i \vert A_i \vert + \sum_{i < j} \vert A_i \cap A_j \vert + \cdots + (-1)^{n} \vert A_1 \cap \cdots \cap A_n \vert
+  \end{align*}
+  $$
+
 ## References
 
-* [Dexter Chua _Part IA - Numbers and Sets_, 2014 - Chapter 2](https://dec41.user.srcf.net/notes/IA_M/numbers_and_sets.pdf)
+* [Dexter Chua _Part IA - Numbers and Sets_, 2014 - Chapter 2, 3](https://dec41.user.srcf.net/notes/IA_M/numbers_and_sets.pdf)
