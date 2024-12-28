@@ -60,6 +60,18 @@ No simple proof is known, but some of arithmetic progression can be proved using
 
 ## Sieve of Eratosthenes
 
+The **sieve of Eratosthenes** is a method to find all the primes less than or equal to a given positive integer $n$.
+By listing all the positive integers less than or equal to $n$, we continue to cross out multiples of $2$ (except $2$ itself), then $3$ and so on, all the one that are not crossed out are primes.
+The following lemma shows that we can stop when we reach $\sqrt{n}$.
+
+> *Lemma.*{: .lem}
+> If $n$ is a composite, then $n$ has a prime factor not exceeding $\sqrt{n}$.
+>
+> *Proof.*{: .prf}
+>
+> For $n = ab$ where $1 < a \le b < n$, we must have $a \le \sqrt{n}$ otherwise $ab > n$.
+> As $a$ must have a prime divisor, $n$ must have a prime divisor not exceeding $\sqrt{n}$.
+
 ## Special Primes
 
 ## Fundamental Theorem of Arithmetic
