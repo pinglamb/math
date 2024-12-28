@@ -158,7 +158,7 @@ From $r_j = r_{j+1}q_{j+1} + r_{j+2}$, we can see that it takes the most steps t
 By reversing the algorithm, we can obtain the linear combination of two integers.
 
 > *Theorem.*{: .thm}
-> From the divisions applied, we have
+> From the divisions applied, we can express $(a, b)$ as linear combination of $a$ and $b$ by
 >
 > $$
   \begin{align*}
@@ -170,6 +170,41 @@ By reversing the algorithm, we can obtain the linear combination of two integers
                &= (\cdots) a + (\cdots) b
   \end{align*}
   $$
+
+## Linear Diophantine Equations
+
+Diophantine equations are equations that requires the solutions coming from the set of integers.
+For example, the famous Pythagorean equation $a^2 + b^2 = c^2$.
+
+Linear diophantine equations have general solutions as described below:
+
+> *Theorem.*{: .thm}
+> Suppose $d = (a, b)$, the equation $ax + by = c$ has infinitely many integral solutions iff $d \mid c$.
+>
+> *Proof.*{: .prf}
+>
+> As $d = sa + tb$ and $d \mid c \implies c = de$, we have $c = de = a(se) + b(te)$, which is one solution of the equation $x_0 = se$ and $y_0 = te$.
+>
+> Consider $x = x_0 + (b/d)n$ and $y = y_0 - (a/d)n$, we have
+>
+> $$
+  ax + by = ax_0 + by_0 + (ab/d)n - (ab/d)n = ax_0 + by_0 = c
+  $$
+>
+> so $(x, y)$ is a solution.
+>
+> Suppose $(x, y)$ is a solution, then
+>
+> $$
+  \begin{align*}
+  ax + by - (ax_0 + by_0) &= 0 \\
+  a(x - x_0) &= b(y_0 - y) \\
+  (a/d)(x - x_0) &= (b/d)(y_0 - y)
+  \end{align*}
+  $$
+>
+> As $(a/d, b/d) = 1$, $a/d \mid y_0 - y$, so $y_0 - y = (a/d)n$ and $y = y_0 - (a/d)n$.
+> Similarily, $x = x_0 + (b/d)n$. Hence, any solution is of the form $x = x_0 + (b/d)n$ and $y = y_0 - (a/d)n$.
 
 ## References
 

@@ -43,9 +43,9 @@ title: Home
 * [Relations](numbers-and-sets/relations.md)
 * [Divisibility](numbers-and-sets/divisibility.md)
 * [Primes](numbers-and-sets/primes.md)
+* [Combinations](numbers-and-sets/combinations.md)
 * [Congruences](numbers-and-sets/congruences.md)
 * [Fermat's Theorem](numbers-and-sets/fermat-theorem.md)
-* [Real Numbers](numbers-and-sets/real-numbers.md)
 * [Sequences and Series](numbers-and-sets/sequences-series.md)
 * [Countability](numbers-and-set/countability.md)
 
