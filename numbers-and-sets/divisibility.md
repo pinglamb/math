@@ -138,12 +138,38 @@ In other words, it means that the greatest common divisor is divisible by all ot
 >
 > *Proof.*{: .prf}
 >
-> As $(a + bc, b) = (a, c).
-
+> As $(a + bc, b) = (a, b)$, with $a = r, b = d, q = c$, we have $(r + dq = e, d) = (r, d)$.
 
 The Euclidean Algorithm is an extremely fast way to find greatest common divisors.
 
+> *Theorem.*{: .thm}
+> **[Euclidean Algorithm]** Let $r_0 = a$ and $r_1 = b$ be integers such that $a \ge b > 0$.
+> If the division algorithm is successively applied to obtain $r_j = r_{j+1}q_{j+1} + r_{j+2}$ with $0 < r_{j+2} < r_{j+1}$ for $j = 0, 1, 2, ..., n - 2$
+> and $r_{n+1} = 0$, then $r_n = (a, b)$ (the last non-zero remainder).
+>
+> *Proof.*{: .prf}
+>
+> By applying the division algorithm successively, we obtain a sequence of remainders
+> $a = r_0 > r_1 > r_2 > ... \ge 0$ which can contain no more than $a$ terms, so it eventually becomes $0$.
+> Hence, $(a, b) = (r_0, r_1) = (r_1, r_2) = ... = (r_{n-1}, r_n) = (r_n, 0) = r_n$.
 
+From $r_j = r_{j+1}q_{j+1} + r_{j+2}$, we can see that it takes the most steps to find $(F_{n+1}, F_{n+2})$, where $F_n$ is the Fibonacci number.
+
+By reversing the algorithm, we can obtain the linear combination of two integers.
+
+> *Theorem.*{: .thm}
+> From the divisions applied, we have
+>
+> $$
+  \begin{align*}
+  (a, b) = r_n &= r_{n-2} - r_{n-1}q_{n-1} \\
+               &= r_{n-2} - (r_{n-3} - r_{n-2}q_{n-2})q_{n-1} \\
+               &= r_{n-2}(1 + q_{n-2}q_{n-1}) - r_{n-3}q_{n-1} \\
+               &= (r_{n-4} - r_{n-3}q_{n-3})(1 + q_{n-2}q_{n-1}) - r_{n-3}q_{n-1} \\
+               &= \cdots \\
+               &= (\cdots) a + (\cdots) b
+  \end{align*}
+  $$
 
 ## References
 
