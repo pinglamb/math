@@ -112,6 +112,39 @@ The concept of the divisibility of one integer by another is central in number t
 >
 > As there are integers $m$ and $n$ such that $d = ma + nb$, so we have $kd = (km)a + (kn)b$ for $k \in \mathbb{Z}$ and all multiples of $(a, b)$ can be expressed as linear combination.
 
+There is an alternative definition of greatest common divisor without depending on ordering, which is useful in the study of algebraic number theory.
+
+> *Theorem.*{: .thm}
+> A positive integer $d = (a, b)$ iff
+>
+> + $d \mid a$ and $d \mid b$
+>
+> + $\forall c \in \mathbb{Z}, c \mid a \land c \mid b \implies c \mid d$
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) If $d = (a, b)$, $d \mid a$ and $d \mid b$ by definition.
+> As $d = ma + nb$, any common divisior $c$ of $a$ and $b$ divides $d$.
+>
+> ($\Leftarrow$) $d$ is a common divisor of $a$ and $b$ and for any other common divisor $c$, we have $d = ck$ for some integer $k$.
+> Hence, $c = d/k \le d$ so $d$ is the greatest commmon divisor.
+
+In other words, it means that the greatest common divisor is divisible by all other common divisors.
+
+## Euclidean Algorithm
+
+> *Lemma.*{: .lem}
+> If $e = dq + r$, then $(e, d) = (d, r)$.
+>
+> *Proof.*{: .prf}
+>
+> As $(a + bc, b) = (a, c).
+
+
+The Euclidean Algorithm is an extremely fast way to find greatest common divisors.
+
+
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1, 3.3
