@@ -171,7 +171,65 @@ The above four ways to interpret ${n \choose k}$ are therefore equivalent.
 > We can choose all $k$ elements from $M$ and nothing from $N$, or $k-1$ elements from $M$ and $1$ from $N$, ...
 > So, the total number of ways is as the sum formulated on the L.H.S..
 
-## Polynomial in Binomial Coefficients
+## Binomial Polynomials
+
+> *Definition.*{: .def}
+> **Binomial polynomials** are polynimals that are in terms of binomial coefficients instead of power of $n$, i.e.
+>
+> $$
+  f(n) = a_0 {n \choose 0} + a_1 {n \choose 1} + a_2 {n \choose 2} + ...
+  $$
+
+For a normal polynomial in terms of powers of $n$, it might be hard to tell if the values are always integers.
+However, binomial polynomials have the following property.
+
+> *Theorem.*{: .thm}
+> A binomial polynomial always has integer values iff all the coefficients are integers.
+>
+> *Proof.*{: .prf}
+>
+> ($\Leftarrow$) For all $n \in \mathbb{N}$, ${n \choose k}$ is always integer, so if the coefficients $a_i$ are all integers, the values must be integers.
+>
+> ($\Rightarrow$) If a binomial polynomial $f(n)$ always has integer values, we have
+>
+> $$
+  \begin{align*}
+  f(0) &= a_0 &\implies a_0 \in \mathbb{Z} \\
+  f(1) &= a_0 + a_1 &\implies a_1 \in \mathbb{Z} \\
+  f(2) &= a_0 + 2a_1 + a_2 &\implies a_2 \in \mathbb{Z} \\
+  \vdots
+  \end{align*}
+  $$
+>
+> Hence, all the coefficients $a_i$ are integers.
+
+Base on that, for example,
+
+$$
+{n^3 \over 6} + {5n \over 6} = {n \choose 3} + {n \choose 2} + {n \choose 1}
+$$
+
+so it is always integer.
+
+Another use of it is base on the fact that we can sum over binomial coefficients with some of the identities above.
+For example, as
+
+$$
+n^2 = 2 \cdot {n(n-1) \over 2} + n = 2 {n \choose 2} + {n \choose 1}
+$$
+
+Therefore,
+
+$$
+\begin{align*}
+1^2 + 2^2 + ... + n^2 &= 2 \sum_{k=0}^n {k \choose 2} + \sum_{k=0}^n {k \choose 1} \\
+&= 2 {n + 1 \choose 3} + {n + 1 \choose 2} \\
+&= 2 \cdot {(n+1)(n)(n-1) \over 6} + {(n+1)(n) \over 2} \\
+&= {n(n+1)(2n - 2 + 3) \over 6} \\
+&= {n(n+1)(2n + 1) \over 6}
+\end{align*}
+$$
+
 
 ## References
 
