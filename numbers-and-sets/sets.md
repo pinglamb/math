@@ -187,17 +187,17 @@ All sets form a [group](../groups/groups.md) under symmetric difference.
 > Therefore, we also have $\vert A \vert = \sum_{x \in X} i_A(x)$.
 
 > *Lemma.*{: .lem}
-> Let $X$ be a set and $A, B \subseteq X$, we have
+> Let $A$ and $B$ be two sets, we have
 >
 > + $i_A = i_B \iff A = B$
 >
 > + $i_{A \cap B} = i_A i_B$
 >
-> + $i_{X \setminus A} = 1 - i_A$
+> + $i_{A^\mathsf{c}} = 1 - i_A$
 >
-> + $i_{A \cup B} = 1 - i_{X \setminus (A \cup B)} = 1 - i_{(X \setminus A) \cap (X \setminus B)} = 1 - (1 - i_A)(1 - i_B) = i_A + i_B - i_{A \cap B}$
+> + $i_{A \cup B} = 1 - i_{A^\mathsf{c} \cap B^\mathsf{c}} = 1 - (1 - i_A)(1 - i_B) = i_A + i_B - i_{A \cap B}$
 >
-> + $i_{A \setminus B} = i_{A \cap (X \setminus B)} = i_A(1 - i_B) = i_A - i_{A \cap B}$
+> + $i_{A \setminus B} = i_{A \cap B^\mathsf{c}} = i_A(1 - i_B) = i_A - i_{A \cap B}$
 
 > *Theorem.*{: .thm}
 > $\vert A \cup B \vert = \vert A \vert + \vert B \vert - \vert A \cap B \vert$
@@ -223,10 +223,10 @@ All sets form a [group](../groups/groups.md) under symmetric difference.
 > or
 >
 > $$
-  \vert (X \setminus A_1) \cap \cdots \cap (X \setminus A_n) \vert = \vert X \vert - \sum_i \vert A_i \vert + \sum_{i < j} \vert A_i \cap A_j \vert + \cdots + (-1)^{n} \vert A_1 \cap \cdots \cap A_n \vert
+  \vert A_1^\mathsf{c} \cap \cdots \cap A_n^\mathsf{c} \vert = \vert X \vert - \sum_i \vert A_i \vert + \sum_{i < j} \vert A_i \cap A_j \vert + \cdots + (-1)^{n} \vert A_1 \cap \cdots \cap A_n \vert
   $$
 >
-> since $\vert A_1 \cup \cdots \cup A_n \vert = \vert X \vert - \vert (X \setminus A_1) \cap \cdots \cap (X \setminus A_n) \vert$.
+> since $\vert A_1 \cup \cdots \cup A_n \vert = \vert X \vert - \vert A_1^\mathsf{c} \cap \cdots \cap A_n^\mathsf{c} \vert$.
 >
 > *Proof.*{: .prf}
 >
@@ -234,7 +234,7 @@ All sets form a [group](../groups/groups.md) under symmetric difference.
 >
 > $$
   \begin{align*}
-  i_{(X \setminus A_1) \cap \cdots \cap (X \setminus A_n)} &= \prod_j i_{X \setminus A_j} \\
+  i_{A_1^\mathsf{c} \cap \cdots \cap A_n^\mathsf{c}} &= \prod_j i_{A_j^\mathsf{c}} \\
   &= \prod_j (1 - i_{A_j}) \\
   &= 1 - \sum_i i_{A_i} + \sum_{i < j} i_{A_i}i_{A_j} + \cdots + (-1)^n i_{A_1}i_{A_2}...i_{A_n} \\
   &= 1 - \sum_i i_{A_i} + \sum_{i < j} i_{A_i \cap A_j} + \cdots + (-1)^n i_{A_1 \cap \cdots \cap A_n}
@@ -245,8 +245,8 @@ All sets form a [group](../groups/groups.md) under symmetric difference.
 >
 > $$
   \begin{align*}
-  \vert (X \setminus A_1) \cap \cdots \cap (X \setminus A_n) \vert &=
-  \sum_{x \in X} i_{(X \setminus A_1) \cap \cdots \cap (X \setminus A_n)}(x) \\
+  \vert A_1^\mathsf{c} \cap \cdots \cap A_n^\mathsf{c} \vert &=
+  \sum_{x \in X} i_{A_1^\mathsf{c} \cap \cdots \cap A_n^\mathsf{c}}(x) \\
   &= \sum_x 1 - \sum_i i_{A_i} + \sum_{i < j} \sum_x i_{A_i \cap A_j}(x) + \cdots + (-1)^n \sum_x i_{A_1 \cap \cdots \cap A_n}(x) \\
   &= \vert X \vert - \sum_i \vert A_i \vert + \sum_{i < j} \vert A_i \cap A_j \vert + \cdots + (-1)^{n} \vert A_1 \cap \cdots \cap A_n \vert
   \end{align*}
