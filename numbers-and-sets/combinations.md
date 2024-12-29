@@ -74,3 +74,52 @@ $$
 > and there are $r(r-1)(r-2)...1$ ways to order them.
 
 The above four ways to interpret ${n \choose k}$ are therefore equivalent.
+
+## Identities
+
+> *Theorem.*{: .thm}
+> For $n, k \in \mathbb{N}$,
+>
+> $$
+  {n \choose k} = {n \choose n-k}
+  $$
+
+> *Theorem.*{: .thm}
+> For $n \in \mathbb{N}$, the sum
+>
+> $$
+  {n \choose 0} + {n \choose 1} + \dots + {n \choose n} = 2^n
+  $$
+
+> *Theorem.*{: .thm}
+> For $n \in \mathbb{N}$ with $n \ge 1$, the alternating sum
+>
+> $$
+  {n \choose 0} - {n \choose 1} + {n \choose 2} - {n \choose 3 }+ \dots + (-1)^n{n \choose n} = 0
+  $$
+
+> *Theorem.*{: .thm}
+> For $n, k \in \mathbb{N}$,
+>
+> $$
+  {k \choose k} + {k + 1 \choose k} + \dots + {n \choose k} = {n+1 \choose k+1}
+  $$
+
+> *Theorem.*{: .thm}
+> For $n, k, r \in \mathbb{N}$,
+>
+> $$
+  {n \choose k} {k \choose r} = {n \choose r} {n-r \choose k-r}
+  $$
+
+> *Theorem.*{: .thm}
+> For $m, n, k \in \mathbb{N}$,
+>
+> $$
+  \sum_{i = 0}^k {m \choose k - i} {n \choose i} = {m + n \choose k}
+  $$
+
+## References
+
+* [Richard E Borcherds _Introduction to number theory_ - Lecture 7](https://youtu.be/TBolWCObRgg?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8)
+* [Dexter Chua _Part IA - Numbers and Sets_, 2014 - Chapter 4](https://dec41.user.srcf.net/notes/IA_M/numbers_and_sets.pdf)
