@@ -41,6 +41,13 @@ It is commonly used for proving two sets are equal, by showing all elements in $
 Given two sets $A$ and $B$,
 
 > *Definition.*{: .def}
+> The **complement** is defined by
+>
+> $$
+  A^\mathsf{c} = \set{x : x \not \in A}
+  $$
+
+> *Definition.*{: .def}
 > The **intersection** is defined by
 >
 > $$
@@ -62,6 +69,56 @@ Given two sets $A$ and $B$,
   $$
 
 > *Definition.*{: .def}
+> The **power set** of $X$ is defined by
+>
+> $$
+  \mathcal{P}(X) = \set{A : A \subseteq X}
+  $$
+>
+> i.e. the set of all subsets.
+
+## Identities
+
+> *Theorem.*{: .thm}
+> _Distributive Laws_
+>
+> $$
+  \begin{align*}
+  A \cup (B \cap C) &= (A \cup B) \cap (A \cup C) \\
+  A \cap (B \cup C) &= (A \cap B) \cup (A \cap C)
+  \end{align*}
+  $$
+
+> *Theorem.*{: .thm}
+> _De Morgan's Laws_
+>
+> $$
+  \begin{align*}
+  (A \cup B)^\mathsf{c} &= A^\mathsf{c} \cap B^\mathsf{c} \\
+  (A \cap B)^\mathsf{c} &= A^\mathsf{c} \cup B^\mathsf{c}
+  \end{align*}
+  $$
+
+> *Theorem.*{: .thm}
+> _Absorption Laws_
+>
+> $$
+  \begin{align*}
+  A \cup (A \cap B) = A \\
+  A \cap (A \cup B) = A
+  \end{align*}
+  $$
+
+> *Theorem.*{: .thm}
+> _Set Difference Law_
+>
+> $$
+  A \setminus B = A \cap B^\mathsf{c}
+  $$
+
+## Symmetric Difference
+
+> *Definition.*{: .def}
 > The **symmetric difference** is defined by
 >
 > $$
@@ -70,16 +127,31 @@ Given two sets $A$ and $B$,
 >
 > i.e. the element is either in $A$ or $B$ but not both.
 
-All sets form a [group](../groups/groups.md) under symmetric difference.
-
-> *Definition.*{: .def}
-> The **power set** of $X$ is defined by
+> *Theorem.*{: .thm}
+> Alternatively, we have
 >
 > $$
-  \mathcal{P}(X) = \set{A : A \subseteq X}
+  \begin{align*}
+  A \Delta B &= (A \setminus B) \cup (B \setminus A) = (A \cap B^\mathsf{c}) \cup (A^\mathsf{c} \cap B) \\
+             &= (A \cup B) \cap (A^\mathsf{c} \cup B^\mathsf{c})
+  \end{align*}
   $$
+
+> *Theorem.*{: .thm}
+> Symmetric difference is associative, i.e. $A \Delta (B \Delta C) = (A \Delta B) \Delta C$.
 >
-> i.e. the set of all subsets.
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  A \Delta (B \Delta C) &= (A \cap ((B \cup C) \cap (B^\mathsf{c} \cup C^\mathsf{c}))^\mathsf{c}) \cup (A^\mathsf{c} \cap ((B \cap C^\mathsf{c}) \cup (B^\mathsf{c} \cap C))) \\
+  &= (A \cap B \cap C) \cup (A \cap B^\mathsf{c} \cap C^\mathsf{c}) \cup (A^\mathsf{c} \cap B \cap C^\mathsf{c}) \cup (A^\mathsf{c} \cap B^\mathsf{c} \cap C) \\
+  &= (((A \cup B) \cap (A^\mathsf{c} \cup B^\mathsf{c}))^\mathsf{c} \cap C) \cup (((A \cap B^\mathsf{c}) \cup (A^\mathsf{c} \cap B)) \cap C^\mathsf{c}) \\
+  &= (A \Delta B) \Delta C
+  \end{align*}
+  $$
+
+All sets form a [group](../groups/groups.md) under symmetric difference.
 
 ## Ordered Pairs
 
