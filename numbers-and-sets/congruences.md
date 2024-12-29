@@ -7,12 +7,13 @@ title: Congruences &#124; Numbers and Sets
 {: .page-title}
 
 > *Definition.*{: .def}
-> Let $m$ be a positive integer. For integers $a$ and $b$, $a$ is **congruent** to $b$ modulo $m$ if $m \mid (a-b)$ or $a = b + km$.
-> It is written as
+> Let $m$ be a positive integer. For integers $a$ and $b$, $a$ is **congruent** to $b$ modulo $m$, denoted by
 >
 > $$
   a \equiv b \pmod m
   $$
+>
+> if $m \mid (a-b)$ or equivalently $a = b + km$.
 
 ## Modular Arithmetic
 
@@ -114,6 +115,41 @@ title: Congruences &#124; Numbers and Sets
   \set{0, 1, 2, ..., m - 1}
   $$
 
+> *Lemma.*{: .lem}
+> A set of $m$ incongruent integers modulo $m$ forms a complete system of residues modulo $m$.
+>
+> *Proof.*{: .prf}
+>
+> Assume it is not a complete system of residues modulo $m$, then there is an integer $a$ such that it is not congruent to any integer in the set.
+> It is impossible as there can only be $m$ possible remainders when dividing $m$, thus $a$ has to have the same remainder as one of the integer when dividing $m$ and congruent to it.
+>
+> It means if we can show that a set of $m$ integers are pairwise incongruent, then it is a complete system of residues.
+
+
+> *Theorem.*{: .thm}
+> If $r_1, r_2, \ldots, r_m$ is a complete system of residues modulo $m$, then
+>
+> $$
+  ar_1 + b, ar_2 + b, \ldots, ar_m + b
+  $$
+>
+> in which $(a, m) = 1$  is a complete system of residues modulo $m$.
+>
+> *Proof.*{: .prf}
+>
+> For any $0 < i, j \le m$,
+>
+> $$
+  \begin{align*}
+  ar_i + b &\equiv ar_j + b &\pmod m \\
+  ar_i &\equiv ar_j &\pmod m \\
+  r_i &\equiv r_j &\pmod m \\
+  \end{align*}
+  $$
+>
+> which is possible only if $i = j$.
+>
+> Hence, all $m$ integers $ar_k + b$ are pairwise incongruent and forms a complete system of residues modulo $m$.
 
 ## Linear Congruences
 
