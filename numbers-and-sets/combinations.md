@@ -89,6 +89,18 @@ The above four ways to interpret ${n \choose k}$ are therefore equivalent.
 > Choosing $k$ elements from $n$ elements is the same as choosing $n-k$ elements to discard from $n$ elements.
 
 > *Theorem.*{: .thm}
+> For $n, k, r \in \mathbb{N}$,
+>
+> $$
+  {n \choose k} {k \choose r} = {n \choose r} {n-r \choose k-r}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The L.H.S. means we choose $k$ elements from $X$ with $n$ elements as a subset to form a subset $Y$, then choose $r$ elements from $Y$ to form a subset $Z$.
+> The other way of doing so is choosing $r$ elements directly from $X$ to form $Z$ first, then choose $k - r$ elements from $X \setminus Z$, as described on the R.H.S..
+
+> *Theorem.*{: .thm}
 > For $n \in \mathbb{N}$, the sum
 >
 > $$
@@ -130,12 +142,20 @@ The above four ways to interpret ${n \choose k}$ are therefore equivalent.
   {k \choose k} + {k + 1 \choose k} + \dots + {n \choose k} = {n+1 \choose k+1}
   $$
 >
-
-> *Theorem.*{: .thm}
-> For $n, k, r \in \mathbb{N}$,
+> *Proof.*{: .prf}
+>
+> From the Pascal triangle, the value of ${n+1 \choose k+1}$ is equal to the sum of the "diagonal" previous to it up to the $n$-th row.
+> For example, ${5 \choose 3} = {1 \choose 1} + {2 \choose 1} + {3 \choose 1} + {4 \choose 1} = 1 + 2 + 3 + 4 = 10$.
 >
 > $$
-  {n \choose k} {k \choose r} = {n \choose r} {n-r \choose k-r}
+  \begin{gather*}
+  & & & & 1 \\
+  & & & 1 & & \mathbf{1} \\
+  & & 1 & & \mathbf{2} \\
+  & 1 & & \mathbf{3} \\
+  1 & & \mathbf{4} \\
+  & & & \mathbf{10}
+  \end{gather*}
   $$
 
 > *Theorem.*{: .thm}
@@ -144,6 +164,12 @@ The above four ways to interpret ${n \choose k}$ are therefore equivalent.
 > $$
   \sum_{i = 0}^k {m \choose k - i} {n \choose i} = {m + n \choose k}
   $$
+>
+> *Proof.*{: .prf}
+>
+> To choose $k$ elements from $m + n$ elements, we can split them into two subsets $M$ with $m$ elements and $N$ with $n$ elements.
+> We can choose all $k$ elements from $M$ and nothing from $N$, or $k-1$ elements from $M$ and $1$ from $N$, ...
+> So, the total number of ways is as the sum formulated on the L.H.S..
 
 ## Polynomial in Binomial Coefficients
 
