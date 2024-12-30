@@ -257,6 +257,26 @@ so $x \equiv 1 \cdot 35 \cdot 2 + 2 \cdot 21 \cdot 1 + 3 \cdot 15 \cdot 1 \equiv
 
 ## Systems of Linear Congruences
 
+For system of linear congruences with same modolus, e.g.
+
+$$
+\begin{align*}
+3x + 4y &\equiv 5 \pmod{13} \\
+2x + 5y &\equiv 7 \pmod{13}
+\end{align*}
+$$
+
+As we can do modular arithmetic the same way as normal integer operation, we can apply the same technique to eliminate $y$ by multiplications, i.e.
+
+$$
+\begin{align*}
+5(3x + 4y) - 4(2x + 5y) &\equiv 5(5) - 4(7) \pmod{13} \\
+7x &\equiv -3 \pmod{13}
+\end{align*}
+$$
+
+which is a linear congruence we can solve, with the answers being $x \equiv 7 \pmod{13}$ and $y \equiv 9 \pmod{13}$.
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 4
