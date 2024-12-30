@@ -14,6 +14,7 @@ title: Congruences &#124; Numbers and Sets
   $$
 >
 > if $m \mid (a-b)$ or equivalently $a = b + km$.
+> $m$ is called the **modulus** of the congruence (plural: _moduli_).
 
 ## Modular Arithmetic
 
@@ -199,6 +200,60 @@ title: Congruences &#124; Numbers and Sets
 > It is still a solution to the original congruence by adding multiples of $m/d$, and there are exactly $d$ of them modulo $m$.
 
 ## Chinese Remainder Theorem
+
+The Chinese Remainder Theorem is for solving system of congruences in one variable but multiple moduli, e.g.
+
+$$
+\begin{align*}
+x &\equiv 1 \pmod 3 \\
+x &\equiv 2 \pmod 5 \\
+x &\equiv 3 \pmod 7 \\
+\end{align*}
+$$
+
+> *Theorem.*{: .thm}
+> **[Chinese Remainder Theorem]**
+> Let $m_1, m_2, ..., m_r$ be pairwise relatively prime positive integers. The system of congruences
+>
+> $$
+  \begin{align*}
+  x &\equiv a_1 \pmod{m_1} \\
+  x &\equiv a_2 \pmod{m_2} \\
+  &\vdots \\
+  x &\equiv a_r \pmod{m_r} \\
+  \end{align*}
+  $$
+>
+> has a unique solution
+>
+> $$
+  x \equiv a_1M_1y_1 + a_2M_2y_2 + \dots + a_rM_ry_r \pmod M
+  $$
+>
+> where $M = m_1m_2...m_k$, $M_k = m_1m_2...m_{k-1}m_{k+1}...m_r$ and $y_k$ is the inverse of $M_k$ modulo $m_k$.
+>
+> *Proof.*{: .prf}
+>
+> For $1 \le k \le r$, $y_k$ exists because $(M_k, m_k) = 1$.
+>
+> We can see that $x = a_1M_1y_1 + a_2M_2y_2 + \dots + a_rM_ry_r$ satisfies all the $r$ congruences
+> because all the terms except $a_kM_ky_k$ are eliminated as $(M_i, m_k) = m_k$ when $i \not = k$.
+> By construction, $M_ky_k \equiv 1 \pmod{m_k}$, so $x \equiv a_k \pmod{m_k}$.
+>
+> Assume $x_0$ and $x_1$ are both solutions, i.e. $m_k \mid (x_0 - x_1)$ for $k = 1, 2, ..., r$.
+> As $m_1, m_2, ..., m_r$ are pairwise relatively prime, $M \mid (x_0 - x_1)$ and $x_0 \equiv x_1 \pmod M$ so the solution is unique.
+
+The way to apply C.R.T. is that we have to find all the $M_k$ and $y_k$. Using the system of congruences from the above as example,
+
+$$
+\begin{align*}
+a_1 &= 1 &\quad M_1 &= 5 \cdot 7 = 35 &\quad y_1 &= (35 \bmod 3)^{-1} = 2 \\
+a_2 &= 2 &\quad M_2 &= 3 \cdot 7 = 21 &\quad y_2 &= (21 \bmod 5)^{-1} = 1 \\
+a_3 &= 3 &\quad M_3 &= 3 \cdot 5 = 15 &\quad y_3 &= (15 \bmod 7)^{-1} = 1 \\
+\end{align*}
+$$
+
+so $x \equiv 1 \cdot 35 \cdot 2 + 2 \cdot 21 \cdot 1 + 3 \cdot 15 \cdot 1 \equiv 157 \equiv 52 \pmod{105}$.
 
 ## Systems of Linear Congruences
 
