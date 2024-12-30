@@ -151,6 +151,61 @@ The Fermat's Little Theorem, together with Wilson's Theorem and Euler's Theorem,
 > *Corollary.*{: .cor}
 > If $p$ is prime and $(a, p) = 1$, then $a^{-1} \equiv a^{p-2} \pmod p$.
 
+## Euler's Theorem
+
+Euler's Theorem is the generalization of Fermat's Theorem.
+
+> *Definition.*{: .def}
+> Let $m$ be a positive integer. The **Euler's totient function** $\varphi(m)$ is defined to be the number of positive integers not exceeding $m$ that are relatively prime to $m$.
+
+> *Definition.*{: .def}
+> A **reduced residue system** modulo $m$ is a set of $\varphi(m)$ integers that are relatively prime to $m$ but pairwise incongruent to each other modulo $m$.
+
+> *Theorem.*{: .thm}
+> If $r_1, r_2, \ldots, r_{\varphi(m)}$ is a reduced residue system modulo $m$, then
+>
+> $$
+  ar_1, ar_2, \ldots, ar_{\varphi(m)}
+  $$
+>
+> in which $(a, m) = 1$ is also a reduced residue system modulo $m$.
+>
+> *Proof.*{: .prf}
+>
+> As $(a, m) = 1$ and $\set{r_i}$ are relatively prime to $m$, we have $\set{ar_i}$ are also relatively prime to $m$.
+>
+> If $ar_i \equiv ar_j \pmod m$, then $r_i \equiv r_j \pmod m$, which is possible only when $i = j$.
+>
+> Hence, all $\varphi(m)$ integers $ar_1, ar_2, ..., ar_{\varphi(m)}$ are relatively prime to $m$ and pairwise incongruent modulo $m$ and is a reduced residue system.
+
+> *Theorem.*{: .thm}
+> **[Euler's Theorem]**
+> If $m$ is a positive integer and $a$ is an integer with $(a, m) = 1$, then
+>
+> $$
+  a^{\varphi(m)} \equiv 1 \pmod m
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Similar to the proof of Fermat's Theorem, let $r_1, r_2, ..., r_{\varphi(m)}$ be a reduced residue system modulo $m$.
+> We have $ar_1, ar_2, ... ar_{\varphi(m)}$ is also a reduced residue system and is just a reordering of the integers $r_1, r_2, ..., r_{\varphi(m)}$.
+>
+> Hence,
+>
+> $$
+  ar_1 \cdot ar_2 \cdots ar_{\varphi(m)} \equiv r_1r_2 \cdots r_{\varphi(m)} \pmod m
+  $$
+>
+> As $(r_1r_2...r_{\varphi(m)}, m) = 1$, we have
+>
+> $$
+  a^{\varphi(m)} \equiv 1 \pmod m
+  $$
+
+> *Corollary.*{: .cor}
+> Similarily if $(a, m) = 1$, then $a^{-1} \equiv a^{\varphi(m)-1} \pmod m$.
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 6

@@ -133,7 +133,7 @@ title: Congruences &#124; Numbers and Sets
   ar_1 + b, ar_2 + b, \ldots, ar_m + b
   $$
 >
-> in which $(a, m) = 1$  is a complete system of residues modulo $m$.
+> in which $(a, m) = 1$ is also a complete system of residues modulo $m$.
 >
 > *Proof.*{: .prf}
 >
