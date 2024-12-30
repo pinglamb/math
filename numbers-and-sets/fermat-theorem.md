@@ -92,6 +92,65 @@ The Fermat's Little Theorem, together with Wilson's Theorem and Euler's Theorem,
 > Also, the solutions are in pairs of $x \equiv \pm x_0 \pmod m$ and therefore we have their product congruent to $(-1)^{2^{r + s - 1}}$ modulo $m$.
 > Base on that, the product is congruent to $-1$ iff $r + s - 1 = 0$, which are precisely the cases when $m = 4, p^n$ and $2p^n$.
 
+## Fermat's Theorem
+
+> *Theorem.*{: .thm}
+> **[Fermat's Little Theorem]**
+> If $p$ is prime and $a$ is a positive integer with $p \not \mid a$, then
+>
+> $$
+  a^{p-1} \equiv 1 \pmod p
+  $$
+>
+> *Proof.*{: .prf}
+>
+> As $\set{0, 1, 2, ..., p-1}$ is a complete system of residues, the set $\set{0, a, 2a, ..., (p-1)a}$ is also a complete system of residues.
+> Therefore, the integers $a, 2a, ..., (p-1)a$ is just a reordering of the integers $1, 2, ..., p-1$, and hence
+>
+> $$
+  \begin{align*}
+  a \cdot 2a \cdots (p-1)a &\equiv (p - 1)! \pmod p \\
+  a^{p-1} (p - 1)! &\equiv (p - 1)! \pmod p
+  \end{align*}
+  $$
+>
+> As $((p - 1)!, p) = 1$, we have
+>
+> $$
+  a^{p-1} \equiv 1 \pmod p
+  $$
+>
+> Alternatively, we can prove this by binomial theorem.
+> Consider $(x + y)^p = x^p + {n \choose 1}x^{p-1}y + ... + y^p$, as ${n \choose k}$ is divisible by $p$ for $k = 1, 2, ..., p - 1$, we have
+>
+> $$
+  (x + y)^p \equiv x^p + y^p \pmod p
+  $$
+>
+> When $a = 1$, $1^{p - 1} \equiv 1 \pmod p$.
+>
+> When $a = k$, $k^{p - 1} \equiv 1 \pmod p$.
+>
+> When $a = k+1$, $(k + 1)^p \equiv k^p + 1^p \equiv k + 1 \pmod p$. As $p \not \mid k + 1$, $(k + 1)^{p-1} \equiv 1 \pmod p$.
+>
+> By induction, $a^{p - 1} \equiv 1 \pmod p$.
+
+> *Corollary.*{: .cor}
+> If $p$ is prime and $a$ is a positive integer, then
+>
+> $$
+  a^p \equiv a \pmod p
+  $$
+>
+> *Proof.*{: .prf}
+>
+> If $p \not \mid a$, by Fermat's Theorem, $a^{p - 1} \equiv 1 \pmod p \implies a^p \equiv a \pmod p$.
+>
+> If $p \mid a$, $p \mid a^p$, hence $a^p \equiv a \pmod p$.
+
+> *Corollary.*{: .cor}
+> If $p$ is prime and $(a, p) = 1$, then $a^{-1} \equiv a^{p-2} \pmod p$.
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 6
