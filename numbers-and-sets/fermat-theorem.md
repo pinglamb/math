@@ -209,4 +209,4 @@ Euler's Theorem is the generalization of Fermat's Theorem.
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 6
-* [Richard E Borcherds _Introduction to number theory_ - Lecture 10](https://youtu.be/fgHEKAdErbU
+* [Richard E Borcherds _Introduction to number theory_ - Lecture 10](https://youtu.be/fgHEKAdErbU)
