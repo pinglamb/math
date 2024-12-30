@@ -179,7 +179,14 @@ For example, the famous Pythagorean equation $a^2 + b^2 = c^2$.
 Linear diophantine equations have general solutions as described below:
 
 > *Theorem.*{: .thm}
-> Suppose $d = (a, b)$, the equation $ax + by = c$ has infinitely many integral solutions iff $d \mid c$.
+> Suppose $d = (a, b)$, the equation $ax + by = c$ has infinitely many integral solutions iff $d \mid c$,
+> which are of the form
+>
+> $$
+  (x_0 + {b \over d}n, y_0 - {a \over d}n)
+  $$
+>
+> where $(x_0, y_0)$ is a particular solution.
 >
 > *Proof.*{: .prf}
 >

@@ -87,7 +87,7 @@ title: Congruences &#124; Numbers and Sets
   a \equiv b \pmod{m_1m_2 \ldots m_k}
   $$
 
-## Equivalence Relation
+## Complete System of Residues
 
 > *Theorem.*{: .thm}
 > Congruence modulo $m$ is an equivalence relation.
@@ -125,7 +125,6 @@ title: Congruences &#124; Numbers and Sets
 >
 > It means if we can show that a set of $m$ integers are pairwise incongruent, then it is a complete system of residues.
 
-
 > *Theorem.*{: .thm}
 > If $r_1, r_2, \ldots, r_m$ is a complete system of residues modulo $m$, then
 >
@@ -153,9 +152,53 @@ title: Congruences &#124; Numbers and Sets
 
 ## Linear Congruences
 
-## Chinese Remainder Theorem
+> *Definition.*{: .def}
+> A **linear congruence** in one variable is a congruence of the form
+>
+> $$
+  ax \equiv b \pmod m
+  $$
+>
+> where $x$ is an unknown integer.
 
-## Polynomial Congruences
+> *Definition.*{: .def}
+> The **modular inverse** of $a$ modulo $m$ is the integer solution $x$ of $ax \equiv 1 \pmod m$.
+
+> *Theorem.*{: .thm}
+> An integer $a$ has an inverse modulo $m$ iff $(a, m) = 1$.
+> The inverse is unique if it exists.
+>
+> *Proof.*{: .prf}
+>
+> ($\Leftarrow$) If $ax \equiv 1 \pmod m$ has a solution $x \equiv b \pmod m$, then $ab - my = 1$ and hence $(a, m) = 1$ as $ab - my$ is a linear combination of $a$ and $m$.
+>
+> ($\Rightarrow$) If $(a, m) = 1$, by Euclid Algorithm, we can derive the linear combination $ab - my = 1$ and hence $x \equiv b \pmod m$ is the inverse.
+>
+> Suppose $x = b$ is one of the solution for $x$ of the linear diophantine equation $ax + my = 1$.
+> As $(a, m) = 1$, the general solution for $x = b + (m/1)k$ which implies $x \equiv b \pmod m$ is the unique solution.
+
+> *Corollary.*{: .cor}
+> If $(a, m) = 1$, the solution of $ax \equiv b \pmod m$ is unique, namely $x \equiv a^{-1}b \pmod m$.
+
+> *Theorem.*{: .thm}
+> Suppose $ax \equiv b \pmod m$ with $(a, m) = d$.
+> If $d \not \mid b$, the congruence has no solution.
+> If $d \mid b$, the congruence has exactly $d$ solutions, namely
+>
+> $$
+  x \equiv (a/d)^{-1}(b/d) + (m/d)k \pmod m
+  $$
+>
+> with $k = 0, 1, ..., d - 1$.
+>
+> *Proof.*{: .prf}
+>
+> The linear diophantine equation $ax - my = b$ has no solution if $(a, m) \not \mid b$.
+>
+> As $(a/d, m/d) = 1$, the congruence $(a/d)x \equiv (b/d) \pmod{m/d}$ has a unique solution $x = (a/d)^{-1}(b/d) \pmod{m/d}$.
+> It is still a solution to the original congruence by adding multiples of $m/d$, and there are exactly $d$ of them modulo $m$.
+
+## Chinese Remainder Theorem
 
 ## Systems of Linear Congruences
 
