@@ -185,7 +185,27 @@ It means there is always a rational in between two rationals.
 
 It means there is no infinitely large or infinitely small element in $\mathbb{Q}$.
 
+However, the set of rational numbers doesn't contain all the numbers we know, for example:
+
+> *Theorem.*{: .thm}
+> There is no rational $q \in \mathbb{Q}$ with $q^2 = 2$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $(a/b)^2 = 2$, where $b$ is chosen as small as possible.
+> We have $a^2 = 2b^2$, so $a$ is even and $a = 2a'$.
+> We then have $2a'^2 = b^2$, so $b$ is even and $b = 2b'$.
+> Thus, $a/b = a'/b'$ and we have found a smaller $b'$ which contradicts with the assumption.
+
+The general limitation of $\mathbb{Q}$ is that convergent sequences may not have limits.
+Another way of expressing this is that subsets of $\mathbb{Q}$ which are bounded above
+(i.e. there is a rational number greater than every member of the set), need not have a least upper bounds in $\mathbb{Q}$.
+It leads to the construction of the set of real numbers.
+
+## Real Numbers
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1
+* A G Hamilton _Numbers, sets and axioms_, 1982 - Chapter 1
 * [Dexter Chua _Part IA - Numbers and Sets_, 2014 - Chapter 6](https://dec41.user.srcf.net/notes/IA_M/numbers_and_sets.pdf)
