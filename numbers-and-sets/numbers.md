@@ -146,14 +146,44 @@ Algebraically, $\mathbb{Q}$ is a _totally ordered field_.
 
 > *Theorem.*{: .thm}
 > The natural ordering of $\mathbb{Q}$ is **dense**,
-> i.e. given $x, y \in \mathbb{Q}$ with $x < y$, there is a $z \in \mathbb{Q}$ such that $x < z$ and $z < y$
+> i.e. given $x, y \in \mathbb{Q}$ with $x < y$, there is a $z \in \mathbb{Q}$ such that $x < z$ and $z < y$.
 >
 > *Proof.*{: .prf}
 >
 > Take $z = (x + y) / 2$, we have $z - x = (y - x)/2 \in \mathbb{Q}^{+}$ and $y - z = (y - x)/2 \in \mathbb{Q}^{+}$ as $y - x \in \mathbb{Q}^{+}$.
 > Hence, $x < z$ and $z < y$.
+
+It means there is always a rational in between two rationals.
+
+> *Theorem.*{: .thm}
+> The natural ordering of $\mathbb{Q}$ is **Archimedean**,
+> i.e. given $x, y \in \mathbb{Q}^{+}$, there is a positive integer $n$ such that $y < nx$.
 >
-> It means there is always a rational in between two rationals.
+> *Proof.*{: .prf}
+>
+> Let $x = a/b, y = c/d$ with $a, b, c, d \in \mathbb{Z}$ and $b \not= 0, d \not= 0$.
+> As $x, y \in \mathbb{Q}^{+}$, we can assume that $a, b, c, d \in \mathbb{Z}^{+}$.
+> We require $n/1 \in \mathbb{Q}$ such that
+>
+> $$
+  c/d < (n/1)(a/b)
+  $$
+>
+> which implies
+>
+> $$
+  (nad - bc)/bd \in \mathbb{Q}^{+}
+  $$
+>
+> As we can write $bc = q(ad) + r$ where $q \in \mathbb{N}$ and $0 \le r < ad$, we have
+>
+> $$
+  bc < qad + ad = (q + 1)ad
+  $$
+>
+> Hence, if $n = q + 1$, then $y < nx$.
+
+It means there is no infinitely large or infinitely small element in $\mathbb{Q}$.
 
 ## References
 
