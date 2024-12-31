@@ -144,6 +144,17 @@ $$
 
 Algebraically, $\mathbb{Q}$ is a _totally ordered field_.
 
+> *Theorem.*{: .thm}
+> The natural ordering of $\mathbb{Q}$ is **dense**,
+> i.e. given $x, y \in \mathbb{Q}$ with $x < y$, there is a $z \in \mathbb{Q}$ such that $x < z$ and $z < y$
+>
+> *Proof.*{: .prf}
+>
+> Take $z = (x + y) / 2$, we have $z - x = (y - x)/2 \in \mathbb{Q}^{+}$ and $y - z = (y - x)/2 \in \mathbb{Q}^{+}$ as $y - x \in \mathbb{Q}^{+}$.
+> Hence, $x < z$ and $z < y$.
+>
+> It means there is always a rational in between two rationals.
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1

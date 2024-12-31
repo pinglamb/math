@@ -41,6 +41,7 @@ title: Home
 * [Sets](numbers-and-sets/sets.md)
 * [Functions](numbers-and-sets/functions.md)
 * [Relations](numbers-and-sets/relations.md)
+* [Numbers](numbers-and-sets/numbers.md)
 * [Divisibility](numbers-and-sets/divisibility.md)
 * [Primes](numbers-and-sets/primes.md)
 * [Combinations](numbers-and-sets/combinations.md)
