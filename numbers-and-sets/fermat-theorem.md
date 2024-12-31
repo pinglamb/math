@@ -172,7 +172,7 @@ Euler's Theorem is the generalization of Fermat's Theorem.
 >
 > *Proof.*{: .prf}
 >
-> As $(a, m) = 1$ and $\set{r_i}$ are relatively prime to $m$, we have $\set{ar_i}$ are also relatively prime to $m$.
+> As $(a, m) = 1$ and $r_i$ are relatively prime to $m$, we have $ar_i$ are also relatively prime to $m$, for $i = 1, 2, ..., \varphi(m)$.
 >
 > If $ar_i \equiv ar_j \pmod m$, then $r_i \equiv r_j \pmod m$, which is possible only when $i = j$.
 >
