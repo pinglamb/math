@@ -204,6 +204,14 @@ It leads to the construction of the set of real numbers.
 
 ## Real Numbers
 
+> *Definition.*{: .def}
+> A sequence $x_1, x_2, x_3, ...$ of rational numbers is a **Cauchy sequence** if $x_m - x_n \to 0$ as $m, n \to \infty$.
+> More precisely, given any positive rational number $\varepsilon$, there exists a positive integer $N$ such that
+>
+> $$
+  \vert x_m -x_n \vert < \varepsilon, \forall m, n > N
+  $$
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1
