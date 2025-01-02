@@ -312,6 +312,28 @@ This theorem can be used to prove the existence of "missing" numbers in $\mathbb
 >
 > Hence, it is only possible that $s^2 = 2$.
 
+## Algebraic Numbers
+
+> *Definition.*{: .def}
+> An **algebraic number** is a root of a polynomial with integer/rational coefficients.
+
+> *Definition.*{: .def}
+> A **transcendental number** is a number which is not algebraic.
+
+> *Theorem.*{: .thm}
+> All rational numbers are algebraic.
+>
+> *Proof.*{: .prf}
+>
+> Let $q = a/b$, it is the root of equation $bx - a = 0$.
+
+> *Theorem.*{: .thm}
+> $\sqrt{2}$ is algebraic.
+>
+> *Proof.*{: .prf}
+>
+> $\sqrt{2}$ is irrational but it is the root of $x^2 - 2 = 0$.
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1
