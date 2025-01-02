@@ -205,12 +205,49 @@ It leads to the construction of the set of real numbers.
 ## Real Numbers
 
 > *Definition.*{: .def}
-> A sequence $x_1, x_2, x_3, ...$ of rational numbers is a **Cauchy sequence** if $x_m - x_n \to 0$ as $m, n \to \infty$.
-> More precisely, given any positive rational number $\varepsilon$, there exists a positive integer $N$ such that
+> A sequence $(x_n) = x_1, x_2, x_3, ...$ of rational numbers is a **Cauchy sequence** if $x_m - x_n \to 0$ as $m, n \to \infty$,
+> i.e., given any $\varepsilon \in \mathbb{Q}^{+}$, there exists $N \in \mathbb{N}$ such that
 >
 > $$
   \vert x_m -x_n \vert < \varepsilon, \forall m, n > N
   $$
+
+> *Definition.*{: .def}
+> Two Cauchy sequences $(a_n)$ and $(b_n)$ are equivalent, denoted by $(a_n) \approx (b_n)$,
+> if the sequence whose $n$th term is $a_n - b_n$ converges to zero,
+> i.e. given any $\varepsilon \in \mathbb{Q}^{+}$, there exists $N \in \mathbb{N}$ such that
+>
+> $$
+  \vert a_n - b_n \vert < \varepsilon, \forall n \in N
+  $$
+
+> *Theorem.*{: .thm}
+> The relation $\approx$ is an equivalence relation on the set of all Cauchy sequences in $\mathbb{Q}$.
+>
+> *Proof.*{: .prf}
+>
+> $\approx$ is reflexive as $\vert a_n - a_n \vert = 0$ and symmetric as $\vert a_n - b_n \vert = \vert b_n - a_n \vert$.
+>
+> Suppose $(a_n) \approx (b_n)$ and $(b_n) \approx (c_n)$ and let $x_n = a_n - b_n$ and $y_n = b_n - c_n$.
+> As $x_n$ and $y_n$ are converging to zero, $x_n + y_n = a_n - c_n$ is converging to zero so $(a_n) \approx (c_n)$ and $\approx$ is transitive.
+
+> *Definition.*{: .def}
+> The **real numbers** $\mathbb{R}$ is the set of all the equivalence classes of Cauchy sequences in $\mathbb{Q}$ under the relation $\approx$.
+
+Addition and multiplication of real numbers are defined by
+
+$$
+[x_n] + [y_n] = [x_n + y_n]
+$$
+
+and
+
+$$
+[x_n] \times [y_n] = [x_ny_n]
+$$
+
+The proofs regarding the algebraic and order properties of real numbers are omitted and
+we jump straight to the most important property of real numbers that rational numbers don't have:
 
 ## References
 
