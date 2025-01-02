@@ -188,7 +188,7 @@ It means there is no infinitely large or infinitely small element in $\mathbb{Q}
 However, the set of rational numbers doesn't contain all the numbers we know, for example:
 
 > *Theorem.*{: .thm}
-> There is no rational $q \in \mathbb{Q}$ with $q^2 = 2$.
+> There is no $q \in \mathbb{Q}$ with $q^2 = 2$.
 >
 > *Proof.*{: .prf}
 >
@@ -196,6 +196,35 @@ However, the set of rational numbers doesn't contain all the numbers we know, fo
 > We have $a^2 = 2b^2$, so $a$ is even and $a = 2a'$.
 > We then have $2a'^2 = b^2$, so $b$ is even and $b = 2b'$.
 > Thus, $a/b = a'/b'$ and we have found a smaller $b'$ which contradicts with the assumption.
+
+> *Theorem.*{: .thm}
+> The Euler's number $e$ is irrational.
+>
+> *Proof.*{: .prf}
+>
+> By definition,
+>
+> $$
+  e = 1 + {1 \over 1!} + {1 \over 2!} + ...
+  $$
+>
+> Suppose $e = a/b$, with $b \ge 2$ as $e$ is not an integer. Then $b!e \in \mathbb{N}$ and
+>
+> $$
+  b!e = b! + {b! \over 1!} + ... + {b! \over b!} + {b! \over (b+1)!} + {b! \over (b+2)!} + ...
+  $$
+>
+> The sum of the terms until $b!/b!$ is a positive integer, and the sum of remaining terms
+>
+> $$
+  \begin{align*}
+  {b! \over (b+1)!} + {b! \over (b+2)!} + \cdots &= {1 \over b+1} + {1 \over (b+1)(b+2)} + {1 \over (b+1)(b+2)(b+3)} + \cdots \\
+  &< {1 \over b+1} + {1 \over (b+1)^2} + {1 \over (b+1)^3} + \cdots \\
+  &= {1 \over b+1}\left({1 \over 1 - 1/(b+1)}\right) = {1 \over b} < 1
+  \end{align*}
+  $$
+>
+> is not an integer, which is a contradiction.
 
 The general limitation of $\mathbb{Q}$ is that convergent sequences may not have limits.
 Another way of expressing this is that subsets of $\mathbb{Q}$ which are bounded above
