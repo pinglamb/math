@@ -249,6 +249,40 @@ $$
 The proofs regarding the algebraic and order properties of real numbers are omitted and
 we jump straight to the most important property of real numbers that rational numbers don't have:
 
+> *Theorem.*{: .thm}
+> Given any non-empty subset of $A$ of $\mathbb{R}$ which is bounded above,
+> there is a **least upper bound** (or **supremum** in $\mathbb{R}$ for $A$, denoted by $\sup A$.
+
+This theorem can be used to prove the existence of "missing" numbers in $\mathbb{Q}$.
+
+> *Theorem.*{: .thm}
+> There exists $x \in \mathbb{R}$ such that $x^2 = 2$.
+>
+> *Proof.*{: .prf}
+>
+> Let $A = \set{a \in \mathbb{R} : a^2 \le 2}$. $1 \in A$ so $A \not = \emptyset$.
+> If $a \ge 2$, $a^2 \ge 4$, so $A$ is bounded above by $2$ and the supremum $s = \sup A$ exists in which $1 \le s \le 2$.
+>
+> By trichotomy, $s^2 < 2$, $s^2 = 2$ or $s^2 > 2$.
+>
+> Suppose $s^2 < 2$. Let $0 < \delta < (2 - s^2)/5 < 1$, we have $\delta^2 < \delta$ and
+>
+> $$
+  (s + \delta)^2 = s^2 + 2s\delta + \delta^2 \le s^2 + 5\delta < 2
+  $$
+>
+> So $s + \delta > s \in A$, contradicting with the fact that $s$ is the supremum.
+>
+> Suppose $x^2 > 2$. Let $0 < \delta < (s^2 - 2)/4 < 1$, we have
+>
+> $$
+  (s - \delta)^2 = s^2 - 2s\delta + \delta^2 \ge s^2 - 4\delta > 2
+  $$
+>
+> So $s - \delta < s$ is a upper bound, contradicting with the fact that $s$ is the supremum.
+>
+> Hence, it is only possible that $s^2 = 2$.
+
 ## References
 
 * Kenneth H Rosen _Elementary Number Theory_, 2011 - Chapter 1
