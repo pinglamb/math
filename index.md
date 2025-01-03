@@ -48,7 +48,7 @@ title: Home
 * [Congruences](numbers-and-sets/congruences.md)
 * [Fermat's Theorem](numbers-and-sets/fermat-theorem.md)
 * [Sequences and Series](numbers-and-sets/sequences-series.md)
-* [Countability](numbers-and-set/countability.md)
+* [Countability](numbers-and-sets/countability.md)
 
 ## Differential Equations
 {: .left}
