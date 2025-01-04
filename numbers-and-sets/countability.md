@@ -52,6 +52,28 @@ This definition is cumbersome to apply will lead to two results yield more conve
 > *Proof.*{: .prf}
 >
 
+Here are proofs that certain familiar sets are countable.
+
+> *Theorem.*{: .thm}
+> The union of any finite collection of countable sets is countable.
+>
+> *Proof.*{: .prf}
+>
+
+> *Corollary.*{: .cor}
+> The set of integers $\mathbb{Z}$ is countable.
+
+> *Theorem.*{: .thm}
+> The Cartesian product of any finite number of countable sets is countable.
+
+> *Theorem.*{: .thm}
+> The union of a countable set of countable sets is countable.
+
+> *Theorem.*{: .thm}
+> The set of rational numbers $\mathbb{Q}$ is countable.
+
+## Uncountable Sets
+
 ## References
 
 * A G Hamilton _Numbers, sets and axioms_, 1982 - Chapter 2
