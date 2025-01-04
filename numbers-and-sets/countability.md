@@ -170,6 +170,26 @@ The following demonstrates the use of them.
 
 > *Theorem.*{: .thm}
 > The set of rational numbers $\mathbb{Q}$ is countable.
+>
+> *Proof.*{: .prf}
+>
+> Given $x \in \mathbb{Q}^{+}$, there exist a unique pair of positive integers $p, q$ such that $x = p/q$ where $(p, q) = 1$.
+> Consider the function $f: \mathbb{Q}^{+} to \mathbb{N}$ defined by $f(x) = 2^p \cdot 3^q$, it is an injection so $\mathbb{Q}^{+}$ is countable.
+> Similarily, $\mathbb{Q}^{-} \sim \mathbb{Q}^{+}$ by the bijection $x \mapsto -x$ and $\set{0}$ is finite.
+> Hence, $\mathbb{Q} = \mathbb{Q}^{+} \cup \set{0} \cup \mathbb{Q}^{-}$ is countable.
+>
+> A less formal way to count positive rational numbers is by listing them as
+>
+> $$
+  \begin{align*}
+  &{1 \over 1}, {1 \over 2}, {1 \over 3}, ..., \\
+  &{2 \over 1}, {2 \over 2}, {2 \over 3}, ..., \\
+  &{3 \over 1}, {3 \over 2}, {3 \over 3}, ..., \\
+  &\; \vdots
+  \end{align*}
+  $$
+>
+> and count them diagonally as ${1 \over 1}, {1 \over 2}, {2 \over 1}, {3 \over 1}, {2 \over 2}, \cdots$.
 
 ## Uncountable Sets
 
