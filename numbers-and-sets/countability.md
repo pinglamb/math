@@ -33,7 +33,7 @@ It is clearly impossible for finite sets so this property is propsed as the defi
 Obviously, a finite set can be counted, and we shall extend the notion of counting to infinite set as follows.
 
 > *Definition.*{: .def}
-> A set $A$ is **countable** if either it is finite or it is infinite in which $\mathbb{N} \to A$.
+> A set $A$ is **countable** if either it is finite or it is infinite and $\mathbb{N} \sim A$.
 
 This definition is cumbersome to apply will lead to two results yield more convenient criteria.
 
@@ -45,13 +45,41 @@ This definition is cumbersome to apply will lead to two results yield more conve
 >
 > *Proof.*{: .prf}
 >
+> ($\Rightarrow$) Suppose $A$ is countable. If $A$ is finite, $f: A \to \mathbb{N}$ defined by $f(a_k) = k$ is an injection.
+> If $A$ is infinite, by defintion, there is a bijection $g: \mathbb{N} \to A$, and the inverse is an injection from $A$ to $\mathbb{N}$.
+>
+> ($\Leftarrow$) If there is an injection $h: A \to \mathbb{N}$, then $h(A)$ is a subset of $\mathbb{N}$.
+> All subsets like $h(A)$ is countable because either $h(A)$ is finite,
+> or if it is infinite, we can count it by listing all elements of $\mathbb{N}$ in order and deleting elements in $\mathbb{N} \setminus h(A)$ as we proceed.
+> As $h: A \to h(A)$ is a bijection, either $h(A)$ is finite, $A$ must be finite and countable,
+> or $h(A)$ is infinite and $A \sim h(A)$ and $h(A) \sim \mathbb{N}$, which implies $A \sim \mathbb{N}$ and $A$ is countable.
 
 > *Corollary.*{: .cor}
 > A non-empty set $A$ is countable iff there is a surjection $\mathbb{N} \to A$.
 >
 > *Proof.*{: .prf}
 >
+> ($\Rightarrow$) If $A$ is countable, there is an injection $f: A \to \mathbb{N}$, then $f: A \to f(A)$ is a bijection.
+> So, the function $g: \mathbb{N} \to A$ defined by
+>
+> $$
+  g(n) = \begin{cases}
+  f^{-1}(n) & \text{if } n \in f(A) \\
+  a_0 & \text{if } n \not \in f(A) \\
+  \end{cases}
+  $$
+>
+> is a surjection.
+>
+> ($\Leftarrow$) If there is an surjection $g: \mathbb{N} \to A$, then the function $f: A \to \mathbb{N}$ defined by
+>
+> $$
+  f(a) = \min(n) \text{ such that } g(n) = a
+  $$
+>
+> is an injection.
 
+The above theorem provides a necessary and sufficient condition for countability.
 Here are proofs that certain familiar sets are countable.
 
 > *Theorem.*{: .thm}
