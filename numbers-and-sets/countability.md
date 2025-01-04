@@ -83,13 +83,37 @@ The above theorem provides a necessary and sufficient condition for countability
 Here are proofs that certain familiar sets are countable.
 
 > *Theorem.*{: .thm}
-> The union of any finite collection of countable sets is countable.
+> The union of any finite number of countable sets is countable.
 >
 > *Proof.*{: .prf}
 >
+> Let $A$ and $B$ be two countable sets, then there are surjections $f: \mathbb{N} \to A$ and $g: \mathbb{N} \to B$,
+> the function $h: \mathbb{N} \to A \cup B$ defined by
+>
+> $$
+  h(n) = \begin{cases}
+  f(k) & \text{if } n = 2k + 1 \\
+  g(k) & \text{if } n = 2k \\
+  \end{cases}
+  $$
+>
+> is a surjection. So $A \cup B$ is countable.
+>
+> Assume $A_1, A_2, ..., A_k$ are countable sets where $A_1 \cup A_2 \cup \cdots \cup A_k$ is countable.
+> Let $A_{k+1}$ be another countable set,
+> then $A_1 \cup \cdots \cup A_k \cup A_{k+1} = (A_1 \cup \cdots \cup A_k) \cup A_{k+1}$ is a union of two countable sets and hence is countable.
+> By induction, any finite number of countable sets is countable.
 
 > *Corollary.*{: .cor}
 > The set of integers $\mathbb{Z}$ is countable.
+>
+> *Proof.*{: .prf}
+>
+> $\mathbb{Z}^{+}$ is a subset of $\mathbb{N}$ so it is countable.
+> $\mathbb{Z}^{-} \sim \mathbb{Z}^{+}$ by the bijection $n \mapsto -n$ so $\mathbb{Z}^{-}$ is countable.
+> $\set{0}$ is finite so it is countable.
+>
+> Hence, $\mathbb{Z} = \mathbb{Z}^{+} \cup \set{0} \cup \mathbb{Z}^{-}$ is countable.
 
 > *Theorem.*{: .thm}
 > The Cartesian product of any finite number of countable sets is countable.
