@@ -115,11 +115,58 @@ Here are proofs that certain familiar sets are countable.
 >
 > Hence, $\mathbb{Z} = \mathbb{Z}^{+} \cup \set{0} \cup \mathbb{Z}^{-}$ is countable.
 
+Another useful techinque on constructing the injection is the use of product of primes or powers of primes.
+We can also use it to construct surjection by using the fact that factorization of $n$ into product of primes is unique up to order.
+The following demonstrates the use of them.
+
 > *Theorem.*{: .thm}
 > The Cartesian product of any finite number of countable sets is countable.
+>
+> *Proof.*{: .prf}
+>
+> Let $A$ and $B$ be two countable sets, then there are injections $f: A \to \mathbb{N}$ and $g: B \to \mathbb{N}$,
+> the function $h: A \times B \to \mathbb{N}$ defined by
+>
+> $$
+  h(a, b) = 2^{f(a)} \cdot 3^{g(b)}
+  $$
+>
+> is an injection. So $A \times B$ is countable.
+>
+> Similarily, let $A_1, A_2, ..., A_n$ be countable sets and $p_1, p_2, ..., p_n$ be prime numbers in order,
+> then the function $f: A_1 \times \cdots \times A_n \to \mathbb{N}$ defined by $f(a_1, a_2, ..., a_n) = p_1^{f_1(a_1)}p_2^{f_2(a_2)}...p_n^{f_n(a_n)}$ is an injection.
+> Hence, the Cartesian product of any finite number of countable sets is countable.
 
 > *Theorem.*{: .thm}
 > The union of a countable set of countable sets is countable.
+>
+> *Proof.*{: .prf}
+>
+> The case of finite collection of countable sets is countable has been proved above.
+>
+> Let $A_0, A_1, ...$ be countable sets, to label the elements, we need two indices, i.e.
+>
+> $$
+  \begin{align*}
+  A_0 &= \set{a_{00}, a_{01}, ...} \\
+  A_1 &= \set{a_{10}, a_{11}, ...} \\
+  &\vdots
+  \end{align*}
+  $$
+>
+> Let $f_1, f_2, ...$ be the corresponding surjections and $A = \bigcup A_i$,
+> the function $f: \mathbb{N} \to A$ defined by
+>
+> $$
+  f(n) = \begin{cases}
+  f_0(0) & \text{if } n = 0 \\
+  f_k(l) & \text{if } n = 2^k \cdot 3^l \cdot m
+  \end{cases}
+  $$
+>
+> is a surjection. It is becasue every $n$ can be factorized uniquely as $2^k \cdot 3^l \cdot m$ where $m$ is not divisible by $2, 3$ and it loops through all the indices $(k, l)$ (not uniquely though).
+>
+> Hence, the union of countable set of countable sets is countable.
 
 > *Theorem.*{: .thm}
 > The set of rational numbers $\mathbb{Q}$ is countable.
