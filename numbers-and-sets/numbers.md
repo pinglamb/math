@@ -312,6 +312,32 @@ This theorem can be used to prove the existence of "missing" numbers in $\mathbb
 >
 > Hence, it is only possible that $s^2 = 2$.
 
+### Decimal Notation
+
+The deciaml notation of a real number is of the form $n.a_1a_2a_3...$, which represents the sum of the series
+
+$$
+n + {a_1 \over 10} + {a_2 \over 100} + {a_3 \over 1000} + \cdots
+$$
+
+or alternatively the "limit" of the Cauchy sequence
+
+$$
+n,
+n + {a_1 \over 10},
+n + {a_1 \over 10} + {a_2 \over 100},
+n + {a_1 \over 10} + {a_2 \over 100},
+\cdots
+$$
+
+> *Theorem.*{: .thm}
+> Every positive real number may be represented uniquely by an expression $n.a_1a_2a_3...$,
+> where $n \in \mathbb{N}$ and each $a_i$ is an integer with $0 \le a_i \le 9$,
+> and where there is no $N \in \mathbb{N}$ such that $a_i = 9$ for all $i > N$, i.e. the sequence is not to end with infinite 9's.
+
+> *Theorem.*{: .thm}
+> A real number has a decimal expression which terminates or recurs iff it is a rational number.
+
 ## Algebraic Numbers
 
 > *Definition.*{: .def}
