@@ -137,6 +137,13 @@ The following demonstrates the use of them.
 > then the function $f: A_1 \times \cdots \times A_n \to \mathbb{N}$ defined by $f(a_1, a_2, ..., a_n) = p_1^{f_1(a_1)}p_2^{f_2(a_2)}...p_n^{f_n(a_n)}$ is an injection.
 > Hence, the Cartesian product of any finite number of countable sets is countable.
 
+> *Corollary.*{: .cor}
+> $\mathbb{Z}^n$ is countable for $n \in \mathbb{N}$.
+>
+> *Proof.*{: .prf}
+>
+> $Z^n$ is the Cartesian product of finite number of countable $\mathbb{Z}$ so is countable.
+
 > *Theorem.*{: .thm}
 > The union of a countable set of countable sets is countable.
 >
