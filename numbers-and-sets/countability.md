@@ -198,6 +198,22 @@ The following demonstrates the use of them.
 >
 > and count them diagonally as ${1 \over 1}, {1 \over 2}, {2 \over 1}, {3 \over 1}, {2 \over 2}, \cdots$.
 
+> *Theorem.*{: .thm}
+> The set of algebraic numbers is countable.
+>
+> Let $P_k$ be the set of polynomials of degree $k$ with integer coefficients.
+> Then
+>
+> $$
+  a_0 + a_1x + ... + a_kx^k \mapsto (a_0, a_1, ..., a_k)
+  $$
+>
+> is an injection from $P_k$ to $\mathbb{Z}^{k+1}$ which implies $P_k$ is countable.
+> Hence, the set of all polynomials with integer coefficients $P$ is a union of countable set of countable $P_k$ and therefore is countable.
+>
+> For each $p \in P$, the set of its roots is finite and thus countable.
+> Hence, the set of all roots of all polynomials, i.e. the algebraic numbers, is a union of countable set of countable sets and therefore is countable.
+
 ## Uncountable Sets
 
 To make countability meaningful, we need to know how to construct uncountable sets.
@@ -290,3 +306,4 @@ The following theorem provides a useful technique we can use:
 ## References
 
 * A G Hamilton _Numbers, sets and axioms_, 1982 - Chapter 2
+* [Dexter Chua _Part IA - Numbers and Sets_, 2014 - Chapter 7](https://dec41.user.srcf.net/notes/IA_M/numbers_and_sets.pdf)
