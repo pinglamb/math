@@ -198,6 +198,9 @@ The following demonstrates the use of them.
 >
 > and count them diagonally as ${1 \over 1}, {1 \over 2}, {2 \over 1}, {3 \over 1}, {2 \over 2}, \cdots$.
 
+The key for an infinite set to be countable is that we have a way to index them by positive integers.
+For example, we can index polynomials by their degrees and subsets by their sizes.
+
 > *Theorem.*{: .thm}
 > The set of algebraic numbers is countable.
 >
@@ -209,10 +212,25 @@ The following demonstrates the use of them.
   $$
 >
 > is an injection from $P_k$ to $\mathbb{Z}^{k+1}$ which implies $P_k$ is countable.
-> Hence, the set of all polynomials with integer coefficients $P$ is a union of countable set of countable $P_k$ and therefore is countable.
+> Hence, the set of all polynomials with integer coefficients $P$ is an union of countable set of countable $P_k$ and therefore is countable.
 >
 > For each $p \in P$, the set of its roots is finite and thus countable.
-> Hence, the set of all roots of all polynomials, i.e. the algebraic numbers, is a union of countable set of countable sets and therefore is countable.
+> Therefore, the set of all roots of all polynomials, i.e. the algebraic numbers, is a union of countable set of countable sets and hence countable.
+
+> *Theorem.*{: .thm}
+> The set of all finite subsets of $\mathbb{N}$ is countable.
+>
+> *Proof.*{: .prf}
+>
+> Let $F_k = \set{S \subseteq \mathbb{N} : \vert S \vert = k}$, i.e. the set of subsets with size $k$.
+> Obviously, $F_k \preceq \mathbb{Z}^k$ by
+>
+> $$
+  \set{a_1, ..., a_k} \mapsto (a_1, ..., a_k)
+  $$
+>
+> so $F_k$ is countable.
+> Therefore, the set of subsets of $\mathbb{N}$ is an union of countable set of countable subsets and hence countable.
 
 ## Uncountable Sets
 
