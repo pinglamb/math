@@ -321,7 +321,7 @@ The following theorem provides a useful technique we can use:
 >
 > Hence, $I \sim \mathcal{P}(\mathbb{N})$ and $I \sim \mathbb{R}$ implies $\mathbb{R} \sim \mathcal{P}(\mathbb{N})$.
 
-One of the technique for showing a set is uncountable is by contradiction.
+A technique for showing a set is uncountable is by contradiction.
 
 > *Theorem.*{: .thm}
 > $\mathbb{R}$ is uncountable.
@@ -371,6 +371,72 @@ One of the technique for showing a set is uncountable is by contradiction.
 >
 > By construction, $f$ differs from $f_n$ when evaluated at $n$ so it is a function not in the list.
 > Hence, it is a contradiction and the set is uncountable.
+
+Sets which are equinumerous with $\mathbb{R}$ have some properties analogous to those of countable sets.
+
+> *Theorem.*{: .thm}
+> Let $A_1, ..., A_n$ be sets with $A_i \sim \mathbb{R}$, then $A_1 \cup ... \cup A_n \sim \mathbb{R}$.
+>
+> *Proof.*{: .prf}
+>
+> Let $A \sim \mathbb{R}$ and $B \sim \mathbb{R}$ be two sets and $f: A \to [0, 1)$ and $g: B \to [1, 2]$ be the corresponding bijections,
+> the function $h: A \cup B \to [0, 2)$ defined by
+>
+> $$
+  h(x) = \begin{cases}
+  f(x) & \text{if } x \in A \\
+  g(x) & \text{if } x \in B \setminus A
+  \end{cases}
+  $$
+>
+> is an injection. Therefore, $A \cup B \preceq \mathbb{R}$.
+> Also, $A \sim \mathbb{R}$ and $A \subseteq A \cup B$ implies $\mathbb{R} \preceq A \cup B$
+> Hence, $A \cup B \sim \mathbb{R}$.
+>
+> By induction, $A_1 \cup ... \cup A_n \sim \mathbb{R}$.
+
+> *Theorem.*{: .thm}
+> Let $A_1, ..., A_n$ be sets with $A_i \sim \mathbb{R}$, then $A_1 \times ... \times A_n \sim \mathbb{R}$.
+>
+> *Proof.*{: .prf}
+>
+> Consider the function $f: (0, 1) \times (0, 1) \to (0, 1)$ defined by
+>
+> $$
+  f(x, y) = 0.x_0y_0x_1y_1...
+  $$
+>
+> where $x = 0.x_0x_1...$ and $y = 0.y_0y_1...$ in decimal form, it is an injection and therefore $(0, 1) \times (0, 1) \preceq (0, 1)$.
+> Obviously, $(0, 1) \times (0, 1) \preceq (0, 1)$ by injection $x \mapsto (x, 0.9394)$.
+> Hence, $(0, 1) \times (0, 1) \sim (0, 1)$.
+>
+> As $A \sim (0, 1)$ and $B \sim (0, 1)$ and $(0, 1) \sim \mathbb{R}$, $A \times B \sim \mathbb{R}$.
+>
+> Similar construction can be used to show that $A_1 \times ... \times A_n \sim \mathbb{R}$.
+
+> *Corollary.*{: .cor}
+> $\mathbb{R}^n \sim \mathbb{R}$.
+
+> *Theorem.*{: .thm}
+> A union of countable collection of sets equinumerous with $\mathbb{R}$ is equinumerous with $\mathbb{R}$.
+>
+> *Proof.*{: .prf}
+>
+> Similar to the proof for finite collection, let $f_i: A_i \to [i, i+1)$ be the bijections,
+> the function $f: A_1 \cup A_2 \cup \cdots \to \mathbb{R}$ defined by
+>
+> $$
+  f(x) = \begin{cases}
+  f_0(x) & \text{if } x \in A_0 \\
+  f_1(x) & \text{if } x \in A_1 \setminus A_0 \\
+  f_2(x) & \text{if } x \in A_2 \setminus (A_0 \cup A_1) \\
+  & \vdots
+  \end{cases}
+  $$
+>
+> is an injection so $A_1 \cup A_2 \cup \cdots \preceq \mathbb{R}$.
+> $A_0 \sim \mathbb{R}$ and $A_0 \subseteq A_1 \cup A_2 \cup \cdots$ implies $\mathbb{R} \preceq A_1 \cup A_2 \cup \cdots$.
+> Hence, $A_1 \cup A_2 \cup \cdots \sim \mathbb{R}$.
 
 ## References
 
