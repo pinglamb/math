@@ -303,6 +303,57 @@ The following theorem provides a useful technique we can use:
 >
 > Hence, $I \sim \mathcal{P}(\mathbb{N})$ and $I \sim \mathbb{R}$ implies $\mathbb{R} \sim \mathcal{P}(\mathbb{N})$.
 
+One of the technique for showing a set is uncountable is by contradiction.
+
+> *Theorem.*{: .thm}
+> $\mathbb{R}$ is uncountable.
+>
+> *Proof.*{: .prf}
+>
+> Apart from showing $\mathbb{R}$ is equinumerous with $\mathcal{P}(\mathbb{N})$, consider the following argument:
+>
+> Assume $\mathbb{R}$ is countable. Then we can list them as $r_1, r_2, ...$ so that every real number is in the list.
+> By listing them out vertically we have
+>
+> $$
+  \begin{align*}
+  r_1 &= n_1.d_{11}d_{12}d_{13}... \\
+  r_2 &= n_2.d_{21}d_{22}d_{23}... \\
+  r_3 &= n_3.d_{31}d_{32}d_{33}... \\
+  &\; \vdots
+  \end{align*}
+  $$
+>
+> Define $r = 0.d_1d_2d_3...$ by
+>
+> $$
+  d_i = \begin{cases}
+  0 & \text{if } d_{nn} \not = 0 \\
+  1 & \text{if } d_{nn} = 0 \\
+  \end{cases}
+  $$
+>
+> By construction, $r$ differs from $r_i$ by the $i$th digit so it is a real number not in the list.
+> Hence, it is a contradiction and $\mathbb{R}$ is uncountable.
+
+> *Theorem.*{: .thm}
+> The set of all functions from $\mathbb{N}$ to $\mathbb{N}$ is uncountable.
+>
+> *Proof.*{: .prf}
+>
+> Similarily, assume it is countable and can be listed as $f_1, f_2, f_3, ...$.
+> Consider the function $f: \mathbb{N} \to \mathbb{N}$ defined by
+>
+> $$
+  f(n) = \begin{cases}
+  0 & \text{if } f_n(n) \not = 0 \\
+  1 & \text{if } f_n(n) = 0 \\
+  \end{cases}
+  $$
+>
+> By construction, $f$ differs from $f_n$ when evaluated at $n$ so it is a function not in the list.
+> Hence, it is a contradiction and the set is uncountable.
+
 ## References
 
 * A G Hamilton _Numbers, sets and axioms_, 1982 - Chapter 2
