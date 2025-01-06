@@ -11,7 +11,7 @@ title: Combinations &#124; Numbers and Sets
 > For any non-negative integer $k$, the number of subsets of $X$ containing precisely $k$ elements is ${n \choose k}$, pronounced as "$n$ choose $k$".
 
 > *Theorem.*{: .thm}
-> **[Binomial Thoerem]** For $n \in \mathbb{N}$, and any real numbers $x$ and $y$,
+> **[Binomial Theorem]** For $n \in \mathbb{N}$, and any real numbers $x$ and $y$,
 >
 > $$
   (x + y)^n = {n \choose 0}x^n + {n \choose 1}x^{n-1}y + ... + {n \choose n}y^n

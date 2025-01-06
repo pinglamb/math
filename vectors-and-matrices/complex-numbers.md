@@ -7,96 +7,78 @@ title: Complex Numbers &#124; Vectors and Matrices
 {: .page-title}
 
 > *Definition.*{: .def}
-> A **complex number** is a number $z \in \mathbb{C}$ of the form $z = a + bi$ with $a, b \in \mathbb{R}$.
+> A **complex number** is a number $z \in \mathbb{C}$ of the form $z = a + bi$ where $a, b \in \mathbb{R}$ and $i^2 = -1$.
 > We called $a = \text{Re}(z)$ the real part and $b = \text{Im}(z)$ the imaginary part.
 
-## Basic Arithmetic
+> *Theorem.*{: .thm}
+> The representation of a complex number $z$ in terms of its real and imaginary parts is unique.
+>
+> *Proof.*{: .prf}
+>
+> Let $a, b, c, d \in \mathbb{R}$ such that
+>
+> $$
+  \begin{align*}
+  a + bi &= c + di \\
+  (a-c)^2 &= -(d-b)^2
+  \end{align*}
+  $$
+>
+> As both $(a - c)^2 \ge 0$ and $(d - b)^2 \ge 0$, the equation is only possible with $a - c = 0$ and $b - d = 0$.
+>
+> Hence, the representation is unique and if $z_1 = z_2$, then $\text{Re}(z_1) = \text{Re}(z_2)$ and $\text{Im}(z_1) = \text{Im}(z_2)$.
 
-Let $z_1 = a + bi$ and $z_2 = c + di$, we have:
-
-### Addition and Subtraction
-
-Similar to vector addition,
-
-$$
-z_1 + z_2 = (a + c) + (b + d)i
-$$
-
-Geometrically, it can be thought as two vectors on the complex plane with the sum of them being the vector formed by joining them head to tail.
-
-We can see that $(\mathbb{C}, +)$ is a group with identity $0$ and additive inverse $(-a) + (-b)i$.
-Subtraction is defined as adding the additive inverse, hence
-
-$$
-z_1 - z_2 = (a - c) + (b - d)i
-$$
-
-### Multiplication and Division
-
-Given $i^2 = -1$, we get the following by expanding the terms:
-
-$$
-z_1z_2 = (ac - bd) + (ad + bc)i
-$$
-
-$(\mathbb{C}, \times)^\ast$ is also a group with identity $1$. To find the inverse, we need to find $c, d$  in terms of $a, b$ such that $ac - bd = 1$ and $ad + bc = 0$. Hence,
-
-$$
-z^{-1} = {1 \over z} = {a \over a^2 + b^2} + {-b \over a^2 + b^2}i
-$$
-
-Division is defined as multiplying the inverse
-
-$$
-{z_1 \over z_2} = z_1z_2^{-1}
-$$
+> *Definition.*{: .def}
+> Let $z_1 = a + bi$ and $z_2 = c + di$, in order to follow the arithmetic rules for reals, but adding the rule $i^2 = 1$, we have
+>
+> + [Addition/Subtraction] $z_1 \pm z_2 = (a + c) \pm (b + d)i$
+>
+> + [Multiplication] $z_1z_2 = (ac - bd) + (ad + bc)i$
+>
+> + [Inverse]
+>
+> $$
+  z^{-1} = {1 \over z} = {a \over a^2 + b^2} + {-b \over a^2 + b^2}i
+  $$
+>
+> + [Division] $z_1/z_2 = z_1z_2^{-1}$
 
 ## Complex Conjugate
 
 > *Definition.*{: .def}
-> The **complex conjugate** $z^\ast$ (or $\bar{z}$) of $z = a + bi$ is
->
-> $$
-  z^{\ast} = a - bi
-  $$
-
-Geometrically, $z$ and $\bar{z}$ are mirror images of each other in the real axis.
-
-Base on definition, we have
+> The **complex conjugate** $z^\ast$ (or $\bar{z}$) of $z = a + bi$ is $z^{\ast} = a - bi$.
 
 > *Lemma.*{: .lem}
 > $(z^\ast)^\ast = z$.
 
 > *Lemma.*{: .lem}
-> Conjugation is _distributive_ over addition, subtraction, multiplication and division, i.e.
+> Conjugation is _distributive_ over addition, subtraction, multiplication and inverse, i.e.
 >
-> $$
-  \begin{align*}
-  (z_1 \pm z_2)^\ast &= z_1^\ast \pm z_2^\ast \\
-  (z_1z_2)^\ast &= z_1^\ast z_2^\ast \\
-  \left({z_1 \over z_2}\right)^\ast &= {z_1^\ast \over z_2^\ast}
-  \end{align*}
-  $$
+> + $(z_1 \pm z_2)^\ast = z_1^\ast \pm z_2^\ast$
+>
+> + $(z_1z_2)^\ast = z_1^\ast z_2^\ast$
+>
+> + $(z^{-1})^\ast = (z^\ast)^{-1}$
+>
+> Hence, we also have $(z^n)^\ast = (z^\ast)^n$.
 
-From the above, we can conclude the following as well
-
-> *Lemma.*{: .lem}
-> $(z^{-1})^\ast = (z^\ast)^{-1}$.
-
-> *Lemma.*{: .lem}
-> $(z^n)^\ast = (z^\ast)^n$.
-
-Also, base on the definition, we have
-
-> *Lemma.*{: .lem}
-> $zz^\ast = a^2 + b^2$,
-
-which is always real and non-negative.
-
-With that, we can convert complex fraction to a complex number by
+The complex conjugate can be useful for converting complex fraction to a complex number:
 
 $$
 {z_1 \over z_2} = \left({z_1 \over z_2}\right) \left({z_2^\ast \over z_2^\ast}\right) = {ac + bd \over c^2 + d^2} + {bc - ad \over c^2 + d^2}i
+$$
+
+> *Definition.*{: .def}
+> Given a complex-valued function $f$, the complex conjugate function $f^\ast$ is defined by
+>
+> $$
+  f^\ast(z^\ast) = [f(z)]^\ast \implies f^\ast(z) = [f(z^\ast)]^\ast
+  $$
+
+For example, let $f(z) = pz^2 + qz + r$, we have
+
+$$
+f^\ast(z^\ast) = (pz^2 + qz + r)^\ast = p^\ast(z^\ast)^2 + q^\ast z^\ast + r^\ast \implies f^\ast(z) = p^\ast z^2 + q^\ast z + r^\ast
 $$
 
 ## Modulus
@@ -108,10 +90,6 @@ $$
   |z| = \sqrt{a^2 + b^2}
   $$
 
-Geometrically, it is equal to length of line segment from $0$ to $z$.
-
-From the definition, we can see that
-
 > *Lemma.*{: .lem}
 > $\vert z^\ast \vert = \vert z \vert$.
 
@@ -119,7 +97,70 @@ From the definition, we can see that
 > $zz^\ast = \vert z \vert^2$.
 
 > *Lemma.*{: .lem}
+> $z^{-1} = z^\ast / \vert z \vert^2$.
+
+> *Theorem.*{: .thm}
 > $\vert z_1z_2 \vert = \vert z_1 \vert \vert z_2 \vert$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \vert (a + bi)(c + di) \vert^2 &= \vert (ac - bd) + (ad + bc)i \vert^2 \\
+  &= (ac - bd)^2 + (ad + bc)^2 \\
+  &= (ac)^2 + (bd)^2 - 2abcd + (ad)^2 + (bc)^2 + 2abcd \\
+  &= a^2(c^2 + d^2) + b^2(c^2 + d^2) \\
+  &= (a^2 + b^2) + (c^2 + d^2) = \vert a + bi \vert \vert c + di \vert
+  \end{align*}
+  $$
+
+## Argument
+
+> *Definition.*{: .def}
+> The **argument** $\arg(z)$ of $z$ is defined by
+>
+> $$
+  \arg(z) = \tan^{-1}\left({b \over a}\right)
+  $$
+>
+> which has a period of $2\pi$.
+
+> *Theorem.*{: .thm}
+> For any $z_1, z_2 \in \mathbb{C}$, with a period of $2\pi$,
+>
+> + $\arg(z_1z_2) = \arg(z_1) + \arg(z_2)$
+>
+> + $\arg(z^{-1}) = \arg(z^\ast) = - \arg(z)$
+>
+> *Proof.*{: .prf}
+>
+> Let $z_1 = a + bi$ and $z_2 = c + di$, we have
+>
+> $$
+  \begin{align*}
+  \tan(\arg(z_1) + \arg(z_2)) &= {\tan \arg(z_1) + \tan \arg(z_2) \over 1 - \tan \arg(z_1) \tan \arg(z_2)} \\
+  &= {b/a + d/c \over 1 - bd / ac} \\
+  &= {ad + bc \over ac - bd} \\
+  &= \tan \arg(z_1z_2)
+  \end{align*}
+  $$
+>
+> Hence, $\arg(z_1z_2) = \arg(z_1) + \arg(z_2)$.
+>
+> By definition, $\arg(z_1^\ast) = \arg(z_1^{-1}) = -b/a = - \arg(z_1)$ as $\tan^{-1} x = - \tan^{-1} x$.
+
+## Argand Diagram
+
+> *Definition.*{: .def}
+> An **Argand diagram** is a diagram in which a complex number $z = x + yi$ is represented by $\mathbf{p} = \begin{pmatrix} x \\\ y \end{pmatrix}$.
+
+![Argand Diagram](../images/complex-number-argand-diagram.png)
+
+It allows us to think about complex numbers geometrically.
+
+Geometrically, $z$ and $\bar{z}$ are mirror images of each other in the real axis.
+
+Geometrically, it is equal to length of line segment from $0$ to $z$.
 
 > *Lemma.*{: .lem}
 > Geometrically, $\vert z_1 - z_2 \vert$ is the _distance_ between the two points $z_1$ and $z_2$,
@@ -135,18 +176,9 @@ From the definition, we can see that
   \end{align*}
   $$
 
-## Argument
 
-> *Definition.*{: .def}
-> The **argument** $\arg(z)$ of $z$ is defined by
->
-> $$
-  \arg(z) = \tan^{-1}\left({b \over a}\right)
-  $$
 
-Geometrically, it is the angle $\theta$ between the positive real axis and the line segment from $0$ to $z$ measured in the anti-clockwise direction.
-
-$\arg(z)$ has a period of $2\pi$ and $\tan^{-1}$ is single valued on the interval $(-{\pi \over 2}, {\pi \over 2})$, hence
+## Polar Representation
 
 > *Lemma.*{: .def}
 > The principal value of $\theta \in (-\pi, \pi]$ is
@@ -154,18 +186,12 @@ $\arg(z)$ has a period of $2\pi$ and $\tan^{-1}$ is single valued on the interva
 > $$
   \theta = 2\tan^{-1} \left( {b \over a + |z|} \right)
   $$
-
-> *Lemma.*{: .def}
-> With the polar representation of complex number,
 >
-> $$
-  \begin{align*}
-  \arg(z_1z_2) &= \arg(z_1) + \arg(z_2) \\
-  \arg(z^{-1}) &= \arg(z^\ast) = - \arg(z)
-  \end{align*}
-  $$
+> *Proof.*{: .prf}
+>
+> $\tan^{-1}$ is single valued on the interval $(-{\pi \over 2}, {\pi \over 2})$, hence
 
-## Polar Representation
+Geometrically, it is the angle $\theta$ between the positive real axis and the line segment from $0$ to $z$ measured in the anti-clockwise direction.
 
 ### By Cosine/Sine Functions
 
