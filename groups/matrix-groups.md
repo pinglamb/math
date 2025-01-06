@@ -51,7 +51,7 @@ Hence, we have the following definition of a group containing these matrices:
 >
 > *Proof.*{: .prf}
 >
-> Algebrically, kernel is always a normal subgroup.
+> Algebraically, kernel is always a normal subgroup.
 
 ## Orthogonal Group
 

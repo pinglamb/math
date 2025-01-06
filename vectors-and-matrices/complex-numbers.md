@@ -110,7 +110,8 @@ $$
   &= (ac - bd)^2 + (ad + bc)^2 \\
   &= (ac)^2 + (bd)^2 - 2abcd + (ad)^2 + (bc)^2 + 2abcd \\
   &= a^2(c^2 + d^2) + b^2(c^2 + d^2) \\
-  &= (a^2 + b^2) + (c^2 + d^2) = \vert a + bi \vert \vert c + di \vert
+  &= (a^2 + b^2) + (c^2 + d^2) \\
+  &= \vert a + bi \vert^2 \vert c + di \vert^2
   \end{align*}
   $$
 
@@ -152,29 +153,114 @@ $$
 ## Argand Diagram
 
 > *Definition.*{: .def}
-> An **Argand diagram** is a diagram in which a complex number $z = x + yi$ is represented by $\mathbf{p} = \begin{pmatrix} x \\\ y \end{pmatrix}$.
+> An **Argand diagram** is a diagram in which a complex number $z = x + yi$ is represented by a vector $\mathbf{p} = \begin{pmatrix} x \\\ y \end{pmatrix}$ on Cartesian plane.
+> The $xy$ plane is referred as **complex plane** with real axis and imaginary axis.
 
 ![Argand Diagram](../images/complex-number-argand-diagram.png)
 
-It allows us to think about complex numbers geometrically.
+The Argand diagram allows us to interpret complex numbers geometrically, i.e.
 
-Geometrically, $z$ and $\bar{z}$ are mirror images of each other in the real axis.
++ The _modulus_ of $z$ corresponds to the magnitude of the vector.
 
-Geometrically, it is equal to length of line segment from $0$ to $z$.
++ The _complex conjugate_ $z^\ast$ is the mirror image of $z$ reflected in the real axis.
+
++ _Addition_ obeys the _Parallelogram Law of Addition_ like [vector addition](vectors.md#vector-addition).
+
+By geometry, we observed the following inequalities about modulus:
 
 > *Lemma.*{: .lem}
-> Geometrically, $\vert z_1 - z_2 \vert$ is the _distance_ between the two points $z_1$ and $z_2$,
-> hence we have the following inequalities about modulus:
+> $\vert \text{Re}(z) \vert \le \vert z \vert$ and $\vert \text{Im}(z) \vert \le \vert z \vert$.
+
+> *Theorem.*{: .thm}
+> **[Triangle Inequality]**
+> If $z_1, z_2 \in \mathbb{C}$, then
+>
+> $$
+  \vert z_1 + z_2 \vert \le \vert z_1 \vert + \vert z_2 \vert
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Self-evident by geometry or algebraically
 >
 > $$
   \begin{align*}
-  |\text{Re}(z)| &\le |z| \\
-  |\text{Im}(z)| &\le |z| \\
-  |z_1 + z_2 + ... + z_n| &\le |z_1| + |z_2| + ... + |z_n| \\
-  |z_1 - z_3| &\le |z_1 - z_2| + |z_2 + z_3| \\
-  ||z_1| - |z_2|| &\le |z_1 \pm z_2|
+  1 &= \text{Re} \left( {z_1 + z_2 \over z_1 + z_2} \right) \\
+  &= \text{Re} \left( {z_1 \over z_1 + z_2} \right) + \text{Re} \left( {z_2 \over z_1 + z_2} \right) \\
+  &\le \left\vert {z_1 \over z_1 + z_2} \right\vert + \left\vert {z_2 \over z_1 + z_2} \right\vert
   \end{align*}
   $$
+
+> *Corollary.*{: .cor}
+> $\vert z_1 + z_2 + ... + z_n \vert \le \vert z_1 \vert + \vert z_2 \vert + ... + \vert z_n \vert$.
+
+> *Lemma.*{: .lem}
+> $\vert z_1 - z_2 \vert$ is the _distance_ between the two points represented by $z_1, z_2 \in \mathbb{C}$.
+>
+> *Proof.*{: .prf}
+>
+> By Pythagoras' theorem.
+
+![Triangle Inequality](../images/complex-number-triangle-inequality.png)
+
+> *Corollary.*{: .cor}
+> $|z_1 - z_3| \le |z_1 - z_2| + |z_2 + z_3|$.
+>
+> *Proof.*{: .prf}
+>
+> Self-evident by geometry or by substituding $z_1' = z_1 - z_2$ and $z_2' = z_2 - z_3$ into the triangle inequality.
+
+![Triangle Inequality](../images/complex-number-double-circles.png)
+
+> *Corollary.*{: .cor}
+> $\vert z_1 - z_2 \vert \ge \vert \vert z_1 \vert - \vert z_2 \vert \vert$.
+>
+> *Proof.*{: .prf}
+>
+> Let $z_1 = z_1' + z_2'$ and $z_2 = z_2'$, so $z_1' = z_1 - z_2$ and $z_2' = z_2$.
+> Thus, we have
+>
+> $$
+  \vert z_1 \vert \le \vert z_1 - z_2 \vert + \vert z_2 \vert
+  $$
+>
+> which implies
+>
+> $$
+  \vert z_1 - z_2 \vert \ge \vert z_1 \vert - \vert z_2 \vert
+  $$
+>
+> Interchanging $z_1$ and $z_2$ we also have
+>
+> $$
+  \vert z_2 - z_1 \vert = \vert z_1 - z_2 \vert \ge \vert z_2 \vert - \vert z_1 \vert
+  $$
+>
+> Hence, combining both cases, we have $\vert z_1 - z_2 \vert \ge \vert \vert z_1 \vert - \vert z_2 \vert \vert$.
+
+> *Corollary.*{: .cor}
+> $\vert z_1 + z_2 \vert \ge \vert \vert z_1 \vert - \vert z_2 \vert \vert$, which gives a _lower bound_ of $\vert z_1 + z_2 \vert$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \vert z_1 \vert = \vert (z_1 + z_2) - z_2 \vert \le \vert z_1 + z_2 \vert + \vert -z_2 \vert = \vert z_1 + z_2 \vert + \vert z_2 \vert
+  $$
+>
+> which implies
+>
+> $$
+  \vert z_1 + z_2 \vert \ge \vert z_1 \vert - \vert z_2 \vert
+  $$
+>
+> Interchanging $z_1$ and $z_2$ we also have
+>
+> $$
+  \vert z_2 + z_1 \vert = \vert z_1 + z_2 \vert \ge \vert z_2 \vert - \vert z_1 \vert
+  $$
+>
+> Hence, combining both cases, we have $\vert z_1 + z_2 \vert \ge \vert \vert z_1 \vert - \vert z_2 \vert \vert$.
+
 
 
 
