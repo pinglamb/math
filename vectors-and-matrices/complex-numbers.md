@@ -321,7 +321,6 @@ The modulus/argument form is helpful to understand the geometric meaning of mult
 >
 > Hence, we have $\vert z_1z_2 \vert = \vert z_1 \vert \vert z_2 \vert$ and $\arg(z_1z_2) = \arg(z_1) + \arg(z_2)$ like we proved algebraically before.
 
-
 ## Exponential Form
 
 Consider the [Taylor's expansion](./exponential-cosine-sine-functions.md) of $\exp(x)$, $\sin(x)$ and $\cos(x)$, we have
@@ -339,25 +338,11 @@ Hence,
   z = re^{i \theta}
   $$
 
-### Geometric Interpretation of Multiplication
-
-Given $z_1 = r_1(\cos\theta_1 + i\sin\theta_1)$ and $z_2 = r_2(\cos\theta_2 + i\sin\theta_2)$,
-
-$$
-\begin{align*}
-z_1z_2 &= r_1r_2(\cos\theta_1 + i\sin\theta_1)(\cos\theta_2 + i\sin\theta_2) \\
-       &= r_1r_2[(\cos\theta_1\cos\theta_2 - \sin\theta_1\sin\theta_2) + i(\cos\theta_1\sin\theta_2 + \sin\theta_1\cos\theta_2)] \\
-       &= r_1r_2[\cos(\theta_1 + \theta_2) + i\sin(\theta_1 + \theta_2)]
-\end{align*}
-$$
-
 Similarily, in exponential form,
 
 $$
 z_1z_2 = (r_1e^{i\theta_1})(r_2e^{i\theta_2}) = r_1r_2e^{i(\theta_1 + \theta_2)}
 $$
-
-Hence, geometrically, multiplication of $z_1$ by $z_2$ scales $z_1$ by $\|z_2\|$ and rotates $z_1$ by $\arg(z_2)$.
 
 ### Properties
 
