@@ -166,6 +166,8 @@ The Argand diagram allows us to interpret complex numbers geometrically, i.e.
 
 + _Addition_ obeys the _Parallelogram Law of Addition_ like [vector addition](vectors.md#vector-addition).
 
+## Inequalities
+
 By geometry, we observed the following inequalities about modulus:
 
 > *Lemma.*{: .lem}
@@ -261,45 +263,66 @@ By geometry, we observed the following inequalities about modulus:
 >
 > Hence, combining both cases, we have $\vert z_1 + z_2 \vert \ge \vert \vert z_1 \vert - \vert z_2 \vert \vert$.
 
-
-
-
 ## Polar Representation
 
-> *Lemma.*{: .def}
-> The principal value of $\theta \in (-\pi, \pi]$ is
->
-> $$
-  \theta = 2\tan^{-1} \left( {b \over a + |z|} \right)
-  $$
->
-> *Proof.*{: .prf}
->
-> $\tan^{-1}$ is single valued on the interval $(-{\pi \over 2}, {\pi \over 2})$, hence
+The use of polar coordinates to represent position in Argand diagram is really helpful to understand some of the properties.
 
-Geometrically, it is the angle $\theta$ between the positive real axis and the line segment from $0$ to $z$ measured in the anti-clockwise direction.
+![Polar Form](../images/complex-number-polar.png)
 
-### By Cosine/Sine Functions
-
-For $z = x + yi$, base on the definition of modulus $r = \|z\|$ and argument $\theta = \arg(z)$, we have
-
-$$
-\begin{align*}
-x &= r\cos\theta \\
-y &= r\sin\theta
-\end{align*}
-$$
-
-Therefore,
 
 > *Definition.*{: .def}
-> The polar form of a complex number $z$ is
+> Let $x = r\cos\theta$ and $y = r\sin\theta$, the **modolus/argument form** of a complex number $z$ is
 >
 > $$
   z = r(\cos\theta + i\sin\theta)
   $$
+>
+> where $r = \vert z \vert$ is the modulus and $\theta = \arg(z)$ is the argument.
 
-### By Exponential Function
+The pair $(r, \theta)$ specifies $z$ uniquely, but $z$ does not specify $(r, \theta)$ uniquely since $\arg(z)$ has a period of $2\pi$.
+Hence, we need to define the principal value of $\theta$ such that $-\pi < \theta \le \pi$.
+
+> *Theorem.*{: .thm}
+> The principal value of $\theta \in (-\pi, \pi]$ is given by
+>
+> $$
+  \theta = 2\tan^{-1} \left( {y \over x + |z|} \right)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $\tan^{-1}$ is single valued on the interval $(-{\pi \over 2}, {\pi \over 2})$. By the half-angle identity,
+>
+> $$
+  \tan {\theta \over 2} = {\sin \theta \over 1 + \cos \theta} = {y/r \over 1 + x/r} = {y \over x + r}
+  $$
+>
+> Hence, when $\theta \in (-\pi, \pi]$,
+>
+> $$
+  \theta = 2\tan^{-1} \left( {y \over x + |z|} \right)
+  $$
+
+The modulus/argument form is helpful to understand the geometric meaning of multiplication.
+
+> *Theorem.*{: .thm}
+> Multiplication of $z_1$ by $z_2$ scales $z_1$ by $\vert z_2 \vert$ and rotates $z_1$ by $\arg(z_2)$.
+>
+> *Proof.*{: .prf}
+>
+> Let $z_1 = r_1(\cos \theta_1 + i \sin \theta_1)$ and $z_2 = r_2(\cos \theta_2 + i \sin \theta_2)$, then
+>
+> $$
+  \begin{align*}
+  z_1z_2 &= r_1r_2((\cos \theta_1 \cos \theta_2 - \sin \theta_1 \sin \theta_2) + i (\sin \theta_1 \cos \theta_2 + \sin \theta_2 \cos \theta_1)) \\
+  &= r_1r_2(\cos (\theta_1 + \theta_2) + i \sin (\theta_1 + \theta_2))
+  \end{align*}
+  $$
+>
+> Hence, we have $\vert z_1z_2 \vert = \vert z_1 \vert \vert z_2 \vert$ and $\arg(z_1z_2) = \arg(z_1) + \arg(z_2)$ like we proved algebraically before.
+
+
+## Exponential Form
 
 Consider the [Taylor's expansion](./exponential-cosine-sine-functions.md) of $\exp(x)$, $\sin(x)$ and $\cos(x)$, we have
 
