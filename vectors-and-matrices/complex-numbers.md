@@ -497,7 +497,7 @@ Base on the definition of complex logarithm, we can now define the complex power
 
 The theorem can be extended to $\theta, n \in \mathbb{C}$ with $\cos n \theta + i \sin n \theta$ equals to one of the values of $(\cos \theta + i\sin \theta)^n$.
 
-## Lines and Circles in the Complex Plane
+## Complex Plane Geometry
 
 ### Lines
 
@@ -510,32 +510,23 @@ The theorem can be extended to $\theta, n \in \mathbb{C}$ with $\cos n \theta + 
 >
 > represents points on a straight line passing through $z_0$ and parallel to $w$, which is similar to point-slope form.
 
-As $\lambda \in \mathbb{R}$, $\lambda = \lambda^\ast$, we have
-
-$$
-{z - z_0 \over w} = {z^\ast - z_0^\ast \over w^\ast}
-$$
-
-Hence,
-
-> *Theorem.*{: .thm}
+> *Corollary.*{: .cor}
 > An alternative representation of a line passing through $z_0$ and parallel to $w$ in complex plane is
 >
 > $$
   zw^\ast -z^\ast w = z_0w^\ast - z_0^\ast w
   $$
+>
+> *Proof.*{: .prf}
+>
+> As $\lambda \in \mathbb{R}$, $\lambda = \lambda^\ast$, we have
+>
+> $$
+  {z - z_0 \over w} = {z^\ast - z_0^\ast \over w^\ast}
+  $$
+>
+> The equation can be derived from reordering of the terms.
 
-Also, given $u, v \in \mathbb{C}$, the points that are equidistant from them, i.e.
-
-$$
-|z - u|^2 = |z - v|^2
-$$
-
-form a straight line. As $\|z - u\|^2 = (z - u)(z^\ast - u^\ast)$ and $\|z - v\|^2 = (z - v)(z^\ast - v^\ast)$, we have
-
-$$
-(v^\ast - u^\ast)z + (v - u)z^\ast + |u|^2 + |v|^2 = 0
-$$
 
 Hence,
 
@@ -546,18 +537,32 @@ Hence,
   a^\ast z + az^\ast + b = 0
   $$
 >
-> Given two points $u, v \in \mathbb{C}$, then $a = v -u$ and $b = \|u\|^2 + \|v\|^2 \in \mathbb{R}$.
+> Let $u, v \in \mathbb{C}$ be two points, then
+>
+> $$
+  a = v -u \quad \text{and} \quad b = \|u\|^2 + \|v\|^2 \in \mathbb{R}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Given $u, v \in \mathbb{C}$, the points that are equidistant from them, i.e.
+>
+> $$
+  |z - u|^2 = |z - v|^2
+  $$
+>
+> form a straight line.
+>
+> As $\|z - u\|^2 = (z - u)(z^\ast - u^\ast)$ and $\|z - v\|^2 = (z - v)(z^\ast - v^\ast)$, we have
+>
+> $$
+  (v^\ast - u^\ast)z + (v - u)z^\ast + |u|^2 + |v|^2 = 0
+  $$
 
 Practically, it will be more useful to represent the straight line passing through two points $u$ and $v$ as parametric form
 
 $$
-z - u = \lambda(v - u)
-$$
-
-or
-
-$$
-z = (1 - \lambda)u + \lambda v
+z - u = \lambda(v - u) \quad \text{or} \quad z = (1 - \lambda)u + \lambda v
 $$
 
 Details about different forms can be found [here](https://www.landonlehman.com/post/lines-in-the-complex-plane/) and [here](https://proofwiki.org/wiki/Equation\_for\_Line\_through\_Two\_Points\_in\_Complex\_Plane).
@@ -571,7 +576,7 @@ Details about different forms can be found [here](https://www.landonlehman.com/p
   |z - w| = r
   $$
 >
-> Since $r^2 = \|z - w\|^2 = (z - w)(z^\ast - w^\ast)$,
+> Since $r^2 = \|z - w\|^2 = (z - w)(z^\ast - w^\ast)$, the general form of a circle is
 >
 > $$
   zz^\ast - (zw^\ast + z^\ast w) + |w|^2 = r^2
