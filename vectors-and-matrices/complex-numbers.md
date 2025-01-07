@@ -329,39 +329,30 @@ $$
 e^{i\theta} = \cos \theta + i \sin \theta
 $$
 
-Hence,
-
-> *Definition.*{: .def}
-> Alternatively, a complex number $z$ can be expressed as
+> *Theorem.*{: .thm}
+> For any $z \in \mathbb{C}$, we have
 >
 > $$
-  z = re^{i \theta}
+  z = r(\cos\theta + i\sin\theta) = re^{i\theta}
   $$
 
-Similarily, in exponential form,
+The geometric meaning of multiplication can easily be derived from the exponential form:
 
 $$
 z_1z_2 = (r_1e^{i\theta_1})(r_2e^{i\theta_2}) = r_1r_2e^{i(\theta_1 + \theta_2)}
 $$
 
-### Properties
+> *Corollary.*{: .cor}
+> $z^\ast = r(\cos\theta - i\sin\theta) = re^{-i\theta}$.
 
-As the complex conjugate of $z$ is $z^\ast = a - bi$, base on the polar representation, we can see that $\arg(z^\ast) = -\arg(z)$, therefore
-
-$$
-z^\ast = re^{-i\theta} = r(\cos\theta - i\sin\theta)
-$$
-
-As $e^{i\theta} = \cos\theta + i\sin\theta$ and $e^{-i\theta} = \cos\theta - i\sin\theta$,
-
-$$
-\begin{align*}
-\cos\theta &= {1 \over 2} \left( e^{i \theta} + e^{-i \theta}\right) \\
-\sin\theta &= {1 \over 2i} \left( e^{i \theta} - e^{-i \theta}\right)
-\end{align*}
-$$
-
-On the other hand, consider $z = r(\cos\theta + i\sin\theta) = re^{i\theta} =1$, the solution is $r = 1$ and $\theta = 2k\pi$ with $k \in \mathbb{Z}$.
+> *Corollary.*{: .cor}
+> For $w \in \mathbb{C}$,
+>
+> $$
+  \cos w = {1 \over 2} \left( e^{iw} + e^{-iw}\right)
+  \quad\quad
+  \sin w = {1 \over 2i} \left( e^{iw} - e^{-iw}\right)
+  $$
 
 ## Roots of Unity
 
@@ -405,6 +396,8 @@ $$
 
 Geometrically, the n-th roots of unity are the vertices of a regular n-gon on the complex plane, which are evenly spaced around a circle.
 
+![Roots of Unity](../images/complex-number-roots-of-unity.png)
+
 ## Logarithms and Powers
 
 > *Definition.*{: .def}
@@ -425,34 +418,51 @@ Geometrically, the n-th roots of unity are the vertices of a regular n-gon on th
   \end{align*}
   $$
 
-Let $z = re^{i\theta}$ and $w = x + yi$, by definition, we have $e^{x + yi} = (e^x)(e^{iy}) = re^{i\theta}$, therefore
+> *Theorem.*{: .thm}
+> $\log(z) = \log(\|z\|) + i\arg(z)$.
+>
+> *Proof.*{: .prf}
+>
+> Let $z = re^{i\theta}$ and $w = \log(z) = x + yi$. From the definition, we have
+>
+> $$
+  z = \exp(w) = e^{x + yi} = (e^x)(e^{iy}) = re^{i\theta}
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  x &= \log(r) = \log(|z|) \\
+  y &= \theta + 2k\pi = \arg(z)
+  \end{align*}
+  $$
+>
+> which is multi-valued as $\arg(z)$ is multi-valued function.
+
+> *Definition.*{: .def}
+> The principal value of $\log(z)$ is $-\pi < \arg(z) = \text{Im}(\log(z)) \le \pi$.
+
+Although $\log(-1)$ has no solution in real, under complex logarithms, we have
 
 $$
-\begin{align*}
-x &= \log(r) = \log(|z|) \\
-y &= \theta + 2k\pi = \arg(z)
-\end{align*}
+\log(-1) = \log(1) + i\pi
 $$
 
-Hence,
+> *Corollary.*{: .cor}
+> Similar to real logarithm, $\log(z_1z_2) = \log(z_1) + \log(z_2)$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \log(z_1z_2) &= \log(\vert z_1 \vert \vert z_2 \vert) + i \arg(z_1z_2) \\
+  &= \log(\vert z_1 \vert) + i\arg(z_1) + \log(\vert z_2 \vert) + i \arg(z_2) \\
+  &= \log(z_1) + \log(z_2)
+  \end{align*}
+  $$
 
-> *Lemma.*{: .lem}
-> $\log(z) = \log(\|z\|) + i\arg(z)$
-
-which is multi-valued as $\arg(z)$ is multi-valued function.
-The principal value of $\log(z)$ is $-\pi < \arg(z) = \text{Im}(\log(z)) \le \pi$.
-
-$\log(-1)$ has no solution in real, but with complex logarithms, we have
-
-> *Lemma.*{: .lem}
-> $\log(-1) = \log(1) + i\pi$.
-
-Similar to $\log(x)$ with $x \in \mathbb{R}$, we have
-
-> *Lemma.*{: .lem}
-> $\log(z_1z_2) = \log(z_1) + \log(z_2)$
-
-Similar to $x^a = e^{a\log x} = \exp(a \log x)$ with $x \in \mathbb{R}_{> 0}$, we have
+Base on the definition of complex logarithm, we can now define the complex power of a complex number.
 
 > *Definition.*{: .def}
 > For $z \not = 0$ and $z, w \in \mathbb{C}$, $z$ to the _complex power_ of $w$ is
@@ -460,12 +470,13 @@ Similar to $x^a = e^{a\log x} = \exp(a \log x)$ with $x \in \mathbb{R}_{> 0}$, w
 > $$
   z^w = e^{w \log z}
   $$
-
-Since $\log(z)$ is multi-valued, $z^w$ is only defined to an arbitrary multiple of $e^{2k\pi i w}$.
+>
+> Since $\log(z)$ is multi-valued, $z^w$ is only defined to an arbitrary multiple of $e^{2k\pi i w}$.
 
 ## De Moivre's Theorem
 
 > *Theorem.*{: .thm}
+> **[De Moivre's Theorem]**
 > For $\theta \in \mathbb{R}$ and $n \in \mathbb{Z}$,
 >
 > $$
