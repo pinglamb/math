@@ -151,9 +151,39 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 >
 > with equality holds iff $\mathbf{a} = \mathbf{0}$.
 
+> *Corollary.*{: .cor}
+> The "binomial expansion" of vectors is
+>
+> $$
+  (\mathbf{a} - \mathbf{b})^2 = \mathbf{a} \cdot \mathbf{a} + \mathbf{b} \cdot \mathbf{b} - 2(\mathbf{a} \cdot \mathbf{b})
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Consider a triangle in 2D with $O, A, B$ as the vertices and $\theta = \angle BOA$.
+> By Cosine Law, we have
+>
+> $$
+  |BA|^2 = |OA|^2 + |OB|^2 - 2|OA||OB|\cos\theta
+  $$
+>
+> Let $\mathbf{a} = \vec{OA}$ and $\mathbf{b} = \vec{OB}$, we have $\vec{BA} = \mathbf{a} - \mathbf{b}$, we have
+>
+> $$
+  |\mathbf{a} - \mathbf{b}|^2 = |\mathbf{a}|^2 + |\mathbf{b}|^2 - 2|\mathbf{a}||\mathbf{b}|\cos\theta
+  $$
+>
+> Hence, as $\mathbf{v} \cdot \mathbf{v} = \vert v \vert^2$,
+>
+> $$
+  (\mathbf{a} - \mathbf{b})^2 = (\mathbf{a} - \mathbf{b}) \cdot (\mathbf{a} - \mathbf{b}) = \mathbf{a} \cdot \mathbf{a} + \mathbf{b} \cdot \mathbf{b} - 2(\mathbf{a} \cdot \mathbf{b})
+  $$
+
 > *Lemma.*{: .lem}
 > If $\mathbf{a} \cdot \mathbf{b} = 0$ and $\mathbf{a} \not = \mathbf{0}$ and $\mathbf{b} \not = \mathbf{0}$,
 > then $\mathbf{a} \perp \mathbf{b}$ and $\theta = \pi/2$.
+
+### Projection
 
 ![Projection](../images/vector-projection.png)
 
@@ -187,62 +217,58 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
   = (\mathbf{a} \cdot \mathbf{\hat{b}})\,\mathbf{\hat{b}}
   $$
 
-Consider a triangle in 2D with $A, B, C$ as the vertices and $\theta = \angle BAC$, according to cosine Law we have
-
-$$
-|CB|^2 = |AB|^2 + |AC|^2 - 2|AB||AC|\cos\theta
-$$
-
-By putting them in vector terms, let $\mathbf{a} = \vec{AB}$ and $\mathbf{b} = \vec{AC}$, we have $\vec{CB} = \mathbf{a} - \mathbf{b}$.
-Hence,
-
-$$
-|\mathbf{a} - \mathbf{b}|^2 = |\mathbf{a}|^2 + |\mathbf{b}|^2 - 2|\mathbf{a}||\mathbf{b}|\cos\theta
-$$
-
-Later on we can see that with such definition of dot product, we have (which is consistent with binomial expansion)
-
-$$
-(\mathbf{a} - \mathbf{b})^2 = (\mathbf{a} - \mathbf{b}) \cdot (\mathbf{a} - \mathbf{b}) = \mathbf{a} \cdot \mathbf{a} + \mathbf{b} \cdot \mathbf{b} - 2(\mathbf{a} \cdot \mathbf{b})
-$$
-
-### Linearity in the Arguments
+### Distributive over Addition
 
 > *Lemma.*{: .lem}
-> $\mathbf{a} \cdot (\lambda \mathbf{b}) = (\lambda \mathbf{a}) \cdot \mathbf{b} = \lambda \mathbf{a} \cdot \mathbf{b}$
+> For $\lambda \in \mathbb{R}$,
+>
+> $$
+  \mathbf{a} \cdot (\lambda \mathbf{b}) = (\lambda \mathbf{a}) \cdot \mathbf{b} = \lambda \mathbf{a} \cdot \mathbf{b}
+  $$
 
-From the definition, we can see that for $\lambda \in \mathbb{R}$,
+> *Theorem.*{: .thm}
+> Scalar multiplication is _distributive_ over vector addition, i.e.
+>
+> $$
+  \mathbf{a} \cdot (\lambda \mathbf{b} + \mu \mathbf{c}) = \lambda \mathbf{a} \cdot \mathbf{b} + \mu \mathbf{a} \cdot \mathbf{c}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> ![Dot Product Distributive](../images/vector-dot-product-distributive-law.png)
+>
+> According to the above, we can see that $\mathbf{b}^{\perp} + \mathbf{c}^{\perp} = (\mathbf{b} + \mathbf{c})^{\perp}$, i.e.
+>
+> $$
+  {\mathbf{a} \cdot \mathbf{b} \over |\mathbf{a}|^2}\mathbf{a} + {\mathbf{a} \cdot \mathbf{c} \over |\mathbf{a}|^2}\mathbf{a} = {\mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) \over |\mathbf{a}|^2}\mathbf{a} \\
+  $$
+>
+> By multiplying both side by $\vert \mathbf{a} \vert^2$ and taking dot product by $\mathbf{a}$,
+>
+> $$
+  \begin{align*}
+  (\mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c})(\mathbf{a} \cdot \mathbf{a}) &= [\mathbf{a} \cdot (\mathbf{b} + \mathbf{c})](\mathbf{a} \cdot \mathbf{a}) \\
+  \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} &= \mathbf{a} \cdot (\mathbf{b} + \mathbf{c})
+  \end{align*}
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  \mathbf{a} \cdot (\lambda \mathbf{b} + \mu \mathbf{c})
+  &= \mathbf{a} \cdot (\lambda \mathbf{b}) + \mathbf{a} \cdot (\mu \mathbf{c}) \\
+  &= \lambda \mathbf{a} \cdot \mathbf{b} + \mu \mathbf{a} \cdot \mathbf{c}
+  \end{align*}
+  $$
 
-$$
-\mathbf{a} \cdot (\lambda\mathbf{b}) = (\lambda \mathbf{a}) \cdot \mathbf{b} = \lambda(\mathbf{a} \cdot \mathbf{b})
-$$
-
-According to the following graph,
-
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dot_product_distributive_law.svg/320px-Dot_product_distributive_law.svg.png" alt="" /></p>
-
-We can see that $\mathbf{b}^{\perp} + \mathbf{c}^{\perp} = (\mathbf{b} + \mathbf{c})^{\perp}$.
-Hence,
-
-$$
-\begin{align*}
-{\mathbf{a} \cdot \mathbf{b} \over |\mathbf{a}|^2}\mathbf{a} + {\mathbf{a} \cdot \mathbf{c} \over |\mathbf{a}|^2}\mathbf{a} &= {\mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) \over |\mathbf{a}|^2}\mathbf{a} \\
-(\mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c})(\mathbf{a} \cdot \mathbf{a}) &= [\mathbf{a} \cdot (\mathbf{b} + \mathbf{c})](\mathbf{a} \cdot \mathbf{a}) \\
-\mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} &= \mathbf{a} \cdot (\mathbf{b} + \mathbf{c})
-\end{align*}
-$$
-
-Combining the above, we have what we called _linearity in the second argument_,
-
-$$
-\mathbf{a} \cdot (\lambda \mathbf{b} + \mu \mathbf{c}) = \lambda \mathbf{a} \cdot \mathbf{b} + \mu \mathbf{a} \cdot \mathbf{c}
-$$
-
-In fact, as scalar multiplication of vectors in real vector spaces is commutative, we also have linearity in the first argument (which might not be true in other vector spcaes).
+In [vector space](vector-spaces.md), this property is called _linearity in the second argument_.
+In fact, as scalar multiplication of vectors in real vector spaces is commutative,
+we also have linearity in the first argument (which might not be true in other vector spcaes).
 
 ### Cauchy-Schwarz Inequality
 
-For all $\mathbf{a}, \mathbf{b} \in \mathbb{R}^2$/,
+For all $\mathbf{a}, \mathbf{b} \in \mathbb{R}^2$,
 
 $$
 | \mathbf{a} \cdot \mathbf{b} | \le | \mathbf{a}| | \mathbf{b}|
