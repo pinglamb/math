@@ -252,14 +252,6 @@ Lagrange's Theorem shows that the order of $G$ influences the number of subgroup
 > The **exponent** of $G$ is the smallest number $m$ such that $a^m = e$ for all $a \in G$.
 > Thus, $m$ is the least common multiple of all the orders of elements, which are divisors of $\|G\|$, so $m$ divides $\|G\|$.
 
-> *Corollary.*{: .cor}
-> Suppose $G$ is a finite group of order $p$, where $p$ is prime. Then $G$ is cyclic and the only subgroups are $\set{e}$ and $G$.
->
-> *Proof.*{: .prf}
->
-> For $H \le G$, by Lagrange's Theorem, $\|H\|$ divides $\|G\| = p$, hence $\|H\| = 1$ or $p$.
-> When $\|H\| = 1$, $H = \set{e}$. When $\|H\| = p$, $H = G$. For any $a \in G$, $\text{ord}(a) = p$ and generates $G$.
-
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 12
