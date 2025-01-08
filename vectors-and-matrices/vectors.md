@@ -307,6 +307,8 @@ Proof that can be generalized to other vector spaces can be found [here](vector-
 
 ## Vector Product
 
+The vector product is only defined for $\mathbb{R}^3$ space but not all vector spaces in general.
+
 > *Definition.*{: .def}
 > The **vector/cross product** $\mathbf{a} \times \mathbf{b}$ of an ordered pair $\mathbf{a}, \mathbf{b}$ is a vector such that
 >
@@ -324,10 +326,25 @@ Proof that can be generalized to other vector spaces can be found [here](vector-
 >
 >   ![Vector Product](../images/vectors-vector-product.png)
 
-Consider a triangle with vertices $O, A, B$, we have area of $OAB$ equals to ${1 \over 2}\|\mathbf{a}\|\|\mathbf{b}\| \sin \theta = {1 \over 2}\|\mathbf{a} \times \mathbf{b}\|$,
-and area of parallelogram $OACB$ equals to $\|\mathbf{a} \times \mathbf{b}\|$, with the direction of $\mathbf{a} \times \mathbf{b}$ orthogonal to the triangle/parallelogram.
-
-The vector product is only defined for $\mathbb{R}^3$ space but not all vector spaces in general.
+> *Property.*{: .prop}
+> ${1 \over 2} \mathbf{a} \times \mathbf{b}$ is the _vector area_ of triangle $OAB$.
+> $\mathbf{a} \times \mathbf{b}$ is the _vector area_ of parallelogram $OACB$.
+>
+> *Proof.*{: .prf}
+>
+> For triangle $OAB$,
+>
+> $$
+  \text{Area of } OAB = {1 \over 2}|\mathbf{a}||\mathbf{b}| \sin \theta = {1 \over 2}|\mathbf{a} \times \mathbf{b}|
+  $$
+>
+> For parallelogram $OACB$,
+>
+> $$
+  \text{Area of } OACB = \text{Area of } OAB \times 2 = |\mathbf{a} \times \mathbf{b}|
+  $$
+>
+> The direction of $\mathbf{a} \times \mathbf{b}$ is orthogonal to the triangle/parallelogram.
 
 > *Property.*{: .prop}
 > Vector product is _anti-commutative_, i.e.
@@ -378,6 +395,19 @@ The vector product is only defined for $\mathbb{R}^3$ space but not all vector s
 >
 > We can see that $\|\mathbf{b}''\| = \|\mathbf{b'}\| = \|\mathbf{b}\| \sin \theta$.
 > By construction, $\mathbf{b''} = \mathbf{\hat{a}} \times \mathbf{b}$.
+>
+> Algebraically, let $\mathbf{d} = \mathbf{a} \times (\mathbf{b} + \mathbf{c}) - \mathbf{a} \times \mathbf{b} - \mathbf{a} \times \mathbf{c}$,
+>
+> $$
+  \begin{align*}
+  \mathbf{d} \cdot \mathbf{d}
+  &= \mathbf{d} \cdot [\mathbf{a} \times (\mathbf{b} + \mathbf{c})] - \mathbf{d} \cdot (\mathbf{a} \times \mathbf{b}) - \mathbf{d} \cdot (\mathbf{a} \times \mathbf{c}) \\
+  &= (\mathbf{b} + \mathbf{c}) \cdot (\mathbf{d} \times \mathbf{a}) - \mathbf{b} \cdot (\mathbf{d} \times \mathbf{a}) - \mathbf{c} \cdot (\mathbf{d} \times \mathbf{a}) \\
+  &= 0
+  \end{align*}
+  $$
+>
+> Hence, $\mathbf{d} = \mathbf{0}$ and $\mathbf{a} \times (\mathbf{b} + \mathbf{c}) = \mathbf{a} \times \mathbf{b} + \mathbf{a} \times \mathbf{c}$.
 
 In general, similar to dot product,
 
@@ -385,62 +415,61 @@ $$
 \mathbf{a} \times (\lambda\mathbf{b} + \mu\mathbf{c}) = \lambda\mathbf{a} \times \mathbf{b} + \mu\mathbf{a} \times \mathbf{c}
 $$
 
-## Triple Products
+## Scalar Triple Product
 
-### Scalar Triple Product
+> *Definition.*{: .def}
+> The **scalar triple product** is defined by
+>
+> $$
+  [\mathbf{a}, \mathbf{b}, \mathbf{c}] = \mathbf{a} \cdot(\mathbf{b} \times \mathbf{c})
+  $$
 
-The scalar triple product is defined by
+> *Property.*{: .prop}
+> Assume $\mathbf{a}, \mathbf{b}, \mathbf{c}$ have the sense of the right-hand rule, then
+>
+> $$
+  [\mathbf{a}, \mathbf{b}, \mathbf{c}] = [\mathbf{b}, \mathbf{c}, \mathbf{a}] = [\mathbf{c}, \mathbf{a}, \mathbf{b}] = -[\mathbf{b}, \mathbf{a}, \mathbf{c}] = - [\mathbf{a}, \mathbf{c}, \mathbf{b}] = - [\mathbf{c}, \mathbf{b}, \mathbf{a}]
+  $$
+>
+> *Proof.*{: .prf}
+>
+> ![Scalar Triple Product](../images/vector-triple-product-parallelepiped.png)
+>
+> The volume of a parallelepiped is given by $[\mathbf{a}, \mathbf{b}, \mathbf{c}]$ and the order of $\mathbf{a}, \mathbf{b}, \mathbf{c}$ doesn't affect the volume.
 
-$$
-[\mathbf{a}, \mathbf{b}, \mathbf{c}] = \mathbf{a} \cdot(\mathbf{b} \times \mathbf{c})
-$$
+> *Proposition.*{: .prop}
+> $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$..
+>
+> *Proof.*{: .prf}
+>
+> From the above, $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \mathbf{c} \cdot (\mathbf{a} \times \mathbf{b})$ and dot product is commutative.
 
-Assume $\mathbf{a}, \mathbf{b}, \mathbf{c}$ have the sense of the right-hand rule,
-the volume of a parallelepiped is given by $[\mathbf{a}, \mathbf{b}, \mathbf{c}]$.
+## Vector Triple Product
 
-<p align="center"><img src="https://github.com/user-attachments/assets/6e5060f2-f1a6-4ec5-8527-3026620d1f61" alt=""></p>
+> *Definition.*{: .def}
+> The **vector triple product** is defined by
+>
+> $$
+  (\mathbf{a} \times \mathbf{b}) \times \mathbf{c} = - \mathbf{c} \times (\mathbf{a} \times \mathbf{b}) = - (\mathbf{b} \times \mathbf{a}) \times \mathbf{c} = \mathbf{c} \times (\mathbf{b} \times \mathbf{a})
+  $$
 
-Since the order of $\mathbf{a}, \mathbf{b}, \mathbf{c}$ doesn't affect the volume, we have
-
-$$
-[\mathbf{a}, \mathbf{b}, \mathbf{c}] = [\mathbf{b}, \mathbf{c}, \mathbf{a}] = [\mathbf{c}, \mathbf{a}, \mathbf{b}] = -[\mathbf{b}, \mathbf{a}, \mathbf{c}] = - [\mathbf{a}, \mathbf{c}, \mathbf{b}] = - [\mathbf{c}, \mathbf{b}, \mathbf{a}]
-$$
-
-As $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \mathbf{c} \cdot (\mathbf{a} \times \mathbf{b})$ and dot product is commutative, we have
-
-$$
-\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}
-$$
-
-### Vector Triple Product
-
-The vector triple product is defined by
-
-$$
-(\mathbf{a} \times \mathbf{b}) \times \mathbf{c} = - \mathbf{c} \times (\mathbf{a} \times \mathbf{b}) = - (\mathbf{b} \times \mathbf{a}) \times \mathbf{c} = \mathbf{c} \times (\mathbf{b} \times \mathbf{a})
-$$
-
-We will later see that
-
-$$
-\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c}
-$$
+> *Property.*{: .prop}
+> $\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c}$
 
 ## Vector Equations
 
 We use vector manipulation on the equation so to simplify the terms, normally by dotting or crossing the equation with some vectors.
 
-For example,
-
-$$
-\mathbf{x} - (\mathbf{x} \times \mathbf{a}) \times \mathbf{b} = \mathbf{c}
-$$
-
-After dotting with $\mathbf{b}$ and some substitutions, we will have
-
-$$
-\mathbf{x} = {\mathbf{c} + (\mathbf{c} \cdot \mathbf{b})a \over 1 + \mathbf{a} \cdot \mathbf{b}}
-$$
+> *Problem.*{: .pro}
+> Solve $\mathbf{x} - (\mathbf{x} \times \mathbf{a}) \times \mathbf{b} = \mathbf{c}$.
+>
+> *Solution.*{: .sol}
+>
+> After dotting with $\mathbf{b}$ and some substitutions, we will have
+>
+> $$
+  \mathbf{x} = {\mathbf{c} + (\mathbf{c} \cdot \mathbf{b})a \over 1 + \mathbf{a} \cdot \mathbf{b}}
+  $$
 
 This is another technique [here](https://math.stackexchange.com/questions/3879932/how-to-solve-the-vector-equation-mathbfr-mathbfr-times-mathbfd-m).
 
