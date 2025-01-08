@@ -16,7 +16,7 @@ title: Countability &#124; Numbers and Sets
 > Two sets $A$ and $B$ are **equinumerous** if there is a bijection from $A$ to $B$, denoted by $A \sim B$.
 
 > *Theorem.*{: .thm}
-> $~$ is an equivalence relation.
+> $\sim$ is an equivalence relation.
 >
 > *Proof.*{: .prf}
 >

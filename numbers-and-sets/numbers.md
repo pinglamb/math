@@ -312,6 +312,30 @@ This theorem can be used to prove the existence of "missing" numbers in $\mathbb
 >
 > Hence, it is only possible that $s^2 = 2$.
 
+There is an alternative way to construct real numbers from sets of rational numbers instead of sequences.
+
+> *Definition.*{: .def}
+> A **Dedekind cut** of $\mathbb{Q}$ is a set of partition of $\mathbb{Q}$ into $L$ and $R$ such that
+>
+> $$
+  (\forall l \in L)(\forall r \in R) \, l < r
+  $$
+>
+> and $R$ has no minimum.
+
+It means a Dedekind cut "cuts" the number line into two.
+It can cut at a "missing number" of $\mathbb{R} \setminus \mathbb{Q}$, therefore
+
+> *Definition.*{: .def}
+> $\mathbb{R}$ is the set of all Dedekind cuts,
+> with the supremum of a subset of $\mathbb{R}$ as the union of the left sides of the Dedekind cuts.
+
+We restrict $R$ to have no minimum so that we can embed $q \in \mathbb{Q}$ as
+
+$$
+q \mapsto \set{x \in \mathbb{Q} : x \le q}, \set{x \in \mathbb{Q} : x > q}
+$$
+
 ### Decimal Notation
 
 The deciaml notation of a real number is of the form $n.a_1a_2a_3...$, which represents the sum of the series
