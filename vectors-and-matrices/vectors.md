@@ -268,19 +268,39 @@ we also have linearity in the first argument (which might not be true in other v
 
 ### Cauchy-Schwarz Inequality
 
-For all $\mathbf{a}, \mathbf{b} \in \mathbb{R}^2$,
+> *Theorem.*{: .thm}
+> **[Cauchy-Schwarz Inequality]**
+> For all $\mathbf{a}, \mathbf{b} \in \mathbb{R}^2$,
+>
+> $$
+  | \mathbf{a} \cdot \mathbf{b} | \le | \mathbf{a}| | \mathbf{b}|
+  $$
+>
+> with equality holds when $\mathbf{a} = \mathbf{0}$ or $\mathbf{b} = \mathbf{0}$ or $\mathbf{a} = \lambda\mathbf{b}$.
+>
+> *Proof.*{: .prf}
+>
+> By definition,
+>
+> $$
+  |\mathbf{a} \cdot \mathbf{b}| = |\mathbf{a}||\mathbf{b}||\cos \theta| \le |\mathbf{a}||\mathbf{b}|
+  $$
+>
+> as $\vert \cos \theta \vert \le 1$.
 
-$$
-| \mathbf{a} \cdot \mathbf{b} | \le | \mathbf{a}| | \mathbf{b}|
-$$
+Proof that can be generalized to other vector spaces can be found [here](vector-spaces.md#cauchy-schwarz-inequality).
 
-By definition,
+### Triangle Inequality
 
-$$
-|\mathbf{a} \cdot \mathbf{b}| = |\mathbf{a}||\mathbf{b}||\cos \theta| \le |\mathbf{a}||\mathbf{b}|
-$$
+> *Theorem.*{: .thm}
+> **[Triangle Inequality]**
+>
+> $$
+  \vert \mathbf{a} + \mathbf{b} \vert \le \vert \mathbf{a} \vert + \vert \mathbf{b} \vert
+  $$
 
-with equality holds when $\mathbf{a} = \mathbf{0}$ or $\mathbf{b} = \mathbf{0}$ or $\mathbf{a} = \lambda\mathbf{b}$.
+> *Corollary.*{: .cor}
+> $\vert \mathbf{a} - \mathbf{b} \vert \ge \vert \vert \mathbf{a} \vert - \vert \mathbf{b} \vert \vert$.
 
 ## Vector Product
 
