@@ -4,6 +4,7 @@ title: Vectors &#124; Vectors and Matrices
 ---
 
 # Vectors
+{: .page-title}
 
 The discussion here focuses on vectors in 2D and 3D spaces, i.e. $\mathbb{R}^2$ and $\mathbb{R}^3$.
 It begins from defining vectors and various operations of them geometrically.
@@ -19,13 +20,11 @@ With a chosen origin $O$, every point $P$ in 2D/3D space has a position vector $
 > A **zero/null vector**, denoted by $\mathbf{0}$, is a vector with zero magnitude, i.e. $\|\mathbf{0}\| = 0$.
 
 > *Definition.*{: .def}
-> Given a vector $\mathbf{v} \not = \mathbf{0}$, the vector
+> Given a vector $\mathbf{v} \not = \mathbf{0}$, a **unit vector** that is in the same direction as $\mathbf{v}$ and magnitude equals to $1$, i.e.
 >
 > $$
   \mathbf{\hat{v}} = {\mathbf{v} \over |\mathbf{v}|}
   $$
->
-> is a **unit vector** that is in the same direction as $\mathbf{v}$ and magnitude equals to $1$.
 
 ## Vector Addition
 
@@ -38,7 +37,7 @@ With a chosen origin $O$, every point $P$ in 2D/3D space has a position vector $
 >
 > where $OACB$ is a parallelogram.
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > Vector addition is/has
 >
 > + [_Commutative_]
@@ -80,6 +79,7 @@ With a chosen origin $O$, every point $P$ in 2D/3D space has a position vector $
 
 > *Definition.*{: .def}
 > Vector subtraction is the addition of inverse, i.e.
+>
 > $$
   \mathbf{b} - \mathbf{a} = \mathbf{b} + (-\mathbf{a})
   $$
@@ -92,7 +92,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 > Let $\mathbf{a}$ be an vector and $\lambda \in \mathbb{R}$, $\lambda\mathbf{a}$ is defined as a vector parallel to $\mathbf{a}$,
 > with magnitude $\|\lambda\| \|\mathbf{a}\|$ and same direction as $\mathbf{a}$ when $\lambda > 0$ and opposite direction to $\mathbf{a}$ when $\lambda < 0$.
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > Multiplication by scalars is/has
 >
 > + [_Distributive over vector addition_]
@@ -116,7 +116,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
   1\mathbf{a} = \mathbf{a}
   $$
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > $0\mathbf{a} = \mathbf{0}$ and $(-1)\mathbf{a} = -\mathbf{a}$.
 
 ## Linear Combination
@@ -135,14 +135,14 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 >
 > where $0 \le \theta \le \pi$ is the non-reflex angle between $\mathbf{a}$ and $\mathbf{b}$ once they are placed "tail to tail" or "head to head".
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > Scalar multiplication is _commutative_, i.e.
 >
 > $$
   \mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a}
   $$
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > A scalar product of a vector with itself is always $\ge 0$, i.e.
 >
 > $$
@@ -151,7 +151,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 >
 > with equality holds iff $\mathbf{a} = \mathbf{0}$.
 
-> *Corollary.*{: .cor}
+> *Proposition.*{: .prop}
 > The "binomial expansion" of vectors is
 >
 > $$
@@ -179,7 +179,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
   (\mathbf{a} - \mathbf{b})^2 = (\mathbf{a} - \mathbf{b}) \cdot (\mathbf{a} - \mathbf{b}) = \mathbf{a} \cdot \mathbf{a} + \mathbf{b} \cdot \mathbf{b} - 2(\mathbf{a} \cdot \mathbf{b})
   $$
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .lem}
 > If $\mathbf{a} \cdot \mathbf{b} = 0$ and $\mathbf{a} \not = \mathbf{0}$ and $\mathbf{b} \not = \mathbf{0}$,
 > then $\mathbf{a} \perp \mathbf{b}$ and $\theta = \pi/2$.
 
@@ -191,7 +191,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 > The projection of $\mathbf{a}$ onto $\mathbf{b}$ is the part of $\mathbf{a}$ that is parallel to $\mathbf{b}$,
 > denoted by $\mathbf{a}^{\perp}$.
 
-> *Lemma.*{: .lem}
+> *Theorem.*{: .thm}
 > $\mathbf{a}^{\perp} = (|\mathbf{a}|\cos\theta)\,\mathbf{\hat{b}} = (\mathbf{a} \cdot \mathbf{\hat{b}})\,\mathbf{\hat{b}}$.
 >
 > *Proof.*{: .prf}
@@ -230,7 +230,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 > Scalar multiplication is _distributive_ over vector addition, i.e.
 >
 > $$
-  \mathbf{a} \cdot (\lambda \mathbf{b} + \mu \mathbf{c}) = \lambda \mathbf{a} \cdot \mathbf{b} + \mu \mathbf{a} \cdot \mathbf{c}
+  \mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c}
   $$
 >
 > *Proof.*{: .prf}
@@ -246,21 +246,24 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 > By multiplying both side by $\vert \mathbf{a} \vert^2$ and taking dot product by $\mathbf{a}$,
 >
 > $$
-  \begin{align*}
-  (\mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c})(\mathbf{a} \cdot \mathbf{a}) &= [\mathbf{a} \cdot (\mathbf{b} + \mathbf{c})](\mathbf{a} \cdot \mathbf{a}) \\
-  \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} &= \mathbf{a} \cdot (\mathbf{b} + \mathbf{c})
-  \end{align*}
+  (\mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c})(\mathbf{a} \cdot \mathbf{a}) = [\mathbf{a} \cdot (\mathbf{b} + \mathbf{c})](\mathbf{a} \cdot \mathbf{a}) \\
   $$
 >
 > Hence,
 >
 > $$
-  \begin{align*}
-  \mathbf{a} \cdot (\lambda \mathbf{b} + \mu \mathbf{c})
-  &= \mathbf{a} \cdot (\lambda \mathbf{b}) + \mathbf{a} \cdot (\mu \mathbf{c}) \\
-  &= \lambda \mathbf{a} \cdot \mathbf{b} + \mu \mathbf{a} \cdot \mathbf{c}
-  \end{align*}
+  \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} = \mathbf{a} \cdot (\mathbf{b} + \mathbf{c})
   $$
+
+In general,
+
+$$
+\begin{align*}
+\mathbf{a} \cdot (\lambda \mathbf{b} + \mu \mathbf{c})
+= \mathbf{a} \cdot (\lambda \mathbf{b}) + \mathbf{a} \cdot (\mu \mathbf{c})
+= \lambda \mathbf{a} \cdot \mathbf{b} + \mu \mathbf{a} \cdot \mathbf{c}
+\end{align*}
+$$
 
 In [vector space](vector-spaces.md), this property is called _linearity in the second argument_.
 In fact, as scalar multiplication of vectors in real vector spaces is commutative,
@@ -304,68 +307,83 @@ Proof that can be generalized to other vector spaces can be found [here](vector-
 
 ## Vector Product
 
-The vector/cross product $\mathbf{a} \times \mathbf{b}$ of an ordered pair $\mathbf{a}, \mathbf{b}$ is a vector such that
-
-1. The magnitude of $$\mathbf{a} \times \mathbf{b}$$ is
-
-$$|\mathbf{a} \times \mathbf{b}| = |\mathbf{a}||\mathbf{b}|\sin \theta$$
-
-with $0 \le \theta \le \pi$ with definition similar to dot product (non-reflex angle after "tail-to-tail" or "head-to-head" placement of the two vectors).
-
-2. $\mathbf{a} \times \mathbf{b}$ is orthongonal to both $\mathbf{a}$ and $\mathbf{b}$ (if $\mathbf{a} \times \mathbf{b} \not = \mathbf{0}$)
-
-3. $\mathbf{a} \times \mathbf{b}$ has the direction defined by "right-hand rule" ($\mathbf{a}$ - index finger, $\mathbf{b}$ - second finger, $\mathbf{a} \times \mathbf{b}$ - thumb)
-
-<p align="center"><img src="https://github.com/user-attachments/assets/72e22713-a95f-4669-a054-fd55797a74be" alt="" /></p>
+> *Definition.*{: .def}
+> The **vector/cross product** $\mathbf{a} \times \mathbf{b}$ of an ordered pair $\mathbf{a}, \mathbf{b}$ is a vector such that
+>
+> + The magnitude of $\mathbf{a} \times \mathbf{b}$ is
+>
+>   $$
+    \vert \mathbf{a} \times \mathbf{b} \vert = \vert \mathbf{a} \vert \vert \mathbf{b} \vert \sin \theta
+    $$
+>
+>   with $0 \le \theta \le \pi$ and definition similar to dot product (non-reflex angle after "tail-to-tail" or "head-to-head" placement of the two vectors).
+>
+> + $\mathbf{a} \times \mathbf{b}$ is _orthongonal_ to both $\mathbf{a}$ and $\mathbf{b}$ (if $\mathbf{a} \times \mathbf{b} \not = \mathbf{0}$)
+>
+> + $\mathbf{a} \times \mathbf{b}$ has the direction defined by "_right-hand rule_" ($\mathbf{a}$ - index finger, $\mathbf{b}$ - second finger, $\mathbf{a} \times \mathbf{b}$ - thumb)
+>
+>   ![Vector Product](../images/vectors-vector-product.png)
 
 Consider a triangle with vertices $O, A, B$, we have area of $OAB$ equals to ${1 \over 2}\|\mathbf{a}\|\|\mathbf{b}\| \sin \theta = {1 \over 2}\|\mathbf{a} \times \mathbf{b}\|$,
 and area of parallelogram $OACB$ equals to $\|\mathbf{a} \times \mathbf{b}\|$, with the direction of $\mathbf{a} \times \mathbf{b}$ orthogonal to the triangle/parallelogram.
 
 The vector product is only defined for $\mathbb{R}^3$ space but not all vector spaces in general.
 
-### Properties
+> *Property.*{: .prop}
+> Vector product is _anti-commutative_, i.e.
+>
+> $$
+  \mathbf{a} \times \mathbf{b} = - \mathbf{b} \times \mathbf{a}
+  $$
 
-Vector product is _anti-commutative_
+> *Property.*{: .prop}
+> Vector product of a vector with itself is a zero vector, i.e.
+>
+> $$
+  \mathbf{a} \times \mathbf{a} = \mathbf{0}
+  $$
 
-$$
-\mathbf{a} \times \mathbf{b} = - \mathbf{b} \times \mathbf{a}
-$$
+> *Property.*{: .prop}
+> Given $\mathbf{a} \not = \mathbf{0}$ and $\mathbf{b} \not = \mathbf{0}$
+>
+> $$
+  \mathbf{a} \times \mathbf{b} = \mathbf{0} \implies \mathbf{a} = \lambda \mathbf{b}
+  $$
+>
+> i.e. $\mathbf{a}$ and $\mathbf{b}$ are parallel and $\theta = 0$ or $\theta = \pi$.
 
-Vector product of a vector with itself is a zero vector
+### Distributive over Addition
 
-$$
-\mathbf{a} \times \mathbf{a} = \mathbf{0}
-$$
+> *Lemma.*{: .lem}
+> For $\lambda \in \mathbb{R}$,
+>
+> $$
+  \mathbf{a} \times (\lambda\mathbf{b}) = (\lambda \mathbf{a}) \times \mathbf{b} = \lambda ( \mathbf{a} \times \mathbf{b})
+  $$
 
-Given $\mathbf{a} \not = \mathbf{0}$ and $\mathbf{b} \not = \mathbf{0}$
+> *Theorem.*{: .thm}
+> Vector product is _distributive over vector addition_, i.e.
+>
+> $$
+  \mathbf{a} \times (\mathbf{b} + \mathbf{c}) = \mathbf{a} \times \mathbf{b} + \mathbf{a} \times \mathbf{c}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The vector product $\mathbf{\hat{a}} \times \mathbf{b}$ can be constructed by two steps.
+> First project $\mathbf{b}$ onto a plane orthogonal to $\mathbf{\hat{a}}$ and then rotate the projection $\mathbf{b'}$ by $\pi/2$ in "anti-clockwise" direction
+> (when looking in the opposite direction of $\mathbf{\hat{a}}$) to form $\mathbf{b''}$.
+>
+> ![Vector Product Distributive](../images/vectors-vector-product-by-projection.png)
+>
+> We can see that $\|\mathbf{b}''\| = \|\mathbf{b'}\| = \|\mathbf{b}\| \sin \theta$.
+> By construction, $\mathbf{b''} = \mathbf{\hat{a}} \times \mathbf{b}$.
 
-$$
-\mathbf{a} \times \mathbf{b} = \mathbf{0} \implies \mathbf{a} = \lambda \mathbf{b}
-$$
-
-i.e. $\mathbf{a}$ and $\mathbf{b}$ are parallel and $\theta = 0$ or $\theta = \pi$.
-
-From definition
-
-$$
-\mathbf{a} \times (\lambda\mathbf{b}) = \lambda ( \mathbf{a} \times \mathbf{b})
-$$
-
-### Linearity in the Second Arguments
-
-The vector product $\mathbf{\hat{a}} \times \mathbf{b}$ can be constructed by two steps.
-First project $\mathbf{b}$ onto a plane orthogonal to $\mathbf{\hat{a}}$ and then rotate the projection $\mathbf{b'}$ by $\pi/2$ in "anti-clockwise" direction
-(when looking in the opposite direction of $\mathbf{\hat{a}}$) to form $\mathbf{b''}$.
-
-We can see that $\|\mathbf{b}''\| = \|\mathbf{b'}\| = \|\mathbf{b}\| \sin \theta$.
-By construction, $\mathbf{b''} = \mathbf{\hat{a}} \times \mathbf{b}$.
-Hence,
+In general, similar to dot product,
 
 $$
 \mathbf{a} \times (\lambda\mathbf{b} + \mu\mathbf{c}) = \lambda\mathbf{a} \times \mathbf{b} + \mu\mathbf{a} \times \mathbf{c}
 $$
-
-with a similar argument as the proof in dot product.
 
 ## Triple Products
 
@@ -408,179 +426,6 @@ $$
 \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c}
 $$
 
-## Bases and Components
-
-### Linear Dependency
-
-In $\mathbb{R}^3$ (similar argument for $\mathbb{R}^2$, the vector
-
-$$
-\mathbf{d} = \lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}
-$$
-
-is described as a linear combination of $\mathbf{a},\mathbf{b}, \mathbf{c}$.
-
-If for vectors $\mathbf{a},\mathbf{b}, \mathbf{c}$,
-
-$$
-\lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}= \mathbf{0} \iff \lambda = \mu = \nu = 0
-$$
-
-then $\mathbf{a},\mathbf{b}, \mathbf{c}$ are linear independent. The reason for that is if let say $\lambda \not = 0$,
-we can write $\mathbf{a} = -{\mu \over \lambda}\mathbf{b} - {\nu \over \lambda}\mathbf{c}$,
-which is a linear combination of other vectors and therefore they are linearly dependent.
-
-### Spanning Set and Basis
-
-A set of vectors $\\{\mathbf{a}, \mathbf{b}\\}$ is a spanning set which spans $\mathbb{R}^2$ if for all vectors $\mathbf{r} \in \mathbb{R}^2$, there exists some $\lambda, \mu \in \mathbb{R}$ such that
-
-$$
-\mathbf{r} = \lambda\mathbf{a} + \mu\mathbf{b}
-$$
-
-$\\{\mathbf{a}, \mathbf{b}\\}$ spans $\mathbb{R}^2$ if $\mathbf{a} \times \mathbf{b} = \mathbf{0}$ (non-parallel).
-
-For any vector $\mathbf{r} \in \mathbb{R}^2$, the components $(\lambda, \mu)$ are _unique_.
-
-We said $\\{\mathbf{a}, \mathbf{b}\\}$ is a basis of the set of vectors in $\mathbb{R}^2$ if it is a spanning set and linear independent.
-
-In $\mathbb{R}^2$, to find $\lambda$ and $\mu$ for $\vec{OP}$ geometrically, we can draw a line through $P$ which is parallel to $OA$ and intersects with $OB$ (or its extension) at $N$.
-We have $\vec{OP} = \vec{ON} + \vec{NP} = \mu\mathbf{b} + \lambda\mathbf{a}$.
-
-The same concept can be extended to $\mathbb{R}^3$,
-a set of vectors $\\{\mathbf{a}, \mathbf{b}\\}, \mathbf{c}\\}$ is a spanning set which spans $\mathbb{R}^3$ if for all vectors $\mathbf{r} \in \mathbb{R}^3$, there exists some $\lambda, \mu, \nu \in \mathbb{R}$ such that
-
-$$
-\mathbf{r} = \lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}
-$$
-
-$\\{\mathbf{a}, \mathbf{b}, \mathbf{c}\\}$ spans $\mathbb{R}^3$ if $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = 0$ (non-coplanar) and is a basis of $\mathbb{R}^3$.
-
-The components $(\lambda, \mu, \nu)$ are _unique_.
-For any $\mathbf{r} = \lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c}$, we have
-
-$$
-\mathbf{r} \cdot (\mathbf{b} \times \mathbf{c}) = \lambda \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) + \mu \mathbf{b} \cdot (\mathbf{b} \times \mathbf{c}) + \nu \mathbf{c} \cdot (\mathbf{b} \times \mathbf{c}) = \lambda \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})
-$$
-
-Therefore, $\lambda = [\mathbf{r}, \mathbf{b}, \mathbf{c}]/[\mathbf{a}, \mathbf{b}, \mathbf{c}]$ which is unique and similarily for $\mu, \nu$.
-
-## Cartesian/Standard Basis
-
-Although any three vectors can be as basis in $mathbb{R}^3$ as long as $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = 0$,
-things can be simplified if the basis vectors are orthogonal, have unit magnitude.
-For a Cartesian basis, we have the basis vectors being the unit vectors along the $x, y, z$ axes, and denoted by $\mathbf{i}, \mathbf{j}, \mathbf{k}$.
-
-With that, we have
-
-$$
-\begin{gather}
-\mathbf{i} \cdot \mathbf{i} = \mathbf{j} \cdot \mathbf{j} = \mathbf{k} \cdot \mathbf{k} = 1 \\
-\mathbf{i} \cdot \mathbf{j} = \mathbf{j} \cdot \mathbf{k} = \mathbf{k} \cdot \mathbf{i} = 0 \\
-\mathbf{i} \times \mathbf{j} = \mathbf{k} \quad \mathbf{j} \times \mathbf{k} = \mathbf{i} \quad \mathbf{k} \times \mathbf{i} = \mathbf{j} \\
-[\mathbf{i}, \mathbf{j}, \mathbf{k}] = 1
-\end{gather}
-$$
-
-For any point $P$ with coordinates $(x, y, z)$, we can see that $\vec{OP} = \mathbf{v} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$,
-hence we can have the notation $\mathbf{v} = (x, y, z)$ and it is called the Cartesian components of $\mathbf{v}$.
-
-Also, by "dotting" $\mathbf{v}$ by $\mathbf{i}, \mathbf{j}, \mathbf{k}$ respectively, we can conclude
-
-$$
-\mathbf{v} = (\mathbf{v} \cdot \mathbf{i}, \mathbf{v} \cdot \mathbf{j},\mathbf{v} \cdot \mathbf{k})
-$$
-
-For unit vector $\mathbf{\hat{v}}$, we can write
-
-$$
-\mathbf{\hat{v}} = (\cos \alpha, \cos \beta, \cos \gamma)
-$$
-
-which is called the direction cosines of $\mathbf{\hat{v}}$.
-
-### Vector Component Identities
-
-With the use of standard basis, some of the numeric operations of vectors can be simplified.
-Given
-
-$$
-\begin{align*}
-\mathbf{a} &= a_x\mathbf{i} + a_y\mathbf{j} + a_z\mathbf{k} \\
-\mathbf{b} &= b_x\mathbf{i} + b_y\mathbf{j} + b_z\mathbf{k} \\
-\mathbf{c} &= c_x\mathbf{i} + c_y\mathbf{j} + c_z\mathbf{k}
-\end{align*}
-$$
-
-For addition,
-
-$$
-\lambda\mathbf{a} + \mu\mathbf{b} = (\lambda a_x + \mu b_x)\mathbf{i} + (\lambda a_y + \mu b_y)\mathbf{j} + (\lambda c_x + \mu c_x)\mathbf{k}
-$$
-
-For scalar product,
-
-$$
-\mathbf{a} \cdot \mathbf{b} = a_x b_x + a_y b_y + a_z b_z
-$$
-
-For vector product,
-
-$$
-\mathbf{a} \times \mathbf{b} = (a_y b_z - a_z b_y)\mathbf{i} + (a_z b_x - a_x b_z)\mathbf{j} + (a_x b_y - a_y b_x)\mathbf{k}
-$$
-
-or
-
-$$
-\mathbf{a} \times \mathbf{b} = \begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
-a_x & a_y & a_z \\
-b_x & b_y & b_z \\
-\end{vmatrix}
-$$
-
-For scalar triple product,
-
-$$
-[\mathbf{a}, \mathbf{b}, \mathbf{c}] = a_x b_y c_z + a_y b_z c_x + a_z b_x c_y - a_x b_z c_y - a_y b_x c_z - a_z b_y c_x
-$$
-
-or
-
-$$
-[\mathbf{a}, \mathbf{b}, \mathbf{c}] = \begin{vmatrix}
-a_x & a_y & a_z \\
-b_x & b_y & b_z \\
-c_x & c_y & c_z \\
-\end{vmatrix}
-$$
-
-For vector product, consider the $x$-component of the product
-
-$$
-\begin{align*}
-\left(\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) \right)_x = \left( \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) \right) \cdot \mathbf{i} &= a_y(\mathbf{b} \times \mathbf{c})_z - a_z(\mathbf{b} \times \mathbf{c})_y \\
-&= a_y(b_x c_y - b_y c_x) - a_z(b_z c_x - b_x c_z) \\
-&= (a_y c_y + a_z c_z)b_x - (a_z b_z + a_y c_y)c_x + a_x b_x c_x - a_x b_x c_x \\
-&= (\mathbf{a} \cdot \mathbf{c})b_x - (\mathbf{a} \cdot \mathbf{b})c_x \\
-&= \left( (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c} \right) \cdot \mathbf{i} \\
-&= \left( (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c} \right)_x \\
-\end{align*}
-$$
-
-Similar results will be arrived for $y$-component and $z$-component, hence
-
-$$
-\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c}
-$$
-
-We can see that the resulting vector has no component in direction $\mathbf{a}$ (outside the parentheses) because the resulting vector after the last vector multiplication by $\mathbf{a}$ is orthogonal to $\mathbf{a}$.
-
-## Vector Geometry
-
-See [Vector Geometry](vector-geometry.md).
-
 ## Vector Equations
 
 We use vector manipulation on the equation so to simplify the terms, normally by dotting or crossing the equation with some vectors.
@@ -598,156 +443,6 @@ $$
 $$
 
 This is another technique [here](https://math.stackexchange.com/questions/3879932/how-to-solve-the-vector-equation-mathbfr-mathbfr-times-mathbfd-m).
-
-## Suffix Noatation and Tensors
-
-Some examples of suffix notation:
-
-$$
-(\mathbf{a} \cdot \mathbf{b}) \mathbf{c} = \mathbf{d} \quad \equiv \quad a_i b_i c_j = d_j
-$$
-
-$$
-\begin{align*}
-((\mathbf{a} \cdot \mathbf{c})\mathbf{b} - (\mathbf{a} \cdot \mathbf{b})\mathbf{c}) &\equiv a_i c_i b_j - a_k b_k c_j \\
-&\equiv a_i c_i b_j - a_i b_i c_j \\
-&\equiv a_i (c_i b_j - b_i c_j)
-\end{align*}
-$$
-
-### Kronecker Delta
-
-The Kronecker delta $\delta_{ij}$ is a tensor, defined by in matrix form
-
-$$
-\begin{pmatrix}
-\delta_{11} & \delta_{12} & \delta_{13} \\
-\delta_{21} & \delta_{22} & \delta_{23} \\
-\delta_{31} & \delta_{32} & \delta_{33}
-\end{pmatrix}
-=
-\begin{pmatrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1
-\end{pmatrix}
-$$
-
-which is an identity matrix. Hence, $\delta_{ij}$ is _symmetric_, i.e.
-
-$$
-\delta_{ij} = \delta_{ji}
-$$
-
-Also,
-
-$$
-\begin{gather}
-a_i \delta_{ij} = \sum_i a_i \delta_{ij} = a_j \\
-\delta_{ij} a_j = \sum_j \delta_{ij} a_j = a_i
-\end{gather}
-$$
-
-$$
-\delta_{ij}\delta_{jk} = \sum_{j} \delta_{ij}\delta_{jk} = \delta_{ik}
-$$
-
-$$
-\delta_{ii} = \sum_{i} \delta_{ii} = 3
-$$
-
-$$
-a_i \delta_{ij} b_j = a_i b_i = a_j b_j = \mathbf{a} \cdot \mathbf{b}
-$$
-
-## Basis Vectors
-
-In general, we can write $\mathbf{e_1} = \mathbf{i}$, $\mathbf{e_2} = \mathbf{j}$ and $\mathbf{e_3} = \mathbf{k}$ as the basis vectors of $\mathbb{R}^3$.
-
-Hence,
-
-$$
-\mathbf{e_i} \cdot \mathbf{e_j} = \delta_{ij}
-$$
-
-$$
-\mathbf{a} \cdot \mathbf{e_i} = a_i
-$$
-
-$$
-(\mathbf{e_i})_j = (\mathbf{e_j})_i = \delta_{ij}
-$$
-
-### Levi-Civita Symbol / Alternating Tensor
-
-Define
-
-$$
-\epsilon_{ijk} = \begin{cases}
-+1 &\quad ijk \text{ is even permutation} \\
--1 &\quad ijk \text{ is odd permutation} \\
-0  &\quad \text{otherwise (i.e. repeated suffices)}
-\end{cases}
-$$
-
-Therefore,
-
-$$
-\begin{align*}
-\epsilon_{123} = \epsilon_{231} = \epsilon_{312} &= +1 \\
-\epsilon_{213} = \epsilon_{132} = \epsilon_{321} &= -1 \\
-\epsilon_{111} = \epsilon_{112} = \,... &= 0 \\
-\end{align*}
-$$
-
-Hence,
-
-$$
-\epsilon_{123} = \epsilon_{231} = \epsilon_{312} = -\epsilon_{213} = -\epsilon_{132} = -\epsilon_{321}
-$$
-
-For a symmetric tensor $s_{ij}$,
-
-$$
-\epsilon_{ijk} s_{ij} = \epsilon_{jik} s_{ji} = - \epsilon_{ijk} s_{ij}
-$$
-
-Hence,
-
-$$
-\epsilon_{ijk} s_{ij} = 0
-$$
-
-By expansion of the formula, we have
-
-$$
-(\mathbf{a} \times \mathbf{b})_i = \epsilon_{ijk} a_j b_k
-$$
-
-The following is an useful identity
-
-$$
-\epsilon_{ijk}\epsilon_{ipq} = \delta_{jp}\delta_{kq} - \delta_{jq}\delta_{kp}
-$$
-
-With the above, ths scalar triple product is given by
-
-$$
-\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \epsilon_{ijk} a_i b_j c_k
-$$
-
-and vector triple product
-
-$$
-\begin{align*}
-\mathbf{a} \times (\mathbf{b} \times \mathbf{c})_i &= \epsilon_{ijk} a_j (\mathbf{b} \times \mathbf{c})_k \\
-&= \epsilon_{ijk} a_j \epsilon_{klm} b_l c_m \\
-&= -\epsilon_{kji} \epsilon_{klm} a_j b_l c_m \\
-&= -(\delta_{jl}\delta_{im} - \delta_{jm}\delta_{il}) a_j b_l c_m \\
-&= a_j b_i c_j - a_j b_j c_i \\
-&= ((\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c})_i
-\end{align*}
-$$
 
 ## References
 

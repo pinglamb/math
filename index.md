@@ -31,6 +31,7 @@ title: Home
 * [Vectors](vectors-and-matrices/vectors.md)
 * [Vector Geometry](vectors-and-matrices/vector-geometry.md)
 * [Vector Spaces](vectors-and-matrices/vector-spaces.md)
+* [Spanning Sets, Bases and Higher Dimentional Spaces](vectors-and-matrices/spanning-sets-and-bases.md)
 * [Linear Maps](vectors-and-matrices/linear-maps.md)
 * [Matrices](vectors-and-matrices/matrices.md)
 * [Suffix Notation](vectors-and-matrices/suffix-notation.md)

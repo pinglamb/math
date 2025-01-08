@@ -63,7 +63,7 @@
     color: #e0e0e0;
     @include relative-font-size(1);
 
-    .def, .lem, .thm, .cor, .prf {
+    .def, .lem, .thm, .cor, .prf, .prop, .label {
       display: inline-block;
       min-width: 100px;
       padding-right: 15px;
