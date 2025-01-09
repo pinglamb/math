@@ -65,5 +65,6 @@ title: Home
 * [Practical Examples](differential-equations/practical-examples.md)
 
 ## Geometry
+{: .left}
 
 * [Apollonian Circles](geometry/apollonian-circles.md)
