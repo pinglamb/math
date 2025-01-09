@@ -116,7 +116,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
   1\mathbf{a} = \mathbf{a}
   $$
 
-> *Property.*{: .prop}
+> *Proposition.*{: .prop}
 > $0\mathbf{a} = \mathbf{0}$ and $(-1)\mathbf{a} = -\mathbf{a}$.
 
 ## Linear Combination
@@ -379,7 +379,7 @@ The vector product is only defined for $\mathbb{R}^3$ space but not all vector s
   $$
 
 > *Theorem.*{: .thm}
-> Vector product is _distributive over vector addition_, i.e.
+> Vector product is _distributive_ over vector addition, i.e.
 >
 > $$
   \mathbf{a} \times (\mathbf{b} + \mathbf{c}) = \mathbf{a} \times \mathbf{b} + \mathbf{a} \times \mathbf{c}
@@ -396,7 +396,8 @@ The vector product is only defined for $\mathbb{R}^3$ space but not all vector s
 > We can see that $\|\mathbf{b}''\| = \|\mathbf{b'}\| = \|\mathbf{b}\| \sin \theta$.
 > By construction, $\mathbf{b''} = \mathbf{\hat{a}} \times \mathbf{b}$.
 >
-> Algebraically, let $\mathbf{d} = \mathbf{a} \times (\mathbf{b} + \mathbf{c}) - \mathbf{a} \times \mathbf{b} - \mathbf{a} \times \mathbf{c}$,
+> Algebraically, with the properties of triple scaler product shown below,
+> let $\mathbf{d} = \mathbf{a} \times (\mathbf{b} + \mathbf{c}) - \mathbf{a} \times \mathbf{b} - \mathbf{a} \times \mathbf{c}$,
 >
 > $$
   \begin{align*}
@@ -424,8 +425,25 @@ $$
   [\mathbf{a}, \mathbf{b}, \mathbf{c}] = \mathbf{a} \cdot(\mathbf{b} \times \mathbf{c})
   $$
 
-> *Property.*{: .prop}
-> Assume $\mathbf{a}, \mathbf{b}, \mathbf{c}$ have the sense of the right-hand rule, then
+> *Proposition.*{: .prop}
+> The scalar triple product represents the _vector volume_ of parallelepiped.
+>
+> *Proof.*{: .prf}
+>
+> ![Scalar Triple Product](../images/vector-triple-product-parallelepiped.png)
+>
+> $$
+  \begin{align*}
+  \text{Volume} &= \text{Base Area} \times \text{Height} \\
+  &= |a||\mathbf{b} \times \mathbf{c}|cos\theta \\
+  &= \mathbf{a} \cdot(\mathbf{b} \times \mathbf{c})
+  \end{align*}
+  $$
+>
+> if $\mathbf{a}, \mathbf{b}, \mathbf{c}$ have the sense of the right-hand rule.
+
+> *Proposition.*{: .prop}
+> If $\mathbf{a}, \mathbf{b}, \mathbf{c}$ have the sense of the right-hand rule, then
 >
 > $$
   [\mathbf{a}, \mathbf{b}, \mathbf{c}] = [\mathbf{b}, \mathbf{c}, \mathbf{a}] = [\mathbf{c}, \mathbf{a}, \mathbf{b}] = -[\mathbf{b}, \mathbf{a}, \mathbf{c}] = - [\mathbf{a}, \mathbf{c}, \mathbf{b}] = - [\mathbf{c}, \mathbf{b}, \mathbf{a}]
@@ -433,16 +451,23 @@ $$
 >
 > *Proof.*{: .prf}
 >
-> ![Scalar Triple Product](../images/vector-triple-product-parallelepiped.png)
+> The order of $\mathbf{a}, \mathbf{b}, \mathbf{c}$ doesn't affect the volume of a parallelepiped given by $[\mathbf{a}, \mathbf{b}, \mathbf{c}]$.
 >
-> The volume of a parallelepiped is given by $[\mathbf{a}, \mathbf{b}, \mathbf{c}]$ and the order of $\mathbf{a}, \mathbf{b}, \mathbf{c}$ doesn't affect the volume.
+> $(\mathbf{b}, \mathbf{a}, \mathbf{c}), (\mathbf{a}, \mathbf{c}, \mathbf{b}), (\mathbf{c}, \mathbf{b}, \mathbf{a})$ have the sence of left-hand rule so it equals to the "negative volume".
 
 > *Proposition.*{: .prop}
-> $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$..
+> $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$.
 >
 > *Proof.*{: .prf}
 >
 > From the above, $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \mathbf{c} \cdot (\mathbf{a} \times \mathbf{b})$ and dot product is commutative.
+
+> *Theorem.*{: .thm}
+> Non-zero vectors $\mathbf{a}, \mathbf{b}, \mathbf{c}$ are **coplanar** iff $[\mathbf{a}, \mathbf{b}, \mathbf{c}] = 0$.
+>
+> *Proof.*{: .prf}
+>
+> $[\mathbf{a}, \mathbf{b}, \mathbf{c}] = 0 \iff$ The volume of the parallelepiped is zero $\iff \mathbf{a}, \mathbf{b}, \mathbf{c}$ are coplanar.
 
 ## Vector Triple Product
 
