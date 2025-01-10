@@ -4,104 +4,163 @@ title: Vector Geometry &#124; Vectors and Matrices
 ---
 
 # Vector Geometry
+{: .page-title}
 
 Vectors provide a convenient way for describing geometry in $\mathbf{R}^3$.
 
 ## Lines
 
-### Vector Equations
+> *Theorem.*{: .thm}
+> Let $L$ be a line through a point $A: \vec{OA} = \mathbf{a}$ and parallel to a vector $\mathbf{t}$, then
+>
+> $$
+  L: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $P: \vec{OP} = \mathbf{x}$ be a point on $L$.
+> As $\vec{AP} = \vec{OP} - \vec{OA} = \mathbf{x} - \mathbf{a}$, for $\lambda \in \mathbb{R}$,
+>
+> $$
+  \mathbf{x} - \mathbf{a} = \lambda \mathbf{t}
+  $$
+>
+> We can eliminate $\lambda$ by taking cross product on both side with $\mathbf{t}$, i.e.
+>
+> $$
+  (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}
+  $$
 
-Let $A$ be a point with $\vec{OA} = \mathbf{a}$, $\mathbf{t}$ be a non-zero vector,
-and $L$ be a line through $A$ and parallel to $\mathbf{t}$.
+> *Corollary.*{: .cor}
+> Let $L$ be a line through two points $A: \vec{OA} = \mathbf{a}$ and $B: \vec{OB} = \mathbf{b}$, then
+>
+> $$
+  L: (\mathbf{x} - \mathbf{a}) \times (\mathbf{b} - \mathbf{a}) = \mathbf{0}
+  $$
+>
+> or alternatively, for $\lambda \in \mathbb{R}$,
+>
+> $$
+  L: \mathbf{x} = (1 - \lambda)\mathbf{a} + \lambda\mathbf{b}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $L$ is parallel to $\mathbf{t} = \vec{AB} = \vec{OB} - \vec{OA} = \mathbf{b} - \mathbf{a}$ and then by the point-slope form.
+>
+> Alternatively, we can write $\mathbf{x} = \mathbf{a} + \lambda (\mathbf{b} - \mathbf{a})$ to derive the second form.
 
-A point $X$ with $\vec{OX} = \mathbf{x}$ is on $L$ if and only if $\mathbf{x} - \mathbf{a}$ is parallel to $\mathbf{t}$, i.e.
+## Planes
 
-$$
-(\mathbf{x} - \mathbf{a}) = \lambda \mathbf{t}
-$$
+> *Theorem.*{: .thm}
+> Let $\Pi$ be a plane contains the point $A: \vec{OA} = \mathbf{a}$ and has normal in the direction of a vector $\mathbf{n}$, then
+>
+> $$
+  \Pi: (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $P: \vec{OP} = \mathbf{x}$ be a point on $\Pi$, then $\vec{PA} \perp \mathbf{n}$ and hence
+>
+> $$
+  (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0
+  $$
 
-for some $\lambda \in \mathbb{R}$.
+> *Corollary.*{: .cor}
+> Let $\Pi$ be a plane through three points $A: \vec{OA} = \mathbf{a}$, $B: \vec{OB} = \mathbf{b}$ and $C: \vec{OC} = \mathbf{c}$, then
+>
+> $$
+  \Pi: (\mathbf{x} - \mathbf{a}) \cdot [(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})] = [\mathbf{x} - \mathbf{a}, \mathbf{b} - \mathbf{a}, \mathbf{c} - \mathbf{a}] = 0
+  $$
+>
+> or
+>
+> $$
+  \Pi: [\mathbf{x}, \mathbf{b}, \mathbf{c}] + [\mathbf{a}, \mathbf{x}, \mathbf{c}] + [\mathbf{a}, \mathbf{b}, \mathbf{x}] = [\mathbf{a}, \mathbf{b}, \mathbf{c}]
+  $$
+>
+> or alternatively, for $\lambda, \mu \in \mathbb{R}$,
+>
+> $$
+  \Pi: \mathbf{x} = (1 - \lambda - \mu)\mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}
+  $$
 
-It implies
-
-$$
-(\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}
-$$
-
-If we have two position vectors $\mathbf{a}$ and $\mathbf{b}$ instead,
-we can take $\mathbf{t} = \mathbf{b} - \mathbf{a}$ and therefore
-
-$$
-(\mathbf{x} - \mathbf{a}) \times (\mathbf{b} - \mathbf{a}) = \mathbf{0}
-$$
-
-or alternatively
-
-$$
-\begin{align*}
-\mathbf{x} &= \mathbf{a} + \lambda(\mathbf{b} - \mathbf{a}) \\
-           &= (1 - \lambda)\mathbf{a} + \lambda\mathbf{b}
-\end{align*}
-$$
+## Geometry Problems
 
 ### Distance between Point and Line
 
-Let $Y$ be a point with $\vec{OY} = \mathbf{y}$, a line $L$ through $A$ and parallel to $\mathbf{t}$ and $d$ be the distance between them.
-Consider the plane containing $Y$ and $L$, we have
-
-$$
-d = |(\mathbf{y} - \mathbf{a})|\sin\theta
-$$
-
-where $\theta$ is the non-reflex angle between $\vec{OA}$ and $\mathbf{t}$.
-
-As
-
-$$
-|(\mathbf{y} - \mathbf{a}) \times \mathbf{t}| = |(\mathbf{y} - \mathbf{a})||\mathbf{t}|\sin\theta
-$$
-
-we can conclude
-
-$$
-d = {|(\mathbf{y} - \mathbf{a}) \times \mathbf{t}| \over |\mathbf{t}|}
-$$
+> *Proposition.*{: .prop}
+> The distance between a line $L: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and a point $Y: \vec{OY} = \mathbf{y}$ is
+>
+> $$
+  d = {|(\mathbf{y} - \mathbf{a}) \times \mathbf{t}| \over |\mathbf{t}|}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $\theta$ be the non-reflex angle between $\vec{AY}$ and $\mathbf{t}$, we have
+>
+> $$
+  d = |\mathbf{y} - \mathbf{a}|\sin\theta
+  $$
+>
+> Since
+>
+> $$
+  \vert (\mathbf{y} - \mathbf{a}) \times \mathbf{t} \vert = \vert (\mathbf{y} - \mathbf{a}) \vert \vert \mathbf{t} \vert \sin\theta = d\vert t \vert
+  $$
+>
+> Hence,
+>
+> $$
+  d = {|(\mathbf{y} - \mathbf{a}) \times \mathbf{t}| \over |\mathbf{t}|}
+  $$
 
 ### Distance between Parallel Lines
 
-Let $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{t} = \mathbf{0}$ be two parallel lines.
+> *Proposition.*{: .prop}
+> The distance between two parallel lines $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{t} = \mathbf{0}$ is
+>
+> $$
+  d = {|(\mathbf{b} - \mathbf{a}) \times \mathbf{t}| \over |\mathbf{t}|}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> As $\mathbf{b}$ is a point on $L_2$, we can find the distance by substituding $\mathbf{y} = \mathbf{b}$ to the above.
 
-As $\mathbf{b}$ is a point on $L_2$, from the above, we can see that the distance $d$ between $L_1$ and $L_2$ is
-
-$$
-d = {|(\mathbf{b} - \mathbf{a}) \times \mathbf{t}| \over |\mathbf{t}|}
-$$
 
 ### Distance between Skew Lines
 
-Two lines are said to be _skew_ if they do not lie in any plane.
+> *Definition.*{: .def}
+> Two lines in $\mathbb{R}^3$ are said to be **skew** if they do not lie in any plane.
 
-Let $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{u} = \mathbf{0}$ be two skew lines.
-
-Consider the two planes
-
-$$
-\Pi_1: (\mathbf{x} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
-$$
-
-and
-
-$$
-\Pi_2: (\mathbf{x} - \mathbf{b}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
-$$
-
-We can see that points in $L_1$ has the form $\mathbf{x} = \mathbf{a} + \lambda\mathbf{t}$ are all on $\Pi_1$, and similarily for $L_2$ and $\Pi_2$.
-Also, $\Pi_1$ and $\Pi_2$ are parallel planes as they have the common normal $\mathbf{t} \times \mathbf{u}$.
-Therefore, $L_1$ and $L_2$ are skew if they lie in a pair of parallel planes, and their distance is
-
-$$
-d = {|(\mathbf{b} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u})| \over |\mathbf{t} \times \mathbf{u}|}
-$$
+> *Proposition.*{: .prop}
+> The distance between two skew lines $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{u} = \mathbf{0}$ is
+>
+> $$
+  d = {|(\mathbf{b} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u})| \over |\mathbf{t} \times \mathbf{u}|}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $L_1$ and $L_2$ are skew if they lie in a pair of parallel planes.
+> Consider the planes
+>
+> $$
+  \Pi_1: (\mathbf{x} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
+  \quad \text{and} \quad
+  \Pi_2: (\mathbf{x} - \mathbf{b}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
+  $$
+>
+> $L_1$ is on $\Pi_1$ and $L_2$ is on $\Pi_2$. Also, $\Pi_1$ and $\Pi_2$ are parallel because they have common normal $\mathbf{t} \times \mathbf{u}$.
+> Hence, the distance between $L_1$ and $L_2$ is equal to the distance between $\Pi_1$ and $\Pi_2$, which is
+>
+> $$
+  d = {|(\mathbf{b} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u})| \over |\mathbf{t} \times \mathbf{u}|}
+  $$
 
 ### Intersection between Lines
 
@@ -162,39 +221,6 @@ $$
 \mathbf{x} = \mathbf{a} + {[\mathbf{t} \times \mathbf{u}, \mathbf{b} - \mathbf{a}, \mathbf{u}] \over |\mathbf{t} \times \mathbf{u}|^2}\mathbf{t}
 $$
 
-## Planes
-
-### Vector Equations
-
-Let $A$ be a point with $\vec{OA} = \mathbf{a}$ and $\mathbf{n}$ be a non-zero vector.
-The vector equation of the plane $\Pi$ which contains $\mathbf{a}$ and has normal in the direction of $mathbf{n}$ is
-
-A point $X$ with $\vec{OX} = \mathbf{x}$ is on $\Pi$ if and only if $(\mathbf{x} - \mathbf{a}) \perp \mathbf{n}$, i.e.
-
-$$
-(\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0
-$$
-
-Given three points $\mathbf{a}, \mathbf{b}, \mathbf{c}$, the equation for the plane $\Pi$ which contains all three points is
-
-$$
-(\mathbf{x} - \mathbf{a}) \cdot [(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})] = [\mathbf{x} - \mathbf{a}, \mathbf{b} - \mathbf{a}, \mathbf{c} - \mathbf{a}] = 0
-$$
-
-or alternatively
-
-$$
-[\mathbf{x}, \mathbf{b}, \mathbf{c}] + [\mathbf{a}, \mathbf{x}, \mathbf{c}] + [\mathbf{a}, \mathbf{b}, \mathbf{x}] = [\mathbf{a}, \mathbf{b}, \mathbf{c}]
-$$
-
-As $\mathbf{b} - \mathbf{a}$ and $\mathbf{c} - \mathbf{a}$ are non-parallel, we can represent any point on the plane as
-
-$$
-\begin{align*}
-\mathbf{x} &= \mathbf{a} + \lambda(\mathbf{b} - \mathbf{a}) + \mu(\mathbf{c} - \mathbf{a}) \\
-           &= (1 - \lambda - \mu)\mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}
-\end{align*}
-$$
 
 ### Distance between Point and Plane
 
@@ -326,6 +352,8 @@ Hence, for the intersection point $x$,
 $$
 \mathbf{x} = {d_1(\mathbf{n_2} \times \mathbf{n_3}) + d_2(\mathbf{n_3} \times \mathbf{n_1}) + d_3(\mathbf{n_1} \times \mathbf{n_2}) \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]}
 $$
+
+### Vector Equations
 
 ## References
 
