@@ -478,8 +478,12 @@ $$
   (\mathbf{a} \times \mathbf{b}) \times \mathbf{c} = - \mathbf{c} \times (\mathbf{a} \times \mathbf{b}) = - (\mathbf{b} \times \mathbf{a}) \times \mathbf{c} = \mathbf{c} \times (\mathbf{b} \times \mathbf{a})
   $$
 
-> *Property.*{: .prop}
+> *Proposition.*{: .prop}
 > $\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c}$
+>
+> *Proof.*{: .prf}
+>
+> See [Suffix Notation](suffix-notation.md#vector-triple-product).
 
 ## Vector Equations
 
@@ -490,13 +494,30 @@ We use vector manipulation on the equation so to simplify the terms, normally by
 >
 > *Solution.*{: .sol}
 >
-> After dotting with $\mathbf{b}$ and some substitutions, we will have
+> By dotting with $\mathbf{b}$ on both side, we have
 >
 > $$
-  \mathbf{x} = {\mathbf{c} + (\mathbf{c} \cdot \mathbf{b})a \over 1 + \mathbf{a} \cdot \mathbf{b}}
+  \mathbf{x} \cdot \mathbf{b} = \mathbf{c} \cdot \mathbf{b}
+  $$
+>
+> Also, by expanding $(\mathbf{x} \times \mathbf{a}) \times \mathbf{b}$, we have
+>
+> $$
+  (\mathbf{x} \times \mathbf{a}) \times \mathbf{b} = \mathbf{b} \times (\mathbf{a} \times \mathbf{x})
+  = (\mathbf{b} \cdot \mathbf{x})\mathbf{a} - (\mathbf{b} \cdot \mathbf{a})\mathbf{x}
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  \mathbf{x} - (\mathbf{b} \cdot \mathbf{x})\mathbf{a} + (\mathbf{b} \cdot \mathbf{a})\mathbf{x} &= \mathbf{c} \\
+  (1 + (\mathbf{a} \cdot \mathbf{b}))\mathbf{x} &= \mathbf{c} + (\mathbf{b} \cdot \mathbf{c})\mathbf{a} \\
+  \mathbf{x} &= {\mathbf{c} + (\mathbf{b} \cdot \mathbf{c})\mathbf{a} \over 1 + \mathbf{a} \cdot \mathbf{b}}
+  \end{align*}
   $$
 
-This is another technique [here](https://math.stackexchange.com/questions/3879932/how-to-solve-the-vector-equation-mathbfr-mathbfr-times-mathbfd-m).
+Another technique can be found [here](https://math.stackexchange.com/questions/3879932/how-to-solve-the-vector-equation-mathbfr-mathbfr-times-mathbfd-m).
 
 ## References
 
