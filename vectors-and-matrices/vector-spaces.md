@@ -269,15 +269,36 @@ This definition is only for real vector spaces. For complex vector spaces, we ha
 
 ## Subspaces
 
-A non-empty subset $U$ of the vectors of a vector space $V$ is called a _subspace_ of $V$ if $U$ is a vector space under the same operations (i.e. vector addition and scalar multiplication) as are used to define $V$.
+> *Definition.*{: .def}
+> For a vector space $V$, a **subspace** of $V$ is a non-empty subset $U$ of the vectors of $V$
+> if $U$ is a vector space under the same operations (i.e. vector addition and scalar multiplication) as are used to define $V$.
 
-A _proper subspace_ is a subspace of $V$ that is not $V$ or $\Set{0_V}$.
+> *Theorem.*{: .thm}
+> A subset $U$ of a vector space $V$ is a subspace of $V$ iff under the operations defined on $V$
+>
+> + $\forall a, b \in U, a + b \in U$
+>
+> + $\forall a \in U, \lambda \in \mathbb{F}, \lambda a \in U$
+>
+> or in short
+>
+> $$
+  \forall a, b \in U, \forall \lambda, \mu \in \mathbb{F}, \lambda a + \mu b \in U
+  $$
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) If $U$ is a subspace then it is a vector space, by definition the above conditions hold.
+>
+> ($\Leftarrow$) If the above holds, most of the axioms of vector space obviously holds as elements of $U$ are also elements of $V$.
+> The only non-trivial axioms are the existence of _identity_ and _inverse_ in $U$:
+>
+> + As $0_F a \in U$ and $0_F a = 0_V$, $0_V \in U$
+>
+> + As $(-1)a \in U$ and $(-1)a = -a$, $-a \in U$
 
-A non-empty subset $U$ is a subspace of $V$ if and only if $U$ is closed under vector addition and scalar multiplication, i.e.
-
-$$
-\forall a, b \in U, \forall \lambda, \mu \in \mathbb{F}, \lambda a + \mu b \in U
-$$
+> *Definition.*{: .def}
+> A **proper subspace** is a subspace of $V$ that is not $V$ or $\Set{0\_V}$.
 
 ## Reference
 
