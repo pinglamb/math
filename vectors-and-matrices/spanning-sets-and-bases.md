@@ -296,7 +296,7 @@ We can now bootstrap to higher dimensional spaces base on the standard basis of 
 > The **length** or **Euclidean norm** of a vector $\mathbf{x} \in \mathbb{R}^n$ is defined to be
 >
 > $$
-  \vert x \vert \equiv (\mathbf{x} \cdot \mathbf{x})^{1 \over 2} = \left( \sum_{i=1}^n x_i^2 \right)^{1 \over 2}
+  \vert \mathbf{x} \vert \equiv (\mathbf{x} \cdot \mathbf{x})^{1 \over 2} = \left( \sum_{i=1}^n x_i^2 \right)^{1 \over 2}
   $$
 
 > *Definition.*{: .def}
@@ -369,13 +369,13 @@ The standard basis of $\mathbb{R}^n$ can serve as standard basis of $\mathbb{C}^
     \mathbf{u} \cdot (\lambda \mathbf{v} + \mu \mathbf{w}) = \lambda (\mathbf{u} \cdot \mathbf{v}) + \mu (\mathbf{u} \cdot \mathbf{w})
     $$
 >
-> + Non-negativity, with equality holds iff $a = 0_V$, i.e.
+> + _Non-negativity_, with equality holds iff $\mathbf{u} = \mathbf{0}$, i.e.
 >
 >   $$
     \vert \mathbf{u} \vert^2 \equiv \mathbf{u} \cdot \mathbf{u} \ge 0
     $$
 >
-> + _Non-degeneracy_, i.e. the only vector of zero _norm_ should be the zero vector, i.e.
+> + _Non-degeneracy_, i.e.
 >
 >   $$
     \vert \mathbf{u} \vert = 0 \implies \mathbf{u} = \mathbf{0}
@@ -386,7 +386,16 @@ The axioms are really similar to that of scalar product on $\mathbb{R}^n$ except
 hence we can't derive the linearity of the first argument.
 
 > *Definition.*{: .def}
-> Non-zero vectors $\mathbf{x}, \mathbf{y}$ is defined to be **orthogonal** if $\mathbf{x} \cdot \mathbf{y} = 0$.
+> The **norm** of a vector $\mathbf{u} \in \mathbb{C}^n$ is defined to be
+>
+> $$
+  \vert \mathbf{u} \vert \equiv (\mathbf{u} \cdot \mathbf{u})^{1 \over 2}
+  = \left( \sum_{i=1}^n u_i^\ast u_i \right)^{1 \over 2}
+  = \left( \sum_{i=1}^n \vert u_i \vert^2 \right)^{1 \over 2}
+  $$
+
+> *Definition.*{: .def}
+> Non-zero vectors $\mathbf{u}, \mathbf{v}$ is defined to be **orthogonal** if $\mathbf{u} \cdot \mathbf{v} = 0$.
 
 > *Proposition.*{: .prop}
 > The Cauthy-Schwarz inequality holds.

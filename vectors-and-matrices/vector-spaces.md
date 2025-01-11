@@ -214,7 +214,7 @@ We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove t
     a \cdot a \ge 0_\mathbb{R}
     $$
 >
-> + _Non-degeneracy_, i.e. the only vector of zero _norm_ should be the zero vector, i.e.
+> + _Non-degeneracy_, the only vector of zero _norm_ should be the zero vector, i.e.
 >
 >   $$
     \vert a \vert = 0 \implies a = 0_V
