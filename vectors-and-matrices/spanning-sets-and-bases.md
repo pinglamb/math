@@ -251,54 +251,65 @@ $$
 
 ## $\mathbb{R}^n$
 
-### Definition
+We can now bootstrap to higher dimensional spaces base on the standard basis of $\mathbb{R}^3$.
 
-We define $\mathbb{R}^n$ to be the set of all n-tuples
+> *Definition.*{: .def}
+> We define $\mathbb{R}^n$ to be the set of all $n$-tuples
+>
+> $$
+  \Set{\mathbf{x} = (x_1, x_2, ..., x_n) : x_i \in \mathbb{R} \text{ with } i = 1, 2, ..., n}
+  $$
+>
+> with respect to the standard basis
+>
+> $$
+  \mathbf{e_1} = (1, 0, ..., 0), ..., \mathbf{e_n} = (0, 0, ..., 1)
+  $$
+>
+> For $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ and $\lambda \in \mathbb{R}$, we also define
+>
+> $$
+  \begin{align*}
+  \mathbf{x} + \mathbf{y} &= (x_1 + y_1, x_2 + y_2, ..., x_n + y_n) \\
+  \lambda \mathbf{x} &= (\lambda x_1, \lambda x_2, ..., \lambda x_n) \\
+  \mathbf{0} &= (0, 0, ..., 0) \\
+  \mathbf{-x} &= (-x_1, -x_2, ..., -x_3)
+  \end{align*}
+  $$
 
-$$
-\Set{\mathbf{x} = (x_1, x_2, ..., x_n) \mid x_i \in \mathbb{R} \text{ with } i = 1, 2, ..., n}
-$$
-
-For $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ and $\lambda \in \mathbb{R}$, we define
-
-$$
-\begin{gather}
-\mathbf{x} + \mathbf{y} = (x_1 + y_1, x_2 + y_2, ..., x_n + y_n) \\
-\lambda \mathbf{x} = (\lambda x_1, \lambda x_2, ..., \lambda x_n) \\
-\mathbf{0} = (0, 0, ..., 0) \\
-\mathbf{-x} = (-x_1, -x_2, ..., -x_3)
-\end{gather}
-$$
-
-We can see that $\mathbb{R}^n$ over $\mathbf{R}$ satifies the above axioms and hence is a vector space over $\mathbb{R}$.
+> *Proposition.*{: .prop}
+> $\mathbb{R}^n$ is a vector space over $\mathbb{R}$.
 
 ### Scalar Product
 
-We define the scalar product on $\mathbb{R}^n$ for $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ as
+> *Definition.*{: .def}
+> The **scalar product** on $\mathbb{R}^n$ for $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ is defined by
+>
+> $$
+  \mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^n x_i y_i = x_1 y_1 + x_2 y_2 + ... + x_n y_n
+  $$
 
-$$
-\mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^n x_i y_i = x_1 y_1 + x_2 y_2 + ... + x_n y_n
-$$
+> *Proposition.*{: .prop}
+> The definition above satisfies the axioms of scalar/inner product of vector space.
 
-which satisfies the axioms of scalar/inner product of vector space.
+> *Definition.*{: .def}
+> The **length** or **Euclidean norm** of a vector $\mathbf{x} \in \mathbb{R}^n$ is defined to be
+>
+> $$
+  \vert x \vert \equiv (\mathbf{x} \cdot \mathbf{x})^{1 \over 2} = \left( \sum_{i=1}^n x_i^2 \right)^{1 \over 2}
+  $$
 
-This definition is consistent with that of $\mathbb{R}^3$ only when we are dealing with standard basis.
+> *Definition.*{: .def}
+> The **interior angle** $\theta$ between vectors $\mathbf{x}$ and $\mathbf{y}$ is defined to be
+>
+> $$
+  \theta = \arccos \left( {\mathbf{x} \cdot \mathbf{y} \over \vert x \vert \vert y \vert } \right)
+  $$
 
-### Norm
+> *Definition.*{: .def}
+> Non-zero vectors $\mathbf{x}, \mathbf{y}$ is defined to be **orthogonal** if $\mathbf{x} \cdot \mathbf{y} = 0$.
 
-For $\mathbf{x} \in \mathbb{R}^n$,
-
-$$
-\|x\| = (\mathbf{x} \cdot \mathbf{x})^{1 \over 2} = \left( \sum_{i=1}^n x_i^2 \right)^{1 \over 2}
-$$
-
-while the interior angle $\theta$ between vectors $\mathbf{x}$ and $\mathbf{y}$ is defined to be
-
-$$
-\theta = \arccos \left( {\mathbf{x} \cdot \mathbf{y} \over \|x\|\|y\| } \right)
-$$
-
-and we state $\mathbf{x}, \mathbf{y}$ is orthogonal if $\mathbf{x} \cdot \mathbf{y} = 0$
+The definition is consistent with that of $\mathbb{R}^3$ only when the $x_i$ and $y_i$ are components with respect to an orthonormal basis.
 
 ## n-dimensional Complex Space
 
