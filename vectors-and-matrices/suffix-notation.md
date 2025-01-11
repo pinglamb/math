@@ -167,21 +167,47 @@ It is generally easier to manipulate vectors with that, together with _Einstein'
 
 ## Basis Vectors
 
-In general, we can write $\mathbf{e_1} = \mathbf{i}$, $\mathbf{e_2} = \mathbf{j}$ and $\mathbf{e_3} = \mathbf{k}$ as the basis vectors of $\mathbb{R}^3$.
+Let $\mathbf{e_1} = \mathbf{i}$, $\mathbf{e_2} = \mathbf{j}$ and $\mathbf{e_3} = \mathbf{k}$ be the standard basis vectors of $\mathbb{R}^3$.
+Be noted that $\mathbf{e}_i$ means one of the basis vector for $i = 1, 2, 3$ instead of $\mathbf{i}$.
 
-Hence,
+> *Proposition.*{: .prop}
+> For any two of the basis vector,
+>
+> $$
+  \mathbf{e}_i \cdot \mathbf{e}_j = \delta_{ij}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $\mathbf{e}\_i \cdot \mathbf{e}\_j = 1$ iff $i = j$, matching the definition of $\delta_{ij}$.
 
-$$
-\mathbf{e_i} \cdot \mathbf{e_j} = \delta_{ij}
-$$
+> *Proposition.*{: .prop}
+> In terms of suffix notation,
+>
+> $$
+  \mathbf{a} \cdot \mathbf{e}_i = a_i
+  $$
 
-$$
-\mathbf{a} \cdot \mathbf{e_i} = a_i
-$$
-
-$$
-(\mathbf{e_i})_j = (\mathbf{e_j})_i = \delta_{ij}
-$$
+> *Proposition.*{: .prop}
+> The suffix label of basis vector is interchangeable, i.e.
+>
+> $$
+  (\mathbf{e}_j)_i = (\mathbf{e}_i)_j = \delta_{ij}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The $i$-th component of $\mathbf{e}\_j$ is given by
+>
+> $$
+  (\mathbf{e}_j)_i = \mathbf{e}_j \cdot \mathbf{e}_i = \delta_{ij}
+  $$
+>
+> Similarily,
+>
+> $$
+  (\mathbf{e}_i)_j = \mathbf{e}_i \cdot \mathbf{e}_j = \delta_{ij}
+  $$
 
 ## Vector Algebra
 
@@ -252,29 +278,13 @@ $$
   \end{align*}
   $$
 
-## Basis Vectors
-
-$$
-e_i \cdot e_j = \delta_{ij}
-$$
-
-$$
-(e_j)_i = (e_i)_j = \delta_{ij}
-$$
-
-$$
-\begin{align*}
-(e_j \times e_k)_i &= \varepsilon_{ilm} (e_j)_l (e_k)_m \\
-&= \varepsilon_{ilm} \delta_{jl} \delta_{km} \\
-&= \varepsilon_{ijk}
-\end{align*}
-$$
-
 ## Matrix
 
-$$
-(\mathsf{x}')_i = x_i' = A_{ij} x_j
-$$
+> *Proposition.*{: .prop}
+>
+> $$
+  (\mathsf{x}')_i = x_i' = A_{ij} x_j
+  $$
 
 
 
