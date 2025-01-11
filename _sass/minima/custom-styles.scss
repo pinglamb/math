@@ -79,6 +79,15 @@
       color: #f0f6fc;
     }
 
+    ul {
+      li {
+        margin-bottom: 1em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
     mjx-container:last-child {
       margin-bottom: 0;
     }
