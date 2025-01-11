@@ -483,7 +483,9 @@ $$
 >
 > *Proof.*{: .prf}
 >
-> See [Suffix Notation](suffix-notation.md#vector-triple-product).
+> See [Standard Basis](spanning-sets-and-bases.md#vector-triple-product) and [Suffix Notation](suffix-notation.md#vector-triple-product).
+
+We can see that the resulting vector has no component in direction $\mathbf{a}$ (outside the parentheses) because the resulting vector after the last vector multiplication by $\mathbf{a}$ is orthogonal to $\mathbf{a}$.
 
 ## Vector Equations
 
