@@ -6,98 +6,165 @@ title: Spanning Sets, Bases and Higher Dimentional Spaces &#124; Vectors and Mat
 # Higher Dimentional Spaces
 {: .page-title}
 
-An algebraic approach to study that helps us to generalize the results in $\mathbb{R}^2$ and $\mathbb{R}^3$ to other vector spaces such as $\mathbb{R}^n$ and $\mathbb{C}^n$.
+The discussion of vectors in $\mathbb{R}^2$ and $\mathbb{R}^3$ is base on geometric intuition.
+In order to generalize the results to higher dimensional vector spaces such as $\mathbb{R}^n$ and $\mathbb{C}^n$,
+we need to take an algebraic approach to build the tools for redefining vectors.
 
-## Bases and Components
+## Spanning Sets and Bases
 
-### Linear Dependency
+> *Definition.*{: .def}
+> A set of $m$ vectors $\Set{v_1, v_2, ..., v_m}$ of vector space $V$ is **linearly independent** if for all scalars $\lambda \in \mathbb{F}$,
+>
+> $$
+  \sum_i \lambda_i v_i = 0_V \quad \implies \quad \lambda_i = 0_{\mathbb{F}}
+  $$
+>
+> Otherwise, the vectors are said to be **linearly dependent** since there exist scalars such that
+>
+> $$
+  \sum_i \lambda_i v_i = 0_V
+  $$
+>
+> By arranging the terms, we can express a vector in the set by other vectors in the same set.
 
-In $\mathbb{R}^3$ (similar argument for $\mathbb{R}^2$, the vector
+> *Definition.*{: .def}
+> A **spanning set** for a vector space $V$ is a set of $m$ vectors $\Set{v_1, v_2, ..., v_m}$ such that for every vector $v \in V$,
+> there exists scalars $\lambda_i \in \mathbb{F}$ in which
+>
+> $$
+  v = \lambda_1 v_1 + \lambda_2 v_2 + ... + \lambda_m v_m
+  $$
 
-$$
-\mathbf{d} = \lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}
-$$
+We state that $m \ge n$ and for a given $v$ the $\lambda_i$ are not necessarily unique if $m > n$.
 
-is described as a linear combination of $\mathbf{a},\mathbf{b}, \mathbf{c}$.
+> *Definition.*{: .def}
+> A **basis** of $V$ is a linearly independent subset of vectors that spans $V$.
 
-If for vectors $\mathbf{a},\mathbf{b}, \mathbf{c}$,
+> *Theorem.*{: .thm}
+> If $S = \Set{v_1, v_2, ..., v_n}$ is a basis of $V$, then for all $v \in V$, there exists unique scalars $\lambda_i \in \mathbb{F}$ such that
+>
+> $$
+  v = \lambda_1 v_1 + \lambda_2 v_2 + ... + \lambda_n v_n
+  $$
 
-$$
-\lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}= \mathbf{0} \iff \lambda = \mu = \nu = 0
-$$
+> *Definition.*{: .def}
+> The **components** of $v \in V$ respect to a ordered basis $S$ are the scalars such that
+>
+> $$
+  v = \lambda_1 v_1 + \lambda_2 v_2 + ... + \lambda_n v_n
+  $$
 
-then $\mathbf{a},\mathbf{b}, \mathbf{c}$ are linear independent. The reason for that is if let say $\lambda \not = 0$,
-we can write $\mathbf{a} = -{\mu \over \lambda}\mathbf{b} - {\nu \over \lambda}\mathbf{c}$,
-which is a linear combination of other vectors and therefore they are linearly dependent.
+> *Definition.*{: .def}
+> The **dimension** of a vector space $V$, denoted by $\dim V$, is defined by the number of vectors in a basis of the space.
 
-### Spanning Set and Basis
+Hence, $\dim \mathbb{R}^2 = 2$, $\dim \mathbb{R}^3 = 3$ and $\dim \mathbb{R}^n = n$.
 
-A set of vectors $\\{\mathbf{a}, \mathbf{b}\\}$ is a spanning set which spans $\mathbb{R}^2$ if for all vectors $\mathbf{r} \in \mathbb{R}^2$, there exists some $\lambda, \mu \in \mathbb{R}$ such that
+## $\mathbb{R}^3$
 
-$$
-\mathbf{r} = \lambda\mathbf{a} + \mu\mathbf{b}
-$$
+> *Theorem.*{: .thm}
+> Let $\mathbf{a}, \mathbf{b}, \mathbf{c} \in \mathbb{R}^3$ such that $[\mathbf{a}, \mathbf{b}, \mathbf{c}] = 0$,
+> then the set $\Set{\mathbf{a}, \mathbf{b}, \mathbf{c}}$ spans $\mathbb{R}^3$, i.e.
+> for any vector $\mathbf{r} \in \mathbb{R}^3$,
+>
+> $$
+  \mathbf{r} = \lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}
+  $$
+>
+> for suitable and unique real scalars $\lambda, \mu, \nu \in \mathbb{R}$.
+>
+> *Proof.*{: .prf}
+>
+> _Geometric construction_.
+> Consider a 3D space, an origin $O$, and three non-zero and non-coplanar vectors $\mathbf{a}, \mathbf{b}, \mathbf{c}$.
+> Let $r$ be the position vector of a point $P$ in the space.
+>
+> Let $\Pi_{\mathbf{ab}}$ be the plane containing $\mathbf{a}$ and $\mathbf{b}$.
+> Draw a line through $P$ parallel to $\vec{OC} = \mathbf{c}$.
+> This line cannot be parallel to $\Pi_{\mathbf{ab}}$ because $\mathbf{a}, \mathbf{b}, \mathbf{c}$ are not coplanar.
+> Hence, they intersect at a point $N$ such that $\vec{NP} = \nu \mathbf{c}$.
+> As $N$ is on $\Pi_{\mathbf{ab}}$, there exists $\lambda, \mu \in \mathbb{R}$ such that $\vec{ON} = \lambda \mathbf{a} + \mu \mathbf{b}$.
+> It follows that
+>
+> $$
+  \mathbf{r} = \vec{OP} = \vec{ON} + \vec{NP} = \lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c}
+  $$
+>
+> Consider
+>
+> $$
+  \begin{align*}
+  \mathbf{r} \cdot (\mathbf{b} \times \mathbf{c})
+  &= (\lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c}) \cdot (\mathbf{b} \times \mathbf{c}) \\
+  &= \lambda \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) + \mu \mathbf{b} \cdot (\mathbf{b} \times \mathbf{c}) + \nu \mathbf{c} \cdot (\mathbf{b} \times \mathbf{c}) \\
+  &= \lambda \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})
+  \end{align*}
+  $$
+>
+> Hence, $\lambda, \mu, \nu$ are unique by construction and we have
+>
+> $$
+  \lambda = {[\mathbf{r}, \mathbf{b}, \mathbf{c}] \over [\mathbf{a}, \mathbf{b}, \mathbf{c}]},
+  \quad
+  \mu = {[\mathbf{r}, \mathbf{c}, \mathbf{a}] \over [\mathbf{a}, \mathbf{b}, \mathbf{c}]},
+  \quad
+  \nu = {[\mathbf{r}, \mathbf{a}, \mathbf{b}] \over [\mathbf{a}, \mathbf{b}, \mathbf{c}]}
+  $$
 
-$\\{\mathbf{a}, \mathbf{b}\\}$ spans $\mathbb{R}^2$ if $\mathbf{a} \times \mathbf{b} = \mathbf{0}$ (non-parallel).
+If the set $\Set{\mathbf{a}, \mathbf{b}, \mathbf{c}}$ spans $\mathbf{R}^3$ and is linearly independent, then it is a basis of $\mathbb{R}^3$.
 
-For any vector $\mathbf{r} \in \mathbb{R}^2$, the components $(\lambda, \mu)$ are _unique_.
+### Cartesian/Standard Basis
 
-We said $\\{\mathbf{a}, \mathbf{b}\\}$ is a basis of the set of vectors in $\mathbb{R}^2$ if it is a spanning set and linear independent.
+From the above, three vectors do not have to be mutually orthogonal to be a basis.
+However, things can be simplified if the basis vectors are mutually orthogonal and have unit magnitude.
 
-In $\mathbb{R}^2$, to find $\lambda$ and $\mu$ for $\vec{OP}$ geometrically, we can draw a line through $P$ which is parallel to $OA$ and intersects with $OB$ (or its extension) at $N$.
-We have $\vec{OP} = \vec{ON} + \vec{NP} = \mu\mathbf{b} + \lambda\mathbf{a}$.
+> *Definition.*{: .def}
+> A **orthonormal basis** is a basis in which the spanning sets are mutually orthogonal and have unit magnitude.
+> It is also conventional to order them so that they are right-handed.
 
-The same concept can be extended to $\mathbb{R}^3$,
-a set of vectors $\\{\mathbf{a}, \mathbf{b}\\}, \mathbf{c}\\}$ is a spanning set which spans $\mathbb{R}^3$ if for all vectors $\mathbf{r} \in \mathbb{R}^3$, there exists some $\lambda, \mu, \nu \in \mathbb{R}$ such that
+> *Definition.*{: .def}
+> Let $OX, OY, OZ$ be a right-handed set of Cartesian axes,
+> then the set of corresponding unit vectors $\Set{\mathbf{i}, \mathbf{j}, \mathbf{k}}$ forms a basis for $\mathbb{R}^3$ satisfying
+>
+> $$
+  \begin{gather}
+  \mathbf{i} \cdot \mathbf{i} = \mathbf{j} \cdot \mathbf{j} = \mathbf{k} \cdot \mathbf{k} = 1 \\
+  \mathbf{i} \cdot \mathbf{j} = \mathbf{j} \cdot \mathbf{k} = \mathbf{k} \cdot \mathbf{i} = 0 \\
+  \mathbf{i} \times \mathbf{j} = \mathbf{k} \quad \mathbf{j} \times \mathbf{k} = \mathbf{i} \quad \mathbf{k} \times \mathbf{i} = \mathbf{j} \\
+  [\mathbf{i}, \mathbf{j}, \mathbf{k}] = 1
+  \end{gather}
+  $$
+>
+> and is called the **Cartesian/standard basis**.
 
-$$
-\mathbf{r} = \lambda\mathbf{a} + \mu\mathbf{b} + \nu\mathbf{c}
-$$
+> *Definition.*{: .def}
+> Given a vector $\mathbf{v}$ and a Cartesian basis $\Set{\mathbf{i}, \mathbf{j}, \mathbf{k}}$ such that
+>
+> $$
+  \mathbf{v} = v_x\mathbf{i} + v_y\mathbf{j} + v_z\mathbf{k}
+  $$
+>
+> Then the **Cartesian components** of $\mathbf{v}$ is the tuple $(x, y, z)$.
 
-$\\{\mathbf{a}, \mathbf{b}, \mathbf{c}\\}$ spans $\mathbb{R}^3$ if $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = 0$ (non-coplanar) and is a basis of $\mathbb{R}^3$.
+> *Theorem.*{: .thm}
+> Let $\mathbf{v}$ be a vector, then
+>
+> $$
+  (v_x, v_y, v_z) = (\mathbf{v} \cdot \mathbf{i}, \mathbf{v} \cdot \mathbf{j}, \mathbf{v} \cdot \mathbf{k})
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Base on the properties about the dot products of the basis vectors above.
 
-The components $(\lambda, \mu, \nu)$ are _unique_.
-For any $\mathbf{r} = \lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c}$, we have
-
-$$
-\mathbf{r} \cdot (\mathbf{b} \times \mathbf{c}) = \lambda \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) + \mu \mathbf{b} \cdot (\mathbf{b} \times \mathbf{c}) + \nu \mathbf{c} \cdot (\mathbf{b} \times \mathbf{c}) = \lambda \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})
-$$
-
-Therefore, $\lambda = [\mathbf{r}, \mathbf{b}, \mathbf{c}]/[\mathbf{a}, \mathbf{b}, \mathbf{c}]$ which is unique and similarily for $\mu, \nu$.
-
-## Cartesian/Standard Basis
-
-Although any three vectors can be as basis in $mathbb{R}^3$ as long as $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = 0$,
-things can be simplified if the basis vectors are orthogonal, have unit magnitude.
-For a Cartesian basis, we have the basis vectors being the unit vectors along the $x, y, z$ axes, and denoted by $\mathbf{i}, \mathbf{j}, \mathbf{k}$.
-
-With that, we have
-
-$$
-\begin{gather}
-\mathbf{i} \cdot \mathbf{i} = \mathbf{j} \cdot \mathbf{j} = \mathbf{k} \cdot \mathbf{k} = 1 \\
-\mathbf{i} \cdot \mathbf{j} = \mathbf{j} \cdot \mathbf{k} = \mathbf{k} \cdot \mathbf{i} = 0 \\
-\mathbf{i} \times \mathbf{j} = \mathbf{k} \quad \mathbf{j} \times \mathbf{k} = \mathbf{i} \quad \mathbf{k} \times \mathbf{i} = \mathbf{j} \\
-[\mathbf{i}, \mathbf{j}, \mathbf{k}] = 1
-\end{gather}
-$$
-
-For any point $P$ with coordinates $(x, y, z)$, we can see that $\vec{OP} = \mathbf{v} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$,
-hence we can have the notation $\mathbf{v} = (x, y, z)$ and it is called the Cartesian components of $\mathbf{v}$.
-
-Also, by "dotting" $\mathbf{v}$ by $\mathbf{i}, \mathbf{j}, \mathbf{k}$ respectively, we can conclude
-
-$$
-\mathbf{v} = (\mathbf{v} \cdot \mathbf{i}, \mathbf{v} \cdot \mathbf{j},\mathbf{v} \cdot \mathbf{k})
-$$
-
-For unit vector $\mathbf{\hat{v}}$, we can write
-
-$$
-\mathbf{\hat{v}} = (\cos \alpha, \cos \beta, \cos \gamma)
-$$
-
-which is called the direction cosines of $\mathbf{\hat{v}}$.
+> *Corollary.*{: .cor}
+> For an unit vector $\mathbf{\hat{t}} = (t_x, t_y, t_z)$ with respect to the standard basis,
+> the **direction cosines** are defined by
+>
+> $$
+  \mathbf{\hat{t}} = (\cos \alpha, \cos \beta, \cos \gamma)
+  $$
+>
+> where $\alpha, \beta, \gamma$ are the angles between $\mathbf{t}$ and $\mathbf{i}, \mathbf{j}, \mathbf{k}$ respectively.
 
 ### Vector Component Identities
 
@@ -112,17 +179,19 @@ $$
 \end{align*}
 $$
 
-For addition,
+> *Proposition.*{: .prop}
+> _Addition_:
+>
+> $$
+  \lambda\mathbf{a} + \mu\mathbf{b} = (\lambda a_x + \mu b_x)\mathbf{i} + (\lambda a_y + \mu b_y)\mathbf{j} + (\lambda c_x + \mu c_x)\mathbf{k}
+  $$
 
-$$
-\lambda\mathbf{a} + \mu\mathbf{b} = (\lambda a_x + \mu b_x)\mathbf{i} + (\lambda a_y + \mu b_y)\mathbf{j} + (\lambda c_x + \mu c_x)\mathbf{k}
-$$
-
-For scalar product,
-
-$$
-\mathbf{a} \cdot \mathbf{b} = a_x b_x + a_y b_y + a_z b_z
-$$
+> *Proposition.*{: .prop}
+> _Scalar product_:
+>
+> $$
+  \mathbf{a} \cdot \mathbf{b} = a_x b_x + a_y b_y + a_z b_z
+  $$
 
 For vector product,
 
@@ -177,195 +246,6 @@ $$
 
 We can see that the resulting vector has no component in direction $\mathbf{a}$ (outside the parentheses) because the resulting vector after the last vector multiplication by $\mathbf{a}$ is orthogonal to $\mathbf{a}$.
 
-## Suffix Noatation and Tensors
-
-Some examples of suffix notation:
-
-$$
-(\mathbf{a} \cdot \mathbf{b}) \mathbf{c} = \mathbf{d} \quad \equiv \quad a_i b_i c_j = d_j
-$$
-
-$$
-\begin{align*}
-((\mathbf{a} \cdot \mathbf{c})\mathbf{b} - (\mathbf{a} \cdot \mathbf{b})\mathbf{c}) &\equiv a_i c_i b_j - a_k b_k c_j \\
-&\equiv a_i c_i b_j - a_i b_i c_j \\
-&\equiv a_i (c_i b_j - b_i c_j)
-\end{align*}
-$$
-
-### Kronecker Delta
-
-The Kronecker delta $\delta_{ij}$ is a tensor, defined by in matrix form
-
-$$
-\begin{pmatrix}
-\delta_{11} & \delta_{12} & \delta_{13} \\
-\delta_{21} & \delta_{22} & \delta_{23} \\
-\delta_{31} & \delta_{32} & \delta_{33}
-\end{pmatrix}
-=
-\begin{pmatrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1
-\end{pmatrix}
-$$
-
-which is an identity matrix. Hence, $\delta_{ij}$ is _symmetric_, i.e.
-
-$$
-\delta_{ij} = \delta_{ji}
-$$
-
-Also,
-
-$$
-\begin{gather}
-a_i \delta_{ij} = \sum_i a_i \delta_{ij} = a_j \\
-\delta_{ij} a_j = \sum_j \delta_{ij} a_j = a_i
-\end{gather}
-$$
-
-$$
-\delta_{ij}\delta_{jk} = \sum_{j} \delta_{ij}\delta_{jk} = \delta_{ik}
-$$
-
-$$
-\delta_{ii} = \sum_{i} \delta_{ii} = 3
-$$
-
-$$
-a_i \delta_{ij} b_j = a_i b_i = a_j b_j = \mathbf{a} \cdot \mathbf{b}
-$$
-
-## Basis Vectors
-
-In general, we can write $\mathbf{e_1} = \mathbf{i}$, $\mathbf{e_2} = \mathbf{j}$ and $\mathbf{e_3} = \mathbf{k}$ as the basis vectors of $\mathbb{R}^3$.
-
-Hence,
-
-$$
-\mathbf{e_i} \cdot \mathbf{e_j} = \delta_{ij}
-$$
-
-$$
-\mathbf{a} \cdot \mathbf{e_i} = a_i
-$$
-
-$$
-(\mathbf{e_i})_j = (\mathbf{e_j})_i = \delta_{ij}
-$$
-
-### Levi-Civita Symbol / Alternating Tensor
-
-Define
-
-$$
-\epsilon_{ijk} = \begin{cases}
-+1 &\quad ijk \text{ is even permutation} \\
--1 &\quad ijk \text{ is odd permutation} \\
-0  &\quad \text{otherwise (i.e. repeated suffices)}
-\end{cases}
-$$
-
-Therefore,
-
-$$
-\begin{align*}
-\epsilon_{123} = \epsilon_{231} = \epsilon_{312} &= +1 \\
-\epsilon_{213} = \epsilon_{132} = \epsilon_{321} &= -1 \\
-\epsilon_{111} = \epsilon_{112} = \,... &= 0 \\
-\end{align*}
-$$
-
-Hence,
-
-$$
-\epsilon_{123} = \epsilon_{231} = \epsilon_{312} = -\epsilon_{213} = -\epsilon_{132} = -\epsilon_{321}
-$$
-
-For a symmetric tensor $s_{ij}$,
-
-$$
-\epsilon_{ijk} s_{ij} = \epsilon_{jik} s_{ji} = - \epsilon_{ijk} s_{ij}
-$$
-
-Hence,
-
-$$
-\epsilon_{ijk} s_{ij} = 0
-$$
-
-By expansion of the formula, we have
-
-$$
-(\mathbf{a} \times \mathbf{b})_i = \epsilon_{ijk} a_j b_k
-$$
-
-The following is an useful identity
-
-$$
-\epsilon_{ijk}\epsilon_{ipq} = \delta_{jp}\delta_{kq} - \delta_{jq}\delta_{kp}
-$$
-
-With the above, ths scalar triple product is given by
-
-$$
-\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \epsilon_{ijk} a_i b_j c_k
-$$
-
-and vector triple product
-
-$$
-\begin{align*}
-\mathbf{a} \times (\mathbf{b} \times \mathbf{c})_i &= \epsilon_{ijk} a_j (\mathbf{b} \times \mathbf{c})_k \\
-&= \epsilon_{ijk} a_j \epsilon_{klm} b_l c_m \\
-&= -\epsilon_{kji} \epsilon_{klm} a_j b_l c_m \\
-&= -(\delta_{jl}\delta_{im} - \delta_{jm}\delta_{il}) a_j b_l c_m \\
-&= a_j b_i c_j - a_j b_j c_i \\
-&= ((\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c})_i
-\end{align*}
-$$
-
-## Basis and Dimensions
-
-### Linear Independence
-
-A set of $m$ vectors $\Set{v_1, v_2, ..., v_m}$ of vector space $V$ is _linearly independent_ if for all scalars $\lambda \in \mathbb{F}$,
-
-$$
-\sum_i \lambda_i v_i = 0_V \quad \implies \quad \lambda_i = 0_{\mathbb{F}}
-$$
-
-Otherwise, we can see that we can express a vector in the set by other vectors in the same set.
-
-### Spanning Set
-
-A set of $m$ vectors $\Set{v_1, v_2, ..., v_m}$ of vector space $V$ is a _spanning set_ for V if for every vector $v \in V$,
-there exists scalars $\lambda_i \in \mathbb{F}$ such that
-
-$$
-v = \lambda_1 v_1 + \lambda_2 v_2 + ... + \lambda_m v_m
-$$
-
-We state that $m \ge n$ so the set can span $V$.
-
-### Basis
-
-We then define a linearly independent subset of vectors that spans $V$ is a _basis_ of V.
-
-If $S = \Set{v_1, v_2, ..., v_n}$ is a basis of $\mathbb{R}^n$, then there exists unique scalars $\lambda_i \in \mathbb{R}$,
-which we called them _components_, such that
-
-$$
-v = \lambda_1 v_1 + \lambda_2 v_2 + ... + \lambda_n v_n
-$$
-
-### Dimension
-
-The _dimension_ of a space is defined by the number of vectors in a basis of the space.
-
-Hence, $\dim \mathbb{R}^2 = 2$, $\dim \mathbb{R}^3 = 3$ and $\dim \mathbb{R}^n = n$.
 
 ## n-dimensional Real Space
 
