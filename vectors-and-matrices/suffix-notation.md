@@ -36,24 +36,25 @@ It is generally easier to manipulate vectors with that, together with _Einstein'
   $$
 
 > *Property.*{: .prop}
-> Base on the definition of the delta function,
+> $\delta_{ii} = 3 (= n)$.
+
+> *Property.*{: .prop}
+> The delta function behaves like a suffix switching quantity, i.e.
 >
 > $$
-  a_i \delta_{ij} = a_j
-  \quad \text{and} \quad
-  a_j \delta_{ij} = a_i
+  \begin{align*}
+  \delta_{ij} a_j &= a_i \\
+  \delta_{ij} \delta_{jk} &= \delta_{ik} \\
+  \delta_{ij} A_{jk} &= A_{ik} \\
+  \delta_{ij} \varepsilon_{jkl} &= \varepsilon_{ikl} \\
+  \delta_{ij} \sigma_{jklmno...} &= \sigma_{iklmno...}
+  \end{align*}
   $$
 >
-> $$
-  \delta_{ij}\delta_{jk} = \delta_{ik}
-  $$
+> Hence,
 >
 > $$
-  \delta_{ii} = 3 (= n)
-  $$
->
-> $$
-  a_i \delta_{ij} b_j = a_i b_i = a_j b_j = \mathbf{a} \cdot \mathbf{b}
+  \delta_{ij} \delta_{ji} = \delta_{ii} = 3 (= n)
   $$
 
 ## Levi-Civita Symbol / Alternating Tensor
@@ -84,11 +85,17 @@ It is generally easier to manipulate vectors with that, together with _Einstein'
   \varepsilon_{ijk} = \varepsilon_{jki} = \varepsilon_{kij} = -\varepsilon_{jik} = -\varepsilon_{ikj} = -\varepsilon_{jki}
   $$
 
-> *Property.*{: .prop}
-> For a symmetric tensor $s_{ij}$ (such as $\delta_{ij}$),
+> *Proposition.*{: .prop}
+> For a symmetric tensor $s_{ij}$,
 >
 > $$
   \varepsilon_{ijk} s_{ij} = 0
+  $$
+>
+> Hence,
+>
+> $$
+  \varepsilon_{ijk} \delta_{ij} = 0
   $$
 >
 > *Proof.*{: .prf}
@@ -110,153 +117,140 @@ It is generally easier to manipulate vectors with that, together with _Einstein'
 > $$
   \varepsilon_{ijk} s_{ij} = 0
   $$
-
-By expansion of the formula, we have
-
-$$
-(\mathbf{a} \times \mathbf{b})_i = \epsilon_{ijk} a_j b_k
-$$
-
-The following is an useful identity
-
-$$
-\epsilon_{ijk}\epsilon_{ipq} = \delta_{jp}\delta_{kq} - \delta_{jq}\delta_{kp}
-$$
-
-With the above, ths scalar triple product is given by
-
-$$
-\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \epsilon_{ijk} a_i b_j c_k
-$$
-
-and vector triple product
-
-$$
-\begin{align*}
-\mathbf{a} \times (\mathbf{b} \times \mathbf{c})_i &= \epsilon_{ijk} a_j (\mathbf{b} \times \mathbf{c})_k \\
-&= \epsilon_{ijk} a_j \epsilon_{klm} b_l c_m \\
-&= -\epsilon_{kji} \epsilon_{klm} a_j b_l c_m \\
-&= -(\delta_{jl}\delta_{im} - \delta_{jm}\delta_{il}) a_j b_l c_m \\
-&= a_j b_i c_j - a_j b_j c_i \\
-&= ((\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c})_i
-\end{align*}
-$$
-
-
-
-## Kronecker Delta
+>
+> and so as
+>
+> $$
+  \varepsilon_{ijk} \delta_{ij} = 0
+  $$
 
 > *Proposition.*{: .prop}
-> $\delta_{ij} v_j = v_i$
+> For no repeated indices,
+>
+> $$
+  \varepsilon_{ijk} \varepsilon_{pqr} = \begin{vmatrix}
+  \delta_{ip} & \delta_{iq} & \delta_{ir} \\
+  \delta_{jp} & \delta_{jq} & \delta_{jr} \\
+  \delta_{kp} & \delta_{kq} & \delta_{kr} \\
+  \end{vmatrix}
+  $$
+
+> *Proposition.*{: .prop}
+> For one repeated index,
+>
+> $$
+  \epsilon_{ijk}\epsilon_{ipq} = \delta_{jp}\delta_{kq} - \delta_{jq}\delta_{kp}
+  $$
+
+> *Proposition.*{: .prop}
+> For two repeated indices,
+>
+> $$
+  \varepsilon_{ijk} \varepsilon_{ijp} = 2 \delta_{kp}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> When $k \not = p$, both side vanishs.
+> When $k = p$, there are two ways left to choose $i, j$.
+
+> *Proposition.*{: .prop}
+> For three repeated indices,
+>
+> $$
+  \varepsilon_{ijk} \varepsilon_{ijk} = 6 (= n!)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> As for any distinct values of $i, j, k$, the "product" is $1$, and there are $3!$ choices.
+
+## Basis Vectors
+
+In general, we can write $\mathbf{e_1} = \mathbf{i}$, $\mathbf{e_2} = \mathbf{j}$ and $\mathbf{e_3} = \mathbf{k}$ as the basis vectors of $\mathbb{R}^3$.
+
+Hence,
 
 $$
-\delta_{ij} \delta_{jk} = \delta_{ik}
+\mathbf{e_i} \cdot \mathbf{e_j} = \delta_{ij}
 $$
 
 $$
-\delta_{ij} A_{jk} = A_{ik}
+\mathbf{a} \cdot \mathbf{e_i} = a_i
 $$
 
 $$
-\delta_{ij} \varepsilon_{jkl} = \varepsilon_{ikl}
+(\mathbf{e_i})_j = (\mathbf{e_j})_i = \delta_{ij}
 $$
 
-$$
-\delta_{ij} \sigma_{jklmno...} = \sigma_{iklmno...}
-$$
+## Vector Algebra
 
-$$
-\delta_{ij} \delta_{ji} = \delta_{ii} = 3 (= n)
-$$
+> *Proposition.*{: .prop}
+> The scalar/dot product is given by
+>
+> $$
+  \mathbf{a} \cdot \mathbf{b} = \delta_{ij} a_i b_j = a_i b_i = a_j b_j
+  $$
 
-## Levi-Civita Symbol
+> *Proposition.*{: .prop}
+> The vector/cross product is given by
+>
+> $$
+  (\mathbf{a} \times \mathbf{b})_i = \varepsilon_{ijk} a_j b_k
+  $$
 
-$$
-\varepsilon_{ijk} \delta_{jk} = 0
-$$
+> *Proposition.*{: .prop}
+> The scalar triple product is given by
+>
+> $$
+  \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \varepsilon_{ijk} a_i b_j c_k
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})
+  &= a_i (\mathbf{b} \times \mathbf{c})_i \\
+  &= \varepsilon_{ijk} a_i b_j c_k
+  \end{align*}
+  $$
 
-$$
-\varepsilon_{ijk} = \varepsilon_{jki} = \varepsilon_{kij} = -\varepsilon_{ikj} = -\varepsilon_{jik} = -\varepsilon_{kji}
-$$
+> *Proposition.*{: .prop}
+> The vector triple product is given by
+>
+> $$
+  (\mathbf{a} \times (\mathbf{b} \times \mathbf{c}))_i = a_jb_ic_j - a_jb_jc_i
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \mathbf{a} \times (\mathbf{b} \times \mathbf{c})_i &= \epsilon_{ijk} a_j (\mathbf{b} \times \mathbf{c})_k \\
+  &= \epsilon_{ijk} a_j \epsilon_{klm} b_l c_m \\
+  &= -\epsilon_{kji} \epsilon_{klm} a_j b_l c_m \\
+  &= -(\delta_{jl}\delta_{im} - \delta_{jm}\delta_{il}) a_j b_l c_m \\
+  &= a_j b_i c_j - a_j b_j c_i \\
+  &= ((\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c})_i
+  \end{align*}
+  $$
+{: #vector-triple-product}
 
-$$
-\varepsilon_{ijk} \varepsilon_{lmn} = \begin{vmatrix}
-\delta_{il} & \delta_{im} & \delta_{in} \\
-\delta_{jl} & \delta_{jm} & \delta_{jn} \\
-\delta_{kl} & \delta_{km} & \delta_{kn} \\
-\end{vmatrix}
-$$
-
-For 3 repeated indices, as for any distinct values of $i, j, k$, the product is $1$, and there are $3!$ combinations. Hence,
-
-$$
-\varepsilon_{ijk} \varepsilon_{ijk} = 6 (= n!)
-$$
-
-For 2 repeated indices, when $k \not = l$, both side vanishs. When $k = l$, there are two ways left to choose $i, j$. Hence,
-
-$$
-\varepsilon_{ijk} \varepsilon_{ijl} = 2 \delta_{kl}
-$$
-
-For 1 repeated index,
-
-$$
-\varepsilon_{ijk} \varepsilon_{imn} = \delta_{jm} \delta_{kn} - \delta_{jn} \delta_{km}
-$$
-
-## Some Vector Algebra
-
-### Dot Product
-
-$$
-\begin{align*}
-\delta_{ij} a_i b_j &= a_j b_j \\
-&= a_1 b_1 + a_2 b_2 + a_3 b_3 \\
-&= \mathbf{a} \cdot \mathbf{b}
-\end{align*}
-$$
-
-### Vector Product
-
-$$
-\begin{align*}
-\varepsilon_{ijk} a_j b_k &= (\mathbf{a} \times \mathbf{b})_i
-\end{align*}
-$$
-
-## Scalar Triple Product
-
-$$
-\begin{align*}
-\varepsilon_{ijk} a_i b_j c_k &= a_i (\mathbf{b} \times \mathbf{c})_i \\
-&= \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})
-\end{align*}
-$$
-
-We can also see that
-
-$$
-[\mathbf{b}, \mathbf{c}, \mathbf{a}] = \varepsilon_{ijk} b_i c_j a_k = \varepsilon_{kij} a_k b_i c_j = [\mathbf{a}, \mathbf{b}, \mathbf{c}]
-$$
-
-and
-
-$$
-[\mathbf{b}, \mathbf{a}, \mathbf{c}] = \varepsilon_{ijk} b_i a_j c_k = -\varepsilon_{jik} a_j b_i c_k = -[\mathbf{a}, \mathbf{b}, \mathbf{c}]
-$$
-
-## Triple Vector Product
-
-$$
-\begin{align*}
-(\mathbf{a} \times (\mathbf{b} \times \mathbf{c}))_i &= \varepsilon_{ijk} a_j (\mathbf{b} \times \mathbf{c})_k \\
-&= \varepsilon_{ijk} a_j \varepsilon_{klm} b_l c_m \\
-&= (\delta_{il} \delta_{jm} - \delta_{im} \delta_{jl}) a_j b_l c_m \\
-&= a_m c_m b_i - a_l b_l c_i \\
-&= ((\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c})_i
-\end{align*}
-$$
+> *Proposition.*{: .prop}
+> Cauthy-Schwarz inequality can be proved by suffix notation.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \vert \mathbf{x} \vert^2 \vert \mathbf{y} \vert^2 - \vert x \cdot y \vert^2
+  &= x_ix_iy_jy_j - x_iy_ix_jy_j \\
+  &= {1 \over 2}x_ix_iy_jy_j + {1 \over 2}x_jx_jy_iy_i - x_iy_ix_jy_j \\
+  &= {1 \over 2}(x_iy_j - x_jy_i)(x_iy_j - x_jy_i) \\
+  &\ge 0
+  \end{align*}
+  $$
 
 ## Basis Vectors
 
@@ -282,40 +276,6 @@ $$
 (\mathsf{x}')_i = x_i' = A_{ij} x_j
 $$
 
-## Suffix Noatation and Tensors
-
-Some examples of suffix notation:
-
-$$
-(\mathbf{a} \cdot \mathbf{b}) \mathbf{c} = \mathbf{d} \quad \equiv \quad a_i b_i c_j = d_j
-$$
-
-$$
-\begin{align*}
-((\mathbf{a} \cdot \mathbf{c})\mathbf{b} - (\mathbf{a} \cdot \mathbf{b})\mathbf{c}) &\equiv a_i c_i b_j - a_k b_k c_j \\
-&\equiv a_i c_i b_j - a_i b_i c_j \\
-&\equiv a_i (c_i b_j - b_i c_j)
-\end{align*}
-$$
-
-
-## Basis Vectors
-
-In general, we can write $\mathbf{e_1} = \mathbf{i}$, $\mathbf{e_2} = \mathbf{j}$ and $\mathbf{e_3} = \mathbf{k}$ as the basis vectors of $\mathbb{R}^3$.
-
-Hence,
-
-$$
-\mathbf{e_i} \cdot \mathbf{e_j} = \delta_{ij}
-$$
-
-$$
-\mathbf{a} \cdot \mathbf{e_i} = a_i
-$$
-
-$$
-(\mathbf{e_i})_j = (\mathbf{e_j})_i = \delta_{ij}
-$$
 
 
 ## References
