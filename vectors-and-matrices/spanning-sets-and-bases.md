@@ -260,7 +260,7 @@ We can now bootstrap to higher dimensional spaces base on the standard basis of 
   \Set{\mathbf{x} = (x_1, x_2, ..., x_n) : x_i \in \mathbb{R} \text{ with } i = 1, 2, ..., n}
   $$
 >
-> with respect to the standard basis
+> with respect to the _standard basis_
 >
 > $$
   \mathbf{e_1} = (1, 0, ..., 0), ..., \mathbf{e_n} = (0, 0, ..., 1)
@@ -309,54 +309,88 @@ We can now bootstrap to higher dimensional spaces base on the standard basis of 
 > *Definition.*{: .def}
 > Non-zero vectors $\mathbf{x}, \mathbf{y}$ is defined to be **orthogonal** if $\mathbf{x} \cdot \mathbf{y} = 0$.
 
+> *Proposition.*{: .prop}
+> The Cauthy-Schwarz inequality holds.
+
 The definition is consistent with that of $\mathbb{R}^3$ only when the $x_i$ and $y_i$ are components with respect to an orthonormal basis.
 
-## n-dimensional Complex Space
+## $\mathbf{C}^n$
 
-### Definition
+> *Definition.*{: .def}
+> We define $\mathbb{C}^n$ to be the set of all $n$-tuples
+>
+> $$
+  \Set{\mathbf{z} = (z_1, z_2, ..., z_n) : z_i \in \mathbb{C} \text{ with } i = 1, 2, ..., n}
+  $$
+>
+> with respect to the _standard basis_
+>
+> $$
+  \mathbf{e_1} = (1, 0, ..., 0), ..., \mathbf{e_n} = (0, 0, ..., 1)
+  $$
+>
+> For $\mathbf{u}, \mathbf{v} \in \mathbb{C}^n$ and $\lambda \in \mathbb{C}$, we define
+>
+> $$
+  \begin{align*}
+  \mathbf{u} + \mathbf{v} &= (u_1 + v_1, u_2 + v_2, ..., u_n + v_n) \\
+  \lambda \mathbf{u} &= (\lambda u_1, \lambda u_2, ..., \lambda u_n) \\
+  \mathbf{0} &= (0, 0, ..., 0) \\
+  \mathbf{-u} &= (-u_1, -u_2, ..., -u_n)
+  \end{align*}
+  $$
 
-We define $\mathbb{C}^n$ to be the set of all n-tuples
-
-$$
-\Set{\mathbf{x} = (z_1, z_2, ..., z_n) \mid z_i \in \mathbb{C} \text{ with } i = 1, 2, ..., n}
-$$
-
-For $\mathbf{x}, \mathbf{y} \in \mathbb{C}^n$ and $\lambda \in \mathbb{C}$, we define
-
-$$
-\begin{gather}
-\mathbf{x} + \mathbf{y} = (x_1 + y_1, x_2 + y_2, ..., x_n + y_n) \\
-\lambda \mathbf{x} = (\lambda x_1, \lambda x_2, ..., \lambda x_n) \\
-\mathbf{0} = (0, 0, ..., 0) \\
-\mathbf{-x} = (-x_1, -x_2, ..., -x_3)
-\end{gather}
-$$
-
-We can see that $\mathbb{C}^n$ over $\mathbf{C}$ satifies the axioms as well and hence is a vector space over $\mathbb{C}$.
+> *Proposition.*{: .prop}
+> $\mathbb{C}^n$ is a vector space over $\mathbb{C}$.
 
 The standard basis of $\mathbb{R}^n$ can serve as standard basis of $\mathbb{C}^n$, hence $\dim \mathbb{C}^n = n$.
 
 ### Scalar Product
 
-We define the scalar product on $\mathbb{C}^n$ for $\mathbf{x}, \mathbf{y} \in \mathbb{C}^n$ as
+> *Definition.*{: .def}
+> The **scalar product** on $\mathbb{C}^n$ for $\mathbf{u}, \mathbf{v} \in \mathbb{C}^n$ is defined by
+>
+> $$
+  \mathbf{u} \cdot \mathbf{v} = \sum_{i=1}^n u_i^{\ast} v_i = u_1^{\ast} v_1 + u_2^{\ast} v_2 + ... + u_n^{\ast} v_n
+  $$
 
-$$
-\mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^n x_i^{\ast} y_i = x_1^{\ast} y_1 + x_2^{\ast} y_2 + ... + x_n^{\ast} y_n
-$$
+> *Proposition.*{: .prop}
+> The scalar product on $\mathbb{C}^n$ satisfies the following axioms (slightly different from that of $\mathbb{R}^n$)
+>
+> + _Symmetric up to conjugate_, i.e.
+>
+>   $$
+    \mathbf{u} \cdot \mathbf{v} = (\mathbf{v} \cdot \mathbf{u})^{\ast}
+    $$
+>
+> + _Linearilty_ in the second argument, i.e.
+>
+>   $$
+    \mathbf{u} \cdot (\lambda \mathbf{v} + \mu \mathbf{w}) = \lambda (\mathbf{u} \cdot \mathbf{v}) + \mu (\mathbf{u} \cdot \mathbf{w})
+    $$
+>
+> + Non-negativity, with equality holds iff $a = 0_V$, i.e.
+>
+>   $$
+    \vert \mathbf{u} \vert^2 \equiv \mathbf{u} \cdot \mathbf{u} \ge 0
+    $$
+>
+> + _Non-degeneracy_, i.e. the only vector of zero _norm_ should be the zero vector, i.e.
+>
+>   $$
+    \vert \mathbf{u} \vert = 0 \implies \mathbf{u} = \mathbf{0}
+    $$
+{: #complex-space-scalar-product-axioms}
 
-The set axioms are different than that of $\mathbb{R}^n$, which is as follow
+The axioms are really similar to that of scalar product on $\mathbb{R}^n$ except for being symmetric,
+hence we can't derive the linearity of the first argument.
 
-$$
-\begin{gather}
-\mathbf{x} \cdot \mathbf{y} = (\mathbf{y} \cdot \mathbf{x})^{\ast} \\
-\mathbf{x} \cdot (\lambda \mathbf{y} + \mu \mathbf{z}) = \lambda (\mathbf{x} \cdot \mathbf{y}) + \mu (\mathbf{x} \cdot \mathbf{z}) \\
-\mathbf{x} \cdot \mathbf{x} \ge 0
-\end{gather}
-$$
+> *Definition.*{: .def}
+> Non-zero vectors $\mathbf{x}, \mathbf{y}$ is defined to be **orthogonal** if $\mathbf{x} \cdot \mathbf{y} = 0$.
 
-The axioms are reqally similar except that scalar product on $\mathbb{C}^n$ is not symmetric,
-hence we can't derive the linearity of the first argument, i.e.
+> *Proposition.*{: .prop}
+> The Cauthy-Schwarz inequality holds.
 
-$$
-(\lambda\mathbf{x} + \mu\mathbf{y}) \cdot \mathbf{z} \not = \lambda\mathbf{x} \cdot \mathbf{y} + \mu \mathbf{x} \cdot \mathbf{z}
-$$
+## Reference
+
+* [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 2](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)

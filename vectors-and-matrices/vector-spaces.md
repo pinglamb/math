@@ -208,19 +208,19 @@ We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove t
     a \cdot (\lambda b + \mu c) = \lambda (a \cdot b) + \mu (a \cdot c)
     $$
 >
-> + Non-negativity, with equality holds iff $a = 0_V$, i.e.
+> + _Non-negativity_, with equality holds iff $a = 0_V$, i.e.
 >
 >   $$
     a \cdot a \ge 0_\mathbb{R}
     $$
 >
-> + Non-degeneracy, i.e. the only vector of zero _norm_ should be the zero vector, i.e.
+> + _Non-degeneracy_, i.e. the only vector of zero _norm_ should be the zero vector, i.e.
 >
 >   $$
     \vert a \vert = 0 \implies a = 0_V
     $$
 
-This definition is only for real vector spaces. For complex vector spaces, we have a different set of axioms.
+This definition is only for real vector spaces. For complex vector spaces, we have a different set of [axioms](spanning-sets-and-bases.md#complex-space-scalar-product-axioms).
 
 > *Definition.*{: .def}
 > The **norm** of a vector, denoted by $\vert a \vert$ or $\Vert a \Vert$, is defined by
