@@ -87,6 +87,44 @@ Vectors provide a convenient way for describing geometry in $\mathbf{R}^3$.
   \Pi: \mathbf{x} = (1 - \lambda - \mu)\mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}
   $$
 
+> *Theorem.*{: .thm}
+> The distance between the origin and the plane $\Pi: (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0$ is
+>
+> $$
+  d = \mathbf{a} \cdot \mathbf{n}
+  $$
+>
+> where $\mathbf{n}$ is a unit vector.
+>
+> *Proof.*{: .prf}
+>
+> Let $\mathbf{x_O}$ be the position vector of the closest point on the plane $\Pi$ to the origin, we have
+>
+> $$
+  (\mathbf{x_O} - \mathbf{a}) \cdot \mathbf{n} = 0
+  $$
+>
+> $\mathbf{x_O}$ must be orthogonal to the plane and therefore parallel to $\mathbf{n}$, i.e.
+>
+> $$
+  \mathbf{x_O} = d\mathbf{n}
+  $$
+>
+> where $d$ is the distance from the origin to the plane.
+>
+> Hence,
+>
+> $$
+  d = \mathbf{x_O} \cdot \mathbf{n} = \mathbf{a} \cdot \mathbf{n}
+  $$
+
+> *Corollary.*{: .cor}
+> Let $\Pi$ be a plane which has unit normal $\mathbf{n}$ and has distance $d$ from the origin, then
+>
+> $$
+  \Pi: \mathbf{x} \cdot \mathbf{n} = d
+  $$
+
 ## Geometry Problems
 
 ### Distance between Point and Line
@@ -163,6 +201,14 @@ Vectors provide a convenient way for describing geometry in $\mathbf{R}^3$.
   $$
 
 ### Intersection between Lines
+
+> *Proposition.*{: .prop}
+> Two lines $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{u} = \mathbf{0}$ intersects
+> iff $\mathbf{t} \times \mathbf{u} \not = \mathbf{0}$ and the intersection is
+>
+> $$
+  \mathbf{x} = \mathbf{a} + {[\mathbf{t} \times \mathbf{u}, \mathbf{b} - \mathbf{a}, \mathbf{u}] \over |\mathbf{t} \times \mathbf{u}|^2}\mathbf{t}
+  $$
 
 Let $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{u} = \mathbf{0}$ be two lines.
 
