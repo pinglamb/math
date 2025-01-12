@@ -124,51 +124,49 @@ It provides a way to convert a line $L: \mathbf{x} \times \mathbf{t} = \mathbf{u
   $$
 
 > *Theorem.*{: .thm}
-> The distance between the origin and the plane $\Pi: (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0$ is
+> The distance between the origin and the plane $\Pi: (\mathbf{x} - \mathbf{a}) \cdot \mathbf{\hat{n}} = 0$ is
 >
 > $$
-  d = \mathbf{a} \cdot \mathbf{n}
+  d = \mathbf{a} \cdot \mathbf{\hat{n}}
   $$
->
-> where $\mathbf{n}$ is a unit vector.
 >
 > *Proof.*{: .prf}
 >
 > Let $\mathbf{x_O}$ be the position vector of the closest point on the plane $\Pi$ to the origin, we have
 >
 > $$
-  (\mathbf{x_O} - \mathbf{a}) \cdot \mathbf{n} = 0
+  (\mathbf{x_O} - \mathbf{a}) \cdot \mathbf{\hat{n}} = 0
   $$
 >
-> $\mathbf{x_O}$ must be orthogonal to the plane and therefore parallel to $\mathbf{n}$, i.e.
+> $\mathbf{x_O}$ must be orthogonal to the plane and therefore parallel to $\mathbf{\hat{n}}$, i.e.
 >
 > $$
-  \mathbf{x_O} = d\mathbf{n}
+  \mathbf{x_O} = d\mathbf{\hat{n}}
   $$
 >
-> where $d$ is the distance from the origin to the plane.
+> where $\vert d \vert $ is the distance from the origin to the plane.
 >
 > Hence,
 >
 > $$
-  d = \mathbf{x_O} \cdot \mathbf{n} = \mathbf{a} \cdot \mathbf{n}
+  d = \vert \mathbf{x_O} \cdot \mathbf{\hat{n}} \vert = \vert \mathbf{a} \cdot \mathbf{\hat{n}} \vert
   $$
 
 > *Corollary.*{: .cor}
-> Let $\Pi$ be a plane which has unit normal $\mathbf{n}$ and has distance $d$ from the origin, then
+> Let $\Pi$ be a plane which has unit normal $\mathbf{\hat{n}}$ and has distance $d$ from the origin, then
 >
 > $$
-  \Pi: \mathbf{x} \cdot \mathbf{n} = d
+  \Pi: \mathbf{x} \cdot \mathbf{\hat{n}} = d
   $$
 
-It provides a way to convert a plane $\Pi: \mathbf{x} \cdot \mathbf{n} = d$ to other forms we know and gives a geometric meaning to it.
+It provides a way to convert a plane $\Pi: \mathbf{x} \cdot \mathbf{\hat{n}} = d$ to other forms we know and gives a geometric meaning to it.
 
 ## Geometry Problems
 
 ### Distance between Point and Line
 
 > *Proposition.*{: .prop}
-> The distance between a line $L: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and a point $Y: \vec{OY} = \mathbf{y}$ is
+> The distance between a point $Y: \vec{OY} = \mathbf{y}$ and a line $L: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ is
 >
 > $$
   d = {|(\mathbf{y} - \mathbf{a}) \times \mathbf{t}| \over |\mathbf{t}|}
@@ -308,20 +306,26 @@ $$
 
 ### Distance between Point and Plane
 
-Let $Y$ be a point with $\vec{OY} = \mathbf{y}$. Suppose the distance of $\mathbf{y}$ from the plane is $\|t\|$,
-then $\mathbf{y} + t\mathbf{n}$ is a point on the plane.
-
-Hence,
-
-$$
-(\mathbf{y} + t\mathbf{n}) \cdot \mathbf{n} = d
-$$
-
-and
-
-$$
-t = |d - \mathbf{y} \cdot \mathbf{n}|
-$$
+> *Proposition.*{: .prop}
+> The distance between a point $Y: \vec{OY} = \mathbf{y}$ and a plane $\Pi: (\mathbf{x} - \mathbf{a}) \cdot \mathbf{\hat{n}} = 0$ is
+>
+> $$
+  d = \vert \mathbf{a} \cdot \mathbf{n} - \mathbf{y} \cdot \mathbf{\hat{n}} \vert
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $P: \vec{OP} = \mathbf{y} + d\mathbf{\hat{n}}$ is a point on $\Pi$, where $\vert d \vert$ is the distance from $Y$ to $\Pi$, i.e.
+>
+> $$
+  (\mathbf{y} + d\mathbf{\hat{n}} - \mathbf{a}) \cdot \mathbf{\hat{n}} = 0
+  $$
+>
+> Hence,
+>
+> $$
+  d = \vert \mathbf{a} \cdot \mathbf{\hat{n}} - \mathbf{y} \cdot \mathbf{\hat{n}} \vert
+  $$
 
 ### Distance between Parallel Planes
 
