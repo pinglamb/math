@@ -51,6 +51,42 @@ Vectors provide a convenient way for describing geometry in $\mathbf{R}^3$.
 >
 > Alternatively, we can write $\mathbf{x} = \mathbf{a} + \lambda (\mathbf{b} - \mathbf{a})$ to derive the second form.
 
+> *Theorem.*{: .thm}
+> The equation $\mathbf{x} \times \mathbf{t} = \mathbf{u}$ has many solutions when $\mathbf{t} \cdot \mathbf{u} = 0$,
+> in which is a line in direction $\mathbf{t}$ through $(\mathbf{t} \times \mathbf{u} / \vert \mathbf{t} \vert^2$, i.e.
+>
+> $$
+  \mathbf{x} = {\mathbf{t} \times \mathbf{u} \over \vert \mathbf{t} \vert^2} + \lambda \mathbf{t}
+  $$
+>
+> It has no solutions if $\mathbf{t} \cdot \mathbf{u} \not = 0$.
+>
+> *Proof.*{: .prf}
+>
+> By dotting with $\mathbf{t}$, we have
+>
+> $$
+  \mathbf{t} \cdot \mathbf{u} = \mathbf{t} \cdot (\mathbf{x} \times \mathbf{t}) = 0
+  $$
+>
+> which there are no solutions unless $\mathbf{t} \cdot \mathbf{u} = 0$.
+> Geometrically, it is due to the fact that the vector product $\mathbf{x} \times \mathbf{t}$ has to be perpendicular to $\mathbf{t}$.
+>
+> By crossing with $\mathbf{t}$, we have
+>
+> $$
+  \mathbf{t} \times \mathbf{u} = \mathbf{t} \times (\mathbf{x} \times \mathbf{t}) = (\mathbf{t} \cdot \mathbf{t})\mathbf{x} - (\mathbf{t} \cdot \mathbf{x})\mathbf{t}
+  $$
+>
+> Hence,
+>
+> $$
+  \mathbf{x} = {\mathbf{t} \times \mathbf{u} \over \vert \mathbf{t} \vert^2} + {(\mathbf{t} \cdot \mathbf{x}) \over \vert \mathbf{t} \vert^2 }\mathbf{t}
+  = {\mathbf{t} \times \mathbf{u} \over \vert \mathbf{t} \vert^2} + \lambda \mathbf{t}
+  $$
+
+It provides a way to convert a line $L: \mathbf{x} \times \mathbf{t} = \mathbf{u}$ to other forms we know.
+
 ## Planes
 
 > *Theorem.*{: .thm}
@@ -124,6 +160,8 @@ Vectors provide a convenient way for describing geometry in $\mathbf{R}^3$.
 > $$
   \Pi: \mathbf{x} \cdot \mathbf{n} = d
   $$
+
+It provides a way to convert a plane $\Pi: \mathbf{x} \cdot \mathbf{n} = d$ to other forms we know and gives a geometric meaning to it.
 
 ## Geometry Problems
 
@@ -270,34 +308,7 @@ $$
 
 ### Distance between Point and Plane
 
-Suppose $\mathbf{n}$ is a unit vector.
-Let $\mathbf{x_O}$ be the closest point on the plane $\Pi$ to the origin, we have
-
-$$
-(\mathbf{x_O} - \mathbf{a}) \cdot \mathbf{n} = 0
-$$
-
-Also, $\mathbf{x_O}$ must be orthogonal to the plane and therefore parallel to $\mathbf{n}$, i.e.
-
-$$
-\mathbf{x_O} = d\mathbf{n}
-$$
-
-Hence,
-
-$$
-\mathbf{x_O} \cdot \mathbf{n} = d |\mathbf{n}|^2 = d = \mathbf{a} \cdot \mathbf{n}
-$$
-
-Therefore, when $\mathbf{n}$ is a unit vector, the equation
-
-$$
-\mathbf{x} \cdot \mathbf{n} = d
-$$
-
-is a plane which has distance $d$ from origin and has normal to the direction of $\mathbf{n}$.
-
-Let $Y$ be a point with $\vec{OY} = \mathbf{y}$. Supposethe distance of $\mathbf{y}$ from the plane is $\|t\|$,
+Let $Y$ be a point with $\vec{OY} = \mathbf{y}$. Suppose the distance of $\mathbf{y}$ from the plane is $\|t\|$,
 then $\mathbf{y} + t\mathbf{n}$ is a point on the plane.
 
 Hence,
@@ -398,8 +409,6 @@ Hence, for the intersection point $x$,
 $$
 \mathbf{x} = {d_1(\mathbf{n_2} \times \mathbf{n_3}) + d_2(\mathbf{n_3} \times \mathbf{n_1}) + d_3(\mathbf{n_1} \times \mathbf{n_2}) \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]}
 $$
-
-### Vector Equations
 
 ## References
 
