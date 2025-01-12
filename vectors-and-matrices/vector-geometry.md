@@ -329,14 +329,20 @@ $$
 
 ### Distance between Parallel Planes
 
-Given two parallel planes $(\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0$ and $(\mathbf{x} - \mathbf{b}) \cdot \mathbf{n} = 0$,
-where $\mathbf{n}$ is a unit vector.
-
-According to the above, shortest distance $d$ between them is
-
-$$
-d = |\mathbf{b} \cdot \mathbf{n} - \mathbf{a} \cdot \mathbf{n}| = |(\mathbf{b} - \mathbf{a}) \cdot \mathbf{n}|
-$$
+> *Proposition.*{: .prop}
+> The distance between two parallel planes $\Pi_1: (\mathbf{x} - \mathbf{a}) \cdot \mathbf{\hat{n}} = 0$ and $\Pi_2: (\mathbf{x} - \mathbf{b}) \cdot \mathbf{\hat{n}} = 0$ is
+>
+> $$
+  d = \vert (\mathbf{b} - \mathbf{a}) \cdot \mathbf{\hat{n}} \vert
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $\mathbf{b}$ is a point on $\Pi_2$ hence
+>
+> $$
+  d = \vert \mathbf{b} \cdot \mathbf{\hat{n}} - \mathbf{a} \cdot \mathbf{\hat{n}} \vert = \vert (\mathbf{b} - \mathbf{a}) \cdot \mathbf{\hat{n}} \vert
+  $$
 
 ### Intersection between Line and Plane
 
