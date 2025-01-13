@@ -378,30 +378,39 @@ $$
 
 ### Intersection of Two Planes (Line)
 
-Given two planes $\mathbf{x} \cdot \mathbf{n_1} = d_1$ and $\mathbf{x} \cdot \mathbf{n_2} = d_2$,
-their line of intersection $L$ must be in the direction that is orthogonal to both $\mathbf{n_1}$ and $\mathbf{n_2}$, i.e. $\mathbf{n_1} \times \mathbf{n_2}$.
-
-Therefore, the equation of $L$ is of the form
-
-$$
-\mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) = \mathbf{c}
-$$
-
-As $\mathbf{x}$ is on both planes, we have
-
-$$
-\begin{align*}
-\mathbf{c} &= \mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) \\
-           &= (\mathbf{x} \cdot \mathbf{n_2}) \mathbf{n_1} - (\mathbf{x} \cdot \mathbf{n_1}) \mathbf{n_n} \\
-           &= d_2\mathbf{n_1} - d_1\mathbf{n_2}
-\end{align*}
-$$
-
-Hence, the equation of the line of intersection is
-
-$$
-\mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) = d_2\mathbf{n_1} - d_1\mathbf{n_2}
-$$
+> *Proposition.*{: .prop}
+> Given two planes $\Pi_1: \mathbf{x} \cdot \mathbf{n_1} = d_1$ and $\Pi_2: \mathbf{x} \cdot \mathbf{n_2} = d_2$.
+> If $\mathbf{n_1} \times \mathbf{n_2} = \mathbf{0}$, then there are no intersections unless $d_1 = d_2$.
+> If $\mathbf{n_1} \times \mathbf{n_2} \not = \mathbf{0}$, then the intersections are
+>
+> $$
+  \mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) = d_2\mathbf{n_1} - d_1\mathbf{n_2}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Their line of intersection $L$ must be in the direction that is orthogonal to both $\mathbf{n_1}$ and $\mathbf{n_2}$, i.e. $\mathbf{n_1} \times \mathbf{n_2}$.
+>
+> Therefore, the equation of $L$ is of the form
+>
+> $$
+  \mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) = \mathbf{c}
+  $$
+>
+> Expanding the L.H.S. we have
+>
+> $$
+  \begin{align*}
+  \mathbf{c} &= \mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) \\
+             &= (\mathbf{x} \cdot \mathbf{n_2}) \mathbf{n_1} - (\mathbf{x} \cdot \mathbf{n_1}) \mathbf{n_n} \\
+  \end{align*}
+  $$
+>
+> Hence, as $\mathbf{x}$ is on $\Pi_1$ and $\Pi_2$, the intersections are
+>
+> $$
+  \mathbf{x} \times (\mathbf{n_1} \times \mathbf{n_2}) = d_2\mathbf{n_1} - d_1\mathbf{n_2}
+  $$
 
 ### Intersection of Three Planes (Point)
 
