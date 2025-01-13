@@ -245,64 +245,58 @@ It provides a way to convert a plane $\Pi: \mathbf{x} \cdot \mathbf{\hat{n}} = d
 > $$
   \mathbf{x} = \mathbf{a} + {[\mathbf{t} \times \mathbf{u}, \mathbf{b} - \mathbf{a}, \mathbf{u}] \over |\mathbf{t} \times \mathbf{u}|^2}\mathbf{t}
   $$
-
-Let $L_1: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and $L_2: (\mathbf{x} - \mathbf{b}) \times \mathbf{u} = \mathbf{0}$ be two lines.
-
-For them to intersect at a single point, the two lines can't be parallel, hence
-
-$$
-\mathbf{t} \times \mathbf{u} \not = 0
-$$
-
-Consider a line $L_2'$ through $\mathbf{a}$ and parallel to $L_2$,
-$L_1$ and $L_2\'$ forms a plane $\Pi$ with normal vector $\mathbf{t} \times \mathbf{u}$.
-Therefore, the vector equation for $\Pi$ is
-
-$$
-(\mathbf{x} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
-$$
-
-As $L_2$ is parallel to $L_1$, either $L_2$ intersects $\Pi$ nowhere (in which $L_1$ and $L_2$ has no intersection)
-or $L_2$ is on the plane $\Pi$.
-Therefore, the condition for $L_1$ and $L_2$ to intersect is
-
-$$
-(\mathbf{b} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
-$$
-
-Conversely, if the above is true, the plane $\Pi$ passes through the origin as the distance of the plane from origin is $0$,
-hence, we can express $\mathbf{b} - \mathbf{a}$ as
-
-$$
-\mathbf{b} - \mathbf{a} = \mathbf{0} + \lambda \mathbf{t} + \mu \mathbf{u}
-$$
-
-for some $\lambda, \mu \in \mathbb{R}$.
-
-Let $\mathbf{x}$ be a point such that
-
-$$
-\mathbf{x} = \mathbf{a} + \lambda\mathbf{t} = \mathbf{b} - \mu\mathbf{u}
-$$
-
-We can see that $\mathbf{x}$ is a point on both $L_1$ and $L_2$ and therefore it is the intersection of $L_1$ and $L_2$.
-
-To solve for $\mathbf{x}$, we have
-
-$$
-\begin{gather}
-\mathbf{a} + \lambda\mathbf{t} = \mathbf{b} - \mu\mathbf{u} \\
-\lambda(\mathbf{t} \times \mathbf{u}) = (\mathbf{b} - \mathbf{a}) \times \mathbf{u} \\
-\lambda |\mathbf{t} \times \mathbf{u}|^2 = [\mathbf{t} \times \mathbf{u}, \mathbf{b} - \mathbf{a}, \mathbf{u}] \\
-\end{gather}
-$$
-
-Hence,
-
-$$
-\mathbf{x} = \mathbf{a} + {[\mathbf{t} \times \mathbf{u}, \mathbf{b} - \mathbf{a}, \mathbf{u}] \over |\mathbf{t} \times \mathbf{u}|^2}\mathbf{t}
-$$
-
+>
+> *Proof.*{: .prf}
+>
+> The two lines are parallel if $ \mathbf{t} \times \mathbf{u} = \mathbf{0}$. Hence, either they are the same line or there is no intersection.
+>
+> If $ \mathbf{t} \times \mathbf{u} \not = \mathbf{0}$, consider a line $L_2'$ through $\mathbf{a}$ and parallel to $L_2$,
+> $L_1$ and $L_2'$ forms a plane $\Pi$ with normal vector $\mathbf{t} \times \mathbf{u}$.
+> Therefore, we have
+>
+> $$
+  \Pi: (\mathbf{x} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
+  $$
+>
+> As $L_2$ is parallel to $L_2'$, either $L_2$ intersects $\Pi$ nowhere (in which $L_1$ and $L_2$ has no intersection) or $L_2$ is on $\Pi$.
+> Therefore, the condition for $L_1$ and $L_2$ to intersect is
+>
+> $$
+  (\mathbf{b} - \mathbf{a}) \cdot (\mathbf{t} \times \mathbf{u}) = 0
+  $$
+>
+> Conversely, if the above is true, the plane $\Pi$ passes through the origin as the distance of the plane from origin is $0$,
+> and we can express $\mathbf{b} - \mathbf{a}$ as
+>
+> $$
+  \mathbf{b} - \mathbf{a} = \mathbf{0} + \lambda \mathbf{t} + \mu \mathbf{u}
+  $$
+>
+> for some $\lambda, \mu \in \mathbb{R}$.
+>
+> Consier
+>
+> $$
+  \mathbf{x} = \mathbf{a} + \lambda\mathbf{t} = \mathbf{b} - \mu\mathbf{u}
+  $$
+>
+> $\mathbf{x}$ is on both $L_1$ and $L_2$ and therefore it is the intersection of $L_1$ and $L_2$.
+>
+> By some vector manipulations, we have
+>
+> $$
+  \begin{gather}
+  \mathbf{a} + \lambda\mathbf{t} = \mathbf{b} - \mu\mathbf{u} \\
+  \lambda(\mathbf{t} \times \mathbf{u}) = (\mathbf{b} - \mathbf{a}) \times \mathbf{u} \\
+  \lambda |\mathbf{t} \times \mathbf{u}|^2 = [\mathbf{t} \times \mathbf{u}, \mathbf{b} - \mathbf{a}, \mathbf{u}] \\
+  \end{gather}
+  $$
+>
+> Hence,
+>
+> $$
+  \mathbf{x} = \mathbf{a} + {[\mathbf{t} \times \mathbf{u}, \mathbf{b} - \mathbf{a}, \mathbf{u}] \over |\mathbf{t} \times \mathbf{u}|^2}\mathbf{t}
+  $$
 
 ### Distance between Point and Plane
 
@@ -414,27 +408,32 @@ $$
 
 ### Intersection of Three Planes (Point)
 
-Suppose three planes $\Pi_1: \mathbf{x} \cdot \mathbf{n_1} = d_1$, $\Pi_2: \mathbf{x} \cdot \mathbf{n_2} = d_2$, $\Pi_3: \mathbf{x} \cdot \mathbf{n_3} = d_3$
-intersect at one point, then their normals can't be co-planar, i.e.
-
-$$
-[\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}] \not = 0
-$$
-
-Therefore, any point $\mathbf{p}$ in the 3D space can be expressed as
-
-$$
-\mathbf{p} =
-  {\mathbf{p} \cdot \mathbf{n_1} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_2} \times \mathbf{n_3})
-+ {\mathbf{p} \cdot \mathbf{n_2} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_3} \times \mathbf{n_1})
-+ {\mathbf{p} \cdot \mathbf{n_3} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_1} \times \mathbf{n_2})
-$$
-
-Hence, for the intersection point $x$,
-
-$$
-\mathbf{x} = {d_1(\mathbf{n_2} \times \mathbf{n_3}) + d_2(\mathbf{n_3} \times \mathbf{n_1}) + d_3(\mathbf{n_1} \times \mathbf{n_2}) \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]}
-$$
+> *Proposition.*{: .prop}
+> Given three planes $\Pi_1: \mathbf{x} \cdot \mathbf{n_1} = d_1$, $\Pi_2: \mathbf{x} \cdot \mathbf{n_2} = d_2$, $\Pi_3: \mathbf{x} \cdot \mathbf{n_3} = d_3$.
+> If $[\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}] \not = 0$, their intersection is
+>
+> $$
+  \mathbf{x} = {d_1(\mathbf{n_2} \times \mathbf{n_3}) + d_2(\mathbf{n_3} \times \mathbf{n_1}) + d_3(\mathbf{n_1} \times \mathbf{n_2}) \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> For the three planes to intersect at one point, their normals can't be co-planar, i.e. $[\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}] \not = 0$.
+>
+> As any point $\mathbf{p}$ in the 3D space can be expressed as
+>
+> $$
+  \mathbf{p} =
+    {\mathbf{p} \cdot \mathbf{n_1} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_2} \times \mathbf{n_3})
+  + {\mathbf{p} \cdot \mathbf{n_2} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_3} \times \mathbf{n_1})
+  + {\mathbf{p} \cdot \mathbf{n_3} \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]} (\mathbf{n_1} \times \mathbf{n_2})
+  $$
+>
+> Hence, their intersection is
+>
+> $$
+  \mathbf{x} = {d_1(\mathbf{n_2} \times \mathbf{n_3}) + d_2(\mathbf{n_3} \times \mathbf{n_1}) + d_3(\mathbf{n_1} \times \mathbf{n_2}) \over [\mathbf{n_1}, \mathbf{n_2}, \mathbf{n_3}]}
+  $$
 
 ## References
 
