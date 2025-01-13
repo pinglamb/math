@@ -346,28 +346,35 @@ $$
 
 ### Intersection between Line and Plane
 
-Given a line $L: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and a plane $\Pi: \mathbf{x} \cdot \mathbf{n} = 0$.
-
-If $\mathbf{n} \cdot \mathbf{t} = 0$, $L$ and $\Pi$ are parallel so either $L$ is on the plane $\Pi$ or there is no solution.
-$L$ is on $\Pi$ if $\mathbf{a}$ is on $\Pi$, hence $\mathbf{a} \cdot \mathbf{n} = 0$.
-
-If $\mathbf{n} \cdot \mathbf{t} \not = 0$, we have
-
-$$
-\begin{align*}
-\mathbf{n} \times (\mathbf{x} \times \mathbf{t}) &= \mathbf{n} \times (\mathbf{a} \times \mathbf{t}) \\
-(\mathbf{n} \cdot \mathbf{t}) \mathbf{x} - (\mathbf{n} \cdot \mathbf{x}) \mathbf{t} &= (\mathbf{n} \cdot \mathbf{t}) \mathbf{a} - (\mathbf{n} \cdot \mathbf{a}) \mathbf{t} \\
-\end{align*}
-$$
-
-Hence,
-
-$$
-\begin{align*}
-\mathbf{x} &= {(\mathbf{n} \cdot \mathbf{t}) \mathbf{a} - (\mathbf{n} \cdot \mathbf{a}) \mathbf{t} + (\mathbf{n} \cdot \mathbf{x}) \mathbf{t} \over \mathbf{n} \cdot \mathbf{t}} \\
-&= \mathbf{a} + {d - \mathbf{n} \cdot \mathbf{a} \over \mathbf{n} \cdot \mathbf{t}} \mathbf{t}
-\end{align*}
-$$
+> *Proposition.*{: .prop}
+> Given a line $L: (\mathbf{x} - \mathbf{a}) \times \mathbf{t} = \mathbf{0}$ and a plane $\Pi: (\mathbf{x} - \mathbf{b}) \cdot \mathbf{n} = 0$.
+> If $\mathbf{n} \cdot \mathbf{t} = 0$, there is either no intersection or $L$ is on the plane $\Pi$.
+> If $\mathbf{n} \cdot \mathbf{t} \not = 0$, then the intersection is
+>
+> $$
+  \mathbf{x} = \mathbf{a} + {\mathbf{n} \cdot \mathbf{b} - \mathbf{n} \cdot \mathbf{a} \over \mathbf{n} \cdot \mathbf{t}} \mathbf{t}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> If $\mathbf{n} \cdot \mathbf{t} = 0$, $L$ and $\Pi$ are parallel.
+> If $\mathbf{a}$ is on $\Pi$, i.e. $(\mathbf{a} - \mathbf{b}) \cdot \mathbf{n} = 0$, then $L$ is on $\Pi$, otherwise, there is no intersection.
+>
+> If $\mathbf{n} \cdot \mathbf{t} \not = 0$, by crossing by $\mathbf{n}$ on both side, we have
+>
+> $$
+  \begin{align*}
+  \mathbf{n} \times (\mathbf{x} \times \mathbf{t}) &= \mathbf{n} \times (\mathbf{a} \times \mathbf{t}) \\
+  (\mathbf{n} \cdot \mathbf{t}) \mathbf{x} - (\mathbf{n} \cdot \mathbf{x}) \mathbf{t} &= (\mathbf{n} \cdot \mathbf{t}) \mathbf{a} - (\mathbf{n} \cdot \mathbf{a}) \mathbf{t} \\
+  (\mathbf{n} \cdot \mathbf{t}) \mathbf{x} &= (\mathbf{n} \cdot \mathbf{t}) \mathbf{a} + (\mathbf{n} \cdot \mathbf{b}) \mathbf{t} - (\mathbf{n} \cdot \mathbf{a}) \mathbf{t} \\
+  \end{align*}
+  $$
+>
+> Hence,
+>
+> $$
+  \mathbf{x} = \mathbf{a} + {\mathbf{n} \cdot \mathbf{b} - \mathbf{n} \cdot \mathbf{a} \over \mathbf{n} \cdot \mathbf{t}} \mathbf{t}
+  $$
 
 ### Intersection of Two Planes (Line)
 
