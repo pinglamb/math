@@ -4,103 +4,117 @@ title: Linear Maps &#124; Vectors and Matrices
 ---
 
 # Linear Maps
+{: .page-title}
 
 The crucial property of vectors spaces is that the linear combination of vectors are again a vector.
 The defining property of linear maps is that it preserves the linear combination in a natural way, i.e.
 image of a linear combination is a linear combination of the images, or $\mathcal{T}(\lambda x + \mu y) = \lambda \mathcal{T}(x) + \mu \mathcal{T}(y)$.
 
-## Definition
 
-Let $V, W$ be vector spaces. The map $\mathcal{T}: V \to W$ is a _linear map_ or _linear transformation_ if for all $x, y \in V$ and $\lambda, \mu \in \mathbb{F}$,
+> *Definition.*{: .def}
+> Let $V, W$ be vector spaces over a field $\mathbb{F}$.
+> The map $\mathcal{T}: V \to W$ is a **linear map** or **linear transformation** if for all $a, b \in V$ and $\lambda, \mu \in \mathbb{F}$,
+>
+> $$
+  \begin{align*}
+  \mathcal{T}(a + b) &= \mathcal{T}(a) + \mathcal{T}(b) \\
+  \mathcal{T}(\lambda a) &= \lambda \mathcal{T}(a)
+  \end{align*}
+  $$
+>
+> or equivalently
+>
+> $$
+  \mathcal{T}(\lambda a + \mu b) = \lambda \mathcal{T}(a) + \mu \mathcal{T}(b)
+  $$
 
-$$
-\begin{align*}
-\mathcal{T}(a + b) &= \mathcal{T}(a) + \mathcal{T}(b) \\
-\mathcal{T}(\lambda a) &= \lambda \mathcal{T}(a)
-\end{align*}
-$$
+> *Lemma.*{: .lem}
+> $\mathcal{T}(0_V) = 0_W$.
+>
+> *Proof.*{: .prf}
+>
+> When $\lambda = \mu = 0$, we have
+>
+> $$
+  \mathcal{T}(0_V) = \mathcal{T}(0 a + 0 b) = 0 \mathcal{T}(a) + 0 \mathcal{T}(b) = 0_W
+  $$
 
-or equivalently
+## Image and Rank, Kernel and Nullity
 
-$$
-\mathcal{T}(\lambda a + \mu b) = \lambda \mathcal{T}(a) + \mu \mathcal{T}(b)
-$$
+Let $\mathcal{T}: V \to W$ be a linear map.
 
-$\mathcal{T}(V)$ is a subspace of $W$ as for all $\mathcal{T}(a), \mathcal{T}(b) \in \mathcal{T}(V)$,
+> *Definition.*{: .def}
+> $\text{im}(\mathcal{T}) = \mathcal{T}(V)$ is the **image** of $V$ under $\mathcal{T}$.
 
-$$
-\lambda \mathcal{T}(a) + \mu \mathcal{T}(b) = \mathcal{T}(\lambda a + \mu b) \in \mathcal{T}(V)
-$$
+> *Theorem.*{: .thm}
+> $\mathcal{T}(V)$ is a subspace of $W$.
+>
+> *Proof.*{: .prf}
+>
+> $0_W \in \mathcal{T}(V)$ so it is non-empty.
+>
+> For all $\mathcal{T}(a), \mathcal{T}(b) \in \mathcal{T}(V)$, we have
+>
+> $$
+  \lambda \mathcal{T}(a) + \mu \mathcal{T}(b) = \mathcal{T}(\lambda a + \mu b) \in \mathcal{T}(V)
+  $$
 
-It follows that $0_W \in \mathcal{T}(V)$. Furthermore, as
+> *Definition.*{: .def}
+> The **rank** of $\mathcal{T}$ is the dimension of the image, i.e.
+>
+> $$
+  r(\mathcal{T}) = \dim \mathcal{T}(V)
+  $$
 
-$$
-\mathcal{T}(a) = \mathcal{T}(a + 0_V) = \mathcal{T}(a) + \mathcal{T}(0_V)
-$$
+> *Definition.*{: .def}
+> The **kernel** or **null space** of $\mathcal{T}$ is the subset of $V$ that maps to the zero element in $W$, i.e.
+>
+> $$
+  \ker \mathcal{T} = \Set{v \in V \mid \mathcal{T}(v) = 0_W}
+  $$
 
-Hence, $\mathcal{T}(0_V) = 0_W$.
+> *Theorem.*{: .thm}
+> $\ker \mathcal{T}$ is a subspace of $V$.
+>
+> $0_V \in \ker \mathcal{T}$ so it is non-empty.
+>
+> For $a, b \in \ker \mathcal{T}$, we have
+>
+> $$
+  \mathcal{T}(\lambda a + \mu b) = \lambda \mathcal{T}(a) + \mu \mathcal{T}(b) = \lambda 0_W + \mu 0_W = 0_W
+  $$
+>
+> Hence, $\lambda a + \mu b \in \ker \mathcal{T}$.
 
-## Rank, Kernel and Nullity
+> *Definition.*{: .def}
+> The **nullity** of $\mathcal{T}$ is the dimension of the kernel, i.e.
+>
+> $$
+  n(\mathcal{T}) = \dim \ker \mathcal{T}
+  $$
 
-### Definition
-
-Let $\mathcal{T}: V \to W$, as discussed above, $\mathcal{T}(V)$ is the image of $V$ under $T$ and is a subspace of $W$.
-
-The _rank_ of $\mathcal{T}$ is the dimension of the image, i.e.
-
-$$
-r(\mathcal{T}) = \dim \mathcal{T}(V)
-$$
-
-<hr />
-
-The _kernel_ or _null space_ of $\mathcal{T}$ is the subset of $V$ that maps to the zero element in $W$.
-
-$$
-\ker \mathcal{T} = \Set{x \in V \mid \mathcal{T}(x) = 0_W}
-$$
-
-As stated above, $\mathcal{T}(0_V) = 0_W$ so $0_V \in \ker \mathcal{T}$.
-
-Suppose $a, b \in \ker \mathcal{T}$, as
-
-$$
-\mathcal{T}(\lambda a + \mu b) = \lambda \mathcal{T}(a) + \mu \mathcal{T}(b) = 0_W
-$$
-
-$\lambda a + \mu b \in \ker \mathcal{T}$.
-
-Hence $\ker \mathcal{T}$ is a subspace of $V$.
-
-<hr />
-
-The _nullity_ of $\mathcal{T}$ is the dimension of the kernel, i.e.
-
-$$
-n(\mathcal{T}) = \dim \ker \mathcal{T}
-$$
-
-### Rank-Nullity Theorem
-
-Let $\mathcal{T}: V \to W$ be a linear map, then
-
-$$
-r(\mathcal{T}) + n(\mathcal{T}) = \dim V
-$$
+> *Theorem.*{: .thm}
+> **[Rank-Nullity Theorem]**
+> Let $\mathcal{T}: V \to W$ be a linear map, then
+>
+> $$
+  r(\mathcal{T}) + n(\mathcal{T}) = \dim V
+  $$
 
 ## Composition of Maps
 
-Let $\mathcal{S}: U \to V$ and $\mathcal{T}: V \to W$ be linear maps,
-
-$$
-u \mapsto v = \mathcal{S}(u) \qquad v \mapsto w = \mathcal{T}(v)
-$$
-
-The _composite_ or _product_ map $\mathcal{TS}$ is the map $\mathcal{TS}: U \to W$ such that
-
-$$
-u \mapsto w = \mathcal{T}(\mathcal{S}(u))
-$$
+> *Definition.*{: .def}
+> Let $\mathcal{S}: U \to V$ and $\mathcal{T}: V \to W$ be linear maps such that
+>
+> $$
+  u \mapsto v = \mathcal{S}(u) \qquad v \mapsto w = \mathcal{T}(v)
+  $$
+>
+> The **composite map** or **product map** $\mathcal{TS}$ is the map $\mathcal{TS}: U \to W$ such that
+>
+> $$
+  u \mapsto w = \mathcal{T}(\mathcal{S}(u))
+  $$
 
 For the map to be well defined, the domain of $\mathcal{T}$ must include the image of $\mathcal{S}$.
 
