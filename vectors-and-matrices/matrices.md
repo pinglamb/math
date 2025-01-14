@@ -366,6 +366,8 @@ We can see that with the above definitions, after some checks, matrix forms a ve
 > *Property.*{: .prop}
 > The rows of orthogonal matrix form an orthonormal set, so as the columns.
 >
+> *Proof.*{: .prf}
+>
 > Consider
 >
 > $$
@@ -377,24 +379,53 @@ We can see that with the above definitions, after some checks, matrix forms a ve
 >
 > Similarly, since $\mathsf{A}^\intercal \mathsf{A} = \mathsf{I}$, the columns also form an orthonormal set.
 
-A map $\mathcal{A}$ with orthogonal matrix $\mathsf{A}$ with repsect to an orthonormal basis transforms $\Set{\mathbf{e}_i}$ to an orthonormal set
-(which may be right-handed or left handed depending on the sign of $\det \mathsf{A}$.
+> *Property.*{: .prop}
+> Suppose the map $\mathcal{A}$ has a matrix $\mathsf{A}$ with repsect to an orthonormal basis $\Set{\mathbf{e}_i}$.
+> If $\mathsf{A}$ is orthogonal, then the image of $\Set{\mathbf{e}_i}$ is also an orthonormal set
+> (which may be right-handed or left handed depending on the sign of $\det \mathsf{A}$).
 
-Rotation and reflection matrices are examples of orthogonal matrix.
+> *Property.*{: .prop}
+> Suppose the map is represented by an orthogonal matrix with respect to an orthonormal basis, a real scalar product is preserved, i.e.
+>
+> $$
+  \mathbf{x}' \cdot \mathbf{y}' = \mathbf{x} \cdot \mathbf{y}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> With an orthonormal basis,
+>
+> $$
+  \mathbf{x} \cdot \mathbf{y} = \mathsf{x}^\intercal \mathsf{y}
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  \mathbf{x}' \cdot \mathbf{y}' &= (\mathsf{x}')^\intercal \mathsf{y}' \\
+  &= (\mathsf{x}^\intercal \mathsf{A}^\intercal) (\mathsf{A} \mathsf{y}) \\
+  &= \mathsf{x}^\intercal \mathsf{I} \mathsf{y} \\
+  &= \mathsf{x}^\intercal \mathsf{y} \\
+  &= \mathbf{x} \cdot \mathbf{y} \\
+  \end{align*}
+  $$
 
-The scalar product is preserved after the mapping represented by an orthogonal matrix with respect to an orthonormal basis as ($\mathbf{x} \cdot \mathbf{y} = \mathsf{x}^\intercal \mathsf{y}$ if the basis is orthonormal)
-
-$$
-\begin{align*}
-\mathbf{x}' \cdot \mathbf{y}' &= (\mathsf{x}')^\intercal \mathsf{y}' \\
-&= (\mathsf{x}^\intercal \mathsf{A}^\intercal) (\mathsf{A} \mathsf{y}) \\
-&= \mathsf{x}^\intercal \mathsf{I} \mathsf{y} \\
-&= \mathsf{x}^\intercal \mathsf{y} \\
-&= \mathbf{x} \cdot \mathbf{y} \\
-\end{align*}
-$$
-
-Hence, the map is an _isometry_, i.e. distances are preserved.
+> *Property.*{: .prop}
+> Suppose the map is represented by an orthogonal matrix with respect to an orthonormal basis, then the map is an _isometry_, i.e.
+> distances are preserved by the mapping.
+>
+> *Proof.*{: .prf}
+>
+> As the real scalar product is preserved, we have
+>
+> $$
+  \begin{align*}
+  \vert \mathbf{x}' - \mathbf{y}' \vert^2 &= (\mathbf{x}' - \mathbf{y}') \cdot (\mathbf{x}' - \mathbf{y}') \\
+  &= (\mathbf{x} - \mathbf{y}) \cdot (\mathbf{x} - \mathbf{y}) \\
+  &= \vert \mathbf{x} - \mathbf{y} \vert^2
+  \end{align*}
+  $$
 
 ## Unitary Matrices
 
