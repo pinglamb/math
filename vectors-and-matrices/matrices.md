@@ -68,22 +68,51 @@ Just like [vectors](vectors.md), we can do all sorts of algebraic operations on 
 
 We can see that with the above definitions, after some checks, matrix forms a vector space.
 
-### Matrix Multiplication
+## Matrix Multiplication
 
-Let $\mathcal{S}: U \to V$ and $\mathcal{T}: V \to W$ be linear maps.
-Consider the composite map $\mathcal{T}\mathcal{S}: U \to W$, we have
+> *Proposition.*{: .prop}
+> Let $\mathcal{S}: U \to V$ and $\mathcal{T}: V \to W$ be linear maps,
+> in which $\mathsf{S} = \Set{S_{ij}}$ and $\mathsf{T} = \Set{T_{ij}}$ be the associated matrices.
+>
+> Consider the composite map $\mathcal{W} = \mathcal{T}\mathcal{S}: U \to W$ with associated matrix $\mathsf{W} = \Set{W_{ij}}$.
+> If
+>
+> $$
+  \mathbf{x}' = \mathcal{S}(\mathbf{x}) \quad \text{and} \quad \mathbf{x}'' = \mathcal{T}(\mathbf{x}')
+  $$
+>
+> then
+>
+> $$
+  x_i'' = T_{ij}(S_{jk}x_k) = (T_{ij}S_{jk}) x_k \quad \text{and} \quad x_i'' = W_{ik} x_k
+  $$
+>
+> Hence, for consistency,
+>
+> $$
+  W_{ik} = T_{ij}S_{jk}
+  $$
 
-$$
-(\mathsf{T}\mathsf{S})_{ik} x_k = (\mathcal{T}\mathcal{S})(\mathbf{x})_i = \mathcal{T}(\mathcal{S}(\mathbf{x}))_i = \mathsf{T}_{ij}(\mathsf{S}_{jk} x_k) = (\mathsf{T}_{ij}\mathsf{S}_{jk}) x_k
-$$
+> *Property.*{: .prop}
+> Matrix multiplication is _associative_, i.e.
+>
+> $$
+  \mathsf{A}(\mathsf{B}\mathsf{C}) = (\mathsf{A}\mathsf{B})\mathsf{C}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> In terms of suffix notation,
+>
+> $$
+  \begin{align*}
+  (\mathsf{A}(\mathsf{B}\mathsf{C}))_{ij} &= A_{ik}(\mathsf{B}\mathsf{C})_{kj} = A_{ik}B_{kl}C_{lj} \\
+  ((\mathsf{A}\mathsf{B})\mathsf{C})_{ij} &= (\mathsf{A}\mathsf{B})_{il}C_{lj} = A_{ik}B_{kl}C_{lj}
+  \end{align*}
+  $$
 
-Hence,
-
-$$
-(\mathsf{T}\mathsf{S})_{ik} = \mathsf{T}_{ij}\mathsf{S}_{jk}
-$$
-
-Matrix multiplication is _associative_ but _not commutative_.
+> *Property.*{: .prop}
+> Matrix multiplication in general is _not commutative_.
 
 ## Transpose
 
