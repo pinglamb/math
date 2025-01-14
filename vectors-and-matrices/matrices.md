@@ -264,38 +264,49 @@ We can see that with the above definitions, after some checks, matrix forms a ve
 
 ## Decomposition of Square Matrix
 
-For a square matrix $\mathsf{B}$, we construct
+> *Definition.*{: .def}
+> An **isotropic matrix** is a scalar multiple of the identity matrix.
 
-$$
-\begin{align*}
-\mathsf{A} &= {1 \over 2} \left( \mathsf{B} - \mathsf{B}^\intercal \right) \\
-\mathsf{S} &= {1 \over 2} \left( \mathsf{B} + \mathsf{B}^\intercal \right)
-\end{align*}
-$$
-
-As
-
-$$
-\begin{align*}
-\mathsf{A}^\intercal &= {1 \over 2} \left( \mathsf{B}^\intercal - \mathsf{B} \right) = -\mathsf{A} \\
-\mathsf{S}^\intercal &= {1 \over 2} \left( \mathsf{B}^\intercal + \mathsf{B} \right) = \mathsf{S} \\
-\mathsf{A} + \mathsf{S} &= \mathsf{B} \\
-\end{align*}
-$$
-
-Let $n\sigma = Tr(\mathsf{S})$, so $\sigma = {1 \over n}S_{ii}$, and write
-
-$$
-\mathsf{E} = \mathsf{S} - \sigma\mathsf{I}
-$$
-
-$\mathsf{E}$ is a trace-free symmetric tensor, and
-
-$$
-\mathsf{B} = \sigma\mathsf{I} + \mathsf{E} + \mathsf{A}
-$$
-
-which represents the decomposition of a square matrix into _isotropic_, _symmetric trace-free_ and _antisymmetric_ parts.
+> *Proposition.*{: .prop}
+> A $n \times n$ square matrix $\mathsf{B}$ can be decomposed into _isotropic_, _symmetric trace-free_ and _antisymmetric_ parts.
+>
+> *Proof.*{: .prf}
+>
+> We construct the matrices $\mathsf{A}$ and $\mathsf{S}$ from $\mathsf{B}$ as
+>
+> $$
+  \mathsf{A} = {1 \over 2} \left( \mathsf{B} - \mathsf{B}^\intercal \right)
+  \quad \text{and} \quad
+  \mathsf{S} = {1 \over 2} \left( \mathsf{B} + \mathsf{B}^\intercal \right)
+  $$
+>
+> We have
+>
+> $$
+  \begin{align*}
+  \mathsf{A}^\intercal &= {1 \over 2} \left( \mathsf{B}^\intercal - \mathsf{B} \right) = -\mathsf{A} \\
+  \mathsf{S}^\intercal &= {1 \over 2} \left( \mathsf{B}^\intercal + \mathsf{B} \right) = \mathsf{S} \\
+  \mathsf{A} + \mathsf{S} &= {1 \over 2} \left( \mathsf{B} - \mathsf{B}^\intercal + \mathsf{B} + \mathsf{B}^\intercal \right) = \mathsf{B} \\
+  \end{align*}
+  $$
+>
+> Therefore, $\mathsf{S}$ is symmetric and $\mathsf{A}$ is antisymmetric.
+>
+> Let $n\sigma = Tr(\mathsf{S})$, so $\sigma = {1 \over n}S_{ii}$, and write
+>
+> $$
+  \mathsf{E} = \mathsf{S} - \sigma\mathsf{I}
+  $$
+>
+> Then $\mathsf{E}$ is a trace-free symmetric tensor.
+>
+> Hence,
+>
+> $$
+  \mathsf{B} = \sigma\mathsf{I} + \mathsf{E} + \mathsf{A}
+  $$
+>
+> represents the decomposition of a square matrix into isotropic, symmetric trace-free and antisymmetric parts.
 
 ## Inverse
 
