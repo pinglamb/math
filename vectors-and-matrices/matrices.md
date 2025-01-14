@@ -310,52 +310,72 @@ We can see that with the above definitions, after some checks, matrix forms a ve
 
 ## Inverse
 
-Let $\mathsf{A}$ be a $m \times n$ matrix.
-A $n \times m$ matrix $\mathsf{B}$ is a left inverse of $\mathsf{A}$ if $\mathsf{BA} = \mathsf{I}$ ($n \times n$).
-A $n \times m$ matrix $\mathsf{C}$ is a right inverse of $\mathsf{A}$ if $\mathsf{AC} = \mathsf{I}$ ($m \times m$).
+> *Definition.*{: .def}
+> Let $\mathsf{A}$ be a $m \times n$ matrix.
+> A $n \times m$ matrix $\mathsf{B}$ is a **left inverse** of $\mathsf{A}$ if $\mathsf{BA} = \mathsf{I}$ ($n \times n$).
+> A $n \times m$ matrix $\mathsf{C}$ is a **right inverse** of $\mathsf{A}$ if $\mathsf{AC} = \mathsf{I}$ ($m \times m$).
 
-If both the left inverse $\mathsf{B}$ and right inverse $\mathsf{C}$ exist, then
+> *Property.*{: .prop}
+> If both the left inverse $\mathsf{B}$ and right inverse $\mathsf{C}$ exist, then
+>
+> $$
+  \mathsf{B} = \mathsf{BI} = \mathsf{BAC} = \mathsf{IC} = \mathsf{C}
+  $$
 
-$$
-\mathsf{B} = \mathsf{BI} = \mathsf{BAC} = \mathsf{IC} = \mathsf{C}
-$$
+> *Definition.*{: .def}
+> Let $\mathsf{A}$ be a $n \times n$ matrix. $\mathsf{A}$ is **invertible** if there exists an unique matrix $\mathsf{A}^{-1}$ such that
+>
+> $$
+  \mathsf{A}^{-1}\mathsf{A} = \mathsf{A}\mathsf{A}^{-1} = \mathsf{I}
+  $$
 
-Let $\mathsf{A}$ be a square matrix. $\mathsf{A}$ is _invertible_ if there exists a matrix $\mathsf{A}^{-1}$, which is unique, such that
+> *Property.*{: .prop}
+> From the above, the inverse of $\mathsf{A}^{-1}$ is $\mathsf{A}$, i.e.
+>
+> $$
+  (\mathsf{A}^{-1})^{-1} = \mathsf{A}
+  $$
 
-$$
-\mathsf{A}^{-1}\mathsf{A} = \mathsf{A}\mathsf{A}^{-1} = \mathsf{I}
-$$
+> *Property.*{: .prop}
+> Let $\mathsf{A}$ and $\mathsf{B}$ be matrices, we have
+>
+> $$
+  \mathsf{AB}^{-1} = \mathsf{B}^{-1}\mathsf{A}^{-1}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \mathsf{B}^{-1}\mathsf{A}^{-1}(\mathsf{A}\mathsf{B}) = \mathsf{B}^{-1}(\mathsf{A}^{-1}(\mathsf{A})\mathsf{B} = \mathsf{B}^{-1}\mathsf{B} = \mathsf{I} \\
+  (\mathsf{A}\mathsf{B})\mathsf{B}^{-1}\mathsf{A}^{-1} = \mathsf{A}(\mathsf{B}\mathsf{B}^{-1})\mathsf{A}^{-1} = \mathsf{A}\mathsf{A}^{-1} = \mathsf{I}
+  \end{align*}
+  $$
 
-We have
+## Orthogonal Matrices
 
-$$
-(\mathsf{A}^{-1})^{-1} = \mathsf{A}
-$$
+> *Definition.*{: .def}
+> A $n \times n$ real square matrix $\mathsf{A} = \Set{A_{ij}}$ is **orthogonal** if
+>
+> $$
+  \mathsf{A}\mathsf{A}^\intercal = \mathsf{I} = \mathsf{A}^\intercal\mathsf{A}
+  $$
+>
+> i.e. if $\mathsf{A}$ is invertible and $\mathsf{A}^{-1} = \mathsf{A}^\intercal$.
 
-and
-
-$$
-\mathsf{AB}^{-1} = \mathsf{B}^{-1}\mathsf{A}^{-1}
-$$
-
-## Orthogonal Matrix
-
-A real square matrix is _orthogonal_ if
-
-$$
-\mathsf{A}\mathsf{A}^\intercal = \mathsf{I} = \mathsf{A}^\intercal\mathsf{A}
-$$
-
-i.e. if $\mathsf{A}$ is invertible and $\mathsf{A}^{-1} = \mathsf{A}^\intercal$
-
-As
-
-$$
-(\mathsf{A}\mathsf{A}^\intercal)_{ij} = \mathsf{A}_{ik}(\mathsf{A}^\intercal)_{kj} = \mathsf{A}_{ik}\mathsf{A}_{jk} = \delta_{ij}
-$$
-
-it means the product of the $i$-th row with other rows is $0$ and product with itself is $1$.
-It implies that the rows (and columns) of $\mathsf{A}$ form an orthonormal set.
+> *Property.*{: .prop}
+> The rows of orthogonal matrix form an orthonormal set, so as the columns.
+>
+> Consider
+>
+> $$
+  (\mathsf{A}\mathsf{A}^\intercal)_{ij} = \mathsf{A}_{ik}(\mathsf{A}^\intercal)_{kj} = A_{ik}A_{jk} = \delta_{ij}
+  $$
+>
+> The dot products of the $i$-th row with other rows are $0$ and the dot product with itself is $1$.
+> Therefore, the rows of $\mathsf{A}$ form an orthonormal set.
+>
+> Similarly, since $\mathsf{A}^\intercal \mathsf{A} = \mathsf{I}$, the columns also form an orthonormal set.
 
 A map $\mathcal{A}$ with orthogonal matrix $\mathsf{A}$ with repsect to an orthonormal basis transforms $\Set{\mathbf{e}_i}$ to an orthonormal set
 (which may be right-handed or left handed depending on the sign of $\det \mathsf{A}$.
@@ -376,13 +396,16 @@ $$
 
 Hence, the map is an _isometry_, i.e. distances are preserved.
 
-For a complex square matrix to be _unitary_ if its Hermitian conjugate is equal to its inverse, i.e.
+## Unitary Matrices
 
-$$
-\mathsf{A}^\dagger = \mathsf{A}^{-1}
-$$
+> *Definition.*{: .def}
+> A complex square matrix $\mathsf{U}$ is said to be **unitary** if its Hermitian conjugate is equal to its inverse, i.e.
+>
+> $$
+  \mathsf{U}^\dagger = \mathsf{U}^{-1}
+  $$
 
-which has similar properties as orthogonal real matrix.
+Unitary matrices are to complex matrices what orthonormal matrices are to real matrices.
 
 ## References
 
