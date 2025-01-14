@@ -116,133 +116,151 @@ We can see that with the above definitions, after some checks, matrix forms a ve
 
 ## Transpose
 
-### Definition
+> *Definition.*{: .def}
+> Let $\mathsf{A} = \Set{A_{ij}}$ be a $m \times n$ matrix.
+> The **transpose** $\mathsf{A}^\intercal$ of $\mathsf{A}$ is defined to be a $n \times m$ matrix with
+>
+> $$
+  (\mathsf{A}^\intercal)_{ij} = (\mathsf{A})_{ji} = A_{ji}
+  $$
 
-Let $\mathsf{A} = \Set{A_{ij}}$ be a $m \times n$ matrix.
-The _transpose_ $\mathsf{A}^\intercal$ of $\mathsf{A}$ is defined to be a $n \times m$ matrix with
+> *Property.*{: .prop}
+> By definition,
+>
+> $$
+  (\mathsf{A}^\intercal)^\intercal = \mathsf{A}
+  $$
 
-$$
-(\mathsf{A}^\intercal)_{ij} = (\mathsf{A})_{ji} = A_{ji}
-$$
+> *Property.*{: .prop}
+> Let $\mathsf{A} = \Set{A_{ij}}$ and $\mathsf{B} = \Set{B_{ij}}$ be matrices such that $\mathsf{AB}$ exists, then
+>
+> $$
+  (\mathsf{A}\mathsf{B})^\intercal = \mathsf{B}^\intercal \mathsf{A}^\intercal
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  ((\mathsf{A}\mathsf{B})^\intercal)_{ik} &= (\mathsf{A}\mathsf{B})_{ki} \\
+  &= A_{kj} B_{ji} \\
+  &= (\mathsf{B}^\intercal)_{ij} (\mathsf{A}^\intercal)_{jk} \\
+  &= (\mathsf{B}^\intercal \mathsf{A}^\intercal)_{ik}
+  \end{align*}
+  $$
 
-From definition, we can see that
+## Hermitian Conjugate
 
-$$
-(\mathsf{A}^\intercal)^\intercal = \mathsf{A}
-$$
+> *Definition.*{: .def}
+> Let $\mathsf{A} = \Set{A_{ij}}$ be a matrix, with $A_{ij} \in \mathbb{C}$.
+> The **Hermitian conjugate** or **conjugate transpose** or **adjoint** is defined to be
+>
+> $$
+  \mathsf{A}^\dagger = (\mathsf{A}^\intercal)^\ast = (\mathsf{A}^\ast)^\intercal
+  $$
 
-Also,
+> *Property.*{: .prop}
+> Similarly to transposes,
+>
+> $$
+  \mathsf{A}^{\dagger\dagger} = \mathsf{A}
+  $$
 
-$$
-\begin{align*}
-((\mathsf{A}\mathsf{B})^\intercal)_{ik} &= (\mathsf{A}\mathsf{B})_{ki} \\
-&= \mathsf{A}_{kj} \mathsf{B}_{ji} \\
-&= (\mathsf{B}^\intercal)_{ij} (\mathsf{A}^\intercal)_{jk} \\
-&= (\mathsf{B}^\intercal \mathsf{A}^\intercal)_{ik}
-\end{align*}
-$$
+> *Property.*{: .prop}
+> Let $\mathsf{A} = \Set{A_{ij}}$ and $\mathsf{B} = \Set{B_{ij}}$ be matrices such that $\mathsf{AB}$ exists, then
+>
+> $$
+  (\mathsf{A}\mathsf{B})^\dagger = \mathsf{B}^\dagger \mathsf{A}^\dagger
+  $$
 
-Hence,
+## Symmetric Matrices
 
-$$
-(\mathsf{A}\mathsf{B})^\intercal = \mathsf{B}^\intercal \mathsf{A}^\intercal
-$$
+> *Definition.*{: .def}
+> A square $n \times n$ matrix $\mathsf{A} = \Set{A_{ij}}$ is **symmetric** if
+>
+> $$
+  \mathsf{A} = \mathsf{A}^\intercal \iff A_{ij} = A_{ji}
+  $$
 
-### Hermitian Conjugate
+> *Definition.*{: .def}
+> A square $n \times n$ matrix $\mathsf{A} = \Set{A_{ij}}$ is **antisymmetric** if
+>
+> $$
+  \mathsf{A} = -\mathsf{A}^\intercal \iff A_{ij} = -A_{ji}
+  $$
 
-Let $\mathsf{A} = \Set{A_{ij}}$ be a matrix, with $A_{ij} \in \mathbb{C}$.
-The _Hermitian conjugate_ or _conjugate transpose_ or _adjoint_ is defined to be
+> *Property.*{: .prop}
+> For an antisymmetric matrix, as $A_{11} = -A_{11}, A_{22} = -A_{22}, ...$, the diagonal elements have to be zero, i.e.
+>
+> $$
+  A_{11} = A_{22} = ... = A_{nn} = 0
+  $$
 
-$$
-\mathsf{A}^\dagger = (\mathsf{A}^\intercal)^\ast = (\mathsf{A}^\ast)^\intercal
-$$
+## Hermitian Matrices
 
-We also have
+> *Definition.*{: .def}
+> A square $n \times n$ complex matrix $\mathsf{A} = \Set{A_{ij}}$ is **Hermitian** if
+>
+> $$
+  \mathsf{A} = \mathsf{A}^\dagger \iff A_{ij} = A_{ji}^\ast
+  $$
 
-$$
-\mathsf{A}^{\dagger\dagger} = \mathsf{A}
-$$
+> *Definition.*{: .def}
+> A square $n \times n$ complex matrix $\mathsf{A} = \Set{A_{ij}}$ is **skew-Hermitian** if
+>
+> $$
+  \mathsf{A} = -\mathsf{A}^\dagger \iff A_{ij} = -A_{ji}^\ast
+  $$
 
-and
-
-$$
-(\mathsf{A}\mathsf{B})^\dagger = \mathsf{B}^\dagger \mathsf{A}^\dagger
-$$
-
-### Symmetric Matrices
-
-A square matrix is _symmetric_ if
-
-$$
-\mathsf{A} = \mathsf{A}^\intercal \iff A_{ij} = A_{ji}
-$$
-
-and is _antisymmetric_ if
-
-$$
-\mathsf{A} = -\mathsf{A}^\intercal \iff A_{ij} = -A_{ji}
-$$
-
-For an antisymmetric matrix, as $A_{11} = -A_{11}, A_{22} = -A_{22}, ...$, the diagonal elements have to be zero.
-
-### Hermitian Matrices
-
-A square complex matrix is _Hermitian_ if
-
-$$
-\mathsf{A} = \mathsf{A}^\dagger \iff A_{ij} = A_{ji}^\ast
-$$
-
-and is _skew-Hermitian_ if
-
-$$
-\mathsf{A} = -\mathsf{A}^\dagger \iff A_{ij} = -A_{ji}^\ast
-$$
-
-For Hermitian and skew-Hermitian matrices, the diagonal elements are real and pure imaginary respectively.
+> *Property.*{: .prop}
+> For Hermitian and skew-Hermitian matrices, the diagonal elements are real and pure imaginary respectively.
 
 ## Trace
 
-The _trace_ of a square matrix is equal to the sum of the diagonal elements, i.e.
+> *Definition.*{: .def}
+> The **trace** of a square $n \times n$ matrix $\mathsf{A} = \Set{A_{ij}}$ is equal to the sum of the diagonal elements, i.e.
+>
+> $$
+  Tr(\mathsf{A}) = A_{ii}
+  $$
 
-$$
-Tr(\mathsf{A}) = A_{ii}
-$$
-
-Let $\mathsf{B}$ be $m \times n$ matrix and $\mathsf{C}$ be $n \times m$ matrix,
-though $\mathsf{BC}$ and $\mathsf{CB}$ are not necessary equal (or even of different sizes),
-
-$$
-Tr(\mathsf{BC}) = (\mathsf{BC})_{ii} = B_{ij}C_{ji} = C_{ij}B_{ji} = (\mathsf{CB})_{ii} = Tr(\mathsf{CB})
-$$
+> *Proposition.*{: .prop}
+> Let $\mathsf{B} = \Set{B_{ij}}$ be $m \times n$ matrix and $\mathsf{C} = \Set{C_{ij}}$ be $n \times m$ matrix,
+> though $\mathsf{BC}$ and $\mathsf{CB}$ are not necessary equal (or even of different sizes), however
+>
+> $$
+  Tr(\mathsf{BC}) = (\mathsf{BC})_{ii} = B_{ij}C_{ji} = C_{ji}B_{ij} = (\mathsf{CB})_{jj} = Tr(\mathsf{CB})
+  $$
 
 ## Identity Matrix
 
-The _unit_ or _identity_ matrix is defined to be
+> *Definition.*{: .def}
+> The **unit matrix** or **identity matrix** is defined to be
+>
+> $$
+  \mathsf{I} = \begin{pmatrix}
+  1 & 0 & \dots & 0 \\
+  0 & 1 & \dots & 0 \\
+  \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & \dots & 1 \\
+  \end{pmatrix} = \Set{\delta_{ij}}
+  $$
 
-$$
-\mathsf{I} = \begin{pmatrix}
-1 & 0 & \dots & 0 \\
-0 & 1 & \dots & 0 \\
-\vdots & \vdots & \ddots & \vdots \\
-0 & 0 & \dots & 1 \\
-\end{pmatrix} = \Set{\delta_{ij}}
-$$
-
-We have
-
-$$
-\begin{align*}
-(\mathsf{IA})_{ij} &= \delta_{ik}A_{kj} = A_{ij} \\
-(\mathsf{AI})_{ij} &= A_{ik}\delta_{kj} = A_{ij}
-\end{align*}
-$$
-
-Hence,
-
-$$
-\mathsf{IA} = \mathsf{AI} = \mathsf{A}
-$$
+> *Property.*{: .prop}
+> Let $\mathsf{A} = \Set{A_{ij}}$ be a $n \times n$ matrix, then
+>
+> $$
+  \begin{align*}
+  (\mathsf{IA})_{ij} &= \delta_{ik}A_{kj} = A_{ij} \\
+  (\mathsf{AI})_{ij} &= A_{ik}\delta_{kj} = A_{ij}
+  \end{align*}
+  $$
+>
+> i.e.
+>
+> $$
+  \mathsf{IA} = \mathsf{AI} = \mathsf{A}
+  $$
 
 ## Decomposition of Square Matrix
 
