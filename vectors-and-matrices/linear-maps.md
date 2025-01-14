@@ -118,35 +118,41 @@ Let $\mathcal{T}: V \to W$ be a linear map.
 
 For the map to be well defined, the domain of $\mathcal{T}$ must include the image of $\mathcal{S}$.
 
-## Bases of Maps
+## Bases and Matrix Representation
 
-Let $\Set{e_j \mid j = 1, ..., n}, \Set{f_i \mid i = 1, ..., m}$ be the bases of vector spaces $V$ and $W$ respectively.
-
-Consider a linear map $\mathcal{A}: V \to W$, i.e. $x \mapsto x' = \mathcal{A}(x)$, we have
-
-$$
-x' = \mathcal{A}\left( \sum_{j=1}^n x_j e_j \right) = \sum_{j=1}^n x_j \mathcal{A}(e_j) = \sum_{j=1}^n x_j e_j'
-$$
-
-As $e_j' \in W$,
+Let $\Set{\mathbf{e_j} \mid j = 1, ..., n}, \Set{\mathbf{f_i} \mid i = 1, ..., m}$ be the bases of vector spaces $V$ and $W$ respectively (not necessarily orthonormal).
+Any vector $\mathbf{x} \in V$ can be uniquely written as
 
 $$
-e_j' = \sum_{i=1}^m A_{ij} f_i
+\mathbf{x} = \sum_{j=1}^n x_j \mathbf{e}_j
 $$
 
-Hence, combining the above,
+Let $\mathcal{A}: V \to W$, i.e. $\mathbf{x} \mapsto \mathbf{x}' = \mathcal{A}(\mathbf{x})$ be a linear map.
+Because of the _linearity_ of the map, we have
 
 $$
-x' = \sum_{j=1}^n x_j \left( \sum_{i=1}^m A_{ij} f_i \right) = \sum_{i=1}^m \left( \sum_{j=1}^n A_{ij} x_j \right) f_i
+\mathbf{x}' = \mathcal{A}\left( \sum_{j=1}^n x_j \mathbf{e}_j \right) = \sum_{j=1}^n x_j \mathcal{A}(\mathbf{e}_j) = \sum_{j=1}^n x_j \mathbf{e}_j'
 $$
 
-So, the $i$-th component of the image $x'$ under $\mathcal{A}$ is
+By expressing $e_j' \in W$ in components form, we have
+
+$$
+\mathbf{e}_j' = \sum_{i=1}^m A_{ij} \mathbf{f}_i
+$$
+
+and therefore
+
+$$
+\mathbf{x}' = \sum_{j=1}^n x_j \left( \sum_{i=1}^m A_{ij} \mathbf{f}_i \right) = \sum_{i=1}^m \left( \sum_{j=1}^n A_{ij} x_j \right) \mathbf{f}_i
+$$
+
+We can see that the $i$-th component of the image $\mathbf{x}'$ under $\mathcal{A}$ is
 
 $$
 x_i' = A_{ij} x_j
 $$
 
-Alternatively, in expanded form, we have
+or alternatively in expanded form, we have
 
 $$
 \begin{gather}
@@ -157,38 +163,39 @@ x_m' = A_{m1}x_1 + A_{m2}x_2 + \dots + A_{mn}x_n
 \end{gather}
 $$
 
-## Matrix Representation
+Base on the above, we conclude that linear maps can be represented by matrices, i.e.
 
-Let $\mathsf{x}$ and $\mathsf{x}'$ be column matrices,
-
-$$
-\mathsf{x} = (x_1, x_2, ..., x_n) \qquad \mathsf{x}' = (x_1', x_2', ..., x_n')
-$$
-
-The linear map $\mathcal{A}: V \to W$ can be represented by the matrix
-
-$$
-\mathsf{A} = \begin{pmatrix}
-A_{11} & A_{12} & \dots & A_{1n} \\
-A_{21} & A_{22} & \dots & A_{2n} \\
-\vdots & \vdots & \ddots & \vdots \\
-A_{m1} & A_{m2} & \dots & A_{mn} \\
-\end{pmatrix}
-$$
-
-and we have
-
-$$
-\mathsf{x}' = \mathsf{A}\mathsf{x}
-$$
-
-We can also write
-
-$$
-\mathsf{A} = \begin{pmatrix} e_1' & e_2' & ... & e_n'\end{pmatrix}
-$$
-
-where $e_j' = \mathcal{A}(e_j)$ is the column matrix of $e_j$ with respect to $\Set{f_i}$ after the transformation.
+> *Proposition.*{: .prop}
+> A linear map $\mathcal{A}: V \to W$ can be represented by the matrix
+>
+> $$
+  \mathsf{A} = \begin{pmatrix}
+  A_{11} & A_{12} & \dots & A_{1n} \\
+  A_{21} & A_{22} & \dots & A_{2n} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  A_{m1} & A_{m2} & \dots & A_{mn} \\
+  \end{pmatrix}
+  $$
+>
+> such that for colume matrices
+>
+> $$
+  \mathsf{x} = (x_1, x_2, ..., x_n) \qquad \mathsf{x}' = (x_1', x_2', ..., x_n')
+  $$
+>
+> we have
+>
+> $$
+  \mathsf{x}' = \mathsf{A}\mathsf{x}
+  $$
+>
+> We can also write
+>
+> $$
+  \mathsf{A} = \begin{pmatrix} \mathbf{e}_1' & \mathbf{e}_2' & ... & \mathbf{e}_n'\end{pmatrix}
+  $$
+>
+> where $\mathbf{e}_j' = \mathcal{A}(\mathbf{e}_j)$ is the column matrix of $\mathbf{e}_j$ with respect to $\Set{\mathbf{f}_i}$ after the transformation.
 
 Recall that for a vector, the component form represents an actual coordinates only after we have specifed the basis.
 If we change the components, we get a different vector.

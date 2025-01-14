@@ -278,16 +278,6 @@ Be noted that $\mathbf{e}_i$ means one of the basis vector for $i = 1, 2, 3$ ins
   \end{align*}
   $$
 
-## Matrix
-
-> *Proposition.*{: .prop}
->
-> $$
-  (\mathsf{x}')_i = x_i' = A_{ij} x_j
-  $$
-
-
-
 ## References
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 2.11](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
