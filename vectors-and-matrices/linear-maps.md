@@ -10,7 +10,6 @@ The crucial property of vectors spaces is that the linear combination of vectors
 The defining property of linear maps is that it preserves the linear combination in a natural way, i.e.
 image of a linear combination is a linear combination of the images, or $\mathcal{T}(\lambda x + \mu y) = \lambda \mathcal{T}(x) + \mu \mathcal{T}(y)$.
 
-
 > *Definition.*{: .def}
 > Let $V, W$ be vector spaces over a field $\mathbb{F}$.
 > The map $\mathcal{T}: V \to W$ is a **linear map** or **linear transformation** if for all $a, b \in V$ and $\lambda, \mu \in \mathbb{F}$,
@@ -215,88 +214,125 @@ To avoid ambiguity, we will use $\Set{\mathbf{f_i}} = \Set{\mathbf{e_j}}$ as the
 
 ### Rotation
 
-Consider a rotation by an angle $\theta$ about the $x_3$ axis.
+> *Proposition.*{: .prop}
+> The matrix for a rotation by an angle $\theta$ about the $x_3$ axis is
+>
+> $$
+  \mathsf{R}_\theta = \begin{pmatrix}
+  \cos\theta & -\sin\theta & 0 \\
+  \sin\theta & \cos\theta & 0 \\
+  0 & 0 & 1 \\
+  \end{pmatrix}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> In order the find the matrix, we can find the image of the basis $\Set{\mathbf{e_j}}$ under the transformation, i.e.
+>
+> $$
+  \begin{align*}
+  \mathbf{e_1} \mapsto \mathbf{e_1}' &= \mathbf{f_1} \cos\theta + \mathbf{f_2} \sin\theta \\
+  \mathbf{e_2} \mapsto \mathbf{e_2}' &= -\mathbf{f_1} \sin\theta + \mathbf{f_2} \cos\theta \\
+  \mathbf{e_3} \mapsto \mathbf{e_3}' &= \mathbf{f_3}
+  \end{align*}
+  $$
 
-$$
-\begin{align*}
-\mathbf{e_1} \mapsto \mathbf{e_1}' &= \mathbf{f_1} \cos\theta + \mathbf{f_2} \sin\theta \\
-\mathbf{e_2} \mapsto \mathbf{e_2}' &= -\mathbf{f_1} \sin\theta + \mathbf{f_2} \cos\theta \\
-\mathbf{e_3} \mapsto \mathbf{e_3}' &= \mathbf{f_3}
-\end{align*}
-$$
-
-Hence, the rotation matrix
-
-$$
-\mathsf{R}(\theta) = \begin{pmatrix}
-\cos\theta & -\sin\theta & 0 \\
-\sin\theta & \cos\theta & 0 \\
-0 & 0 & 1 \\
-\end{pmatrix}
-$$
+> *Proposition.*{: .prop}
+> The matrix for a rotation by an angle $\theta$ about a unit vector $\mathbf{\hat{n}} = (n_1, n_2, n_3)$ is
+>
+> $$
+  \mathsf{R}_{(\mathsf{\hat{n}}, \theta)} = \begin{pmatrix}
+  n_1n_1(1 - \cos\theta) + \cos\theta    & n_1n_2(1 - \cos\theta) - n_3\sin\theta & n_1n_3(1 - \cos\theta) + n_2\sin\theta \\
+  n_2n_1(1 - \cos\theta) + n_3\sin\theta & n_2n_2(1 - \cos\theta) + \cos\theta    & n_2n_3(1 - \cos\theta) - n_1\sin\theta \\
+  n_3n_1(1 - \cos\theta) - n_2\sin\theta & n_3n_2(1 - \cos\theta) + n_1\sin\theta & n_3n_3(1 - \cos\theta) + \cos\theta \\
+  \end{pmatrix}
+  $$
+>
+> or
+>
+> $$
+  \mathsf{R}_{ij} = \delta_{ij} \cos \theta + (1 - \cos\theta)n_in_j - \varepsilon_{ijk}n_k\sin\theta
+  $$
+>
+> *Proof.*{: .prf}
+>
+> ![General Rotation](../images/vectors-linear-maps-general-rotation.png)
+>
+> The image $\mathbf{x}' = \vec{OB} + \vec{BC} + \vec{CA'}$.
+>
+> We have
+>
+> $$
+  \begin{align*}
+  \vec{OB} &= (\mathbf{x} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}} \\
+  \vec{BC} &= \vec{BA} \cos\theta \\
+           &= (\vec{BO} + \vec{OA}) \cos\theta \\
+           &= -\cos\theta(\mathbf{x} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}} + \cos\theta \mathbf{x} \\
+  \vec{CA'} &= \sin\theta (\hat{n} \times \mathbf{x})
+  \end{align*}
+  $$
+>
+> Hence,
+>
+> $$
+  \mathbf{x}' = \cos\theta \mathbf{x} + (1 - \cos\theta)(\mathbf{x} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}} + \sin\theta (\mathbf{\hat{n} \times \mathbf{x}})
+  $$
 
 ### Reflection
 
-Consider reflection $\mathcal{H}_\Pi$ in the plane $\Pi = \Set{\mathbf{x} \in \mathbb{R}^3 \mid \mathbf{x} \cdot \mathbf{n} = 0, \|\mathbf{n}\| = 1}$
-
-For a point $P$, let $N$ be the foot of the perpendicular from $P$ to the plane, then $\vec{NP} = (\mathbf{x} \cdot \mathbf{n}) \mathbf{n}$.
-
-Hence,
-
-$$
-\mathbf{x}' = \mathcal{H}_\Pi(\mathbf{x}) = \mathbf{x} - 2 (\mathbf{x} \cdot \mathbf{n}) \mathbf{n}
-$$
-
-Using suffix notation, we have
-
-$$
-\begin{align*}
-x_i' &= x_i - 2 x_j n_j n_i \\
-&= \delta_{ij}x_j - 2 n_i n_j x_j \\
-&= (\delta_{ij} - 2 n_i n_j)x_j \\
-&= H_{ij}x_j
-\end{align*}
-$$
-
-Hence,
-
-$$
-(\mathsf{H})_{ij} = \delta_{ij} - 2 n_i n_j \qquad \mathsf{H} = \begin{pmatrix}
-1 - 2n_1^2 & -2n_1n_2 & -2n_1n_3 \\
--2n_2n_1 & 1-2n_2^2 & -2n_2n_3 \\
--2n_3n_1 & -2n_3n_2 & 1-2n_3^2 \\
-\end{pmatrix}
-$$
+> *Proposition.*{: .prop}
+> The matrix of a reflection $\mathcal{H}_\Pi$ in the plane $\Pi = \Set{\mathbf{x} \in \mathbb{R}^3 \mid \mathbf{x} \cdot \mathbf{n} = 0, \|\mathbf{n}\| = 1}$ is
+>
+> $$
+  \mathsf{H} = \begin{pmatrix}
+  1 - 2n_1^2 & -2n_1n_2 & -2n_1n_3 \\
+  -2n_2n_1 & 1-2n_2^2 & -2n_2n_3 \\
+  -2n_3n_1 & -2n_3n_2 & 1-2n_3^2 \\
+  \end{pmatrix}
+  $$
+>
+> or
+>
+> $$
+  \mathsf{H}_{ij} = \delta_{ij} - 2 n_i n_j
+  $$
+>
+> *Proof.*{: .prf}
+>
+> For a point $P$, let $N$ be the foot of the perpendicular from $P$ to the plane,
+> then $\vec{NP} = (\mathbf{x} \cdot \mathbf{n}) \mathbf{n}$.
+>
+> The image $\vec{OP'} = \vec{OP} - 2 \vec{NP}$ and hence
+>
+> $$
+  \mathbf{x}' = \mathcal{H}_\Pi(\mathbf{x}) = \mathbf{x} - 2 (\mathbf{x} \cdot \mathbf{n}) \mathbf{n}
+  $$
 
 ### Dilatation
 
-Dilatation is the effect of stretching or contracting a unit cube to a cuboid by different factors along different axes.
-
-Consider the dilatation $\mathcal{D}$ such that
-
-$$
-\begin{align*}
-\mathbf{e_1} \mapsto \mathbf{e_1}' &= \lambda\mathbf{f_1} \\
-\mathbf{e_2} \mapsto \mathbf{e_2}' &= \mu\mathbf{f_2} \\
-\mathbf{e_3} \mapsto \mathbf{e_3}' &= \nu\mathbf{f_3} \\
-\end{align*}
-$$
-
-Hence,
-
-$$
-\mathsf{D} = \begin{pmatrix}
-\lambda & 0 & 0 \\
-0 & \mu & 0 \\
-0 & 0 & \nu
-\end{pmatrix}
-$$
-
-If $\lambda = \mu = \nu$, the transformation is called a _pure dilatation_.
+> *Definition.*{: .def}
+> **Dilatation** is the effect of stretching or contracting a unit cube to a cuboid by different factors along different axes.
+> Hence
+>
+> $$
+  \mathsf{D} = \begin{pmatrix}
+  \lambda & 0 & 0 \\
+  0 & \mu & 0 \\
+  0 & 0 & \nu
+  \end{pmatrix}
+  $$
+>
+> If $\lambda = \mu = \nu$, the transformation is called a **pure dilatation**.
 
 ### Shear
 
-A simple shear is a transformation in the plane that displaces points in one direction, e.g. $x_1$ direction, by an amount proportional to the distance in that plane from, say, the $x_1$-axis.
+> *Definition.*{: .def}
+> A simple shear is a transformation in the plane (e.g. $x_1x_2$-plane)
+> that displaces points in one direction (e.g. $x_1$ direction)
+> by an amount proportional to the distance in that plane from an axis (e.g. $x_1$-axis).
+
+![Shear](../images/vectors-shear.png)
+
 For example, $\mathcal{S}_\lambda$ is the transformation such that
 
 $$
