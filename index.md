@@ -21,7 +21,7 @@ title: Home
 * [Groups of Small Orders](groups/groups-of-small-orders.md)
 * [Polyherdral Groups](groups/polyhedral-groups.md)
 * [Matrix Groups](groups/matrix-groups.md)
-* [Mobius Groups](groups/mobius-groups.md)
+* [Möbius Groups](groups/mobius-groups.md)
 
 ## Vectors and Matrices
 {: .left}
@@ -32,9 +32,14 @@ title: Home
 * [Vector Geometry](vectors-and-matrices/vector-geometry.md)
 * [Vector Spaces](vectors-and-matrices/vector-spaces.md)
 * [Spanning Sets, Bases and Higher Dimentional Spaces](vectors-and-matrices/spanning-sets-and-bases.md)
+* [Suffix Notation](vectors-and-matrices/suffix-notation.md)
 * [Linear Maps](vectors-and-matrices/linear-maps.md)
 * [Matrices](vectors-and-matrices/matrices.md)
-* [Suffix Notation](vectors-and-matrices/suffix-notation.md)
+* [Determinants](vectors-and-matrices/determinants.md)
+* [Linear Equations](vectors-and-matrices/linear-equations.md)
+* [Eigenvalues and Eigenvectors](vectors-and-matrices/eigenvalues-eigenvectors.md)
+* [Transformation Groups](vectors-and-matrices/transformation-groups.md)
+* [Möbius Transformations](vectors-and-matrices/mobius-transformations.md)
 
 ## Numbers and Sets
 {: .left}
