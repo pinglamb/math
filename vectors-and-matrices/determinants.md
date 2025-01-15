@@ -314,24 +314,36 @@ The [Levi-Civita symbol](suffix-notation.md#levi-civita-symbol) can be generaliz
   (\det \mathsf{A})^2 = \det \mathsf{A} \det \mathsf{A}^\intercal = \det \mathsf{A}\mathsf{A}^\intercal = \det \mathsf{I} = 1
   $$
 
+## Minors and Cofactors
 
-## Minors and cofactors
+> *Definition.*{: .def}
+> Let $\mathsf{A} = \Set{A_{ij}}$ be a $n \times n$ matrix,
+> define $\mathsf{A}^{ij}$ to be the $(n-1) \times (n-1)$ matrix obtained by eliminating the $i$-th row and $j$-th column of $\mathsf{A}$, i.e.
+>
+> $$
+  \mathsf{A}^{ij} = \begin{pmatrix}
+  A_{11} & \cdots & A_{1(j-1)} & A_{1(j+1)} & \cdots & A_{1n} \\
+  \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+  A_{(i-1)1} & \cdots & A_{(i-1)(j-1)} & A_{(i-1)(j+1)} & \cdots & A_{(i-1)n} \\
+  A_{(i+1)1} & \cdots & A_{(i+1)(j-1)} & A_{(i+1)(j+1)} & \cdots & A_{(i+1)n} \\
+  \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+  A_{n1} & \cdots & A_{n(j-1)} & A_{n(j+1)} & \cdots & A_{nn} \\
+  \end{pmatrix}
+  $$
 
-### Definition
+> *Definition.*{: .def}
+> The **minor** $M_{ij}$ of the $ij$-th element of square matrix $\mathsf{A}$ is defined to be
+>
+> $$
+  M_{ij} = \det \mathsf{A}^{ij}
+  $$
 
-Let $\mathsf{A}$ be a $n \times n$ matrix, define $\mathsf{A}^{ij}$ be the matrix omitting the $i$-th row and $j$-th column of $\mathsf{A}$.
-
-The _minor_ $M_{ij}$ of the $ij$-th element of $\mathsf{A}$ is defined by
-
-$$
-M_{ij} = \det \mathsf{A}^{ij}
-$$
-
-The _cofactor_ $\Delta_{ij}$ of the $ij$-th element of $\mathsf{A}$ is defined by
-
-$$
-\Delta_{ij} = (-)^{i - j} M_{ij} = (-)^{i - j} \det \mathsf{A}^{ij}
-$$
+> *Definition.*{: .def}
+> The **cofactor** $\Delta_{ij}$ of the $ij$-th element of $\mathsf{A}$ is defined to be
+>
+> $$
+  \Delta_{ij} = (-)^{i - j} M_{ij} = (-)^{i - j} \det \mathsf{A}^{ij}
+  $$
 
 ### Laplace Expansion Formula
 
