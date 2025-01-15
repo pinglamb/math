@@ -342,20 +342,77 @@ The [Levi-Civita symbol](suffix-notation.md#levi-civita-symbol) can be generaliz
 > The **cofactor** $\Delta_{ij}$ of the $ij$-th element of $\mathsf{A}$ is defined to be
 >
 > $$
-  \Delta_{ij} = (-)^{i - j} M_{ij} = (-)^{i - j} \det \mathsf{A}^{ij}
+  \Delta_{ij} = (-1)^{i - j} M_{ij} = (-1)^{i - j} \det \mathsf{A}^{ij}
   $$
 
 ### Laplace Expansion Formula
 
-The _Laplace expansion formula_ is given by
-
-$$
-\det \mathsf{A} = \sum_{k = 1}^{n} A_{Ik} \Delta_{Ik} = \sum_{k = 1}^{n} A_{kI} \Delta_{kI}
-$$
-
-for a chosen $1 \le I \le n$.
-
-It expresses $\det \mathsf{A}$ as a sum of $n$ determinants of one less row and column than the original.
+> *Theorem.*{: .thm}
+> **[Laplace Expansion Formulae]**
+> An alternative expression for determinant is given by
+>
+> $$
+  \det \mathsf{A} = \sum_{k = 1}^{n} A_{Ik} \Delta_{Ik} = \sum_{k = 1}^{n} A_{kJ} \Delta_{kJ}
+  $$
+>
+> for a chosen $1 \le I, J \le n$.
+>
+> It expresses $\det \mathsf{A}$ as a sum of $n$ determinants of one less row and column than the original.
+>
+> *Proof.*{: .prf}
+>
+> We use $\overline{A_{Ij_I}}$ to denote that the term that is missing from an natural sequence, e.g.
+>
+> $$
+  A_{1j_1}...\overline{A_{Ij_I}}...A_{1_jn} = A_{1j_1}...A_{1j_{I-1}}A_{1j_{I+1}}...A_{1_jn}
+  $$
+>
+> Let $\sigma$ be the permutation that reorders $(1,2,...,n)$so that $j_I$ is shifted to the $I-th$ position,
+> with the rest of the numbers in their natural order, i.e.
+>
+> $$
+  \sigma = \begin{cases}
+  \begin{pmatrix} j_I & j_{I}+1 & ... & I \end{pmatrix} & \text{if } j_I < I \\
+  \begin{pmatrix} j_I & j_{I}-1 & ... & I \end{pmatrix} & \text{if } j_I > I \\
+  \end{cases}
+  $$
+>
+> The length of the cycle is $\vert I - j_I + 1 \vert$ and therefore $\epsilon(\sigma) = (-1)^{I - j_I}$.
+>
+> Suppose $j_I < I$. Let $\rho$ be the permutation that maps $(1, ..., \overline{j_I},. ... n)$ to $(j_1,...,\overline{j_I},...,n)$, i.e.
+>
+> $$
+  \rho = \begin{pmatrix}
+  1 & ... & \overline{j_I} & j_{I} + 1 & ... & I & ... & ... & n  \\
+  j_1 & ... & ... & j_{j_I} & ...& j_{I-1} & \overline{j_I} & ... & j_n
+  \end{pmatrix}
+  $$
+>
+> and $\varepsilon(\rho) = \varepsilon_{j_1j_2...\overline{j_I}...j_n}$. We can see that $\rho\sigma$ is just the permutation
+>
+> $$
+  \rho\sigma = \begin{pmatrix}
+  1 & ... & j_I & ... & I & ... & n  \\
+  j_1 & ... & j_{j_I} & ... & j_I & ... & j_n
+  \end{pmatrix}
+  $$
+>
+> and
+>
+> $$
+  \varepsilon_{j_1j_2...j_I...j_n} = (-1)^{I - j_I} \varepsilon_{j_1j_2...\overline{j_I}...j_n}
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  \det \mathsf{A} &= \varepsilon_{j_1j_2...j_I...j_n} A_{1j_1}A_{2j_2}...A_{Ij_I}...A_{nj_n} \\
+  &= \sum_{j_I = 1}^n A_{Ij_I} (-1)^{I - j_I} \left( \sum_{j_1j_2...\overline{j_I}...j_n}\varepsilon_{j_1j_2...\overline{j_I}...j_n} A_{1j_1}A_{2j_2}...\overline{A_{Ij_I}}...A_{nj_n} \right) \\
+  &= \sum_{j_I = 1}^n A_{Ij_I} (-1)^{I - j_I} M_{Ij_I} \\
+  &= \sum_{k = 1}^n A_{Ik} \Delta_{Ik} \\
+  \end{align*}
+  $$
 
 ## References
 
