@@ -58,6 +58,7 @@ It is generally easier to manipulate vectors with that, together with _Einstein'
   $$
 
 ## Levi-Civita Symbol / Alternating Tensor
+{: #levi-civita-symbol}
 
 > *Definition.*{: .def}
 > The **Levi-Civita symbol** $\varepsilon_{ijk}$ or **alternating tensor** is the set of $27$ quantities such that

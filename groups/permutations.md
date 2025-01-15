@@ -144,6 +144,7 @@ For example, $(1\,2)$ has cycle type $2$ and $(1\,2\,3)(4\,5)$ has cycle type $3
 > In order for $\sigma^m = e$, we need $l_i \mid m$ for all $i$ and hence $m = [l_1, l_2, ..., l_k]$.
 
 ## Sign of Permutation
+{: #sign-of-permutation}
 
 > *Lemma.*{: .lem}
 > Every permutation is a product of transpositions.
