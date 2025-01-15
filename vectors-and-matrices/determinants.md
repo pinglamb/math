@@ -4,6 +4,7 @@ title: Determinants &#124; Vectors and Matrices
 ---
 
 # Determinants
+{: .page-title}
 
 ## $3 \times 3$
 
