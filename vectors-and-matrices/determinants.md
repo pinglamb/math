@@ -119,6 +119,19 @@ The [Levi-Civita symbol](suffix-notation.md#levi-civita-symbol) can be generaliz
 
 ## Properties
 
+> *Lemma.*{: .lem}
+> Let $\mathsf{A}$ be a square matrix and $\rho$ be a permutation.
+> For any term in the sum of $\det \mathsf{A}$ over $S_n$,
+>
+> $$
+  A_{\sigma(1) 1} A_{\sigma(2) 2} ... A_{\sigma(n) n}
+  = A_{\sigma(\rho(1)) \rho(1)} A_{\sigma(\rho(2)) \rho(2)} ... A_{\sigma(\rho(n)) \rho(n)}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The product on the L.H.S. is identical to that on the R.H.S. up to order.
+
 > *Property.*{: .prop}
 > For any square matrix $\mathsf{A}$
 >
@@ -126,32 +139,25 @@ The [Levi-Civita symbol](suffix-notation.md#levi-civita-symbol) can be generaliz
   \det \mathsf{A} = \det \mathsf{A}^\intercal
   $$
 >
-> *Proof.*{: .prf}
->
-> Let $\rho$ be a permutation, then
+> Hence, we have
 >
 > $$
-  A_{\sigma(1) 1} A_{\sigma(2) 2} ... A_{\sigma(n) n} = A_{\sigma(\rho(1)) \rho(1)} A_{\sigma(\rho(2)) \rho(2)} ... A_{\sigma(\rho(n)) \rho(n)}
+  \sum_{i_1i_2...i_n} \varepsilon_{i_1 i_2 ... i_n} A_{i_1 1} A_{i_2 2} ... A_{i_n n}
+  = \sum_{j_1j_2...j_n} \varepsilon_{j_1 j_2 ... j_n} A_{1 j_1} A_{2 j_2} ... A_{n j_n}
   $$
 >
-> because the R.H.S. is just a reordering of L.H.S.
+> *Proof.*{: .prf}
 >
-> By choosing $\rho = \sigma^{-1}$,
+> From the above lemma, by choosing $\rho = \sigma^{-1}$ and use the fact that $\epsilon(\sigma) = \epsilon(\sigma^{-1})$,
 >
 > $$
   \det \mathsf{A} = \sum_{\sigma \in S_n} \epsilon(\sigma^{-1}) A_{1 \sigma^{-1}(1)} A_{2 \sigma^{-1}(2)} ... A_{n \sigma^{-1}(n)}
   $$
 >
-> As $\epsilon(\sigma^{-1}) = \epsilon(\sigma)$ and every permutation has an inverse, summing over $\sigma$ is equivalently to summing over $\sigma^{-1}$, i.e.
+> As every permutation has an unique inverse, we can just relabel $\sigma^{-1}$ to $\sigma$, i.e.
 >
 > $$
   \det \mathsf{A} = \sum_{\sigma \in S_n} \epsilon(\sigma) A_{1 \sigma(1)} A_{2 \sigma(2)} ... A_{n \sigma(n)} = \det \mathsf{A}^\intercal
-  $$
->
-> Hence, we can also write
->
-> $$
-  \det \mathsf{A} = \det \mathsf{A}^\intercal = \sum_{j_1j_2...j_n} \varepsilon_{j_1 j_2 ... j_n} A_{1 j_1} A_{2 j_2} ... A_{n j_n}
   $$
 
 > *Property.*{: .prop}
@@ -246,21 +252,68 @@ The [Levi-Civita symbol](suffix-notation.md#levi-civita-symbol) can be generaliz
 > *Property.*{: .prop}
 > Conversely, if $\det \mathsf{A} = 0$, then rows/columns are linearly dependent.
 
-### Matrix product
+## Matrix Product
 
-If $\mathsf{A}$ and $\mathsf{B}$ are square matrix, then
+> *Lemma.*{: .lem}
+> Let $\rho$ be a permutation, then
+>
+> $$
+  \epsilon(\rho) \det \mathsf{A} = \sum_{\sigma \in S_n} \epsilon(\sigma) A_{\sigma(1)\rho(1)}A_{\sigma(2)\rho(2)}...A_{\sigma(n)\rho(n)}
+  $$
+>
+> or equivalently
+>
+> $$
+  \varepsilon_{p_1p_2...p_n} \det A = \sum_{i_1i_2...i_n} \varepsilon_{i_1i_2...i_n} A_{i_1p_1}A_{i_2p_2}...A_{i_np_n}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \epsilon(\rho) \det \mathsf{A}
+  &= \epsilon(\rho) \sum_{\tau \in S_n} \epsilon(\tau) A_{\tau(1)1}A_{\tau(2)2}...A_{\tau(n)n} \\
+  &= \epsilon(\rho) \sum_{\tau \in S_n} \epsilon(\tau) A_{\tau(\rho(1))\rho(1)}A_{\tau(\rho(2))\rho(2)}...A_{\tau(\rho(n))\rho(n)} \\
+  &= \sum_{\tau \in S_n} \epsilon(\tau\rho) A_{\tau(\rho(1))\rho(1)}A_{\tau(\rho(2))\rho(2)}...A_{\tau(\rho(n))\rho(n)} \\
+  &= \sum_{\sigma \in S_n} \epsilon(\sigma) A_{\sigma(1))\rho(1)}A_{\sigma(2))\rho(2)}...A_{\sigma(n))\rho(n)} \\
+  \end{align*}
+  $$
+>
+> since summing over $\sigma = \tau\rho$ is equivalent to summing over $\tau$.
 
-$$
-\det \mathsf{AB} = \det \mathsf{A} \det \mathsf{B}
-$$
+> *Theorem.*{: .thm}
+> If $\mathsf{A}$ and $\mathsf{B}$ are both square matrices, then
+>
+> $$
+  \det \mathsf{AB} = \det \mathsf{A} \det \mathsf{B}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \det \mathsf{AB}
+  &= \varepsilon_{i_1i_2...i_n} (\mathsf{AB})_{i_1 1}(\mathsf{AB})_{i_2 2}...(\mathsf{AB})_{i_n n} \\
+  &= \varepsilon_{i_1i_2...i_n} A_{i_1 k_1}B_{k_1 1}A_{i_2 k_2}B_{k_2 2}...A_{i_n k_n}B_{k_n n} \\
+  &= \varepsilon_{i_1i_2...i_n} A_{i_1 k_1}A_{i_2 k_2}...A_{i_n k_n}B_{k_1 1}B_{k_2 2}...B_{k_n n} \\
+  &= (\det \mathsf{A})(\varepsilon_{k_1k_2...k_n} B_{k_1 1}B_{k_2 2}...B_{k_n n}) \\
+  &= \det \mathsf{A} \det \mathsf{B}
+  \end{align*}
+  $$
 
-From that, if $\mathsf{A}$ is orthogonal,
+> *Corollary.*{: .cor}
+> If $\mathsf{A}$ is orthogonal, then
+>
+> $$
+  \det \mathsf{A} = \pm 1
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  (\det \mathsf{A})^2 = \det \mathsf{A} \det \mathsf{A}^\intercal = \det \mathsf{A}\mathsf{A}^\intercal = \det \mathsf{I} = 1
+  $$
 
-$$
-(\det \mathsf{A})^2 = \det \mathsf{A} \det \mathsf{A}^\intercal = \det \mathsf{I} = 1
-$$
-
-Hence, $\det \mathsf{A} = \pm 1$.
 
 ## Minors and cofactors
 
