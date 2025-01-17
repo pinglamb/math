@@ -275,7 +275,22 @@ To avoid ambiguity, we will use $\Set{\mathbf{f_i}} = \Set{\mathbf{e_j}}$ as the
 > Hence,
 >
 > $$
-  \mathbf{x}' = \cos\theta \mathbf{x} + (1 - \cos\theta)(\mathbf{x} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}} + \sin\theta (\mathbf{\hat{n} \times \mathbf{x}})
+  \mathbf{x}' = \cos\theta \mathbf{x} + (1 - \cos\theta)(\mathbf{x} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}} - \sin\theta (\mathbf{x} \times \mathbf{\hat{n}})
+  $$
+>
+> With the above formula, we can derive the corresponding matrix $\mathsf{R} = \Set{R_{ij}}$ using suffix notation,
+>
+> $$
+  \begin{align*}
+  (\mathbf{x}')_i &= x_i \cos\theta + (1 - \cos\theta)(x_jn_j)n_i - \varepsilon_{ijk} x_jn_k \sin\theta \\
+  R_{ij}x_j &= (\delta_{ij} \cos\theta + n_in_j(1 - \cos\theta) - \varepsilon_{ijk} n_k \sin\theta) x_j \\
+  \end{align*}
+  $$
+>
+> Therefore, we have
+>
+> $$
+  R_{ij} = \delta_{ij} \cos\theta + n_in_j(1 - \cos\theta) - \varepsilon_{ijk} n_k \sin\theta \\
   $$
 
 ### Reflection

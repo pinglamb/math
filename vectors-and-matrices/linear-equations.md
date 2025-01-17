@@ -91,3 +91,7 @@ $$
 
 If $r < n$, then $\det \mathsf{A} = 0$.
 If $r = n$, then $\det \mathsf{A} = (-)^kA_{11}A_{22}^{(2)}...A_{nn}^{(n)}$.
+
+## References
+
+* [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 4](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
