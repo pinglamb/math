@@ -92,6 +92,87 @@ $$
 If $r < n$, then $\det \mathsf{A} = 0$.
 If $r = n$, then $\det \mathsf{A} = (-)^kA_{11}A_{22}^{(2)}...A_{nn}^{(n)}$.
 
+## Rank of Matrix
+
+Consider a linear map $\mathcal{A}: \mathbb{R}^n \to \mathbb{R}^m$, the [rank](linear-maps.md#definition-rank) of $\mathcal{A}$ is defined to be the dimension of the image, i.e.
+
+$$
+r(\mathcal{A}) = \dim \mathcal{A}(\mathbb{R}^n)
+$$
+
+Let $\Set{\mathbf{e}_j}$ be a standard basis of $\mathbb{R}^n$, then $\Set{\mathcal{A}(\mathbf{e}_j)}$ must span the image.
+As the number of linearly independent vectors in $\Set{\mathcal{A}(\mathbf{e}_j)}$ is equal to $r(\mathcal{A})$ and $\mathcal{A}(\mathbf{e}_j)$ are the column vectors of matrix $\mathsf{A}$,
+the number of linearly independent columns of $\mathsf{A}$ is equal to $r(\mathcal{A})$.
+We then have the following definition.
+
+> *Definition.*{: .def}
+> The **column/row rank** of a matrix $\mathsf{A}$ is defined to be the maximum number of linearly independent columns/rows of $\mathsf{A}$.
+
+> *Theorem.*{: .thm}
+> The row rank of a matrix is equal to its column rank, and hence the rank of matrix is well-defined.
+>
+> *Proof.*{: .prf}
+>
+> Let $r$ be the row rank of the matrix $\mathsf{A}$, so $\mathsf{A}$ has a linearly independent set of $r$ row vectors
+>
+> $$
+  \mathbf{v}_k^\intercal = \begin{pmatrix} v_{k1} & v_{k2} & \cdots & v_{kn} \end{pmatrix} \quad \text{for } k = 1, 2, ..., r
+  $$
+>
+> For the $i$-th row of $\mathsf{A}$, i.e.
+>
+> $$
+  \mathbf{r}_i^\intercal = \begin{pmatrix} A_{i1} & A_{i2} & \cdots & A_{in} \end{pmatrix}
+  $$
+>
+> it can be written as a linear combination of $\Set{\mathbf{v}_k^\intercal}$ so we have
+>
+> $$
+  \mathbf{r}_i^\intercal = \sum_{k=1}^{r} u_{ik} \mathbf{v}_k^\intercal
+  $$
+>
+> for some coefficients $u_{ik}$. In terms of matrix coefficients,
+>
+> $$
+  A_{ij} = \sum_{k=1}^{r} u_{ik} v_{kj}
+  $$
+>
+> Alternatively, this expression can be written as
+>
+> $$
+  \begin{pmatrix}
+  A_{1j} \\
+  A_{2j} \\
+  \vdots \\
+  A_{mj} \\
+  \end{pmatrix} =
+  \sum_{k=1}^{r} v_{kj} \begin{pmatrix}
+  u_{1k} \\
+  u_{2k} \\
+  \vdots \\
+  u_{mk} \\
+  \end{pmatrix}
+  $$
+>
+> So any column $\mathbf{c}_j$ of $\mathsf{A}$ can be expressed as a linear combination of the $r$ column vectors $\mathbf{u}_k$ (not necessary linearly independent), i.e.
+>
+> $$
+  \mathbf{c}_j = \sum_{k=1}^{r} v_{kj} \mathbf{u}_k
+  $$
+>
+> and hence the column rank must be less than of equal to row rank.
+> By applying the same argument to $\mathsf{A}^\intercal$, we conclude row rank and column rank are equal to each other.
+
+> *Corollary.*{: .cor}
+> If $\det \mathsf{A} = 0$, the rows/columns are linearly dependent.
+>
+> *Proof.*{: .prf}
+>
+> As the rank of a matrix doesn't change under elementary row operations,
+> we can use Gaussian elimination to calculate the rank.
+> Hence, if $\det \mathsf{A} = 0$, there are some rows/columns of zeros after applying Gaussian elimination and therefore the rows/columns of $\mathsf{A}$ are linearly dependent.
+{: #linear-dependent-proof}
+
 ## References
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 4](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)

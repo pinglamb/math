@@ -118,6 +118,9 @@ The [Levi-Civita symbol](suffix-notation.md#levi-civita-symbol) can be generaliz
   \det \mathsf{A} = \sum_{\sigma \in S_n} \epsilon(\sigma) A_{\sigma(1) 1} A_{\sigma(2) 2} ... A_{\sigma(n) n}
   $$
 
+> *Definition.*{: .def}
+> A $n \times n$ matrix $\mathsf{A}$ is called **singular** if $\det \mathsf{A} = 0$.
+
 ## Properties
 
 > *Lemma.*{: .lem}
@@ -252,6 +255,10 @@ The [Levi-Civita symbol](suffix-notation.md#levi-civita-symbol) can be generaliz
 
 > *Property.*{: .prop}
 > Conversely, if $\det \mathsf{A} = 0$, then rows/columns are linearly dependent.
+>
+> *Proof.*{: .prf}
+>
+> See [rank of matrix](linear-equations.md#linear-dependent-proof).
 
 ## Matrix Product
 

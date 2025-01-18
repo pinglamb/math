@@ -64,6 +64,7 @@ Let $\mathcal{T}: V \to W$ be a linear map.
 > $$
   r(\mathcal{T}) = \dim \mathcal{T}(V)
   $$
+{: #definition-rank}
 
 > *Definition.*{: .def}
 > The **kernel** or **null space** of $\mathcal{T}$ is the subset of $V$ that maps to the zero element in $W$, i.e.
