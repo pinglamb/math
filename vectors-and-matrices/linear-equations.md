@@ -106,7 +106,7 @@ the number of linearly independent columns of $\mathsf{A}$ is equal to $r(\mathc
 We then have the following definition.
 
 > *Definition.*{: .def}
-> The **column/row rank** of a matrix $\mathsf{A}$ is defined to be the maximum number of linearly independent columns/rows of $\mathsf{A}$.
+> The **column/row rank** of a matrix $\mathsf{A}$ is defined to be the maximum number of linearly independent columns/rows of $\mathsf{A}$, denoted by $\text{rank}\mathsf{A}$.
 
 > *Theorem.*{: .thm}
 > The row rank of a matrix is equal to its column rank, and hence the rank of matrix is well-defined.
@@ -172,6 +172,91 @@ We then have the following definition.
 > we can use Gaussian elimination to calculate the rank.
 > Hence, if $\det \mathsf{A} = 0$, there are some rows/columns of zeros after applying Gaussian elimination and therefore the rows/columns of $\mathsf{A}$ are linearly dependent.
 {: #linear-dependent-proof}
+
+## Homogeneous Linear Equations
+
+> *Proposition.*{: .prop}
+> For homogenerous linear equations $\mathsf{A}\mathbf{x} = \mathbf{0}$,
+> if $\det \mathsf{A} \not= 0$, then the unique solution is $\mathbf{x} = \mathsf{A}^{-1}\mathbf{0} = \mathbf{0}$.
+> Contrapositively, if it has a non-trivial solution $\mathbf{x} \not= \mathbf{0}$, then $\det \mathsf{A} = 0$.
+
+### Geometric Analysis ($\mathbb{R}^3$)
+
+Let $\mathsf{r}_i^\intercal$ be the row matrix with components equal to the elements of the $i$-th row of the matrix $\mathsf{A}$, i.e.
+
+$$
+\mathsf{A} = \begin{pmatrix}
+\mathsf{r}_1^\intercal \\
+\mathsf{r}_2^\intercal \\
+\mathsf{r}_3^\intercal \\
+\end{pmatrix}
+$$
+
+The equations $\mathsf{A}\mathbf{x} = \mathbf{0}$ can be expressed as
+
+$$
+\mathbf{r}_i \cdot \mathbf{x} = 0 \quad \text{for } i = 1,2,3
+$$
+
+Therefore, each equation represents a plane in $\mathbb{R}^3$ and the solution is the intersection of the 3 planes.
+There are 3 possibilities and which of these cases occurs depends on $\text{rank}\mathsf{A}$.
+
+> *Proposition.*{: .prop}
+> _[Case 1]_ Three planes intersect only at $O$, with $\det \mathsf{A} \not= 0$, $\text{rank}\mathsf{A} = 3$ and nullity $n(\mathcal{A}) = 0$.
+>
+> *Proof.*{: .prf}
+>
+> The three planes must not be coplanar so to have only one intersection, i.e. $[\mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3] \not= 0$ and $\det \mathsf{A} \not= 0$.
+> $\Set{\mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3}$ are linearly independent vectors that spans $\mathbb{R}^3$, i.e. $\text{rank}\mathsf{A} = 3$.
+>
+> For the planes of the first two equations, i.e. $\mathbf{r_1} \cdot \mathbf{x} = 0$ and $\mathbf{r_2} \cdot \mathbf{x} = 0$, their intersection must lie on the line
+>
+> $$
+  L: \mathbf{x} = \lambda (\mathbf{r_1} \times \mathbf{r_2})
+  $$
+>
+> The final condition $\mathbf{r_3} \cdot \mathbf{x} = 0$ then implies $\lambda = 0$ as $[\mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3] \not= 0$.
+> Hence, we have $\mathbf{x} = \mathbf{0}$ and the solution space has dimension zero, i.e. $n(\mathcal{A}) = 0$.
+
+> *Proposition.*{: .prop}
+> _[Case 2]_ Three planes have a common line through $O$, with $\det \mathsf{A} = 0$, $\text{rank}\mathsf{A} = 2$ and nullity $n(\mathcal{A}) = 1$.
+>
+> *Proof.*{: .prf}
+>
+> We need to have $\det \mathsf{A} = 0$, which means $\Set{\mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3}$ are linearly dependent vectors and $[\mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3] = 0$.
+> Assume wlog that $\mathbf{r}_1$ and $\mathbf{r}_2$ are two linearly independent vectors, i.e. $\text{rank}\mathsf{A} = 2$.
+>
+> Similarily, the intersection of the first two planes are on the line
+>
+> $$
+  L: \mathbf{x} = \lambda (\mathbf{r_1} \times \mathbf{r_2})
+  $$
+>
+> As $[\mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3] = 0$, all the points on the line satisfy $\mathbf{r}_3 \cdot \mathbf{x} = 0$.
+> Hence, the solution space has dimension one, i.e. $n(\mathcal{A}) = 1$.
+
+> *Proposition.*{: .prop}
+> _[Case 3]_ Three planes concide, with $\det \mathsf{A} = 0$, $\text{rank}\mathsf{A} = 1$ and nullity $n(\mathcal{A}) = 2$.
+>
+> *Proof.*{: .prf}
+>
+> For $\text{rank}\mathsf{A} = 1$, $\Set{\mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3}$ are parallel to each other, i.e.
+> $\mathbf{r_1} \cdot \mathbf{x} = 0$, $\mathbf{r_2} \cdot \mathbf{x} = 0$ and $\mathbf{r_3} \cdot \mathbf{x} = 0$ implies each others.
+>
+> Let $\mathbf{a}$ and $\mathbf{b}$ be two linearly independent vectors such that $\mathbf{a} \cdot \mathbf{r_1} = \mathbf{b} \cdot \mathbf{r_1} = 0$, then points on the plane
+>
+> $$
+  \Pi: \mathbf{x} = \lambda \mathbf{a} + \mu \mathbf{b}
+  $$
+>
+> are all solutions.
+> hence, the solution space has dimension two, i.e. $n(\mathcal{A}) = 2$.
+
+In all three cases, we have $r(\mathcal{A}) + n(\mathcal{A}) = \dim \mathbb{R}^3 = 3$.
+
+### Algebraic Analysis
+
+## Inhomogeneous Linear Equations
 
 ## References
 
