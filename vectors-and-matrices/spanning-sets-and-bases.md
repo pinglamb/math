@@ -13,7 +13,7 @@ we need to take an algebraic approach to build the tools for redefining vectors.
 ## Spanning Sets and Bases
 
 > *Definition.*{: .def}
-> A set of $m$ vectors $\Set{v_1, v_2, ..., v_m}$ of vector space $V$ is **linearly independent** if for all scalars $\lambda \in \mathbb{F}$,
+> A set of $m$ vectors $\Set{v_1, v_2, ..., v_m}$ of vector space $V$ is **linearly independent** if for all scalars $\lambda_i \in \mathbb{F}$,
 >
 > $$
   \sum_i \lambda_i v_i = 0_V \quad \implies \quad \lambda_i = 0_{\mathbb{F}}

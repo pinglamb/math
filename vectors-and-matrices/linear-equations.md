@@ -256,6 +256,65 @@ In all three cases, we have $r(\mathcal{A}) + n(\mathcal{A}) = \dim \mathbb{R}^3
 
 ### Algebraic Analysis
 
+Consider a linear map $\mathcal{A}: \mathbb{R}^n \to \mathbb{R}^m$ with assoicated matrix $\mathsf{A}$.
+The kernel of $\mathcal{A}$ is given by
+
+$$
+\ker \mathcal{A} = \Set{\mathbf{x} \in \mathbb{R}^n : \mathsf{A}\mathbf{x} = \mathbf{0}}
+$$
+
+which is a subspace of the domain and has dimension $n(\mathcal{A})$.
+
+> *Proposition.*{: .prop}
+> If $n(\mathcal{A}) = 0$, then $\Set{\mathcal{A}(\mathbf{e}_j)} (j = 1, ..., n)$ are linearly independent and $r(\mathcal{A}) = n$.
+>
+> *Proof.*{: .prf}
+>
+> Consider
+>
+> $$
+  \sum_{j=1}^n \lambda_j \mathcal{A}(\mathbf{e}_j) = \mathcal{A}\left(\sum_{j=1}^n \lambda_j \mathbf{e}_j\right) = \mathbf{0}
+  $$
+>
+> If $n(\mathcal{A}) = 0$, the only solution to it is
+>
+> $$
+  \sum_{j=1}^n \lambda_j \mathbf{e}_j = \mathbf{0} \implies \lambda_j = 0 \quad \text{for } j = 1, ..., n
+  $$
+>
+> since $\Set{\mathbf{e}_j}$ is a basis therefore linearly independent.
+> Hence, $\Set{\mathcal{A}(\mathbf{e}_j)}$ are linearly independent and $r(\mathcal{A}) = n$.
+
+> *Proposition.*{: .prop}
+> If $n(\mathcal{A}) > 0$, then $r(\mathcal{A}) = n - n(\mathcal{A})$.
+>
+> *Proof.*{: .prf}
+>
+> Let $n_\mathcal{A} = n(\mathcal{A})$ and $\Set{\mathbf{u}\_i} (i = 1, ..., n\_\mathcal{A})$ be the basis of the kernel $\ker \mathcal{A}$.
+> Choose $\Set{\mathbf{v}\_j \not \in \ker \mathcal{A}} (j = 1, ..., n - n\_\mathcal{A})$ to extend the basis to form a basis of $\mathbb{R}^n$.
+>
+> Consider
+>
+> $$
+  \sum_{j=1}^{n - n_\mathcal{A}} \lambda_j \mathcal{A}(\mathbf{v}_j) = \mathcal{A}\left(\sum_{j=1}^{n - n_\mathcal{A}} \lambda_j \mathbf{v}_j\right) = \mathbf{0}
+  $$
+>
+> The solution of it can be expressed as a linear combination of $\Set{\mathbf{u}\_i}$, i.e.
+>
+> $$
+  \sum_{j=1}^{n - n_\mathcal{A}} \lambda_j \mathbf{v}_j = \sum_{i=1}^{n_\mathcal{A}} \mu_i \mathbf{u}_i
+  \implies -\sum_{i=1}^{n_\mathcal{A}} \mu_i \mathbf{u}_i + \sum_{j=1}^{n - n_\mathcal{A}} \lambda_j \mathbf{v}_j = \mathbf{0}
+  $$
+>
+> As $\Set{\mathbf{u}\_i} \cup \Set{\mathbf{v}\_j}$ is a basis, $\mu\_i = \lambda\_j = 0$.
+> Hence, $\Set{\mathcal{A}(\mathbf{v}_j)}$ are linearly independent and $r(\mathcal{A}) = n - n\_\mathcal{A}$.
+
+Similarily, we have the Rank-Nullity Theorem implied, i.e.
+
+$$
+r(\mathcal{A}) + n(\mathcal{A}) = \dim \mathbb{R}^n = \text{dimension of domain}
+$$
+
 ## Inhomogeneous Linear Equations
 
 ## References
