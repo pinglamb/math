@@ -317,6 +317,43 @@ $$
 
 ## Inhomogeneous Linear Equations
 
+Consider the linear equations
+
+$$
+\mathsf{A}\mathbf{x} = \mathbf{d}
+$$
+
+where $\mathsf{A}$ is a $n \times n$ matrix, $\mathbf{x}$ is a $n \times 1$ column vector of unknowns and $\mathbf{d}$ is a $n \times 1$ column vector.
+
+> *Proposition.*{: .prop}
+> If $\det \mathsf{A} \not= 0$ then $n(\mathcal{A}) = 0, r(\mathcal{A}) = n$ and $\text{im} \mathcal{A} = \mathbb{R}^n$.
+> As $\mathbf{d} \in \text{im}\mathcal{A}$, there must exist a unique $\mathbf{x} = \mathcal{A}^{-1}\mathbf{d} \in \mathbb{R}^n$ for which $\mathbf{d}$ is the image under $\mathcal{A}$.
+
+> *Theorem.*{: .thm}
+> If $\mathbf{d} \in \text{im}\mathcal{A}$ then the general solution to $\mathsf{A}\mathbf{x} = \mathbf{d}$ can be written as
+>
+> $$
+  \mathbf{x} = \mathbf{x}_h + \mathbf{x}_p
+  $$
+>
+> where $\mathbf{x}\_h$ is the general solution of $\mathsf{A}\mathbf{x} = \mathbf{0}$
+> and $\mathbf{x}\_p$ is a particular fixed solution of $\mathsf{A}\mathbf{x} = \mathbf{d}$.
+>
+> *Proof.*{: .prf}
+>
+> $\mathbf{x} = \mathbf{x}\_h + \mathbf{x}\_p$ is a solution since
+>
+> $$
+  \mathsf{A}(\mathbf{x}_h + \mathbf{x}_p) = \mathsf{A}(\mathbf{x}_h) + \mathsf{A}(\mathbf{x}_p) = \mathbf{0} + \mathbf{d} = \mathbf{d}
+  $$
+>
+> Furthermore, if $n(\mathcal{A}) = 0$, then $\mathbf{x}\_h = \mathbf{0}$ so the unique solution is $\mathbf{x} = \mathcal{A}^{-1}\mathbf{d}$ as stated above.
+> If $n(\mathcal{A}) > 0$ and $\Set{\mathbf{u}\_j}$ is the basis of $\ker \mathcal{A}$, then
+>
+> $$
+  \mathbf{x} = \mathbf{x}_p + \sum_{j=1}^{n(\mathcal{A})} \mu_j \mathbf{u}_j
+  $$
+
 ## References
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 4](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
