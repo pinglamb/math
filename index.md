@@ -38,6 +38,7 @@ title: Home
 * [Determinants](vectors-and-matrices/determinants.md)
 * [Linear Equations](vectors-and-matrices/linear-equations.md)
 * [Eigenvalues and Eigenvectors](vectors-and-matrices/eigenvalues-eigenvectors.md)
+* [Change of Basis](vectors-and-matrices/change-of-basis.md)
 * [Transformation Groups](vectors-and-matrices/transformation-groups.md)
 * [Möbius Transformations](vectors-and-matrices/mobius-transformations.md)
 

@@ -354,6 +354,17 @@ where $\mathsf{A}$ is a $n \times n$ matrix, $\mathbf{x}$ is a $n \times 1$ colu
   \mathbf{x} = \mathbf{x}_p + \sum_{j=1}^{n(\mathcal{A})} \mu_j \mathbf{u}_j
   $$
 
+> *Example.*{: .eg}
+> Analyze for each real value of $t$ the solutions of the lienar equations
+>
+> $$
+  \begin{align*}
+  x + y + z &= t \\
+  tx + 2z &= 3 \\
+  3x + ty + 5z &= 7
+  \end{align*}
+  $$
+
 ## References
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 4](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
