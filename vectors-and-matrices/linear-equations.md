@@ -354,7 +354,7 @@ where $\mathsf{A}$ is a $n \times n$ matrix, $\mathbf{x}$ is a $n \times 1$ colu
   \mathbf{x} = \mathbf{x}_p + \sum_{j=1}^{n(\mathcal{A})} \mu_j \mathbf{u}_j
   $$
 
-> *Example.*{: .eg}
+> *Problem.*{: .pro}
 > Analyze for each real value of $t$ the solutions of the lienar equations
 >
 > $$
@@ -364,6 +364,42 @@ where $\mathsf{A}$ is a $n \times n$ matrix, $\mathbf{x}$ is a $n \times 1$ colu
   3x + ty + 5z &= 7
   \end{align*}
   $$
+>
+> *Solution.*{: .sol}
+>
+> $$
+  \begin{vmatrix}
+  1 & 1 & 1 \\
+  t & 0 & 2 \\
+  3 & t & 5 \\
+  \end{vmatrix} = (t - 1)(t - 6)
+  $$
+>
+> If $t \not= 1, 6$, $\det \mathsf{A} \not= 0$, there exist a unique solution $\mathsf{A}^{-1}\mathbf{d}$.
+>
+> If $t = 1$,
+>
+> $$
+  \text{im} \mathcal{A} = \text{span} \left\{ \mathbf{e}_1 = \begin{pmatrix} 1 \\ 1 \\ 3 \end{pmatrix}, \mathbf{e}_2 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \right\}, r(\mathcal{A}) = 2, n(\mathcal{A}) = 1
+  $$
+>
+> As $\begin{vmatrix} \mathbf{e}\_1 & \mathbf{e}\_2 & \mathbf{d} \end{vmatrix} = 0$, i.e. $\mathbf{d} \in \text{im} \mathcal{A}$, there exist a solution.
+>
+> We have
+>
+> $$
+  \ker \mathcal{A} = \lambda \begin{pmatrix} -2 \\ 1 \\ 1 \end{pmatrix} \implies \mathbf{x} = \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} + \lambda \begin{pmatrix} -2 \\ 1 \\ 1 \end{pmatrix}
+  $$
+>
+> is the general solution.
+>
+> It $t = 6$,
+>
+> $$
+  \text{im} \mathcal{A} = \text{span} \left\{ \mathbf{e}_1 = \begin{pmatrix} 1 \\ 6 \\ 3 \end{pmatrix}, \mathbf{e}_2 = \begin{pmatrix} 1 \\ 0 \\ 6 \end{pmatrix} \right\}, r(\mathcal{A}) = 2, n(\mathcal{A}) = 1
+  $$
+>
+> As $\begin{vmatrix} \mathbf{e}\_1 & \mathbf{e}\_2 & \mathbf{d} \end{vmatrix} = 165 \not= 0$, i.e. $\mathbf{d} \not \in \text{im} \mathcal{A}$, there is no solution.
 
 ## References
 
