@@ -81,6 +81,8 @@ title: Eigenvalues and Eigenvectors &#124; Vectors and Matrices
   \det(\mathsf{A} - \lambda \mathsf{I}) = \sum_{i_1i_2...i_n} \varepsilon_{i_1i_2...i_n} (A_{i_1 1} - \lambda \delta_{i_1 1})\ldots(A_{i_n n} - \lambda \delta_{i_n n})
   $$
 
+This is useful for checking if the eigenvalues we found are ccorrect.
+
 ## Eigenspaces
 
 ## Reference
