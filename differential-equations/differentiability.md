@@ -4,6 +4,7 @@ title: Differentiability &#124; Differential Equations
 ---
 
 # Differentiability
+{: .page-title}
 
 Elementary calculus books normally state that a function $f$ is differentiable at $a$ if $f'(a)$ exists, which means the limit
 
@@ -41,14 +42,15 @@ $$
 
 We think of this difference as a function of $h$ and denote it by $E(h)$, which represents the error when we approximate $f(a + h)$ by the linear function $f(a) + mh$.
 
-[Formal Definition] Suppose $f$ is a real-valued function defined on some open interval in $\mathbb{R}$ containing the point $a$.
-It is _differentiable_ at $a$ if these is a number $m$ such that
-
-$$
-\begin{equation} \tag{1} \label{eq1}
-f(a + h) = f(a) + mh + E(h), \quad \text{where } \quad \lim_{h \to 0} {E(h) \over h} = 0
-\end{equation}
-$$
+> Definition
+> Suppose $f$ is a real-valued function defined on some open interval in $\mathbb{R}$ containing the point $a$.
+> It is **differentiable** at $a$ if these is a number $m$ such that
+>
+> $$
+  \begin{equation} \tag{1} \label{eq1}
+  f(a + h) = f(a) + mh + E(h), \quad \text{where } \quad \lim_{h \to 0} {E(h) \over h} = 0
+  \end{equation}
+  $$
 
 In other words, $f$ is differentiable at $a$ if we can represent $f(a + h)$ as the sum of the linear function $f(a) + mh$ and an error term $E(h)$ that tends to zero more rapidly than $h$ as $h \to 0$.
 In this case, we have
