@@ -4,6 +4,7 @@ title: Difference Equations &#124; Differential Equations
 ---
 
 # Difference Equations
+{: .page-title}
 
 A difference equation is equation associates values of $x_n$ with different values of $n$.
 The order of adifference equation is the largest difference between any two of the indices of $x$.
