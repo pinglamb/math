@@ -17,6 +17,29 @@ title: Linear Equations &#124; Vectors and Matrices
 >
 > If $\mathbf{d} = \mathbf{0}$, it is called a system of **homogenerous** equations, otherwise it is called a system of **inhomogeneous** equations.
 
+We can look at the system by rows or by columns. For $m = n = 3$, i.e.
+
+$$
+\begin{align*}
+A_{11}x + A_{12}y + A_{13}z &= d_1 \\
+A_{21}x + A_{22}y + A_{23}z &= d_2 \\
+A_{31}x + A_{32}y + A_{33}z &= d_3 \\
+\end{align*}
+$$
+
+By rows, each equation represents a _plane_ in three dimension and the solution is the intersection of them.
+
+By columns, we have
+
+$$
+x \begin{pmatrix} A_{11} \\ A_{21} \\ A_{31} \end{pmatrix}
++ y \begin{pmatrix} A_{12} \\ A_{22} \\ A_{32} \end{pmatrix}
++ z \begin{pmatrix} A_{13} \\ A_{23} \\ A_{33} \end{pmatrix}
+= \begin{pmatrix} d_1 \\ d_2 \\ d_3 \end{pmatrix} = \mathbf{d}
+$$
+
+which is a linear combination of three vectors and the solution is the set of scalars that makes the linear combination equals to $\mathbf{d}$.
+
 > *Proposition.*{: .prop}
 > If $\mathsf{A}$ is a square matrix ($m = n$) and $\det \mathsf{A} \not= 0$, then the system of equations has a _unique_ solution, namely
 >
