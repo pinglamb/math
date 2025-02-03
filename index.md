@@ -37,6 +37,7 @@ title: Home
 * [Matrices](vectors-and-matrices/matrices.md)
 * [Determinants](vectors-and-matrices/determinants.md)
 * [Linear Equations](vectors-and-matrices/linear-equations.md)
+* [Gaussian Elimination](vectors-and-matrices/gaussian-elimination.md)
 * [Eigenvalues and Eigenvectors](vectors-and-matrices/eigenvalues-eigenvectors.md)
 * [Complex Matrices](vectors-and-matrices/complex-matrices.md)
 * [Similarity Transformations](vectors-and-matrices/similarity-transformations.md)
