@@ -14,10 +14,11 @@ title: Linear Equations &#124; Vectors and Matrices
   $$
 >
 > where $\mathsf{A}$ is a $m \times n$ matrix, $\mathbf{x}$ is a $n \times 1$ column vector of unknowns and $\mathbf{d}$ is a $m \times 1$ column vector.
->
-> If $\mathbf{d} = \mathbf{0}$, it is called a system of **homogenerous** equations, otherwise it is called a system of **inhomogeneous** equations.
 
-We can look at the system by rows or by columns. For $m = n = 3$, i.e.
+## Geometry of Linear Equations
+
+We can look at the system by rows or by columns which leads to different interpretation.
+Using $m = n = 3$ as example, the system of linear equations is
 
 $$
 \begin{align*}
@@ -27,9 +28,18 @@ A_{31}x + A_{32}y + A_{33}z &= d_3 \\
 \end{align*}
 $$
 
-By rows, each equation represents a _plane_ in three dimension and the solution is the intersection of them.
+By concentraing on rows, each equation describes a _plane_ in three dimension and the solution is the intersection of them.
+The non-singular case is that the three planes intersect at a single point, which represents the unique solution of the system.
 
-By columns, we have
+For the singular case, there are few possibilities for the planes to "go wrong":
+
+![Singular cases for planes](../images/linear-equations-planes-singular.png)
+
+For (a), (b) and (d), they have no solutions and the equations are said to be inconsistent.
+For (c), there is a line of solutions.
+The extreme case is that the three planes are the same and there is a whole plane of solutions.
+
+On the other hand, by concentrating on columns, we have the vector equation
 
 $$
 x \begin{pmatrix} A_{11} \\ A_{21} \\ A_{31} \end{pmatrix}
@@ -39,6 +49,18 @@ x \begin{pmatrix} A_{11} \\ A_{21} \\ A_{31} \end{pmatrix}
 $$
 
 which is a linear combination of three vectors and the solution is the set of scalars that makes the linear combination equals to $\mathbf{d}$.
+As discussed before, three linear independent vectors span the three dimensional space and therefore any vector $\mathbf{d}$ can be expressed uniquely by some coefficients $(x, y, z)$, which is also the unique solution to the system.
+
+For the system to be singular, the three column vectors have to lie in a plane, i.e. linearly dependent.
+
+![Singular cases for vectors](../images/linear-equations-vectors-singular.png)
+
+If $\mathbf{d}$ is also on the plane, there are infinitely many solutions, otherwise, the system has no solution.
+
+From both views, we can see that if the planes have no point in common, of infinitely many points, then the column vectors lie in the same plane.
+
+> *Definition.*{: .def}
+> If $\mathbf{d} = \mathbf{0}$, it is called a system of **homogenerous** equations, otherwise it is called a system of **inhomogeneous** equations.
 
 > *Proposition.*{: .prop}
 > If $\mathsf{A}$ is a square matrix ($m = n$) and $\det \mathsf{A} \not= 0$, then the system of equations has a _unique_ solution, namely
