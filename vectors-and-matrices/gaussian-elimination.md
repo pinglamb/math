@@ -237,3 +237,7 @@ $$
 
 If $r < n$, then $\det \mathsf{A} = 0$.
 If $r = n$, then $\det \mathsf{A} = (-)^kA_{11}A_{22}^{(2)}...A_{nn}^{(n)}$.
+
+## References
+
+* Gilbert Strang _Linear Algebra and Its Applications_, 2006 - Chapter 1, 2
