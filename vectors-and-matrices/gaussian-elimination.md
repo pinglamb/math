@@ -49,7 +49,147 @@ It is base on the following trivial fact about linear equations:
 >
 > $A\_{11}, A_{22}^{(2)}, ..., A_{rr}^{(r)}$ are called **pivots**.
 
-The same method can be used for find the determinant of $\mathsf{A}$, with the elementary operations being
+> *Proposition.*{: .prop}
+> A $n \times n$ matrix is invertible iff it has $n$ pivots.
+
+## Triangular Factors and Permutations
+
+The elementary row operations can be represented by matrices.
+
+> *Definition.*{: .def}
+> A **elementary matrix** $\mathsf{E}\_{ij}$ subtracts $\ell$ times row $j$ from row $i$, i.e.
+>
+> $$
+  \mathsf{E}_{ij} = \begin{pmatrix}
+  1 & 0 & \cdots & 0 & \cdots & 0 & 0 \\
+  0 & 1 & \cdots & 0 & \cdots & 0 & 0 \\
+  \vdots & \vdots & \ddots & E_{ij} = -\ell & \ddots & \vdots & \vdots \\
+  0 & 0 & \cdots & 0 & \cdots & 1 & 0 \\
+  0 & 0 & \cdots & 0 & \cdots & 0 & 1 \\
+  \end{pmatrix}
+  = \Set{\delta_{ij}} + \Set{E_{ij} = -\ell}
+  $$
+>
+> The inverse $\mathsf{E}_{ij}^{-1}$ is the same as $\mathsf{E}\_{ij}$ except changing the sign of the entry $E\_{ij}$.
+
+> *Definition.*{: .def}
+> A matrix $\mathsf{U}$ is **upper triangular** if all entries below the diagonal are zero.
+> A matrix $\mathsf{L}$ is **lower triangular** if all entries above the diagonal are zero.
+
+After repeatedly applying the elementary row operations, the result is an equivalent system $\mathsf{U}\mathbf{x} = \mathbf{d}'$, where $\mathsf{U}$ is upper triangular.
+
+Consider a matrix $\mathsf{L}$ which undo the steps of elimination, it has to be the product of the inverses of the elementary matrices in reverse order.
+The inverses are in just the right that we can just fill in $\mathsf{L}$ with the multipliers $\ell\_{ij}$.
+For example, suppose we did the following row operations (the order is from right to left):
+
+$$
+\begin{pmatrix}
+1 \\
+& 1 \\
+& 1 & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 \\
+& 1 \\
+1 & & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 \\
+-2 & 1 \\
+& & 1
+\end{pmatrix} =
+\begin{pmatrix}
+1 \\
+-2 & 1 \\
+-1 & 1 & 1
+\end{pmatrix}
+$$
+
+Then,
+
+$$
+\mathsf{L} =
+\begin{pmatrix}
+1 \\
+2 & 1 \\
+& & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 \\
+& 1 \\
+-1 & & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 \\
+& 1 \\
+& -1 & 1
+\end{pmatrix} =
+\begin{pmatrix}
+1 \\
+2 & 1 \\
+-1 & -1 & 1
+\end{pmatrix}
+$$
+
+As $\mathsf{L}$ takes $\mathsf{U}$ back to $\mathsf{A}$, we have $\mathsf{A} = \mathsf{L}\mathsf{U}$.
+
+> *Definition.*{: .def}
+> A **permutation matrix** $\mathsf{P}\_{ij}$ exchanges row $i$ and row $j$, there are it has $1$s in the diagonal, except for row $i$ and row $j$, where we have $P\_{ij}= P\_{ji} = 1$.
+> For example, to exchange row $1$ and row $2$,
+>
+> $$
+  \mathsf{P}_{21} = \begin{pmatrix}
+  & 1 \\
+  1 & \\
+  & & 1 \\
+  & & & \vdots \\
+  & & & & 1
+  \end{pmatrix}
+  $$
+
+Also the permutations can be done first such that $\mathsf{PA}$ does not need row exchanges and we can go straight to the factorization part.
+
+> *Proposition.*{: .prop}
+> **[Triangular Factorization]**
+> A non-singular matrix $\mathsf{A}$, reordered by a permutation matrix $\mathsf{P}$ to avoid zeros in the pivot positions, can be factorized to two triangular matrices $\mathsf{L}$ and $\mathsf{U}$,
+> in which $\mathsf{L}$ is lower triangular, with $1$s on the diagonal and multipliers $\ell\_{ij}$ from elimination below the diagonal;
+> and $\mathsf{U}$ is upper triangular which appears after forward elimination and the pivots being the diagonal entries.
+>
+> Hence, we have
+>
+> $$
+  \mathsf{PA} = \mathsf{LU}
+  $$
+>
+> We can further extract the pivots from $\mathsf{U}$ by dividing each row by the pivot, i.e.
+>
+> $$
+  \mathsf{U} = \begin{pmatrix}
+  d_1 & \\
+  & d_2 \\
+  & & \ddots \\
+  & & & d_n
+  \end{pmatrix}
+  \begin{pmatrix}
+  1 & u_{12}/d_1 & u_{13}/d_1 & \cdots \\
+  & 1 & u_{23}/d_2 & \cdots \\
+  & & \ddots & \vdots \\
+  & & & 1
+  \end{pmatrix}
+  $$
+>
+> and we have $\mathsf{PA} = \mathsf{LDU}$.
+
+> *Proposition.*{: .prop}
+> The triangular factorization is unique, i.e.
+>
+> $$
+  \mathsf{A} = \mathsf{L_1 D_1 U_1} = \mathsf{L_2 D_2 U_2} \implies \mathsf{L_1} = \mathsf{L_2}, \mathsf{D_1} = \mathsf{D_2}, \mathsf{U_1} = \mathsf{U_2}
+  $$
+
+## Calculation of Determinant
+
+Elimination can also be used for find the determinant of $\mathsf{A}$, with the elementary operations being
 
 + interchange of two rows,
 
