@@ -187,6 +187,30 @@ Also the permutations can be done first such that $\mathsf{PA}$ does not need ro
   \mathsf{A} = \mathsf{L_1 D_1 U_1} = \mathsf{L_2 D_2 U_2} \implies \mathsf{L_1} = \mathsf{L_2}, \mathsf{D_1} = \mathsf{D_2}, \mathsf{U_1} = \mathsf{U_2}
   $$
 
+## Calculation of Inverse
+
+> *Proposition.*{: .prop}
+> **[Gauss-Jordan Method]**
+> Using $3 \times 3$ as example, finding the inverse of a matrix $\mathsf{A}$ is the same as solving three systems of equations at once, i.e.
+>
+> $$
+  \mathsf{AA^{-1}} = \mathsf{I}
+  \quad \equiv \quad
+  \mathsf{A} \begin{pmatrix} \mathbf{x_1} & \mathbf{x_2} & \mathbf{x_3} \end{pmatrix} = \begin{pmatrix} \mathbf{e}_1 & \mathbf{e}_2 & \mathbf{e}_3 \end{pmatrix}
+  $$
+>
+> We can carry out the elimination on all systems simultaneously and subtracting a row from rows above to reach the identity matrix, i.e.
+>
+> $$
+  \begin{pmatrix} \mathsf{A} & \mathbf{e}_1 & \mathbf{e}_2 & \mathbf{e}_3 \end{pmatrix}
+  \to
+  \begin{pmatrix} \mathsf{U} & \mathsf{L}^{-1} \end{pmatrix}
+  \to
+  \begin{pmatrix} \mathsf{U}^{-1}\mathsf{U} & \mathsf{U}^{-1}\mathsf{L}^{-1} \end{pmatrix}
+  =
+  \begin{pmatrix} \mathsf{I} & \mathsf{A}^{-1} \end{pmatrix}
+  $$
+
 ## Calculation of Determinant
 
 Elimination can also be used for find the determinant of $\mathsf{A}$, with the elementary operations being
