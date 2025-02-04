@@ -6,14 +6,17 @@ title: Gaussian Elimination &#124; Vectors and Matrices
 # Gaussian Elimination
 {: .page-title}
 
+Gaussian elimination is a decent algorithm for computing different quantities of matrices.
+It is base on the following trivial fact about linear equations:
+
 > *Proposition.*{: .prop}
 > The solutions to the system of equations remain the same after the following elementary row operations:
->
-> + interchange of two rows,
 >
 > + addition of a constant multiple of one row to another,
 >
 > + multiplication of a row by a non-zero constant.
+>
+> + interchange of two rows,
 >
 > We can do the same to the columns with an appropriate relabelling of the unknowns.
 
@@ -43,6 +46,8 @@ title: Gaussian Elimination &#124; Vectors and Matrices
 >
 > + If $r < n$ (and $d_{i}^{(r)} = 0$ for $r + 1 \le i \le m$),
 >   then there are infinitely many solutions and the system is **underdetermined**.
+>
+> $A\_{11}, A_{22}^{(2)}, ..., A_{rr}^{(r)}$ are called **pivots**.
 
 The same method can be used for find the determinant of $\mathsf{A}$, with the elementary operations being
 

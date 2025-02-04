@@ -93,6 +93,42 @@ We can see that with the above definitions, after some checks, matrix forms a ve
   W_{ik} = T_{ij}S_{jk}
   $$
 
+There are two ways to illustrate the multiplication between a matrix $\mathsf{A}$ and a vector $\mathbf{x}$.
+Consider
+
+$$
+\mathsf{A} = \begin{pmatrix}
+A_{11} & A_{12} & A_{13} \\
+A_{21} & A_{22} & A_{23} \\
+A_{31} & A_{32} & A_{33} \\
+\end{pmatrix}
+\quad \text{and} \quad
+\mathbf{x} = \begin{pmatrix}
+x \\ y \\ z
+\end{pmatrix}
+$$
+
+We can treat each row of the matrix as a vector and compute the _inner_ product with $\mathsf{x}$, i.e.
+
+$$
+\mathsf{A}\mathbf{x} = \begin{pmatrix}
+A_{11}x + A_{12}y + A_{13}z \\
+A_{21}x + A_{22}y + A_{23}z \\
+A_{31}x + A_{32}y + A_{33}z \\
+\end{pmatrix}
+$$
+
+More importantly, we can also do multiplication a column at a time and the product is a linear combination of the three columns of $\mathsf{A}$, i.e.
+
+$$
+\mathsf{A}\mathbf{x} =
+x \begin{pmatrix} A_{11} \\ A_{21} \\ A_{31} \end{pmatrix}
++ y \begin{pmatrix} A_{12} \\ A_{22} \\ A_{32} \end{pmatrix}
++ z \begin{pmatrix} A_{13} \\ A_{23} \\ A_{33} \end{pmatrix}
+$$
+
+in which the coefficients are the components of $\mathbf{x}$.
+
 > *Property.*{: .prop}
 > Matrix multiplication is _associative_, i.e.
 >
