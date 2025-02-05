@@ -59,7 +59,7 @@ If $\mathbf{d}$ is also on the plane, there are infinitely many solutions, other
 
 From both views, we can see that if the planes have no point in common, of infinitely many points, then the column vectors lie in the same plane.
 
-## Column Space and Nullspace
+## Fundamental Subspaces
 
 These concepts are helpful for studying existence and uniqueness of solutions to a system of linear equations.
 
@@ -99,7 +99,23 @@ These concepts are helpful for studying existence and uniqueness of solutions to
 >
 > so a linear combination of them is also in the nullspace.
 
-## Rank of Matrix
+> *Definition.*{: .def}
+> The **row space** of $\mathsf{A}$ is the column space of $\mathsf{A}^\intercal$, denoted by $C(\mathsf{A}^\intercal)$.
+
+> *Definition.*{: .def}
+> The **left nullspace** of $\mathsf{A}$ is the nullspace of $\mathsf{A}^\intercal$, denoted by $N(\mathsf{A}^\intercal)$.
+
+> *Theorem.*{: .thm}
+> The dimension of the column space is equal to the dimension of the row space, i.e. row rank is equal to column rank and rank of matrix is well-defined.
+>
+> *Proof.*{: .prf}
+>
+> Consider the echelon form $\mathsf{U}$ of a matrix $\mathsf{A}$.
+> The row space is clearly unchanged after the elementary operations.
+> The column space is changed but position of independent columns are unchanged, hence they have the same dimension.
+> As the rows/columns having non-zero pivots are independent, the column rank is equal to row rank.
+
+## Linear Maps View
 
 Consider a linear map $\mathcal{A}: \mathbb{R}^n \to \mathbb{R}^m$, the [rank](linear-maps.md#definition-rank) of $\mathcal{A}$ is defined to be the dimension of the image, i.e.
 
