@@ -61,6 +61,43 @@ From both views, we can see that if the planes have no point in common, of infin
 
 ## Column Space and Nullspace
 
+These concepts are helpful for studying existence and uniqueness of solutions to a system of linear equations.
+
+> *Definition.*{: .def}
+> The **column space** $C(\mathsf{A})$ of a $m \times n$ matrix $\mathsf{A}$ contains all linear combinations of the columns of $\mathsf{A}$.
+
+> *Proposition.*{: .prop}
+> Column space a subspace of $\mathbb{R}^m$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $\mathbf{d}$ and $\mathbf{d}'$ lie in the column space, i.e. $\mathsf{A}\mathbf{x} = \mathbf{d}$ and $\mathsf{A}\mathbf{x}' = \mathbf{d}'$ for some $\mathbf{x}$ and $\mathbf{x}'$.
+> Then
+>
+> $$
+  \lambda \mathbf{d} + \mu \mathbf{d}' = \mathsf{A}(\lambda \mathbf{x} + \mu \mathbf{x}')
+  $$
+>
+> so the combination of them also lies in the column space.
+
+> *Proposition.*{: .prop}
+> The system $\mathsf{A}\mathbf{x} = \mathbf{d}$ is solvable iff the vector $\mathbf{d}$ can be expressed as a combination of the columns of $\mathsf{A}$,
+> i.e. $\mathbf{d}$ is in the column space.
+
+> *Definition.*{: .def}
+> The **nullspace** $N(\mathsf{A})$ of a matrix $\mathsf{A}$ consists of all vectors $\mathbf{x}$ such that $\mathsf{A}\mathbf{x} = \mathbf{0}$.
+
+> *Proposition.*{: .prop}
+> Nullspace a subspace of $\mathbb{R}^n$.
+>
+> *Proof.*{: .prf}
+> Suppose $\mathsf{A}\mathbf{x} = \mathsf{A}\mathbf{x}' = \mathbf{0}$, then
+>
+> $$
+  \mathsf{A}(\lambda\mathbf{x} + \mu\mathbf{x}') = \lambda\mathbf{0} + \mu\mathbf{0} = \mathbf{0}
+  $$
+>
+> so a linear combination of them is also in the nullspace.
 
 ## Rank of Matrix
 

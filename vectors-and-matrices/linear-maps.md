@@ -67,7 +67,7 @@ Let $\mathcal{T}: V \to W$ be a linear map.
 {: #definition-rank}
 
 > *Definition.*{: .def}
-> The **kernel** or **null space** of $\mathcal{T}$ is the subset of $V$ that maps to the zero element in $W$, i.e.
+> The **kernel** or **nullspace** of $\mathcal{T}$ is the subset of $V$ that maps to the zero element in $W$, i.e.
 >
 > $$
   \ker \mathcal{T} = \Set{v \in V \mid \mathcal{T}(v) = 0_W}
