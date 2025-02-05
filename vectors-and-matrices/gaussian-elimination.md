@@ -54,7 +54,8 @@ It is base on the following trivial fact about linear equations:
 
 ## Triangular Factors and Permutations
 
-The elementary row operations can be represented by matrices.
+Assume we are working with invertible square matrices.
+The elementary row operations can be represented by the following matrices.
 
 > *Definition.*{: .def}
 > A **elementary matrix** $\mathsf{E}\_{ij}$ subtracts $\ell$ times row $j$ from row $i$, i.e.
@@ -147,7 +148,9 @@ As $\mathsf{L}$ takes $\mathsf{U}$ back to $\mathsf{A}$, we have $\mathsf{A} = \
   \end{pmatrix}
   $$
 
-Also the permutations can be done first such that $\mathsf{PA}$ does not need row exchanges and we can go straight to the factorization part.
+Also the permutations can be done first such that $\mathsf{PA}$ does not need row exchanges.
+
+We can therefore have an alternative description about the Gaussian elimination:
 
 > *Proposition.*{: .prop}
 > **[Triangular Factorization]**
@@ -186,6 +189,41 @@ Also the permutations can be done first such that $\mathsf{PA}$ does not need ro
 > $$
   \mathsf{A} = \mathsf{L_1 D_1 U_1} = \mathsf{L_2 D_2 U_2} \implies \mathsf{L_1} = \mathsf{L_2}, \mathsf{D_1} = \mathsf{D_2}, \mathsf{U_1} = \mathsf{U_2}
   $$
+
+## Echolon Form and Row Reduced Form
+
+The elimination can also be carried out on $m \times n$ rectangular matrix.
+When there are no pivots for a column, we just move on to the next and we will end up with a "staircase pattern", or **echelon form**.
+
+![Echelon Form](../images/gaussian-elimination-echelon-form.png)
+
+As the elimination steps have not changed, just like what we do to square matrix, we have the same factorization method:
+
+> *Proposition.*{: .prop}
+> For any $m \times n$ matrix $\mathsf{A}$, there is a $m \times m$ permutation $\mathsf{P}$, a $m \times m$ lower triangular $\mathsf{L}$ with unit diagonal,
+> and an $m \times n$ echelon matrix $\mathsf{U}$, such that
+>
+> $$
+  \mathsf{PA} = \mathsf{LU}
+  $$
+
+The **reduced row echelon form** $\mathsf{R}$ is then obtained by dividing the rows by its corresponding pivots, so that all pivots are $1$.
+Then subtract a row from a higher row so that the pivot is the only non-zero entry of its column.
+As these are still elementary row operations, $\mathsf{R}\mathbf{x} = \mathbf{0}$ still has the same solution.
+
+> *Definition.*{: .def}
+> With the reduced row echelon form,
+> the **pivot variables** are the unknowns correspond to columns with pivots and the **free variables** are the unknowns correspond to columns without pivots.
+
+> *Proposition.*{: .prop}
+> The dimension of the nullspace of a $m \times n$ $\mathsf{A}$ is the number of free variables.
+> If there are $r$ pivots, then there are $r$ pivot variables and $n - r$ free variables, and $r$ is the **rank** of the matrix.
+
+The free variables can then be set to $1$ in turn to find the special vectors and the nullspace of $\mathsf{A}$ contains all linear combination of them.
+It is the solution to the homogenerous equations $\mathsf{A}\mathbf{x} = \mathbf{0}$.
+
+For inhomogeneous equations, we set all free variables to $0$ so to find a particular solution $\mathsf{x}\_p$ and the general solution is $\mathsf{x}\_p + \mathsf{x}\_h$,
+where $\mathsf{x}\_h$ is the solution to the homogenerous equations.
 
 ## Calculation of Inverse
 
