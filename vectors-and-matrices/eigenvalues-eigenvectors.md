@@ -40,6 +40,9 @@ title: Eigenvalues and Eigenvectors &#124; Vectors and Matrices
   \det(\mathsf{A} - \lambda \mathsf{I}) = 0
   $$
 
+It means that the eigenvalues are chosen such that the matrix $\mathsf{A} - \lambda\mathsf{I}$ is singular,
+then the corresponding eigenvector is in the nullspace and can be found by elimination.
+
 > *Definition.*{: .def}
 > The **characteristic polynomial** of the matrix $\mathsf{A}$ is the polynomial
 >
@@ -71,17 +74,39 @@ title: Eigenvalues and Eigenvectors &#124; Vectors and Matrices
 >
 > + $c_0 = \det(\mathsf{A}) = \lambda_1 \lambda_2 ... \lambda_n$,
 >
-> + $c_{n-1} = (-1)^{n-1} Tr(\mathsf{A}) = (-1)^{n-1}(\lambda_1 + \lambda_2 + ... + \lambda_n)$,
->
 > + $c_n = (-1)^n$.
+>
+> + $c_{n-1} = (-1)^{n-1} Tr(\mathsf{A}) = (-1)^{n-1}(\lambda_1 + \lambda_2 + ... + \lambda_n)$,
 >
 > *Proof.*{: .prf}
 >
 > $$
-  \det(\mathsf{A} - \lambda \mathsf{I}) = \sum_{i_1i_2...i_n} \varepsilon_{i_1i_2...i_n} (A_{i_1 1} - \lambda \delta_{i_1 1})\ldots(A_{i_n n} - \lambda \delta_{i_n n})
+  p_{\mathsf{A}}(\lambda) = \det(\mathsf{A} - \lambda \mathsf{I}) = \sum_{i_1i_2...i_n} \varepsilon_{i_1i_2...i_n} (A_{i_1 1} - \lambda \delta_{i_1 1})\ldots(A_{i_n n} - \lambda \delta_{i_n n})
   $$
+>
+> + By having $\lambda = 0$,
+>
+    $$
+    p_{\mathsf{A}}(0) = c_0 = \det(\mathsf{A})
+    $$
+>
+> + From the summation, the coeffient of $\lambda^{n}$ comes from only the diagonal, so $c\_n = (-1)^n$. Hence,
+>
+>   $$
+    p_{\mathsf{A}}(\lambda) = (\lambda_1 - \lambda)(\lambda_2 - \lambda)...(\lambda_n - \lambda)
+    $$
+>
+> + From the summation, the coeffient of $\lambda^{n-1}$ comes from only the diagonal, and compare that with the factorized $p\_{\mathsf{A}}(\lambda)$ above, we have
+>
+>  $$
+   \begin{align*}
+   c_{n-1} &= (-1)^{n-1}(A_{11} + A_{22} + ... + A_{nn}) \\
+           &= (-1)^{n-1}Tr(\mathsf{A}) \\
+           &= (-1)^{n-1}(\lambda_1 + \lambda_2 + ... + \lambda_n)
+   \end{align*}
+   $$
 
-This is useful for checking if the eigenvalues we found are ccorrect.
+This is useful for checking if the eigenvalues we found are correct.
 
 ## Eigenspaces
 
