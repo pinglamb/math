@@ -110,6 +110,11 @@ This is useful for checking if the eigenvalues we found are correct.
 
 ## Eigenspaces
 
+> *Definition.*{: .def}
+> The **eigenspace** of $\lambda$, denoted by $E\_{\lambda}$, is the subspace containing the set of all eigenvectors corresponding to $\lambda$, together with $\mathbf{0}$.
+> It is a subspace because it is the kernel/nullspace of $(\mathsf{A} - \lambda\mathsf{I})\mathbf{x} = \mathbf{0}$.
+
+
 ## Reference
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 5](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
