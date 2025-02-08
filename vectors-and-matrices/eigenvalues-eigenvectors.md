@@ -160,6 +160,35 @@ However, if we have repeated roots for the characteristic polynomial, we need to
 It is important to note that even though there aren't $n$ distinct eigenvalues,
 we might still be able to find $n$ linearly independent eigenvectors.
 
+## Diagonalization
+
+> *Definition.*{: .def}
+> A $n \times n$ matrix $\mathsf{D} = \Set{D\_{ij}}$ is a diagonal matrix if $D\_{ij} = 0$ whenver $i \not= j$, i.e.
+>
+> $$
+  \mathsf{D} = \begin{pmatrix}
+  D_{11} & 0 & 0 & \cdots & 0 & 0 \\
+  0 & D_{22} & 0 & \cdots & 0 & 0 \\
+  \vdots & \ddots & \ddots & \ddots & \ddots & 0 \\
+  0 & 0 & 0 & \cdots & D_{n-1 \, n-1} & 0 \\
+  0 & 0 & 0 & \cdots & 0 & D_{nn}
+  \end{pmatrix}
+  $$
+
+> *Property.*{: .prop}
+> The computation to raise $\mathsf{D}$ to the powers of $m$ is trivial, i.e.
+>
+> $$
+  \mathsf{D}^m = \begin{pmatrix}
+  D_{11}^m & 0 & 0 & \cdots & 0 & 0 \\
+  0 & D_{22}^m & 0 & \cdots & 0 & 0 \\
+  \vdots & \ddots & \ddots & \ddots & \ddots & 0 \\
+  0 & 0 & 0 & \cdots & D_{n-1 \, n-1}^m & 0 \\
+  0 & 0 & 0 & \cdots & 0 & D_{nn}^m
+  \end{pmatrix}
+  $$
+
 ## Reference
 
+* Gilbert Strang _Linear Algebra and Its Applications_, 2006 - Chapter 5
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 5](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
