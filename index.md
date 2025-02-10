@@ -42,7 +42,6 @@ title: Home
 * [Complex Matrices](vectors-and-matrices/complex-matrices.md)
 * [Similarity Transformations](vectors-and-matrices/similarity-transformations.md)
 * [Quadrics and Conics](vectors-and-matrices/quadrics-conics.md)
-* [Transformation Groups](vectors-and-matrices/transformation-groups.md)
 * [Möbius Transformations](vectors-and-matrices/mobius-transformations.md)
 
 ## Numbers and Sets
