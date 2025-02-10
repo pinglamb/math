@@ -9,19 +9,7 @@ title: Eigenvalues and Eigenvectors &#124; Vectors and Matrices
 Eigenvalues and eigenvectors provide a different way of factorizing matrices, such that we can raise it to some powers, and are really useful for studying certain kind of problems.
 
 > *Definition.*{: .def}
-> Let $\mathcal{A}: \mathbb{F}^n \to \mathbb{F}^n$ be a linear map.
-> If
->
-> $$
-  \mathcal{A}(\mathbf{x}) = \lambda \mathbf{x}
-  $$
->
-> for some non-zero vector $\mathbf{x} \in \mathbb{F}^n$ and $\lambda \in \mathbf{F}$,
-> then $\mathbf{x}$ is an **eigenvector** of $\mathcal{A}$ with **eigenvalue** $\lambda$.
-
-> *Definition.*{: .def}
-> Let $\mathsf{A}$ be the $n \times n$ matrix associated with the map $\mathcal{A}$ for a given basis.
-> Consistent with the definition for maps, if
+> Let $\mathsf{A}$ be the $n \times n$ matrix. If
 >
 > $$
   \mathsf{A}\mathbf{x} = \lambda \mathbf{x}
@@ -63,7 +51,7 @@ then the corresponding eigenvector is in the nullspace and can be found by elimi
   $$
 
 > *Property.*{: .prop}
-> By Fundamental Theorem of Algebra, for maps from $\mathbb{C}^n$ to $\mathbb{C}^n$ has $n$ eigenvalues (each counted with multiplicity).
+> By Fundamental Theorem of Algebra, there are $n$ eigenvalues (each counted with multiplicity).
 
 > *Property.*{: .prop}
 > Suppose
@@ -132,7 +120,7 @@ However, if we have repeated roots for the characteristic polynomial, we need to
 > The **defect** of an eigenvalue $\lambda$ is the difference between its algebraic and geometric multiplicity.
 
 > *Theorem.*{: .thm}
-> Suppose that the linear map $\mathcal{A}$ has distinct eigenvalues $\lambda\_1, ... \lambda\_r$ and eigenvectors $\mathbf{x}\_1, ..., \mathsf{x}\_r$,
+> Suppose that the matrix $\mathsf{A}$ has distinct eigenvalues $\lambda\_1, ... \lambda\_r$ and eigenvectors $\mathbf{x}\_1, ..., \mathsf{x}\_r$,
 > then $\mathbf{x}\_1, ... \mathbf{x}\_r$ are linearly independent.
 >
 > *Proof.*{: .prf}
@@ -154,7 +142,7 @@ However, if we have repeated roots for the characteristic polynomial, we need to
 > As all the eigenvalues are distinct, we found a shorter non-trival linear combination which contradicts with the above.
 
 > *Corollary.*{: .cor}
-> A linear map with $n$ disinct eigenvalues must have $n$ linearly independent eigenvectors.
+> A matrix with $n$ disinct eigenvalues must have $n$ linearly independent eigenvectors.
 > These $n$ eigenvectors form a basis for $\mathbb{F}^n$.
 
 It is important to note that even though there aren't $n$ distinct eigenvalues,
