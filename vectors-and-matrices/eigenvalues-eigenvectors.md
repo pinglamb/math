@@ -223,6 +223,38 @@ we might still be able to find $n$ linearly independent eigenvectors.
   \mathsf{\Lambda} = \mathsf{S^{-1}AS}
   $$
 
+## Matrix Powers
+
+> *Proposition.*{: .prop}
+> The eigenvalues of $\mathsf{A}^k$ are $\lambda\_1^k, ... \lambda\_n^k$ and each eigenvector of $\mathsf{A}$ is still an eigenvector of $\mathsf{A}^k$.
+>
+> *Proof.*{: .prf}
+>
+> Given $\mathsf{A}\mathbf{x} = \lambda \mathbf{x}$, multiplying both side by $\mathsf{A}$ again we have
+>
+> $$
+  \mathsf{A}^2\mathbf{x} = \mathsf{A}(\lambda\mathbf{x}) = \lambda (\mathsf{A} \mathbf{x}) = \lambda^2 \mathbf{x}
+  $$
+>
+> Therefore, $\lambda^2$ is the eigenvalue of $\mathsf{A}^2$ and the eigenvectors are unchanged and the same process can be repeated to the $k$-th power.
+
+If we are able to factorize $\mathsf{A}$ as $\mathsf{S \Lambda S^{-1}}$, we can find the powers of $\mathsf{A}$ by
+
+$$
+\mathsf{A}^k = (\mathsf{S \Lambda S^{-1}})(\mathsf{S \Lambda S^{-1}})...(\mathsf{S \Lambda S^{-1}}) = \mathsf{S \Lambda^k S^{-1}}
+$$
+
+> *Proposition.*{: .prop}
+> If $\mathsf{A}$ is invertible, the eigenvalues of $\mathsf{A}^{-1}$ are $1/\lambda\_i$.
+>
+> *Proof.*{: .prf}
+>
+> Given $\mathsf{A}\mathbf{x} = \lambda \mathbf{x}$, we have
+>
+> $$
+  {1 \over \lambda} \mathbf{x} = \mathsf{A}^{-1} \mathbf{x}
+  $$
+
 ## Reference
 
 * Gilbert Strang _Linear Algebra and Its Applications_, 2006 - Chapter 5
