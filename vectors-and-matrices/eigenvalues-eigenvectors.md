@@ -155,11 +155,10 @@ we might still be able to find $n$ linearly independent eigenvectors.
 >
 > $$
   \mathsf{D} = \begin{pmatrix}
-  D_{11} & 0 & 0 & \cdots & 0 & 0 \\
-  0 & D_{22} & 0 & \cdots & 0 & 0 \\
-  \vdots & \ddots & \ddots & \ddots & \ddots & 0 \\
-  0 & 0 & 0 & \cdots & D_{n-1 \, n-1} & 0 \\
-  0 & 0 & 0 & \cdots & 0 & D_{nn}
+  D_{11} \\
+  & D_{22} \\
+  & & \ddots \\
+  & & & D_{nn}
   \end{pmatrix}
   $$
 
@@ -168,12 +167,60 @@ we might still be able to find $n$ linearly independent eigenvectors.
 >
 > $$
   \mathsf{D}^m = \begin{pmatrix}
-  D_{11}^m & 0 & 0 & \cdots & 0 & 0 \\
-  0 & D_{22}^m & 0 & \cdots & 0 & 0 \\
-  \vdots & \ddots & \ddots & \ddots & \ddots & 0 \\
-  0 & 0 & 0 & \cdots & D_{n-1 \, n-1}^m & 0 \\
-  0 & 0 & 0 & \cdots & 0 & D_{nn}^m
+  D_{11}^m \\
+  & D_{22}^m \\
+  & & \ddots \\
+  & & & D_{nn}^m
   \end{pmatrix}
+  $$
+
+> *Theorem.*{: .thm}
+> Suppose a $n \times n$ matrix has $n$ linearly independent eigenvectors.
+> Let $\mathsf{S}$ be a matrix with these eigenvectors as columns,
+> then $\mathsf{\Lambda} = \mathsf{S^{-1}AS}$ is a diagonal matrix with the eigenvalues of $\mathsf{A}$ are on the diagonal, i.e.
+>
+> $$
+  \mathsf{\Lambda} = \mathsf{S^{-1}AS} = \begin{pmatrix}
+  \lambda_1 \\
+  & \lambda_2 \\
+  & & \ddots \\
+  & & & \lambda_n \\
+  \end{pmatrix}
+  $$
+>
+> $\mathsf{S}$ is called the eigenvector matrix and $\mathsf{\Lambda}$ is called the eigenvalue matrix.
+>
+> *Proof.*{: .prf}
+>
+> Let $\mathbf{x}\_i$ be the linearly independent eigenvectors of $\mathsf{A}$, we have
+>
+> $$
+  \begin{align*}
+  \mathsf{AS} &= \mathsf{A}\begin{pmatrix}
+  \mathbf{x}_1 & \mathbf{x}_2 & \cdots & \mathbf{x}_n
+  \end{pmatrix} \\
+  &= \begin{pmatrix}
+  \mathsf{A}\mathbf{x}_1 & \mathsf{A}\mathbf{x}_2 & \cdots & \mathsf{A}\mathbf{x}_n
+  \end{pmatrix} \\
+  &= \begin{pmatrix}
+  \lambda_1\mathbf{x}_1 & \lambda_2\mathbf{x}_2 & \cdots & \lambda_n\mathbf{x}_n
+  \end{pmatrix} \\
+  &= \begin{pmatrix}
+  \mathbf{x}_1 & \mathbf{x}_2 & \cdots & \mathbf{x}_n
+  \end{pmatrix} \begin{pmatrix}
+  \lambda_1 \\
+  & \lambda_2 \\
+  & & \ddots \\
+  & & & \lambda_n \\
+  \end{pmatrix} \\
+  &= \mathsf{S\Lambda}
+  \end{align*}
+  $$
+>
+> As the columns of $\mathsf{S}$ is linearly independent, it is invertible. Hence,
+>
+> $$
+  \mathsf{\Lambda} = \mathsf{S^{-1}AS}
   $$
 
 ## Reference
