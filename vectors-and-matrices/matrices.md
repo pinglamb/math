@@ -232,25 +232,6 @@ in which the coefficients are the components of $\mathbf{x}$.
   A_{11} = A_{22} = ... = A_{nn} = 0
   $$
 
-## Hermitian Matrices
-
-> *Definition.*{: .def}
-> A square $n \times n$ complex matrix $\mathsf{A} = \Set{A_{ij}}$ is **Hermitian** if
->
-> $$
-  \mathsf{A} = \mathsf{A}^\dagger \iff A_{ij} = A_{ji}^\ast
-  $$
-
-> *Definition.*{: .def}
-> A square $n \times n$ complex matrix $\mathsf{A} = \Set{A_{ij}}$ is **skew-Hermitian** if
->
-> $$
-  \mathsf{A} = -\mathsf{A}^\dagger \iff A_{ij} = -A_{ji}^\ast
-  $$
-
-> *Property.*{: .prop}
-> For Hermitian and skew-Hermitian matrices, the diagonal elements are real and pure imaginary respectively.
-
 ## Trace
 
 > *Definition.*{: .def}
@@ -462,17 +443,6 @@ in which the coefficients are the components of $\mathbf{x}$.
   &= \vert \mathbf{x} - \mathbf{y} \vert^2
   \end{align*}
   $$
-
-## Unitary Matrices
-
-> *Definition.*{: .def}
-> A complex square matrix $\mathsf{U}$ is said to be **unitary** if its Hermitian conjugate is equal to its inverse, i.e.
->
-> $$
-  \mathsf{U}^\dagger = \mathsf{U}^{-1}
-  $$
-
-Unitary matrices are to complex matrices what orthonormal matrices are to real matrices.
 
 ## References
 
