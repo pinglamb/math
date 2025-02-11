@@ -133,7 +133,20 @@ From the above, for any Hermitian matrix, we can choose $\mathbf{x} / \vert \mat
   \mathsf{A} = \mathsf{Q \Lambda Q^\intercal}
   $$
 
+## Normal Matrices
+
+> *Definition.*{: .def}
+> A square matrix $\mathsf{A}$ is **normal** if
+>
+> $$
+  \mathsf{A A^\dagger} = \mathsf{A^\dagger A}
+  $$
+
+> *Proposition.*{: .prop}
+> Normal matrices have $n$ linearly independent eigenvectors and hence always diagonalizable.
+> It means skew-Hermitian matrices and unitary matrices can always be diagonalized as well.
 
 ## References
 
-* [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 3](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
+* [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 3, 5](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
+* Gilbert Strang _Linear Algebra and Its Applications_, 2006 - Chapter 5
