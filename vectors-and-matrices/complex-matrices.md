@@ -55,6 +55,53 @@ Hermitian matrices are to complex matrices what symmetric matrices are to real m
 > *Property.*{: .prop}
 > For Hermitian and skew-Hermitian matrices, the diagonal elements are real and pure imaginary respectively.
 
+There are three basic properties of Hermitian matrices regarding eigenvalues and eigenvectors, which apply equally well to real symmetric matrices.
+
+> *Property.*{: .prop}
+> If $\mathsf{A} = \mathsf{A}^\dagger$, then for all complex vectors $\mathbf{x}$, the number $\mathsf{x}^\dagger \mathsf{A} \mathsf{x}$ is real.
+>
+> *Proof.*{: .prf}
+>
+> Consider
+>
+> $$
+  (\mathsf{x}^\dagger \mathsf{A} \mathsf{x})^\dagger = \mathsf{x}^{\dagger} \mathsf{A}^{\dagger} \mathsf{x}^{\dagger\dagger} = \mathsf{x}^\dagger \mathsf{A} \mathsf{x}
+  $$
+>
+> The conjugate transpose of the $1 \times 1$ matrix $\mathsf{x}^\dagger \mathsf{A} \mathsf{x}$ is equal to itself and therefore the number must be real.
+
+> *Property.*{: .prop}
+> If $\mathsf{A} = \mathsf{A}^\dagger$, every eigenvalue is real.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $\mathsf{A}\mathsf{x} = \lambda \mathsf{x}$. By multiplying both side by $\mathsf{x}^\dagger$, we have
+>
+> $$
+  \mathsf{x}^\dagger \mathsf{A} \mathsf{x} = \lambda \mathsf{x}^\dagger \mathsf{x}
+  $$
+>
+> As $\mathsf{x}^\dagger \mathsf{A} \mathsf{x}$ is real and $\mathsf{x}^\dagger \mathsf{x} = \vert \mathsf{x} \vert^2$ is also real and positive,
+>
+> $$
+  \lambda = { \mathsf{x}^\dagger \mathsf{A} \mathsf{x} \over \mathsf{x}^\dagger \mathsf{x} }
+  $$
+>
+> is real.
+
+> *Property.*{: .prop}
+> If $\mathsf{A} = \mathsf{A}^\dagger$, the eigenvectors of $\mathsf{A}$ coming from different eigenvalues are orthogonal to one another.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $\mathsf{A}\mathsf{x}\_1 = \lambda\_1\mathsf{x}\_1$ and $\mathsf{A}\mathsf{x}\_2 = \lambda\_2\mathsf{x}\_2$. We have
+>
+> $$
+  \lambda_1 \mathsf{x}_1^\dagger \mathsf{x}_2 = (\lambda_1 \mathsf{x}_1)^\dagger \mathsf{x}_2 = (\mathsf{A}\mathsf{x}_1)^\dagger \mathsf{x}_2 = \mathsf{x}_1^\dagger \mathsf{A}^\dagger \mathsf{x}_2 = \mathsf{x}_1^\dagger (\mathsf{A} \mathsf{x}_2) = \lambda_2 \mathsf{x}_1^\dagger \mathsf{x}_2
+  $$
+>
+> As $\lambda\_1 \not= \lambda\_2$, we have $\mathsf{x}\_1^\dagger \mathsf{x}\_2 = 0$, hence the two eigenvectors are orthogonal.
+
 ## Unitary Matrices
 
 Unitary matrices are to complex matrices what orthonormal matrices are to real matrices.
