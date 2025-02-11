@@ -102,6 +102,8 @@ There are three basic properties of Hermitian matrices regarding eigenvalues and
 >
 > As $\lambda\_1 \not= \lambda\_2$, we have $\mathsf{x}\_1^\dagger \mathsf{x}\_2 = 0$, hence the two eigenvectors are orthogonal.
 
+In fact, the above property is also true for eigenvectors from same eigenvalues, meaning we can always find $n$ orthogonal vectors for a $n \times n$ Hermitian matrix, which are also linearly independent.
+
 ## Unitary Matrices
 
 Unitary matrices are to complex matrices what orthonormal matrices are to real matrices.
@@ -112,6 +114,25 @@ Unitary matrices are to complex matrices what orthonormal matrices are to real m
 > $$
   \mathsf{U}^\dagger = \mathsf{U}^{-1}
   $$
+
+## Diagonalization of Hermitian Matrices
+
+From the above, for any Hermitian matrix, we can choose $\mathbf{x} / \vert \mathbf{x} \vert$ as the eigenvectors to form the diagonalizing matrix $\mathsf{S}$, which is an unitary matrix.
+
+> *Proposition.*{: .prop}
+> For a $n \times n$ Hermitian matrix $\mathsf{H}$, there are always $n$ orthogonal, and therefore linearly independent, eigenvectors that form a orthonormal basis for $\mathbb{C}^n$.
+> Hence, it is always diagonalizable by a unitary matrix $\mathsf{U}$, i.e.
+>
+> $$
+  \mathsf{H} = \mathsf{U \Lambda U^\dagger}
+  $$
+>
+> Real symmetric matrices are a special case, where the eigenvalues and eigenvectors being real, and the diagonalizing matrix $\mathsf{Q}$ is orthonormal, i.e.
+>
+> $$
+  \mathsf{A} = \mathsf{Q \Lambda Q^\intercal}
+  $$
+
 
 ## References
 
