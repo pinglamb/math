@@ -60,10 +60,13 @@ title: Complex Numbers &#124; Vectors and Matrices
 > *Definition.*{: .def}
 > The **complex conjugate** $z^\ast$ (or $\bar{z}$) of $z = a + bi$ is $z^{\ast} = a - bi$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > $(z^\ast)^\ast = z$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
+> $z = z^\ast$ iff $z \in \mathbb{R}$.
+
+> *Proposition.*{: .prop}
 > Conjugation is _distributive_ over addition, subtraction, multiplication and inverse, i.e.
 >
 > + $(z_1 \pm z_2)^\ast = z_1^\ast \pm z_2^\ast$
