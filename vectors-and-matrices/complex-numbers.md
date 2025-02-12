@@ -29,19 +29,31 @@ title: Complex Numbers &#124; Vectors and Matrices
 > Hence, the representation is unique and if $z_1 = z_2$, then $\text{Re}(z_1) = \text{Re}(z_2)$ and $\text{Im}(z_1) = \text{Im}(z_2)$.
 
 > *Definition.*{: .def}
-> Let $z_1 = a + bi$ and $z_2 = c + di$, in order to follow the arithmetic rules for reals, but adding the rule $i^2 = 1$, we have
+> Let $z_1 = a + bi$ and $z_2 = c + di$, in order to follow the arithmetic rules for reals, together with the rule $i^2 = 1$, we have
 >
-> + [Addition/Subtraction] $z_1 \pm z_2 = (a + c) \pm (b + d)i$
+> + Addition/Subtraction
 >
-> + [Multiplication] $z_1z_2 = (ac - bd) + (ad + bc)i$
+>   $$
+    z_1 \pm z_2 = (a + c) \pm (b + d)i
+    $$
 >
-> + [Inverse]
+> + Multiplication
 >
-> $$
-  z^{-1} = {1 \over z} = {a \over a^2 + b^2} + {-b \over a^2 + b^2}i
-  $$
+>   $$
+    z_1z_2 = (ac - bd) + (ad + bc)i
+    $$
 >
-> + [Division] $z_1/z_2 = z_1z_2^{-1}$
+> + Inverse
+>
+>   $$
+    z^{-1} = {1 \over z} = {a \over a^2 + b^2} + {-b \over a^2 + b^2}i
+    $$
+>
+> + Division
+>
+>   $$
+    z_1/z_2 = z_1z_2^{-1}
+    $$
 
 ## Complex Conjugate
 
