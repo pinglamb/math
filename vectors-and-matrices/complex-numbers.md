@@ -67,6 +67,20 @@ title: Complex Numbers &#124; Vectors and Matrices
 > $z = z^\ast$ iff $z \in \mathbb{R}$.
 
 > *Proposition.*{: .prop}
+> If $zw \in \mathbb{R}$, then $z = \lambda w^\ast$ for some $\lambda \in \mathbb{R}$.
+>
+> *Proof.*{: .prf}
+>
+> As $zw = (zw)^\ast$,
+>
+> $$
+  {z \over w^\ast} = {z^\ast \over w} = \left({z \over w^\ast}\right)^\ast
+  $$
+>
+> Hence, $z / w^\ast = \lambda \in \mathbb{R}$ and $z = \lambda w^\ast$.
+
+
+> *Proposition.*{: .prop}
 > Conjugation is _distributive_ over addition, subtraction, multiplication and inverse, i.e.
 >
 > + $(z_1 \pm z_2)^\ast = z_1^\ast \pm z_2^\ast$
