@@ -98,6 +98,15 @@ then the corresponding eigenvector is in the nullspace and can be found by elimi
 
 This is useful for checking if the eigenvalues we found are correct.
 
+> *Property.*{: .prop}
+> The eigenvalues of $\mathsf{A}^\intercal$ are the same as $\mathsf{A}$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \det(\mathsf{A}^\intercal - \lambda \mathsf{I}) = \det((\mathsf{A} - \lambda \mathsf{I})^\intercal) = \det(\mathsf{A} - \lambda \mathsf{I})
+  $$
+
 ## Eigenspaces
 
 The eigenvalues and eigenvectors are useful if we are able to have a full set of $n$ linearly independent eigenvectors for a $n \times n$ matrix.
