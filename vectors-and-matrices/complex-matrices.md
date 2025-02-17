@@ -146,6 +146,48 @@ From the above, for any Hermitian matrix, we can choose $\mathbf{x} / \vert \mat
 > Normal matrices have $n$ linearly independent eigenvectors and hence always diagonalizable.
 > It means skew-Hermitian matrices and unitary matrices can always be diagonalized as well.
 
+## Cayley-Hamilton Theorem
+
+> *Theorem.*{: .thm}
+> **[Cayley-Hamilton Theorem]**
+> Every complex square matrix satisfies its own characteristic equation, i.e.
+>
+> $$
+  p_{\mathsf{A}}(\mathsf{A}) = 0
+  $$
+
+## Forms
+
+> *Definition.*{: .def}
+> A map $\mathcal{F}: \mathbb{F}^n \to \mathbb{F}$, where
+>
+> $$
+  \mathcal{F}(\mathbf{x}) = \mathsf{x}^\dagger\mathsf{A}\mathsf{x} = \sum_{i=1}^n \sum_{j=1}^n x_i^\ast A_{ij} x_j
+  $$
+>
+> is called a sesquilinear **form** and $\mathsf{A}$ is called its coefficient matrix.
+
+> *Definition.*{: .def}
+> If $\mathsf{A}$ is an Hermitian matrix, the map $\mathcal{F}: \mathbb{C}^n \to \mathbb{C}$ is referred to as an **Hermitian form** on $\mathbb{C}^n$.
+
+> *Definition.*{: .def}
+> If $\mathsf{A}$ is a real symmetric matrix, the map $\mathcal{F}: \mathbb{R}^n \to \mathbb{R}$ is referred to as a **quadratic form** on $\mathbb{R}^n$.
+
+> *Proposition.*{: .prop}
+> As the coefficient matrix $\mathsf{H}$ of a Hermitian form can be factorized as
+>
+> $$
+  \mathsf{H} = \mathsf{U \Lambda U^\dagger}
+  $$
+>
+> Let $\mathsf{x}' = \mathsf{U^\dagger x}$, we have
+>
+> $$
+  \mathcal{F}(\mathbf{x}) = \mathsf{x^\dagger U \Lambda U^\dagger x} = \mathsf{x'^\dagger \Lambda x'} = \sum_{i=1}^n \lambda_i \vert x_i' \vert^2
+  $$
+>
+> By transforming to a basis of orthonormal eigenvectors, the form is simplified and the orthonormal basis vectors are called **principal axes**.
+
 ## References
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter 3, 5](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
