@@ -58,7 +58,7 @@ Hermitian matrices are to complex matrices what symmetric matrices are to real m
 There are three basic properties of Hermitian matrices regarding eigenvalues and eigenvectors, which apply equally well to real symmetric matrices.
 
 > *Property.*{: .prop}
-> If $\mathsf{A} = \mathsf{A}^\dagger$, then for all complex vectors $\mathbf{x}$, the number $\mathsf{x}^\dagger \mathsf{A} \mathsf{x}$ is real.
+> For a Hermitian matrix $\mathsf{A}$ and for all complex vectors $\mathbf{x}$, the number $\mathsf{x}^\dagger \mathsf{A} \mathsf{x}$ is real.
 >
 > *Proof.*{: .prf}
 >
@@ -71,7 +71,7 @@ There are three basic properties of Hermitian matrices regarding eigenvalues and
 > The conjugate transpose of the $1 \times 1$ matrix $\mathsf{x}^\dagger \mathsf{A} \mathsf{x}$ is equal to itself and therefore the number must be real.
 
 > *Property.*{: .prop}
-> If $\mathsf{A} = \mathsf{A}^\dagger$, every eigenvalue is real.
+> Every eigenvalue of a Hermitian matrix $\mathsf{A}$  is real.
 >
 > *Proof.*{: .prf}
 >
@@ -90,7 +90,7 @@ There are three basic properties of Hermitian matrices regarding eigenvalues and
 > is real.
 
 > *Property.*{: .prop}
-> If $\mathsf{A} = \mathsf{A}^\dagger$, the eigenvectors of $\mathsf{A}$ coming from different eigenvalues are orthogonal to one another.
+> The eigenvectors of a Hermitian matrix $\mathsf{A}$ corresponding to different eigenvalues are orthogonal.
 >
 > *Proof.*{: .prf}
 >
@@ -114,6 +114,38 @@ Unitary matrices are to complex matrices what orthonormal matrices are to real m
 > $$
   \mathsf{U}^\dagger = \mathsf{U}^{-1}
   $$
+
+> *Property.*{: .prop}
+> Lengths (inner products) are preserved by unitary matrix $\mathsf{U}$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  (\mathsf{Ux})^\dagger (\mathsf{Uy}) = \mathsf{x^\dagger U^\dagger U y} = \mathsf{x^\dagger y}
+  $$
+>
+> Hence, $\Vert \mathsf{U}\mathbf{x} \Vert^2 = \mathsf{(Ux)^\dagger (Ux)} = \mathsf{x^\dagger x} = \Vert \mathbf{x} \Vert^2$.
+
+> *Property.*{: .prop}
+> Every eigenvalue of a unitary matrix $\mathsf{U}$ has unit modulus.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $\mathsf{U}\mathbf{x} = \lambda \mathbf{x}$, we have $\Vert \mathsf{U}\mathbf{x} \Vert = \Vert \mathbf{x} \Vert = \Vert \lambda \mathbf{x} \Vert$, hence $\vert \lambda \vert = 1$.
+
+> *Property.*{: .prop}
+> The eigenvectors of an unitary matrix $\mathsf{U}$ corresponding to different eigenvalues are orthogonal.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $\mathsf{U}\mathsf{x}\_1 = \lambda\_1\mathsf{x}\_1$ and $\mathsf{U}\mathsf{x}\_2 = \lambda\_2\mathsf{x}\_2$. We have
+>
+> $$
+  \mathsf{x}_1^\dagger \mathsf{x}_2 = (\mathsf{U} \mathsf{x}_1)^\dagger (\mathsf{U} \mathsf{x}_2) = \lambda_1^\ast \lambda_2 \mathsf{x}_1^\dagger \mathsf{x}_2
+  $$
+>
+> As $\vert \lambda\_1 \vert^2 = \lambda\_1^\ast \lambda\_1 = 1$, $\lambda\_1^\ast \lambda\_2 \not= 1$ otherwise $\lambda\_1 = \lambda\_2$.
+> Hence, we can only have $\mathsf{x}\_1^\dagger \mathsf{x}\_2 = 0$.
 
 ## Diagonalization of Hermitian Matrices
 
