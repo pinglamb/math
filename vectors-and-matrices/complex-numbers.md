@@ -64,7 +64,7 @@ title: Complex Numbers &#124; Vectors and Matrices
 > $(z^\ast)^\ast = z$.
 
 > *Proposition.*{: .prop}
-> $z = z^\ast$ iff $z \in \mathbb{R}$.
+> $z = z^\ast$ iff $z \in \mathbb{R}$. $z = -z^\ast$ iff $z$ is pure imaginary.
 
 > *Proposition.*{: .prop}
 > If $zw \in \mathbb{R}$, then $z = \lambda w^\ast$ for some $\lambda \in \mathbb{R}$.
@@ -78,7 +78,6 @@ title: Complex Numbers &#124; Vectors and Matrices
   $$
 >
 > Hence, $z / w^\ast = \lambda \in \mathbb{R}$ and $z = \lambda w^\ast$.
-
 
 > *Proposition.*{: .prop}
 > Conjugation is _distributive_ over addition, subtraction, multiplication and inverse, i.e.
