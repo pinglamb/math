@@ -103,7 +103,19 @@ In other words, all Möbius maps are _closed_ under composition.
   $$
 >
 > is the inverse of $f(z)$.
-
+>
+> *Proof.*{: .prf}
+>
+> From the result of composition, we have
+>
+> $$
+  f^{-1}(f(z)) = { (ad - bc)z + (bd - bd) \over (-ac + ac)z + (-bc + ad) } = 1
+  $$
+>
+> Similarly, $f^{-1}(f(z)) = 1$.
+>
+> Also, $f^{-1}(f(-d/c)) = f^{-1}(\infty) = -d/c$ and $f^{-1}(f(\infty)) = f^{-1}(a/c) = \infty$.
+> Hence, $f^{-1}(z)$ is the inverse of $f(z)$.
 
 ## Decomposition
 
