@@ -119,6 +119,37 @@ In other words, all Möbius maps are _closed_ under composition.
 
 ## Decomposition
 
+> *Theorem.*{: .thm}
+> Every Möbius transformation can be expressed as the composition of at most four maps, each of which is of one of the forms
+>
+> $$
+  z \mapsto az, \quad z \mapsto z + b, \quad z \mapsto 1/z
+  $$
+>
+> *Proof.*{: .prf}
+>
+> If $c = 0$ and $d \not= 0$, then $f = f\_2f\_1$ where
+>
+> $$
+  \begin{align*}
+  f_1(z) &= (a/d)z \\
+  f_2(z) &= z + b/d
+  \end{align*}
+  $$
+>
+> If $c \not= 0$, then $f = f\_4f\_3f\_2f\_1$ where
+>
+> $$
+  \begin{align*}
+  f_1(z) &= z + (d/c) \\
+  f_2(z) &= 1/z \\
+  f_3(z) &= -((ad - bc)/c^2)z \\
+  f_4(z) &= z + a/c
+  \end{align*}
+  $$
+
+These simple maps are rotations, dilations, translations and complex inversion.
+
 ## Reference
 
 * [Stephen J. Cowley _Algebra and Geometry Lectures Notes_, 2006 - Chapter A](https://www.damtp.cam.ac.uk/user/sjc1/teaching/AandG/notes.pdf)
