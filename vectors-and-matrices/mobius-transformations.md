@@ -67,7 +67,43 @@ In order to make $f$ complete, we need to add the "point at infinity".
 
 ## Composition
 
+> *Proposition.*{: .prop}
+> The composition of two Möbius maps is again a Möbius map.
+>
+> *Proof.*{: .prf}
+>
+> Let
+>
+> $$
+  f(z) = {az + b \over cz + d} \quad \text{and} \quad g(z) = {\alpha z + \beta \over \gamma z + \delta}
+  $$
+>
+> Then
+>
+> $$
+  \begin{align*}
+  g(f(z)) &= {\alpha (az + b) + \beta (cz + d) \over \gamma (az + b) + \delta (cz + d)} \\
+  &= { (\alpha a + \beta c)z + (\alpha b + \beta d) \over (\gamma a + \delta c)z + (\gamma b + \delta d)}
+  \end{align*}
+  $$
+>
+> where we note that $(\alpha a + \beta c)(\gamma a + \delta c) - (\alpha b + \beta d)(\gamma b + \delta d) = (ad - bc)(\alpha \gamma - \beta \delta) \not= 0$.
+>
+> We also need to check a few special cases regarding $\infty$ which are omitted.
+
+In other words, all Möbius maps are _closed_ under composition.
+
 ## Inverse
+
+> *Proposition.*{: .prop}
+> The Möbius map
+>
+> $$
+  f^{-1}(z) = {dz - b \over -cz + a}
+  $$
+>
+> is the inverse of $f(z)$.
+
 
 ## Decomposition
 
