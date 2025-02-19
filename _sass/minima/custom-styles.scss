@@ -21,6 +21,15 @@
   padding-right: 200px;
 }
 
+.site-footer {
+  .footer-nav {
+    text-align: right;
+    .page-link {
+      color: #999999;
+    }
+  }
+}
+
 .page-content {
   color: #e0e0e0;
 
