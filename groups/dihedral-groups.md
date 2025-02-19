@@ -117,6 +117,29 @@ To complete the definiton of $D_{2n}$, it is necessary to show that any two grou
 As $r$ has order $n$ and $s$ has order $2$, it looks like $D_{2n} \cong C_n \times C_2$.
 However, it is not true as $D_{2n}$ is not abelian.
 
+## Klein Four-group
+
+> *Definition.*{: .def}
+> The Klein four-group, denoted by $V_4$, is a group with four elements, in which all of them is of order $2$.
+
+> *Proposition.*{: .prop}
+> $V_4 \cong D_4 \cong C_2 \times C_2$.
+>
+> *Proof.*{: .prf}
+>
+> $V_4$ is abelian as all elements have order $2$.
+> For $a, b \in V_4$, $a^2 = b^2 = e$ and $ab = ba = b^{-1}a$. So, $V_4 \cong D_4$.
+>
+> For $a, b, c \in V_4$,
+>
+> + $\langle a \rangle = \set{e, a}$ and $\langle b \rangle = \set{e, b}$ so $\langle a \rangle \cup \langle b \rangle = \set{e}$
+>
+> + $ab = ba$
+>
+> + $c = ab$
+>
+> Hence, by Direct Product Theorem, $V_4 \cong C_2 \times C_2$.
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Section 12.8

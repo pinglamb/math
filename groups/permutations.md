@@ -7,7 +7,7 @@ title: Permutations &#124; Groups
 {: .page-title}
 
 > *Definition.*{: .def}
-> A permutation of a set $X$ is an invertible/bijective map $f: X \to X$.
+> A **permutation** of a set $X$ is an invertible/bijective map $f: X \to X$.
 
 ## Two Row Notation
 
@@ -52,21 +52,24 @@ $$
 > A permutation $\sigma$ _fixes_ $a$ if $f(a) = a$.
 
 > *Definition.*{: .def}
-> Two permutations $\alpha$ and $\beta$ are **disjoint** if for every $k \in \set{1, 2, ..., n}$,
+> Two permutations $\alpha$ and $\beta$ are _disjoint_ if for every $k \in \set{1, 2, ..., n}$,
 > either $\alpha$ or $\beta$ fixes $k$, i.e. $\alpha(k) = k$ or $\beta(k) = k$.
 
 > *Theorem.*{: .thm}
-> Disjoint permutations **commute**, i.e. $\alpha\beta = \beta\alpha$.
+> Disjoint permutations _commute_, i.e. $\alpha\beta = \beta\alpha$.
 >
 > *Proof.*{: .prf}
 >
 > As $\alpha$ and $\beta$ are disjoint, for any $k$, let's say $\alpha(k) = k$ and $\beta(k) = k'$.
+> We have
 >
-> Thus, $\alpha(\beta(k)) = \alpha(k')$ and $\beta(\alpha(k)) = \beta(k) = k'$.
+> $$
+  \alpha(\beta(k)) = \alpha(k') \quad \text{and} \quad \beta(\alpha(k)) = \beta(k) = k'
+  $$
 >
-> If $\alpha(k') \not = k'$, we need to have $\beta(k') = k'$, that means $\beta(k) = \beta(k') = k'$ and it is only possible if $k = k'$ as $\beta$ is a bijection.
->
-> Hence, $\alpha$ has to fix $k'$ as well and $\alpha\beta = \beta\alpha$.
+> Suppose $\alpha(k') \not = k'$, as $\alpha$ and $\beta$ are disjoint, we need to have $\beta$ fixes $k'$, i.e. $\beta(k') = k' = \beta(k)$.
+> It implies $k = k'$ as $\beta$ is a bijection, which is a contradiction.
+> Hence, $\alpha$ has to fix $k'$, i.e. $\alpha(k') = k'$ and therefore $\alpha(\beta(k)) = \beta(\alpha(k))$.
 
 ## Disjoint Cycle Notation
 
@@ -251,8 +254,8 @@ The representation by transpositions isn't unique. However,
 >
 > $\text{sgn}(\sigma) = 1$ means even and $\text{sgn}(\sigma) = -1$ means odd.
 
-> *Theorem.*{: .thm}
-> $\text{sgn}$ is multiplicative, i.e. $\text{sgn}(\sigma_1\sigma_2) = \text{sgn}(\sigma_1)\text{sgn}(\sigma_2)$.
+> *Property.*{: .prop}
+> $\text{sgn}$ is _multiplicative_, i.e. $\text{sgn}(\sigma_1\sigma_2) = \text{sgn}(\sigma_1)\text{sgn}(\sigma_2)$.
 >
 > *Proof.*{: .prf}
 >
@@ -260,11 +263,11 @@ The representation by transpositions isn't unique. However,
   \text{sgn}(\sigma_1\sigma_2) = (-1)^{k_1 + k_2} = (-1)^{k_1}(-1)^{k_2} = \text{sgn}(\sigma_1)\text{sgn}(\sigma_2)
   $$
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > The number of transpositions of $k$-cycle is $k-1$, so odd length cycles are even and even length cycles are odd.
 
-> *Corollary.*{: .cor}
-> A permutation is even if and only if the number of disjoint cycles of even length is even.
+> *Proposition.*{: .prop}
+> A permutation is even iff the number of disjoint cycles of even length is even.
 >
 > *Proof.*{: .prf}
 >

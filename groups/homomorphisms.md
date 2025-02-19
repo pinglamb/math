@@ -20,7 +20,7 @@ The definition of [functions](../numbers-and-sets/functions.md) should be revise
 
 ## Properties
 
-> *Theorem.*{: .thm}
+> *Property.*{: .prop}
 > Homomorphism has identity preserved, i.e.
 >
 > $$
@@ -39,7 +39,7 @@ The definition of [functions](../numbers-and-sets/functions.md) should be revise
   \end{align*}
   $$
 
-> *Theorem.*{: .thm}
+> *Property.*{: .prop}
 > Homomorphism has inverse preserved, i.e.
 >
 > $$
@@ -57,7 +57,7 @@ The definition of [functions](../numbers-and-sets/functions.md) should be revise
 >
 > Hence, $f(a^{-1})$ is the inverse of $f(a)$ in $H$, i.e. $f(a^{-1}) = f(a)^{-1}$.
 
-> *Theorem.*{: .thm}
+> *Property.*{: .prop}
 > $\text{ord}(f(a)) \mid \text{ord}(a)$.
 >
 > *Proof.*{: .prf}
@@ -78,7 +78,7 @@ The definition of [functions](../numbers-and-sets/functions.md) should be revise
 >
 > which implies $r = 0$ and therefore $k = ml$ and $\text{ord}(f(a)) \mid \text{ord}(a)$.
 
-> *Theorem.*{: .thm}
+> *Property.*{: .prop}
 > The composite of two homomorphisms is a homomorphism.
 >
 > *Proof.*{: .prf}
@@ -130,7 +130,7 @@ The definition of [functions](../numbers-and-sets/functions.md) should be revise
 {: #image-is-subgroup}
 
 > *Theorem.*{: .thm}
-> Kernel is a subgroup $G$, i.e. $\ker f \le G$.
+> Kernel is a subgroup of $G$, i.e. $\ker f \le G$.
 >
 > *Proof.*{: .prf}
 >
