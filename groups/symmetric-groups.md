@@ -117,7 +117,7 @@ There are a few choices of generating set for $S_n$.
 
 ## Subgroup of $S_n$
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > Any subgroup of $S_n$ contains either no odd permutations, or precisely half.
 >
 > *Proof.*{: .prf}
@@ -146,16 +146,18 @@ From the above, we can see $S_3 \cong D_6$.
 ## Conjugacy in $S_n$
 {: #conjugacy-in-symmetric-group}
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > Two permutations are conjugate iff they have the same cycle type.
 >
 > *Proof.*{: .prf}
 >
-> If $(a_1\,a_2\,...\,a_k)$ is a $k$-cycle and $\rho \in S_n$, then
+> Let $(a_1\,a_2\,...\,a_k)$ be a $k$-cycle and $\rho \in S_n$. Then
 >
 > $$
   \rho(a_1\,a_2\,...\,a_k)\rho^{-1} = (\rho(a_1)\,\rho(a_2)\,...\,\rho(a_k))
   $$
+>
+> since $\rho(a\_1) \mapsto a\_1 \mapsto a\_2 \mapsto \rho(a\_2)$.
 >
 > Suppose $\sigma = \sigma_1 \sigma_2 ... \sigma_l$, where $\sigma_i$ are disjoint cycles, then
 >
@@ -220,7 +222,7 @@ As $A_n \subseteq S_n \implies [\sigma]\_{A_n} \subseteq [\sigma]\_{S_n}$ and $\
 > *Definition.*{: .def}
 > If $\vert [\sigma]\_{A_n} \vert = \vert [\sigma]\_{A_n} \vert / 2$, we say that the conjugacy class of $\sigma$ **splits** in $A_n$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > For $\sigma \in A_n$, $[\sigma]$ splits in $A_n$ iff no odd permutation commutes with $\sigma$, meaning $C\_{S_n}(\sigma)$ has no odd elements.
 >
 > *Proof.*{: .prf}
@@ -249,7 +251,7 @@ $[(1\,2\,3\,4\,5)]$ | 5          | 24                            | no           
 (As $\vert C\_{S_5}([(1\,2\,3\,4\,5)]) \vert = 5$ and all powers of $(1\,2\,3\,4\,5)$ commutes with itself (five of them),
 so $C\_{S_5}([(1\,2\,3\,4\,5)]) = \langle (1\,2\,3\,4\,5) \rangle$.)
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > $A_5$ is [simple](quotient-groups.md#simple-group).
 >
 > *Proof.*{: .prf}
