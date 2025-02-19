@@ -31,7 +31,7 @@ Thirdly, given a symmetry, we should have the reverse symmetry, which when combi
 we will end up "doing nothing", i.e. getting the identity element.
 It is called the inverse and normally named as $a^{-1}$.
 
-Finally, let $\ast$ denote the group operation, given three symmetries, we can combine them, one after another, i.e. $$x \ast y \ast z$$.
+Finally, let $\ast$ denote the group operation, given three symmetries, we can combine them, one after another, i.e. $x \ast y \ast z$.
 There are two ways to combine them, which are $(x \ast y) \ast z$ or $x \ast (y \ast z)$.
 However, intuitively they should yield the same result as we are always applying $x$ after $y$ after $z$,
 we have the associative rule $(x \ast y) \ast z = x \ast (y \ast z)$.
@@ -88,7 +88,7 @@ Also, with this abstract definition, we can already study lots of properties abo
 
 With the above axioms, we can prove some of the properties about groups.
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > The identity $e$ of a group is unique.
 >
 > *Proof.*{: .prf}
@@ -101,7 +101,7 @@ With the above axioms, we can prove some of the properties about groups.
 >
 > (the one with bracket is treated as the identity)
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > The inverse $a^{-1}$ of $a$ in a group is unique.
 >
 > *Proof.*{: .prf}
@@ -112,7 +112,7 @@ With the above axioms, we can prove some of the properties about groups.
   b = b \ast e = b \ast (a \ast b') = (b \ast a) \ast b' = e \ast b' = b'
   $$
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > The inverse of inverse $a^{-1}$ is $a$ itself, i.e.
 >
 > $$
@@ -130,7 +130,7 @@ With the above axioms, we can prove some of the properties about groups.
 > So $a$ is the element that matches the definition of inverse of $a^{-1}$.
 > By uniqueness of inverse, $(a^{-1})^{-1} = a$.
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > The inverse of $a \ast b$ is given by
 >
 > $$
@@ -150,6 +150,7 @@ With the above axioms, we can prove some of the properties about groups.
 > By uniqueness of inverse, $(a \ast b)^{-1} = b^{-1} \ast a^{-1}$.
 
 > *Theorem.*{: .thm}
+> **[Cancellation Law]**
 > For $a, b, c \in G$,
 >
 > $$
@@ -191,7 +192,7 @@ With the above axioms, we can prove some of the properties about groups.
 ## Commutative/Abelian Group
 
 > *Definition.*{: .def}
-> A _commutative/abelian group_ is a group with
+> A **commutative/abelian group** is a group with
 >
 > 4\. **[Commutativity]** For all $a, b \in G$, we have
 >
@@ -199,28 +200,18 @@ With the above axioms, we can prove some of the properties about groups.
   a \ast b = b \ast a
   $$
 
-## Finite Group
+## Order
 
 > *Definition.*{: .def}
 > The **order** of a group $G$, denoted by $\vert G \vert$, is the number of elements in $G$.
 
 A group $G$ is _finite_ if there are finite number of elements.
 
-## Order of Element
-
 > *Definition.*{: .def}
 > The **order** of an element $a \in G$, denoted by $\text{ord}(a)$, is the smallest positive integer $n$ such that $a^n = e$.
 > If no such $n$ exists, then $a$ is of infinite order.
 
 Later on, by [Lagrange Theorem](subgroups-cosets-lagrange-theorem.md#lagranges-theorem), we will see that $\text{ord}(a) \mid \|G\|$.
-
-## Examples
-
-* $(\mathbb{Z}, +)$
-* $(\mathbb{Z}/n\mathbb{Z}, +)$
-* $(\mathbb{Q}^\ast = \mathbb{Q} \backslash \\{0\\}, \times)$
-* Regular $n$-gon, which is isophomorphic to dihedral group $D_{2n}$
-* $2 \times 2$ invertible matrices with matrix multiplication, i.e. $\text{GL}_2(\mathbb{R})$
 
 ## References
 
