@@ -15,7 +15,7 @@ If $H \le G$ and $H \not = G$, then $H$ is a proper subgroup.
 To determine if a subset $H$ of $G$ is a subgroup, we check the following usual subgroup criterion:
 
 > *Theorem.*{: .thm}
-> Let $(G, \ast)$ be a group and let $H \subseteq G$ be a subset. Then $H \le G$ if and only if
+> Let $(G, \ast)$ be a group and let $H \subseteq G$ be a subset. Then $H \le G$ iff
 >
 > 1. [Identity] $e \in H$
 >
@@ -31,7 +31,7 @@ To determine if a subset $H$ of $G$ is a subgroup, we check the following usual 
 > Firstly, let $e_H$ be the identity element in $H$, we have $e_H \ast e_H = e_H$ in $H$, so as in $G$.
 > Thus $e_H = e_H \ast e = e_H \ast (e_H \ast e_H^{-1}) = (e_H \ast e_H) \ast e_H^{-1} = e_H \ast e_H^{-1} = e$.
 > Hence, the identity of $H$ has to be the same as $G$, (1) is true.
-> Secondary, (2) is true as $H$ has to be closed.
+> Secondly, (2) is true as $H$ has to be closed.
 > Finally, as inverse is unique, the inverse of $a$ in $H$ has to be the same as that in $G$ so (3) is true.
 
 The first criteria can be omitted if we know $H$ is non-empty subset.
@@ -40,7 +40,7 @@ As if $H$ is non-empty, there is some element $a \in H$ and by (3) then (2), $a 
 There is also a super-efficient subgroup criterion which is useful sometimes:
 
 > *Theorem.*{: .thm}
-> Let $(G, \ast)$ be a group and let $H \subseteq G$ be a subset. Then $H \le G$ if and only if
+> Let $(G, \ast)$ be a group and let $H \subseteq G$ be a subset. Then $H \le G$ iff
 >
 > 1. H is non-empty
 >
@@ -71,18 +71,16 @@ The following are some examples of subgroups:
   aH = \set{ah : h \in H}
   $$
 >
-> is a _left coset_ of $H$. Similarily,
+> is a **left coset** of $H$. Similarily,
 >
 > $$
   Ha = \set{ha : h \in H}
   $$
 >
-> is a _right coset_ of $H$. (Note: coset is not necessary a group)
+> is a **right coset** of $H$. (Note: coset is not necessary a group)
 
-### Properties
-
-> *Lemma.*{: .lem}
-> Given $H \le G$ and $a \in G$. $a \in H$ if and only if $aH = H$.
+> *Property.*{: .prop}
+> Given $H \le G$ and $a \in G$. $a \in H$ iff $aH = H$.
 >
 > *Proof.*{: .prf}
 >
@@ -93,7 +91,7 @@ The following are some examples of subgroups:
 >
 > Hence, $a \in H \iff aH = H$.
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > Given $H \le G$ and $a, b \in G$, $aH$ and $bH$ is either the same or disjoint.
 >
 > *Proof.*{: .prf}
@@ -104,8 +102,8 @@ The following are some examples of subgroups:
 > Similarily, $b = ah_1h_2^{-1}$, $bH \subseteq aH$.
 > Hence, $aH$ and $bH$ are either the same or disjoint.
 
-> *Lemma.*{: .lem}
-> $aH = bH$ if and only if $b^{-1}a \in H$.
+> *Property.*{: .thm}
+> $aH = bH$ iff $b^{-1}a \in H$.
 >
 > *Proof.*{: .prf}
 >
@@ -116,27 +114,27 @@ The following are some examples of subgroups:
   ah = (bb^{-1})ah = b(b^{-1}ah) \in bH
   $$
 >
-> similarily $bh = (a(a^{-1})bh = a(a^{-1}bh) \in aH$. Hence, $aH = bH$.
+> similarily $bh = (aa^{-1})bh = a(a^{-1}bh) \in aH$. Hence, $aH = bH$.
 >
 > $(\Rightarrow)$ If $aH = bH$, say $ah_1 = bh_2$ for some $h_1, h_2 \in H$, $b^{-1}a = h_2h_1^{-1} \in H$ (closure).
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > All the left cosets of $H$ are of the same size as $H$.
 >
 > *Proof.*{: .prf}
 >
 > Let $aH$ be a left coset of $H$, if $ah_1 = ah_2$, $h_1 = h_2$, hence each $ah$ maps to a different element and $\|aH\| = \|H\|$.
 
-> *Lemma.*{: .lem}
+> *Property.*{: .prop}
 > Given $H \le G$, $G$ is the union of all the left cosets of $H$.
 >
 > *Proof.*{: .prf}
 >
 > For any $a \in G$, as $e \in H$, $a \in aH$. Hence, the union of all of the left cosets is $G$.
 
-All the above properties is applicable to the right cosets. However
+All the above properties is applicable to the right cosets. However,
 
-> *Theorem.*{: .thm}
+> *Property.*{: .prop}
 > The number of left cosets and right cosets are the same, i.e.
 >
 > $$
@@ -159,7 +157,7 @@ All the above properties is applicable to the right cosets. However
   aH = bH \implies b^{-1}a = b^{-1}(a^{-1})^{-1} \in H \implies Ha^{-1} = Hb^{-1}
   $$
 >
-> by the lemma above. Hence, $\phi$ is well-defined.
+> Hence, $\phi$ is well-defined.
 >
 > Suppose $\phi(aH) = \phi(bH)$, we have
 >
@@ -198,7 +196,7 @@ Hr = \set{r, sr} &\not= \set{sr^2, r^2} = Hsr^2
 \end{align*}
 $$
 
-### Coset as equivalence classes
+To conclude, the (left/right) cosets of $H$ partition the group $G$, i.e. they are disjoint and their union is the group. Therefore,
 
 > *Theorem.*{: .thm}
 > Let $H \le G$, defining $a \sim b$ if $b^{-1}a \in H$ gives an equivalence relation on $G$, whose equivalence classes are the left cosets of $H$.
@@ -216,13 +214,14 @@ $$
 ## Lagrange's Theorem
 
 > *Theorem.*{: .thm}
+> **[Lagrange's Theorem]**
 > If $G$ is a finite group and $H \le G$, then $\|H\|$ divides $\|G\|$.
 >
 > *Proof.*{: .prf}
 >
 > Base on the above properties of left cosets, the group $G$ is partitioned by the distinct cosets into disjoint sets with respect to $H$, which is called _coset decomposition_.
 >
-> Hence, $\|G\| = \text{number of distinct cosets} \times \|H\|$ and $\|H\| \mid \|G\|$.
+> Hence, $\|G\| = \text{number of distinct cosets} \times \|H\|$ and $\|H\|$ divides $\|G\|$.
 
 Lagrange's Theorem shows that the order of $G$ influences the number of subgroups $G$ can have, regardless of the group structure.
 
