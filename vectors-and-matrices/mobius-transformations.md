@@ -193,9 +193,33 @@ so the representation is not unique (similar to fractions). However,
 
 It suggests that the general Möbius map should have three degrees of freedom.
 
+> *Lemma.*{: .lem}
+> A Möbius map is anidentity map if it has three fixed points.
+>
+> *Proof.*{: .prf}
+>
+> Consider the quadratic equation $az + b = z(cz + d)$ having three distinct solutions,
+> it implies $c = b = 0$ and $a = d$, i.e. the identity map.
+
 > *Theorem.*{: .thm}
 > Let $\Set{z\_1, z\_2, z\_3}$ and $\Set{w\_1, w\_2, w\_3}$ be triples of distinct points in $\mathbb{C}\_\infty$.
 > Then there is a _unique_ Möbius map $f$ such that $f(z\_i) = w\_i$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $z\_i \not= \infty$, consider
+>
+> $$
+  g(z) = \left( {z_3 - z_2 \over z_3 - z_1} \right) {z - z_1 \over z - z_2}
+  $$
+>
+> we have $g(z\_1) = 0$, $g(z\_2) = \infty$ and $g(z\_3) = 1$.
+> If any of the $z\_i = \infty$, by choosing $z\_4$ distinct from $z\_i$, we can construct $g$ base on $z'\_i = 1 / (z\_i - z\_4)$.
+>
+> Similarily, we can construct $h(z)$ such that $h(w\_1) = 0$, $h(w\_2) = \infty$ and $h(w\_3) = 1$ and $f = h^{-1}g$ is the map satisfying $f(z\_i) = w\_i$.
+>
+> Suppose $f$ and $f'$ are Möbius map such that $f(z\_i) = w\_i = f'(z\_i)$.
+> As the map $f'^{-1}f$ fixes each $z\_i$, it is the identity map and hence $f = f'$.
 
 ## Decomposition
 
