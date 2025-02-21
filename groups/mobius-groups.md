@@ -62,6 +62,10 @@ $$
 > As $f\_A = f\_B$ iff $B = \lambda A$, we also have $\theta: \text{SL}\_2(\mathbb{C}) \to M$ an surjective group homomorphism,
 > with kernel $\Set{\pm I}$ and hence $M$ is isomorphic to the quotient group $\text{SL}\_2/\Set{\pm I}$.
 
+## Conjugacy
+
+## Acting on $C\_\infty$
+
 ## References
 
 * [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 4](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
