@@ -115,6 +115,8 @@ In other words, all Möbius maps are _closed_ under composition.
 >
 > we have $f(g(z)) = g(f(z)) = z$.
 
+In fact, the Möbius maps form a group under composition and is called [Möbius Group](../groups/mobius-groups.md).
+
 ## Existence and Uniqueness
 
 Clearly we have
