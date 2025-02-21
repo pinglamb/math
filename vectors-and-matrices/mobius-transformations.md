@@ -50,32 +50,6 @@ In order to make $f$ complete, we need to add the "point at infinity" to $\mathb
   f(\infty) = \infty
   $$
 
-## Existence and Uniqueness
-
-Clearly we have $f(z) = {az + b \over cz + d} = {\lambda az + \lambda b \over \lambda cz + \lambda d}$ so the representation is not unique (similar to fractions).
-However,
-
-> *Proposition.*{: .prop}
-> The representation is determined up to a complex scalar multiple, i.e. if
->
-> $$
-  {az + b \over cz + d} = {a'z + b' \over c'z + d'}
-  $$
->
-> with $(ad - bc)(a'd' - b'c') \not= 0$, then
->
-> $$
-  \begin{pmatrix}
-  a' & b' \\
-  c' & d' \\
-  \end{pmatrix} = \lambda \begin{pmatrix}
-  a & b \\
-  c & d \\
-  \end{pmatrix}
-  $$
->
-> for some non-zero complex number $lambda$.
-
 ## Composition
 
 > *Proposition.*{: .prop}
@@ -120,7 +94,7 @@ In other words, all Möbius maps are _closed_ under composition.
 > From the result of composition, we have
 >
 > $$
-  f^{-1}(f(z)) = { (ad - bc)z + (bd - bd) \over (-ac + ac)z + (-bc + ad) } = 1
+  f^{-1}(f(z)) = { (ad - bc)z + (bd - bd) \over (-ac + ac)z + (-bc + ad) } = z
   $$
 >
 > Similarly, $f^{-1}(f(z)) = 1$.
@@ -140,6 +114,86 @@ In other words, all Möbius maps are _closed_ under composition.
   $$
 >
 > we have $f(g(z)) = g(f(z)) = z$.
+
+## Existence and Uniqueness
+
+Clearly we have
+
+$$
+f(z) = {az + b \over cz + d} = {\lambda az + \lambda b \over \lambda cz + \lambda d}
+$$
+
+so the representation is not unique (similar to fractions). However,
+
+> *Proposition.*{: .prop}
+> Suppose $a, b, c, d, a', b', c', d' \in \mathbb{C}$ with $(ad - bc)(a'd' - b'c') \not= 0$.
+> If there exists at least three values of $z \in \mathbb{C}$ such that $cz + d \not= 0$, $c'z + d' \not= 0$ and
+>
+> $$
+  {az + b \over cz + d} = {a'z + b' \over c'z + d'}
+  $$
+>
+> then
+>
+> $$
+  \begin{pmatrix}
+  a' & b' \\
+  c' & d' \\
+  \end{pmatrix} = \lambda \begin{pmatrix}
+  a & b \\
+  c & d \\
+  \end{pmatrix}
+  $$
+>
+> for some non-zero complex number $\lambda$, i.e. the representation is determined up to a complex scalar multiple.
+>
+> *Proof.*{: .prf}
+>
+> The existence of three values of $z \in \mathbb{C}$ satisfying the above conditions implies that the quadratic equation
+>
+> $$
+  (az + b)(c'z + d') = (a'z + b')(cz + d)
+  $$
+>
+> has three distinct solutions, which means we can equate the coefficients and have $ac' = a'c$, $bc' + ad' = a'd + b'c$ and $bd' = b'd$.
+> It is equivalent to the existence of a complex number $\mu$ such that
+>
+> $$
+  \begin{pmatrix}
+  d & -b \\
+  -c & a \\
+  \end{pmatrix}
+  \begin{pmatrix}
+  a' & b' \\
+  c' & d' \\
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+  \mu & 0 \\
+  0 & \mu \\
+  \end{pmatrix}
+  $$
+>
+> and hence
+>
+> $$
+  \begin{pmatrix}
+  a' & b' \\
+  c' & d' \\
+  \end{pmatrix}
+  =
+  {\mu \over ad - bc}
+  \begin{pmatrix}
+  a & b \\
+  c & d \\
+  \end{pmatrix}
+  $$
+
+It suggests that the general Möbius map should have three degrees of freedom.
+
+> *Theorem.*{: .thm}
+> Let $\Set{z\_1, z\_2, z\_3}$ and $\Set{w\_1, w\_2, w\_3}$ be triples of distinct points in $\mathbb{C}\_\infty$.
+> Then there is a _unique_ Möbius map $f$ such that $f(z\_i) = w\_i$.
 
 ## Decomposition
 
