@@ -6,22 +6,54 @@ title: Möbius Transformations &#124; Vectors and Matrices
 # Möbius Transformations
 {: .page-title}
 
-> *Definition.*{: .def}
-> A **Möbius transformation** is a map of $\mathbb{C} \to \mathbb{C}$ defined by
->
-> $$
-  f(z) = {az + b} \over {cz + d}
-  $$
->
-> for some complex numbers $a, b, c$ and $d$ with $ad - bc \not= 0$.
+Consider a transformation $f: \mathbb{C} \to \mathbb{C}$ with
 
-The $ad - bc \not= 0$ because we would like to make $f$ injective, i.e.
+$$
+f(z) = {az + b \over cz + d}
+$$
+
+for some complex numbers $a, b, c$ and $d$ with $ad - bc \not= 0$.
+
+As
 
 $$
 f(z) - f(w) = {(ad - bc)(z - w) \over (cz + d)(cw + d)}
 $$
 
-and $ad - bc \not= 0$ so that $f(z) = f(w)$ implies $z = w$.
+By having $ad - bc \not= 0$, we ensure $f$ is not constant and is injective, i.e. $f(z) = f(w)$ implies $z = w$.
+
+However, if $c \not= 0$, $f(-d/c)$ is not defined.
+It makes composition hard because each transformation will have its own undefined point.
+In order to make $f$ complete, we need to add the "point at infinity" to $\mathbb{C}$ to form the extended complex plane.
+
+> *Definition.*{: .def}
+> The set $\mathbb{C}_{\infty} = \mathbb{C} \cup \Set{\infty}$ is called the **extended complex plane**.
+
+> *Definition.*{: .def}
+> A **Möbius transformation** is a map of $\mathbb{C}\_\infty \to \mathbb{C}\_\infty$ defined by
+>
+> $$
+  f(z) = {az + b \over cz + d}
+  $$
+>
+> for $a, b, c, \in \mathbb{C}$ and $ad - bc \not= 0$.
+>
+> If $c \not= 0$,
+>
+> $$
+  f(-{d \over c}) = \infty \quad \text{and} \quad f(\infty) = {a \over c}
+  $$
+>
+> If $c = 0$,
+>
+> $$
+  f(\infty) = \infty
+  $$
+
+## Existence and Uniqueness
+
+Clearly we have $f(z) = {az + b \over cz + d} = {\lambda az + \lambda b \over \lambda cz + \lambda d}$ so the representation is not unique (similar to fractions).
+However,
 
 > *Proposition.*{: .prop}
 > The representation is determined up to a complex scalar multiple, i.e. if
@@ -43,27 +75,6 @@ and $ad - bc \not= 0$ so that $f(z) = f(w)$ implies $z = w$.
   $$
 >
 > for some non-zero complex number $lambda$.
-
-From the definition, we can see that $f(-d/c)$ is not defined, given $c \not= 0$.
-It makes composition hard because each transformation will have its own undefined point.
-In order to make $f$ complete, we need to add the "point at infinity".
-
-> *Definition.*{: .def}
-> Let $f$ be a Möbius transformation.
-> If $c \not= 0$, then
->
-> $$
-  f(\infty) = a/c \quad \text{and} \quad f(-d/c) = \infty
-  $$
->
-> If $c = 0$, then
->
-> $$
-  f(\infty) = \infty
-  $$
-
-> *Definition.*{: .def}
-> The set $\mathbb{C} \cup \Set{\infty}$ is called the **extended complex plane** and is denoted by $\mathbb{C}_{\infty}$.
 
 ## Composition
 
@@ -116,6 +127,19 @@ In other words, all Möbius maps are _closed_ under composition.
 >
 > Also, $f^{-1}(f(-d/c)) = f^{-1}(\infty) = -d/c$ and $f^{-1}(f(\infty)) = f^{-1}(a/c) = \infty$.
 > Hence, $f^{-1}(z)$ is the inverse of $f(z)$.
+
+> *Proposition.*{: .prop}
+> Möbius maps are bijections.
+>
+> $f(z)$ is injective as shown above under the condition $ad - bc \not= 0$.
+>
+> Consider
+>
+> $$
+  g(z) = {dz - b \over -cz + a}
+  $$
+>
+> we have $f(g(z)) = g(f(z)) = z$.
 
 ## Decomposition
 
