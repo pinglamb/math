@@ -14,7 +14,7 @@ The theory about quotient groups is one of the most important idea about groups.
 > A subgroup $K$ of $G$ is a **normal** subgroup if for all $a \in G$ and for all $k \in K$, we have $aka^{-1} \in K$.
 > It is denoted by $K \trianglelefteq G$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > $K \trianglelefteq G \iff \forall a \in G, aK = Ka$.
 >
 > *Proof.*{: .prf}
@@ -36,7 +36,7 @@ The theory about quotient groups is one of the most important idea about groups.
 > Also, we have $a^{-1}k(a^{-1})^{-1} = a^{-1}ka = k'$ for some $k' \in K$, so $ka = ak'$ and $Ka \subseteq aK$.
 > Hence, $aK = Ka$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > $K \trianglelefteq G \iff \forall a \in G, aKa^{-1} = K$.
 >
 > *Proof.*{: .prf}
@@ -49,7 +49,7 @@ The theory about quotient groups is one of the most important idea about groups.
 > Also, we have $a^{-1}ka \in K$, so $a(a^{-1}ka)a^{-1} = k \in aKa^{-1}$ and $K \subseteq aKa^{-1}$.
 > Hence, $aKa^{-1} = K$.
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > Any subgroup of index $2$ is normal.
 >
 > *Proof.*{: .prf}
@@ -57,7 +57,7 @@ The theory about quotient groups is one of the most important idea about groups.
 > If $K \le G$ is of index $2$, the only possible cosets are $K$ and $G \setminus K$ because $eK$/$Ke$ is one of the cosets and cosets are disjoint.
 > As $eK = Ke$, the other right coset is also $G \setminus K$. So the left cosets and right cosets of $K$ are the same and $K \trianglelefteq G$.
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > Any subgroup of an abelian group is normal.
 >
 > *Proof.*{: .prf}
@@ -113,13 +113,13 @@ The left cosets of normal subgroups form a group in a natural way.
 > Hence, it is a group.
 
 > *Definition.*{: .def}
-> The **quotient group** (of factor group) of $G$ by $K$ is the group of left cosets of $K$ under multiplication, denoted by $G/K$.
+> The **quotient group** (or factor group) of $G$ by $K$ is the group of left cosets of $K$ under multiplication, denoted by $G/K$.
 
 ## Isomorphism Theorem
 
 The isomorphism theorem is about the relationship between normal subgroups, quotients and homomorphisms.
 
-> *Theorem.*{: .thm}
+> *Lemma.*{: .lem}
 > Every normal subgroup is the kernel of some homomorphisms, specifically,
 > given $K \trianglelefteq G$, the map $q: G \to G/K$ sending $a$ to $aK$ is a surjective group homomorphism, called the **quotient map**.
 >
@@ -133,7 +133,7 @@ The isomorphism theorem is about the relationship between normal subgroups, quot
 >
 > so $q$ is a homomorphism. $G/K$ is the group of all left cosets of $K$ so clearly $q$ is surjective.
 
-> *Theorem.*{: .thm}
+> *Lemma.*{: .lem}
 > Every kernel of homomorphisms is a normal subgroup.
 >
 > *Proof.*{: .prf}
@@ -144,6 +144,7 @@ The isomorphism theorem is about the relationship between normal subgroups, quot
 We have already shown that [the image of a homomorphism is a subgroup](homomorphisms.md#image-is-subgroup). Furthermore,
 
 > *Theorem.*{: .thm}
+> **[Isomorphism Theorem]**
 > The image of a homomorphism $f: G \to H$ is isomorphic to the quotient group $G/K$, where $K = \ker f$, i.e. $\text{im}\,f \cong G/K$.
 >
 > *Proof.*{: .prf}
