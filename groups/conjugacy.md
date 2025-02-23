@@ -7,7 +7,7 @@ title: Conjugacy &#124; Groups
 {: .page-title}
 
 Conjugacy is to study elements of a group that cannot be distinguished by using only group structure,
-which means the elements that are conjugate to each other is essentially the "same" but are just viewed from a different "perspectives".
+which means the elements that are conjugate to each other is essentially the "same" but are just viewed from different "perspectives".
 Therefore, they share many properties.
 
 > *Definition.*{: .def}
@@ -17,7 +17,7 @@ Therefore, they share many properties.
 The intuition about the definition is that if we have $G$ acts on a set $X$,
 applying $g'$ has the same effect as applying $g$ to a changed perspective $hX$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > Conjugate elements have the same order.
 >
 > *Proof.*{: .prf}
@@ -28,7 +28,7 @@ applying $g'$ has the same effect as applying $g$ to a changed perspective $hX$.
   a^n = (hbh^{-1})^n = hb^nh^{-1}
   $$
 >
-> so $a^n = e$ if and only if $b^n = e$.
+> so $a^n = e$ iff $b^n = e$.
 
 ## Conjugacy Classes
 
@@ -39,7 +39,7 @@ applying $g'$ has the same effect as applying $g$ to a changed perspective $hX$.
   [g] = \set{hgh^{-1} \in G : h \in G}
   $$
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > The conjugacy class of an element that commutes with everything contains only the element.
 >
 > *Proof.*{: .prf}
@@ -48,7 +48,7 @@ applying $g'$ has the same effect as applying $g$ to a changed perspective $hX$.
 
 It means such element "looks the same from every perspective".
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > The relation of conjugacy in a group $G$ is an equivalence relation,
 > meaning $G$ is the disjoint union of mutually disjoint conjugacy classes.
 >
@@ -66,7 +66,7 @@ It means such element "looks the same from every perspective".
 
 Conjugacy classes provide a way to check if a subgroup is normal.
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > A subgroup $K$ of $G$ is a normal subgroup iff it is a union of conjugacy classes.
 >
 > *Proof.*{: .prf}
@@ -74,14 +74,14 @@ Conjugacy classes provide a way to check if a subgroup is normal.
 > ($\Rightarrow$) Suppose $K \trianglelefteq G$, for every $g \in G$, $gKg^{-1} = K$ and $gkg^{-1} \in K$.
 > Thus, $[k] = \set{gkg^{-1} : g \in G} \subset K$ and $K$ is a union of conjugacy classes.
 >
-> ($\Leftarrow$) Suppose $K$ is a union of conjugacy classes, i.e. for any $k in K$, $[k] \subset K$.
+> ($\Leftarrow$) Suppose $K$ is a union of conjugacy classes, i.e. for any $k \in K$, $[k] \subset K$.
 > For all $g \in G$, $gkg^{-1} \in [k]$ so if $k \in K$ then $gkg^{-1} \in K$.
-> Thus, for all $g in G$, $gKg^{-1} \subset K$. By replacing $g$ by $g^{-1}$, we have $g^{-1}Kg \subset K \implies gKg^{-1} \subset K$.
+> Thus, for all $g \in G$, $gKg^{-1} \subset K$. By replacing $g$ by $g^{-1}$, we have $g^{-1}Kg \subset K \implies gKg^{-1} \subset K$.
 > Hence, $gKg^{-1} = K$ and $K$ is a normal subgroup of $G$.
 
 ## Conjugation Action
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > Any group $G$ acts on itself by conjugation, defined by $g(x) = gxg^{-1}$.
 >
 > *Proof.*{: .prf}
@@ -125,14 +125,14 @@ i.e. $g \in Z(G) \iff [g] = \set{g}$.
 >
 > which are the elements that commute with $g$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > $Z(G) = \bigcap_{g \in G} C_G(g)$.
 >
 > *Proof.*{: .prf}
 >
 > By the fact the [kernel is the intersection of stabilizers](group-actions.md#kernel-is-intersection-of-stabilizers).
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > $G$ acts by conjugation on a subgroup $K$ if $K \trianglelefteq G$.
 >
 > *Proof.*{: .prf}
@@ -145,12 +145,14 @@ i.e. $g \in Z(G) \iff [g] = \set{g}$.
 >
 > 2\. $g(h(k)) = ghkh^{-1}g^{-1} = (gh)k(gh)^{-1}$.
 
+Hence, conjugation action restricts to only normal subgroups.
+
 ## Conjugation on Subgroups
 
 Conjugation can also acts on the set of subgroups of $G$.
 Instead of studying individual elements, we study the "similarity" of subgroups from different "perspectives" of $G$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > Let $X$ be the set of subgroups of $G$. Then $G$ acts by conjugation on $X$, defined by $g(H) = gHg^{-1}$.
 >
 > *Proof.*{: .prf}
@@ -175,12 +177,12 @@ They commute with every $g \in G$, i.e. $gH = Hg$ so left cosets are same as rig
 We can therefore have an alternative definition of normal subgroups:
 
 > *Definition.*{: .def}
-> A subgroup $K$ of $G$ is a **normal**, or **self-conjugate**,
+> A subgroup $K$ of $G$ is **normal**, or **self-conjugate**,
 > if every conjugate subgroup of $H$ is equal to $H$, i.e. $gHg^{-1} = H$ for every $g \in G$.
 
 In conclusion, we have
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > If $K \trianglelefteq G$, the following are equivalent:
 >
 > 1. $gHg^{-1} = H$ for all $g \in G$.
