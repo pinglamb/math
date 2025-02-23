@@ -83,9 +83,59 @@ The definition and properties of [Möbius Transformations](../vectors-and-matric
 
 ## Conjugacy
 
+> *Proposition.*{: .prop}
+> Any Möbius map is conjugate to $f(z) = vz$ for some $v \not= 0$, or to $f(z) = z + 1$.
+>
+> *Proof.*{: .prf}
+>
+> From the above, $\theta: \text{GL}\_2(\mathbb{C}) \to M$ is a surjective homomorphism.
+>
+> The conjugacy classes in $\text{GL}\_2(\mathbb{C})$ are
+>
+> $$
+  \begin{align*}
+  \begin{pmatrix} \lambda & 0 \\ 0 & \mu \end{pmatrix} \quad &\longmapsto \quad g(z) = {\lambda z + 0 \over 0z + \mu} = {\lambda \over \mu}z \\
+  \\
+  \begin{pmatrix} \lambda & 0 \\ 0 & \lambda \end{pmatrix} \quad &\longmapsto \quad g(z) = {\lambda z + 0 \over 0z + \lambda} = z \\
+  \\
+  \begin{pmatrix} \lambda & 1 \\ 0 & \lambda \end{pmatrix} \quad &\longmapsto \quad g(z) = {\lambda z + 1 \over 0z + \lambda} = z + {1 \over \lambda} \\
+  \end{align*}
+  $$
+>
+> In fact, $\begin{pmatrix} 1 & {1 \over \lambda} \\\\ 0 & 1 \end{pmatrix}$ is conjugate to $\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \end{pmatrix}$:
+>
+> $$
+  \begin{pmatrix} \lambda & 0 \\ 0 & 1 \end{pmatrix}
+  \begin{pmatrix} 1 & {1 \over \lambda} \\ 0 & 1 \end{pmatrix}
+  \begin{pmatrix} {1 \over \lambda} & 0 \\ 0 & 1 \end{pmatrix}
+  = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \quad \longmapsto \quad g(z) = z + 1
+  $$
+
+The property that can be transferred to conjugates is the number of fixed point.
+From the above, we can see that $g(z) = vz$ fixes $0$ and $\infty$ and $g(z) = z + 1$ fixes $\infty$ only.
+Therefore,
+
+> *Proposition.*{: .prop}
+> Every non-identity Möbius map has exactly one or two fixed points.
+>
+> *Proof.*{: .prf}
+>
+> For any $g \in M, g \not= 1\_M$, there is $h \in M$ such that $hgh^{-1}(z) = vz$ or $z + 1$.
+>
+> Suppose $g$ fixes $w$, we have
+>
+> $$
+  g(w) = w \iff hgh^{-1}(h(w)) = h(w)
+  $$
+>
+> so $g$ and $hgh^{-1}$ has the same number of fixed points.
+> Hence, $g$ has either exactly $2$ (for $hgh^{-1}(z) = vz$) or exactly $1$ (for $hgh^{-1}(z) = z + 1$) fixed points.
+
+Finally, [any Möbius map with at least three fixed points is the identity](../vectors-and-matrices/mobius-transformations.md#identity-three-fixed-points).
+
 ## Acting on $C\_\infty$
 
 ## References
 
-* [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 4](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
+* [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 4, 5, 7](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
 * Alan F. Beardon Algebra and Geometry, 2005 - Chapter 13

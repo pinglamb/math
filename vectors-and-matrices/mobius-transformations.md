@@ -194,12 +194,13 @@ so the representation is not unique (similar to fractions). However,
 It suggests that the general Möbius map should have three degrees of freedom.
 
 > *Lemma.*{: .lem}
-> A Möbius map is anidentity map if it has three fixed points.
+> A Möbius map is an identity map if it has three fixed points.
 >
 > *Proof.*{: .prf}
 >
 > Consider the quadratic equation $az + b = z(cz + d)$ having three distinct solutions,
 > it implies $c = b = 0$ and $a = d$, i.e. the identity map.
+{: #identity-three-fixed-points}
 
 > *Theorem.*{: .thm}
 > Let $\Set{z\_1, z\_2, z\_3}$ and $\Set{w\_1, w\_2, w\_3}$ be triples of distinct points in $\mathbb{C}\_\infty$.
