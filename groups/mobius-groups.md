@@ -52,15 +52,34 @@ The definition and properties of [Möbius Transformations](../vectors-and-matric
 >
 > and hence $\theta$ is a surjective group homomorphism.
 
-The kernel of $\theta$ is
+> *Proposition.*{: .prop}
+> The kernel of $\theta$ is
+>
+> $$
+  \ker \theta = \Set{A : z = {az + b \over cz + d}} = \Set{\lambda I : \lambda \in \mathbb{C},  \lambda \not= 0} = Z
+  $$
 
-$$
-\ker \theta = \Set{A : z = {az + b \over cz + d}} = \Set{\lambda I : \lambda \in \mathbb{C},  \lambda \not= 0}
-$$
+> *Definition.*{: .def}
+> The **projective general linear group** is defined by
+>
+> $$
+  \text{PGL}_2(\mathbb{C}) = \text{GL}_2(\mathbb{C}) / Z
+  $$
+>
+> By Isomorphism Theorem, $M \cong \text{PGL}_2(\mathbb{C})$.
 
 > *Proposition.*{: .prop}
 > As $f\_A = f\_B$ iff $B = \lambda A$, we also have $\theta: \text{SL}\_2(\mathbb{C}) \to M$ an surjective group homomorphism,
 > with kernel $\Set{\pm I}$ and hence $M$ is isomorphic to the quotient group $\text{SL}\_2/\Set{\pm I}$.
+
+> *Definition.*{: .def}
+> The **projective special linear group** is defined by
+>
+> $$
+  \text{PSL}_2(\mathbb{C}) = \text{SL}_2(\mathbb{C}) / \Set{\pm I}
+  $$
+>
+> By Isomorphism Theorem, $M \cong \text{PSL}_2(\mathbb{C})$.
 
 ## Conjugacy
 
