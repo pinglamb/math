@@ -157,9 +157,15 @@ Instead of studying individual elements, we study the "similarity" of subgroups 
 >
 > *Proof.*{: .prf}
 >
-> 0\. For $H \le G$, $e \in H$ so $geg^{-1} = e \in gHg^{-1}$, hence $gHg^{-1}$ is non-empty.
-> For $a, b \in H$, $ab^{-1} \in H$, so $gab^{-1}g^{-1} = (gag^{-1})(gb^{-1}g^{-1}) = (gag^{-1})(gbg^{-1})^{-1} \in gHg^{-1}$.
-> Thus, $gHg^{-1}$ is a subgroup of $G$.
+> 0\. For $H \le G$, $e \in H$ so $geg^{-1} = e \in gHg^{-1}$ and therefore $gHg^{-1}$ is non-empty.
+> Any two elements in $gHg^{-1}$ are of the form $gag^{-1}$ and $gbg^{-1}$ for some $a, b \in H$.
+> Then
+>
+> $$
+  (gag^{-1})(gbg^{-1})^{-1} = (gag^{-1})(gb^{-1}g^{-1}) = gab^{-1}g^{-1} \in gHg^{-1}
+  $$
+>
+> as $ab^{-1} \in H$. Thus, $gHg^{-1}$ is a subgroup of $G$.
 >
 > 1\. $\forall H \in X$, $eHe^{-1} = H$.
 >
@@ -171,23 +177,23 @@ Instead of studying individual elements, we study the "similarity" of subgroups 
 
 The kernel of this action is exactly the normal subgroups.
 It gives a very nice intuition about normal subgroups: they are subgroups that "looks the same under every perspectives".
-Their conjugacy class contains only the subgroup itself, i.e. $[K] = \set{K}$ or $gHg^{-1} = H$ for every $g \in G$.
-They commute with every $g \in G$, i.e. $gH = Hg$ so left cosets are same as right cosets.
+Their conjugacy class contains only the subgroup itself, i.e. $[K] = \set{K}$ or $gKg^{-1} = K$ for every $g \in G$.
+They commute with every $g \in G$, i.e. $gK = Kg$ so left cosets are same as right cosets.
 
 We can therefore have an alternative definition of normal subgroups:
 
 > *Definition.*{: .def}
 > A subgroup $K$ of $G$ is **normal**, or **self-conjugate**,
-> if every conjugate subgroup of $H$ is equal to $H$, i.e. $gHg^{-1} = H$ for every $g \in G$.
+> if every conjugate subgroup of $K$ is equal to $K$, i.e. $gKg^{-1} = K$ for every $g \in G$.
 
 In conclusion, we have
 
 > *Proposition.*{: .prop}
 > If $K \trianglelefteq G$, the following are equivalent:
 >
-> 1. $gHg^{-1} = H$ for all $g \in G$.
+> 1. $gKg^{-1} = K$ for all $g \in G$.
 >
-> 2. $gH = Hg$ for all $g \in G$.
+> 2. $gK = Kg$ for all $g \in G$.
 >
 > 3. Left cosets are same as right cosets.
 >
@@ -200,13 +206,13 @@ In conclusion, we have
 > *Definition.*{: .def}
 > Let $H_1, H_2 \le G$. $H_1$ and $H_2$ are **conjugate subgroups** of $G$ if for some $g \in G$, $H_1 = gH_2g^{-1}$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > Conjugate subgroups are isomorphic.
 >
 > *Proof.*{: .prf}
 >
 > Let $H_1, H_2$ be two conjugate subgroups of $G$, i.e. for some $g \in G$, $H_2 = gH_1g^{-1}$,
-> which means for all $h_2 in H_2$, there exists $h_1 \in H_1$ such that $h_2 = gh_1g^{-1}$.
+> which means for all $h_2 \in H_2$, there exists $h_1 \in H_1$ such that $h_2 = gh_1g^{-1}$.
 >
 > Let $\phi: H_1 \to H_2$ defined by $\phi(h_1) = gh_1g^{-1}$.
 > It is a homomorphism because
@@ -233,11 +239,9 @@ so they are the subgroups that are isomorphic to $H$ as proved above.
 >
 > which is the largest subgroup of $G$ such that $H \trianglelefteq N_G(H)$.
 
-## Examples
+### Conjugate Stabilizers
 
-### Conjugate stabilizers
-
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > The stabilizers of elements in same orbit are conjugate to each other.
 >
 > *Proof.*{: .prf}
@@ -248,14 +252,6 @@ so they are the subgroups that are isomorphic to $H$ as proved above.
 > Hence, $\text{Stab}(g(x)) = g \text{Stab}(x) g^{-1}$.
 >
 > It implies that the stabilizers of elements in the same orbits are isomorphic.
-
-### Conjugacy in $S_n$
-
-See [Symmetric Group](symmetric-groups.md#conjugacy-in-symmetric-group).
-
-### Conjugacy in $A_n$
-
-See [Symmetric Group](symmetric-groups.md#conjugacy-in-alternating-group).
 
 ## References
 
