@@ -17,7 +17,7 @@ The group structure of $G$ is preserved in the way that if $g, h \in G$,
 the permutation $\varphi(gh)$ is equal to the composition $\varphi(g)\varphi(h)$ because $\varphi$ is a homomorphism.
 To simplify, we will write $g(x)$ instead of $\varphi(g)(x)$ and the above rule becomes $gh(x) = g(h(x))$.
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > Let $X$ be a set and $G$ be a group. Then $\varphi: G \to \text{Sym} X$ is a homomorphism
 > iff $\theta: G \times X \to X$ defined by $\theta(g, x) = \theta_g(x) = \varphi(g)(x)$ satisfies the axioms:
 >
@@ -87,7 +87,7 @@ It is a subset of elements in $X$ that $x$ can get mapped to by $G$.
 
 It is the subset of elements in $G$ that fixes $x$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > $\text{Stab}(x) \le G$.
 >
 > *Proof.*{: .prf}
@@ -95,7 +95,7 @@ It is the subset of elements in $G$ that fixes $x$.
 > By definition, $e_G \in \text{Stab}(x)$.
 > For $a, b \in \text{Stab}(x)$, $b^{-1}$ fixes $x$ and so as $ab^{-1}$, so $ab^{-1} \in \text{Stab}(x)$.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > Given $G$ acts on $X$, the kernel of the action is given by the intersection of stabilizers for all $x \in X$.
 >
 > *Proof.*{: .prf}
@@ -122,6 +122,8 @@ It means any element can reach any element in $X$.
 > So for any $w \in \text{orb}(y)$, $w = g(y) = g(g_2^{-1}g_1(x)) \in \text{orb}(x)$, so $\text{orb}(y) \subseteq \text{orb}(x)$.
 > Similarily, $\text{orb}(x) \subseteq \text{orb}(y)$ so $\text{orb}(x) = \text{orb}(y)$.
 
+It is intuitive if we picture the orbit of $x$ as some cycle connecting $x$ with other elements that it can map to.
+
 > *Lemma.*{: .lem}
 > Suppose that $G$ acts on $X$ and that $g(x) = y$, where $x, y \in X$ and $g \in G$, then
 >
@@ -132,11 +134,14 @@ It means any element can reach any element in $X$.
 > *Proof.*{: .prf}
 >
 > Let $H = \set{h \in G : h(x) = y}$.
-> For any $h \in g\text{Stab}(x)$, $gh(x) = g(x) = y$, so $h \in H$ and $g\text{Stab}(x) \subseteq H$.
-> For any $h \in H$, $g^{-1}h(x) = x$, so $h = g(g^{-1}h) \in g\text{Stab}(x)$ and $H \subseteq g\text{Stab}(x)$.
+> For any $h \in \text{Stab}(x)$, $gh \in g\text{Stab}(x)$ and $gh(x) = g(x) = y$, so $gh \in H$ and $g\text{Stab}(x) \subseteq H$.
+> For any $h \in H$, $g^{-1}h(x) = g^{-1}(y) = x$, so $g^{-1}h \in \text{Stab}(x)$ and $h = g(g^{-1}h) \in g\text{Stab}(x)$ and $H \subseteq g\text{Stab}(x)$.
+
+It means the coset $g\text{Stab}(x)$ is exactly the set of all $h$ which takes $x$ to $y$.
 
 > *Theorem.*{: .thm}
-> **Orbit-Stabilizer Theorem**. Let $G$ be a finite group acting on a finite set $X$. Then, for any $x \in X$,
+> **[Orbit-Stabilizer Theorem]**
+> Let $G$ be a finite group acting on a finite set $X$. Then, for any $x \in X$,
 >
 > $$
   \vert \text{orb}(x) \vert \vert \text{Stab}(x) \vert = \vert G \vert
@@ -166,7 +171,7 @@ which means if we apply $h_2$ then $h_1^{-1}$ to $x$ we will get back to $x$ as 
 so we can say the subgroup $\text{Stab}(x)$ is formed by elements in $H$ and every subgroup is a stablizer of some elements in $X$ formed in this way.
 The orbit of $x$ is the set of $y$ that $x$ can reach, it can map bijectively to one of the element in the set $\set{g_1\text{Stab}(x), g_2\text{Stab}(x), ...}$.
 By construction, the set is obviously pairwise disjoint (equivalently cosets are pairwise disjoint), has the same size as $\text{orb}(x)$ and any $g \in G$ is in one of its element.
-Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagrange's Theorem.
+Thus, the orbit-stabilizer theorem concluded from the above is a geometric form of Lagrange's Theorem.
 
 > *Corollary.*{: .cor}
 > If the action is transitive, then all the stabilizers have the same size.
@@ -175,11 +180,13 @@ Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagr
 >
 > For any $x \in X$, $\vert \text{orb}(x) \vert = \vert X \vert$, so $\vert \text{Stab}(x) \vert = \vert G \vert / \vert X \vert$.
 
+We can use this to check if have found all the stablizers of a certain $x$ under the action.
+
 ## Left Multiplication Actions
 
 ### Left regular action
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > Every group $G$ acts on itself by left multiplication faithfully and transitively.
 >
 > *Proof.*{: .prf}
@@ -195,12 +202,12 @@ Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagr
 > For any $x, y \in G$, as $yx^{-1} \in G$, $(yx^{-1})x = y$ so the action is transitive.
 
 > *Theorem.*{: .thm}
-> **Cayley's Theorem**.
+> **[Cayley's Theorem]**
 > Every group is isomorphic to a subgroup of some symmetric group.
 >
 > *Proof.*{: .prf}
 >
-> As $G$ actis on itself by left multiplication, there is a homomorphism $\varphi: G \to \text{Sym}\,G$ with $\ker \varphi = \set{e}$.
+> As $G$ acts on itself by left multiplication, there is a homomorphism $\varphi: G \to \text{Sym}\,G$ with $\ker \varphi = \set{e}$.
 > By the Isomorphism Theorem, $G \cong \text{Im}\,\varphi \le \text{Sym}\,G$.
 
 ### Left coset action
@@ -217,7 +224,7 @@ Thus, the orbit-stabilizer theorem concluded from it is a geometric form of Lagr
 > 2\. $g_1(g_2(aH)) = g_1(g_2aH) = (g_1g_2)aH$ by associativity of group
 >
 > So it is an action.
-> For any $aH$ and $bH$, as $ba^{-1} \in G$, $ba^{-1}aH = bH$ so the action is transitive.
+> For any cosets $aH$ and $bH$, as $ba^{-1} \in G$, $ba^{-1}aH = bH$ so the action is transitive.
 
 ## References
 
