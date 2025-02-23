@@ -20,7 +20,7 @@ Hence, we have the following definition of a group containing these matrices:
   \text{GL}_n(F) = \set{A \in M_{n \times n}(F) : \det(A) \not = 0}
   $$
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > $\det: \text{GL}_n(F) \to F^\ast$ is a surjective homomorphism.
 >
 > *Proof.*{: .prf}
@@ -46,12 +46,19 @@ Hence, we have the following definition of a group containing these matrices:
   \text{SL}_n(F) = \set{A \in \text{GL}_n(F) : \det(A) = 1}
   $$
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > The special linear group is a normal subgroup of general linear group, i.e. $\text{SL}_n(F) \trianglelefteq \text{GL}_n(F)$.
 >
 > *Proof.*{: .prf}
 >
 > Algebraically, kernel is always a normal subgroup.
+
+> *Proposition.*{: .prop}
+> $\text{GL}\_n(\mathbb{R}) / \text{SL}\_n(\mathbb{R}) \cong \mathbb{R}^\ast$.
+>
+> *Proof.*{: .prf}
+>
+> By Isomorphism Theorem, $\text{GL}\_n(\mathbb{R}) / \text{SL}\_n(\mathbb{R})$ is isomorphic to $\text{im}(\det) = \mathbb{R}^\ast$.
 
 ## Orthogonal Group
 
@@ -72,8 +79,8 @@ Recall the properties of transpose $A^\intercal$ of $A$,
   \text{O}_n = \set{A \in \text{GL}_n(\mathbb{R}) : A^\intercal A = I}
   $$
 
-> *Lemma.*{: .lem}
-> Orthogonal group is a group.
+> *Proposition.*{: .prop}
+> Orthogonal group is a group with respect to matrix multiplication.
 >
 > *Proof.*{: .prf}
 >
@@ -82,7 +89,7 @@ Recall the properties of transpose $A^\intercal$ of $A$,
 > For $A \in \text{O}_n$, $(A^\intercal)^\intercal A^\intercal = A A^\intercal = I$, so $A^\intercal \in \text{O}_n$ and $A^{-1} = A^\intercal$ is the inverse.
 > Matrix multiplication is associative.
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > $\det: \text{O}_n \to \set{\pm 1}$ is a surjective homomorphism.
 >
 > *Proof.*{: .prf}
@@ -111,7 +118,7 @@ Recall the properties of transpose $A^\intercal$ of $A$,
 
 The geometric property of orthogonal matrices is the following:
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .prop}
 > Orthogonal matrices are isometries, i.e.
 >
 > 1. $A$ preserves dot product, $(Ax)^\intercal (Ay) = x^\intercal y$.
