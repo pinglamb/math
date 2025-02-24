@@ -45,7 +45,7 @@ With the above, we can define the axioms of a group.
 > Formally, it is a map $\ast: S \times S \to S$.
 
 > *Definition.*{: .def}
-> A group is a set $G$ with a binary operation $\ast$ satifying the following axioms:
+> A group is a set $G$ with a binary operation $\ast$ satisfying the following axioms:
 >
 > 0\. **[Closure]** For all $a, b \in G$, we have
 >

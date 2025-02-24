@@ -42,7 +42,7 @@ We have $Q\_8 \le \text{SU}\_2 \le \text{SL}\_2(\mathbb{C}) \le \text{GL}\_2(\ma
   \end{align*}
   $$
 
-Hence, it is not isomorphic to $C\_8$, $C\_4 \times C\_2$ and $(C\_2 \times C\_2) \times C\_2$.
+Hence, it is not isomorphic to $C\_8$, $C\_4 \times C\_2$ and $C\_2 \times C\_2 \times C\_2$.
 
 > *Proposition.*{: .prop}
 > $Q\_8 \not \cong D\_8$.
@@ -50,6 +50,8 @@ Hence, it is not isomorphic to $C\_8$, $C\_4 \times C\_2$ and $(C\_2 \times C\_2
 > *Proof.*{: .prf}
 >
 > There are three elements $\Set{r^2, s, sr^2}$ of order $2$ in $D\_8$ but only one element $\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \end{pmatrix}$ of order $2$ in $Q\_8$.
+
+The rationale behind $Q\_8$ can be found in the study of [groups of order 8](groups-of-small-orders.md#groups-of-order-8).
 
 ## Generator
 

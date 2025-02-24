@@ -119,7 +119,7 @@ $$
 |f^{(n+1)}(x)| \le M \quad \text{for} \quad |x - a| \le d
 $$
 
-then the remainder of the Taylor series satifies the inequality
+then the remainder of the Taylor series satisfies the inequality
 
 $$
 |R_n(x)| \le {M \over (n+1)!}|x - a|^{n+1} \quad \text{for} \quad |x - a| \le d

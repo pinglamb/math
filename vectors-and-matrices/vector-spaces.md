@@ -14,7 +14,7 @@ This idea can be generalized to different kinds of quantities, not just about ma
 > and two _binary operations_:
 > an _addition_ $a + b$ of vectors $a$ and $b$,
 > and a _scalar multiplication_ $\lambda v$ of a scalar $\lambda$ and a vector $v$,
-> which together satify the following properties/axioms:
+> which together satisfy the following properties/axioms:
 >
 > + $V$ is _closed_ under addition, i.e.
 >
