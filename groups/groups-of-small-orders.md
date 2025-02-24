@@ -93,7 +93,7 @@ We can see them in practice in the study of groups of small orders.
 {: #groups-of-order-8}
 
 > *Theorem.*{: .thm}
-> Groups of order 8 is either
+> Every group of order 8 is either
 >
 > + abelian and isomorphic to one of $C\_8$, $C\_4 \times C\_2$, $C\_2 \times C\_2 \times C\_2$, or
 >
@@ -139,7 +139,7 @@ We can see them in practice in the study of groups of small orders.
 > We have $H = \Set{e, x, y, xy} \cong C\_2 \times C\_2$ and if $K = \Set{e, z}$, $HK = G$ and $H \cap K = \Set{e}$.
 > By Direct Product Theorem, the group is isomorphic to $C\_2 \times C\_2 \times C\_2$.
 
-## Groups of order p
+## Groups of order $p$
 
 > *Theorem.*{: .thm}
 > Suppose $G$ is a finite group of order $p$, where $p$ is prime.
@@ -152,7 +152,7 @@ We can see them in practice in the study of groups of small orders.
 > For $H \le G$, by Lagrange, $\|H\|$ divides $\|G\| = p$, hence $\|H\| = 1$ or $p$.
 > When $\|H\| = 1$, $H = \set{e}$. When $\|H\| = p$, $H = G$. .
 
-## Groups of order 2p
+## Groups of order $2p$
 
 > *Theorem.*{: .thm}
 > Every group of order $2p$, where $p$ is prime, is either cyclic or dihedral.
@@ -177,6 +177,51 @@ We can see them in practice in the study of groups of small orders.
 >
 > + $xyx^{-1} = y^2 = y^{-1}$, so $xy = y^{-1}x$, together with $x^2 = y^3 = e$, $G \cong D_6$.
 
+## Groups of order $p^n$
+
+> *Lemma.*{: .lem}
+> Every group of order $p^n$, where $p$ is prime, has non-trival centre.
+>
+> *Proof.*{: .prf}
+>
+> Consider the conjuation on $G$ by $G$. $Z(G)$ consists of elements that belong to conjugacy classes of size $1$.
+> As
+>
+> $$
+  |[g]| = |G| / |C_G(g)|
+  $$
+>
+> $\|[g]]\|$ is divisible by $p$. On the other hand, the conjugacy classes parition $G$, so
+>
+> $$
+  |G| = \sum_{g \in G} |[g]| = \text{# of conjugacy classes of size 1} + \sum_{|[g]| > 1} |[g]|
+  $$
+>
+> Thus, we have number of conjugacy classes of size $1$ divisible by $p$ and therefore at least $p - 1$ of them other than $[e]$.
+> Hence, $Z(G)$ is non-trival.
+
+> *Lemma.*{: .lem}
+> If $G / Z(G)$ is cyclic, $G = Z(G)$.
+>
+> *Proof.*{: .prf}
+>
+> If $G / Z(G)$ is cyclic, pick $g \in G$ such that $G / Z(G) = \Set{g^nZ(G) : n \in \mathbb{Z}}$.
+> Every element in $G$ is therefore of the form $g^n z$ for some integer $n$ and $z \in Z(G)$ and commutes with each other.
+> Hence, $G = Z(G)$.
+
+> *Theorem.*{: .thm}
+> Every group of order $p^2$, where $p$ is prime, is abelian and isomorphic to $C\_{p^2}$ or $C\_p \times C\_p$.
+>
+> *Proof.*{: .prf}
+>
+> The order of the centre $Z(G)$ can be $1, p, p^2$.
+> However, $1$ is not possible as the $Z(G)$ is non-trival.
+> Also, $p$ is not possible as $G / Z(G)$ will be cyclic and $G = Z(G)$.
+> Hence, $Z(G)$ has order $p^2$ and therefore $G = Z(G)$ and is abelian.
+>
+> From that, if $G$ has an element of order $p^2$, then $G \cong C\_{p^2}$. If $G$ has only element of order $p$, then $G \cong C\_p \times C\_p$.
+
 ## References
 
 * Alan F. Beardon _Algebra and Geometry_, 2005 - Chapter 12.1, 12.9
+* https://www.youtube.com/watch?v=jrcI9z9IOK8
