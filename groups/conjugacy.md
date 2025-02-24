@@ -133,6 +133,14 @@ i.e. $g \in Z(G) \iff [g] = \set{g}$.
 > By the fact the [kernel is the intersection of stabilizers](group-actions.md#kernel-is-intersection-of-stabilizers).
 
 > *Proposition.*{: .prop}
+> If $[g] = \Set{g}$, i.e. the orbit of $g$ has size $1$, then $g \in Z(G)$.
+>
+> *Proof.*{: .prf}
+>
+> If $[g] = \Set{g}$, it implies $hg = gh$ for all $h \in G$.
+> Therefore $g$ commutes with everything in $G$ and $g \in Z(G)$.
+
+> *Proposition.*{: .prop}
 > $G$ acts by conjugation on a subgroup $K$ if $K \trianglelefteq G$.
 >
 > *Proof.*{: .prf}
