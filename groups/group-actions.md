@@ -212,7 +212,7 @@ We can use this to check if have found all the stablizers of a certain $x$ under
 
 ### Left coset action
 
-> *Lemma.*{: .lem}
+> *Proposition.*{: .lem}
 > Let $H \le G$. Then $G$ acts on the left cosets of $H$ by left multiplication transitively.
 >
 > *Proof.*{: .prf}
@@ -225,6 +225,38 @@ We can use this to check if have found all the stablizers of a certain $x$ under
 >
 > So it is an action.
 > For any cosets $aH$ and $bH$, as $ba^{-1} \in G$, $ba^{-1}aH = bH$ so the action is transitive.
+
+## Cauchy's Theorem
+
+> *Theorem.*{: .thm}
+> **[Cauchy's Theorem]**
+> Let $G$ be a finite group and $p$ be a prime dividing $\|G\|$. Then $G$ has an element of order $p$.
+>
+> *Proof.*{: .prf}
+>
+> Consider the set of $p$-tuples of $G$, i.e. $G^p = G \times \cdots \times G$.
+> Let $X \subseteq G^p$ such that $X = \Set{(a\_1, ... a\_p) \in G^p : a\_1...a\_p = e}$.
+> If an element $b \in G$ has order $p$, then $(b, ..., b) \in X$.
+> The order of $X$ is $\|G\|^{p-1}$ as we can pick any elements as the first $p-1$ entries and the last is inverse of their product.
+>
+> Let $H = \langle h : h^p = e \rangle$. Consider $H$ acting on $X$ by "rotation", i.e. $h(a\_1, ..., a\_p) = (a\_2, ..., a\_p, a\_1)$.
+> This is an action as
+>
+> 0\. If $a\_1a\_2...a\_p = e$, $a^{-1} = a\_2..a\_p$, so $a\_2...a\_pa\_1 = e$ and therefore $h(a\_1, ..., a\_p) \in X$.
+>
+> 1\. $e(a\_1, ..., a\_p) = (a\_1, ..., a\_p)$.
+>
+> 2\. $h^n(a\_1, ..., a\_p) = (h \cdots h)(a\_1, ..., a\_p))$.
+>
+> By Orbit-Stabilizer Theorem,
+>
+> $$
+  |\text{orb}(a_1, ... a_p)| \cdots |\text{orb}(a_1, ... a_p)| = |H| = p
+  $$
+>
+> So, all orbits must have size $1$ or $p$ and their sum is $\|X\|$.
+> We have $(e, ..., e)$ has orbit size $1$, there must be at least $p-1$ other orbits of size $1$.
+> These look like $\Set{(a, a, ..., a)}$ for some $a \in G$, which has order $p$.
 
 ## References
 
