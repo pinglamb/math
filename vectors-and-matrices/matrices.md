@@ -185,30 +185,6 @@ in which the coefficients are the components of $\mathbf{x}$.
   \end{align*}
   $$
 
-## Hermitian Conjugate
-
-> *Definition.*{: .def}
-> Let $\mathsf{A} = \Set{A_{ij}}$ be a matrix, with $A_{ij} \in \mathbb{C}$.
-> The **Hermitian conjugate** or **conjugate transpose** or **adjoint** is defined to be
->
-> $$
-  \mathsf{A}^\dagger = (\mathsf{A}^\intercal)^\ast = (\mathsf{A}^\ast)^\intercal
-  $$
-
-> *Property.*{: .prop}
-> Similarly to transposes,
->
-> $$
-  \mathsf{A}^{\dagger\dagger} = \mathsf{A}
-  $$
-
-> *Property.*{: .prop}
-> Let $\mathsf{A} = \Set{A_{ij}}$ and $\mathsf{B} = \Set{B_{ij}}$ be matrices such that $\mathsf{AB}$ exists, then
->
-> $$
-  (\mathsf{A}\mathsf{B})^\dagger = \mathsf{B}^\dagger \mathsf{A}^\dagger
-  $$
-
 ## Symmetric Matrices
 
 > *Definition.*{: .def}
