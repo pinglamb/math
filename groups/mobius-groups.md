@@ -135,6 +135,13 @@ Finally, [any Möbius map with at least three fixed points is the identity](../v
 
 ## Acting on $C\_\infty$
 
+> *Definition.*{: .def}
+> An action of $G$ on $X$ is called **three-transitive** if there is always a $g \in G$ such that for any two triples $x\_1, x\_2, x\_3$ and $y\_1, y\_2, y\_3$ of distinct elements of $X$, $g(x\_i) = y\_i$.
+> If this $g$ is unique, the action is called **sharply three-transitive**.
+
+> *Proposition.*{: .prop}
+> The Möbius group $M$ acts sharply three-transitively on $C\_\infty$.
+
 ## References
 
 * [Julia Goedecke _Part IA - Groups_, 2017 - Chapter 4, 5, 7](https://www.julia-goedecke.de/pdf/GroupsNotes.pdf)
