@@ -29,8 +29,8 @@ The polyhedral groups are the symmetrices of the five platonic solids.
 > *Proof.*{: .prf}
 >
 > Choose a vertex as $1$. As the action is transitive, $\|\text{orb}(1)\| = 8$.
-> The rotations that fixes $1$ is those in the axis through $1$ and the diagonally opposite vertex,
-> so together with the identity, there are three in total.
+> The rotations that fixes $1$ are those in the axis through $1$ and the diagonally opposite vertex,
+> so there are three of them and $\|\text{Stab}(1)\| = 3$.
 >
 > Hence,
 >
@@ -71,7 +71,72 @@ The polyhedral groups are the symmetrices of the five platonic solids.
 
 ## Octahedron
 
+> *Proposition.*{: .prop}
+> The group $G$ of all symmetries of the octahedron is isomorphic to $S\_4 \times C\_2$.
+>
+> *Proof.*{: .prf}
+>
+> Put each vertex of the octahedron on the centre of a face of the cube, and vice versa,
+> the group of symmetries is isomorphic to that of cube.
+>
+> ![Cube & Octahedron](../images/groups-cube-octahedron.png)
+
 ## Tetrahedron
+
+> *Proposition.*{: .prop}
+> Let $G^{+}$ be the group of all rotations of a tetrahedron, acting on the vertices. Then
+>
+> $$
+  |G^{+}| = 12
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Choose a vertex as $1$. As the action is transitive, $\|\text{orb}(1)\| = 4$.
+> The rotations that fixes $1$ is those in the axis through $1$ and the centre of opposite face,
+> so there are three of them and $\|\text{Stab}(1)\| = 3$.
+>
+> Hence,
+>
+> $$
+  |G^{+}| = |\text{orb}(1)| \cdot |\text{Stab}(1)| = 4 \cdot 3 = 12
+  $$
+
+> *Proposition.*{: .prop}
+> $G^{+} \cong A\_4$.
+>
+> *Proof.*{: .prf}
+>
+> We have
+>
+> $$
+  \begin{align*}
+  (2\;3\;4), (2\;4\;3) &\in \text{Stab}(1) \\
+  (1\;3\;4), (1\;4\;3) &\in \text{Stab}(2) \\
+  (1\;2\;4), (1\;4\;2) &\in \text{Stab}(3) \\
+  (1\;2\;3), (1\;3\;2) &\in \text{Stab}(4) \\
+  \end{align*}
+  $$
+>
+> Also, the rotations in axes through midpoints of opposite edges give $(1\;2)(3\;4), (1\;4)(2\;3), (1\;3)(2\;4)$.
+> Hence, $G^{+} \cong A\_4$.
+
+> *Proposition.*{: .prop}
+> The group $G$ of all symmetries of the tetrahedron is isomorphic to $S\_4$.
+>
+> *Proof.*{: .prf}
+>
+> Let $G$ acts on the vertices of the tetrahedron, a homomorphism $\phi: G \to S\_4$.
+> If all four vertices are fixed, the whole tetrahedron is fixed, so $\ker \phi = \Set{e}$ and $\phi$ is injective.
+>
+> The reflection throught $1$ and $2$ swaps $3$ and $4$, so
+>
+> $$
+  \text{Stab}(1) = \langle (2\;3\;4), (3\;4) \rangle \cong D_6
+  $$
+>
+> Therefore, $\|G\| = 4 \cdot 6 = 24$ and $\phi$ is surjective.
+> Hence, $\phi$ is an isomorphism and $G \cong S\_4$.
 
 ## References
 
