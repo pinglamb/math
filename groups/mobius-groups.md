@@ -133,6 +133,16 @@ Therefore,
 
 Finally, [any Möbius map with at least three fixed points is the identity](../vectors-and-matrices/mobius-transformations.md#identity-three-fixed-points).
 
+> *Proposition.*{: .prop}
+> Let $f$ be a Möbius map fixes $w$, then for any Möbius map $h$, the conjugate $hfh^{-1}$ fixes $h(w)$.
+> If otherwise $hfh^{-1}$ fixes $w$, then $f$ fixes $h^{-1}(w)$.
+>
+> *Proof.*{: .prf}
+>
+> If $f(w) = w$, $hfh^{-1}(h(w)) = hf(w) = h(w)$.
+>
+> If $hfh^{-1}(w) = w$, $f(h^{-1}(w)) = h^{-1}(w)$.
+
 ## Acting on $C\_\infty$
 
 > *Definition.*{: .def}
