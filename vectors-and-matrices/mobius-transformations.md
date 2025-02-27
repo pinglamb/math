@@ -222,6 +222,22 @@ It suggests that the general Möbius map should have three degrees of freedom.
 > Suppose $f$ and $f'$ are Möbius map such that $f(z\_i) = w\_i = f'(z\_i)$.
 > As the map $f'^{-1}f$ fixes each $z\_i$, it is the identity map and hence $f = f'$.
 
+This can be used to construct the Möbius map provided three distinct points. If we have
+
+$$
+\begin{align*}
+f(z_1) &= 0 \\
+f(z_2) &= \infty \\
+f(z_3) &= 1 \\
+\end{align*}
+$$
+
+Then
+
+$$
+f(z) = {z_3 - z_2 \over z_3 - z_1} { z - z_1 \over z - z_2}
+$$
+
 ## Decomposition
 
 > *Theorem.*{: .thm}
