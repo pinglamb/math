@@ -176,6 +176,34 @@ This notation is handy for deriving basic laws of differentiation.
 >
 > Hence, $g \circ f$ is differentiable at $x = a$ and its derivative is $g'(f(a))f'(a)$.
 
+## Leibniz's Rule
+
+> *Theorem.*{: .thm}
+> **[Leibniz's Rule]**
+> If $f = uv$, then
+>
+> $$
+  f^{(n)}(x) = \sum_{r=0}^n {n \choose r} u^{(r)} v^{(n-r)}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> When $n = 2$, it is true by the Product Rule.
+>
+> Assume it is true when $n = k$. When $n = k+1$,
+>
+> $$
+  \begin{align*}
+  f^{(k+1)}(x) &= \sum_{r=0}^k {k \choose r} (u^{(r)}v^{(k-r)})' \\
+  &= \sum_{r=0}^k {k \choose r} (u^{(r+1)}v^{(k-r)} + u^{(r)}v^{(k-r+1)}) \\
+  &= u^{(0)}v^{(k+1)} + \sum_{r=1}^{k} \left({k \choose r-1} + {k \choose r}\right) u^{(r)}v^{(k+1-r)} + u^{(k+1)}v^{(0)} \\
+  &= \sum_{r=0}^{k+1} {k+1 \choose r} u^{(r)}v^{(k+1-r)}
+  \end{align*}
+  $$
+>
+> By induction, Leibniz's Rule is true for all positive integers $n$.
+
+
 ## References
 
 * [Gerald B. Folland _Advanced Calculus_, 2022 - Chapter 2](http://www.math.washington.edu/~folland/Homepage/AdvCalc24.pdf)
