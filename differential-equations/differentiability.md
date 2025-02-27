@@ -78,86 +78,103 @@ so $\eqref{eq1}$ holds and it is like the usual definition.
 Also, as $E(h) / h$ vanishes as $h \to 0$, so as $E(h)$ itself and hence so does $f(a + h) - f(a)$.
 It means differentiability at $a$ implies continuity at $a$.
 
-## Little-o notation
+## Little-o Notation
 
-The statement $f(h) = o(g(h))$ as $h \to 0$ means that
+> *Definition.*{: .def}
+> $f(h) = o(g(h))$ as $h \to 0$ if
+>
+> $$
+  \lim_{h \to 0} {f(h) \over g(h)} = 0
+  $$
 
-$$
-\lim_{h \to 0} {f(h) \over g(h)} = 0
-$$
-
-Some general properties are as follow (suppose $h \to 0$):
-
-* If $f(h) = o(h^a)$ and $g(h) = o(h^a)$ then $f(h) + g(h) = o(h^a)$
-* If $f(h) = o(h^a)$ and $g(h) = o(h^b)$ then $f(h)g(h) = o(h^{a+b})$
-* If $f(h) = o(h)$ then $cf(h) = o(h)$
-* If $f_1(h) = o(f_2(h))$ and $f_2(h) = o(f_3(h))$ then $f_1(h) = o(f_3(h))$
-* If $f(h) = o(h^a)$ where $a \in \mathbb{N}$ then $f(h) = o(h)$
+> *Property.*{: .prop}
+>
+> + If $f(h) = o(h^a)$ and $g(h) = o(h^a)$ then $f(h) + g(h) = o(h^a)$
+>
+> + If $f(h) = o(h^a)$ and $g(h) = o(h^b)$ then $f(h)g(h) = o(h^{a+b})$
+>
+> + If $f(h) = o(h)$ then $cf(h) = o(h)$
+>
+> + If $f_1(h) = o(f_2(h))$ and $f_2(h) = o(f_3(h))$ then $f_1(h) = o(f_3(h))$
+>
+> + If $f(h) = o(h^a)$ where $a \in \mathbb{N}$ then $f(h) = o(h)$
 
 Base on the definition, we can see that $E(h) = o(h)$ and we have the following theorem:
 
-If $f$ is differentiable at $x = a$, then
-
-$$
-f(a + h) = f(a) + f'(a)h + o(h)
-$$
-
-Conversely, if there exist constants $A$ and $B$ such that
-
-$$
-f(a + h) = A + Bh + o(h)
-$$
-
-then $f$ is differentiable at $a$, with $A = f(a)$ and $B = f'(a)$.
+> *Theorem.*{: .thm}
+> If $f$ is differentiable at $x = a$, then
+>
+> $$
+  f(a + h) = f(a) + f'(a)h + o(h)
+  $$
+>
+> Conversely, if there exist constants $A$ and $B$ such that
+>
+> $$
+  f(a + h) = A + Bh + o(h)
+  $$
+>
+> then $f$ is differentiable at $a$, with $A = f(a)$ and $B = f'(a)$.
 
 This theorem means that the tangent line is a good linear approximation to $f$ and the tangent line is the _only_ line that gives such a good approximation.
 
 This notation is handy for deriving basic laws of differentiation.
 
-### Product rule proof
+> *Theorem.*{: .thm}
+> **[Product Rule]**
+> If $f$ and $g$ are differentiable at $x = a$,
+> then $fg$ is differentiable and the derivative is $f(a)g'(a) + f'(a)g(a)$.
+>
+> *Proof.*{: .prf}
+>
+> Given
+>
+> $$
+  f(a + h) = f(a) + f'(a)h + o(h) \quad \text{and} \quad g(a + h) = g(a) + g'(a)h + o(h)
+  $$
+>
+> Therefore,
+>
+> $$
+  \begin{align*}
+  f(a + h)g(a + h) &= [f(a) + f'(a)h + o(h)][g(a) + g'(a)h + o(h)] \\
+  &= f(a)g(a) + [f(a)g'(a) + f'(a)g(a)]h \\
+  &\quad \quad + \left\{ [f(a) + f'(a)h]o(h) + [g(a) + g'(a)h]o(h) + o(h^2) \right\} \\
+  &= f(a)g(a) + [f(a)g'(a) + f'(a)g(a)]h + o(h)
+  \end{align*}
+  $$
+>
+> Hence, $fg$ is differentiable at $x = a$ and its derivative is $f(a)g'(a) + f'(a)g(a)$.
 
-If $f$ and $g$ are differentiable at $x = a$, then
-
-$$
-f(a + h) = f(a) + f'(a)h + o(h) \quad \text{and} \quad g(a + h) = g(a) + g'(a)h + o(h)
-$$
-
-Hence,
-
-$$
-\begin{align*}
-f(a + h)g(a + h) &= [f(a) + f'(a)h + o(h)][g(a) + g'(a)h + o(h)] \\
-&= f(a)g(a) + [f(a)g'(a) + f'(a)g(a)]h + \left\{ [f(a) + f'(a)h]o(h) + [g(a) + g'(a)h]o(h) + o(h^2) \right\} \\
-&= f(a)g(a) + [f(a)g'(a) + f'(a)g(a)]h + o(h)
-\end{align*}
-$$
-
-By the theorem, $fg$ is differentiable at $x = a$ and its derivative is $f(a)g'(a) + f'(a)g(a)$.
-
-### Chain rule proof
-
-If $f$ is differentiable at $x = a$ and $g$ is differentiable at $x = f(a)$, we have
-
-$$
-f(a + h) = f(a) + f'(a)h + o(h) \quad \text{and} \quad g(f(a) + k) = g(f(a)) + g'(f(a))k + o(k)
-$$
-
-Substitude $k = f(a + h) - f(a)$ in the second formula,
-
-$$
-g(f(a + h)) = g(f(a)) + g'(f(a))[f(a + h) - f(a)] + o(f(a + h) - f(a))
-$$
-
-Then substitude $f(a + h) - f(a) = f'(a)h + o(h)$,
-
-$$
-\begin{align*}
-g(f(a + h)) &= g(f(a)) + g'(f(a))[f'(a)h + o(h)] + o(f'(a)h + o(h))
-&= g(f(a)) + [g'(f(a))f'(a)]h + o(h)
-\end{align*}
-$$
-
-By the theorem, $g \circ f$ is differentiable at $x = a$ and its derivative is $g'(f(a))f'(a)$.
+> *Theorem.*{: .thm}
+> **[Chain Rule]**
+> If $f$ is differentiable at $x = a$ and $g$ is differentiable at $x = f(a)$,
+> then $g \circ f$ is differentiable at $x = a$ and its derivative is $g'(f(a))f'(a)$
+>
+> *Proof.*{: .prf}
+>
+> Given
+>
+> $$
+  f(a + h) = f(a) + f'(a)h + o(h) \quad \text{and} \quad g(f(a) + k) = g(f(a)) + g'(f(a))k + o(k)
+  $$
+>
+> Substitude $k = f(a + h) - f(a)$ in the second formula,
+>
+> $$
+  g(f(a + h)) = g(f(a)) + g'(f(a))[f(a + h) - f(a)] + o(f(a + h) - f(a))
+  $$
+>
+> Then substitude $f(a + h) - f(a) = f'(a)h + o(h)$,
+>
+> $$
+  \begin{align*}
+  g(f(a + h)) &= g(f(a)) + g'(f(a))[f'(a)h + o(h)] + o(f'(a)h + o(h)) \\
+  &= g(f(a)) + [g'(f(a))f'(a)]h + o(h) \\
+  \end{align*}
+  $$
+>
+> Hence, $g \circ f$ is differentiable at $x = a$ and its derivative is $g'(f(a))f'(a)$.
 
 ## References
 
