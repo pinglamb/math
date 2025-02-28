@@ -1,9 +1,10 @@
 ---
 layout: base
-title: Differentiability &#124; Differential Equations
+title: Exponential Function &#124; Differential Equations
 ---
 
 # Exponential Function
+{: .page-title}
 
 The exponential function $\exp(x) = e^x$ plays an important role in differential equations because it is the unqiue function satisfying
 
@@ -11,7 +12,7 @@ $$
 f'(x) = f(x) \quad \text{and} \quad f(0) = 1
 $$
 
-We call it an _eigenfunction_ of the differential operator.
+We call it an **eigenfunction** of the differential operator.
 
 ## From Calculus
 
@@ -57,4 +58,4 @@ e^x &= \lim_{n \to \infty} \sum_{r=0}^\infty {n \choose r} \left( {x \over n} \r
 \end{align*}
 $$
 
-which matches the power series definition of $\exp(x)$ [here](../vectors-and-matrices/exponential-cosine-sine-functions.md).
+which matches the [power series definition](../vectors-and-matrices/exponential-cosine-sine-functions.md) of $\exp(x)$.

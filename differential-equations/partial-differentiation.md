@@ -4,6 +4,7 @@ title: Partial Differentiation &#124; Differential Equations
 ---
 
 # Partial Differentiation
+{: .page-title}
 
 > *Theorem.*{: .thm}
 > **[Clairaut's Theorem]**
