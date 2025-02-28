@@ -139,23 +139,23 @@ The question now is at what circumstances is a function $f$ equal to the sum of 
   \lim_{n \to \infty} T_n(x) = \lim_{n \to \infty} [f(x) - R_n(x)] = f(x) - \lim_{n \to \infty} R_n(x) = f(x)
   $$
 
-### Taylor's inequality
-
-If
-
-$$
-|f^{(n+1)}(x)| \le M \quad \text{for} \quad |x - a| \le d
-$$
-
-then the remainder of the Taylor series satisfies the inequality
-
-$$
-|R_n(x)| \le {M \over (n+1)!}|x - a|^{n+1} \quad \text{for} \quad |x - a| \le d
-$$
+> *Theorem.*{: .thm}
+> **[Taylor's Inequality]**
+> If
+>
+> $$
+  |f^{(n+1)}(x)| \le M \quad \text{for} \quad |x - a| \le d
+  $$
+>
+> then the remainder $R_n(x)$ of the Taylor series satisfies the inequality
+>
+> $$
+  |R_n(x)| \le {M \over (n+1)!}|x - a|^{n+1} \quad \text{for} \quad |x - a| \le d
+  $$
 
 It means if we can find a bound of $(n+1)$-th derivative, we can use that to bound $R_n(x)$ and potentially prove its limit is $0$ by Squeeze Theorem.
 
-### Integral Remainer I
+## Integral Remainer
 
 Taylor's Theorem can be thought as a higher-order version of the tangent line approximation discussed in [differentiability](differentiability.md).
 It states that a function $f$ of class $C^n$ on an interval $I$ containing the point $x = a$ is the sum of a certain polynomial of degree $n$
@@ -171,64 +171,79 @@ $$
 
 From this, we can see that $R_n(h) = o(h^{n+1})$ if $f^{n+1}$ exists.
 
-## Binomial series
+## Binomial Series
 
-For $f(x) = (1 + x)^k$ where $k$ can be any real number, we have
-
-$$
-\begin{align*}
-f(0) &= 1 \\
-f'(0) &= k \\
-f''(0) &= k(k-1) \\
-\end{align*}
-$$
-
-Therefore, the Taylor series of $f(x)$, which is called binomial series, is
-
-$$
-(1 + x)^k = \sum_{n=0}^\infty {k \choose n} x^n
-$$
-
-When $k$ is non-negative integer, the series is finite as the terms with $n > k$ is $0$ and it is the same as the typical binonial expansion.
-
-Otherwise, the series is infinite and by Ratio test,
-
-$$
-\lim_{n \to \infty} \left| {a_{n+1} \over a_n}\right| = \lim_{n \to \infty} {|k - n| \over n + 1}|x| = |x|
-$$
-
-so the series converge if $\|x\| < 1$.
+> *Proposition.*{: .prop}
+> **[Binomial Series]**
+> If $k$ is any real number and $\vert x \vert < 1$, then
+>
+> $$
+  (1 + x)^k = \sum_{r=0}^\infty {k \choose r} x^k = 1 + kx + {k(k-1) \over 2!}x^2 + \cdots
+  $$
+>
+> *Proof.*{: .prf}
+>
+> For $f(x) = (1 + x)^k$ where $k$ can be any real number, we have
+>
+> $$
+  \begin{align*}
+  f(0) &= 1 \\
+  f'(0) &= k \\
+  f''(0) &= k(k-1) \\
+  &\vdots \\
+  f^{(r)}0) &= k(k-1)\cdots(k-r+1) \\
+  \end{align*}
+  $$
+>
+> Therefore, the Maclaurin series of $f(x)$ is
+>
+> $$
+  (1 + x)^k = \sum_{r=0}^\infty {k \choose r} x^r
+  $$
+>
+> When $k$ is non-negative integer, the series is finite as the terms with $n > k$ is $0$ and it is the same as the typical binonial expansion.
+> Otherwise, the series is infinite and by Ratio test,
+>
+> $$
+  \lim_{n \to \infty} \left| {a_{n+1} \over a_n}\right| = \lim_{n \to \infty} {|k - n| \over n + 1}|x| = |x|
+  $$
+>
+> so the series converge if $\|x\| < 1$.
 
 It is possible to prove that the remainder term $R_n(x)$ approaches $0$, but it turns out to be difficult.
 
-There is an easier method to prove that they equal to each other (works for other series as well).
-Let $g(x)$ be the series, and $h(x) = g(x) / f(x)$. If $h'(x) = 0$, $h(x)$ is a constant function and $h(0) = 1$, we can conclude $f(x) = g(x)$.
+> *Proposition.*{: .prop}
+> The binonimal series is equal to $(1 + x)^k$.
+>
+> *Proof.*{: .prf}
+>
+> Let $g(x)$ be the binomial series, we have
+>
+> $$
+  g'(x) = {k g(x) \over 1 + x}
+  $$
+>
+> Let $h(x) = (1 + x)^{-k}g(x)$, $h(0) = 1$, and we have
+>
+> $$
+  h'(x) = -(1+x)^{-k}{k g(x) \over 1+x} + (1+x)^{-k}g'(x) = 0
+  $$
+>
+> Hence, $h(x)$ is a constant function, i.e. $h(x) = 1$, and $(1 + x)^k = \sum_{n=0}^{\infty} {k \choose n} x^n$.
 
-For example, by differentiating $g(x) = \sum_{n=0}^{\infty} {k \choose n} x^n$, we have
+This method of proving the function equals to its Taylor expansion can be used for other series as well.
 
-$$
-g'(x) = {k g(x) \over 1 + x}
-$$
-
-Let $h(x) = (1 + x)^{-k}g(x)$, we have
-
-$$
-h'(x) = -(1+x)^{-k}{k g(x) \over 1+x} + (1+x)^{-k}g'(x) = 0
-$$
-
-and $h(0) = 1$. Hence, $h(x) = 1$ and $(1 + x)^k = \sum_{n=0}^{\infty} {k \choose n} x^n$.
-
-## List of important series
+## List of Important Series
 
 $$
 \begin{align*}
-{1 \over 1-x} &= \sum_{n=0}^\infty x^n = 1 + x + x^2 + x^3 + ... \quad (R = 1) \\
-e^x &= \sum_{n=0}^\infty {x^n \over n!} = 1 + {x \over 1!} + {x^2 \over 2!} + {x^3 \over 3!} + ... \quad (R = \infty) \\
-\sin x &= \sum_{n=0}^\infty (-1)^n {x^{2n+1} \over (2n+1)!} = x - {x^3 \over 3!} + {x^5 \over 5!} - {x^7 \over 7!} + ... \quad (R = \infty) \\
-\cos x &= \sum_{n=0}^\infty (-1)^n {x^{2n} \over (2n)!} = 1 - {x^2 \over 2!} + {x^4 \over 4!} - {x^6 \over 6!} + ... \quad (R = \infty) \\
-\tan^{-1} x &= \sum_{n=0}^\infty (-1)^n {x^{2n+1} \over 2n+1} = x - {x^3 \over 3} + {x^5 \over 5} - {x^7 \over 7} + ... \quad (R = 1) \\
-\ln (1+x) &= \sum_{n=1}^\infty (-1)^{n-1}{x^n \over n} = x - {x^2 \over 2} + {x^3 \over 3} - {x^4 \over 4} + ... \quad (R = 1) \\
-(1+x)^k &= \sum_{n=0}^\infty {k \choose n} x^n = 1 + kx + {k(k-1) \over 2!}x^2 + {k(k-1)(k-2) \over 3!}x^3 + ... \quad (R = 1) \\
+{1 \over 1-x} &= \sum_{n=0}^\infty x^n && = 1 + x + x^2 + x^3 + \cdots & (R = 1) \\
+e^x &= \sum_{n=0}^\infty {x^n \over n!} && = 1 + {x \over 1!} + {x^2 \over 2!} + {x^3 \over 3!} + \cdots & (R = \infty) \\
+\sin x &= \sum_{n=1}^\infty (-1)^n {x^{2n+1} \over (2n+1)!} && = x - {x^3 \over 3!} + {x^5 \over 5!} - {x^7 \over 7!} + \cdots & (R = \infty) \\
+\cos x &= \sum_{n=0}^\infty (-1)^n {x^{2n} \over (2n)!} && = 1 - {x^2 \over 2!} + {x^4 \over 4!} - {x^6 \over 6!} + \cdots & (R = \infty) \\
+\tan^{-1} x &= \sum_{n=0}^\infty (-1)^n {x^{2n+1} \over 2n+1} && = x - {x^3 \over 3} + {x^5 \over 5} - {x^7 \over 7} + \cdots & (R = 1) \\
+\ln (1+x) &= \sum_{n=1}^\infty (-1)^{n-1}{x^n \over n} && = x - {x^2 \over 2} + {x^3 \over 3} - {x^4 \over 4} + \cdots & (R = 1) \\
+(1+x)^k &= \sum_{n=0}^\infty {k \choose n} x^n && = 1 + kx + {k(k-1) \over 2!}x^2 + {k(k-1)(k-2) \over 3!}x^3 + \cdots & (R = 1) \\
 \end{align*}
 $$
 
