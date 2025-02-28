@@ -5,57 +5,55 @@ title: Partial Differentiation &#124; Differential Equations
 
 # Partial Differentiation
 
-## Clairaut's Theorem
-
-If $f$ has continuous second partial derivatives on a disk $D$,
-
-$$
-{\partial^2 f \over \partial x \partial y} = {\partial^2 f \over \partial y \partial x}
-$$
+> *Theorem.*{: .thm}
+> **[Clairaut's Theorem]**
+> If $f$ has continuous second partial derivatives on a disk $D$,
+>
+> $$
+  {\partial^2 f \over \partial x \partial y} = {\partial^2 f \over \partial y \partial x}
+  $$
 
 ## Chain Rule
 
-Informally, we have
+> *Proposition.*{: .prop}
+> For function $f(x, y)$ with $x = g(t)$ and $y = h(t)$,
+>
+> $$
+  {\mathrm{d}f \over \mathrm{d}t} = {\partial f \over \partial x} {\mathrm{d}x \over \mathrm{d}t} + {\partial f \over \partial y} {\mathrm{d}y \over \mathrm{d}t}
+  $$
 
-$$
-\partial f = {\partial f \over \partial x} \delta x + {\partial f \over \partial y} \delta y + o(\delta x, \delta y)
-$$
+> *Proposition.*{: .prop}
+> For function $f(x, y)$ with $x = g(s, t)$ and $y = h(s, t)$,
+>
+> $$
+  {\partial f \over \partial t} = {\partial f \over \partial x} {\partial x \over \partial t} + {\partial f \over \partial y} {\partial y \over \partial t}
+  $$
 
-When we have $x = g(t)$ and $y = h(t)$,
-
-$$
-{\mathrm{d}f \over \mathrm{d}t} = {\partial f \over \partial x} {\mathrm{d}x \over \mathrm{d}t} + {\partial f \over \partial y} {\mathrm{d}y \over \mathrm{d}t}
-$$
-
-When we have $x = g(s, t)$ and $y = h(s, t)$,
-
-$$
-{\partial f \over \partial t} = {\partial f \over \partial x} {\partial x \over \partial t} + {\partial f \over \partial y} {\partial y \over \partial t}
-$$
-
-For implicit function $F(x, y, z) = 0$, by the chain rule, we get
-
-$$
-{\partial F \over \partial x} =
-{\partial F \over \partial x} {\partial x \over \partial x} +
-{\partial F \over \partial y} {\partial y \over \partial x} +
-{\partial F \over \partial z} {\partial z \over \partial x}
-= 0
-$$
-
-with $y$ holding as constant. Thus,
-
-$$
-{\partial z \over \partial x} \Bigg\rvert_{y} = - {\partial F / \partial x \over \partial F / \partial z}
-$$
+> *Proposition.*{: .prop}
+> For implicit function $F(x, y, z) = 0$,
+>
+> $$
+  {\partial F \over \partial x} =
+  {\partial F \over \partial x} {\partial x \over \partial x} +
+  {\partial F \over \partial y} {\partial y \over \partial x} +
+  {\partial F \over \partial z} {\partial z \over \partial x}
+  = 0
+  $$
+>
+> With $y$ holding as constant,
+>
+> $$
+  {\partial z \over \partial x} \Bigg\rvert_{y} = - {\partial F / \partial x \over \partial F / \partial z}
+  $$
 
 Be noted the extra negative sign makes it different from that in single variable calculus.
 
-An interesting relationship between them is that their product is
-
-$$
-{\partial x \over \partial y} \Bigg\rvert_{z} {\partial y \over \partial z} \Bigg\rvert_{x} {\partial z \over \partial x} \Bigg\rvert_{y} = -1
-$$
+> *Proposition.*{: .prop}
+> For implicit function $F(x, y, z) = 0$,
+>
+> $$
+  {\partial x \over \partial y} \Bigg\rvert_{z} {\partial y \over \partial z} \Bigg\rvert_{x} {\partial z \over \partial x} \Bigg\rvert_{y} = -1
+  $$
 
 ## Reciprocals
 
