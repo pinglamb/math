@@ -4,30 +4,31 @@ title: Power Series &#124; Differential Equations
 ---
 
 # Power Series
+{: .page-title}
 
-A power series in $(x - a)$ or a power series centered at $a$ or a power series about $a$ is of the form
-
-$$
-\sum_{n=0}^{\infty} c_n (x - a)^n = c_0 + c_1 (x - a) + c_2 (x - a)^2 + ...
-$$
-
-## Convergence
+> *Definition.*{: .def}
+> A **power series** in $(x - a)$ (or centered at $a$ or about $a$) is a series of the form
+>
+> $$
+  \sum_{n=0}^{\infty} c_n (x - a)^n = c_0 + c_1 (x - a) + c_2 (x - a)^2 + ...
+  $$
 
 As it is an infinite sum, the domain of it is the interval of $x$ where the series converges.
 
-For a given power series about $a$, there are only three possibilities
+For a given power series about $a$, there are only three possibilities:
 
 1. The series converges only when $x = a$
 
 2. The series converges for all $x$
 
-3. There is a postiive number $R$ such that the series converges if $\|x - a\| < R$ and diverges if $\|x - a\| > R$
+3. There is a postiive number $R$ such that the series converges for $\|x - a\| < R$ and diverges for $\|x - a\| > R$
 
-For (3), $R$ is called the radius of convergence (therefore the power series is said to be about $a$).
+> *Definition.*{: .def}
+> The **radius of convergence** is the positive number $R$ such that the series converges for $\|x - a\| < R$ and diverges for $\|x - a\| > R$.
 
 For the edge case when $x - a = \pm R$, the convergence check has to be done separately.
 
-## Representation of functions
+## Power Series Representation
 
 Power series can be used to represent functions, for example
 
@@ -37,17 +38,15 @@ $$
 
 with domain $\|x\| < 1$.
 
-Base on that, we can derive the power series for some functions, such as
+Base on that, we can derive the power series for other functions, such as
 
 $$
-{1 \over x+2} = \sum {1 \over 2\left[1 - \left(-{x \over 2}\right) \right]} = {1 \over 2} \sum_{n=0}^{\infty} \left(-{x \over 2}\right)^n = \sum_{n=0}^{\infty} {(-1)^n \over 2^{n+1}}x^n
+{1 \over x+2} = {1 \over 2\left[1 - \left(-{x \over 2}\right) \right]} = {1 \over 2} \sum_{n=0}^{\infty} \left(-{x \over 2}\right)^n = \sum_{n=0}^{\infty} {(-1)^n \over 2^{n+1}}x^n
 $$
 
 which converges if $\|-x/2\| < 1$, meaning $\|x\| < 2$.
 
-## Differentiation and Integration
-
-We can differentiate and integrate a power series term-by-term to obtain another power series, which has the same radii of convergence as the original power series.
+We can also differentiate and integrate a power series term-by-term to obtain another power series, which has the same radii of convergence as the original power series.
 
 With this, we can derive the power series for some functions, for example, as
 
@@ -73,43 +72,72 @@ $$
 
 Substitude $x = 0$, we have $C = \ln 1 = 0$ and the radius of convergence is $R = 1$.
 
-## Taylor series
+## Taylor Series
 
-In terms of general function $f(x)$, assume it can be represented by a power series, keep differentiating them we will find that
+> *Theorem.*{: .thm}
+> If $f$ has a power series representation (expansion) at $a$, that is, if
+>
+> $$
+  f(x) = \sum_{n=0}^\infty c_n (x-a)^n \quad |x - a| < R
+  $$
+>
+> then
+>
+> $$
+  c_n = {f^{(n)}(a) \over n!}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By differentiating both side of the expansion repeatedly.
 
-$$
-c_n = {f^{(n)}(a) \over n!}
-$$
+> *Definition.*{: .def}
+> The **Taylor series** of the function $f$ at $a$ is defined by
+>
+> $$
+  f(x) = f(a) + {f'(a) \over 1!}(x - a) + {f''(a) \over 2!}(x - a)^2 + \cdots
+  $$
 
-Substituding it back we will get the Taylor series of the function $f$ about $a$, which is
-
-$$
-f(x) = f(a) + {f'(a) \over 1!}(x - a) + {f''(a) \over 2!}(x - a)^2 + ...
-$$
-
-## Taylor polynomial
+> *Definition.*{: .def}
+> The **Maclaurin series** is the Taylor series with $a = 0$, i.e.
+>
+> $$
+  f(x) = \sum_{n=0}^\infty {f^{(n)}(0) \over n!} x^n = f(0) + {f'(0) \over 1!}x + {f''(0) \over 2!}x^2 + \cdots
+  $$
 
 The question now is at what circumstances is a function $f$ equal to the sum of its Taylor series, provided $f$ has derivatives of all orders.
 
-The $n$th order _Taylor polynomial_ $T_n$ for $f$ about $a$ is defined by
+> *Definition.*{: .def}
+> The $n$-th order **Taylor polynomial** $T_n$ for $f$ about $a$ is defined by
+>
+> $$
+  T_n(x) = \sum_{j=0}^{n} {f^{(j)}(a) \over j!} (x - a)^j
+  $$
 
-$$
-T_n(x) = \sum_{j=0}^{n} {f^{(j)}(a) \over j!} (x - a)^j
-$$
+> *Definition.*{: .def}
+> The $n$th order **Taylor remainder** $R_n$ is the difference
+>
+> $$
+  R_n(x) = f(x) - T_n(x)
+  $$
 
-The $n$th order _Taylor remainder_ $R_n$ is the difference
-
-$$
-R_n(x) = f(x) - T_n(x)
-$$
-
-Therefore, if $\lim_{n \to \infty} R_n(x) = 0$ for $\|x - a\| < R$
-
-$$
-\lim_{n \to \infty} T_n(x) = f(x) - \lim_{n \to \infty} R_n(x) = f(x)
-$$
-
-which means $f(x)$ is the sum of its power series.
+> *Theorem.*{: .thm}
+> Suppose $f(x) = T_n(x) + R_n(x)$, where $T_n$ is the $n$-th degree Taylor polynomial of $f$ at $a$.
+> If
+>
+> $$
+  \lim_{n \to \infty} R_n(x) = 0
+  $$
+>
+> for $\|x - a\| < R$, then $f$ is equal to the sum of its Taylor series on the interval $\|x - a\| < R$.
+>
+> *Proof.*{: .prf}
+>
+> Base on the definition,
+>
+> $$
+  \lim_{n \to \infty} T_n(x) = \lim_{n \to \infty} [f(x) - R_n(x)] = f(x) - \lim_{n \to \infty} R_n(x) = f(x)
+  $$
 
 ### Taylor's inequality
 
