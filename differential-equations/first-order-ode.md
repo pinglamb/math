@@ -45,7 +45,7 @@ The freedom to specify the interval on which the solution of an equation exists 
 ## Trivial Equations
 
 > *Proposition.*{: .prop}
-> For the differential equations of the form
+> Consider a differential equation of the form
 >
 > $$
   {\mathrm{d} y \over \mathrm{d} x} = f(x)
@@ -67,7 +67,7 @@ $$
 {\mathrm{d} x \over \mathrm{d} t} = e^{-t^2}
 $$
 
-the general solution is the _Gaussian integral_
+the general solution is the _Gaussian Integral_
 
 $$
 x(t) = x_0 + \int_0^t e^{-\tilde{t}^2} \mathrm{d} \tilde{t}
@@ -80,6 +80,17 @@ $$
 $$
 
 So, we can say, since $x'(t) > 0$ for all $t$, $x(t)$ increases as $t$ increases and $x(t) \to x_0 + \sqrt{\pi}/2$.
+
+![Gaussian Integral](../images/ode-gaussian-integral.png)
+
+## Autonomous Equations
+
+> *Definition.*{: .def}
+> A differential equation is **autonomous** if the derivative depends only on itself, i.e.
+>
+> $$
+  {\mathrm{d} x \over \mathrm{d} t} = f(x)
+  $$
 
 ## Separable Equations
 
