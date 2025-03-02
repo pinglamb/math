@@ -42,6 +42,45 @@ The freedom to specify the interval on which the solution of an equation exists 
 > When $x_0 > 0$, by the time $t = t_0^{-1}$, the solution "blows up" and become infinite.
 > Therefore, we can define the solution only on the interval $(-\infty, x_0^{-1})$ and it is called the **maximal interval of existence**.
 
+## Trivial Equations
+
+> *Proposition.*{: .prop}
+> For the differential equations of the form
+>
+> $$
+  {\mathrm{d} y \over \mathrm{d} x} = f(x)
+  $$
+>
+> By the Fundamental Theorem of Calculus, the general solution is anti-derivative $F$ of $f$, i.e.
+>
+> $$
+  y(x) = F(x) + c
+  $$
+>
+> where $c$ is determined by an initial condition.
+
+Sometimes we might not be able to write down an explicit form for the solution,
+but it can still be possible to describe qualitatively the behaviour of it.
+For example, for the equation
+
+$$
+{\mathrm{d} x \over \mathrm{d} t} = e^{-t^2}
+$$
+
+the general solution is the _Gaussian integral_
+
+$$
+x(t) = x_0 + \int_0^t e^{-\tilde{t}^2} \mathrm{d} \tilde{t}
+$$
+
+in which there is no explicit form for the anti-derivative of $e^{-t^2}$. However, we have
+
+$$
+\int_0^\infty e^{-t^2} \mathrm{d}t = {\sqrt{\pi} \over 2}
+$$
+
+So, we can say, since $x'(t) > 0$ for all $t$, $x(t)$ increases as $t$ increases and $x(t) \to x_0 + \sqrt{\pi}/2$.
+
 ## Separable Equations
 
 Given a first order differential equation of the form
