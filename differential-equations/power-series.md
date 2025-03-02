@@ -248,7 +248,7 @@ e^x &= \sum_{n=0}^\infty {x^n \over n!} && = 1 + {x \over 1!} + {x^2 \over 2!} +
 $$
 
 The above series can be multiplied and divided to form new series,
-i.e. if $f(x) = \sum a_n x^n$ and $g(x) = \sum b_n x^n$ converges for $\|x\| < R$ then their product also converges for $\|x\| < R$ and represents $f(x)g(x)$
+i.e. if $f(x) = \sum a_n x^n$ and $g(x) = \sum b_n x^n$ converges for $\|x\| < R$ then their product also converges for $\|x\| < R$ and represents $f(x)g(x)$.
 
 ## References
 

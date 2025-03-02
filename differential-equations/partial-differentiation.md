@@ -69,7 +69,7 @@ It is because the partial derivatives on the L.H.S is holding $y$ as constant bu
 The reciprocal rule works only if we hold the same variables constant, i.e.
 
 $$
-{\partial r \over \partial x} \Bigg\rvert_{y} \not = {1 \over \partial x / \partial r \big\rvert_{y}}
+{\partial r \over \partial x} \Bigg\rvert_{y} = {1 \over \partial x / \partial r \big\rvert_{y}}
 $$
 
 which in this case the partial derivatives on the R.H.S allows $\theta$ to vary so to keep $y$ constant.
