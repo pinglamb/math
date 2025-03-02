@@ -86,11 +86,53 @@ So, we can say, since $x'(t) > 0$ for all $t$, $x(t)$ increases as $t$ increases
 ## Autonomous Equations
 
 > *Definition.*{: .def}
-> A differential equation is **autonomous** if the derivative depends only on itself, i.e.
+> A differential equation is **autonomous** if it doesn't explicitly depend on the independent variable, i.e.
 >
 > $$
   {\mathrm{d} x \over \mathrm{d} t} = f(x)
   $$
+
+An explict solution might be able to be found by methods below such as by separating the variables,
+but we can also try to understand the solutions "qualitatively".
+
+The easiest way to think of this is to imagine $x(t)$ represents the position of a particle moving on a line at time $t$.
+We can then treat the derivative as the "velocity" of the particle".
+
+> *Definition.*{: .def}
+> The **phase diagram** is a diagram that shows the qualitative behaviour of an autonomous equation.
+> It contains the _stationary points_, in which the rate of change is zero, i.e. $f(x^\ast) = 0$.
+> In between there are arrows, in which up/right arrow represents the solution is increasing, i.e. $f(x) > 0$,
+> and down/left arrow represents the solution is decreasing, i.e. $f(x) < 0$.
+>
+> For example,
+>
+> ![Phase Diagram](../images/ode-phase-diagram.png)
+
+> *Definition.*{: .def}
+> A stationary point is **stable** if when you start close enough to it you stay close to it,
+> i.e. given any $\epsilon > 0$, there exists a $\delta > 0$ such that
+>
+> $$
+  |x_0 - x^\ast| < \delta \quad \implies \quad |x(t) - x^\ast| < \epsilon, \forall t \ge 0
+  $$
+>
+> A stationary point is **unstable** if it is not stable,
+> i.e. there exists an $\epsilon > 0$ such that for any $\delta > 0$, $\vert x_0 - x^\ast \vert < \delta$ but $\vert x(t) - x^\ast \vert > \epsilon$ for some $t > 0$.
+>
+> For example, the stationary points above are labeled with the corresponding stability
+>
+> ![Phase Diagram with Stability](../images/ode-phase-diagram-stability.png)
+
+> *Proposition.*{: .prop}
+> The stability of stationary points is determined by the following conditions:
+>
+> ![Stability Conditions](../images/ode-stability-conditions.png)
+
+> *Definition.*{: .def}
+> The differential equation has a **bifurcation** near a stationary point $x^\ast$ if a small change to $f$ will change the phase diagram drastically.
+> Otherwise, it is **structurally stable**.
+
+For example, for the top right case in the diagram above, increasing $f(x)$ by any constant $c > 0$ will mean the stationary point is gone.
 
 ## Separable Equations
 
