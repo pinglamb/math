@@ -71,7 +71,7 @@ Since the half life of carbon 14 is 5700 years, we have $k = \ln 2 / 5700 \appro
   s = 1988 + {\ln 0.92 \over 0.0001216} \approx 1302
   $$
 
-## Population model
+## Population Model
 
 Instead of pure expoential growth, we impose a maximum sustainable size of the population (becaue of limitation of resources).
 

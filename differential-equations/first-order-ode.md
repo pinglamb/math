@@ -4,17 +4,43 @@ title: First Order Ordinary Differential Equations &#124; Differential Equations
 ---
 
 # First Order Ordinary Differential Equations
+{: .page-title}
 
 ## Existence and Uniqueness
 
-Given an initial value problem with
+> *Definition.*{: .def}
+> Given an open interval $I$ that contains $t_0$, a solution of the **initial value problem**
+>
+> $$
+  {\mathrm{d}x \over \mathrm{d}t} = f(x, t) \quad \text{with} \quad x(t_0) = x_0
+  $$
+>
+> on $I$ is a differentiable function $x(t)$ defined on $I$, with $x(t_0) = x_0$ and $x'(t) = f(x, t)$ for all $t \in I$.
 
-$$
-{\mathrm{d}y \over \mathrm{d}x} = f(x, y) \quad \text{and} \quad y(x_0) = y_0
-$$
+The main point is that we allow a solution to be defined only for some interval instead of every value in $\mathbb{R}$.
 
-If $f(x, y)$ and $\partial f / \partial y (x, y)$ are continuous for $a < x < b$ and $c < y < d$
-then for any $x_0 \in (a, b)$ and $y_0 \in (c, d)$ the initial value problem has a unique solution on some open interval $I$ containing $x_0$.
+> *Theorem.*{: .thm}
+> If $f(x, t)$ and $\partial f / \partial x$ are continuous for $a < x < b$ and $c < t < d$,
+> then for any $x_0 \in (a, b)$ and $t_0 \in (c, d)$ the initial value problem has a _unique_ solution on some open interval $I$ containing $t_0$.
+
+The freedom to specify the interval on which the solution of an equation exists is necessary.
+
+> *Example.*{: .eg}
+> The initial value problem
+>
+> $$
+  {\mathrm{d}x \over \mathrm{d}t} = x^2 \quad \text{with} \quad x(0) = x_0
+  $$
+>
+> has the solution
+>
+> $$
+  x(t) = {1 \over x_0^{-1} - t}
+  $$
+>
+> The solution tends to zero as $t \to \infty$.
+> When $x_0 > 0$, by the time $t = t_0^{-1}$, the solution "blows up" and become infinite.
+> Therefore, we can define the solution only on the interval $(-\infty, x_0^{-1})$ and it is called the **maximal interval of existence**.
 
 ## Separable Equations
 
