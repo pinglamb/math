@@ -295,70 +295,97 @@ Most of the time, the absolute sign can be eliminated by renaming the variables 
   F(x, y) = C
   $$
 
-> *Proposition.*{: .prop}
-> It is possible to turn an equation into an exact equation if it is multiplied by the correct integrating factors. Consider the equation
->
-> $$
-  f(x, y) + g(x, y) {\mathrm{d}y \over \mathrm{d}x} = 0
-  $$
->
-> Multiplying both sides by $I(x, y)$ we have
->
-> $$
-  f(x, y)I(x, y) + g(x, y) I(x, y) {\mathrm{d}y \over \mathrm{d}x} = 0
-  $$
->
-> Thus, in order for the equation to have be exact, we have
->
-> $$
-  \begin{align*}
-  {\partial \over \partial y} f(x, y) I(x, y) &= {\partial \over \partial x} g(x, y) I(x, y) \\
-  I {\partial f \over \partial y} + f {\partial I \over \partial y} &= I {\partial g \over \partial x} + g {\partial I \over \partial x}  \\
-  \left( {\partial f \over \partial y} - {\partial g \over \partial x} \right) I &= g {\partial I \over \partial x} - f {\partial I \over \partial y}
-  \end{align*}
-  $$
->
-> which is a PDE which is no easier to solve.
->
-> However, if $I$ is a function consists only of $x$, then
->
-> $$
-  \left( {\partial f \over \partial y} - {\partial g \over \partial x} \right) I = g {\mathrm{d} I \over \mathrm{d} x}
-  $$
->
-> If
->
-> $$
-  {1 \over g} \left( {\partial f \over \partial y} - {\partial g \over \partial x} \right)
-  $$
->
-> depends only on $x$, it becomes a seprable equation and we can solve for $I(x)$.
-
-## Homogeneous Equations
-
-## Bernoulli Equations
-
-For equations of the form
+It is possible to turn an equation into an exact equation if it is multiplied by the correct integrating factors. Consider the equation
 
 $$
-{\mathrm{d}y \over \mathrm{d} x} + p(x)y = q(x)y^n
+f(x, y) + g(x, y) {\mathrm{d}y \over \mathrm{d}x} = 0
 $$
 
-If $n = 0, 1$, it is a linear equation and can be solved by finding the integrating factors.
+Multiplying both sides by $I(x, y)$ we have
 
-If $n \ge 2$, let $u = y^{1-n}$, $u' = (1 - n) y^{-n} y'$.
-Hence, by multiplying $(1 - n) y^{-n}$ to the equation, we have
+$$
+f(x, y)I(x, y) + g(x, y) I(x, y) {\mathrm{d}y \over \mathrm{d}x} = 0
+$$
+
+Thus, in order for the equation to have be exact, we have
 
 $$
 \begin{align*}
-(1 - n) y^{-n} y' + (1 - n) p(x) y^{1-n} &= (1 - n)q(x) \\
-u' + (1 - n) p(x) u &= (1 - n)q(x)
+{\partial \over \partial y} f(x, y) I(x, y) &= {\partial \over \partial x} g(x, y) I(x, y) \\
+I {\partial f \over \partial y} + f {\partial I \over \partial y} &= I {\partial g \over \partial x} + g {\partial I \over \partial x}  \\
+\left( {\partial f \over \partial y} - {\partial g \over \partial x} \right) I &= g {\partial I \over \partial x} - f {\partial I \over \partial y}
 \end{align*}
 $$
 
-which becomes a linear differential equation and can be solved by integrating factors.
+which is a PDE which is no easier to solve.
+
+However, if $I$ is a function consists only of $x$, then
+
+$$
+\left( {\partial f \over \partial y} - {\partial g \over \partial x} \right) I = g {\mathrm{d} I \over \mathrm{d} x}
+$$
+
+If
+
+$$
+{1 \over g} \left( {\partial f \over \partial y} - {\partial g \over \partial x} \right)
+$$
+
+depends only on $x$, it becomes a seprable equation and we can solve for $I(x)$.
+
+## Homogeneous Equations
+
+> *Definition.*{: .def}
+> A first order differential equation is said to be **homogeneous** if it can be written in the form
+>
+> $$
+  {\mathrm{d} y \over \mathrm{d} x} = F({y \over x})
+  $$
+
+> *Proposition.*{: .prop}
+> For a homogeneous differential equation, by substituting $u = y/x$, we have $y = ux$ and by product rule,
+>
+> $$
+  {\mathrm{d} y \over \mathrm{d} x} = u + x {\mathrm{u} u \over \mathrm{d} x}
+  $$
+>
+> Hence,
+>
+> $$
+  x {\mathrm{d} u \over \mathrm{d} x} = F(u) - u
+  $$
+>
+> is a separable equation.
+
+## Bernoulli Equations
+
+> *Proposition.*{: .prop}
+> Consider a differential equation of the form
+>
+> $$
+  {\mathrm{d}y \over \mathrm{d} x} + p(x)y = q(x)y^n
+  $$
+>
+> If $n = 0, 1$, it is a linear equation and can be solved by finding the integrating factors.
+>
+> If $n \ge 2$, let $u = y^{1-n}$,
+>
+> $$
+  u' = (1 - n) y^{-n} y'
+  $$
+>
+> Hence, by multiplying $(1 - n) y^{-n}$ to the original differential equation, we have
+>
+> $$
+  \begin{align*}
+  (1 - n) y^{-n} y' + (1 - n) p(x) y^{1-n} &= (1 - n)q(x) \\
+  u' + (1 - n) p(x) u &= (1 - n)q(x)
+  \end{align*}
+  $$
+>
+> which becomes a linear differential equation and can be solved by integrating factors.
 
 ## References
 
-* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 8, 9
+* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 5 - 10
 * [https://youtu.be/u0vbm1T420g](https://youtu.be/u0vbm1T420g)
