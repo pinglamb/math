@@ -140,13 +140,16 @@ Since the half life of carbon 14 is 5700 years, we have $k = \ln 2 / 5700 \appro
   v_{\text{terminal}} = \sqrt{mg \over k}
   $$
 
-## Newton's law of cooling
+## Newton's Law of Cooling
 
-The temperature $T(t)$ of an object in surroundings of temperature $A(t)$ can be modeled by
-
-$$
-{\mathrm{d} T \over \mathrm{d} t} = -k(T(t) - A(t))
-$$
+> *Proposition.*{: .prop}
+> The temperature $T(t)$ of an object in surroundings of temperature $A(t)$ can be modeled by
+>
+> $$
+  {\mathrm{d} T \over \mathrm{d} t} = -k(T(t) - A(t))
+  $$
+>
+> where $k > 0$ measures the rate that heat is absorted/emitted by the object.
 
 In case of constant surrounding temperature $A$, we have
 
