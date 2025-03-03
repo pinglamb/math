@@ -72,38 +72,73 @@ Since the half life of carbon 14 is 5700 years, we have $k = \ln 2 / 5700 \appro
   $$
 
 ## Population Model
+{: #population-model}
 
-Instead of pure expoential growth, we impose a maximum sustainable size of the population (becaue of limitation of resources).
+> *Proposition.*{: .prop}
+> Instead of pure expoential growth, we impose a maximum sustainable size of the population (e.g. becaue of limitation of resources).
+> We can use the _logistic equation_ to model the population growth, i.e.
+>
+> $$
+  {\mathrm{d}p \over \mathrm{d} t} = kp \left( 1 - {p \over M} \right)
+  $$
+>
+> where $M > 0$ is the maximum sustainable population.
 
-Therefore, we have the _logistic equation_
+> *Example.*{: .eg}
+> For the logistic equation, the equilibria are the solution of
+>
+> $$
+  {\mathrm{d}p \over \mathrm{d} t} = kp \left( 1 - {p \over M} \right) = 0 \implies p = 0, M
+  $$
+>
+> As $p = 0$ is unstable and $p = M$ is stable, we have the following plot of different solutions of the equation
+>
+> ![Logistic Equation Phase Diagram](../images/ode-example-logistic-equation.png)
 
-$$
-{\mathrm{d}p \over \mathrm{d} t} = kp \left( 1 - {p \over M} \right)
-$$
+> *Example.*{: .eg}
+> To find an explicit solution, by separating varaibles, we have
+>
+> $$
+  \begin{align*}
+  \int_{p_0}^{p} {M \over p(M - p)} \mathrm{d}p &= \int_{t_0}^t k \, \mathrm{d}t \\
+  \int_{p_0}^{p} {1 \over p} + {1 \over (M - p)} \mathrm{d}p &= \int_{t_0}^t k \, \mathrm{d}t \\
+  \ln p - \ln p_0 - \ln |M-p| + \ln |M - p_0| &= kt - kt_0 \\
+  {p |M - p_0| \over p_0 |M-p|} &= e^{k(t - t_0)}
+  \end{align*}
+  $$
+>
+> As $\|M - p_0\|$ and $\|M - p\|$ always has the same sign base on the equation,
+> we can remove the absolute sign and rearrange the terms, i.e.
+>
+> $$
+  p(t) = M \left( {p_0e^{k(t - t_0)} \over M - p_0 + p_0e^{k(t - t_0)} } \right)
+  $$
+>
+> From the solution, we can deduce that $p \to M$ as $t \to \infty$.
 
-where $M > 0$ is the maximum sustainable population.
+## Terminal Velocity
 
-By separating of variables,
+> *Proposition.*{: .prop}
+> Suppose that a body of mass $m$ is falling under gravity $g$ and is subject to an air resistance proportional to the square of its velocity, i.e. $kv^2$.
+> The equation for the downward velocity $v$ is
+>
+> $$
+  m{\mathrm{d} v \over \mathrm{d} t} = mg - kv^2
+  $$
 
-$$
-\begin{align*}
-\int_{p_0}^{p} {M \over p(M - p)} \mathrm{d}p &= \int_{t_0}^t k \, \mathrm{d}t \\
-\int_{p_0}^{p} {1 \over p} + {1 \over (M - p)} \mathrm{d}p &= \int_{t_0}^t k \, \mathrm{d}t \\
-\ln p - \ln p_0 - \ln |M-p| + \ln |M - p_0| &= kt - kt_0 \\
-{p |M - p_0| \over p_0 |M-p|} &= e^{k(t - t_0)}
-\end{align*}
-$$
-
-As $\|M - p_0\|$ and $\|M - p\|$ always has the same sign base on the equation,
-we can remove the absolute sign and rearrange the terms, i.e.
-
-$$
-p(t) = M \left( {p_0e^{k(t - t_0)} \over M - p_0 + p_0e^{k(t - t_0)} } \right)
-$$
-
-From the equation, we can deduce that $p \to M$ as $t \to \infty$.
-
-## Free falling with air resistance
+> *Example.*{: .eg}
+> By rewriting it as
+>
+> $$
+  {\mathrm{d} v \over \mathrm{d} t} = g - {k \over m}v^2
+  $$
+>
+> There is an equilibrium at $v = \sqrt{mg/k}$ and is stable.
+> Hence, we can find the terminal velocity without solving the equation, which is
+>
+> $$
+  v_{\text{terminal}} = \sqrt{mg \over k}
+  $$
 
 ## Newton's law of cooling
 
