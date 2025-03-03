@@ -202,55 +202,57 @@ Most of the time, the absolute sign can be eliminated by renaming the variables 
 >
 > We can see that the general solution includes the particular solution $y = 0$.
 
-## Linear Equations
+## Linear Equations by Integrating Factors
 
-### By Integrating Factors
-
-Consider the linear differential equation
-
-$$
-y' + p(x)y = q(x)
-$$
-
-Multiplying both sides by a factor of $I(x)$ and we have
-
-$$
-I(x)y' + I(x)p(x)y = I(x)q(x)
-$$
-
-Consider the derivative of $I(x)y$, by product rule,
-
-$$
-{\mathrm{d} \over \mathrm{d}x}I(x)y = I(x)y' + I'(x)y
-$$
-
-Thus, in order for the L.H.S. to be grouped together, we need to have
-
-$$
-I(x)p(x) = I'(x)
-$$
-
-which is a separable equation, i.e.
-
-$$
-\int {1 \over I} \mathrm{d}I = \int p(x) \mathrm{d}x
-$$
-
-and we have the integrating factor
-
-$$
-I(x) = e^{\int p(x) \mathrm{d}x}
-$$
-
-Back to the linear differential equation, the general solution is
-
-$$
-\begin{align*}
-{\mathrm{d} \over \mathrm{d}x} I(x)y &= I(x)q(x) \\
-I(x)y &= \int I(x)q(x) \mathrm{d}x \\
-y &= {1 \over I(x)} \int I(x)q(x) \mathrm{d}x
-\end{align*}
-$$
+> *Proposition.*{: .prop}
+> For a general linear differential equation
+>
+> $$
+  x'(t) + p(t)x(t) = q(t)
+  $$
+>
+> By multiplying both sides by $I(t)$, we have
+>
+> $$
+  I(t)x'(t) + I(t)p(t)x(t) = I(t)q(t)
+  $$
+>
+> Consider the derivative of $I(t)x(t)$, by product rule,
+>
+> $$
+  {\mathrm{d} \over \mathrm{d}t}I(t)x(t) = I(t)x'(t) + I'(t)x(t)
+  $$
+>
+> Thus, in order for the L.H.S. to be grouped together, we need to have
+>
+> $$
+  I(t)p(t) = I'(t)
+  $$
+>
+> which is a separable equation. Therefore,
+>
+> $$
+  \int {1 \over I} \mathrm{d}I = \int p(t) \mathrm{d}t
+  $$
+>
+> and we have the integrating factor
+>
+> $$
+  I(t) = \exp({\int p(t) \mathrm{d}t})
+  $$
+>
+> Substituting it back to the linear differential equation,
+>
+> $$
+  \begin{align*}
+  x'(t)I(t) + p(t)x(t)I(t) &= q(t)I(t) \\
+  {\mathrm{d} \over \mathrm{d}t} I(t)x(t) &= q(t)I(t) \\
+  I(t)x(t) &= \int q(t)I(t) \mathrm{d}t \\
+  x(t) &= {1 \over I(t)} \int q(t)I(t) \mathrm{d}t
+  \end{align*}
+  $$
+>
+> which is the general solution.
 
 ## Exact Equations
 
