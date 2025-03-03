@@ -135,93 +135,72 @@ An example of its application can be found in [Practical Examples](practical-exa
 
 ## Separable Equations
 
-Given a first order differential equation of the form
+> *Proposition.*{: .prop}
+> Consider a differential equation of the form
+>
+> $$
+  {\mathrm{d}x \over \mathrm{d}t} = f(x)g(t)
+  $$
+>
+> and assume $f(x)$ is sufficiently smooth so that it has a unique solution for any specified initial condition.
+>
+> If $f(x(s)) = 0$ for some $s$, it implies $x(t) = x(s)$ for all $t \in \mathbb{R}$, i.e. a constant function.
+> We can see that if $x(t) = x(s)$, $x'(t) = 0$, which satisfies the differential equation and therefore it is really the unique solution to that.
+> It implies that either $f(x(t)) = 0$ for all $t \in \mathbb{R}$ or $f(x(t)) \not = 0$ for all $t \in \mathbb{R}$.
+>
+> If $f(x(t)) \not= 0$ for all $t \in \mathbb{R}$, we can divide both sides of the equation by $f(x)$, i.e.
+>
+> $$
+  {1 \over f(x)} {\mathrm{d}x \over \mathrm{d}t} = g(t)
+  $$
+>
+> Let $H(x)$ be the anti-derivative of $1/f(x)$, by chain rule, we have
+>
+> $$
+  {\mathrm{d} \over \mathrm{d}t} H(x(t)) = H'(x) {\mathrm{d}x \over \mathrm{d}t} = {1 \over f(x)} {\mathrm{d}x \over \mathrm{d}t} = g(t)
+  $$
+>
+> By integrating both sides we have
+>
+> $$
+  H(x(t)) = \int g(t) \mathrm{d}t
+  $$
+>
+> Let $G(t)$ be the anti-derivative of $g(t)$, we have $H(x(t)) = G(t) + c$, and by substituting the initlal condition $x(t_0) = x_0)$ into the equation,
+>
+> $$
+  H(x_0) = G(t_0) + c \implies c = H(x_0) - G(t_0) \implies H((x(t)) - H(x_0) = G(t) - G(t_0)
+  $$
+>
+> Hence, by Fundamental Theorem of Calculus, the solution is
+>
+> $$
+  \int_{x_0}^{x(t)} {1 \over f(x)} \mathrm{d}x = \int_{t_0}^{t} g(\tilde{t}) \mathrm{d}\tilde{t}
+  $$
+
+This method frequently gives solution with absolute sign as
 
 $$
-{\mathrm{d}y \over \mathrm{d}x} = f(x)g(y)
+\int_{x_0}^{x(t)} {1 \over f(x)} \mathrm{d}(f(x)) = \ln |f(x(t))| - \ln |f(x_0)|
 $$
 
-and assume $g(y)$ is sufficiently smooth so that it has a unique solution for any specified initial condition.
+Most of the time, the absolute sign can be eliminated by renaming the variables with a different condition.
 
-Suppose $y(x)$ is a solution such that $g(y(x')) = 0$ for some $x'$.
-Assume $y(x) = y(x')$ for all $x \in \mathbb{R}$, we have $g(y(x)) = g(y(x')) = 0$ for all $x \in \mathbb{R}$,
-and substituding it back to the equation we have $y'(x) = 0$.
-We can see that the constant function $y(x) = y(x')$ is the unique solution to the equation.
-
-It implies that either $g(y(x)) = 0$ for every value of $x$ or $g(y(x)) \not = 0$ for every value of $x$.
-
-In the case of $g(y(x)) \not = 0$ for all $x$, we can divide both sides of the equation by $g(y)$, i.e.
-
-$$
-{1 \over g(y)} {\mathrm{d}y \over \mathrm{d}x} = f(x)
-$$
-
-Let $H(y)$ be the anti-derivative of $1/g(y)$, i.e.
-
-$$
-H'(y) = {1 \over g(y)}
-$$
-
-By chain rule, we have
-
-$$
-{\mathrm{d} \over \mathrm{d}x} H(y) = H'(y) {\mathrm{d}y \over \mathrm{d}x} = {1 \over g(y)} {\mathrm{d}y \over \mathrm{d}x} = f(x)
-$$
-
-By integrating both sides we have
-
-$$
-H(y) = \int {1 \over g(y)} \, \mathrm{d}y = \int f(x) \, \mathrm{d}x
-$$
-
-which is like "multiplying" $\mathrm{d}x$ and then integrate both sides in the original equation.
-
-Let $F(x)$ be the anti-derivative of $f(x)$, we have
-
-$$
-H(y(x)) = F(x) + c
-$$
-
-Subsituding the initial condition $(x_0, y_0)$ into the equation we have
-
-$$
-H(y_0) = F(x_0) + c \implies c = H(y_0) - F(x_0)
-$$
-
-and the solution is
-
-$$
-H(y) - H(y_0) = F(x) - F(x_0)
-$$
-
-By the fundamental theorem of calculus, we have
-
-$$
-\int_{y_0}^{y} {1 \over g(y)} \, \mathrm{d}y = \int_{x_0}^{x} f(x) \, \mathrm{d}x
-$$
-
-### Eliminating the absolute sign
-
-This method frequently gives solution with absolute sign as we are integrating $1/g(y)$ on one side.
-The absolute sign can most of the time eliminated by renaming the variables with a different condition.
-
-For example, for equation
-
-$$
-y' = xy
-$$
-
-We will have
-
-$$
-\begin{align*}
-ln|y| &= {x^2 \over 2} + c \\
-|y| &= Ae^{x^2/2} \quad \text{where } A = e^c > 0 \\
-y &= Be^{x^2/2} \quad \text{where } B \in \mathbb{R}
-\end{align*}
-$$
-
-which is a general solution for the equation.
+> *Example.*{: .eg}
+> For equation $y' = xy$, note that $y = 0$ is a solution.
+>
+> Assume $y \not= 0$ for all $x$, we have
+>
+> $$
+  \begin{align*}
+  \int {1 \over y } \mathrm{d}y &= \int x \mathrm{d}x \\
+  \ln |y| &= {x^2 \over 2} + c \\
+  |y| &= Ae^{x^2/2} \quad \text{where } A = e^c > 0 \\
+  y &= Be^{x^2/2} \quad \text{where } B \in \mathbb{R}
+  \end{align*}
+  $$
+>
+> We can see that the general solution includes the particular solution $y = 0$.
 
 ## Linear Equations
 
