@@ -256,83 +256,85 @@ Most of the time, the absolute sign can be eliminated by renaming the variables 
 
 ## Exact Equations
 
-For equations of the form
+> *Proposition.*{: .prop}
+> Consider a differential equation of the form
+>
+> $$
+  f(x, y) + g(x, y){\mathrm{d}y \over \mathrm{d}x} = 0
+  $$
+>
+> Suppose that $x$ and $y$ are related implicitly by $F(x, y) = c$, by chain rule,
+>
+> $$
+  {\mathbf{d}F \over \mathrm{d}x} = {\partial F \over \partial x} {\mathrm{d}x \over \mathrm{d}x} + {\partial F \over \partial y} {\mathrm{d}y \over \mathrm{d}x} = 0
+  $$
+>
+> Comparing that to the differential equation, we have
+>
+> $$
+  {\partial F \over \partial x} = f(x, y) \quad \text{and} \quad {\partial F \over \partial y} = g(x, y)
+  $$
+>
+> Since the order of taking two partial derivatives does not matter, we have
+>
+> $$
+  {\partial f \over \partial y} = {\partial g \over \partial x}
+  $$
+>
+> as the necessary and sufficient condition for the differential equation to be "exact".
+>
+> We then have
+>
+> $$
+  F(x, y) = \int f(x, y) dx + C(y) \quad \text{and} \quad {\partial F \over \partial y} = {\partial \over \partial y} \int f(x, y) dx + {\mathrm{d} C \over \mathrm{d} y} = g(x, y)
+  $$
+>
+> and the solution to the equation is
+>
+> $$
+  F(x, y) = C
+  $$
 
-$$
-f(x, y) + g(x, y){\mathrm{d}y \over \mathrm{d}x} = 0
-$$
+> *Proposition.*{: .prop}
+> It is possible to turn an equation into an exact equation if it is multiplied by the correct integrating factors. Consider the equation
+>
+> $$
+  f(x, y) + g(x, y) {\mathrm{d}y \over \mathrm{d}x} = 0
+  $$
+>
+> Multiplying both sides by $I(x, y)$ we have
+>
+> $$
+  f(x, y)I(x, y) + g(x, y) I(x, y) {\mathrm{d}y \over \mathrm{d}x} = 0
+  $$
+>
+> Thus, in order for the equation to have be exact, we have
+>
+> $$
+  \begin{align*}
+  {\partial \over \partial y} f(x, y) I(x, y) &= {\partial \over \partial x} g(x, y) I(x, y) \\
+  I {\partial f \over \partial y} + f {\partial I \over \partial y} &= I {\partial g \over \partial x} + g {\partial I \over \partial x}  \\
+  \left( {\partial f \over \partial y} - {\partial g \over \partial x} \right) I &= g {\partial I \over \partial x} - f {\partial I \over \partial y}
+  \end{align*}
+  $$
+>
+> which is a PDE which is no easier to solve.
+>
+> However, if $I$ is a function consists only of $x$, then
+>
+> $$
+  \left( {\partial f \over \partial y} - {\partial g \over \partial x} \right) I = g {\mathrm{d} I \over \mathrm{d} x}
+  $$
+>
+> If
+>
+> $$
+  {1 \over g} \left( {\partial f \over \partial y} - {\partial g \over \partial x} \right)
+  $$
+>
+> depends only on $x$, it becomes a seprable equation and we can solve for $I(x)$.
 
-Consider an implicit relation between $x, y$ of the form $F(x, y) = c$, by chain rule,
-
-$$
-{\mathbf{d}F \over \mathrm{d}x} = {\partial F \over \partial x} {\mathrm{d}x \over \mathrm{d}x} + {\partial F \over \partial y} {\mathrm{d}y \over \mathrm{d}x} = 0
-$$
-
-Hence, comparing to the differential equation, we have
-
-$$
-{\partial F \over \partial x} = f(x, y) \quad \text{and} \quad {\partial F \over \partial y} = g(x, y)
-$$
-
-In order to check if there exists such $F(x, y) = c$, we can use the property that $F_{xy} = F_{yx}$, i.e.
-
-$$
-{\partial \over \partial y} f(x, y) = {\partial \over \partial x} g(x, y)
-$$
-
-If that is the case, we can then have
-
-$$
-F(x, y) = \int f(x, y) dx + C(y)
-$$
-
-and
-
-$$
-{\partial \over \partial y} F(x, y) = {\partial \over \partial y} \int f(x, y) dx + {\mathrm{d} C \over \mathrm{d} y} = g(x, y)
-$$
-
-and we should be able to resolve $F(x, y) = c$ as the solution.
-
-### Integrating factors for exact equations
-
-It is possible to turn one into an exact equation by multiplying certain factors. Consider the equation
-
-$$
-f(x, y) + g(x, y) {\mathrm{d}y \over \mathrm{d}x} = 0
-$$
-
-Multiplying both sides by $I(x, y)$ we have
-
-$$
-f(x, y)I(x, y) + g(x, y) I(x, y) {\mathrm{d}y \over \mathrm{d}x} = 0
-$$
-
-Thus, in order for the equation to have be exact, we have
-
-$$
-\begin{align*}
-{\partial \over \partial y} f(x, y) I(x, y) &= {\partial \over \partial x} g(x, y) I(x, y) \\
-I {\partial f \over \partial y} + f {\partial I \over \partial y} &= I {\partial g \over \partial x} + g {\partial I \over \partial x}  \\
-\left( {\partial f \over \partial y} - {\partial g \over \partial x} \right) I &= g {\partial I \over \partial x} - f {\partial I \over \partial y}
-\end{align*}
-$$
-
-which is a PDE which is no easier to solve.
-
-However, if $I$ is a function consists only of $x$, then
-
-$$
-\left( {\partial f \over \partial y} - {\partial g \over \partial x} \right) I = g {\mathrm{d} I \over \mathrm{d} x}
-$$
-
-If
-
-$$
-{1 \over g} \left( {\partial f \over \partial y} - {\partial g \over \partial x} \right)
-$$
-
-depends only on $x$, it becomes a seprable equation and we can solve for $I(x)$.
+## Homogeneous Equations
 
 ## Bernoulli Equations
 
