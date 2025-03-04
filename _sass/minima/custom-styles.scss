@@ -5,6 +5,7 @@
 .site-header {
   border-top: none;
   border-bottom: 1px solid #222222;
+  z-index: 1;
 
   .wrapper {
     padding-top: 5px;
@@ -63,7 +64,7 @@
     margin-bottom: 25px;
 
     img {
-      max-height: 280px;
+      max-height: 450px;
     }
   }
 
