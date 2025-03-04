@@ -1,9 +1,9 @@
 ---
 layout: base
-title: Second Order Linear ODE &#124; Differential Equations
+title: Second Order Ordinary Differential Equations &#124; Differential Equations
 ---
 
-# Second Order Linear ODE
+# Second Order Ordinary Differential Equations
 {: .page-title}
 
 ## Existence and Uniqueness
@@ -67,73 +67,109 @@ title: Second Order Linear ODE &#124; Differential Equations
 > so $\alpha x_1 + \beta x_2$ is also a solution.
 > Hence, $L$ is linear.
 
-## Linear Independence
+## Linear Independence of Functions
 
-### The Wronskian
+> *Definition.*{: .def}
+> The functions $x_1(t), ..., x_n(t)$ are **linearly independent** on an interval $I$ if
+>
+> $$
+  a_1x_1(t) + \cdots + a_nx_n(t) = 0 \quad \implies \quad a_1 = \cdots = a_n = 0
+  $$
 
-As stated above, the general solution of the differential equation can be writted as
+> *Proposition.*{: .prop}
+> Two linearly independent solutions are necessary and sufficient to obtain all possible solutions of homogeneous second order ODE.
+>
+> *Proof.*{: .prf}
+>
+> Given a homogeneous second order ODE.
+> Suppose $x_1(t)$ is the solution satisfying
+>
+> $$
+  x_1(t_0) = 1 \quad \text{and} \quad x_1'(t_0) = 0
+  $$
+>
+> and $x_2(t)$ is the solution satisfying
+>
+> $$
+  x_2(t_0) = 0 \quad \text{and} \quad x_1'(t_0) = 1
+  $$
+>
+> By the existence and uniqueness theorem, both should exist but one cannot be a multiple of the other.
+> Hence, at least two linearly independent solutions are necessary.
+>
+> Given two solutions that are linearly independent like above and for any given initial condition
+>
+> $$
+  x(t_0) = x_0 \quad \text{and} \quad x'(t_0) = x_0'
+  $$
+>
+> We have the following system of linear equations
+>
+> $$
+  \begin{pmatrix}
+  x_1(t_0) & x_2(t_0) \\
+  x_1'(t_0) & x_2'(t_0) \\
+  \end{pmatrix}
+  \begin{pmatrix}
+  \alpha \\
+  \beta
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+  x_0 \\
+  x_0'
+  \end{pmatrix}
+  $$
+>
+> As the two solutions are linearly independent, the system has a unique solution.
+> Hence, two linearly independent solutions are sufficient to form any solution.
 
-$$
-y = \alpha y_1 + \beta y_2
-$$
+## The Wronskian
 
-where $y_1$ and $y_2$ are linear independent. It means $\alpha = \beta = 0$ is the only solution to $\alpha y_1 + \beta y_2 = 0$
+> *Definition.*{: .def}
+> The **Wronskian** of two functions $x_1(t)$ and $x_2(t)$ is defined by
+>
+> $$
+  W[x_1, x_2](t) = \begin{vmatrix} x_1(t) & x_2(t) \\ x_1'(t) & x_2'(t) \end{vmatrix} = x_1(t)x_2'(t) - x_2(t)x_1'(t)
+  $$
 
-Differentiating it gives us
-
-$$
-\alpha y_1' + \beta y_2' = 0
-$$
-
-Combining these two conditions, we have
-
-$$
-\begin{pmatrix}
-y_1 & y_2 \\
-y_1' & y_2' \\
-\end{pmatrix}
-\begin{pmatrix}
-\alpha  \\
-\beta \\
-\end{pmatrix}
-=
-\begin{pmatrix}
-0 \\
-0 \\
-\end{pmatrix}
-$$
-
-The Wronskian of $y_1$ and $y_2$, which is a function of $x$, is defined by
-
-$$
-W[y_1, y_2](x) = \begin{vmatrix}
-y_1 & y_2 \\
-y_1' & y_2' \\
-\end{vmatrix}
-$$
-
-Base on the equations above, for any two solutions $y_1$ and $y_2$ of the differential equation,
-if $W[y_1, y_2](x) \not = 0$, we will find that $\alpha = \beta = 0$ is the only solution to the simultaneous equation,
-which implies $y_1$ and $y_2$ are linear independent.
-
-Conversely, if $W[y_1, y_2](x_0) = 0$ for some $x_0$, it implies $y_1 = cy_2$ for all $x$ and hence they are not linear independent.
-
-To conclude, the two solutions $y_1$ and $y_2$ are linear independent if and only if $W[x_1, x_2](x) = 0$
-
-Consider $W(x) = y_1 y_2' - y_1' y_2$ and $W'(x) = y_1 y_2'' - y_1'' y_2$, we have
-
-$$
-\begin{align*}
-W'(x) + p(x)W(x) &= y_1 (y_2'' + p(x)y_2') - y_2 (y_1'' + p(x)y_1') \\
-&= y_1(-q(x)y_2) - y_2(-q(x)y_1) \\
-&= 0
-\end{align*}
-$$
-
-Hence, if $W(x) = 0$, $W'(x) = 0$, meaning $W(x) = 0$ for all $x$.
-If $W(x) \not = 0$, $\|W(x)\| = e^{\int -p(x) \mathrm{d}x}$, meaning $W(x) \not = 0$ for all $x$.
-
-This method of verifying if two functions are linear independent only works if they are both solutions of a differential equation.
+> *Proposition.*{: .prop}
+> The function $x_1$ and $x_2$ are linearly independent on an interval $I$ iff their Wronskian $W\[x_1, x_2\](t) \not \equiv 0$ on $I$.
+> Hence, if $W\[x_1, x_2\](t) = 0$ for any $t \in I$, then $x_1$ and $x_2$ are linearly dependent.
+>
+> *Proof.*{: .prf}
+>
+> Given a homogeneous second order differential equation
+>
+> $$
+  {\mathrm{d}x \over \mathrm{d}t^2} + p(t) {\mathrm{d}x \over \mathrm{d}t} + q(t)x = 0
+  $$
+>
+> with two solutions $x_1$ and $x_2$. Then
+>
+> $$
+  W(t) = x_1(t)x_2'(t) - x_2(t)x_1'(t) \quad \text{and} \quad W'(t) = x_1(t)x_2''(t) - x_1''(t)x_2(t)
+  $$
+>
+> and we have
+>
+> $$
+  \begin{align*}
+  W'(t) + p(t)W(t) &= x_1(t) [x_2''(t) + p(t)x_2'(t)] - x_2(t) [x_1''(t) + p(t)x_1'(t)] \\
+  &= x_1(t)[-q(t)x_2(t)] - x_2(t)[-q(t)x_1(t)] \\
+  &= 0
+  \end{align*}
+  $$
+>
+> Therefore, we have the Wronskian satisfying the differential equation
+>
+> $$
+  W'(t) = -p(t)W(t)
+  $$
+>
+> If $W(t) = 0$, $W'(t) = 0$, then $W(t) \equiv 0$ for all $t \in I$.
+>
+> If $W(t) \not = 0$, $\vert W(t) \vert = e^{\int -p(t) \mathrm{d}t}$, then $W(t) \not = 0$ for all $t \in I$.
 
 ## Homogeneous linear equations with constant coefficient
 
