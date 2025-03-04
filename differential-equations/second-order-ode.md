@@ -246,28 +246,43 @@ If $\rho > 0$, the solution grows exponentially fast.
 
 ![Complex Roots Oscillation](../images/ode-homogeneous-complex-roots-oscillation.png)
 
-## Inhomogeneous linear equation with constant coefficients
+## Inhomogeneous + Linear + Constant Coefficients
 
-For differential equation like
+> *Proposition.*{: .prop}
+> Consider a differential equation of the form
+>
+> $$
+  L[x] = ax'' + bx' + cx = f(t)
+  $$
+>
+> Let $x_1$ and $x_2$ be two linearly independent solutions for the equation $L[x] = 0$
+> and $x_p$ be a particular solution of $L[x] = f(t)$.
+> Then the general solution for the differential equation is
+>
+> $$
+  x(t) = Ax_1(t) + Bx_2(t) + x_p(t)
+  $$
+
+> *Definition.*{: .def}
+> $x_h(t) = Ax_1(t) + Bx_2(t)$ is called the **complimentary function** and
+> $x_p(t)$ is called the **particular integral**.
+
+Finding $x_p$ involves some educated guess. Common choices are
+
+| $f(t)$                                       | $x_p(t)$                            |
+| $t^n$                                        | $c_nt^n + \cdots + c_0$             |
+| $ce^{kt}$                                    | $Ce^{kt}$                           |
+| $\alpha \sin \sigma t + \beta \cos \sigma t$ | $C \sin \sigma t + D \sin \sigma t$ |
+
+In case $x_p(t)$ is one of the solution in $x_h(t)$, we can multiply it by $t$ or $t^2$ to form a new particular integral.
+
+If $f(t) = \alpha f_1(t) + \beta f_2(t)$, then $x_p = \alpha x_{p1} + \beta x_{p2}$.
+
+If $f(t) = f_1(t)f_2(t)$, then $x_p = x_{p1}x_{p2}$. For example, the particular integral for $f(t) = te^{-t}\cos 2t$ is
 
 $$
-L[t] = ay'' + by' + c = f(t)
+x_p(t) = (At + B)e^{-t}\cos 2t + (Ct + D)e^{-t}\sin 2t
 $$
-
-Let $y_h$ be the solution of $L[t] = 0$, the homogeneous version of the equation,
-and $y_p$ be a particular solution of $L[t] = f(t)$. We have
-
-$$
-L[y_h + y_p] = L[y_h] + L[y_p] = f(t)
-$$
-
-which is the general solution of the differential equation.
-
-$y_h$ is called the _complimentary function_ which provides the two free variables for the initial conditions and
-$y_p$ is called the _particular integral_.
-
-Finding $y_p$ involves some educated guess, and in case $y_p$ is one of the function is $y_h$,
-we can multiply it by $t$ or $t^2$ to form a new particular integral.
 
 ## Reduction of order
 

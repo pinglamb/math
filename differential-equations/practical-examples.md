@@ -185,8 +185,6 @@ $$
 A(t) = \mu + a \cos \omega t
 $$
 
-### Combining two oscillating terms
-
 ## Oscillation
 
 ## Resonance
