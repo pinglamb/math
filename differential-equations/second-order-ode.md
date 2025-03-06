@@ -286,6 +286,8 @@ $$
 
 ## Reduction of Order
 
+This is the technique for finding the second linearly independent solution in case we already know one.
+
 > *Proposition.*{: .prop}
 > For the case of having coefficients as functions of $t$, i.e.
 >
@@ -315,6 +317,79 @@ $$
   $$
 >
 > which is a first order differential equation that can be solved by the method of integrating factors.
+
+## Variation of Parameters
+
+This is the technique for finding the particular integral in case we already know two linear independent solutions of the homogeneous equation.
+
+> *Proposition.*{: .prop}
+> Consider a differential equation
+>
+> $$
+  {\mathrm{d}^2 x \over \mathrm{d}t^2} + p(t){\mathrm{d}x \over \mathrm{d}t} + q(t)x = f(t)
+  $$
+>
+> If we know two linearly independent solutions $x_1(t)$ and $x_2(t)$ for the homogeneous problem, let
+>
+> $$
+  x_p(t) = u_1(t)x_1(t) + u_2(t)x_2(t)
+  $$
+>
+> which is like by changing the constants $A$ and $B$ of the general solution to unknown functions $u_1(t)$ and $u_2(t)$. Then
+>
+> $$
+  x_p'(t) = u_1'(t)x_1(t) + u_1(t)x_1'(t) + u_2'(t)x_2(t) + u_2(t)x_2'(t)
+  $$
+>
+> In order to keep the second derivative manageable, we impose the condition that
+>
+> $$
+  u_1'x_1 + u_2'x_2 = 0
+  $$
+>
+> Thus,
+>
+> $$
+  x_p''(t) = u_1(t)x_1''(t) + u_1'(t)x_1'(t) + u_2'(t)x_2'(t) + u_2(t)x_2''(t)
+  $$
+>
+> Substituding them back to the original equation to get
+>
+> $$
+  u_1[x_1'' + p(t)x_1' + q(t)x_1] + u_2[x_2'' + p(t)x_2' + q(t)x_2] + u_1'x_1' + u_2'x_2' = f(t)
+  $$
+>
+> As $x_1$ and $x_2$ are the solutions of the homogeneous equation, we have
+>
+> $$
+  u_1'x_1' + u_2'x_2' = 0
+  $$
+>
+> Therefore, we have the following system of equations
+>
+> $$
+  \begin{cases}
+  u_1'x_1 + u_2'x_2 = 0 \\
+  u_1'x_1' + u_2'x_2' = f(t)
+  \end{cases}
+  \implies
+  \begin{pmatrix} x_1 & x_2 \\ x_1' & x_2' \end{pmatrix} \begin{pmatrix} u_1' \\ u_2' \end{pmatrix} = \begin{pmatrix} 0 \\ f(t) \end{pmatrix}
+  $$
+>
+> The array on the L.H.S is the Wronskian of $x_1$ and $x_2$ and is non-zero for linearly independent solutions.
+>
+> Hence,
+>
+> $$
+  \begin{pmatrix} u_1' \\ u_2' \end{pmatrix} = {1 \over W(t)} \begin{pmatrix} x_2' & -x_2 \\ -x_1' & x_1 \end{pmatrix} \begin{pmatrix} 0 \\ f(t) \end{pmatrix}
+  $$
+>
+> and the required particular integral is
+>
+> $$
+  x_p(t) = -x_1(t) \int {x_2(t)f(t) \over W(t)} \mathrm{d}t + x_2(t) \int {x_1(t)f(t) \over W(t)} \mathrm{d}t
+  $$
+
 
 ## References
 
