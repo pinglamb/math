@@ -72,6 +72,7 @@ title: Home
 * [Difference Equations](differential-equations/difference-equations.md)
 * [Partial Differential Equations](differential-equations/pde.md)
 * [Practical Examples](differential-equations/practical-examples.md)
+* [Oscillations and Resonance](differential-equations/oscillation-resonance.md)
 
 ## Geometry
 {: .left}

@@ -244,7 +244,7 @@ If $\rho < 0$, the solution decays to $0$.
 If $\rho = 0$, we have pure oscillations.
 If $\rho > 0$, the solution grows exponentially fast.
 
-![Complex Roots Oscillation](../images/ode-homogeneous-complex-roots-oscillation.png)
+![Complex Roots Oscillation](../images/ode-homogeneous-complex-roots-oscillation.png){: .size-2x}
 
 ## Inhomogeneous + Linear + Constant Coefficients
 
