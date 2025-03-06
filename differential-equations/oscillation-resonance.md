@@ -117,6 +117,96 @@ The oscillation of a simple pendulum is also a good example of second order ODE.
 > *Proposition.*{: .prop}
 > The period of oscillations is $2\pi/\omega = 2\pi\sqrt{L/g}$.
 
+## Damping
+
+Damping occurs when we take into account effects of friction or air resistance.
+
+> *Proposition.*{: .prop}
+> The damping exerts a force proportional to the velocity but in opposite direction, i.e.
+>
+> $$
+  mx'' + \mu x' + kx = 0
+  $$
+>
+> where $\mu > 0$. Dividing both side by $m$ and let $\lambda = \mu / m$, we have
+>
+> $$
+  x'' + \lambda x' + \omega^2 x = 0
+  $$
+>
+> The roots of the characteristic equation are
+>
+> $$
+  k = {- \lambda \pm \sqrt{\lambda^2 - 4 \omega^2} \over 2}
+  $$
+>
+> which gives rise to three possibilities depending on the nature of the roots.
+
+![Damping](../images/ode-damping.png){: .size-2x}
+
+> *Definition.*{: .def}
+> **[Over-damping]**
+> When $\lambda > 4\omega^2$, there are two distinct real roots $-k_1$ and $-k_2$ and both are negative since $0 < \lambda^2 - 4 \omega^2 < \lambda^2$.
+> The general solution is
+>
+> $$
+  x(t) = Ae^{-k_1 t} + Be^{-k_2 t}
+  $$
+>
+> and all solutions are expontentially decaying and approach zero as $t \to \infty$.
+> There are no oscillations on its way to equilibrium.
+
+> *Definition.*{: .def}
+> **[Critical damping]**
+> When $\lambda = 4\omega^2$, there is one repeated root $k = -\lambda / 2$.
+> The general solution is
+>
+> $$
+  x(t) = (A + Bt)e^{-\lambda t/2}
+  $$
+>
+> Similarily, the system settles down to equilibrium without any oscillations.
+> However, this is the critical case in that any further reduction in the damping allows for oscillations.
+
+> *Definition.*{: .def}
+> **[Under-damping]**
+> When $\lambda < 4\omega^2$, there are two complex roots
+>
+> $$
+  k = -{\lambda \over 2} \pm i \sigma
+  $$
+>
+> where $\sigma = \sqrt{4\omega^2 - \lambda^2}/2$.
+> The general solution is
+>
+> $$
+  x(t) = e^{-\lambda t/2}(A \cos \sigma t + B \sin \sigma t)
+  $$
+>
+> The system is always oscillating, but the amplitude of the oscillations decays to zero expontentially fast.
+
+> *Proposition.*{: .prop}
+> In case of under-damping, the period of oscillations remains constant though the amplitude decays.
+>
+> *Proof.*{: .prf}
+>
+> Rewrite the general solution as $x(t) = M e^{-\lambda t/2} \cos (\sigma t - \phi)$.
+> Differentiate both side with respect to $t$, i.e.
+>
+> $$
+  {\mathrm{d} x \over \mathrm{d} t} = -M {\lambda \over 2} e^{-\lambda t/2} \cos (\sigma t - \phi) - \sigma M e^{-\lambda t/2} \cos (\sigma t - \phi)
+  $$
+>
+> The maxima and minima occur when $x' = 0$, i.e.
+>
+> $$
+  \tan(\sigma t - \phi) = -{\lambda \over 2 \sigma} \quad \implies \quad \sigma t - \phi = \tan^{-1} \left( - {\lambda \over 2\sigma} \right) + n\pi
+  $$
+>
+> Hence, the time between successive maxima is $2\pi / \sigma$, independent of the amplitude.
+
+![Period of Under Damping](../images/ode-under-damping-period.png)
+
 ## References
 
 * James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 13
