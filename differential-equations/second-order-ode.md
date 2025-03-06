@@ -284,35 +284,37 @@ $$
 x_p(t) = (At + B)e^{-t}\cos 2t + (Ct + D)e^{-t}\sin 2t
 $$
 
-## Reduction of order
+## Reduction of Order
 
-For a more general case of having coefficients as functions of $t$ for homogeneous linear differential equations
-
-$$
-a(t)y'' + b(t)y' + c(t)y = 0
-$$
-
-In case we know a particular solution $u(t)$ to the equation, let $y(t) = u(t)v(t)$, we have
-
-$$
-y' = u'v + v'u \quad \text{and} \quad y'' = u''v + 2u'v' + v''u
-$$
-
-Substituding it back and grouping the terms containing $v$, we have
-
-$$
-a(t)[v''u + 2u'v'] + b(t)[v'u] = v[a(t)u'' + b(t)u' + c(t)u] = 0
-$$
-
-as $u(t)$ is a solution of the equation.
-
-Thus, by letting $z = v'$
-
-$$
-[a(t)u(t)]z' + [2a(t)u'(t) + b(t)u(t)]z = 0
-$$
-
-which is a first order differential equation that can be solved by the method of integrating factors.
+> *Proposition.*{: .prop}
+> For the case of having coefficients as functions of $t$, i.e.
+>
+> $$
+  a(t){\mathrm{d}^2 x \over \mathrm{d}t^2} + b(t){\mathrm{d}x \over \mathrm{d}t} + c(t)x = 0
+  $$
+>
+> If we happen to know one solution $u(t)$ of the equation, let $x(t) = u(t)y(t)$, we have
+>
+> $$
+  x' = u'y + uy' \quad \text{and} \quad x'' = u''y + 2u'y' + uy''
+  $$
+>
+> Substituding it back and grouping the terms containing $y$, we have
+>
+> $$
+  \begin{align*}
+  y[a(t)u'' + b(t)u' + c(t)u] + y'[2a(t)u' + b(t)u] + y''[a(t)u] &= 0 \\
+  y'[2a(t)u' + b(t)u] + y''[a(t)u] &= 0
+  \end{align*}
+  $$
+>
+> Thus, by putting $z = y'$
+>
+> $$
+  [a(t)u(t)]z' + [2a(t)u'(t) + b(t)u(t)]z = 0
+  $$
+>
+> which is a first order differential equation that can be solved by the method of integrating factors.
 
 ## References
 

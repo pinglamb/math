@@ -22,11 +22,15 @@
   padding-right: 200px;
 }
 
+.page-link {
+  color: #999999;
+  &:visited {
+    color: #999999;
+  }
+}
+
 .site-footer {
   .footer-nav {
-    .page-link {
-      color: #999999;
-    }
   }
   .contact-list {
     text-align: right;
