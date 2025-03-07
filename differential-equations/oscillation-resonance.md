@@ -207,6 +207,104 @@ Damping occurs when we take into account effects of friction or air resistance.
 
 ![Period of Under Damping](../images/ode-under-damping-period.png)
 
+## Resonance
+
+Resonance is the study of oscillating system with an external forcing that is also oscillating, i.e.
+
+$$
+x'' + \omega^2 x = a \cos \alpha t
+$$
+
+> *Proposition.*{: .prop}
+> If the system is forced at a frequency that differs from its own natural frequency, i.e. $\alpha \not= \omega$,
+> then there is no resonance and the general solution is
+>
+> $$
+  x(t) = M \cos(\omega t - \phi) + {a \over \omega^2 - \alpha^2} \cos \alpha t
+  $$
+>
+> Hence, the motion is a combination of two oscillations at two frequencies.
+>
+> *Proof.*{: .prf}
+>
+> It is a inhomogenerous differential equation.
+> By trying $x_p(t) = C \cos \alpha t$, we get
+>
+> $$
+  C = {a \over \omega^2 - \alpha^2}
+  $$
+
+From the solution, we can see that the amplitude of the second term increases when $\alpha$ gets closer to $\omega$. Therefore,
+
+> *Proposition.*{: .prop}
+> When $\alpha = \omega$, the amplitude of the resulting oscillations grows linearly.
+> The general solution is
+>
+> $$
+  x(t) = C \sin \omega t + D \cos \omega t + {a \over 2 \omega} t \sin \omega t
+  $$
+>
+> *Proof.*{: .prf}
+>
+> As the forcing term is a solution solving the homonogenerous equation,
+> we have to try $x_p(t) = C \omega \cos \omega t + D \omega \sin \omega t$ as the particular integral.
+> Hence,
+>
+> $$
+  x_p(t) = {a \over 2\omega}t\sin \omega t
+  $$
+
+The response by the system is unbounded and result with ideal resonance.
+
+![Unbounded Response](../images/ode-resonance-unbounded-response.png)
+
+In the real world, there is almost invariably some damping in the system so ideal resonance is not possible.
+However, there will still be frequency at which the amplitude of the resulting oscillations is significantly larger than the amplitude of the forcing.
+
+> *Proposition.*{: .prop}
+> Consider a oscillating system with damping and external forcing, i.e.
+>
+> $$
+  x'' + \lambda x' + \omega^2 x = a \cos \alpha t
+  $$
+>
+> where $\lambda$ is strictly positive and $\lambda^2 < 4 \omega^2$, so that the oscillating system is under-damping.
+>
+> The maximum response occurs at $\alpha^2 = \omega^2 - \lambda^2/2$ and the maximum value of amplitude is
+>
+> $$
+  R_{\text{max}}(\lambda) = {2a \over \lambda \sqrt{4\omega^2 - \lambda^2}}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Assume $x_p(t) = C \cos \alpha t + D \sin \alpha t$, we have
+>
+> $$
+  x_p(t) = {a(\omega^2 - \alpha^2) \over (\omega^2 - \alpha^2)^2 + (\lambda\alpha)^2} \cos \alpha t + {a\lambda\alpha \over (\omega^2 - \alpha^2)^2 + (\lambda\alpha)^2} \sin \alpha t
+  $$
+>
+> By combinating the two terms, the amplitude of the response is
+>
+> $$
+  R(\alpha) = {a \over \sqrt{(\omega^2 - \alpha^2)^2 + (\lambda\alpha)^2}}
+  $$
+>
+> The response is at maximum value when the denominator is at minimum, therefore
+>
+> $$
+  {\mathrm{d} \over \mathrm{d} \alpha} [(\omega^2 - \alpha^2)^2 + (\lambda\alpha)^2] = -4\alpha(\omega^2 - \alpha^2)^2 + 2\lambda^2\alpha = 0
+  $$
+>
+> which implies $\alpha^2 = \omega^2 - \lambda^2/2$. Thus, the smaller the damping $\lambda$, the maximum response will happen when $\alpha$ is close to $\omega$.
+> The maximum value of the response, which increases as $\lambda$ decreases, is
+>
+> $$
+  R_{\text{max}}(\lambda) = {2a \over \lambda \sqrt{4\omega^2 - \lambda^2}}
+  $$
+
+![Resonance with Damping](../images/ode-resonance-under-damping.png){: .size-2x}
+
 ## References
 
-* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 13
+* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 13, 15
