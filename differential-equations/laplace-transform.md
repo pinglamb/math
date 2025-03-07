@@ -174,6 +174,120 @@ A sketch of $y = u_c(t)f(t - c)$ is like this:
   \end{align*}
   $$
 
+## Impulse Functions
+
+In some physical systems, we have to deal with phenomena of an impulsive nature, e.g. voltage or bouncing ball.
+
+Consider the function
+
+$$
+d_\tau(t) = \begin{cases}
+1/2\tau & -\tau < t < \tau \\
+0 & t \le -\tau \text{ or } t \ge \tau \\
+\end{cases}
+$$
+
+in which $\tau$ is a small positive constant.
+To idealize the forcing function $d_\tau$, we make it acting in a shorter and shorter time interval, i.e.
+
+$$
+\lim_{\tau \to 0} d_\tau(t) = 0
+$$
+
+![Impulsive Force Function](../images/ode-impulsive-force-function.png)
+
+On the other hand, the total impulse by the forcing function is the integral
+
+$$
+I(\tau) = \int_{-\infty}^\infty d_\tau(t)\mathrm{d}t
+$$
+
+As long as $\tau \not = 0$, we have $I(\tau) = 1$. Therefore,
+
+$$
+\lim_{\tau \to 0} I(\tau) = 1
+$$
+
+> *Definition.*{: .def}
+> A **unit impulse function** or **Dirac delta function**, denoted by $\delta(t)$, is defined by
+>
+> $$
+  \delta(t) = 0, t \not= 0 \quad \text{and} \quad \int_{-\infty}^\infty \delta(t) \mathrm{d}t = 1
+  $$
+
+A unit impulse at $t = t_0$ is therefore given by
+
+$$
+\delta(t - t_0) = 0, t \not= t_0 \quad \text{and} \quad \int_{-\infty}^\infty \delta(t - t_0) \mathrm{d}t = 1
+$$
+
+> *Proposition.*{: .prop}
+> The Laplace transform of $\delta(t - t_0)$ is
+>
+> $$
+  \mathcal{L}\{\delta(t - t_0)\} = e^{-st_0}
+  $$
+>
+> Hence, we have
+>
+> $$
+  \mathcal{L}\{\delta(t)\} = \lim_{t_0 \to 0} e^{-st_0} = 1
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Consider the Laplace transform of $d_\tau(t - t_0)$, we have
+>
+> $$
+  \begin{align*}
+  \mathcal{L}\{d_\tau(t - t_0)\} &= \int_0^\infty e^{-st}d_\tau(t - t_0) \mathrm{d}t \\
+  &= \int_{t_0 - \tau}^{t_0 + \tau} e^{-st}d_\tau(t - t_0) \mathrm{d}t \\
+  &= {1 \over 2\tau} \int_{t_0 - \tau}^{t_0 + \tau} e^{-st} \mathrm{d}t \\
+  &= -{1 \over 2s\tau} \left[ e^{-st} \right]_{t_0 - \tau}^{t_0 + \tau} \\
+  &= {1 \over s\tau} \left( {e^{s\tau} - e^{-s\tau} \over 2} \right) e^{-st_0} \\
+  &= {\sin s\tau \over s\tau} e^{-st_0}
+  \end{align*}
+  $$
+>
+> By definition of $\delta(t - t_0)$, we have
+>
+> $$
+  \begin{align*}
+  \mathcal{L}\{\delta(t - t_0)\} &= \lim_{\tau \to 0} \mathcal{L}\{d_\tau(t - t_0)\} \\
+  &= \lim_{\tau \to 0} {\sin s\tau \over s\tau} e^{-st_0} \\
+  &= e^{-st_0}
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> The integral of the product of delta function and any continuous function $f$ is
+>
+> $$
+  \int_{-\infty}^\infty \delta(t - t_0)f(t)\mathrm{d}t = f(t_0)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By the definition of delta function and mean value theorem for integrals, we have
+>
+> $$
+  \begin{align*}
+  \int_{-\infty}^\infty \delta(t - t_0)f(t)\mathrm{d}t
+  &= \lim_{\tau \to 0} \int_{-\infty}^\infty d_\tau(t - t_0)f(t)\mathrm{d}t \\
+  &= \lim_{\tau \to 0} {1 \over 2\tau} \int_{t_0 - \tau}^{t_0 + \tau} f(t)\mathrm{d}t \\
+  &= \lim_{\tau \to 0} {1 \over 2\tau} 2\tau \cdot f(t^\ast) \\
+  &= \lim_{\tau \to 0} f(t^\ast)
+  \end{align*}
+  $$
+>
+> As $t_0 - \tau < t^\ast < t_0 + \tau$ and $\tau \to 0$, $t^\ast \to t_0$.
+> Hence,
+>
+> $$
+  \int_{-\infty}^\infty \delta(t - t_0)f(t)\mathrm{d}t = f(t_0)
+  $$
+
+
 ## References
 
 * William E. Boyce _Elementary Differential Equations and Boundary Value Problems_, 2009 - Chapter 6
