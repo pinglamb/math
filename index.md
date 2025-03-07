@@ -69,6 +69,7 @@ title: Home
 * [First Order ODE](differential-equations/first-order-ode.md)
 * [Second Order ODE](differential-equations/second-order-ode.md)
 * [Series Solutions](differential-equations/series-solutions.md)
+* [Laplace Transform](differential-equations/laplace-transform.md)
 * [Difference Equations](differential-equations/difference-equations.md)
 * [Partial Differential Equations](differential-equations/pde.md)
 * [Practical Examples](differential-equations/practical-examples.md)
