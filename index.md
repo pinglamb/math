@@ -71,7 +71,8 @@ title: Home
 * [Series Solutions](differential-equations/series-solutions.md)
 * [Laplace Transform](differential-equations/laplace-transform.md)
 * [Difference Equations](differential-equations/difference-equations.md)
-* [Partial Differential Equations](differential-equations/pde.md)
+* [Systems of Differential Equations](differential-equations/systems-of-ode.md)
+* [Nonlinear Differential Equations](Differential-equations/nonlinear-ode.md)
 * [Practical Examples](differential-equations/practical-examples.md)
 * [Oscillations and Resonance](differential-equations/oscillation-resonance.md)
 
