@@ -102,6 +102,78 @@ The Laplace transform of some important elementary functions are given in the fo
 
 The Laplace transform is useful for solving differential equations as it reduces the problem to an algebraic equation.
 
+## Heaviside Functions
+
+> *Definition.*{: .def}
+> The **unit step function** or **Heaviside function**, denoted by $u_c$, is defined by
+>
+> $$
+  u_c(t) = \begin{cases}
+  0 & t < c, \\
+  1 & t \ge c,
+  \end{cases} \quad c \ge 0
+  $$
+
+![Heaviside Function](../images/ode-heaviside-function.png)
+
+> *Theorem.*{: .thm}
+> If $F(s) = \mathcal{L}\\{f(t)\\}$ exists for $s > a \ge 0$ and if $c$ is a positive constant, then
+>
+> $$
+  \mathcal{L}\{u_c(t)f(t - c)\} = e^{-cs}\mathcal{L}\{f(t)\} = e^{-cs}F(s), \quad s > a
+  $$
+>
+> Conversely, if $f(t) = \mathcal{L}^{-1}\\{F(s)\\}$, then
+>
+> $$
+  u_c(t)f(t - c) = \mathcal{L}^{-1}\{e^{-cs}F(s)\}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \mathcal{L}\{u_c(t)f(t - c)\} &= \int_0^\infty e^{-st}u_c(t)f(t - c) \mathrm{d}t \\
+  &= \int_c^\infty e^{-st}f(t - c) \mathrm{d}t \\
+  &= \int_0^\infty e^{-s(\tilde{t} + c)} f(\tilde{t}) \mathrm{d}\tilde{t} \\
+  &= e^{-cs} \mathcal{L}\{f(t)\}
+  \end{align*}
+  $$
+
+> *Corollary.*{: .cor}
+> By taking $f(t) = 1$, we have
+>
+> $$
+  \mathcal{L}(u_c(t)) = { e^{-cs} \over s}
+  $$
+
+A sketch of $y = u_c(t)f(t - c)$ is like this:
+
+![Heaviside Function for Laplace Transform](../images/ode-heaviside-function-laplace-transform.png)
+
+> *Theorem.*{: .thm}
+> If $F(s) = \mathcal{L}\\{f(t)\\}$ exists for $s > a \ge 0$ and if $c$ is a constant, then
+>
+> $$
+  \mathcal{L}\{e^{ct}f(t)\} = F(s - c), \quad s > a + c
+  $$
+>
+> Conversely, if $f(t) = \mathcal{L}^{-1}\\{F(s)\\}$, then
+>
+> $$
+  e^{ct}f(t) = \mathcal{L}^{-1}\{F(s - c)\}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \mathcal{L}\{e^{ct}f(t)\} &= \int_0^\infty e^{-(s-c)t}f(t) \mathrm{d}t \\
+  &= \int_0^\infty e^{-\tilde{s}t}f(t) \mathrm{d}t \\
+  &= F(\tilde{s}) = F(s - c)
+  \end{align*}
+  $$
+
 ## References
 
 * William E. Boyce _Elementary Differential Equations and Boundary Value Problems_, 2009 - Chapter 6
