@@ -287,6 +287,20 @@ $$
   \int_{-\infty}^\infty \delta(t - t_0)f(t)\mathrm{d}t = f(t_0)
   $$
 
+There is a subtle relationship between the Dirac delta function and Heaviside function.
+
+> *Proposition.*{: .prop}
+> The Heaviside function can be defined by
+>
+> $$
+  u_0(x) = H(x) = \int_{-\infty}^x \delta(t) \mathrm{d}t
+  $$
+>
+> Hence, by the F.T.C.,
+>
+> $$
+  {\mathrm{d}H \over \mathrm{d}x} = \delta(x)
+  $$
 
 ## References
 
