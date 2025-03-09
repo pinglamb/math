@@ -234,6 +234,7 @@ It is possible to prove that the remainder term $R_n(x)$ approaches $0$, but it 
 This method of proving the function equals to its Taylor expansion can be used for other series as well.
 
 ## List of Important Series
+{: #important-series}
 
 $$
 \begin{align*}
