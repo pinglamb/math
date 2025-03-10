@@ -147,6 +147,20 @@ the two series solutions are indeed $\sin x$ and $\cos x$, which matches the sol
 The function $\sin x$ can in fact be defined as the unique solution of the IVP $y'' + y = 0, y(0) = 0, y'(0) = 1$.
 Similarily, the function $\cos x$ can be defined as the unique solution of the IVP $y'' + y = 0, y(0) = 1, y'(0) = 0$
 
+For ratio test to work, we have to find an explicit formula for the coefficients, and sometimes it will be hard or even not feasible.
+The theorem provides a good way to find a lower bound of radius of convergence without even solving the equation.
+
+> *Example.*{: .eg}
+> For the Legendre equation
+>
+> $$
+  (1 - x^2)y'' - 2xy' + \alpha(\alpha + 1)y = 0
+  $$
+>
+> As $P(x) = 1 - x^2$, $Q(x) = -2x$ and $R(x) = \alpha(\alpha + 1)$ are polynomials,
+> the distance of $x = 0$ from zeros of $P(x)$ is the radius of convergence,
+> i.e. $P(x) = 0 \implies x = \pm 1$ so $\rho = 1$ or $\vert x \vert < 1$ for series solutions about $x = 0$.
+
 ## Near Singular Point
 
 ## References
