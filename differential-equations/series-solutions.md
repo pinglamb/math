@@ -27,7 +27,8 @@ Even though we can solve differential equations by methods mentioned previously,
 > is a point such that $p = Q/P$ and $q = R/P$ are analytic at $x_0$.
 
 > *Definition.*{: .def}
-> A **singular point** of a differential equation is a point that is not ordinary.
+> A **singular point** of a differential equation is a point that is not ordinary, i.e.
+> $P(x_0) = 0$ and at least one of $Q$ and $R$ is not zero at $x_0$.
 
 ## Ordinary Points
 
@@ -161,7 +162,166 @@ The theorem provides a good way to find a lower bound of radius of convergence w
 > the distance of $x = 0$ from zeros of $P(x)$ is the radius of convergence,
 > i.e. $P(x) = 0 \implies x = \pm 1$ so $\rho = 1$ or $\vert x \vert < 1$ for series solutions about $x = 0$.
 
-## Near Singular Point
+## Cauchy-Euler Equations
+
+> *Definition.*{: .def}
+> The **Cauchy-Euler equations** or **equidimensional equations** are the differential equations of the form
+>
+> $$
+  L[y] = x^2 y'' + ax y' + by = 0
+  $$
+>
+> where $a, b$ are real constants.
+
+> *Proposition.*{: .prop}
+> Assume a solution is of the form $y(x) = x^r$ for $x > 0$. Then
+>
+> $$
+  L[x^r] = x^r[r(r-1) + ar + b] = 0
+  $$
+>
+> Cancelling the $x^r$ factor and we obtain the **indicial equation**
+>
+> $$
+  F(r) = ar(r-1) + br + c = 0
+  $$
+>
+> and the roots are
+>
+> $$
+  r_1, r_2 = {-(a - 1) \pm \sqrt{(a - 1)^2 - 4b} \over 2}
+  $$
+
+> *Proposition.*{: .prop}
+> If the indicial equation has two real roots $r_1$ and $r_2$, then the general solution is
+>
+> $$
+  y(x) = Ax^{r_1} + Bx^{r_2}
+  $$
+
+> *Proposition.*{: .prop}
+> If the indicial equation has one repeated root $r$, then the general solution is
+>
+> $$
+  y(x) = Ax^{r} + Bx^{r}\ln x = (A + B\ln x)x^r
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The other solution can be derived by reduction of order.
+>
+> Alternatively, note that $F(r) = (r - r_1)^2$ which implies $F'(r_1) = 0$ as well.
+>
+> By differentiating the differential equation with respect to $r$, we have
+>
+> $$
+  {\partial \over \partial r} L[x^r] = {\partial \over \partial r} x^r F(r)
+  $$
+>
+> and therefore
+>
+> $$
+  L[x^r \ln x] = (r - r_1)^2 x^r \ln x + 2(r - r_1) x^r
+  $$
+>
+> in which the R.H.S. is zero for $r = r_1$.
+> Hence, $x^{r_1} \ln x$ is the second solution.
+
+> *Proposition.*{: .prop}
+> If the indicial equation has one complex roots $k = \rho \pm \omega i$, then the general solution is
+>
+> $$
+  y(x) = x^{\rho}[A\cos(\omega\ln x) + B\sin(\omega\ln x)]
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Similar to having real roots, the general solution is
+>
+> $$
+  y(x) = Cx^{\rho + \omega i} + Dx^{\rho - \omega i}
+  $$
+>
+> Since
+>
+> $$
+  x^{\rho \pm \omega i} = x^{\rho} e^{\pm \omega i \ln x} = x^\rho [\cos(\omega \ln x) \pm \sin(\omega \ln x)]
+  $$
+>
+> As we want to make our solution real, we need to have $D = C^\ast$, i.e.
+>
+> $$
+  \begin{align*}
+  y(x) &= 2\text{Re}[Cx^{\rho + \omega i}] \\
+  &= 2\text{Re}[(\alpha + \beta i)x^\rho [\cos(\omega \ln x) + \sin(\omega \ln x)]] \\
+  &= 2x^\rho[\alpha \cos(\omega \ln x) - \beta \sin(\omega \ln x)]
+  \end{align*}
+  $$
+>
+> By rewriting the constants, we have $y(x) = x^{\rho}[A\cos(\omega\ln x) + B\sin(\omega\ln x)]$.
+
+![Euler Equations](../images/ode-euler-equation-behaviour.png){: .size-2x}
+
+> *Proposition.*{: .prop}
+> For the case that $x < 0$, let $x = -\xi$ and $y = u(\xi)$, then
+>
+> $$
+  {\mathrm{d}y \over \mathrm{d}x} = {\mathrm{d}u \over \mathrm{d}\xi} {\mathrm{d}\xi \over \mathrm{d}x} = - {\mathrm{d}u \over \mathrm{d}\xi}
+  \quad \text{and} \quad
+  {\mathrm{d}^2 y \over \mathrm{d}x^2} = {\mathrm{d} \over \mathrm{d}\xi} \left(-{\mathrm{d}u \over \mathrm{d}\xi}\right) {\mathrm{d} \xi \over \mathrm{d}x} = {\mathrm{d}^2u \over \mathrm{d}\xi^2}
+  $$
+>
+> Thus, the Euler equation becomes
+>
+> $$
+  \xi^2 u'' + a\xi u' + bu = 0
+  $$
+>
+> which is exactly the same except for the variable names.
+> Therefore,
+>
+> $$
+  u(\xi) = \begin{cases}
+  A\xi^{r_1} + B\xi^{r_2} \\
+  (A + B \ln \xi) \xi^{r} \\
+  \xi^\lambda (A \cos (\mu \ln \xi) + B \sin (\mu \ln \xi))
+  \end{cases}
+  $$
+>
+> To obtain the solutions in $x$, we just need to Substitude $\xi = -x$.
+> Hence, combining the solutions for $x > 0$ and $x < 0$, we have
+>
+> $$
+  y(x) = \begin{cases}
+  A|x|^{r_1} + B|x|^{r_2} \\
+  (A + B \ln |x|) |x|^{r} \\
+  |x|^\lambda (A \cos (\mu \ln |x|) + B \sin (\mu \ln |x|))
+  \end{cases}
+  $$
+
+## Singular Points
+
+Although the singular points of a differential equation are usually few in number,
+most of the time they determine the principal features of the solution to a much larger extent which we have to study more carefully.
+
+> *Definition.*{: .def}
+> A **regular singular point** of a differential equation is a point $x_0$ such that
+>
+> $$
+  \lim_{x \to x_0} (x - x_0) {Q(x) \over P(x)}
+  \quad \text{and} \quad
+  \lim_{x \to x_0} (x - x_0)^2 {R(x) \over P(x)}
+  $$
+>
+> are finite, or in other words, if both
+>
+> $$
+  (x - x_0) {Q(x) \over P(x)}
+  \quad \text{and} \quad
+  (x - x_0)^2 {R(x) \over P(x)}
+  $$
+>
+> are analytic at $x = x_0$.
 
 ## References
 
