@@ -6,20 +6,52 @@ title: Series Solutions &#124; Differential Equations
 # Series Solutions
 {: .page-title}
 
+Even though we can solve differential equations by methods mentioned previously, it is still useful to find solution in terms of power series for computational purpose.
+
 > *Definition.*{: .def}
-> For a differential equation
+> A function $f$ is **analytic** at a point $x = x_0$ if it has a Taylor series expansion about $x = x_0$, i.e.
 >
 > $$
-  P(x) {\mathrm{d}^2 y \over \mathrm{d}x^2} + Q(x) {\mathrm{d} y \over \mathrm{d} x} + R(x) y = 0
+  f(x) = \sum_{n=0}^\infty {f^{(n)}(x_0) \over n!} (x - x_0)^n
   $$
 >
-> An **orderinary point** is a point $x_0$ such that $P(x_0) \not= 0$.
-> Since $P$ is continuous, it follows that there is an interval about $x_0$ in which $P(x)$ is never zero.
->
-> On the other hand, $x_0$ is a **singular point** if $P(x_0) = 0$.
-> At least one of the $Q(x_0)$ and $R(x_0)$ is not zero and hence one of the $Q/P$ or $R/P$ becomes unbounded as $x \to x_0$.
+> with a raidus of convergence $\rho > 0$.
 
-## Near Ordinary Point
+> *Definition.*{: .def}
+> An **orderinary point** $x_0$ of a differential equation
+>
+> $$
+  P(x) y'' + Q(x) y' + R(x) y = 0
+  $$
+>
+> is a point such that $p = Q/P$ and $q = R/P$ are analytic at $x_0$.
+
+> *Definition.*{: .def}
+> A **singular point** of a differential equation is a point that is not ordinary.
+
+## Ordinary Points
+
+> *Theorem.*{: .thm}
+> If $x_0$ is an ordinary point of the differential equation
+>
+> $$
+  P(x) y'' + Q(x) y' + R(x) y = 0
+  $$
+>
+> then the general solution is of the form
+>
+> $$
+  y = \sum_{n=0}^\infty a_n (x - x_0)^n = a_0 y_1(x) + a_1 y_2(x)
+  $$
+>
+> where $a_0$ and $a_1$ are arbitrary and
+>
+> + $y_1$ and $y_2$ are two power series solutions that are analytic at $x_0$,
+>
+> + $y_1$ and $y_2$ form a fundamental set of solutions,
+>
+> + the radius of convergence for each of the series solutions is at least as large as
+>   the minimum of the radii of convergence of the series for $p = Q/P$ and $q = R/P$.
 
 > *Example.*{: .eg}
 > For the differential equation
@@ -81,10 +113,14 @@ title: Series Solutions &#124; Differential Equations
 >
 > Be noted that the series solutions provide only a local approximation about $x = 0$ if they are truncated.
 
-With the series solutions, we can already do some analysis.
-We can check their convergence by ratio test and found that they both converge for all $x$.
-We can also compute their Wronskian to check if they form a fundamental set of solutions.
-Let
+Base on the above theorem, as $P(x) = 1, Q(x) = 0, R(x) = 1$ and $x_0 = 0$ is an ordinary point, we can conclude that
+
++ the solutions converge for all $x$,
+
++ the two solutions are linearly independent and form a fundamental set of solutions.
+
+We can confirm their convergence by ratio test and found that they really converge for all $x$.
+On the other hand, let
 
 $$
 C(x) = \sum_{n=0}^\infty {(-1)^n \over (2n)!} x^{2n}
