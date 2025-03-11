@@ -87,24 +87,33 @@ The way of solving linear difference equations is analogous to that of different
   \end{align*}
   $$
 
-## Inhomogeneous second order linear difference equation
+## Second Order + Inhomogeneous + Linear
 
-For difference equation like
+> *Proposition.*{: .prop}
+> Consider a difference equation of the form
+>
+> $$
+  L[n] = ax_{n+2} + bx_{n+1} + cx_n = f_n
+  $$
+>
+> Let $x_h$ be general solution of $L[n] = 0$ and
+> $x_p$ be a particular solution of $L[n] = f_n$.
+> Then the general solution is
+>
+> $$
+  x_n = x_h + x_p
+  $$
 
-$$
-ax_{n+2} + bx_{n+1} + cx_n = f_n
-$$
+Similarily, $x_p$ involves some educated guess. Common cases are
 
-Same as differential equation, we need to find a particular solution $x_p$ so
+| $f_n$                            | $x_p$                             |
+| $a_k n^k + a_{k-} b^{k-1} + ...$ | $b_k n^k + b_{k-1} n^{k-1} + ...$ |
+| $\lambda^n$                      | $a \lambda^n$                     |
 
-$$
-x_n = x_h + x_p
-$$
+In case $x_p$ is one of the solution in $x_h$, we can multiply it by $n$ or $n^2$ to form a new solution.
 
-is the general solution.
-
-Similarily, if the particular solution already appears in the complimentary solution, we need to add $n$ or $n^2$ to form a new particular solution.
+## First Order + Nonlinear
 
 ## Reference
 
-* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 22
+* James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 22, 23
