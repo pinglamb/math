@@ -409,7 +409,64 @@ most of the time they determine the principal features of the solution to a much
 > which depends on $r$ and $a_0, a_1, ..., a_{n-1}$.
 
 > *Definition.*{: .def}
+> The **indicial equation** of the differential equation is the quadratic equation
+>
+> $$
+  r(r - 1) + p_0r + q_0 = 0
+  $$
+>
+> where
+>
+> $$
+  p_0 = \lim_{x \to 0} xp(x)
+  \quad \text{and} \quad
+  q_0 = \lim_{x \to 0} x^2q(x)
+  $$
+>
+> which determines the qualitative behaviour of the solutions.
+
+> *Definition.*{: .def}
 > The roots of the indicial equation are called the **exponents at the singularity**.
+
+> *Proposition.*{: .prop}
+> For two distinct roots $r_1$ and $r_2$ with $r_1 \ge r_2$ and $r_1 - r_2$ is not a positive integer,
+> then the two solutions are
+>
+> $$
+  y_1(x) = x^{r_1} \left[ 1 + \sum_{n=1}^\infty a_n(r_1) x^n \right]
+  \quad \text{and} \quad
+  y_2(x) = x^{r_2} \left[ 1 + \sum_{n=1}^\infty a_n(r_2) x^n \right]
+  $$
+>
+> where $a_n(r)$ is determined by the recurrence relation.
+> The radii of convergence for the series are at least equal to the distance from the origin to the nearest zero of $P$ other than $x = 0$.
+
+> *Proposition.*{: .prop}
+> For two distinct real roots $r_1$ and $r_2$ with $r_1 \ge r_2$ but $r_1 = r_2 + n$ for some positive integer $n$,
+> we can only obtain one solution
+>
+> $$
+  y_1(x) = x^{r_1} \left[ 1 + \sum_{n=1}^\infty a_n(r_1) x^n \right]
+  $$
+>
+> because $F(r_2 + n)$ will be zero at some point and break the recurrence relation.
+>
+> The second solution will be of the form
+>
+> $$
+  y_2(x) = ay_1(x) \ln x + x^{r_2} \left[ 1 + \sum_{n=1}^\infty b_n(r_2) x^n \right]
+  $$
+>
+> where the $b_n(r_2)$ and $a$ can be determined by substituting it back to the equation.
+
+> *Proposition.*{: .prop}
+> For repeated roots $r_1 = r_2$, the second solution will be of the form
+>
+> $$
+  y_2(x) = y_1(x) \ln x + x^{r_1} \left[ 1 + \sum_{n=1}^\infty b_n(r_1) x^n \right]
+  $$
+>
+> where the $b_n(r_1)$ can be determined by substituting it back to the equation.
 
 ## References
 
