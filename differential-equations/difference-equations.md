@@ -114,6 +114,67 @@ In case $x_p$ is one of the solution in $x_h$, we can multiply it by $n$ or $n^2
 
 ## First Order + Nonlinear
 
+Consider a general difference equation
+
+$$
+x_{n+1} = f(x_n)
+$$
+
+> *Definition.*{: .def}
+> A **fixed point** is a point $x^\ast$ such that
+>
+> $$
+  f(x^\ast) = x^\ast
+  $$
+>
+> so that if $x_n = x^\ast$ then $x_{n+1} = x^\ast$.
+
+> *Definition.*{: .def}
+> A fixed point is **stable** if you stay close to it provided that you start sufficiently near, i.e.
+> for any $\epsilon > 0$ there exists a $\delta > 0$ such that
+>
+> $$
+  |x_0 - x^\ast| < \delta \quad \implies \quad |f^n(x_0) - x^\ast| < \epsilon \; \text{ for all } \; n = 0, 1, 2, ...
+  $$
+
+> *Definition.*{: .def}
+> A fixed point is **attracting** if there exists a $\delta > 0$ such that
+>
+> $$
+  |x_0 - x^\ast| < \delta \quad \implies \quad f^n(x_0) \to x^\ast \; \text{ as } \; n \to \infty
+  $$
+
+> *Definition.*{: .def}
+> A fixed point is **unstable** if for all $\delta > 0$ there exists a $\epsilon > 0$ such that
+>
+> $$
+  |x_0 - x^\ast| < \delta \quad \text{but} \quad |f^n(x_0) - x^\ast| > \epsilon \; \text{ for some } \; n > 0
+  $$
+
+> *Proposition.*{: .prop}
+> Analytically, suppose that $x_n = x^\ast + \delta_n$ where $\delta_n$ is small, then by Taylor series expansion
+>
+> $$
+  \begin{align*}
+  x_{n+1} &= f(x^\ast + \delta_n) \\
+  &\approx f(x^\ast) + f'(x^\ast)\delta_n \\
+  &= x^\ast + f'(x^\ast)\delta_n
+  \end{align*}
+  $$
+>
+> We therefore have $\delta_{n+1} \approx f'(x^\ast)\delta_n$ and the solution is
+>
+> $$
+  \delta_n = [f'(x^\ast)]^n \delta_0
+  $$
+>
+> Hence, $x^\ast$ is stable and attracting if $\vert f'(x^\ast) \vert < 1$ and unstable if $\vert f'(x^\ast) \vert > 1$.
+
+Graphically, we can produce a picture known as **cobweb diagram** by drawing $y = f(x)$ and the line $y = x$.
+Given $x_n$, we can find $x_{n+1}$ by drawing a line up to $f(x_n)$ then over to $y = x$, and repatedly to find $x_{n+2}, ...$.
+
+![Cobweb Method](../images/ode-cobweb-method.png){: .size-2x}
+
 ## Reference
 
 * James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 22, 23
