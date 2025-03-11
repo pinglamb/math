@@ -313,7 +313,7 @@ most of the time they determine the principal features of the solution to a much
   \lim_{x \to x_0} (x - x_0)^2 {R(x) \over P(x)}
   $$
 >
-> are finite, or in other words, if both
+> are finite and both
 >
 > $$
   (x - x_0) {Q(x) \over P(x)}
@@ -322,6 +322,94 @@ most of the time they determine the principal features of the solution to a much
   $$
 >
 > are analytic at $x = x_0$.
+
+> *Proposition.*{: .prop}
+> Consider a differential equation of the form
+>
+> $$
+  L[y] = P(x)y'' + Q(x)y' + R(x)y = 0
+  $$
+>
+> Assume $x = 0$ is a regular singular point, i.e.
+>
+> $$
+  xp(x) = x{Q(x) \over P(x)} = \sum_{n=0}^\infty p_n x^n
+  \quad \text{and} \quad
+  x^2q(x) = x^2{R(x) \over P(x)} = \sum_{n=0}^\infty q_n x^n
+  $$
+>
+> and
+>
+> $$
+  \lim_{x \to 0} xp(x) = p_0
+  \quad \text{and} \quad
+  \lim_{x \to 0} x^2q(x) = q_0
+  $$
+>
+> By multiplying both sides of the equation by $x^2$, we have
+>
+> $$
+  L[y] = x^2y'' + xp(x)y' + x^2q(x)y = 0
+  $$
+>
+> By taking the limit $x \to 0$, we get the corresponding Euler equation
+>
+> $$
+  x^2y'' + p_0xy' + q_0y = 0
+  $$
+>
+> Assume there is a solution of the form
+>
+> $$
+  y = \phi(r, x) = x^r \sum_{n=0}^\infty a_n x^n = \sum_{n=0}^\infty a_n x^{r+n}
+  $$
+>
+> It follows that
+>
+> $$
+  y' = \sum_{n=1}^\infty (r+n) a_n x^{r+n-1}
+  \quad \text{and} \quad
+  y'' = \sum_{n=2}^\infty (r+n)(r+n-1) a_n x^{r+n-2}
+  $$
+>
+> Substituting all of them back to the differential equation and collecting the terms by the powers of $x$, we have
+>
+> $$
+  \begin{align*}
+  a_0 F(r) x^r
+  &+ [a_1 F(r+1) + a_0(p_1 r + q_1)]x^{r+1} \\
+  &+ [a_2 F(r+2) + a_0(p_2 r + q_2) + a_1(p_1(r+1) + q_1)]x^{r+2} \\
+  &+ [a_3 F(r+3) + a_0(p_3 r + q_3) + a_1(p_2(r+1) + q_2) + a_2(p_1(r+2) + q_1)]x^{r+3} \\
+  &+ \cdots = 0
+  \end{align*}
+  $$
+>
+> or in compact form
+>
+> $$
+  L[\phi](r, x) = a_0 F(r) x^r + \sum_{n=1}^\infty \left\{ F(r+n)a_n + \sum_{k=0}^{n-1} a_k [(r+k)p_{n-k} + q_{n-k}] \right\} x^{r+n} = 0
+  $$
+>
+> where
+>
+> $$
+  F(r) = r(r-1) + p_0r + q_0
+  $$
+>
+> For the above to be a solution, the coefficient of each power of $x$ must be zero.
+>
+> For the $x^{r}$ term, as $a_0 \not= 0$, $F(r) = 0$, which is the **indicial equation** and is exactly the same as that of the Euler equation.
+>
+> For the $x^{r+n}$ terms, we have the **recurrence relation**
+>
+> $$
+  F(r + n)a_n + \sum_{k=0}^{n-1} a_k [(r+k)p_{n-k} + q_{n-k}] = 0
+  $$
+>
+> which depends on $r$ and $a_0, a_1, ..., a_{n-1}$.
+
+> *Definition.*{: .def}
+> The roots of the indicial equation are called the **exponents at the singularity**.
 
 ## References
 
