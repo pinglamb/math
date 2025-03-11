@@ -238,7 +238,7 @@ By geometry, we observed the following inequalities about modulus:
 >
 > *Proof.*{: .prf}
 >
-> Self-evident by geometry or by substituding $z_1' = z_1 - z_2$ and $z_2' = z_2 - z_3$ into the triangle inequality.
+> Self-evident by geometry or by substituting $z_1' = z_1 - z_2$ and $z_2' = z_2 - z_3$ into the triangle inequality.
 
 ![Triangle Inequality](../images/complex-number-double-circles.png)
 

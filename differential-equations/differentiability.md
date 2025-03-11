@@ -159,13 +159,13 @@ This notation is handy for deriving basic laws of differentiation.
   f(a + h) = f(a) + f'(a)h + o(h) \quad \text{and} \quad g(f(a) + k) = g(f(a)) + g'(f(a))k + o(k)
   $$
 >
-> Substitude $k = f(a + h) - f(a)$ in the second formula,
+> Substitute $k = f(a + h) - f(a)$ in the second formula,
 >
 > $$
   g(f(a + h)) = g(f(a)) + g'(f(a))[f(a + h) - f(a)] + o(f(a + h) - f(a))
   $$
 >
-> Then substitude $f(a + h) - f(a) = f'(a)h + o(h)$,
+> Then substitute $f(a + h) - f(a) = f'(a)h + o(h)$,
 >
 > $$
   \begin{align*}

@@ -189,7 +189,7 @@ $$
 As an example, as $12 = 2^2 \cdot 3$, we can see that $1/12^s$ is the product of the terms $1/4^s$, $1/3^s$ and many $1$s.
 Therefore, the above factorization is true when every integers can be written as product of primes.
 
-It also implies that there are infinitely many primes because by substituding $s = 1$, $\zeta(1)$ is the harmonic series which is infinite.
+It also implies that there are infinitely many primes because by substituting $s = 1$, $\zeta(1)$ is the harmonic series which is infinite.
 However, if there are finite number of terms, the factorized form will equal to a finite value.
 Hence, there are infinitely many primes.
 

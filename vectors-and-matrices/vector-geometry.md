@@ -203,7 +203,7 @@ It provides a way to convert a plane $\Pi: \mathbf{x} \cdot \mathbf{\hat{n}} = d
 >
 > *Proof.*{: .prf}
 >
-> As $\mathbf{b}$ is a point on $L_2$, we can find the distance by substituding $\mathbf{y} = \mathbf{b}$ to the above.
+> As $\mathbf{b}$ is a point on $L_2$, we can find the distance by substituting $\mathbf{y} = \mathbf{b}$ to the above.
 
 
 ### Distance between Skew Lines
