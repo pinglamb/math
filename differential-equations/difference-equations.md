@@ -6,75 +6,86 @@ title: Difference Equations &#124; Differential Equations
 # Difference Equations
 {: .page-title}
 
-A difference equation is equation associates values of $x_n$ with different values of $n$.
-The order of adifference equation is the largest difference between any two of the indices of $x$.
+Difference equations can appear in numerical approximations and other problems that the independent variable only takes discrete values.
 
-## First order difference equation
+> *Definition.*{: .def}
+> The **order** of a difference equation is the largest difference between any two of the indices of $x$.
 
-A simple linear difference equation
+## First Order + Homogeneous + Linear
 
-$$
-x_{n+1} = kx_n
-$$
+> *Proposition.*{: .prop}
+> For a first order linear difference equation
+>
+> $$
+  x_{n+1} = kx_n
+  $$
+>
+> the solution is
+>
+> $$
+  x_n = k^n x_0
+  $$
 
-has a solution
+## Second Order + Homogeneous + Linear
 
-$$
-x_n = k^n x_0
-$$
+The way of solving linear difference equations is analogous to that of differential equations.
 
-## Homogeneous second order linear difference equation
+> *Proposition.*{: .prop}
+> Consider a difference equation of the form
+>
+> $$
+  ax_{n+2} + bx_{n+1} + cx_n = 0
+  $$
+>
+> Let $x_n = k^n$ be the solution. Then
+>
+> $$
+  ak^{n+2} + bk^{n+1} + ck^n = 0
+  $$
+>
+> and cancelling $k^n$ gives us the **auxiliary equation**
+>
+> $$
+  ak^2 + bk + c = 0
+  $$
 
-The way of solving linear difference equation is similar to that of differential equation.
-Consider a general difference equation
+> *Proposition.*{: .prop}
+> If the auxiliary equation has two distinct real roots $k_1$ and $k_2$,
+> then the general solution is
+>
+> $$
+  x_n = Ak_1^n + Bk_2^n
+  $$
 
-$$
-ax_{n+2} + bx_{n+1} + cx_n = 0
-$$
+> *Proposition.*{: .prop}
+> If the auxiliary equation has one repeated root $k$,
+> then the general solution is
+>
+> $$
+  x_n = Ak^n + Bnk^n
+  $$
 
-Let $x_n = k^n$, substituding it back we have
-
-$$
-ak^{n+2} + bk^{n+1} + ck^n = 0
-$$
-
-Cancelling $k^n$ on both side of the equation gives us the auxiliary equation
-
-$$
-ak^2 + bk + c = 0
-$$
-
-Similar to that of differential equation, there are 3 different cases.
-
-For 2 real roots, the general solution is
-
-$$
-x_n = Ak_1^n + Bk_2^n
-$$
-
-For repeated root, the general solution is
-
-$$
-x_n = Ak^n + Bnk^n
-$$
-
-For 2 complex roots $k = a \pm bi = r e^{i\theta}$ where $r = \sqrt{a^2 + b^2}$ and $\theta = \tan^{-1} b/a$, the general solution is
-
-$$
-x_n = r^n(A\cos n\theta + B\sin n\theta)
-$$
-
-To justify the general solution in case of complex roots, similarily, we can substitude the complex roots like they are real, i.e.
-
-$$
-\begin{align*}
-x_n &= C(re^{i\theta})^n + C^\ast(re^{-i\theta})^n \\
-&= r^n[2\text{Re}(Ce^{in\theta})] \\
-&= r^n[2\text{Re}((\alpha + \beta i)(\cos n\theta + i \sin n\theta))] \\
-&= r^n[2(\alpha \cos n \theta - \beta \sin n \theta)] \\
-&= r^n(A \cos n \theta + B \sin n \theta)
-\end{align*}
-$$
+> *Proposition.*{: .prop}
+> If the auxiliary equation has two complex roots $k = a \pm bi = r e^{i\theta}$,
+> then the general solution is
+>
+> $$
+  x_n = r^n(A\cos n\theta + B\sin n\theta)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The complex roots can be handled just like they are real, i.e.
+>
+> $$
+  \begin{align*}
+  x_n &= C(re^{i\theta})^n + C^\ast(re^{-i\theta})^n \\
+  &= r^n[2\text{Re}(Ce^{in\theta})] \\
+  &= r^n[2\text{Re}((\alpha + \beta i)(\cos n\theta + i \sin n\theta))] \\
+  &= r^n[2(\alpha \cos n \theta - \beta \sin n \theta)] \\
+  &= r^n(A \cos n \theta + B \sin n \theta)
+  \end{align*}
+  $$
 
 ## Inhomogeneous second order linear difference equation
 

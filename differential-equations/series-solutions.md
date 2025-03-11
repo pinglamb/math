@@ -367,11 +367,12 @@ most of the time they determine the principal features of the solution to a much
 > It follows that
 >
 > $$
-  y' = \sum_{n=1}^\infty (r+n) a_n x^{r+n-1}
+  y' = \sum_{n=0}^\infty (r+n) a_n x^{r+n-1}
   \quad \text{and} \quad
-  y'' = \sum_{n=2}^\infty (r+n)(r+n-1) a_n x^{r+n-2}
+  y'' = \sum_{n=0}^\infty (r+n)(r+n-1) a_n x^{r+n-2}
   $$
 >
+> Note that the dummy variable starts from $0$ here.
 > Substituting all of them back to the differential equation and collecting the terms by the powers of $x$, we have
 >
 > $$

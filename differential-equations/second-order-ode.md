@@ -195,7 +195,7 @@ title: Second Order Ordinary Differential Equations &#124; Differential Equation
 > which is called the **auxiliary/characteristic equation**.
 
 > *Proposition.*{: .prop}
-> If the characteristic equation has two real roots $k_1$ and $k_2$, then the general solution is
+> If the characteristic equation has two distinct real roots $k_1$ and $k_2$, then the general solution is
 >
 > $$
   x(t) = Ae^{k_1 t} + Be^{k_2 t}
