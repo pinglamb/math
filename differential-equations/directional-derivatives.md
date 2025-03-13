@@ -108,6 +108,43 @@ and generalize that for higher dimentions.
 
 ![Normal Line](../images/ode-gradient-vector-normal-line.png)
 
+## Stationary Points
+
+One of the application of derivatives is finding maximum and minimum values. Similarily,
+
+> *Theorem.*{: .thm}
+> If $f$ has a local maximum/minimum at $(a, b)$, then $f_x(a, b) = 0$ and $f_y(a, b) = 0$.
+>
+> *Proof.*{: .prf}
+>
+> Let $g(x) = f(x, b)$. If $f$ has a local maximum/minimum at $(a, b)$, then $g$ as well at $a$, so $g'(a) = f_x(a, b) = 0$,
+> and we can apply similar argument for $h(y) = f(a, y)$.
+
+Similar to single-variable derivative, the converse is not necessary true.
+
+> *Definition.*{: .def}
+> A **critical/stationary point** is a point $(a, b)$ of $f$ such that $f_x(a, b) = 0$ and $f_y(a, b) = 0$.
+> If the point is neither a local maximum/minimum, then it is called a **saddle point**.
+
+> *Proposition.*{: .prop}
+> **[Second Derivative Test]**
+> Let
+>
+> $$
+  D(a, b) = \begin{vmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy}\end{vmatrix}(a, b) = f_{xx}(a, b)f_{yy}(a, b) - [f_{xy}(a, b)]^2
+  $$
+>
+> + If $D > 0$ and $f_{xx}(a, b) > 0$, then $f(a, b)$ is a local minimum.
+>
+> + If $D > 0$ and $f_{xx}(a, b) < 0$, then $f(a, b)$ is a local maximum.
+>
+> + If $D < 0$ then $f(a, b)$ is a saddle point.
+
+Here is an example contour map of $f(x, y) = x^4 + y^4 - 4xy + 1$.
+From that we can see $(1, 1)$ and $(-1, -1)$ are local maximum/minimum and $(0, 0)$ is a saddle point.
+
+![Contour Map](../images/ode-critical-points-contour-map.png){: .size-2x}
+
 ## References
 
 * James Stewart _Single Variable Calculus_, 2015 - Chapter 14
