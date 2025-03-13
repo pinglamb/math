@@ -9,7 +9,7 @@ title: Directional Derivatives &#124; Differential Equations
 Directional derivatives are the generalization of partial derivatives for obtaining rate of change on an arbitrary direction.
 
 > *Definition.*{: .def}
-> The **directional derivative** of $f$ at $(x_0, y_0)$ in the direction of a unit vector $\mathbf{u} = \langle a, b \rangle$ is
+> The **directional derivative** of $f$ at $(x_0, y_0)$ in the direction of a unit vector $\mathbf{u} = (a, b)$ is
 >
 > $$
   D_\mathbf{u} f(x_0, y_0) = \lim_{h \to 0} {f(x_0 + ha, y_0 + hb) - f(x_0, y_0) \over h}
@@ -17,18 +17,20 @@ Directional derivatives are the generalization of partial derivatives for obtain
 >
 > if this limit exists.
 
-If $\mathbf{u} = \mathbf{i} = \langle 1, 0 \rangle$, then $D_\mathbf{i} f = f_x$.
-If $\mathbf{u} = \mathbf{j} = \langle 0, 1 \rangle$, then $D_\mathbf{j} f = f_y$.
+If $\mathbf{u} = \mathbf{i} = (1, 0)$, then $D_\mathbf{i} f = f_x$.
+If $\mathbf{u} = \mathbf{j} = (0, 1)$, then $D_\mathbf{j} f = f_y$.
 
 ![Directional Derivative](../images/ode-directional-derivative-geometry.png)
 
 > *Theorem.*{: .thm}
 > If $f$ is a differentiable function of $x$ and $y$,
-> then $f$ has a directional derivative in the direction of any unit vector $\mathbf{u} = \langle a, b \rangle$ and
+> then $f$ has a directional derivative in the direction of any unit vector $\mathbf{u} = (a, b)$ and
 >
 > $$
   D_\mathbf{u} f(x, y) = f_x(x, y)a + f_y(x, y)b
   $$
+>
+> Alternatively, if $\mathbf{u} = (\cos \theta, \sin \theta)$, then $D_\mathbf{u} f(x, y) = f_x(x, y)\cos\theta + f_y(x, y)\sin\theta$.
 >
 > *Proof.*{: .prf}
 >
