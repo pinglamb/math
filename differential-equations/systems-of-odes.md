@@ -104,4 +104,37 @@ There is also a similar existence and uniqueness theorem which is omitted here.
 > Consider a system of first order differential equations
 >
 > $$
+  \mathbf{x}' = \mathbf{A} \mathbf{x}
   $$
+>
+> where $\mathbf{A}$ is a constant $n \times n$ matrix.
+> Assume the solutions is of the form
+>
+> $$
+  \mathbf{x} = \boldsymbol{\xi} e^{rt} \quad \text{and} \quad \mathbf{x}' = r\boldsymbol{\xi} e^{rt}
+  $$
+>
+> Then substituting them back we have $r\boldsymbol{\xi} e^{rt} = \mathbf{A} \boldsymbol{\xi} e^{rt}$, and
+>
+> $$
+  (\mathbf{A} - r\mathbf{I})\boldsymbol{\xi} = \mathbf{0}
+  $$
+>
+> Therefore, $r$ and $\boldsymbol{\xi}$ are the eigenvalues and eigenvectors of $\mathbf{A}$.
+>
+> Hence, if we have the $n$ eigenvalues (counted with multiplicity) and $n$ linearly independent eigenvectors,
+> then the general solution is
+>
+> $$
+  \mathbf{x}(t) = c_1 \boldsymbol{\xi}_1 e^{r_1t} + ... + c_n \boldsymbol{\xi}_n e^{r_nt}
+  $$
+
+## Fundamental Matrices
+
+## Linear + Inhomogeneous + Constant Coefficients
+
+## Qualitative Analysis
+
+## References
+
+* William E. Boyce _Elementary Differential Equations and Boundary Value Problems_, 2009 - Chapter 7
