@@ -111,22 +111,22 @@ There is also a similar existence and uniqueness theorem which is omitted here.
 > Assume the solutions is of the form
 >
 > $$
-  \mathbf{x} = \boldsymbol{\xi} e^{rt} \quad \text{and} \quad \mathbf{x}' = r\boldsymbol{\xi} e^{rt}
+  \mathbf{x} = \mathbf{v} e^{\lambda t} \quad \text{and} \quad \mathbf{x}' = \lambda\mathbf{v} e^{\lambda t}
   $$
 >
-> Then substituting them back we have $r\boldsymbol{\xi} e^{rt} = \mathbf{A} \boldsymbol{\xi} e^{rt}$, and
+> Then substituting them back we have $\lambda \mathbf{v} e^{\lambda t} = \mathbf{A} \mathbf{v} e^{\lambda t}$, and
 >
 > $$
-  (\mathbf{A} - r\mathbf{I})\boldsymbol{\xi} = \mathbf{0}
+  (\mathbf{A} - \lambda \mathbf{I})\mathbf{v} = \mathbf{0}
   $$
 >
-> Therefore, $r$ and $\boldsymbol{\xi}$ are the eigenvalues and eigenvectors of $\mathbf{A}$.
+> Therefore, $\lambda$ and $\mathbf{v}$ are the eigenvalues and eigenvectors of $\mathbf{A}$.
 >
 > Hence, if we have the $n$ eigenvalues (counted with multiplicity) and $n$ linearly independent eigenvectors,
 > then the general solution is
 >
 > $$
-  \mathbf{x}(t) = c_1 \boldsymbol{\xi}_1 e^{r_1t} + ... + c_n \boldsymbol{\xi}_n e^{r_nt}
+  \mathbf{x}(t) = c_1 \mathbf{v}_1 e^{\lambda_1t} + ... + c_n \mathbf{v}_n e^{\lambda_n t}
   $$
 
 ## Fundamental Matrices
