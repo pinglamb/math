@@ -182,6 +182,44 @@ There is also a similar existence and uniqueness theorem which is omitted here.
   \mathbf{x}(t) = A e^{\rho t} (\mathbf{u_1}\cos \omega t - \mathbf{u_2} \sin \omega t) + B e^{\rho t} (\mathbf{u_1} \sin \omega t + \mathbf{u_2} \cos \omega t)
   $$
 
+> *Proposition.*{: .prop}
+> For one repeated eigenvalue, it is possible that there are two linearly independent eigenvectors associated to it.
+> If that is the case, the general solution is the same as having two distinct real eigenvalues.
+>
+> However, if there is only one eigenvector $\mathbf{v}$, we have to find the **generalized eigenvector** by assuming the second solution having the form
+>
+> $$
+  \mathbf{x}_2(t) = \mathbf{u}_1 te^{\lambda t} + \mathbf{u_2} e^{\lambda t}
+  \quad \text{and} \quad
+  \mathbf{x}_2'(t) = \lambda \mathbf{u}_1 te^{\lambda t} + \mathbf{u_1} e^{\lambda t} + \lambda \mathbf{u_2} e^{\lambda t}
+  $$
+>
+> Substituting it back and we have
+>
+> $$
+  \begin{align*}
+  \lambda \mathbf{u}_1 te^{\lambda t} + \mathbf{u_1} e^{\lambda t} + \lambda \mathbf{u_2} e^{\lambda t} &= \mathbf{A}(\mathbf{u}_1 te^{\lambda t} + \mathbf{u_2} e^{\lambda t}) \\
+  (\mathbf{A} - \lambda \mathbf{I})\mathbf{u}_1 te^{\lambda t} + [(\mathbf{A} - \lambda \mathbf{I})\mathbf{u}_2 - \mathbf{u_1}]e^{\lambda t} &= 0
+  \end{align*}
+  $$
+>
+> Therefore, for the equationi to be true for all $t$, we need to have
+>
+> $$
+  \begin{align*}
+  (\mathbf{A} - \lambda \mathbf{I})\mathbf{u}_1 &= \mathbf{0} \\
+  (\mathbf{A} - \lambda \mathbf{I})\mathbf{u}_2 &= \mathbf{u_1}
+  \end{align*}
+  $$
+>
+> and can conclude that $\mathbf{u_1} = \mathbf{v}$ and try to solve $\mathbf{u_2}$ by elimiation.
+>
+> Hence, the general solution is
+>
+> $$
+  \mathbf{x}(t) = A \mathbf{v} e^{\lambda t} + B (\mathbf{v} te^{\lambda t} + \mathbf{u_2} e^{\lambda t})
+  $$
+
 ## Linear + Inhomogeneous + Constant Coefficients
 
 ## Fundamental Matrices
