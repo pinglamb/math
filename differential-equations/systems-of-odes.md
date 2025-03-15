@@ -129,9 +129,62 @@ There is also a similar existence and uniqueness theorem which is omitted here.
   \mathbf{x}(t) = c_1 \mathbf{v}_1 e^{\lambda_1t} + ... + c_n \mathbf{v}_n e^{\lambda_n t}
   $$
 
-## Fundamental Matrices
+> *Proposition.*{: .prop}
+> For a constant $2 \times 2$ matrix with two distinct real eigenvalues $\lambda_1$ and $\lambda_2$ and corresponding eigenvectors $\mathbf{v}_1$ and $\mathbf{v}_2$,
+> the general solution is
+>
+> $$
+  \mathbf{x}(t) = A \mathbf{v}_1 e^{\lambda_1t} + B \mathbf{v}_2 e^{\lambda_2t}
+  $$
+
+> *Proposition.*{: .prop}
+> For a constant real $2 \times 2$ matrix with two complex eigenvalues $\lambda = \rho \pm i\omega$ and corresponding eigenvectors $\mathbf{v} = \mathbf{u_1} \pm i \mathbf{u_2}$,
+> the general solution is
+>
+> $$
+  \begin{align*}
+  \mathbf{x}(t)
+  &= e^{\rho t} [(A \cos \omega t + B \sin \omega t) \mathbf{u_1} + (B \cos \omega t - A \sin \omega t) \mathbf{u_2}] \\
+  &= A e^{\rho t} (\mathbf{u_1}\cos \omega t - \mathbf{u_2} \sin \omega t) + B e^{\rho t} (\mathbf{u_1} \sin \omega t + \mathbf{u_2} \cos \omega t)
+  \end{align*}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> For a real matrix, the complex eigenvalues are always conjugate to each other, so as the corresponding eigenvectors because
+> if $\lambda = \rho + i \omega$ and $\mathbf{v}$ are the eigenvalue and eigenvector of $\mathbf{A}$, then
+>
+> $$
+  [(\mathbf{A} - \lambda \mathbf{I})\mathbf{v}]^\ast = (\mathbf{A} - \lambda^\ast \mathbf{I})\mathbf{v}^\ast = 0
+  $$
+>
+> so $\lambda^\ast$ and $\mathbf{v}^\ast$ are also eigenvalue and eigenvector of $\mathbf{A}$.
+>
+> Substitude them into the general solution gives us
+>
+> $$
+  \mathbf{x}(t) = c_1 \mathbf{v} e^{(\rho + i\omega)t} + c_2 \mathbf{v}^\ast e^{(\rho - i\omega)t}
+  = e^{\rho t} (c_1 \mathbf{v} e^{i\omega t} + c_2 \mathbf{v}^\ast e^{-i\omega t})
+  $$
+>
+> We can ensure real solutions by having $c_1 = a + ib$ and $c_2 = c_1^\ast = a - ib$ and it becomes
+>
+> $$
+  \begin{align*}
+  \mathbf{x}(t) &= 2e^{\rho t} \text{Re}\left[(a + ib)(\mathbf{u_1} + i\mathbf{u_2})(\cos \omega t + i\sin\omega t) \right] \\
+  &= 2e^{\rho t} \left[ (a \cos \omega t - b \sin \omega t)\mathbf{u_1} - (b \cos \omega t + a \sin \omega t)\mathbf{u_2} \right]
+  \end{align*}
+  $$
+>
+> Hence, let $A = 2a$ and $B = -2b$, by rearranging the terms, we have
+>
+> $$
+  \mathbf{x}(t) = A e^{\rho t} (\mathbf{u_1}\cos \omega t - \mathbf{u_2} \sin \omega t) + B e^{\rho t} (\mathbf{u_1} \sin \omega t + \mathbf{u_2} \cos \omega t)
+  $$
 
 ## Linear + Inhomogeneous + Constant Coefficients
+
+## Fundamental Matrices
 
 ## Qualitative Analysis
 
