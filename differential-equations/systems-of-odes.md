@@ -222,6 +222,58 @@ There is also a similar existence and uniqueness theorem which is omitted here.
 
 ## Linear + Inhomogeneous + Constant Coefficients
 
+> *Proposition.*{: .prop}
+> **[Diagonalization]**
+> For systems of the form
+>
+> $$
+  \mathbf{x}' = \mathbf{A}\mathbf{x} + \mathbf{g}(t)
+  $$
+>
+> where $\mathbf{A}$ is an $n \times n$ diagonalizable constant matrix.
+>
+> Let $\mathbf{T} = \begin{pmatrix} \mathbf{v}_1 & \mathbf{v}_2 & \cdots & \mathbf{v}_n \end{pmatrix}$
+> with $\Set{\mathbf{v}_i}$ being $n$ linearly independent eigenvectors and define
+>
+> $$
+  \mathbf{x} = \mathbf{T}\mathbf{y}
+  $$
+>
+> Then, substituting for $\mathbf{y}$, we obtain
+>
+> $$
+  \begin{align*}
+  \mathbf{T}\mathbf{y}' &= \mathbf{A}\mathbf{T}\mathbf{y} + \mathbf{g}(t) \\
+  \mathbf{y}' &= \mathbf{T}^{-1}\mathbf{A}\mathbf{T}\mathbf{y} + \mathbf{T}^{-1}\mathbf{g}(t) = \mathbf{D}\mathbf{y} + \mathbf{T}^{-1}\mathbf{g}(t)
+  \end{align*}
+  $$
+>
+> where $\mathbf{D}$ is diagonal matrix whose diagonal entries are the eigenvalues of $\mathbf{A}$.
+>
+> Thus, the equations can be solved separately as each of them is of the form
+>
+> $$
+  y_j'(t) = r_j y_j(t) + h_j(t), \quad j = 1, ..., n
+  $$
+>
+> where $h_j(t)$ is a certain linear combination of $g_1(t), ..., g_n(t)$.
+>
+> Hence, the final solution can be obtained by multiplying $\mathbf{T}$ to the solutions.
+
+> *Proposition.*{: .prop}
+> **[Undetermined Coefficients]**
+> Similar to the same method for solving second order differential equations,
+> base on the form of $\mathbf{g}(t)$, we can assume the particular solution ot be a specific form
+> and try to determine the coefficients by substitution.
+>
+> For example, if $\mathbf{g}(t) = \mathbf{u}_1 e^{\alpha t} + \mathbf{u}_2 t$, we can try
+>
+> $$
+  \mathbf{x_p}(t) = \mathbf{a}e^{\alpha t} + \mathbf{b}t + \mathbf{c}
+  $$
+>
+> and solve for coefficient vectors $\mathbf{a}, \mathbf{b}$ and $\mathbf{c}$.
+
 ## Fundamental Matrices
 
 ## Qualitative Analysis
