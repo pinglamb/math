@@ -274,9 +274,50 @@ There is also a similar existence and uniqueness theorem which is omitted here.
 >
 > and solve for coefficient vectors $\mathbf{a}, \mathbf{b}$ and $\mathbf{c}$.
 
-## Fundamental Matrices
-
 ## Qualitative Analysis
+
+> *Definition.*{: .def}
+> A **phase portrait** is a plot that shows a representative sample of trajectories for a given system.
+
+The folowing are different phase portraits for different eigenvalues of a typical $2 \times 2$ system $\mathbf{x}' = \mathbf{Ax}$.
+
+> *Proposition.*{: .prop}
+> If the eigenvalues are distinct real and opposite signs, the phase portrait will be like
+>
+> ![Phase Portrait](../images/ode-phase-portrait-real-opposite-sign.png)
+>
+> The origin is called a **saddle point** and is unstable.
+
+> *Proposition.*{: .prop}
+> If the eigenvalues are distinct real and both negative, the phase portrait will be like
+>
+> ![Phase Portrait](../images/ode-phase-portrait-real-same-sign.png)
+>
+> The origin is called a **node** and is stable.
+>
+> If the eigenvalues are both positive then the trajectories will be of outward direction and the origin is unstable.
+
+> *Proposition.*{: .prop}
+> If the eigenvalues are complex with negative real parts, the phase portrait will be like
+>
+> ![Phase Portrait](../images/ode-phase-portrait-complex-negative-real.png)
+>
+> The origin is called a **sprial point** and is asymtotically stable.
+>
+> If the eigenvalues have positive real parts, then the trajectories will be of outward direction and the origin is unstable.
+>
+> If the eigenvalues have zero real parts, the trajectories will be of outward direction and the origin is called a **centre** and is stable but not asymtotically stable.
+>
+> The trajectories can be clockwise or counterclockwise depending on the coefficient matrix.
+
+> *Proposition.*{: .prop}
+> If the system has a repeated positive eigenvalue and only one linearly independent eigenvector, the phase portrait will be like
+>
+> ![Phase Portrait](../images/ode-phase-portrait-repeated.png)
+>
+> The origin is called an **improper node** and is asymtotically unstable.
+>
+> If the eigenvalue is negative then the trajectories will be of inward direction and the origin is asymtotically stable.
 
 ## References
 
