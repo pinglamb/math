@@ -274,6 +274,22 @@ There is also a similar existence and uniqueness theorem which is omitted here.
 >
 > and solve for coefficient vectors $\mathbf{a}, \mathbf{b}$ and $\mathbf{c}$.
 
+## Stability and Instability
+
+The concept of stability is important for understanding the qualitative behaviour os solutions without even solving it.
+Consider a simple autonomous system of the form $\mathbf{x}' = \mathbf{f}(\mathbf{x})$.
+
+> *Definition.*{: .def}
+> The points where $\mathbf{f}(\mathbf{x}) = \mathbf{0}$ are called **critical points**, which implies $\mathbf{x}' = \mathbf{0}$.
+> Therefore, the critical points correspond to constant/equilibrium solutions of the system.
+
+> *Definition.*{: .def}
+> A critical point is **stable** if all solutions that start "sufficiently close" to the point stay "close" to it.
+> Otherwise, it is **unstable**.
+
+> *Definition.*{: .def}
+> A critical point is **asymtotically stable** if it is stable and attracting, i.e. "close" enough solutions will approach the point eventually.
+
 ## Qualitative Analysis
 
 > *Definition.*{: .def}
@@ -319,6 +335,75 @@ The folowing are different phase portraits for different eigenvalues of a typica
 >
 > If the eigenvalue is negative then the trajectories will be of inward direction and the origin is asymtotically stable.
 
+## Nonlinear + Autonomous
+
+> *Definition.*{: .def}
+> A system is **autonomous** if the derivatives depend only on dependent variables, i.e.
+>
+> $$
+  \begin{cases}
+  \mathbf{d} x / \mathbf{d} t = F(x, y) \\
+  \mathbf{d} y / \mathbf{d} t = G(x, y) \\
+  \end{cases}
+  $$
+
+Solving nonlinear autonomous system can be hard but we can carry out similar qualitative analysis to understand the behaviours.
+The nonlinear systems are more complicated than the linear ones for the reason that there can be multiple critical points which competing for influence on the trajectories.
+
+> *Definition.*{: .def}
+> The **basin of attraction** is the set of points $P$ such that trajectories passing through $P$ will ultimately approach the critical point.
+
+> *Definition.*{: .def}
+> A **separatrix** is a trajectory that bounds a basin of attraction.
+
+![Basin of Attraction](../images/ode-nonlinear-basin-of-attraction.png){: .size-2x}
+
+> *Proposition.*{: .prop}
+> For a general nonlinear autonomous system
+>
+> $$
+  x' = F(x, y) \quad \text{and} \quad y' = G(x, y)
+  $$
+>
+> with critical point $\mathbf{x}_0 = (x_0, y_0)$.
+> The **locally linear system** that approximates the system is of the form
+>
+> $$
+  \begin{pmatrix} \xi' \\ \eta' \end{pmatrix} = \begin{pmatrix} F_x & F_y \\ G_x & G_y \end{pmatrix} \begin{pmatrix} \xi \\ \eta \end{pmatrix}
+  $$
+>
+> where the coefficient matrix is called the **Jacobian matrix**.
+>
+> *Proof.*{: .prf}
+>
+> By Taylor expansions, we have
+>
+> $$
+  \begin{align*}
+  F(x, y) &= F(x_0, y_0) + F_x(x_0, y_0)(x - x_0) + F_y(x_0, y_0)(y - y_0) + R_F(x, y) \\
+  G(x, y) &= G(x_0, y_0) + G_x(x_0, y_0)(x - x_0) + G_y(x_0, y_0)(y - y_0) + R_G(x, y)
+  \end{align*}
+  $$
+>
+> where
+>
+> $$
+  \lim_{(x, y) \to (x_0, y_0)} {R_F(x, y) \over [(x - x_0)^2 + (y - y_0)^2]^{1/2}} = 0
+  $$
+>
+> and similarily for $R_G(x, y)$.
+>
+> Hence, let $\xi = x - x_0$ and $\eta = y - y_0$,
+>
+> $$
+  \begin{pmatrix} \xi' \\ \eta' \end{pmatrix} = \begin{pmatrix} F_x(x_0, y_0) & F_y(x_0, y_0) \\ G_x(x_0, y_0) & G_y(x_0, y_0) \end{pmatrix} \begin{pmatrix} \xi \\ \eta \end{pmatrix}
+  $$
+>
+> is a linear approximation of the system around the critical point.
+
+> *Proposition.*{: .prop}
+> The type and stability of the critical point in the locally linear system is the same as a typical linear system, except for the case that the eigenvalues are purely imaginary.
+
 ## References
 
-* William E. Boyce _Elementary Differential Equations and Boundary Value Problems_, 2009 - Chapter 7
+* William E. Boyce _Elementary Differential Equations and Boundary Value Problems_, 2009 - Chapter 7, 9
