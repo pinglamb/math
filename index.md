@@ -3,6 +3,10 @@ layout: base
 title: Home
 ---
 
+## Analysis I
+
+* [Sequences and Series](analysis-1/sequences-series.md)
+
 ## Groups
 {: .left}
 
@@ -61,7 +65,6 @@ title: Home
 {: .left}
 
 * [Differentiability](differential-equations/differentiability.md)
-* [Sequences and Series](differential-equations/sequences-series.md)
 * [Power Series](differential-equations/power-series.md)
 * [Partial Differentiation](differential-equations/partial-differentiation.md)
 * [Directional Derivatives](differential-equations/directional-derivatives.md)
