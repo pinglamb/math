@@ -3,9 +3,11 @@ layout: base
 title: Home
 ---
 
-## Analysis I
+## Analysis
+{: .left}
 
-* [Sequences and Series](analysis-1/sequences-series.md)
+* [Sequences](analysis/sequences.md)
+* [Series](analysis/series.md)
 
 ## Groups
 {: .left}
