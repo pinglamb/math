@@ -182,6 +182,7 @@ It means there is always a rational in between two rationals.
   $$
 >
 > Hence, if $n = q + 1$, then $y < nx$.
+{: #rationals-archimedean-property}
 
 It means there is no infinitely large or infinitely small element in $\mathbb{Q}$.
 
