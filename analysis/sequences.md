@@ -191,6 +191,28 @@ $$
 > $$
   {1 \over a_n} - {1 \over a} = {a - a_n \over aa_n}
   $$
+>
+> We have to show that $1 / a_n$ is bounded, meaning we need to have $\vert a_n \vert$ be greater than something.
+>
+> Consider
+>
+> $$
+  |a| = |a_n + (- a_n + a)| \le |a_n| + |a_n - a| \implies |a_n| \ge |a| - |a_n - a|
+  $$
+>
+> Therefore, for $\varepsilon = \vert a \vert / 2$, there exists $N$ such that
+>
+> $$
+  (\forall n > N)\;\vert a_n - a \vert \le {|a| \over 2}
+  \implies
+  |a_n| \ge |a| - |a_n - a| \ge {|a| \over 2}
+  \implies
+  {1 \over |a_n|} \le {2 \over |a|}
+  $$
+>
+> so $1 / a_n$ is bounded.
+>
+> As $(a - a_n)$ is null sequence, $1/a$ is a constant and $(1 / a_n)$ is bounded, their product is a null sequence and hence $1 / a_n \to 1 / a$.
 
 > *Theorem.*{: .thm}
 > **[Quotient of Sequences]**
