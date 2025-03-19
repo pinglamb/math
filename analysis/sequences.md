@@ -40,8 +40,8 @@ $$
   (\forall \varepsilon > 0)(\exists N \in \mathbb{N})(\forall n \ge N)\;|a_n| < \varepsilon
   $$
 
-> *Proposition.*{: .prop}
-> $\lim a_n = L$ iff $a_n - L$ is a null sequence.
+> *Lemma.*{: .lem}
+> $a_n \to a$ iff $(a_n - a)$ is a null sequence.
 
 ## Bounded Sequences
 
@@ -183,9 +183,22 @@ $$
 >
 > Hence, $(a_nb_n - ab)$ is also a null sequence.
 
-> *Theorem.*{: .cor}
+> *Lemma.*{: .lem}
+> If $a_n \to a$, where $a \not= 0$, then $1/a_n \to 1/a$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  {1 \over a_n} - {1 \over a} = {a - a_n \over aa_n}
+  $$
+
+> *Theorem.*{: .thm}
 > **[Quotient of Sequences]**
-> If $a_n \to a$ and $b_n \to b$, and $b \not= 0$, then $a_n / b_n \to a / b$.
+> If $a_n \to a$ and $b_n \to b$, where $b \not= 0$, then $a_n / b_n \to a / b$.
+>
+> *Proof.*{: .prf}
+>
+> $a_n \to a$ and $1/b_n \to 1/b$ so their product $a_n/b_n \to a/b$.
 
 ## Convergence Test
 
