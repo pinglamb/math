@@ -7,6 +7,8 @@ title: Home
 {: .left}
 
 * [Sequences](analysis/sequences.md)
+* [Subsequences](analysis/subsequences.md)
+* [Characterization of Real Number](analysis/characterization-of-real-number.md)
 * [Series](analysis/series.md)
 
 ## Groups

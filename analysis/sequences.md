@@ -27,11 +27,32 @@ We want to study what it means for a real sequence to converge.
 >
 > The sequence is said to be **convergent**, otherwise it is **divergent**.
 
+![Convergent Sequence](../images/analysis-convergent-sequence.png)
+
 It is similar to the definition of limit of a function $f(x)$, therefore
 
 $$
 \lim_{x \to \infty} f(x) = L \text{ and } f(n) = a_n \implies \lim_{n \to \infty} a_n = L
 $$
+
+> *Proposition.*{: .prop}
+> The limit is unique, i.e. if $a_n \to L_1$ and $a_n \to L_2$ then $L_1 = L_2$.
+>
+> *Proof.*{: .prf}
+>
+> Let $\varepsilon = \vert L_1 - L_2 \vert / 3$. There exists $N_1$ and $N_2$ such that
+>
+> $$
+  (\forall n \ge N_1)\; |a_n - L_1| < \varepsilon \quad \text{and} \quad (\forall n \ge N_2)\; |a_n - L_2| < \varepsilon
+  $$
+>
+> Hence, let $N = \max(N_1, N_2)$, we have
+>
+> $$
+  (\forall n > N) |L_1 - L_2| \le |a_n - L_1| + |a_n - L_2| < 2\varepsilon = 2|L_1 - L_2|/3
+  $$
+>
+> which is a contradiction except for $L_1 = L_2$.
 
 > *Definition.*{: .def}
 > $(a_n)$ is a **null sequence** if
@@ -263,22 +284,32 @@ $$
 
 ## Convergence Test
 
-> *Property.*{: .prop}
-> Let $\Set{a_n}$ be a sequence. Then
->
-> $$
-  \lim_{n \to \infty} |a_n| = 0 \implies \lim_{n \to \infty} a_n = 0
-  $$
+Working directly with an arbitrary $\varepsilon$ can be difficult.
+Sometimes it can be easier to relate the sequence with other known converging sequences so to prove convergence and find the limit.
+
+> *Proposition.*{: .prop}
+> **[Sandwich Principle/Squeeze Theorem]**
+> Suppose that $a_n \le b_n \le c_n$ for all $n$.
+> If $a_n \to L$ and $c_n \to L$, then $b_n \to L$.
 >
 > *Proof.*{: .prf}
 >
-> As
+> Given $\varepsilon > 0$, there exists an $N$ such that $\vert a_n - L \vert < \varepsilon$ and $\vert a_n - L \vert < \varepsilon$ for $n \ge N$, therefore
 >
 > $$
-  -|a_n| \le a_n \le |a_n| \quad \text{and} \quad \lim_{n \to \infty} |a_n| = 0 \implies \lim_{n \to \infty} -|a_n| = 0
+  L - \varepsilon < a_n \le b_n \le c_n < L + \varepsilon
+  $$
+
+> *Corollary.*{: .cor}
+> $(a_n)$ is a null sequence if $(\vert a_n \vert)$ is a null sequence.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  -|a_n| \le a_n \le |a_n| \quad \text{and} \quad |a_n| \to 0 \implies -|a_n| \to 0
   $$
 >
-> By Squeeze Theorem, $\lim_{n \to \infty} a_n = 0$.
+> By Sandwich Principle, $a_n \to 0$.
 
 It is useful for finding limits of alternating sequence, for example
 
@@ -286,42 +317,19 @@ $$
 \lim_{n \to \infty} \left| {(-1)^n \over n} \right| = 0 \implies \lim_{n \to \infty} {(-1)^n \over n} = 0
 $$
 
-> *Property.*{: .prop}
-> If $\lim_{n \to \infty} a_n = L$ and function $f$ is continuous at $L$, then
->
-> $$
-  \lim_{n \to \infty} f(a_n) = f(L)
-  $$
+> *Proposition.*{: .prop}
+> Suppose that $(\varepsilon_k)$ is a null sequence of positive numbers.
+> Then a sequence $(a_n)$ converges to $L$ iff for each $k$ there exists $N_k$ such that $\vert a_n - L \vert < \varepsilon_k$ for $n > N_k$.
 >
 > *Proof.*{: .prf}
 >
-> As $f$ is continuous at $L$, i.e.
+> ($\Rightarrow$) Certainly, given $\varepsilon = \varepsilon_k$, there exists $N = N_k$ such that $\vert a_n - L \vert < \varepsilon_k$ for $n > N_k$.
 >
-> $$
-  \lim_{x \to L} f(x) = f(L)
-  $$
->
-> Given an $\varepsilon$, there exists $\delta$ such that
->
-> $$
-  0 < |x - L| < \delta \implies |f(x) - f(L)| < \varepsilon
-  $$
->
-> Since $\lim_{n \to \infty} a_n = L$, there exists $N$ such that
->
-> $$
-  n > N \implies |a_n - L| < \delta
-  $$
->
-> Combining the above, given any $\varepsilon > 0$, we can find $N$ such that whenever $n > N$,
->
-> $$
-  |a_n - L| < \delta \implies |f(a_n) - f(L)| < \varepsilon
-  $$
->
-> Hence, $\lim_{n \to \infty} f(a_n) = f(L)$.
+> ($\Leftarrow$) Given $\varepsilon > 0$, there exists a $k$ such that $0 < \varepsilon_k < \varepsilon$. For $n > N_k$, we have $\vert a_n - L \vert < \varepsilon_k < \varepsilon$.
+
+It relates the sequence with a null sequence. We can prove convengence by showing for a term $\varepsilon_k$ in a shrinking distance, there is a point $N_k$ in the sequence such that the distance of points are within $\varepsilon_k$ from the limit.
+Convenient choices are $\varepsilon_k = 1/k$ or $\varepsilon_k = 1/2^k$.
 
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 2
-* James Stewart _Single Variable Calculus_, 2015 - Chapter 11
