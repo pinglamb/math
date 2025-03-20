@@ -333,3 +333,4 @@ Convenient choices are $\varepsilon_k = 1/k$ or $\varepsilon_k = 1/2^k$.
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 2
+* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 3
