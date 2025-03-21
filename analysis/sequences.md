@@ -324,6 +324,33 @@ Convenient choices are $\varepsilon_k = 1/k$ or $\varepsilon_k = 1/2^k$.
 >
 > Similar argument can be applied for decreasing sequence bounded below.
 
+## Recurrence Relation
+
+A sequence can be determined by a relation between successive members of it. For example, the famous Fibonacci sequence
+
+$$
+a_{n+2} = a_{n+1} + a_n
+$$
+
+Sometimes, it is possible to find an explicit formula (See [Difference Equations](../differential-equations/difference-equations.md)) but most of the time it is not possible.
+We can still study its limit by the following technique.
+
+> *Proposition.*{: .prop}
+> If $a_n \to L$, then $a_{n+1} \to L$ and $a_{n+2} \to L$ and ...
+>
+> For example, if the sequence
+>
+> $$
+  a_{n+1} = \sqrt{a_n + a}
+  $$
+>
+> has a limit $L$, then $L = \sqrt{L + a}$.
+
+In some cases, the cobweb diagram can be useful as well.
+
+![Cobweb Method](../images/ode-cobweb-method.png){: .size-2x}
+
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 2
