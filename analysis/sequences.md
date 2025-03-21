@@ -313,21 +313,16 @@ Convenient choices are $\varepsilon_k = 1/k$ or $\varepsilon_k = 1/2^k$.
 >
 > *Proof.*{: .prf}
 >
-> Suppose that $(a_n)$ is an increasing sequence bounded above.
-> If $\Set{a_n}$ is bounded above, there exists a least upper bound $L$.
-> Given $\varepsilon > 0$, $L - \varepsilon$ is not an upper bound, so for some integer $N$
+> Suppose $(a_n)$ is bounded above, there exists a least upper bound $L$ such that
 >
 > $$
-  L - \varepsilon < a_N \le L
+  (\forall n)\;a_n \le L \quad \text{and} \quad (\forall \varepsilon > 0)(\exists N)\;a_N > L - \varepsilon
   $$
 >
-> As $\Set{a_n}$ is increasing, $a_n \ge a_N$ for all $n > N$. Thus,
+> As $(a_n)$ is increasing, it implies for all $n > N$, $a_n > L - \varepsilon$ as well.
+> By definition, $(a_n)$ is convergent and tends to $L$.
 >
-> $$
-  L - \varepsilon < a_n \le L
-  $$
->
-> Hence, $\lim_{n \to \infty} a_n = L$.
+> Similar argument can be applied for decreasing sequence bounded below.
 
 ## References
 
