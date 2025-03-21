@@ -243,45 +243,6 @@ $$
 >
 > $a_n \to a$ and $1/b_n \to 1/b$ so their product $a_n/b_n \to a/b$.
 
-## Monotonic Sequences
-
-> *Definition.*{: .def}
-> A sequence is **increasing** if
->
-> $$
-  \forall n \ge 1, \quad a_n < a_{n+1}
-  $$
-
-> *Definition.*{: .def}
-> A sequence is **decreasing** if
->
-> $$
-  \forall n \ge 1, \quad a_n > a_{n+1}
-  $$
-
-> *Definition.*{: .def}
-> A sequence is **monotonic** if it is either increasing or decreasing.
-
-> *Proposition.*{: .prop}
-> Every monotonic, bounded sequence is convergent.
->
-> *Proof.*{: .prf}
->
-> If $\Set{a_n}$ is bounded above, there exists a least upper bound $L$.
-> Given $\varepsilon > 0$, $L - \varepsilon$ is not an upper bound, so for some integer $N$
->
-> $$
-  L - \varepsilon < a_N \le L
-  $$
->
-> As $\Set{a_n}$ is increasing, $a_n \ge a_N$ for all $n > N$. Thus,
->
-> $$
-  L - \varepsilon < a_n \le L
-  $$
->
-> Hence, $\lim_{n \to \infty} a_n = L$.
-
 ## Convergence Test
 
 Working directly with an arbitrary $\varepsilon$ can be difficult.
@@ -329,6 +290,44 @@ $$
 
 It relates the sequence with a null sequence. We can prove convengence by showing for a term $\varepsilon_k$ in a shrinking distance, there is a point $N_k$ in the sequence such that the distance of points are within $\varepsilon_k$ from the limit.
 Convenient choices are $\varepsilon_k = 1/k$ or $\varepsilon_k = 1/2^k$.
+
+## Monotonic Sequences
+
+> *Definition.*{: .def}
+> A sequence is **increasing** if $a_{n+1} \ge a_n$ for all $n$.
+
+> *Definition.*{: .def}
+> A sequence is **strictly increasing** if $a_{n+1} > a_n$ for all $n$.
+
+> *Definition.*{: .def}
+> A sequence is **decreasing** if $a_{n+1} \le a_n$ for all $n$.
+
+> *Definition.*{: .def}
+> A sequence is **strictly decreasing** if $a_{n+1} < a_n$ for all $n$.
+
+> *Definition.*{: .def}
+> A sequence is (strictly) **monotonic** if it is either (strictly) increasing or (strictly) decreasing.
+
+> *Theorem.*{: .thm}
+> A bounded monotonic sequence is convergent.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $(a_n)$ is an increasing sequence bounded above.
+> If $\Set{a_n}$ is bounded above, there exists a least upper bound $L$.
+> Given $\varepsilon > 0$, $L - \varepsilon$ is not an upper bound, so for some integer $N$
+>
+> $$
+  L - \varepsilon < a_N \le L
+  $$
+>
+> As $\Set{a_n}$ is increasing, $a_n \ge a_N$ for all $n > N$. Thus,
+>
+> $$
+  L - \varepsilon < a_n \le L
+  $$
+>
+> Hence, $\lim_{n \to \infty} a_n = L$.
 
 ## References
 

@@ -233,6 +233,7 @@ Another way of expressing this is that subsets of $\mathbb{Q}$ which are bounded
 It leads to the construction of the set of real numbers.
 
 ## Real Numbers
+{: #real-numbers}
 
 > *Definition.*{: .def}
 > A sequence $(x_n) = x_1, x_2, x_3, ...$ of rational numbers is a **Cauchy sequence** if $x_m - x_n \to 0$ as $m, n \to \infty$,
