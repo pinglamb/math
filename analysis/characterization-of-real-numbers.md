@@ -7,7 +7,7 @@ title: Characterization of Real Numbers &#124; Analysis
 {: .page-title}
 
 In [Numbers and Sets](../numbers-and-sets/numbers.md#real-numbers), we addressed the limitations of rational numbers and the construction of real numbers from that.
-More in-depth study will be conducted here about different ways of real numbers constructions and proving them being equivalent.
+More in-depth study will be conducted here about different ways of characterizing real numbers and proving them being equivalent.
 
 Every real numbers study starts with this proposition.
 
@@ -30,6 +30,8 @@ Every real numbers study starts with this proposition.
   $$
 >
 > $b$ is also even and has a common factor $2$ with $a$ which is a contradiction.
+
+## Dedekind's Axiom
 
 The procedure of Dedekind can be applied to isolate a real number whose square is $2$.
 Note that the positive rational numbers fall into two sets, where $L$ contains the rationals with squares less than $2$ and $R$ contains those with squares greater than $2$.
@@ -80,6 +82,52 @@ By reversing the signs, we have
 > + $s \ge \inf S$ for all $s \in S$,
 >
 > + for every positive $\varepsilon$, there is an $s \in S$ for which $s < \inf S + \varepsilon$, i.e. $\inf S + \varepsilon \in R$.
+
+## Monotone-sequence Property
+
+Another way to characterize real numbers is by monotone-sequence property.
+We have already proved that [bounded monotonic sequence converges](sequences.md#bounded-monotonic-convergent) by the least upper bound property.
+Now, we assume such property and derive the least upper bound property to show that they are equivalent.
+
+> *Definition.*{: .def}
+> **[Monotone-sequence Property]**
+> An ordered field has the monotone-sequence property if every increasing sequence that is bounded above converges.
+
+> *Proposition.*{: .prop}
+> Monotone-sequence property implies Archimedean property.
+>
+> *Proof.*{: .prf}
+>
+> Since $1/n$ is decreasing and bounded below by $0$, it converges.
+> Let $L$ be the limit. $L > 0$ is impossible as we can always find an $N$ such that $1/N < L$.
+> Hence, $L = 0$ and $1/n \to 0$.
+
+> *Proposition.*{: .prop}
+> Monotone-sequence property implies least upper bound property.
+>
+> *Proof.*{: .prf}
+>
+> Let $S$ be a set that is bounded above. Pick $l_0$ and $r_0$ such that $l_0$ is not an upper bound and $r_0$ is an upper bound.
+> By repeated bisection that if $(l_n + r_n)/2$ is an upper bound, then $l_{n+1} = l_n$ and $r_{n+1} = (l_n + r_n)/2$.
+>
+> Then, we have two sequences $(l_n)$ and $(r_n)$ such that
+>
+> $$
+  l_0 \le l_1 \le l_2 \le \cdots \quad \text{and} \quad r_0 \ge r_1 \ge r_2 \ge \cdots
+  $$
+>
+> and also
+>
+> $$
+  r_n - l_n = {r_0 - l_0 \over 2^n} \to 0
+  $$
+>
+> As $(l_n)$ is increasing and bounded above by $r_0$, $(l_n)$ converges and has a limit $L$.
+> Also, as $r_n - l_n \to 0$, $r_n \to L$ as well.
+>
+> $L$ is an upper bound of $S$ otherwise there is a $s \in S$ such that $s > L$ and $r_n \to L$ will imply there is some $r_N < s$ which contradicts.
+>
+> $L$ has to be the least otherwise there is an upper bound $r < L$ and $l_n \to L$ will imply there is some $l_N > r$ which contradicts.
 
 ## References
 

@@ -323,6 +323,7 @@ Convenient choices are $\varepsilon_k = 1/k$ or $\varepsilon_k = 1/2^k$.
 > By definition, $(a_n)$ is convergent and tends to $L$.
 >
 > Similar argument can be applied for decreasing sequence bounded below.
+{: #bounded-monotonic-convergent}
 
 ## Recurrence Relation
 
@@ -349,7 +350,6 @@ We can still study its limit by the following technique.
 In some cases, the cobweb diagram can be useful as well.
 
 ![Cobweb Method](../images/ode-cobweb-method.png){: .size-2x}
-
 
 ## References
 
