@@ -129,6 +129,9 @@ Now, we assume such property and derive the least upper bound property to show t
 >
 > $L$ has to be the least otherwise there is an upper bound $r < L$ and $l_n \to L$ will imply there is some $l_N > r$ which contradicts.
 
+In other words, we can use repeated bisection to construct two sequences, one increasing and bounded above and another one decreasing and bounded below,
+that converges to the same limit and the limit is the least upper bound.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 1
