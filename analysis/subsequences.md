@@ -96,7 +96,17 @@ The diagonal procedure constructs new subsequence from a sequence of subsequence
 
 > *Theorem.*{: .thm}
 > Suppose that $(a_n)$ is a sequence in a totally ordered set $A$.
-> Then there exists a monotonic subsequence $(a_{n_k})$, i.e. it is either strictly increasing, strictly decreasing or constant.
+> Then there exists a strictly monotonic subsequence $(a_{n_k})$, i.e. it is either strictly increasing, strictly decreasing or constant.
+>
+> *Proof.*{: .prf}
+>
+> An index $N$ is a _high point_ if $a_N > a_n$ for for all $n > N$.
+> If the sequence has infinitely many high points $h_1 < h_2 < \cdots$, then $(a_{h_k})$ is strictly decreasing subsequence.
+> If the sequence has finitely many high points, there exists a $N$ such that there are no high points for all $n \ge N$.
+> Starting from $n_1 = N$, we can recursively pick an $n_{k+1}$ in which $n_{k+1}$ is the least element such that $n_{k+1} \ge n_k$.
+> There are always such elements to pick otherwise $n_k$ will be a high point.
+> Therefore, for the subsequence $(a_{n_k})$, either we have an element $a_N$ such that $a_n = a_N$ for all $n > N$ and we have a constant subsequence,
+> or we exclude the successively equal elements and got a strictly increasing subsequence.
 
 ## Bolzano-Weierstrass Theorem
 
