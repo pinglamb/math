@@ -110,6 +110,24 @@ The diagonal procedure constructs new subsequence from a sequence of subsequence
 
 ## Bolzano-Weierstrass Theorem
 
+> *Theorem.*{: .thm}
+> **[Bolzano-Weierstrass Theorem]**
+> Suppose that $(a_n)$ is a bounded sequence of $\mathbb{R}$. Then there is a subsequence $(a_{n_k})$ which converges.
+>
+> *Proof.*{: .prf}
+>
+> Base on the above theorem, any sequence $(a_n)$ has a monotonic subsequence. The subsequence is bounded as well and therefore converges.
+>
+> Alternatively, we can prove this by repeated bisection. As $(a_n)$ is bounded, we have $b_0 \le a_n \le c_0$ for all $n$.
+> Let $m_0 = (b_0 + c_0) / 2$. There are infinitely many $a_n$ in either the interval $[b_0, m_0]$ or $[m_0, c_0]$ (can be both).
+> We then have a new interval $[b_1, c_1]$ such that it is half of the length and have infinitely many $a_n$ in it.
+> By repeating this process of having $m_k = (b_k + c_k)/2$, we can constructe a sequence of subsequences in which their images are $[b_0, c_0] \supseteq [b_1, c_1] \supseteq \cdots$.
+> By the diagonal procedure, we can construct a subsequence $(a_{kk})$ from it and we have $b_k \le a_{kk} \le c_k$ for each $k$.
+> As $(b_k)$ is increasing and bounded by $c_0$, $(b_k)$ converges to a limit $L$.
+> $c_k = b_k + (b_0 + c_0)/2^k$ which also converges to $L$.
+> By the sandwich principle, the subsequence $(a_{kk})$ converges to $L$.
+
+
 ## References
 
 * D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 1.3, 2.4, 3.4
