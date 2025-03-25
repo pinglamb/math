@@ -6,6 +6,9 @@ title: Subsequences &#124; Analysis
 # Subsequences
 {: .page-title}
 
+Subsequences are constructed from a sequence by picking some of the elements in it, but with the ordering of elements preserved.
+Sequences can behave in many different ways but there are some special properties about their subsequences that we can use to prove more general results.
+
 ## Partial Order
 
 > *Definition.*{: .def}
