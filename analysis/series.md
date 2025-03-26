@@ -6,26 +6,57 @@ title: Series &#124; Analysis
 # Series
 {: .page-title}
 
+The convergence of a sequence allows us to consider infinite sums, or series.
+
 > *Definition.*{: .def}
-> A series is the infinite sum of a sequence $\Set{a_n}$.
-> Let $s_n$ denote its $n$th partial sum, i.e.
+> A **series** is the infinite sum of a sequence $(a_n)$.
+> Let $s_n$ denote its $n$th **partial sum**, i.e.
 >
 > $$
-  s_n = a_1 + a_2 + ... + a_n
+  s_n = \sum_{k=1}^n a_n = a_1 + a_2 + \cdots + a_n
   $$
 >
-> If the sequence $\Set{s_n}$ is convergent, then the sum of the series is defined by $s = \lim_{n \to \infty} s_n$.
+> If $s_n \to s$, then we say the series converges to $s$, otherwise the series diverges.
 
 > *Proposition.*{: .prop}
-> The series is convergent if the underlying sequence $\Set{a_n}$ has limit $\lim_{n \to \infty} a_n = 0$.
+> If a series $\sum a_n$ converges, then $a_n \to 0$.
 >
 > *Proof.*{: .prf}
 >
-> $$
-  \lim_{n \to \infty} a_n = \lim_{n \to \infty} (s_n - s_{n-1}) = s - s = 0
-  $$
+> Let $\sum a_n = s$. Then $s_n \to s$ and $s_{n-1} \to s$, so $a_n = s_n - s_{n-1} \to 0$.
 
 The converse is not true though for example the harmonic series has the terms approaching $0$ but the sum is divergent.
+
+## Absolute Convergence
+
+> *Definition.*{: .def}
+> A series $\sum a_n$ is **absolutely convergent** if the series $\sum \vert a_n \vert$ is convergent.
+
+> *Definition.*{: .def}
+> A series is **conditionally convergent** if it is convergent but not absolutely convergent.
+
+For example, alternating harmonic series is conditionally convergent.
+
+> *Proposition.*{: .prop}
+> If a series is absolutely convergent, then it is convergent.
+>
+> *Proof.*{: .prf}
+>
+> Consider
+>
+> $$
+  0 \le a_n + |a_n| \le 2|a_n|
+  $$
+>
+> By Comparison Test, we have $\sum a_n + \|a_n\|$ convergent.
+>
+> Also, we can write
+>
+> $$
+  \sum a_n = \sum (a_n + |a_n|) - \sum |a_n|
+  $$
+>
+> which is the difference of two convergent series and therefore the series itself is convergent.
 
 ## Divergence Test
 
@@ -169,37 +200,6 @@ $$
 > $$
   |R_n| \le a_{n+1}
   $$
-
-## Absolute Convergence
-
-> *Definition.*{: .def}
-> A series $\sum a_n$ is **absolutely convergent** if the series of absolute values $\sum \| a_n \|$ is convergent.
-
-> *Definition.*{: .def}
-> A series is **conditionally convergent** if it is convergent but not absolutely convergent.
-
-For example, alternating harmonic series is conditionally convergent.
-
-> *Proposition.*{: .prop}
-> If a series is absolutely convergent, then it is convergent.
->
-> *Proof.*{: .prf}
->
-> Consider
->
-> $$
-  0 \le a_n + |a_n| \le 2|a_n|
-  $$
->
-> By Comparison Test, we have $\sum a_n + \|a_n\|$ convergent.
->
-> Also, we can write
->
-> $$
-  \sum a_n = \sum (a_n + |a_n|) - \sum |a_n|
-  $$
->
-> which is the difference of two convergent series and therefore the series itself is convergent.
 
 ## Ratio/Root Test
 
