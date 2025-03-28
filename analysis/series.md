@@ -27,6 +27,68 @@ The convergence of a sequence allows us to consider infinite sums, or series.
 
 The converse is not true though for example the harmonic series has the terms approaching $0$ but the sum is divergent.
 
+> *Proposition.*{: .prop}
+> **[Harmonic Series]**
+> The sequence $a_n = 1/n$ converges to $0$ but the series
+>
+> $$
+  \sum_{n=1}^\infty {1 \over n} = 1 + {1 \over 2} + {1 \over 3} + \cdots = \infty
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Consider the terms $a_{2^n + 1}$ to $a_{2^{n+1}}$, their sum is
+>
+> $$
+  {1 \over 2^n + 1} + {1 \over 2^n + 2} + \cdots + {1 \over 2^{n+1}} \ge {2^n \over 2^{n+1}} = {1 \over 2}
+  $$
+>
+> Therefore, the sum is
+>
+> $$
+  1 + {1 \over 2} + {1 \over 3} + {1 \over 4} + \cdots = 1 + {1 \over 2} + \left({1 \over 3} + {1 \over 4}\right) + \cdots \ge 1 + {1 \over 2} + {1 \over 2} + \cdots = \infty
+  $$
+
+Here are some examples of convergent series.
+
+> *Proposition.*{: .prop}
+> **[Geometric Series]**
+> If $\vert r \vert < 1$, then
+>
+> $$
+  \sum_{n=0}^\infty r^n = {1 \over 1 - r}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $(1 - r)s_n = 1 - r^{n+1}$. As $n \to \infty$, $r^{n+1} \to 0$, hence $s_n \to 1 / (1 - r)$.
+
+> *Proposition.*{: .prop}
+> Let
+>
+> $$
+  a_n = {1 \over n(n+1)} = {1 \over n} - {1 \over n+1}
+  $$
+>
+> Then
+>
+> $$
+  s_n = \left(1 - {1 \over 2}\right) + \left({1 \over 2} - {1 \over 3}\right) + \cdots = 1 - {1 \over {n+1}}
+  $$
+>
+> So, $s_n \to 1$ as $n \to \infty$.
+
+> *Property.*{: .prop}
+> As convergence of series is equivalent to convergence of its partial sum sequence, we have
+>
+> + when the sum exists, it is unique;
+>
+> + $\sum (s_n + t_n) = s + t$;
+>
+> + $\sum cs_n = cs$;
+>
+> + if $s_n \le t_n$ for all $n$, then $s \le t$.
+
 ## Absolute Convergence
 
 > *Definition.*{: .def}
