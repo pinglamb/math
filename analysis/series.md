@@ -137,9 +137,6 @@ When $n \ge 3$, $\ln n / n > 1 / n$, so $\sum \ln n / n$ is divergent.
 > *Definition.*{: .def}
 > A series $\sum a_n$ is **absolutely convergent** if the series $\sum \vert a_n \vert$ is convergent.
 
-> *Definition.*{: .def}
-> A series is **conditionally convergent** if it is convergent but not absolutely convergent.
-
 For example, alternating harmonic series is conditionally convergent.
 
 > *Proposition.*{: .prop}
@@ -153,77 +150,47 @@ For example, alternating harmonic series is conditionally convergent.
   0 \le a_n + |a_n| \le 2|a_n|
   $$
 >
-> By Comparison Test, we have $\sum a_n + \|a_n\|$ convergent.
->
-> Also, we can write
+> By Comparison Test, we have $\sum (a_n + \vert a_n \vert)$ convergent.
+> Hence,
 >
 > $$
   \sum a_n = \sum (a_n + |a_n|) - \sum |a_n|
   $$
 >
-> which is the difference of two convergent series and therefore the series itself is convergent.
+> is the difference of two convergent series and therefore the series itself is convergent.
 
-## Integral Test
+Therefore, for series with negative terms, we can prove convergence by showing it is absolutely convengent.
 
-> *Proposition.*{: .prop}
-> **[Integral Test]**
-> Suppose $f$ is a continuous, positive, decreasing function on $[1, \infty)$ such that $f(n) = a_n$.
-> If $\int_{1}^{\infty} f(x) \mathrm{d}x$ is convengent/divergent, so as $\sum_{n=1}^{\infty} a_n$.
-
-For example, consider the series
-
-$$
-\sum_{n=1}^{\infty} {1 \over n^2} = {1 \over 1^2} + {1 \over 2^2} + {1 \over 3^2} + ...
-$$
-
-Geometrically, we can form rectangles under the graph of $y = 1/x^2$, each with a unit width and height eqauls to the value of function.
-The sum of the area of the rectangles equals to the sum of the series. Consider all the terms excluding the first one $1/1^2$,
-it has to be less than the area under the function from $1$ to $\infty$. Hence,
-
-$$
-\sum_{n=1}^{\infty} {1 \over n^2} < {1 \over 1^2} + \int_{1}^{\infty} { 1 \over x^2} \mathrm{d}x = 1 + 1 = 2
-$$
-
-As the partial sum $\Set{s_n}$ is increasing and bounded above, the series is convengent.
-
-![Integral Test Below](../images/integral-test-below.png)
-
-On the other hand, we can also form rectangles with tops lie above the curve to show the series is divergent. Consider the series
-
-$$
-\sum_{n=1}^{\infty} {1 \over \sqrt{n}} = {1 \over \sqrt{1}} + {1 \over \sqrt{2}} + {1 \over \sqrt{3}} + ...
-$$
-
-We have
-
-$$
-\sum_{n=1}^{\infty} {1 \over \sqrt{n}} > \int_{1}^{\infty} {1 \over \sqrt{x}} \mathrm{d}x = \infty
-$$
-
-So, the series is divergent.
-
-![Integral Test Above](../images/integral-test-below.png)
-
-We can also use the integral to estimate the sum.
+> *Definition.*{: .def}
+> A series is **conditionally convergent** if it is convergent but not absolutely convergent.
 
 > *Proposition.*{: .prop}
-> Let $R_n$ be the remainder of the partial sum $s_n$, i.e.
+> For a sequence $(a_n)$, denote
 >
 > $$
-  R_n = s - s_n = a_{n+1} + a_{n+2} + ...
+  a_n^+ = \begin{cases}
+  a_n & \text{for } a_n \ge 0 \\
+  0 & \text{for } a_n < 0
+  \end{cases}
+  \quad \text{and} \quad
+  a_n^- = \begin{cases}
+  0 & \text{for } a_n \ge 0 \\
+  -a_n & \text{for } a_n < 0
+  \end{cases}
   $$
 >
-> By forming rectangles with top above/below the curve, we have
+> i.e. $(a_n^+)$ are the positive terms and $(a_n^-)$ are the negated negative terms.
 >
-> $$
-  \int_{n+1}^{\infty} f(x) \mathrm{d}x \le R_n \le \int_{n}^{\infty} f(x) \mathrm{d}x
-  $$
+> If the series converges conditionally, then $\sum a_n^+ = +\infty$ and $\sum a_n^- = +\infty$,
+> meaning the sum of only positive terms and the sum of only negative terms both diverges.
 >
-> By adding $s_n$ to the inequalities, the upper bound and lower bound for $s$ is given by
+> *Proof.*{: .prf}
 >
-> $$
-  s_n + \int_{n+1}^{\infty} f(x) \mathrm{d}x \le s \le s_n + \int_{n}^{\infty} f(x) \mathrm{d}x
-  $$
+> As $s_n = \sum a_n^+ - \sum a_n^-$, at least one of the sums must diverge.
+> Suppose $\sum a_n^+$ diverges and $\sum a_n^- = s_-$, we can always find an $N$ such that $s_n > M$ for $n > N$.
+> Therefore, $(s_n)$ is unbounded and doesn't converge, which is a contradiction.
+> A similar argument applies if $\sum a_n^+$ converges but $\sum a_n^-$ diverges.
+> Hence, both of them has to diverge.
 
 ## Alternating Series
 
@@ -294,6 +261,68 @@ When $n$ appears in the power, the root test will be useful.
 > + If $L > 1$, then the series is divergent.
 >
 > + If $L = 1$, the test is inconclusive.
+
+## Integral Test
+
+> *Proposition.*{: .prop}
+> **[Integral Test]**
+> Suppose $f$ is a continuous, positive, decreasing function on $[1, \infty)$ such that $f(n) = a_n$.
+> If $\int_{1}^{\infty} f(x) \mathrm{d}x$ is convengent/divergent, so as $\sum_{n=1}^{\infty} a_n$.
+
+For example, consider the series
+
+$$
+\sum_{n=1}^{\infty} {1 \over n^2} = {1 \over 1^2} + {1 \over 2^2} + {1 \over 3^2} + ...
+$$
+
+Geometrically, we can form rectangles under the graph of $y = 1/x^2$, each with a unit width and height eqauls to the value of function.
+The sum of the area of the rectangles equals to the sum of the series. Consider all the terms excluding the first one $1/1^2$,
+it has to be less than the area under the function from $1$ to $\infty$. Hence,
+
+$$
+\sum_{n=1}^{\infty} {1 \over n^2} < {1 \over 1^2} + \int_{1}^{\infty} { 1 \over x^2} \mathrm{d}x = 1 + 1 = 2
+$$
+
+As the partial sum $\Set{s_n}$ is increasing and bounded above, the series is convengent.
+
+![Integral Test Below](../images/integral-test-below.png)
+
+On the other hand, we can also form rectangles with tops lie above the curve to show the series is divergent. Consider the series
+
+$$
+\sum_{n=1}^{\infty} {1 \over \sqrt{n}} = {1 \over \sqrt{1}} + {1 \over \sqrt{2}} + {1 \over \sqrt{3}} + ...
+$$
+
+We have
+
+$$
+\sum_{n=1}^{\infty} {1 \over \sqrt{n}} > \int_{1}^{\infty} {1 \over \sqrt{x}} \mathrm{d}x = \infty
+$$
+
+So, the series is divergent.
+
+![Integral Test Above](../images/integral-test-below.png)
+
+We can also use the integral to estimate the sum.
+
+> *Proposition.*{: .prop}
+> Let $R_n$ be the remainder of the partial sum $s_n$, i.e.
+>
+> $$
+  R_n = s - s_n = a_{n+1} + a_{n+2} + ...
+  $$
+>
+> By forming rectangles with top above/below the curve, we have
+>
+> $$
+  \int_{n+1}^{\infty} f(x) \mathrm{d}x \le R_n \le \int_{n}^{\infty} f(x) \mathrm{d}x
+  $$
+>
+> By adding $s_n$ to the inequalities, the upper bound and lower bound for $s$ is given by
+>
+> $$
+  s_n + \int_{n+1}^{\infty} f(x) \mathrm{d}x \le s \le s_n + \int_{n}^{\infty} f(x) \mathrm{d}x
+  $$
 
 ## Rearrangements
 
