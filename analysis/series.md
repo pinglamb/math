@@ -89,6 +89,49 @@ Here are some examples of convergent series.
 >
 > + if $s_n \le t_n$ for all $n$, then $s \le t$.
 
+## Divergence Test
+
+We start with the easiest check to do when we know the explicit formula of $a_n$.
+
+> *Proposition.*{: .prop}
+> **[Divergence Test]**
+> If the underlying sequence $a_n \not \to 0$, then the series is divergent.
+>
+> *Proof.*{: .prf}
+>
+> It is the contrapositive of the above statement about convergence of series.
+
+## Series with Non-negative Terms
+
+Series with terms being real and non-negative has some immediate consequence.
+
+> *Proposition.*{: .prop}
+> Suppose that $(a_n)$ is a sequence of non-negative real numbers, then $(s_n)$ is an increasing sequence.
+> Either $(s_n)$ is bounded and $s_n \to \sup_n s_n$ or $s_n \to \infty$.
+
+> *Proposition.*{: .prop}
+> **[Comparison Test]**
+> Suppose $0 \le b_n \le a_n$ for all $n \ge N$.
+> If $\sum a_n$ is convergent, then $\sum b_n$ is convergent and $\sum b_n \le \sum a_n$.
+> If $\sum b_n$ is divergent, then $\sum a_n$ is divergent.
+
+For example, $1 / n^2 \le 2 / n(n+1)$, so $\sum 1/n^2$ is convergent.
+When $n \ge 3$, $\ln n / n > 1 / n$, so $\sum \ln n / n$ is divergent.
+
+> *Corollary.*{: .cor}
+> If $a_n / b_n \to c$ as $n \to \infty$, where $c > 0$,
+> then the corresponding series are either both convergent or both divergent.
+
+> *Corollary.*{: .cor}
+> Suppose $\sum a_n$ converges because of the comparison test with $\sum b_n$.
+> Consider the remainders of the two series $R_{(a, n)}$ and $R_{(b, n)}$, we have
+>
+> $$
+  R_{(a, n)} \le R_{(b, n)}
+  $$
+>
+> and hence we can find the upper bound of $R_{(a, n)}$ by estimating/finding $R_{(b,n)}$.
+
 ## Absolute Convergence
 
 > *Definition.*{: .def}
@@ -119,16 +162,6 @@ For example, alternating harmonic series is conditionally convergent.
   $$
 >
 > which is the difference of two convergent series and therefore the series itself is convergent.
-
-## Divergence Test
-
-> *Proposition.*{: .prop}
-> **[Divergence Test]**
-> If for the underlying sequence, $\lim_{n \to \infty} a_n \not = 0$, then the series is divergent.
->
-> *Proof.*{: .prf}
->
-> It is the contrapositive of the above statement about convergence of series.
 
 ## Integral Test
 
@@ -191,41 +224,6 @@ We can also use the integral to estimate the sum.
 > $$
   s_n + \int_{n+1}^{\infty} f(x) \mathrm{d}x \le s \le s_n + \int_{n}^{\infty} f(x) \mathrm{d}x
   $$
-
-## Comparison Test
-
-> *Proposition.*{: .prop}
-> **[Comparison Test]**
-> Given two series $\sum a_n$ and $\sum b_n$ with positive terms.
-> If $a_n \le b_n$ for all $n > N$ and $\sum b_n$ is convergent, then $\sum a_n$ is convergent.
-> If $a_n \ge b_n$ for all $n > N$ and $\sum b_n$ is divergent, $\sum a_n$ is divergent.
-
-For example, for $k \ge 3$,
-
-$$
-{\ln k \over k } > {1 \over k}
-$$
-
-As $\sum {1 \over k}$ is divergent, $\sum {\ln k \over k}$ is divergent.
-
-> *Proposition.*{: .prop}
-> If the limit
->
-> $$
-  \lim_{n \to \infty} {a_n \over b_n}
-  $$
->
-> exists and is equal to a finite number $c > 0$, then series are either both convergent or both divergent.
-
-> *Proposition.*{: .prop}
-> Suppose $\sum a_n$ converges because of the comparison test with $\sum b_n$.
-> Consider the remainders of the two series $R_{(a, n)}$ and $R_{(b, n)}$, we have
->
-> $$
-  R_{(a, n)} \le R_{(b, n)}
-  $$
->
-> and hence we can find the upper bound of $R_{(a, n)}$ by estimating/finding $R_{(b,n)}$.
 
 ## Alternating Series
 
