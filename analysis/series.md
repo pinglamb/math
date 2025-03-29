@@ -192,34 +192,36 @@ Therefore, for series with negative terms, we can prove convergence by showing i
 > A similar argument applies if $\sum a_n^+$ converges but $\sum a_n^-$ diverges.
 > Hence, both of them has to diverge.
 
-## Alternating Series
+## Alternating Series Test
 
 > *Proposition.*{: .prop}
-> If the alternating series
+> **[Alternating Series Test]**
+> Suppose $(a_n)$ is a decreasing null sequence of positive real numbers.
+> Then $s_n = \sum (-1)^n a_n$ converges, say, to $s$.
+> Further, the sequence $(s_{2n+1})$ increases to $s$ and $(s_{2n})$ decreases to $s$.
+>
+> *Proof.*{: .prf}
 >
 > $$
-  \sum_{n=1}^{\infty} (-1)^{n-1} a_n = a_1 - a_2 + a_3 - a_4 + ...
+  \begin{align*}
+  s_{2n+1} &= s_{2n-1} + (a_{2n} - a_{2n+1}) \ge s_{2n-1} \\
+  s_{2n+2} &= s_{2n} - (a_{2n+1} - a_{2n+2}) \le s_{2n}
+  \end{align*}
   $$
 >
-> with $a_n > 0$ satisfies
+> and
 >
 > $$
-  a_{n+1} < a_n \quad \text{and} \quad \lim_{n \to \infty} a_n = 0
+  \begin{align*}
+  s_{2n+1} &= s_{2n} - a_{2n+1} \le s_{2n} \le s_0 \\
+  s_{2n+2} &= s_{2n+1} + a_{2n+2} \ge s_{2n+1} \ge s_1 \\
+  \end{align*}
   $$
 >
-> then the series is convergent.
+> so $(s_{2n+1})$ is an increasing sequence bounded above and $(s_{2n})$ is a decreasing sequence bounded below.
+> Both of them converges, and to the same value because $s_{2n} - s_{2n+1} = a_{2n+1} \to 0$, and so as $s_n$.
 
-To find the limit of the alternating series, for example
-
-$$
-s_n = \sum_{n=1}^{\infty} (-1)^{n-1} a_n
-$$
-
-We have to find the limit of even partial sum $s_{2n}$. The odd partial sum will also approach the same limit because
-
-$$
-\lim_{n \to \infty} s_{2n+1} = \lim_{n \to \infty} s_{2n} + \lim_{n \to \infty} a_{2n+1} = s + 0 = s
-$$
+Therefore for alternating series, we can find the sum of even terms $s_{2n}$ (or odd terms $s_{2n+1}$) and the series will converge to the same value.
 
 > *Proposition.*{: .prop}
 > The remainder of the $n$th partial sum estimation is
