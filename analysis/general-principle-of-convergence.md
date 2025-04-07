@@ -12,7 +12,7 @@ Therefore, we need a more general way to define convergence.
 
 > *Definition.*{: .def}
 > **[Cauchy Sequence]**
-> A sequence is a **Cauchy sequence** if
+> $(a_n)$ is a **Cauchy sequence** if
 >
 > $$
   (\forall \varepsilon > 0)(\exists N \in \mathbb{N})(\forall m, n \ge N)\; |a_m - a_n| < \varepsilon
