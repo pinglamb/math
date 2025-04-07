@@ -8,7 +8,9 @@ title: Home
 
 * [Sequences](analysis/sequences.md)
 * [Subsequences](analysis/subsequences.md)
+* [General Principle of Convergence](analysis/general-principle-of-convergence.md)
 * [Characterization of Real Numbers](analysis/characterization-of-real-numbers.md)
+* [Complex Sequences](analysis/complex-sequences.md)
 * [Series](analysis/series.md)
 
 ## Groups

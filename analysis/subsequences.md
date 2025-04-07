@@ -130,7 +130,6 @@ The diagonal procedure constructs new subsequence from a sequence of subsequence
 > $c_k = b_k + (b_0 + c_0)/2^k$ which also converges to $L$.
 > By the sandwich principle, the subsequence $(a_{kk})$ converges to $L$.
 
-
 ## References
 
 * D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 1.3, 2.4, 3.4
