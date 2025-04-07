@@ -86,7 +86,7 @@ By reversing the signs, we have
 ## Monotone-sequence Property
 
 Another way to characterize real numbers is by monotone-sequence property.
-We have already proved that [bounded monotonic sequence converges](sequences.md#bounded-monotonic-convergent) by the least upper bound property.
+We have already proved that [bounded monotonic sequence converges](subsequences.md#bounded-monotonic-convergent) by the least upper bound property.
 Now, we assume such property and derive the least upper bound property to show that they are equivalent.
 
 > *Definition.*{: .def}

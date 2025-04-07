@@ -49,6 +49,40 @@ In the case of total order, we will have the maximal element being the greatest 
 
 The definition of **lower bound**, **least** and **minimal** element and **infimum** is the same except for the sign.
 
+## Monotonic Sequences
+
+> *Definition.*{: .def}
+> A sequence is **increasing** if $a_{n+1} \ge a_n$ for all $n$.
+
+> *Definition.*{: .def}
+> A sequence is **strictly increasing** if $a_{n+1} > a_n$ for all $n$.
+
+> *Definition.*{: .def}
+> A sequence is **decreasing** if $a_{n+1} \le a_n$ for all $n$.
+
+> *Definition.*{: .def}
+> A sequence is **strictly decreasing** if $a_{n+1} < a_n$ for all $n$.
+
+> *Definition.*{: .def}
+> A sequence is (strictly) **monotonic** if it is either (strictly) increasing or (strictly) decreasing.
+
+> *Theorem.*{: .thm}
+> A bounded monotonic sequence is convergent.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $(a_n)$ is bounded above, there exists a least upper bound $L$ such that
+>
+> $$
+  (\forall n)\;a_n \le L \quad \text{and} \quad (\forall \varepsilon > 0)(\exists N)\;a_N > L - \varepsilon
+  $$
+>
+> As $(a_n)$ is increasing, it implies for all $n > N$, $a_n > L - \varepsilon$ as well.
+> By definition, $(a_n)$ is convergent and tends to $L$.
+>
+> Similar argument can be applied for decreasing sequence bounded below.
+{: #bounded-monotonic-convergent}
+
 ## Subsequences
 
 To avoid recursive definition, we first define subsequences of $\mathbb{N}$.

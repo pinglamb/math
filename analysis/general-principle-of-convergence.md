@@ -66,9 +66,10 @@ So instead of comparing the terms with a certain value, we check if the terms be
 
 ## Limit Supremum and Infimum
 
+There is something more we can say about the limit $L$ which we might not be able to find.
 Suppose that $(a_n)$ is a bounded sequence.
-$(M_n = \sup \Set{a_k : k \ge n})$ is a decreasing (as we take suprema over smaller and smaller set) and bounded below therefore it converges.
-Similarily, $(m_n = \inf \Set{a_k : k \ge n})$ is a increasing sequence bounded above and therefore converges.
+$(M_n = \sup \Set{a_k : k \ge n})$ is decreasing (as we take suprema over smaller and smaller set) and bounded below therefore it converges.
+Similarily, $(m_n = \inf \Set{a_k : k \ge n})$ is increasing and bounded above therefore it converges.
 
 > *Definition.*{: .def}
 > The **limit supremum** of a sequence $(a_n)$ is the limit of the subsequent suprema, i.e.
@@ -94,11 +95,7 @@ Similarily, $(m_n = \inf \Set{a_k : k \ge n})$ is a increasing sequence bounded 
   $$
 
 > *Theorem.*{: .thm}
-> Suppose that $(a_n)$ is a bounded sequence. Then
->
-> $$
-  a_n \to L \iff \limsup a_n = \liminf a_n = L
-  $$
+> Suppose that $(a_n)$ is a bounded sequence. Then $a_n \to L$ iff $\limsup a_n = \liminf a_n = L$.
 >
 > ($\Rightarrow$) For $\varepsilon > 0$, there exists an $N$ such that $L - \varepsilon/2 < a_n < L + \varepsilon/2$ for all $n \ge N$.
 > Therefore,
