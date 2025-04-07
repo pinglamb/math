@@ -20,6 +20,50 @@ Therefore, we need a more general way to define convergence.
 
 So instead of comparing the terms with a certain value, we check if the terms become close as $m$ and $n$ become large.
 
+> *Lemma.*{: .lem}
+> A Cauchy sequence is bounded.
+>
+> *Proof.*{: .prf}
+>
+> There exists a $N$ such that for all $m, n \ge N$, $\vert a_m - a_n \vert < 1$.
+> Let
+>
+> $$
+  M = \max(|a_0|, |a_1|, ..., |a_N|, |a_N + 1|)
+  $$
+>
+> For all $n > N$,
+>
+> $$
+  |a_n| \le |a_n - a_N| + |a_N| < |a_N| + 1
+  $$
+>
+> so $\vert a_n \vert \le M$ for all $n$ and $(a_n)$ is bounded.
+
+> *Theorem.*{: .thm}
+> **[General Principle of Convergence]**
+> A sequence $(a_n)$ of real numbers is convergent iff it is a Cauchy sequence.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) If $(a_n)$ is convergent to $L$, there exists an $N$ such that $\vert a_n - L \vert < \varepsilon / 2$.
+> Therefore, for $m, n \ge N$,
+>
+> $$
+  |a_m - a_n| \le |a_m - L| + |a_n - L| < \varepsilon / 2 + \varepsilon / 2 = \varepsilon
+  $$
+>
+> and $(a_n)$ is Cauchy sequence.
+>
+> ($\Leftarrow$) If $(a_n)$ is a Cauchy sequence, it is bounded.
+> By the Bolzano-Weierstrass theorem, there exists a subsequence $(a_{n_k})$ convergent to some value $L$.
+> For $\varepsilon > 0$, there exists a $K$ such that $\vert a_{n_K} - L \vert < \varepsilon / 2$ for $k > K$ and also a $N$ such that $\vert a_m - a_n \vert < \varepsilon / 2$ for $m, n \ge N$.
+> Therefore, for some $k \ge K$ such that $n_k > N$ and $n > N$, we have
+>
+> $$
+  |a_n - L| \le |a_n - a_{n_k}| + |a_{n_k} - L| < \varepsilon / 2 + \varepsilon / 2 = \varepsilon
+  $$
+
 ## Limit Supremum and Infimum
 
 Suppose that $(a_n)$ is a bounded sequence.
