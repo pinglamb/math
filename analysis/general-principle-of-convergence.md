@@ -87,6 +87,19 @@ Similarily, $(m_n = \inf \Set{a_k : k \ge n})$ is increasing and bounded above t
 
 ![Limit Supremum and Infimum](https://upload.wikimedia.org/wikipedia/commons/d/d9/Lim_sup_example_5.png){: .size-2x}
 
+These limits are a little complicated, being defined in two stages, we first form a sequence of suprema/infima and then take the limit of it.
+Their fundamental properties can be useful in some cases.
+
+> *Property.*{: .prop}
+> Suppose that $(a_n)$ is a bounded sequence, and $S = \limsup_{n \to \infty} a_n$.
+> Then $S$ is the unique real number with the two following properties:
+>
+> + if $t > S$ then there exists $N$ such that $a_n < t$ for all $n > N$;
+>
+> + if $r < S$ and $n \in \mathbb{N}$ then there exists $m \ge n$ such that $a_m > r$.
+>
+> It is equivalent to saying $a_n$ is _eventually_ less than $t$ and _frequently_ greater than $r$.
+
 > *Property.*{: .prop}
 > As $\inf a_n \le \sup a_n$, we have
 >
