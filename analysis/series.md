@@ -25,7 +25,13 @@ The convergence of a sequence allows us to consider infinite sums, or series.
 >
 > Let $\sum a_n = s$. Then $s_n \to s$ and $s_{n-1} \to s$, so $a_n = s_n - s_{n-1} \to 0$.
 
-The converse is not true though for example the harmonic series has the terms approaching $0$ but the sum is divergent.
+It provides an easy check for divergence when we know the explicit formula of $a_n$.
+
+> *Proposition.*{: .prop}
+> **[Divergence Test]**
+> If the underlying sequence is not a null sequence, i.e. $a_n \not \to 0$, then the series is divergent.
+
+The converse of the statement is not true though, for example the harmonic series has the terms approaching $0$ but the sum is divergent.
 
 > *Proposition.*{: .prop}
 > **[Harmonic Series]**
@@ -89,17 +95,20 @@ Here are some examples of convergent series.
 >
 > + if $s_n \le t_n$ for all $n$, then $s \le t$.
 
-## Divergence Test
-
-We start with the easiest check to do when we know the explicit formula of $a_n$.
+Complex series converge iff the sum of real parts and the sum of imaginary parts both converge.
 
 > *Proposition.*{: .prop}
-> **[Divergence Test]**
-> If the underlying sequence $a_n \not \to 0$, then the series is divergent.
+> Suppose that $z_n = x_n + i y_n$ and $s = \sigma + i\tau$.
+> Then $\sum z_n$ converges to $s$ if $\sum x_n$ converges to $\sigma$ and $\sum y_n$ converges to $\tau$.
+
+> *Proposition.*{: .prop}
+> **[General Principle of Convergence]**
+> Suppose that $(z_n)$ is a sequence of complex numbers.
+> Then $\sum z_n$ converges iff
 >
-> *Proof.*{: .prf}
->
-> It is the contrapositive of the above statement about convergence of series.
+> $$
+  (\forall \varepsilon > 0)(\exists N \in \mathbb{N})(\forall m, n : m > n \ge N)\;|s_m - s_n| = \left|\sum_{j=n+1}^m z_j \right| < \varepsilon
+  $$
 
 ## Series with Non-negative Terms
 
@@ -122,15 +131,43 @@ When $n \ge 3$, $\ln n / n > 1 / n$, so $\sum \ln n / n$ is divergent.
 > If $a_n / b_n \to c$ as $n \to \infty$, where $c > 0$,
 > then the corresponding series are either both convergent or both divergent.
 
+The comparison test can be turned into the following applicable forms.
+
 > *Corollary.*{: .cor}
-> Suppose $\sum a_n$ converges because of the comparison test with $\sum b_n$.
-> Consider the remainders of the two series $R_{(a, n)}$ and $R_{(b, n)}$, we have
+> **[Cauchy's Test]**
+> Suppose that $(a_n)$ is a bounded sequence of non-negative real numbers.
+> If $\limsup_{n \to \infty} a_n^{1/n} < 1$ then $\sum a_n$ converges.
+> If $\limsup_{n \to \infty} a_n^{1/n} > 1$ then $\sum a_n = \infty$.
+>
+> *Proof.*{: .prf}
+>
+> In the first case, choose $r$ such that $\limsup_{n \to \infty} a_n^{1/n} < r < 1$.
+> Then there exists $N$ such that $a_n^{1/n} < r$ for all $n \ge N$.
+> Hence, $0 \le a_n \le r^n$ for $n \ge N$ and $\sum a_n$ converges by comparison test.
+>
+> In the second case, for each $n$ there exists $m \ge n$ such that $a_m^{1/m} > 1$ so $a_m > 1$.
+> Hence, $a_n$ is not a null sequence and $\sum a_n$ diverges to $\infty$.
+
+> *Corollary.*{: .cor}
+> **[D'Alembert's Ratio Test]**
+> Suppose that $(a_n)$ is a sequence of positive real numbers.
+> If $\limsup_{n \to \infty} a_{n+1}/a_n < 1$ then $\sum a_n$ converges.
+> If $\liminf_{n \to \infty} a_{n+1}/a_n > 1$ then $\sum a_n = \infty$.
+>
+> *Proof.*{: .prf}
+>
+> In the first case, choose $r$ such that $\limsup_{n \to \infty} a_{n+1}/a_n < r < 1$.
+> Then there exists $N$ such that $a_{n+1}/a_n < r$ for all $n \ge N$.
+> Thus, if $n > N$ then
 >
 > $$
-  R_{(a, n)} \le R_{(b, n)}
+  a_n = \left( {a_n \over a_{n-1}} \right) \left( {a_{n-1} \over a_{n-2}} \right) \cdots \left( {a_{N+1} \over a_{N}} \right) a_N
+  \le r^{n - N} a_N = M r^n
   $$
 >
-> and hence we can find the upper bound of $R_{(a, n)}$ by estimating/finding $R_{(b,n)}$.
+> Hence, $0 \le a_n \le M r^n$ for $n \ge N$ and $\sum a_n$ converges by comparison test.
+
+In practice, we can check if $a_n^{1/n}$ or $a_{n+1}/a_n$ tends to a limit less than $1$. If so, $\sum a_n$ converges.
 
 ## Absolute Convergence
 
