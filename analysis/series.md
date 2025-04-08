@@ -166,6 +166,9 @@ The comparison test can be turned into the following applicable forms.
   $$
 >
 > Hence, $0 \le a_n \le M r^n$ for $n \ge N$ and $\sum a_n$ converges by comparison test.
+>
+> In the second case, there exists $N$ such that $a_{n+1} > a_n$ for $n \ge N$.
+> So $a_n \ge a_N$ for $n \ge N$ and $(a_n)$ is not a null sequence and $\sum a_n$ diverges to $\infty$.
 
 In practice, we can check if $a_n^{1/n}$ or $a_{n+1}/a_n$ tends to a limit less than $1$. If so, $\sum a_n$ converges.
 
