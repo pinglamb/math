@@ -250,8 +250,11 @@ We still have some tests for convergence in such cases.
 
 > *Proposition.*{: .prop}
 > **[Alternating Series Test]**
-> Suppose $(a_n)$ is a decreasing null sequence of positive real numbers.
-> Then $s_n = \sum (-1)^n a_n$ converges, say, to $s$.
+> Suppose that
+>
+> + $(a_k)$ is a decreasing null sequence of positive real numbers.
+>
+> Then $\sum (-1)^k a_k$ converges, say, to $s$.
 > Further, the sequence $(s_{2n+1})$ increases to $s$ and $(s_{2n})$ decreases to $s$.
 >
 > *Proof.*{: .prf}
@@ -273,9 +276,38 @@ We still have some tests for convergence in such cases.
   $$
 >
 > so $(s_{2n+1})$ is an increasing sequence bounded above and $(s_{2n})$ is a decreasing sequence bounded below.
-> Both of them converges, and to the same value because $s_{2n} - s_{2n+1} = a_{2n+1} \to 0$, and so as $s_n$.
+> Both of them converges, and to the same limit because $s_{2n} - s_{2n+1} = a_{2n+1} \to 0$, and $s_n$ converges to the common limit.
 
-Therefore for alternating series, we can find the sum of even terms $s_{2n}$ (or odd terms $s_{2n+1}$) and the series will converge to the same value.
+> *Proposition.*{: .prop}
+> **[Hardy's Test]**
+> Suppose that
+>
+> + $(w_k)$ is a null sequence of complex numbers for which $\sum \vert a_k - a_{k-1} \vert < \infty$;
+>
+> + $(z_k)$ is a sequence of complex numbers for which the sequence of partial sums $(\sum^n z_k)$ is bounded.
+>
+> Then $\sum w_k z_k$ converges.
+
+> *Proposition.*{: .prop}
+> **[Dirichlet's Test]**
+> Suppose that
+>
+> + $(a_k)$ is a decreasing null sequence of positive numbers;
+>
+> + $(z_k)$ is a sequence of complex numbers for which the sequence of partial sums $(\sum^n z_k)$ is bounded.
+>
+> Then $\sum a_k z_k$ converges, say, to $s$.
+> Further, if $s_m = \sum^m a_k z_k$ and $M = \sup_n \vert t_n \vert$ then $\vert s - s_m \vert \le 2 a_{m+1} M$.
+
+> *Proposition.*{: .prop}
+> **[Abel's Test]**
+> Suppose that
+>
+> + $(a_k)$ is a decreasing null sequence of positive numbers;
+>
+> + $\sum z_k$ converges.
+>
+> Then $\sum a_k z_k$ converges.
 
 ## Integral Test
 
