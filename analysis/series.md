@@ -137,6 +137,25 @@ When $k \ge 3$, $\ln k / k > 1 / k$, so $\sum \ln k / k$ is divergent.
 > If $a_k / b_k \to c$ as $n \to \infty$, where $c > 0$,
 > then the corresponding series are either both convergent or both divergent.
 
+> *Corollary.*{: .cor}
+> **[Compression Test]**
+> If $(a_k)$ is a decreasing sequence of non-negative real numbers, then $\sum a_k$ converges iff $\sum 2^ka_{2^k}$ converges.
+> Furthermore,
+>
+> $$
+  {1 \over 2} \sum 2^k a_{2^k} \le \sum a_k \le \sum 2^k a_{2^k}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> It is the generalization of the proof of harmonic series divergence. By grouping the terms with brackets, we have
+>
+> $$
+  2^{k-1}a_{2^k} \le a_{2^{k-1}+1} + \cdots + a_{2^k} \le 2^{k-1}a_{2^{k-1}}
+  $$
+>
+> since $(a_k)$ is decreasing.
+
 The comparison test can be turned into the following applicable forms.
 
 > *Corollary.*{: .cor}
