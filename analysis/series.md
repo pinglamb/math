@@ -224,6 +224,7 @@ The comparison test, D'Alembert's test and Cauchy's test can be used to test for
 Series can still converge if it is not absolutely convergent, but the arguments are generally more delicate.
 
 > *Definition.*{: .def}
+> **[Conditional Convergence]**
 > A series is **conditionally convergent** if it is convergent but not absolutely convergent.
 
 For example, alternating harmonic series is conditionally convergent.
@@ -374,9 +375,47 @@ We can also use the integral to estimate the sum.
 ## Rearrangements
 
 As series involve infinite sums, rearrangement of the terms might affect the results.
-By Riemann, if $\sum a_n$ is conditionally convergent, then there is a rearrangement that has a sum equals to any real number.
-However, if $\sum a_n$ is absolutely convergent, then rearrangement will not check the sum.
+
+> *Definition.*{: .def}
+> **[Unconditional Convergence]**
+> A series $\sum z_k$ is **unconditionally convergent** if for any permutation $\sigma$ of $\mathbb{N}$, $\sum z_{\sigma(k)}$ converges to the same limit.
+
+> *Proposition.*{: .prop}
+> If a series $\sum z_k$ is absolutely convergent, then it is unconditionally convergent.
+>
+> *Proof.*{: .prf}
+>
+> It is enough to consider the case of real series just like before and we first consider the case of series with non-negative terms.
+>
+> For any $n \in mathbb{N}$ and $N = \sup\Set{\sigma(k) : 1 \le k \le n}$, which is the largest number among the $n$ elements of the permutation, we have
+>
+> $$
+  \sum^n a_{\sigma{(k)}} \le \sum^N a_k \le s
+  $$
+>
+> as $\sum^N a_k$ contains all the terms of $\sum^n a_{\sigma(k)}$.
+> Thus, $\sum a_{\sigma(k)}$ converges to a limit $\le s$.
+>
+> Similarily, we have
+>
+> $$
+  s = \sum a_k = \sum a_{\sigma^{-1} \sigma(k)} \le \sum a_{\sigma(k)}
+  $$
+>
+> Thus, $s \le \sum a_{\sigma(k)} \le s$ and $\sum a_{\sigma(k)} = s$.
+>
+> In the general case, we have $a_{\sigma(k)} = a_{\sigma(k)}^+ - a_{\sigma(k)}^-$.
+> As both of them contains only non-negative terms, we have
+>
+> $$
+  \sum a_{\sigma(k)} = \sum a_{\sigma(k)}^+ - \sum a_{\sigma(k)}^- = \sum a_k^+ - \sum a_k^- = \sum a_k
+  $$
+
+> *Proposition.*{: .prop}
+> Suppose that $\sum a_k$ is a conditionally convergent real series.
+> For any $L \in \mathbb{R}$, there exists a rearrangement $\sum a_{\sigma(k)}$ which converges to $L$.
 
 ## References
 
+* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 4
 * James Stewart _Single Variable Calculus_, 2015 - Chapter 11
