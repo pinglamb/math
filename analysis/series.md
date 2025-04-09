@@ -174,30 +174,40 @@ In practice, we can check if $a_n^{1/n}$ or $a_{n+1}/a_n$ tends to a limit less 
 
 ## Absolute Convergence
 
+We now consider series with both positive and negative terms, or even complex terms.
+
 > *Definition.*{: .def}
-> A series $\sum a_n$ is **absolutely convergent** if the series $\sum \vert a_n \vert$ is convergent.
+> A series $\sum z_n$ is **absolutely convergent** if the series $\sum \vert z_n \vert$ is convergent.
 
 For example, alternating harmonic series is conditionally convergent.
 
 > *Proposition.*{: .prop}
-> If a series is absolutely convergent, then it is convergent.
+> If a series $\sum z_n$ is absolutely convergent then it converges, and $\vert \sum z_n \vert \le \sum \vert z_n \vert$.
 >
 > *Proof.*{: .prf}
 >
-> Consider
+> If $z_n = x_n + i y_n$, we have both $\vert x_n \vert \le \vert z_n \vert$ and $\vert y_n \vert \le \vert z_n \vert$.
+> So $\sum \vert z_n \vert$ converges iff $\sum \vert x_n \vert$ and $\sum \vert y_n \vert$ do and it is enough to consider real series.
+>
+> Suppose $\sum a_n$ is an absolutely convergent real series, we define
 >
 > $$
-  0 \le a_n + |a_n| \le 2|a_n|
+  a_n^+ = \begin{cases}
+  a_n & \text{for } a_n \ge 0 \\
+  0 & \text{for } a_n < 0
+  \end{cases}
+  \quad \text{and} \quad
+  a_n^- = \begin{cases}
+  0 & \text{for } a_n \ge 0 \\
+  -a_n & \text{for } a_n < 0
+  \end{cases}
   $$
 >
-> By Comparison Test, we have $\sum (a_n + \vert a_n \vert)$ convergent.
-> Hence,
+> such that $(a_n^+)$ are the positive terms and $(a_n^-)$ are the negated negative terms and $a_n = a_n^+ - a_n^-$.
 >
-> $$
-  \sum a_n = \sum (a_n + |a_n|) - \sum |a_n|
-  $$
+> Since $\sum \vert a_n \vert$ converges, $\sum a_n^+$ and $\sum a_n^-$ both converges, so $\sum a_n = \sum a_n^+ - \sum a_n^-$ also converges.
 >
-> is the difference of two convergent series and therefore the series itself is convergent.
+> Since the partial sums $\vert \sum^n a_k \vert \le \sum^n \vert a_k \vert$ for all $n$, the limits $\vert \sum^\infty z_n \vert \le \sum^\infty \vert z_n \vert$.
 
 Therefore, for series with negative terms, we can prove convergence by showing it is absolutely convengent.
 
@@ -262,47 +272,6 @@ Therefore, for series with negative terms, we can prove convergence by showing i
 > Both of them converges, and to the same value because $s_{2n} - s_{2n+1} = a_{2n+1} \to 0$, and so as $s_n$.
 
 Therefore for alternating series, we can find the sum of even terms $s_{2n}$ (or odd terms $s_{2n+1}$) and the series will converge to the same value.
-
-> *Proposition.*{: .prop}
-> The remainder of the $n$th partial sum estimation is
->
-> $$
-  |R_n| \le a_{n+1}
-  $$
-
-## Ratio/Root Test
-
-To check for absolute convergence, we can use the ratio/root test.
-
-> *Proposition.*{: .prop}
-> **[Ratio Test]**
-> Suppose a series $\sum a_n$ satisfies
->
-> $$
-  \lim_{n \to \infty} \left| {a_{n+1} \over a_n} \right| = L
-  $$
->
-> + If $L < 1$, the series is absolutely convergent.
->
-> + If $L > 1$, the series is divergent.
->
-> + If $L = 1$, the test is inconclusive.
-
-When $n$ appears in the power, the root test will be useful.
-
-> *Proposition.*{: .prop}
-> **[Root Test]**
-> Suppose a series $\sum a_n$ satisfies
->
-> $$
-  \lim_{n \to \infty} \sqrt[n]{\left| a_n \right|} = L
-  $$
->
-> + If $L < 1$, the series is absolutely convergent.
->
-> + If $L > 1$, then the series is divergent.
->
-> + If $L = 1$, the test is inconclusive.
 
 ## Integral Test
 
