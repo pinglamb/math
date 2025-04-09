@@ -106,7 +106,7 @@ $$
 It can be useful for proving sequence to be bounded by showing it is eventually bounded.
 
 > *Lemma.*{: .lem}
-> Every convengent sequence is bounded.
+> Every convergent sequence is bounded.
 >
 > *Proof.*{: .prf}
 >
@@ -288,7 +288,7 @@ $$
 >
 > ($\Leftarrow$) Given $\varepsilon > 0$, there exists a $k$ such that $0 < \varepsilon_k < \varepsilon$. For $n > N_k$, we have $\vert a_n - L \vert < \varepsilon_k < \varepsilon$.
 
-It relates the sequence with a null sequence. We can prove convengence by showing for a term $\varepsilon_k$ in a shrinking distance, there is a point $N_k$ in the sequence such that the distance of points are within $\varepsilon_k$ from the limit.
+It relates the sequence with a null sequence. We can prove convergence by showing for a term $\varepsilon_k$ in a shrinking distance, there is a point $N_k$ in the sequence such that the distance of points are within $\varepsilon_k$ from the limit.
 Convenient choices are $\varepsilon_k = 1/k$ or $\varepsilon_k = 1/2^k$.
 
 ## Recurrence Relation
