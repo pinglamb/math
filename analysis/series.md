@@ -359,17 +359,47 @@ The alternating series test can be extended to other tests, which also apply to 
 > + $(z_k)$ is a sequence of complex numbers for which the sequence of partial sums $(\sum^n z_k)$ is bounded.
 >
 > Then $\sum a_k z_k$ converges, say, to $s$.
-> Further, if $s_m = \sum^m a_k z_k$ and $M = \sup_n \vert t_n \vert$ then $\vert s - s_m \vert \le 2 a_{m+1} M$.
+>
+> Further, if $s_m = \sum^m a_k z_k$, $t_n = \sum^n z_k$ and $M = \sup_n \vert t_n \vert$ then $\vert s - s_m \vert \le 2 a_{m+1} M$.
+>
+> *Proof.*{: .prf}
+>
+> According to the first condition, we have
+>
+> $$
+  \sum |a_k - a_{k-1}| = \sum (a_{k-1} - a_{k}) = a_0
+  $$
+>
+> so by Hardy's test, $\sum a_k z_k$ converges.
+>
+> Using Abel's formula and the fact that $(a_k)$ is always positive, we have
+>
+> $$
+  \begin{align*}
+  |s_n - s_m| &\le |a_{m+1}t_{m}| + |(a_{m+1} - a_{m+2})t_{m+1}| + ... + |(a_{n-1} - a_{n})t_{n-1}| + |a_{n}t_{n}| \\
+  &\le (a_{m+1} + (a_{m+1} - a_{m+2}) + ... + (a_{n-1} - a_{n}) + a_{n}) M = 2a_{m+1}M
+  \end{align*}
+  $$
+>
+> Hence, $\vert s - s_m \vert = \lim_{n \to \infty} \vert s_n - s_m \vert \le 2a_{m+1}M$.
 
 > *Proposition.*{: .prop}
 > **[Abel's Test]**
 > Suppose that
 >
-> + $(a_k)$ is a decreasing null sequence of positive numbers;
+> + $(a_k)$ is a decreasing sequence of positive real numbers;
 >
 > + $\sum z_k$ converges.
 >
 > Then $\sum a_k z_k$ converges.
+>
+> *Proof.*{: .prf}
+>
+> The sequence $(a_k)$ converges as it is decreasing and bounded below by $0$.
+> Let $a$ be its limit and $(a_k - a)$ is therefore a decreasing null sequence of positive real numbers.
+>
+> As $\sum z_k$ converges, $\sum z_k$ is bounded and by Dirichlet's test, $\sum (a_k - a)z_k$ converges.
+> As $\sum a z_k$ converges, $\sum a_k z_k = \sum (a_k - a)z_k + \sum a z_k$ converges.
 
 ## Integral Test
 
