@@ -298,21 +298,63 @@ We still have some tests for convergence in such cases.
 > so $(s_{2n+1})$ is an increasing sequence bounded above and $(s_{2n})$ is a decreasing sequence bounded below.
 > Both of them converges, and to the same limit because $s_{2n} - s_{2n+1} = a_{2n+1} \to 0$, and $s_n$ converges to the common limit.
 
+The alternating series test can be extended to other tests, which also apply to complex series.
+
+> *Proposition.*{: .prop}
+> **[Abel's Formula]**
+> Let $s_n = \sum^n a_kz_k$ and $t_n = \sum^n z_k$ for $n \in \mathbb{N}$.
+> Suppose $n > m$, by substituting $z_k = t_k - t_{k-1}$ and rearranging the terms, we have
+>
+> $$
+  \begin{align*}
+  s_n - s_m &= a_{m+1}z_{m+1} + a_{m+2}z_{m+2} + ... + a_{n}z_{n} \\
+  &= a_{m+1}(t_{m+1} - t_{m}) + a_{m+2}(t_{m+2} - t_{m+1}) + ... + a_{n}(t_{n} - t_{n-1}) \\
+  &= -a_{m+1}t_{m} + (a_{m+1} - a_{m+2})t_{m+1} + ... + (a_{n-1} - a_{n})t_{n-1} + a_{n}t_{n}
+  \end{align*}
+  $$
+>
+> This equation (and others of similar form) is known as **Abel's Formula**.
+
 > *Proposition.*{: .prop}
 > **[Hardy's Test]**
 > Suppose that
 >
-> + $(w_k)$ is a null sequence of complex numbers for which $\sum \vert a_k - a_{k-1} \vert < \infty$;
+> + $(a_k)$ is a null sequence of complex numbers for which $\sum \vert a_k - a_{k-1} \vert < \infty$;
 >
 > + $(z_k)$ is a sequence of complex numbers for which the sequence of partial sums $(\sum^n z_k)$ is bounded.
 >
-> Then $\sum w_k z_k$ converges.
+> Then $\sum a_k z_k$ converges.
+>
+> *Proof.*{: .prf}
+>
+> Let $s_n = \sum^n a_kz_k$ and $t_n = \sum^n z_k$.
+>
+> By the second condition, there exists $M$ such that $\vert t_n \vert \le M$ for all $n \in \mathbb{N}$.
+>
+> Suppose that $\varepsilon > 0$. By the first condition, there exists $N$ such that for $n \ge N$,
+>
+> $$
+  \sum_{N+1}^\infty |a_k - a_{k-1}| < {\varepsilon \over 3(M + 1)}
+  \quad \text{and} \quad
+  |a_n| < {\varepsilon \over 3(M + 1)}
+  $$
+>
+> Therefore, by the Abel's formula, for $n > m \ge N$,
+>
+> $$
+  \begin{align*}
+  |s_n - s_m| &\le |a_{m+1}||t_{m}| + \sum_{k=m+1}^{n-1} |a_{k} - a_{k+1}||t_{k}| + |a_{n}||t_{n}| \\
+  &\le \left( |a_{m+1}| + \sum_{k=m+1}^{n-1} |a_{k} - a_{k+1}| + |a_n| \right) M < \varepsilon
+  \end{align*}
+  $$
+>
+> By the general principle of convergence, $\sum a_kz_k$ converges.
 
 > *Proposition.*{: .prop}
 > **[Dirichlet's Test]**
 > Suppose that
 >
-> + $(a_k)$ is a decreasing null sequence of positive numbers;
+> + $(a_k)$ is a decreasing null sequence of positive real numbers;
 >
 > + $(z_k)$ is a sequence of complex numbers for which the sequence of partial sums $(\sum^n z_k)$ is bounded.
 >
