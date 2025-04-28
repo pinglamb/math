@@ -1,3 +1,10 @@
+a {
+  color: #80bbff;
+  &:visited {
+    color: #80bbff;
+  }
+}
+
 .wrapper {
   max-width: calc(964px - (30px * 2));
 }

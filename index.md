@@ -12,6 +12,7 @@ title: Home
 * [Characterization of Real Numbers](analysis/characterization-of-real-numbers.md)
 * [Complex Sequences](analysis/complex-sequences.md)
 * [Series](analysis/series.md)
+* [Continuous Functions](analysis/continuous-functions.md)
 
 ## Groups
 {: .left}
