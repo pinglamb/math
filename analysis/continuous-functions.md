@@ -51,6 +51,29 @@ We can conclude the general principle of convergence for functions similar to th
 >
 > + Given $\varepsilon > 0$, there exists $\delta > 0$ such that if $\vert x - c \vert < \delta$ and $\vert y - c \vert < \delta$ then $\vert f(x) - f(y) \vert < \varepsilon$.
 
+Different from sequences, we can have one-sided convergence.
+
+> *Definition.*{: .def}
+> A function $f$ tends to a limit $l$ as $x$ tends to $c$ from the right if
+>
+> $$
+  (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x : c < x < c + \delta)\;|f(x) - l| < \varepsilon
+  $$
+>
+> and denoted by
+>
+> $$
+  \lim_{x \to c+} f(x) = l
+  $$
+>
+> Similarily we can define that $x$ tends to $c$ from the left, i.e.
+>
+> $$
+  \lim_{x \to c-} f(x) = l
+  $$
+>
+> The limit of function exists iff $\lim_{x \to c+} f(x) = \lim_{x \to c-} f(x) = l$.
+
 ## Continuity
 
 > *Definition.*{: .def}
