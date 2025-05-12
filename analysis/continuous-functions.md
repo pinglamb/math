@@ -105,3 +105,29 @@ We can then extend the definition of continuity in an interval.
 > + $\lim_{x \to a+} f(x) = f(a)$ and $\lim_{x \to b-} f(x) = f(b)$.
 >
 > A function $f$ is continuous in the open interval if it is continuous at each point of the interval.
+
+> *Proposition.*{: .prop}
+> Similar to convergence of sequences,
+>
+> + sum of two continuous functions is continuous;
+>
+> + product of two continuous functions is continuous;
+>
+> + quotient of two continuous functions is continuous wherever the denominator is not zero.
+
+Base on that we can conclude any polynomials and quotient of two polynomials (except for points where denominator is zero) are continuous.
+
+> *Proposition.*{: .prop}
+> Suppose that $g(x)$ is continuous for $x = \xi$ and $g(\xi) = \eta$ and $f(y)$ is continuous at $y = \eta$.
+> Then $f(g(x))$ is continuous at $x = \xi$.
+>
+> *Proof.*{: .prf}
+>
+> For all $\varepsilon > 0$, there exists $\delta > 0$ such that when $\vert y - \eta \vert < \delta$, $\vert f(y) - f(\eta) \vert < \varepsilon$.
+> Also, there exists $\tau > 0$ such that when $\vert x - \xi \vert < \tau$, $\vert g(x) - g(\xi) \vert < \delta$.
+> Combining the two we can conclude $f(g(x))$ is continuous at $x = \xi$.
+
+## References
+
+* J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 3
+* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 6.1, 6.3, 6.4
