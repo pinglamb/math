@@ -22,7 +22,7 @@ We want to study what it means for a real sequence to converge.
 > We then also write
 >
 > $$
-  \lim a_n = L
+  \lim_{n \to \infty} a_n = L
   $$
 >
 > The sequence is said to be **convergent**, otherwise it is **divergent**.

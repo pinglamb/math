@@ -63,6 +63,7 @@ So instead of comparing the terms with a certain value, we check if the terms be
 > $$
   |a_n - L| \le |a_n - a_{n_k}| + |a_{n_k} - L| < \varepsilon / 2 + \varepsilon / 2 = \varepsilon
   $$
+{: #general-principle-of-convergence-thm}
 
 ## Limit Supremum and Infimum
 
