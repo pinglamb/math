@@ -127,6 +127,37 @@ Base on that we can conclude any polynomials and quotient of two polynomials (ex
 > Also, there exists $\tau > 0$ such that when $\vert x - \xi \vert < \tau$, $\vert g(x) - g(\xi) \vert < \delta$.
 > Combining the two we can conclude $f(g(x))$ is continuous at $x = \xi$.
 
+## Intermediate Value Theorem
+
+> *Theorem.*{: .thm}
+> **[Intermediate Value Theorem]**
+> Suppose that $f$ is continuous in the closed interval $(a, b)$ and $\eta$ is a number such that $f(a) < \eta < f(b)$.
+> Then there exists $a < \xi < b$ such that $f(\xi) = \eta$.
+>
+> *Proof.*{: .prf}
+>
+> Let $S = \Set{a \le x \le b : f(x) < \eta}$. $a \in S$ so $S$ is non-empty, and bounded above by $b$. Thus, the set $S$ has a supremum $\xi$.
+>
+> Since $f$ is continuous at $a$, there is an interval $a \le x \le a + \delta$ such that $f(x) < \eta$ so $\xi \ge a + \delta > a$.
+> Similarily there is an interval $b - \delta \le x \le b$ such that $f(x) > \eta$ so $\xi \le b - \delta < b$.
+> Therefore, $a < \xi < b$ and $f$ is continuous at $\xi$.
+>
+> If $f(\xi) > \eta$, say $f(\xi) = \eta + \varepsilon$.
+> By continuity, there exists $\delta$ such that for $\xi - \delta < x < \xi$, $\vert f(\xi) - f(x) \vert < \varepsilon$.
+> As $\xi$ is the supremum of $S$, there exists $x' \in S$ such that $\xi - \delta < x' < \xi$.
+> Thus, $f(\xi) - f(x') < \varepsilon$ which implies $f(x') > \eta$ which is a contradiction.
+> If $f(\xi) < \eta$, say $f(\xi) = \eta - \varepsilon$.
+> By continuity, there exists $\delta$ such that for $\xi < x < \xi + \delta$, $f(x) - f(\xi) < \varepsilon$ and such $x$ is in $S$ which contradicts with $\xi$ being supremum.
+> Hence, by trichotomy, $f\xi) = \eta$.
+>
+> Alternatively, we can use the technique repeated bisection to prove that.
+> Let $a_0 = a$ and $b_0 = b$ and $m_0 = (a_0 + b_0) / 2$.
+> If $f(m_0) < \eta$, we set $a_1 = m_0$ and $b_1 = b_0$, otherwise we set $a_1 = a_0$ and $b_1 = m_0$.
+> Repeat this process recursively and the sequences $(a_n)$ is increasing and $(b_n)$ is decreasing.
+> As $f(a_n) \le \eta \le f(b_n)$ and both $(a_n)$ and $(b_n)$ converges to a common limit $\xi$, we have $f(\xi) = \eta$.
+
+## Maximum Value Theorem
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 3
