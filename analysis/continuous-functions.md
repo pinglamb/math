@@ -131,8 +131,9 @@ Base on that we can conclude any polynomials and quotient of two polynomials (ex
 
 > *Theorem.*{: .thm}
 > **[Intermediate Value Theorem]**
-> Suppose that $f$ is continuous in the closed interval $(a, b)$ and $\eta$ is a number such that $f(a) < \eta < f(b)$.
+> Suppose that $f$ is continuous in the closed interval $[a, b]$ and $\eta$ is a number such that $f(a) < \eta < f(b)$.
 > Then there exists $a < \xi < b$ such that $f(\xi) = \eta$.
+> A similar result holds if $f(a) > f(b)$.
 >
 > *Proof.*{: .prf}
 >
@@ -150,13 +151,58 @@ Base on that we can conclude any polynomials and quotient of two polynomials (ex
 > By continuity, there exists $\delta$ such that for $\xi < x < \xi + \delta$, $f(x) - f(\xi) < \varepsilon$ and such $x$ is in $S$ which contradicts with $\xi$ being supremum.
 > Hence, by trichotomy, $f\xi) = \eta$.
 >
-> Alternatively, we can use the technique repeated bisection to prove that.
+> Alternatively, we can use the technique of repeated bisection to prove that.
 > Let $a_0 = a$ and $b_0 = b$ and $m_0 = (a_0 + b_0) / 2$.
 > If $f(m_0) < \eta$, we set $a_1 = m_0$ and $b_1 = b_0$, otherwise we set $a_1 = a_0$ and $b_1 = m_0$.
 > Repeat this process recursively and the sequences $(a_n)$ is increasing and $(b_n)$ is decreasing.
 > As $f(a_n) \le \eta \le f(b_n)$ and both $(a_n)$ and $(b_n)$ converges to a common limit $\xi$, we have $f(\xi) = \eta$.
 
-## Maximum Value Theorem
+## Extreme Value Theorem
+
+> *Theorem.*{: .thm}
+> **[Extreme Value Theorem]**
+> If $f$ is continuous in the closed interval $[a, b]$, then $f$ is bounded and attains its bounds, i.e.
+> there exists $y, z$ such that $f(y) = \sup f$ and $f(z) = \inf f$.
+>
+> *Proof.*{: .prf}
+>
+> Similar to the proof of Intermediate Value Theorem, we can use the supremum of a suitably defined set of values $x \in [a, b]$.
+> Let $S$ be the set of numbers $x_1$ such that $f(x)$ is bounded above for $a \le x \le x_1$.
+> Since $a \in S$, $S$ is non-empty and bounded above by $b$ and therefore has a supremum $\xi$.
+> There are three possibilities (i) $a < \xi < b$, (ii) $\xi = a$, (iii) $\xi = b$.
+> For (i), as $f$ is continuous at $\xi$, we can find an interval $(\xi - \delta, \xi + \delta)$ such that $f(x) < f(\xi) + 1$.
+> It means $f(x)$ has to be bounded above for $a \le x \le \xi + \delta/2$ which contradicts to $\xi$ being the supremum.
+> Similar arguments show that (ii) also leads to contradiction so $\xi = b$.
+>
+> Bisect the interval $[a, b]$ such that $\sup f = M$ for $a_n \le x \le b_n$.
+> We again have two sequences $(a_n)$ and $(b_n)$ which converges to the same limit $\xi$.
+> Assume $f(\xi) = k < M$, since $f$ is continuous at $\xi$, we can always find an interval $[a_n, b_n]$ containing $\xi$ such that $\sup f(x) = M$ which is a contradiction.
+> Hence, $f(\xi) = M$.
+>
+> Alternatively, if $f$ is not bounded above, then for each $n$, we can find $x_n \in [a, b]$ such that $f(x_n) \ge n$ for all $n$.
+> By Bolzano-Weierstrass, since $(x_n)$ is bounded, the sequence has a convergent subsequence $(x_{n_k})$ with limit $\xi$.
+> Since $f$ is continuous at $\xi$, $f(x_{n_k}) \to f(\xi)$ which is a contradiction.
+>
+> Let $M = \sup f$. Then for each $n$, we can find $x_n$ such that $f(x_n) \ge M - 1/n$.
+> By Bolzano-Weierstrass, $(x_n)$ has a convergent subsequence $(x_{n_k})$ with limit $\xi$ and $M - 1/n_k \le f(x_{n_k}) \le M$.
+> Hence, $f(\xi) = M$.
+
+## Inverse Functions
+
+We can now give the conditions for the existence of inverse functions.
+
+> *Theorem.*{: .thm}
+> Let $f$ be _continuous_ and _strictly increasing_ for closed interval $[a, b]$ and $f(a) = c$ and $f(b) = d$.
+> Then there is a function $g$, continuous and strictly increasing for $[c, d]$, such that $f(g(x)) = x$.
+>
+> *Proof.*{: .prf}
+>
+> Let $k$ be any number such that $c < k < d$. By Intermediate Value Theorem, there is a $h$ such that $f(h) = k$.
+> Since, $f$ is strictly increasing, $h$ is unique. Therefore, $f$ is both injective and surjective and hence bijective.
+>
+> $g$ is strictly increasing since $f$ is strictly increasing.
+> Also, suppose $g(k) = h$. For any $\varepsilon > 0$, $h - \varepsilon < g(y) < h + \varepsilon$ for $f(h - \varepsilon) < y < f(h + \varepsilon)$ and $g$ is continuous.
+
 
 ## References
 
