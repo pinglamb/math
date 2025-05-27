@@ -9,7 +9,7 @@ author:
 header_pages:
   - index.md
 
-remote_theme: jekyll/minima
+remote_theme: jekyll/minima@d7122a0
 minima:
   skin: dark
 

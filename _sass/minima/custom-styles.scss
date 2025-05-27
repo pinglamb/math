@@ -94,6 +94,7 @@ a {
     padding: 20px 15px;
     font-style: normal;
     color: #e0e0e0;
+    overflow: auto;
     @include relative-font-size(1);
 
     .def, .lem, .thm, .cor, .prf, .pro, .sol, .prop, .eg {
