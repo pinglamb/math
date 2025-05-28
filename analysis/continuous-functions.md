@@ -36,9 +36,9 @@ The convergence of function can be characterized in terms of convergent sequence
 > Then for all $\varepsilon > 0$, there exists a $\delta > 0$ such that $\vert f(x) - l \vert < \varepsilon$ when $0 < \vert x - c \vert < \delta$.
 > As $a_n \to c$, there exists an $N$ such that for all $n > N$, $\vert a_n - c \vert < \delta$ and therefore $\vert f(a_n) - l \vert < \varepsilon$.
 >
-> ($\Leftarrow$) Suppose $(a_n)$ is a sequence in which $a_n \to c$ and $f(a_n) \to l$ as $n \to \infty$.
-> Then for all $\delta, \varepsilon > 0$, there exists a $n > N$ such that both $\vert a_n - c \vert < \delta$ and $\vert f(a_n) - l \vert < \varepsilon$.
-> Therefore, for all $x$ such that $\vert x - c \vert \le \vert a_n - c \vert < \delta$, $\vert f(x) - l \vert < \varepsilon$ and $f(x) \to l$.
+> ($\Leftarrow$) _Contrapositive_. Suppose $f(x)$ does not converge to $l$ as $x \to c$. Then there exists $\varepsilon > 0$ such that we find no suitable $\delta > 0$.
+> For each $n \in \mathbb{N}$, there exists $x_n$ such that $\vert x_n - 1/n \vert < 0$ with $\vert f(x_n) - l \vert \ge \varepsilon$.
+> Therefore, we can always find a sequence in which $x_n \to c$ as $n \to \infty$ but $f(x_n)$ does not converge to $l$.
 
 We can conclude the general principle of convergence for functions similar to that for [sequences](general-principle-of-convergence.md#general-principle-of-convergence-thm).
 
