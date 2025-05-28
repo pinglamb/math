@@ -13,6 +13,9 @@ title: Home
 * [Complex Sequences](analysis/complex-sequences.md)
 * [Series](analysis/series.md)
 * [Continuous Functions](analysis/continuous-functions.md)
+* [Differential Calculus](analysis/differential-calculus.md)
+* [Power Series](analysis/power-series.md)
+* [Integral Calculus](analysis/integral-calculus.md)
 
 ## Groups
 {: .left}
