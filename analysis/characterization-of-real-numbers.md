@@ -83,6 +83,10 @@ By reversing the signs, we have
 >
 > + for every positive $\varepsilon$, there is an $s \in S$ for which $s < \inf S + \varepsilon$, i.e. $\inf S + \varepsilon \in R$.
 
+Supremum and infimum are close to maximum and minimum, but are more useful in analysis in the sense of limits.
+An infinite set of real numbers don't necessary have maximum or minimum but they can have supremum/infimum.
+For example, $\mathbb{R}^+$ has no minimum value, but $0$ is the infimum.
+
 ## Monotone-sequence Property
 
 Another way to characterize real numbers is by monotone-sequence property.
