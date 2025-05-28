@@ -127,6 +127,19 @@ Base on that we can conclude any polynomials and quotient of two polynomials (ex
 > Also, there exists $\tau > 0$ such that when $\vert x - \xi \vert < \tau$, $\vert g(x) - g(\xi) \vert < \delta$.
 > Combining the two we can conclude $f(g(x))$ is continuous at $x = \xi$.
 
+Although composite of continuous functions is continuous, the limit of composite of functions might differ.
+For example, consider
+
+$$
+f(x) = 0 \quad \text{and} \quad g(y) = \begin{cases}
+1 & y \not= 0 \\
+0 & y = 0
+\end{cases}
+$$
+
+We have $f(x) \to 0$ as $x \to 0$ and $g(y) \to 1$ as $y \to 0$ but $g(f(x)) = g(0) = 0$ for all $x$ so $g(f(x)) \to 0$ as $x \to 0$.
+The statement is only true when $g(y)$ is continuous or $f(x) \not l$ when $x$ is in the neighbourhood of $a$.
+
 ## Intermediate Value Theorem
 
 > *Theorem.*{: .thm}
