@@ -26,6 +26,8 @@ we will recapture some of the ideas here and prove some of the fundamental rules
 >
 > From the definition, as $x \to a$, the fraction can tend to a finite limit only if $f(x) \to f(a)$, so $f$ is continuous at $a$.
 
+The converse is not true. For example, $f(x) = \vert x \vert$ is continuous at $0$ but not differentiable.
+
 Alternatively, we can use the following characterization to avoid division in the definition.
 
 > *Definition.*{: .def}
@@ -35,10 +37,22 @@ Alternatively, we can use the following characterization to avoid division in th
 > if there is a real-valued function $\varepsilon$ on $(-\eta, \eta) \setminus \Set{0}$ such that for $0 < \vert h \vert < \eta$
 >
 > $$
-  f(a + h) = f(a) + f'(a)h + r(h)
+  f(a + h) = f(a) + f'(a)h + \varepsilon(h)
   $$
 >
-> for which $r(h)/h \to 0$ as $h \to 0$.
+> for which $\varepsilon(h)/h \to 0$ as $h \to 0$.
+
+We will use [small-o notation](../differential-equations/differentiability.md#little-o-notation) to represent function that satisfies $\varepsilon(h)/h \to 0$ as $h \to 0$, i.e.
+
+$$
+f(a + h) = f(a) + f'(a)h + o(h)
+$$
+
+> *Proposition.*{: .prop}
+> The two definitions are equivalent.
+>
+> *Proof.*{: .prf}
+>
 
 ## References
 

@@ -79,6 +79,7 @@ Also, as $E(h) / h$ vanishes as $h \to 0$, so as $E(h)$ itself and hence so does
 It means differentiability at $a$ implies continuity at $a$.
 
 ## Little-o Notation
+{: #little-o-notation}
 
 > *Definition.*{: .def}
 > $f(h) = o(g(h))$ as $h \to 0$ if
