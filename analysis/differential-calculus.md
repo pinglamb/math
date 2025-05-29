@@ -1,0 +1,46 @@
+---
+layout: base
+title: Differential Calculus &#124; Analysis
+---
+
+# Differential Calculus
+
+There are some discussions already in [Differentiability](../differential-equations/differentiability.md) about the definitions of _derivatives_,
+we will recapture some of the ideas here and prove some of the fundamental rules again.
+
+> *Definition.*{: .def}
+> Suppose that $f$ is a real-valued function on interval $I$ and $a$ is an interior point of $I$,
+> so that there exists $\eta > 0$ such that $(a - \eta, a + \eta) \subseteq I$.
+> Then $f$ is **differentiable** at $a$, with **derivative** $f'(a)$, if
+>
+> $$
+  (\forall \varepsilon > 0)(\exists \delta : 0 < \delta \le \eta)(\forall x: 0 < |x - a| < \delta) \, \left| {f(x) - f(a) \over x - a} - f'(a) \right| < \varepsilon
+  $$
+>
+> In other words, $(f(x) - f(a)) / (x - a) \to f'(a)$ as $x \to a$.
+
+> *Proposition.*{: .prop}
+> If $f$ is differentiable at $a$, then $f$ is continuous at $a$.
+>
+> *Proof.*{: .prf}
+>
+> From the definition, as $x \to a$, the fraction can tend to a finite limit only if $f(x) \to f(a)$, so $f$ is continuous at $a$.
+
+Alternatively, we can use the following characterization to avoid division in the definition.
+
+> *Definition.*{: .def}
+> Suppose that $f$ is a real-valued function on interval $I$ and $a$ is an interior point of $I$,
+> that $(a - \eta, a + \eta) \subseteq I$.
+> Then $f$ is **differentiable** at $a$, with **derivative** $f'(a)$,
+> if there is a real-valued function $\varepsilon$ on $(-\eta, \eta) \setminus \Set{0}$ such that for $0 < \vert h \vert < \eta$
+>
+> $$
+  f(a + h) = f(a) + f'(a)h + r(h)
+  $$
+>
+> for which $r(h)/h \to 0$ as $h \to 0$.
+
+## References
+
+* J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 4
+* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 7.1
