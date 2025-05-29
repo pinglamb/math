@@ -51,8 +51,29 @@ $$
 > *Proposition.*{: .prop}
 > The two definitions are equivalent.
 >
+> If $f$ is differentiable at $x = a$, then
+>
+> $$
+  f(a + h) = f(a) + f'(a)h + o(h)
+  $$
+>
+> Conversely, if there exist constants $A$ and $B$ such that
+>
+> $$
+  f(a + h) = A + Bh + o(h)
+  $$
+>
+> then $f$ is differentiable at $a$, with $A = f(a)$ and $B = f'(a)$.
+>
 > *Proof.*{: .prf}
 >
+> Rearranging the terms we have
+>
+> $$
+  {\varepsilon(h) \over h} = {f(a + h) - f(a) \over h} - f'(a)
+  $$
+
+It can be interpreted as differentiability is equivalent to having the derivative being the _only_ good linear approximation.
 
 ## References
 
