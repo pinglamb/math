@@ -155,6 +155,37 @@ The usual rules of differentiation can be proved using small-o notation.
   \left({ f \over g} \right)'(x) = {f'(x) \over g(x)} - {f(x)g'(x) \over [g(x)]^2} = {f'(x)g(x) - f(x)g'(x) \over [g(x)^2]}
   $$
 
+> *Proposition.*{: .prop}
+> **[Inverse Rule]**
+> Let $y = f(x)$ be continuous and strictly increasing for an interval $[a, b]$.
+> If for a given $x \in (a, b)$ such that $f'(x) \not= 0$, then the inverse function $x = g(y)$ is differentiable for the corresponding value of $y$ and
+>
+> $$
+  g'(y) = {1 \over f'(x)}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Given $h$, define $k$ by
+>
+> $$
+  y + k = f(x + h) \implies k = f(x + h) - f(x)
+  $$
+>
+> Then if $k$ is given,
+>
+> $$
+  x + h = g(y + k) \implies h = g(y + k) - g(y)
+  $$
+>
+> Therefore,
+>
+> $$
+  {g(y + k) - g(y) \over k} = {h \over f(x + h) - f(x)}
+  $$
+>
+> Since $g$ is continuous, $h \to 0$ as $k \to 0$.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 4
