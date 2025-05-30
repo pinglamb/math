@@ -75,6 +75,86 @@ $$
 
 It can be interpreted as differentiability is equivalent to having the derivative being the _only_ good linear approximation.
 
+The usual rules of differentiation can be proved using small-o notation.
+
+> *Proposition.*{: .prop}
+> **[Sum Rule]**
+> $(f + g)'(x) = f'(x) + g'(x)$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  (f + g)(x + h) &= f(x + h) + g(x + h) \\
+  &= f(x) + f'(x)h + o(h) + g(x) + g'(x)h + o(h) \\
+  &= f(x) + g(x) + [f'(x) + g'(x)]h + o(h) \\
+  &= (f + g)(x) + [f'(x) + g'(x)]h + o(h)
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> **[Product Rule]**
+> $(fg)'(x) = f'(x)g(x) + f(x)g'(x)$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  (fg)(x + h) &= f(x + h)g(x + h) \\
+  &= (f(x) + f'(x)h + o(h))(g(x) + g'(x)h + o(h)) \\
+  &= f(x)g(x) + [f'(x)g(x) + f(x)g'(x)]h \\
+  & \qquad + \, o(h)[f(x) + g(x) + f'(x)h + g'(x)h + o(h)] + f'(x)g'(x)h^2 \\
+  &= (fg)(x) + [f'(x)g(x) + f(x)g'(x)]h + o(h)
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> **[Chain Rule]**
+> $(g \circ f)'(x) = g'(f(x))f'(x)$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  (g \circ f)(x + h) &= g(f(x + h)) \\
+  &= g(f(x) + f'(x)h + h\varepsilon_1(h)) \\
+  &= g(f(x)) + g'(f(x))[f'(x)h + h\varepsilon_1(h)] \\
+  &\qquad + \, [f'(x)h + h\varepsilon_1(h)] \varepsilon_2(f'(x)h + h\varepsilon_1(h)) \\
+  &= (g \circ f)(x) + g'(f(x))f'(x)h \\
+  &\qquad + \, h[\varepsilon_1(h)g'(f(x)) + (f'(x) + \varepsilon_1(h))\varepsilon_2(f'(x)h + h\varepsilon_1(h))]
+  \end{align*}
+  $$
+>
+> Since $\varepsilon_1(h)g'(f(x)) \to 0$, $f'(x) + \varepsilon_1(h)$ is bounded and $\varepsilon_2(f'(x)h + h\varepsilon_1(h)) \to 0$, so the error term is $o(h)$.
+
+> *Proposition.*{: .prop}
+> Let $f(x) = 1/x$, then $f'(x) = -1/x^2$.
+> Therefore $(1/g)'(x) = - g'(x) / [g(x)]^2$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  {f(x + h) - f(x) \over h} = {x - x - h \over x(x + h)h} = -{1 \over x^2}
+  $$
+>
+> Therefore, we have $(1/g)(x) = f(g(x))$. By chain rule,
+>
+> $$
+  \left( {1 \over g} \right)'(x) = \left( - {1 \over [g(x)]^2} \right) g'(x) = - {g'(x) \over [g(x)]^2}
+  $$
+
+> *Proposition.*{: .prop}
+> **[Quotient Rule]**
+> $(f/g)'(x) = f(x)g'(x))f'(x)$.
+>
+> *Proof.*{: .prf}
+>
+> By product rule,
+>
+> $$
+  \left({ f \over g} \right)'(x) = {f'(x) \over g(x)} - {f(x)g'(x) \over [g(x)]^2} = {f'(x)g(x) - f(x)g'(x) \over [g(x)^2]}
+  $$
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 4
