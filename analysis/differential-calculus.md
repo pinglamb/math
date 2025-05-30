@@ -188,6 +188,8 @@ The usual rules of differentiation can be proved using small-o notation.
 >
 > Since $g$ is continuous, $h \to 0$ as $k \to 0$.
 
+## Higher Derivatives
+
 ## Maxima and Minima
 
 > *Definition.*{: .def}
@@ -199,20 +201,14 @@ The usual rules of differentiation can be proved using small-o notation.
 >
 > *Proof.*{: .prf}
 >
-> Since
->
-> $$
-  {f(x) - f(a) \over x - a}
-  $$
->
-> tends to a limit greater than $0$ as $x \to a$, the numerator and denominator have the same sign.
+> Since $(f(x) - f(a)) / (x - a)$ tends to a limit greater than $0$ as $x \to a$, the numerator and denominator have the same sign.
 
 > *Proposition.*{: .prop}
 > If $f$ is strictly increasing at $a$ and $f'(a)$ exists, then $f'(a) \ge 0$.
 >
 > *Proof.*{: .prf}
 >
-> By definition, for $x > a$, we have
+> By definition, for $x$ in the neighbourhood and $x > a$, we have
 >
 > $$
   {f(x) - f(a) \over x - a} > 0
@@ -222,9 +218,28 @@ The usual rules of differentiation can be proved using small-o notation.
 
 $f(x) = x^3$ is an example that $f$ being strictly increasing at $x = 0$ doesn't imply $f'(0) > 0$.
 
-## Differentiation Theorems
+> *Definition.*{: .def}
+> $f$ is said to have a **maximum** at $a$ if there is a neighbourhood of $a$ in which $f(x) < f(a)$ except for $x = a$.
+> A **turning value** is either a maximum or minimum.
 
-## Higher Derivatives
+> *Proposition.*{: .prop}
+> If $f$ has a turning value at $a$ and $f'(a)$ exists, then $f'(a) = 0$.
+>
+> *Proof.*{: .prf}
+>
+> If $f'(a) > 0$ or $f'(a) < 0$, then $f$ is strictly increasing or decreasing at $x = a$ respectively.
+> Either of these contradicts $a$ being a turning value.
+
+It is possible for a function to have turning value at $a$ at which there is not derivative, e.g. $\vert x \vert$ at $x = 0$.
+
+> *Proposition.*{: .prop}
+> If there is a neighbourhood of $a$ such that $f'(a) > 0$ for $x < a$ and $f'(a) < 0$ for $x > a$,
+> then $f$ has a maximum at $a$.
+
+> *Proposition.*{: .prop}
+> Let $f'(a) = 0$. If $f''(a) < 0$, then $f$ has maximum at $a$. If $f''(a) > 0$, then $f$ has minimum at $a$.
+
+## Differentiation Theorems
 
 ## Taylor's Theorem
 
