@@ -186,6 +186,14 @@ The usual rules of differentiation can be proved using small-o notation.
 >
 > Since $g$ is continuous, $h \to 0$ as $k \to 0$.
 
+## Maxima and Minima
+
+## Differentiation Theorems
+
+## Higher Derivatives
+
+## Taylor's Theorem
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 4
