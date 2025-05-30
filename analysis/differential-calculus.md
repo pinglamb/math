@@ -209,6 +209,16 @@ The usual rules of differentiation can be proved using small-o notation.
 
 > *Proposition.*{: .prop}
 > If $f$ is strictly increasing at $a$ and $f'(a)$ exists, then $f'(a) \ge 0$.
+>
+> *Proof.*{: .prf}
+>
+> By definition, for $x > a$, we have
+>
+> $$
+  {f(x) - f(a) \over x - a} > 0
+  $$
+>
+> so the limit from the right is greater than or equal to $0$. Similar argument for the limit from the left.
 
 $f(x) = x^3$ is an example that $f$ being strictly increasing at $x = 0$ doesn't imply $f'(0) > 0$.
 
