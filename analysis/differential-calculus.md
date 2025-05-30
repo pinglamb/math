@@ -190,6 +190,21 @@ The usual rules of differentiation can be proved using small-o notation.
 
 ## Higher Derivatives
 
+The second derivative is just the derivative of the first, and repeatedly we can define the $n$th derivative.
+The $n$th derivative implies continuity of $(n-1)$th derivative.
+
+> *Theorem.*{: .thm}
+> **[Leibniz's Rule]**
+> If $f$ and $g$ are functions having $n$th derivatives, then
+>
+> $$
+  (fg)^{(n)} = \sum_{r=0}^n {n \choose r} f^{(n-r)}g^{(r)}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By induction.
+
 ## Maxima and Minima
 
 > *Definition.*{: .def}
