@@ -75,6 +75,8 @@ $$
 
 It can be interpreted as differentiability is equivalent to having the derivative being the _only_ good linear approximation.
 
+## Elementary Rules
+
 The usual rules of differentiation can be proved using small-o notation.
 
 > *Proposition.*{: .prop}
@@ -187,6 +189,28 @@ The usual rules of differentiation can be proved using small-o notation.
 > Since $g$ is continuous, $h \to 0$ as $k \to 0$.
 
 ## Maxima and Minima
+
+> *Definition.*{: .def}
+> The function $f$ is said to be **strictly increasing** at $c$ if there is a neighbourhood of $a$
+> in which $f(x) < f(a)$ for $x < a$ and $f(x) > f(a)$ for $x > a$.
+
+> *Proposition.*{: .prop}
+> If $f'(a) > 0$, then $f$ is strictly increasing at $a$.
+>
+> *Proof.*{: .prf}
+>
+> Since
+>
+> $$
+  {f(x) - f(a) \over x - a}
+  $$
+>
+> tends to a limit greater than $0$ as $x \to a$, the numerator and denominator have the same sign.
+
+> *Proposition.*{: .prop}
+> If $f$ is strictly increasing at $a$ and $f'(a)$ exists, then $f'(a) \ge 0$.
+
+$f(x) = x^3$ is an example that $f$ being strictly increasing at $x = 0$ doesn't imply $f'(0) > 0$.
 
 ## Differentiation Theorems
 
