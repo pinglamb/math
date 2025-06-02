@@ -252,7 +252,7 @@ It is possible for a function to have turning value at $a$ at which there is not
 > then $f$ has a maximum at $a$.
 
 > *Proposition.*{: .prop}
-> Let $f'(a) = 0$. If $f''(a) < 0$, then $f$ has maximum at $a$. If $f''(a) > 0$, then $f$ has minimum at $a$.
+> Let $f'(a) = 0$. If $f'\'(a) < 0$, then $f$ has maximum at $a$. If $f'\'(a) > 0$, then $f$ has minimum at $a$.
 
 ## Differentiation Theorems
 
