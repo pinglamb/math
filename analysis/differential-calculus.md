@@ -327,6 +327,40 @@ $$
   $$
 >
 > Hence, $f(x_2) > f(x_1)$ and $f$ is strictly increasing in $[a, b]$.
+>
+> The corollary still holds if $f$ is continuous at $c$ but $f'(c)$ doesn't exist.
+> By applying the theorem to two intervals $(a, c)$ and $c, b$, with $x_1 \in (a, c)$ and $x_2 \in (c, b)$,
+> we still have $f(x_1) < f(c) < f(x_2)$.
+
+> *Theorem.*{: .thm}
+> **[Cauchy's Mean Value Theorem]**
+> Suppose both $f$ and $g$ are continuous in $[a, b]$ and differentiable in $(a, b)$.
+> Suppose $g'(x)$ doesn't vanish for all $x \in (a, b)$.
+> Then there exists $c$ with $a < c < b$ such that
+>
+> $$
+  {f(b) - f(a) \over g(b) - g(a)} = {f'(c) \over g'(c)}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Similarily to the proof of Mean Value Theorem, let
+>
+> $$
+  \phi(x) = f(x) - kg(x)
+  $$
+>
+> Choose $k$ such that $\phi(a) = \phi(b)$ and therefore
+>
+> $$
+  k = {f(b) - f(a) \over g(b) - g(a)}
+  $$
+>
+> By Rolle's Theorem, there exists $c$ such that
+>
+> $$
+  \phi'(c) = f'(c) - kg'(c) = 0 \quad \implies \quad {f(b) - f(a) \over g(b) - g(a)} = {f'(c) \over g'(c)}
+  $$
 
 ## Taylor's Theorem
 
