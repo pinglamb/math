@@ -256,6 +256,23 @@ It is possible for a function to have turning value at $a$ at which there is not
 
 ## Differentiation Theorems
 
+> *Theorem.*{: .thm}
+> **[Rolle's Theorem]**
+> Suppose $f$ is continuous in the closed interval $[a, b]$ and $f'$ exists in open interval $(a, b)$.
+> If $f(a) = f(b)$, then there is a value $c$, with $a < c < b$, for which $f'(c) = 0$.
+>
+> *Proof.*{: .prf}
+>
+> Let $M = \sup f(x)$ and $m = \inf f(x)$ for $a \le x \le b$.
+> Let $f(a) = k$
+>
+> If $M = m = k$, then $f$ is a constant function and $f'(c) = 0$ for all $c \in (a, b)$.
+>
+> Suppose $M > k$. By extreme value theorem, there exists $c$ such that $f(c) = M$.
+> If $f'(c) > 0$, then $f$ is strictly increasing at $c$ and there are some values on the right such that $f(x) > f(c)$, which contradicts with $f(c)$ being the supremum.
+> If $f'(c) < 0$, similarily there are some values on the left such thath $f(x) > f(c)$.
+> Therefore, $f'(c) = 0$.
+
 ## Taylor's Theorem
 
 ## References
