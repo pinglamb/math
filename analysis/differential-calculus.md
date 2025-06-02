@@ -273,6 +273,35 @@ It is possible for a function to have turning value at $a$ at which there is not
 > If $f'(c) < 0$, similarily there are some values on the left such thath $f(x) > f(c)$.
 > Therefore, $f'(c) = 0$.
 
+> *Theorem.*{: .thm}
+> **[Mean Value Theorem]**
+> Suppose $f$ is continuous in the closed interval $[a, b]$ and $f'$ exists in open interval $(a, b)$.
+> Then there is a value $c$ with $a < c < b$, for which
+>
+> $$
+  f'(c) = {f(b) - f(a) \over b - a}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $\phi(x) = f(x) - kx$. In order to have $\phi(a) = \phi(b)$,
+>
+> $$
+  k = {f(b) - f(a) \over b - a}
+  $$
+>
+> By Rolle's Theorem, there exists $c$ such that
+>
+> $$
+  \phi'(c) = f'(c) - k = 0 \quad \implies \quad f'(c) = k = {f(b) - f(a) \over b - a}
+  $$
+
+Let $0 < \theta < 1$ and $b = a + h$, we can write the result as
+
+$$
+f(a + h) = f(a) + hf'(a + \theta h)
+$$
+
 ## Taylor's Theorem
 
 ## References
