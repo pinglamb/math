@@ -302,6 +302,32 @@ $$
 f(a + h) = f(a) + hf'(a + \theta h)
 $$
 
+> *Corollary.*{: .cor}
+> If $f'(x) = 0$ for all $x \in (a, b)$, then $f(x)$ is constant for $[a, b]$.
+>
+> *Proof.*{: .prf}
+>
+> For any two points $x_1$ and $x_2$ with $a \le x_1 < x_2 \le b$, there exists $x_1 < x_3 < x_2$ such that
+>
+> $$
+  f(x_2) - f(x_1) = (x_2 - x_1)f'(x_3) = 0
+  $$
+>
+> Hence, $f(x_1) = f(x_2)$.
+
+> *Corollary.*{: .cor}
+> If $f'(x) > 0$ for $x \in (a, b)$, then $f(x)$ is strictly increasing in $[a, b]$.
+>
+> *Proof.*{: .prf}
+>
+> For any two points $x_1$ and $x_2$ with $a \le x_1 < x_2 \le b$, there exists $x_1 < x_3 < x_2$ such that
+>
+> $$
+  f(x_2) - f(x_1) = (x_2 - x_1)f'(x_3) > 0
+  $$
+>
+> Hence, $f(x_2) > f(x_1)$ and $f$ is strictly increasing in $[a, b]$.
+
 ## Taylor's Theorem
 
 ## References
