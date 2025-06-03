@@ -4,6 +4,7 @@ title: Differential Calculus &#124; Analysis
 ---
 
 # Differential Calculus
+{: .page-title}
 
 There are some discussions already in [Differentiability](../differential-equations/differentiability.md) about the definitions of _derivatives_,
 we will recapture some of the ideas here and prove some of the fundamental rules again.
@@ -364,7 +365,10 @@ $$
 
 ## Taylor's Theorem
 
+If $f$ is differentiable at $a$, then $f_a(x) = f(a) + (x - a)f'(a)$ is a good linear approximation to $f$.
+We can extend this further if the function has higher derivatives and use polynomial approximation.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 4
-* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 7.1
+* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 7.1, 7.3, 7.6
