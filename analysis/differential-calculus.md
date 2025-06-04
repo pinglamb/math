@@ -527,6 +527,48 @@ When $k = n$, we have Cauchy's remainder being the same as Lagrange's remainder.
 >
 > which is called the **Taylor series** for $f$.
 
+## Young's Theorem
+
+Taylor's theorem requires $f$ to be differentiable in an interval but we don't need that for the linear approximation $f(x) = f(a) + (x - a)f'(a) + o(\vert x - a \vert)$.
+Therefore, we have the following corresponding result.
+
+> *Theorem.*{: .thm}
+> **[Young's form of the general mean value theorem]**
+> Suppose that $f$ is $(n - 1)$-times differentiable in an interval $I$ and $f^{(n)}$ is differentiable at $a \in I$.
+> Then
+>
+> $$
+  f(a + h) = f(a) + hf'(a) + \cdots + {h^{n-1} \over (n-1)!} f^{(n-1})(a) + {h^n \over n!} (f^{(n)}(a) + \varepsilon)
+  $$
+>
+> where $\varepsilon \to 0$ as $h \to 0$.
+>
+> In other words, let $r_{n+1}(x) = f(x) - p_n(x)$, then $r_{n+1}(x) = o(\vert x - a \vert^n)$.
+>
+> *Proof.*{: .prf}
+>
+> Let
+>
+> $$
+  \phi(h) = f(a + h) - f(a) - hf'(a) - \cdots - {h^n \over n!} (f^{(n)}(a) - \eta)
+  $$
+>
+> where $\eta$ is a positive constant.
+>
+> We have $\phi(0) = \phi'(0) = \cdots = \phi^{(n-1)}(0) = 0$ and $\phi^{(n)} = \eta$.
+> Thus, $\phi^{(n-1)}(h)$ is increasing at $h = 0$, which implies $\phi^{(n-2)}(h)$ is positive in an interval to the right of $x = 0$.
+> By repeating this argument, for sufficiently small $h$, $\phi(h) > 0$, which means
+>
+> $$
+  f(a + h) > f(a) + hf'(a) + \cdots + {h^n \over n!} (f^{(n)}(a) - \eta)
+  $$
+>
+> Similarily,
+>
+> $$
+  f(a + h) < f(a) + hf'(a) + \cdots + {h^n \over n!} (f^{(n)}(a) + \eta)
+  $$
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 4
