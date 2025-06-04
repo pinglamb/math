@@ -517,6 +517,16 @@ Base on different conditions that are placed on $f$ and its derivatives, we can 
 
 When $k = n$, we have Cauchy's remainder being the same as Lagrange's remainder.
 
+> *Definition.*{: .def}
+> Suppose that $f$ is infinitely differentiable and let $f(x) = p_n(x) + r_{n+1}(x)$.
+> If $r_n(x) \to 0$ as $n \to \infty$, we can write
+>
+> $$
+  f(x) = f(a) + \sum_{j=1}^{\infty} {(x - a)^j \over j!} f^{(j)}(a)
+  $$
+>
+> which is called the **Taylor series** for $f$.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 4
