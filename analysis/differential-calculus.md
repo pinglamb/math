@@ -421,6 +421,31 @@ Base on different conditions that are placed on $f$ and its derivatives, we can 
 > $$
   f(a + h) = f(a) + hf'(a) + \cdots + {h^{n-1} \over (n-1)!} f^{(n-1)}(a) + {h^n \over n!} f^{(n)}(c)
   $$
+>
+> *Proof.*{: .prf}
+>
+> The theorem is like the mean value theorem for higher order and the proof is similar.
+>
+> Let
+>
+> $$
+  \phi(x) = f(x) - p_{n-1}(x) - k {(x - a)^n \over n!}
+  $$
+>
+> where $k$ is a real number chosen so that $\phi(b) = 0$.
+>
+> Then we have $\phi(a) = \phi'(a) = \cdots = \phi^{(n-1)}(a) = \phi(b) = 0$.
+> By the higher-order Rolle's Theorem, there exists $c \in (a, b)$ such that
+>
+> $$
+  \phi^{(n)}(c) = f^{(n)}(c) - k = 0 \quad \implies \quad k = f^{(n)}(c)
+  $$
+>
+> Hence,
+>
+> $$
+  f(b) = p_{n-1}(b) + {(b - a)^n \over n!} f^{(n)}(c)
+  $$
 
 > *Theorem.*{: .thm}
 > **[Taylor's Theorem with Cauchy's Remainder]**
