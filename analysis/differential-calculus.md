@@ -382,6 +382,25 @@ $$
 
 so $p_n^{(s)}(a) = f^{(s)}(a)$ for $1 \le s \le n$.
 We then have $r_{n+1}(x) = f(x) - p_n(x)$ being the remainder term in which we hope to be small so that $p_n(x)$ is a good approximation.
+We will need to following lemma to prove the desired results.
+
+> *Lemma.*{: .lem}
+> **[Higher-order Rolle's Theorem]**
+> Let $f$ be continuous on $[a, b]$ and $n$-times differentiable on an open interval containing $[a, b]$.
+> Suppose that
+>
+> $$
+  f(a) = f'(a) = f''(a) = \cdots = f^{(n-1)}(a) = f(b) = 0
+  $$
+>
+> Then there exists $c$, with $a < c < b$ such that $f^{(n)}(c) = 0$.
+>
+> *Proof.*{: .prf}
+>
+> When $n = 0$, it is just Rolle's Theorem.
+> Suppose $k < n$. There exists $c_k \in (a, b)$ such that $f^{(k)}(c_k) = 0$.
+> As $f^{(k)}(a) = 0$, by Rolle's Theorem, there exists $c_{k+1} \in (a, c_k)$ such that $f^{(k+1)}(c_{k+1}) = 0$.
+> By induction, there exists $c_n$, with $a < c_n < c_{n-1} < \cdots < c_1 < b$ such that $f^{(n)})(c_n) = 0$.
 
 Base on different conditions that are placed on $f$ and its derivatives, we can get different results about the remainder term.
 
@@ -396,6 +415,9 @@ Base on different conditions that are placed on $f$ and its derivatives, we can 
   &= p_{n-1}(b) + {(b - a)^{n} \over n!} f^{(n)}(c)
   \end{align*}
   $$
+
+> *Theorem.*{: .thm}
+> **[Taylor's Theorem with Cauchy's Remainder]**
 
 ## References
 
