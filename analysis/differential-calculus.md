@@ -415,9 +415,33 @@ Base on different conditions that are placed on $f$ and its derivatives, we can 
   &= p_{n-1}(b) + {(b - a)^{n} \over n!} f^{(n)}(c)
   \end{align*}
   $$
+>
+> Let $b = a + h$, it becomes
+>
+> $$
+  f(a + h) = f(a) + hf'(a) + \cdots + {h^{n-1} \over (n-1)!} f^{(n-1)}(a) + {h^n \over n!} f^{(n)}(c)
+  $$
 
 > *Theorem.*{: .thm}
 > **[Taylor's Theorem with Cauchy's Remainder]**
+> Suppose $f$ is a continuous function on $[a, b]$ which is $n$-times differentiable on $[a, b)$,
+> and for which the derivatives are bounded on $[a, b)$.
+> Suppose that $k \in \mathbb{R}$ and that $k > 0$.
+> Then there exists $c \in (a, b)$ such that
+>
+> $$
+  \begin{align*}
+  f(b) &= p_{n-1}(b) + {(b - c)^{n-k}(b - a)^{k} \over k(n - 1)!} f^{(n)}(c)
+  \end{align*}
+  $$
+>
+> Let $c = (1 - \theta_n)a + \theta_n b$, it becomes
+>
+> $$
+  \begin{align*}
+  f(b) &= p_{n-1}(b) + {(1 - \theta_n)^{n-k}(b - a)^{n} \over k(n - 1)!} f^{(n)}(c)
+  \end{align*}
+  $$
 
 ## References
 
