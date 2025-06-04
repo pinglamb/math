@@ -467,6 +467,55 @@ Base on different conditions that are placed on $f$ and its derivatives, we can 
   f(b) &= p_{n-1}(b) + {(1 - \theta_n)^{n-k}(b - a)^{n} \over k(n - 1)!} f^{(n)}(c)
   \end{align*}
   $$
+>
+> *Proof.*{: .prf}
+>
+> Let
+>
+> $$
+  h(x) = f(x) + \sum_{s=1}^{n-1} {(b - x)^s \over s!} f^{(s)}(x)
+  $$
+>
+> We have $h(a) = p_{n-1}(b)$ and $h(b) = f(b)$ and
+>
+> $$
+  {\mathrm{d} \over \mathrm{d}x}\left( {(b - x)^s \over s!} f^{(s)}(x) \right) = - {(b - x)^{s-1} \over (s-1)!} f^{(s)}(x) + {(b - x)^s \over s!} f^{(s + 1)}(x)
+  $$
+>
+> so that
+>
+> $$
+  h'(x) = {(b - x)^{n-1} \over (n - 1)!} f^{(n)}(x)
+  $$
+>
+> as all the other terms are cancelling in pairs.
+>
+> Let
+>
+> $$
+  g(x) = - (b - x)^k
+  $$
+>
+> so that $g(b) - g(a) = (b - a)^k$ and $g'(x) = k(b - x)^{k-1} \not= 0$ for $x \in (a, b)$.
+>
+> By Cauchy's mean value theorem, there exists $c \in (a, b)$ such that
+>
+> $$
+  {h(b) - h(a) \over g(b) - g(a)} = {h'(c) \over g'(c)}
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  f(b) &= h(b) = h(a) + (h(b) - h(a)) \\
+  &= h(a) + (g(b) - g(a)) {h'(c) \over g'(c)} \\
+  &= p_{n-1}(b) +  {(b - c)^{n-1}(b - a)^k \over k(b - c)^{k-1}(n - 1)! } f^{(n)}(c) \\
+  &= p_{n-1}(b) +  {(b - c)^{n-k}(b - a)^k \over k(n - 1)! } f^{(n)}(c)
+  \end{align*}
+  $$
+
+When $k = n$, we have Cauchy's remainder being the same as Lagrange's remainder.
 
 ## References
 
