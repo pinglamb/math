@@ -280,7 +280,7 @@ It is possible for a function to have turning value at $a$ at which there is not
 > Then there is a value $c$ with $a < c < b$, for which
 >
 > $$
-  f'(c) = {f(b) - f(a) \over b - a}
+  f(b) - f(a) = (b - a) f'(c)
   $$
 >
 > *Proof.*{: .prf}
@@ -366,7 +366,36 @@ $$
 ## Taylor's Theorem
 
 If $f$ is differentiable at $a$, then $f_a(x) = f(a) + (x - a)f'(a)$ is a good linear approximation to $f$.
-We can extend this further if the function has higher derivatives and use polynomial approximation.
+We can generalize it to see if the function that has higher derivatives can be better approximated by means of a polynomial.
+
+Let
+
+$$
+p_n(x) = f(a) + (x - a)f'(a) + {(x - a)^2 \over 2!} f''(a) + \cdots + {(x - a)^n \over n!} f^{(n)}(a)
+$$
+
+Then $p_n(x)$ is a polynomial of degree at most $n$, with $p_n(a) = f(a)$ and
+
+$$
+p_n^{(s)}(x) = f^{(s)}(a) + (x - a)f^{(s + 1)}(a) + \cdots + {(x - a)^{n - s} \over (n - s)!} f^{(n)}(a)
+$$
+
+so $p_n^{(s)}(a) = f^{(s)}(a)$ for $1 \le s \le n$.
+We then have $r_{n+1}(x) = f(x) - p_n(x)$ being the remainder term in which we hope to be small so that $p_n(x)$ is a good approximation.
+
+Base on different conditions that are placed on $f$ and its derivatives, we can get different results about the remainder term.
+
+> *Theorem.*{: .thm}
+> **[Taylor's Theorem with Lagrange's Remainder]**
+> Suppose $f$ is a continuous function on $[a, b]$ which is $n$-times differentiable on $[a, b)$.
+> Then there exists $c \in (a, b)$ such that
+>
+> $$
+  \begin{align*}
+  f(b) &= f(a) + (b - a) f'(a) + \cdots + {(b - a)^{n-1} \over (n - 1)!} f^{(n-1)}(a) + {(b - a)^{n} \over n!} f^{(n)}(c) \\
+  &= p_{n-1}(b) + {(b - a)^{n} \over n!} f^{(n)}(c)
+  \end{align*}
+  $$
 
 ## References
 
