@@ -527,47 +527,37 @@ When $k = n$, we have Cauchy's remainder being the same as Lagrange's remainder.
 >
 > which is called the **Taylor series** for $f$.
 
-## Young's Theorem
-
 Taylor's theorem requires $f$ to be differentiable in an interval but we don't need that for the linear approximation $f(x) = f(a) + (x - a)f'(a) + o(\vert x - a \vert)$.
 Therefore, we have the following corresponding result.
 
 > *Theorem.*{: .thm}
-> **[Young's form of the general mean value theorem]**
+> **[Young's Theorem]**
 > Suppose that $f$ is $(n - 1)$-times differentiable in an interval $I$ and $f^{(n)}$ is differentiable at $a \in I$.
-> Then
->
-> $$
-  f(a + h) = f(a) + hf'(a) + \cdots + {h^{n-1} \over (n-1)!} f^{(n-1})(a) + {h^n \over n!} (f^{(n)}(a) + \varepsilon)
-  $$
->
-> where $\varepsilon \to 0$ as $h \to 0$.
->
-> In other words, let $r_{n+1}(x) = f(x) - p_n(x)$, then $r_{n+1}(x) = o(\vert x - a \vert^n)$.
+> Then $r_{n+1}(x) = f(x) - p_n(x) = o(\vert x - a \vert^n)$.
 >
 > *Proof.*{: .prf}
 >
-> Let
+> Let $u(x) = r_{n+1}(x) / (x - a)^n$ for $x \not= a$.
+> For any $\varepsilon > 0$, let
 >
 > $$
-  \phi(h) = f(a + h) - f(a) - hf'(a) - \cdots - {h^n \over n!} (f^{(n)}(a) - \eta)
+  v_\varepsilon(x) = r_{n+1}(x) + \varepsilon(x - a)^n
   $$
 >
-> where $\eta$ is a positive constant.
->
-> We have $\phi(0) = \phi'(0) = \cdots = \phi^{(n-1)}(0) = 0$ and $\phi^{(n)} = \eta$.
-> Thus, $\phi^{(n-1)}(h)$ is increasing at $h = 0$, which implies $\phi^{(n-2)}(h)$ is positive in an interval to the right of $x = 0$.
-> By repeating this argument, for sufficiently small $h$, $\phi(h) > 0$, which means
+> Since $r_{n+1}(a) = r_{n+1}'(a) = \cdots = r_{n+1}^{(n)}(a) = 0$,
 >
 > $$
-  f(a + h) > f(a) + hf'(a) + \cdots + {h^n \over n!} (f^{(n)}(a) - \eta)
+  v_\varepsilon(a) = v_\varepsilon'(a) = \cdots = v_\varepsilon^{(n-1)}(a) = 0 \quad \text{and} \quad v_\varepsilon^{(n)}(a) = n!\varepsilon > 0
   $$
 >
-> Similarily,
+> Thus, $v_\varepsilon^{(n-1)}(x)$ is strictly increasing at $x = a$ and there exists an interval $[a, a + \delta) \subseteq I$ such that $v_\varepsilon^{(n-1)}(x) > 0$ for $x \in [a, a + \delta)$.
+> It implies $v_\varepsilon^{(n-2)}(x)$ is strictly increasing in the inteval $[a, a + \delta)$.
+> By iterating the argument, it follows that $v_\varepsilon(x) > 0$
 >
-> $$
-  f(a + h) < f(a) + hf'(a) + \cdots + {h^n \over n!} (f^{(n)}(a) + \eta)
-  $$
+> Since $v_\varepsilon(x) = (u(x) + \varepsilon)(x - a)^n$, $u(x) > -\varepsilon$ for $x \in (a, a + \delta)$.
+> Applying the same argument to $w_\varepsilon(x) = - r_{n+1}(x) + \varepsilon(x - a)^n$, we can conclude $u(x) < \varepsilon$
+> Therefore, $u(x) \to 0$ as $x \to a^+$. Similarily, $u(x) \to 0$ as $x \to a^-$.
+> Hence, $r_{n+1}(x) / (x - a)^n \to 0$ and $r_{n+1}(x) = o(\vert x - a \vert^n)$.
 
 ## References
 
