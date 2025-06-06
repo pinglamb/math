@@ -363,6 +363,27 @@ $$
   \phi'(c) = f'(c) - kg'(c) = 0 \quad \implies \quad {f(b) - f(a) \over g(b) - g(a)} = {f'(c) \over g'(c)}
   $$
 
+> *Corollary.*{: .cor}
+> **[L'Hôpital's Rule]**
+> Suppose that $f$ and $g$ are continuous in $[a, b]$ and differentiable in $(a, b)$, and $f(a) = g(a) = 0$ and $g'(x) \not= 0$ for all $x \in (a, b)$.
+> If $f'(x) / g'(x) \to l$ as $x \to a^{+}$, then $f(x) / g(x) \to l$ as $x \to a^{+}$.
+>
+> *Proof.*{: .prf}
+>
+> For any $\varepsilon > 0$, there exists $0 < \delta < b - a$ such that $\vert f'(x) / g'(x) - l \vert < \varepsilon$ for $a < x < a + \delta$.
+> Also, by Cauchy's M.V.T., there exists $c \in (a, x)$ such that
+>
+> $$
+  {f(x) - f(a) \over g(x) - g(a)} = {f(x) \over g(x)} = {f'(c) \over g'(c)}
+  $$
+>
+> Hence,
+>
+> $$
+  \left| {f(x) \over g(x)} - l \right| = \left| {f'(x) \over g'(x)} - l \right| < \varepsilon
+  $$
+
+
 ## Taylor's Theorem
 
 If $f$ is differentiable at $a$, then $f_a(x) = f(a) + (x - a)f'(a)$ is a good linear approximation to $f$.
