@@ -383,7 +383,6 @@ $$
   \left| {f(x) \over g(x)} - l \right| = \left| {f'(x) \over g'(x)} - l \right| < \varepsilon
   $$
 
-
 ## Taylor's Theorem
 
 If $f$ is differentiable at $a$, then $f_a(x) = f(a) + (x - a)f'(a)$ is a good linear approximation to $f$.

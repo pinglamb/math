@@ -157,6 +157,8 @@ When $k \ge 3$, $\ln k / k > 1 / k$, so $\sum \ln k / k$ is divergent.
 > since $(a_k)$ is decreasing.
 
 The comparison test can be turned into the following applicable forms.
+The use of $\limsup$ means that the sequence only needs to fulfill the criteria eventually.
+Finite number of terms violating that won't affect the convergence.
 
 > *Corollary.*{: .cor}
 > **[Cauchy's Test]**
