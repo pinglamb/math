@@ -44,3 +44,24 @@ We now have the tools to study rigorously about them.
   $$
 >
 > which converges as it is a geometric series. By comparison test, $\sum a_n z^n$ converges absolutely.
+
+> *Theorem.*{: .thm}
+> A power series either
+>
+> + convergess absolutely for all $z$, or
+>
+> + convergess absolutely for all $z$ inside a circle $\vert z \vert = R$ and diverges for all $z$ outside it, or
+>
+> + converges for $z = 0$ only.
+>
+> *Proof.*{: .prf}
+>
+
+> *Definition.*{: .def}
+> The circle $\vert z \vert = R$ is called the **circle of convergence** and $R$ is called the **radius of convergence**.
+
+It is to be noted that the convergence of values on the circle of convergence requires special investigation for any particular series.
+
+## References
+
+* J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 5.5, 5.6, 5.7, 5.8
