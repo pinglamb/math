@@ -60,6 +60,13 @@ We now have the tools to study rigorously about them.
 > *Definition.*{: .def}
 > The circle $\vert z \vert = R$ is called the **circle of convergence** and $R$ is called the **radius of convergence**.
 
+> *Proposition.*{: .prop}
+> If $\vert a_{n+1} / a_n \vert$ tends to a limit $l$ as $n \to \infty$,
+> then the radius of convergence of $\sum a_n z^n$ is $1 / l$.
+>
+> *Proof.*{: .prf}
+>
+
 It is to be noted that the convergence of values on the circle of convergence requires special investigation for any particular series.
 
 ## References
