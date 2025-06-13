@@ -66,8 +66,17 @@ We now have the tools to study rigorously about them.
 >
 > *Proof.*{: .prf}
 >
+> By d'Alembert's ratio test, we have absolute convergence iff
+>
+> $$
+  \left| {a_{n+1} z^{n+1} \over a_n z^n} \right| = \left| {a_{n+1} \over a_n} \right| |z| < 1 \quad \implies \quad |z| < {1 \over l}
+  $$
 
 It is to be noted that the convergence of values on the circle of convergence requires special investigation for any particular series.
+
+## Multiplication
+
+## Taylor Series
 
 ## References
 
