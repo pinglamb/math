@@ -291,6 +291,23 @@ $$
 It relates the sequence with a null sequence. We can prove convergence by showing for a term $\varepsilon_k$ in a shrinking distance, there is a point $N_k$ in the sequence such that the distance of points are within $\varepsilon_k$ from the limit.
 Convenient choices are $\varepsilon_k = 1/k$ or $\varepsilon_k = 1/2^k$.
 
+The following test involves some knowledge about [series](series.md).
+
+> *Proposition.*{: .prop}
+> **[Ratio Test]**
+> If
+>
+> $$
+  \lim_{n \to \infty} \left| { a_{n+1} \over a_n} \right| < 1
+  $$
+>
+> then $(a_n)$ is a null sequence.
+>
+> *Proof.*{: .prf}
+>
+> By d'Alembert's ratio test, the series $\sum a_n$ converges.
+> Hence, the underlying sequence $(a_n)$ must be a null sequence.
+
 ## Recurrence Relation
 
 A sequence can be determined by a relation between successive members of it. For example, the famous Fibonacci sequence
