@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Series &#124; Analysis
+title: Power Series &#124; Analysis
 ---
 
 # Power Series

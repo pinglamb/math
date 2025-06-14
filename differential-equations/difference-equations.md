@@ -175,6 +175,6 @@ Given $x_n$, we can find $x_{n+1}$ by drawing a line up to $f(x_n)$ then over to
 
 ![Cobweb Method](../images/ode-cobweb-method.png){: .size-2x}
 
-## Reference
+## References
 
 * James C. Robinson _An Introduction to Ordinary Differential Equations_, 2004 - Chapter 22, 23
