@@ -76,7 +76,118 @@ It is to be noted that the convergence of values on the circle of convergence re
 
 ## Multiplication
 
-## Taylor Series
+When we have two power series, it is useful if we can write the product of them as
+
+$$
+(a_0 + a_1z + a_2z^2 + \cdots)(b_0 + b_1z + b_2z^2 + \cdots) = a_0b_0 + (a_1b_0 + a_0b_1)z + (a_2b_0 + a_1b_1 + a_0b_2)z^2 + \cdots
+$$
+
+The following theorem works for any absolutely convergent series which need not be power series
+
+> *Theorem.*{: .thm}
+> If $\sum u_n$ and $\sum v_n$ converges absolutely to sums $s$ and $t$,
+> then the series consisting of their products (in any other) converges absolutely to $st$.
+>
+> *Proof.*{: .prf}
+>
+> The products of pairs of terms form a doubly infinite array
+>
+> $$
+  \begin{vmatrix}
+  u_0 v_0 & u_0 v_1 & u_0 v_2 & \cdots \\
+  u_1 v_0 & u_1 v_1 & u_1 v_2 & \cdots \\
+  u_2 v_0 & u_2 v_1 & u_2 v_2 & \cdots \\
+  \cdots & \cdots & \cdots & \cdots
+  \end{vmatrix}
+  $$
+>
+> The sum of all these terms can be arranged in infinitely many ways, but whatever the arrangement, it doesn't exceed
+>
+> $$
+  \left( \sum_0^\infty |u_n| \right)\left( \sum_0^\infty |v_n| \right)
+  $$
+>
+> so the series consisting of their products converges absolutely. Thus the sum is the same for whatever order of the terms.
+> One particular order, namely, summation by squares, gives an evident sum that all terms with suffices not exceeding $n$ is
+>
+> $$
+  (u_0 + u_1 + \cdots + u_n)(v_0 + v_1 + \cdots + v_n)
+  $$
+>
+> and hence the limit of the sum is $st$.
+
+> *Corollary.*{: .cor}
+> If $\sum a_n z^n$ and $\sum b_n z^n$ have radii of convergence $R$ and $S$, then their product is
+>
+> $$
+  \sum_{n=0} (a_n b_0 + a_{n-1} b_1 + \cdots + a_0b_n) z^n
+  $$
+>
+> for $\vert z \vert < \min(R, S)$.
+
+## Taylor's Series
+
+In the discussion of [Taylor's Theorem](differential-calculus.md#taylor-theorem), we have shown the way to approximate a function by polynomials, which is indeed a power series.
+
+> *Theorem.*{: .thm}
+> **[Taylor's Series]**
+> Suppose $f$ has derivatives of every order for neighbourhood $(a - k, a + k)$.
+> For $\vert h \vert < k$, if the remainder $r_n$ (the term in $h^n$) tends to $0$ as $n$ tends to $\infty$, then
+>
+> $$
+  f(a + h) = f(a) + hf'(a) + \cdots + {h^n \over n!}f^{(n)}(a) + \cdots
+  $$
+>
+> For the case of $a = 0$, the expansion cound be called **Maclaurin's series**.
+
+We can use this to determine the radius of convergence of the Taylor's series of $f(x)$, by checking in what values $r_n \to 0$ as $n \to \infty$.
+We have proved the [binomial series](../differential-equations/power-series.md#binomial-series) before but this time we focus on the remainder term.
+
+> *Lemma.*{: .lem}
+> If $-1 < x < 1$,
+>
+> $$
+  {m \choose n} x^n = {m(m-1)...(m-n+1) \over n!} x^n
+  $$
+>
+> tends to $0$ as $n \to \infty$.
+
+> *Proposition.*{: .prop}
+> **[Binomial Theorem]**
+> Given $m \in \mathbb{Q}$. For $-1 < x < 1$,
+>
+> $$
+  (1 + x)^m = 1 + {m \choose 1} x + \cdots + {m \choose n} x^n + \cdots
+  $$
+>
+> *Proof.*{: .prf}
+>
+> If $m$ is positive integer, $f^{(m+1)}(x) \equiv 0$ and we have a polynomial of degree $m$.
+>
+> In the general case, we have
+>
+> $$
+  r_n = {x^n \over n!} f^{(n)}(\theta x) = {m \choose n} { x^n \over (1 + \theta x)^{n-m} }
+  $$
+>
+> where $\theta$ depends on $n$.
+>
+> For $0 \le x < 1$, $(1 + \theta x)^{n - m} \ge 1$ for $n > m$ and ${m \choose n} x^n \to 0$ as $n \to \infty$ so $r_n \to 0$.
+>
+> For $-1 < x < 0$, the above argument doesn't work as $(1 + \theta x) < 1$.
+> Instead, consider the Cauchy's remainder with $k = 1$ (which actually applies for the full range $-1 < x < 1$), we have
+>
+> $$
+  r_n = { m(m-1)...(m-n+1) \over (n - 1)! } {(1 - \theta)^{n-1} x^n \over (1 + \theta x)^{n-m} }
+  $$
+>
+> We have $(1 - \theta)/(1 + \theta x) < 1$ and so
+>
+> $$
+  |r_n| < K_m \left| {m-1 \choose n-1} \right| |x|^n
+  $$
+>
+> which tends to $0$ as $n \to \infty$.
 
 ## References
 

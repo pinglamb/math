@@ -384,6 +384,7 @@ $$
   $$
 
 ## Taylor's Theorem
+{: #taylor-theorem}
 
 If $f$ is differentiable at $a$, then $f_a(x) = f(a) + (x - a)f'(a)$ is a good linear approximation to $f$.
 We can generalize it to see if the function that has higher derivatives can be better approximated by means of a polynomial.
