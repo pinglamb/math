@@ -152,6 +152,42 @@ This allows us to define the inverse of exponential function.
 > *Definition.*{: .def}
 > If $x > 0$, write $y = \log x$ if $x = \exp y$.
 
+> *Proposition.*{: .prop}
+> Base on the properties of inverse function, the following results are immediate.
+>
+> + The derivative of $\log x$ is
+>
+>   $$
+    { \mathrm{d} \over \mathrm{d}x } \log x = {1 \over x}
+    $$
+>
+> + $\log ab = \log a + \log b$;
+>
+> + $\log x \to \infty$ as $x \to \infty$;
+>
+> + $\log x \to -\infty$ as $x \to 0^+$.
+
+$\log x$ grows more slowly than $x$ raised to any positive power.
+
+> *Proposition.*{: .prop}
+> If $k > 0$ (however small),
+>
+> $$
+  {\log x \over x^k} \to 0 \quad \text{as} \quad x \to \infty
+  $$
+
+There is a simple representation of $\log(1+x)$ as a power series.
+
+> *Proposition.*{: .prop}
+> If $-1 < x < 1$,
+>
+> $$
+  \log(1 + x) = x - {x^2 \over 2} + {x^3 \over 3} + \cdots + (-1)^{n-1} {x^n \over n} + \cdots
+  $$
+
+> *Definition.*{: .def}
+> If $a > 0$ and $x$ is irrational, $a^x = e^{x \log a}$.
+
 ## Trigonometric Functions
 
 ## Hyperbolic Functions
