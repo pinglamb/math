@@ -151,6 +151,20 @@ We have proved the [binomial series](../differential-equations/power-series.md#b
   $$
 >
 > tends to $0$ as $n \to \infty$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \lim_{n \to \infty} \left| {a_{n+1} \over a_n} \right|
+  &= \lim_{n \to \infty} \left| {m-n \over n+1} \right| |x| \\
+  &= \lim_{n \to \infty} \left| {1 - m/n \over 1 + 1/n} \right| |x| \\
+  &= |x|
+  \end{align*}
+  $$
+>
+> As $\vert x \vert < 1$, the series $\sum a_n$ converges by d'Alembert's ratio test.
+> Hence, the underlying sequence is a null sequence.
 
 > *Proposition.*{: .prop}
 > **[Binomial Theorem]**
