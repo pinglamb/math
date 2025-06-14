@@ -81,6 +81,19 @@ We can then extend our definition for irrational powers.
 > *Definition.*{: .def}
 > If $x$ is irrational, $e^x$ is defined to mean $\exp x$.
 
+$\exp x$ is of its own order of magnitude.
+
+> *Proposition.*{: .prop}
+> For any fixed $k$ (however large)
+>
+> $$
+  {\exp x \over x^k} \to \infty \quad \text{as} \quad x \to \infty
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $x^k$ is just one term of the series defining $\exp x$.
+
 Next, we find the derivative of $\exp x$, but we cannot apply the sum rule as it works only for finite terms.
 For series, we may need to give different arguments in each particular case.
 
@@ -132,7 +145,12 @@ For series, we may need to give different arguments in each particular case.
 >
 > As $x \to \infty$, $\exp x \to \infty$. As $x \to -\infty$, $\exp x \to 0^+$.
 
+This allows us to define the inverse of exponential function.
+
 ## Logarithmic Function
+
+> *Definition.*{: .def}
+> If $x > 0$, write $y = \log x$ if $x = \exp y$.
 
 ## Trigonometric Functions
 
