@@ -13,6 +13,125 @@ we shall define them as the sums of infinite series and prove their well known p
 
 ## Exponential Function
 
+> *Definition.*{: .def}
+> The exponential function is defined by the series
+>
+> $$
+  \exp x = 1 + x + {x^2 \over 2!} + \cdots + {x^n \over n!} + \cdots
+  $$
+
+> *Proposition.*{: .prop}
+> $\exp x$ converges absolutely for all values of $x$, real or complex.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \lim_{n \to \infty} \left| {x^{n+1} \over (n+1)!} \cdot {n! \over x^n} \right| = \lim_{n \to \infty} {|x| \over n+1} = 0
+  $$
+>
+> By d'Alembert's ratio test, the series converges absolutely for all values of $x$.
+
+We then have the following defining property about "powers".
+
+> *Proposition.*{: .prop}
+> $\exp x \times \exp y = \exp(x + y)$.
+>
+> *Proof.*{: .prf}
+>
+> As $\exp$ converges absolutely, the product of two series also converges absolutely.
+>
+> The terms of degree $n$ in $x$ and $y$ are
+>
+> $$
+  {x^n \over n!} + \cdots + {x^r \over r!}{y^{n-r} \over (n-r)!} + \cdots + {y^n \over n!} = {(x + y)^n \over n!}
+  $$
+
+> *Proposition.*{: .prop}
+> The following facts are immediate.
+>
+> + $\exp 0 = 1$;
+>
+> + $\exp(-x) = 1/\exp(x)$;
+>
+> + $\exp x$ never vanishes.
+
+> *Definition.*{: .def}
+> The **Euler's number**, denoted as $e$, is defined by $e = \exp 1$, i.e.
+>
+> $$
+  e = 1 + {1 \over 1!} + {1 \over 2!} + \cdots + {1 \over n!} + \cdots
+  $$
+
+> *Proposition.*{: .prop}
+> $e$ is irrational.
+
+> *Proposition.*{: .prop}
+> Suppose $r \in \mathbb{Q}$. Then $\exp r = e^r$.
+>
+> *Proof.*{: .prf}
+>
+> For positive integer $r = n$, $\exp n = (\exp 1)^n = e^n$.
+>
+> For negative integer $r = -n$, $\exp(-n) = {1 \over (\exp 1)^n} = e^{-n}$.
+>
+> For $r = p/q$, $(\exp(p/q))^q = \exp p = e^p$ therefore $\exp(p/q) = e^{p/q}$.
+
+We can then extend our definition for irrational powers.
+
+> *Definition.*{: .def}
+> If $x$ is irrational, $e^x$ is defined to mean $\exp x$.
+
+Next, we find the derivative of $\exp x$, but we cannot apply the sum rule as it works only for finite terms.
+For series, we may need to give different arguments in each particular case.
+
+> *Proposition.*{: .prop}
+> The derivative of $\exp x$ is $\exp x$, i.e.
+>
+> $$
+  {\mathrm{d} \over \mathrm{d}x} \exp x = \exp x
+  $$
+>
+> *Proof.*{: .prf}
+>
+> We have
+>
+> $$
+  {\exp(x + h) - \exp x \over h} = \exp x {\exp h - 1 \over h}
+  $$
+>
+> and
+>
+> $$
+  {\exp h - 1 \over h} = 1 + {h \over 2!} + {h^2 \over 3!} + \cdots
+  $$
+>
+> Let $\phi(h) = h/2! + h^2/3! + \cdots$. Since $n! > 2^n$, we have
+>
+> $$
+  \begin{align*}
+  |\phi(h)| &\le {|h| \over 2} + {|h|^2 \over 2^2} + \cdots + {|h|^n \over 2^n} + \cdots \\
+  &= {|h/2| \over 1 - |h/2|} \to 0 \quad \text{as} \quad h \to 0
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> $\exp x$ is a continuous function.
+>
+> *Proof.*{: .prf}
+>
+> Since $\exp x$ is differentiable by all $x$, $\exp x$ is continuous.
+
+> *Proposition.*{: .prop}
+> $\exp x$ is strictly increasing function and takes every value greater than $0$ for one value of $x$.
+>
+> *Proof.*{: .prf}
+>
+> If $x \ge 0$, from the series, $\exp x \ge 1$.
+> If $x < 0$, $\exp x = 1 / \exp(-x) > 0$.
+> $\exp x$ has a derivative which is positive for all $x$ and therefore $\exp x$ is strictly increasing.
+>
+> As $x \to \infty$, $\exp x \to \infty$. As $x \to -\infty$, $\exp x \to 0^+$.
+
 ## Logarithmic Function
 
 ## Trigonometric Functions
