@@ -331,6 +331,36 @@ We don't know the exact value of $\pi$ though from the above derivation, but we 
 > *Proposition.*{: .prop}
 > $\exp z$ has a period of $2\pi i$.
 
+## Inverse Trigonometric Functions
+
+> *Proposition.*{: .prop}
+> The equation $x = \sin y$ defines an inverse function
+>
+> $$
+  y = \arcsin x
+  $$
+>
+> such that $y$ increases from $-\pi/2$ to $\pi/2$ as $x$ increases from $-1$ to $1$.
+>
+> Also,
+>
+> $$
+  {\mathrm{d} \over \mathrm{d}x } \arcsin x = {1 \over \sqrt{1 - x^2}}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Since $\mathrm{d}x/\mathrm{d}y = \cos y > 0$ for $-\pi/2 < y < \pi/2$.
+> $\sin y$ is strictly increasing from $-1$ to $1$, therefore the inverse exists.
+>
+> Also,
+>
+> $$
+  {\mathrm{d}y \over \mathrm{d}x} = {1 \over \mathrm{d}x/\mathrm{d}y} = {1 \over \cos y} = {1 \over \sqrt{1 - x^2}}
+  $$
+>
+> since $\cos y$ is positive in that range.
+
 ## Hyperbolic Functions
 
 ## References
