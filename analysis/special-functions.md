@@ -326,10 +326,10 @@ The result is not obvious from the series, but we can still prove them analytica
 >
 > + $\sin(x + 2\pi) = \sin x$, $\cos(x + 2\pi) = \cos x$.
 
-We don't know the exact value of $\pi$ though from the above derivation, but we can also conclude:
-
 > *Proposition.*{: .prop}
 > $\exp z$ has a period of $2\pi i$.
+
+The series don't provide a practical way of obtaining accurate approximations to $\pi$.
 
 ## Inverse Trigonometric Functions
 
