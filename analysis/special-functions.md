@@ -190,6 +190,99 @@ There is a simple representation of $\log(1+x)$ as a power series.
 
 ## Trigonometric Functions
 
+Here we develop the results of analytical trigonometry by relating them with the exponential function.
+
+> *Definition.*{: .def}
+> The functions $\cos$ and $\sin$ are defined by the following power series
+>
+> $$
+  \begin{align*}
+  \cos x &= 1 - {x^2 \over 2!} + {x^4 \over 4!} - \cdots + (-1)^{n} {x^{2n} \over (2n)!} + \cdots \\
+  \sin x &= x - {x^3 \over 3!} + {x^5 \over 5!} - \cdots + (-1)^{n} {x^{2n+1} \over (2n+1)!} + \cdots
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> Base on the power series definition, we have
+>
+> $$
+  \begin{align*}
+  \cos z &= {\exp(iz) + \exp(-iz) \over 2} \\
+  \sin z &= {\exp(iz) - \exp(-iz) \over 2i}
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> Since exponential function converges absolutely, both of the series converge absolutely.
+
+> *Proposition.*{: .prop}
+> The following facts are immediate.
+>
+> + $\cos(-z) = \cos(z)$;
+>
+> + $\sin(-z) = -\sin(z)$;
+>
+> + $\cos 0 = 1$;
+>
+> + $\sin 0 = 0$.
+
+> *Proposition.*{: .prop}
+> The following results can be derived from the above relation.
+>
+> + $\sin(x + y) = \sin x \cos y + \cos x \sin y$;
+>
+> + $\cos(x + y) = \cos x \cos y - \sin x \sin y$;
+>
+> + $\sin^2 z + \cos^2 z = 1$.
+>
+> *Proof.*{: .prf}
+>
+> For example,
+>
+> $$
+  \begin{align*}
+  \sin(x + y) &= {1 \over 2i} (\exp(i(x+y)) - \exp(-i(x+y))) \\
+  &= {1 \over 2i} (\exp(ix)\exp(iy) - \exp(-ix)\exp(-iy)) \\
+  &= {\exp(ix) - \exp(-ix) \over 2i}{\exp(iy) + \exp(-iy) \over 2} + {\exp(ix) + \exp(-ix) \over 2}{\exp(iy) - \exp(-iy) \over 2i} \\
+  &= \sin x \cos y + \cos x \sin y
+  \end{align*}
+  $$
+>
+> Also,
+>
+> $$
+  \sin^2 z + \cos^2 z = { \exp(2iz) - 2 + \exp(-2iz) \over -4} + { \exp(2iz) + 2 + \exp(-2iz) \over 4} = 1
+  $$
+
+> *Proposition.*{: .prop}
+> For $x \in \mathbb{R}$,
+>
+> $$
+  -1 \le \cos x \le 1 \quad \text{and} \quad -1 \le \sin x \le 1
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Since $\sin^2 x + \cos^2 x = 1$.
+
+> *Proposition.*{: .prop}
+> The derivatives of $\sin z$ and $\cos z$ are
+>
+> $$
+  {\mathrm{d} \over \mathrm{d} z} \sin z = \cos z \quad \text{and} \quad {\mathrm{d} \over \mathrm{d} x} \cos z = -\sin z
+  $$
+>
+> *Proof.*{: .prf}
+>
+> We can prove it using similar argument as that of $\exp x$. Alternatively, we use complex differentiation,
+>
+> $$
+  \begin{align*}
+  {\mathrm{d} \over \mathrm{d} z} \sin z &= {i\exp(iz) + i\exp(-iz) \over 2i} = \cos z \\
+  {\mathrm{d} \over \mathrm{d} z} \cos z &= {i\exp(iz) - i\exp(-iz) \over 2} = -\sin z
+  \end{align*}
+  $$
+
 ## Hyperbolic Functions
 
 ## References
