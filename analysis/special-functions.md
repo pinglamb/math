@@ -363,6 +363,44 @@ We don't know the exact value of $\pi$ though from the above derivation, but we 
 
 ## Hyperbolic Functions
 
+> *Definition.*{: .def}
+> The hyperbolic cosine and sine are defined by
+>
+> $$
+  \begin{align*}
+  \cosh z &= 1 + {z^2 \over 2!} + {z^4 \over 4!} + \cdots + {z^{2n} \over (2n)!} + \cdots \\
+  \sinh z &= z + {z^3 \over 3!} + {z^5 \over 5!} + \cdots + {z^{2n+1} \over (2n+1)!} + \cdots
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> Base on the power series definition, we have
+>
+> $$
+  \begin{align*}
+  \cosh z &= {\exp z + \exp(-z) \over 2} \\
+  \sinh z &= {\exp z - \exp(-z) \over 2} \\
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> $\cosh z = \cos iz$ and $i\sinh z = \sin iz$.
+
+> *Proposition.*{: .prop}
+> Hyperbolic functions share some similar properties to circular functions.
+>
+> + Derivatives:
+>
+>   $$
+    {\mathrm{d} \over \mathrm{d} z} \cosh z  = \sinh z \quad \text{and} \quad {\mathrm{d} \over \mathrm{d}z} \sinh z = \cosh z
+    $$
+>
+> + $\cosh^2 z - \sinh^2 z = 1$;
+>
+> + $\cosh 2z = \cosh^2 z + \sinh^2 z$;
+>
+> + $\sinh 2z = 2\sinh z \cosh z$.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 6
