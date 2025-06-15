@@ -283,6 +283,54 @@ Here we develop the results of analytical trigonometry by relating them with the
   \end{align*}
   $$
 
+It is well-known that the two functions have period of $2\pi$.
+The result is not obvious from the series, but we can still prove them analytically.
+
+> *Proposition.*{: .prop}
+> There is a smallest positive constant $\pi/2$, where $\sqrt{2} < \pi/2 < \sqrt{3}$, such that $\cos(\pi/2) = 0$.
+>
+> *Proof.*{: .prf}
+>
+> For $0 < x < 2$,
+>
+> $$
+  \sin x = \left( x - {x^3 \over 3!} \right) + \left( {x^5 \over 5!} - {x^7 \over 7!} \right) + \cdots > 0
+  $$
+>
+> Therefore, $\cos x$ is a decreasing function for $0 < x < 2$.
+>
+> Since
+>
+> $$
+  \begin{align*}
+  \cos \sqrt{2} &= \left( 1 - {\sqrt{2}^2 \over 2!} \right) + \left( {\sqrt{2}^4 \over 4!} - {\sqrt{2}^6 \over 6!} \right) + \cdots > 0 \\
+  \cos \sqrt{3} &= \left( 1 - {\sqrt{3}^2 \over 2!} + {\sqrt{3}^4 \over 4!} \right) - \left( {\sqrt{3}^6 \over 6!} - {\sqrt{3}^8 \over 8!} \right) + \cdots < 0
+  \end{align*}
+  $$
+>
+> by intermediate value theorem, there exists a value $\sqrt{2} < \pi/2 < \sqrt{3}$ such that $\cos(\pi/2) = 0$.
+
+> *Proposition.*{: .prop}
+> $\sin(\pi/2) = 1$.
+>
+> *Proof.*{: .prf}
+>
+> $\sin^2(\pi/2) + \cos^2(\pi/2) = 1$ and $\sin(\pi/2)$ is positive.
+
+> *Proposition.*{: .prop}
+> By the addition formulae,
+>
+> + $\sin(x + \pi/2) = \cos x$, $\cos(x + \pi/2) = -\sin x$;
+>
+> + $\sin(x + \pi) = -\sin x$, $\cos(x + \pi) = -\cos x$;
+>
+> + $\sin(x + 2\pi) = \sin x$, $\cos(x + 2\pi) = \cos x$.
+
+We don't know the exact value of $\pi$ though from the above derivation, but we can also conclude:
+
+> *Proposition.*{: .prop}
+> $\exp z$ has a period of $2\pi i$.
+
 ## Hyperbolic Functions
 
 ## References
