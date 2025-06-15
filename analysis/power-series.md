@@ -203,6 +203,19 @@ We have proved the [binomial series](../differential-equations/power-series.md#b
 >
 > which tends to $0$ as $n \to \infty$.
 
+## Differentiation
+
+We wish to show that the derivative of $\sum a_n x^n$ is indeed $\sum n a_n x^{n-1}$ inside the circle of convergence.
+Practically, there can be more straightforward arguments to find the derivatives of certain power series.
+
+> *Proposition.*{: .prop}
+> Suppose $\sum a_n z^n$ has radius of convergence $R$.
+> Then $\sum n a_n z^{n-1}$ converges absolutely for $\vert z \vert < R$.
+
+> *Proposition.*{: .prop}
+> Suppose $f(z) = \sum a_n z^n$ has radius of convergence $R$.
+> Then $f$ is differential and has derivative $f'(z) = \sum n a_n z^{n-1}$.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 5.5, 5.6, 5.7, 5.8
