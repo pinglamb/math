@@ -371,16 +371,17 @@ $$
 > *Proof.*{: .prf}
 >
 > For any $\varepsilon > 0$, there exists $0 < \delta < b - a$ such that $\vert f'(x) / g'(x) - l \vert < \varepsilon$ for $a < x < a + \delta$.
-> Also, by Cauchy's M.V.T., there exists $c \in (a, x)$ such that
+>
+> For all $x$ with $a < x < a + \delta$, by Cauchy's M.V.T., there is always $c$ with $a < c < x$ such that
 >
 > $$
   {f(x) - f(a) \over g(x) - g(a)} = {f(x) \over g(x)} = {f'(c) \over g'(c)}
   $$
 >
-> Hence,
+> Hence, for all $\varepsilon > 0$, there exists $\delta$ such that for all $x$ with $a < c < x < a + \delta$,
 >
 > $$
-  \left| {f(x) \over g(x)} - l \right| = \left| {f'(x) \over g'(x)} - l \right| < \varepsilon
+  \left| {f(x) \over g(x)} - l \right| = \left| {f'(c) \over g'(c)} - l \right| < \varepsilon
   $$
 
 ## Taylor's Theorem
