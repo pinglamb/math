@@ -370,15 +370,15 @@ $$
 >
 > *Proof.*{: .prf}
 >
-> For any $\varepsilon > 0$, there exists $0 < \delta < b - a$ such that $\vert f'(x) / g'(x) - l \vert < \varepsilon$ for $a < x < a + \delta$.
->
-> For all $x$ with $a < x < a + \delta$, by Cauchy's M.V.T., there is always $c$ with $a < c < x$ such that
+> Suppose $\varepsilon > 0$.
+> Since $f'(x)/g'(x) \to l$, there exists $\delta$ such that $\vert f'(x) / g'(x) - l \vert < \varepsilon$ for all $x$ with $a < x < a + \delta$.
+> For each $x$, by Cauchy's M.V.T., there exists $c$ with $a < c < x$ such that
 >
 > $$
-  {f(x) - f(a) \over g(x) - g(a)} = {f(x) \over g(x)} = {f'(c) \over g'(c)}
+  {f(x) - f(a) \over g(x) - g(a)} = {f(x) - 0 \over g(x) - 0} = {f(x) \over g(x)} = {f'(c) \over g'(c)}
   $$
 >
-> Hence, for all $\varepsilon > 0$, there exists $\delta$ such that for all $x$ with $a < c < x < a + \delta$,
+> Hence, for all $x$ with $a < x < a + \delta$,
 >
 > $$
   \left| {f(x) \over g(x)} - l \right| = \left| {f'(c) \over g'(c)} - l \right| < \varepsilon
