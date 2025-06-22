@@ -384,6 +384,23 @@ $$
   \left| {f(x) \over g(x)} - l \right| = \left| {f'(c) \over g'(c)} - l \right| < \varepsilon
   $$
 
+> *Theorem.*{: .thm}
+> **[Theorem of Darboux]**
+> Suppose that $f$ is differentiable in $I$.
+> If $[a, b] \subseteq I$, then for every $y$ between $f'(a)$ and $f'(b)$, there exists an $x$ in $[a, b]$ such that $f'(x) = y$.
+>
+> *Proof.*{: .prf}
+>
+> If $y$ equals $f'(a)$ or $f'(b)$, then $x$ equals $a$ or $b$.
+>
+> If not, suppose $f'(a) > y > f'(b)$. Consider the function $g(t) = f(t) - yt$, $g'(t) = f'(t) - y$.
+> Since $g$ is continuous in $[a, b]$, by Extreme Value Theorem, $g$ attains its maximum somewhere in the interval.
+> Since $g'(a) = f'(a) - y > 0$, $g$ is increasing at $a$ so $g(a)$ can't be maximum.
+> Since $g'(b) = f'(b) - y < 0$, $g$ is decreasing at $b$ so $g(b)$ can't be maximum as well.
+> Therefore, there exists $x \in (a, b)$ such that $g(x)$ is maximum, which implies $g'(x) = f'(x) - y = 0$ and $f'(x) = y$.
+>
+> Similar arguments can be used for the case $f'(a) < y < f'(b)$.
+
 ## Taylor's Theorem
 {: #taylor-theorem}
 
