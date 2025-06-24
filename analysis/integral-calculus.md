@@ -139,20 +139,26 @@ Due to the complexity, we will consider a simpler approach by considering the up
 > However, $J$ and $j$ doesn't depend on $\varepsilon$, and therefore $J - j = 0$.
 > Hence, both $U_D$ and $L_D$ tends to the same limit $J$ as $\delta^\ast \to 0$, so as $\sigma_D$.
 >
-> ($\Rightarrow$) Let $I$ be the value of the integral. Given $\varepsilon > 0$a, there is $\delta$ such that if $D$ is any dissection with $\delta^\ast < \delta$, then
+> ($\Rightarrow$) Let $I$ be the value of the integral. Given $\varepsilon > 0$, there is $\delta$ such that if $D$ is any dissection with $\delta^\ast < \delta$, then
 >
 > $$
   I - \varepsilon < \sum_{r=1}^n \delta_r f(\xi_r) < I + \varepsilon
   $$
 >
-> where $\xi_r$ can be any point in $I_r$. By choosing $\xi_r$ such that
+> for all $\xi_r \in I_r$. Consider the set of $\xi_r$'s with
 >
 > $$
-  \sup_{x \in I_r} f(x) - {\varepsilon \over n} < f(\xi_r) < \inf_{x \in I_r} f(x) + {\varepsilon \over n}
+  f(\xi_r) > \sup_{x \in I_r} f(x) - {\varepsilon \over n}
   $$
 >
-> Thus, we have $U_D < I + 2\varepsilon$ and similarily $L_D > I - 2\varepsilon$.
-> Hence, $U_D - L_D \to 0$ as $\delta^\ast \to 0$.
+> we have
+>
+> $$
+  U_D = \sum_{r=1}^n \delta_r \sup_{x \in I_r} f(x) < \sum_{i=1}^n \delta_r f(\xi_r) + \varepsilon < I + 2 \varepsilon
+  $$
+>
+> Similarily, we can have another set of $\xi_r$'s to have $L_D > I - 2\varepsilon$.
+> Hence, $U_D - L_D < 4 \varepsilon$ so $U_D - L_D \to 0$ as $\delta^\ast \to 0$.
 
 ## References
 
