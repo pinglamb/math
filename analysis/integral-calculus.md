@@ -76,3 +76,84 @@ The upper sum is the total area of the red rectangles and lower sum is that of b
 > $$
   U_{D_1} \ge U_{D_3} \ge L_{D_3} \ge L_{D_2}
   $$
+
+We can now define integral using the above machinary.
+
+> *Definition.*{: .def}
+> The **upper integral** is defined by
+>
+> $$
+  \overline{\int_a^b} f = \inf_{D} U_D(f)
+  $$
+>
+> The **lower integral** is defined by
+>
+> $$
+  \underline{\int_a^b} f = \sup_{D} L_D(f)
+  $$
+
+> *Proposition.*{: .prop}
+> The upper integral is greater than or equal to lower integral, i.e.
+>
+> $$
+  \overline{\int_a^b} f \ge \underline{\int_a^b} f
+  $$
+>
+> *Proof.*{: .prf}
+>
+> For any two dissections $D_1$ and $D_2$, $U_{D_1} \ge L_{D_2}$.
+> Hence,
+>
+> $$
+  \overline{\int_a^b} f = \inf_{D} U_D(f) \ge \sup_{D} L_D(f) = \underline{\int_a^b} f
+  $$
+
+> *Definition.*{: .def}
+> Let $\xi_r \in I_r$ and
+>
+> $$
+  \sigma = \sum_{r=1}^n \delta_r f(\xi_r)
+  $$
+>
+> If $\sigma$ tends to a limit as $\delta^\ast \to 0$, then $f$ is said to be **integrable** in $(a, b)$ and the limit is written as
+>
+> $$
+  \int_a^b f(x)\,dx
+  $$
+
+The limiting process is less trival for the above definition.
+We suppose as $\delta^\ast \to 0$, the permitted dissections are progressively restricted.
+We use $\sigma$ instead of $\sigma_D$ to mean that it is not a particular dissection that tends to a limit but all permitted dissections.
+Due to the complexity, we will consider a simpler approach by considering the upper and lower integrals.
+
+> *Proposition.*{: .prop}
+> $f$ is integrable in $(a, b)$ iff $U_D - L_D \to 0$ as $\delta^\ast \to 0$.
+>
+> *Proof.*{: .prf}
+>
+> From the above definitions, we have $U_D \ge \sigma \ge L_D$.
+> Also, let $J$ and $j$ be the upper and lower integrals respectively.
+>
+> ($\Leftarrow$) Given $\varepsilon > 0$, there is $\delta$ such that $U_D - L_D < \varepsilon$ for all dissection with $\delta^\ast < \delta$.
+> Since $J \le U_D$ and $j \ge L_D$, we have $J - j \le U_D - L_D < \varepsilon$.
+> However, $J$ and $j$ doesn't depend on $\varepsilon$, and therefore $J - j = 0$.
+> Hence, both $U_D$ and $L_D$ tends to the same limit $J$ as $\delta^\ast \to 0$, so as $\sigma_D$.
+>
+> ($\Rightarrow$) Let $I$ be the value of the integral. Given $\varepsilon > 0$a, there is $\delta$ such that if $D$ is any dissection with $\delta^\ast < \delta$, then
+>
+> $$
+  I - \varepsilon < \sum_{r=1}^n \delta_r f(\xi_r) < I + \varepsilon
+  $$
+>
+> where $\xi_r$ can be any point in $I_r$. By choosing $\xi_r$ such that
+>
+> $$
+  \sup_{x \in I_r} f(x) - {\varepsilon \over n} < f(\xi_r) < \inf_{x \in I_r} f(x) + {\varepsilon \over n}
+  $$
+>
+> Thus, we have $U_D < I + 2\varepsilon$ and similarily $L_D > I - 2\varepsilon$.
+> Hence, $U_D - L_D \to 0$ as $\delta^\ast \to 0$.
+
+## References
+
+* J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 7
