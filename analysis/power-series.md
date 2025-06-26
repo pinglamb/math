@@ -127,7 +127,7 @@ The following theorem works for any absolutely convergent series which need not 
 
 ## Taylor's Series
 
-In the discussion of [Taylor's Theorem](differential-calculus.md#taylor-theorem), we have shown the way to approximate a function by polynomials, which is indeed a power series.
+In the discussion of [Taylor's Theorem](differentiation-theorems.md#taylor-theorem), we have shown the way to approximate a function by polynomials, which is indeed a power series.
 
 > *Theorem.*{: .thm}
 > **[Taylor's Series]**

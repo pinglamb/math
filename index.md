@@ -14,6 +14,7 @@ title: Home
 * [Series](analysis/series.md)
 * [Continuous Functions](analysis/continuous-functions.md)
 * [Differential Calculus](analysis/differential-calculus.md)
+* [Differentiation Theorems](analysis/differentiation-theorems.md)
 * [Power Series](analysis/power-series.md)
 * [Special Functions of Analysis](analysis/special-functions.md)
 * [Integral Calculus](analysis/integral-calculus.md)
