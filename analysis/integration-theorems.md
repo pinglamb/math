@@ -6,6 +6,26 @@ title: Integration Theorems &#124; Analysis
 # Integration Theorems
 {: .page-title}
 
+> *Proposition.*{: .prop}
+> A continuous function $f$ on $[a, b]$ is Riemann integrable.
+>
+> *Proof.*{: .prf}
+>
+> Since $f$ is continuous, it is uniformly continuous.
+>
+> Suppose $\varepsilon > 0$. There exists $\delta$ such that if $\vert x_1 - x_2 \vert < \delta$, $\vert f(x_1) - f(x_2) \vert < \varepsilon / (b - a)$.
+> Thus, any dissection $D$ with subintervals $\Set{I_1, ..., I_k}$ and $\delta^\ast(D_n) < \delta$, for each subinterval $I_r$,
+>
+> $$
+  M_{I_r} - m_{I_r} < {\varepsilon \over b - a}
+  $$
+>
+> Hence,
+>
+> $$
+  S_D - s_D = \sum_{r = 1}^k (M_{I_r} - m_{I_r}) \delta_r < {\varepsilon \over b - a} \sum_{r=1}^k \delta_r = \varepsilon
+  $$
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 7
