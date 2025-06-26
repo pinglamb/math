@@ -172,58 +172,61 @@ In fact, we do not need to consider all the dissections to determine the upper a
 >
 > Let $D = D_1 \vee D_2$. Then $S_D - s_D \le S_{D_1} - s_{D_2} < J - j + \varepsilon = \varepsilon$.
 
-> *Definition.*{: .def}
-> Let $\xi_r \in I_r$ and
->
-> $$
-  \sigma = \sum_{r=1}^n \delta_r f(\xi_r)
-  $$
->
-> If $\sigma$ tends to a limit as $\delta^\ast \to 0$, then $f$ is said to be **Riemann integrable** in $(a, b)$ and the limit is written as
->
-> $$
-  \int_a^b f(x)\,dx
-  $$
-
-The limiting process is less trival for the above definition.
-We suppose as $\delta^\ast \to 0$, the permitted dissections are progressively restricted.
-We use $\sigma$ instead of $\sigma_D$ to mean that it is not a particular dissection that tends to a limit but all permitted dissections.
-Due to the complexity, we will consider a simpler approach by considering the upper and lower integrals.
+We can also characterize Riemann integrability in terms of a sequence of dissections.
 
 > *Proposition.*{: .prop}
-> $f$ is Riemann integrable in $(a, b)$ iff $U_D - L_D \to 0$ as $\delta^\ast \to 0$,
-> i.e. its upper and lower integrals are equal.
+> Suppose that $(D_n)$ is a sequence of dissections of $[a, b]$ and that $\delta^\ast(D_n) \to 0$ as $n \to \infty$.
+> A bounded function $f$ is Riemann integrable iff $S_{D_n} - s_{D_n} \to 0$ as $n \to \infty$.
+> If so,
+>
+> $$
+  \int_a^b f(x) \,dx = \lim_{n \to \infty} S_{D_n} = \lim_{n \to \infty} s_{D_n}
+  $$
 >
 > *Proof.*{: .prf}
 >
-> From the above definitions, we have $U_D \ge \sigma \ge L_D$.
-> Also, let $J$ and $j$ be the upper and lower integrals respectively.
->
-> ($\Leftarrow$) Given $\varepsilon > 0$, there is $\delta$ such that $U_D - L_D < \varepsilon$ for all dissection with $\delta^\ast < \delta$.
-> Since $J \le U_D$ and $j \ge L_D$, we have $J - j \le U_D - L_D < \varepsilon$.
-> However, $J$ and $j$ doesn't depend on $\varepsilon$, and therefore $J - j = 0$.
-> Hence, both $U_D$ and $L_D$ tends to the same limit $J$ as $\delta^\ast \to 0$, so as $\sigma_D$.
->
-> ($\Rightarrow$) Let $I$ be the value of the integral. Given $\varepsilon > 0$, there is $\delta$ such that if $D$ is any dissection with $\delta^\ast < \delta$, then
+> Base on the fact that $S_{D_n} \to J$ and $s_{D_n} \to j$ as $n \to \infty$ and $J = j$.
+
+> *Proposition.*{: .prop}
+> Suppose that $(D_n)$ is a sequence of dissections of $[a, b]$ and that $\delta^\ast(D_n) \to 0$ as $n \to \infty$.
+> A bounded function $f$ is Riemann integrable iff for any $\xi_r \in I_r$ of dissection $D_n$ with subintervals $\Set{I_1, ..., I_{k_n}}$,
 >
 > $$
-  I - \varepsilon < \sum_{r=1}^n \delta_r f(\xi_r) < I + \varepsilon
+  \sum_{r = 1}^{k_n} f(\xi_r) \delta_{I_r} \to l
   $$
 >
-> for all $\xi_r \in I_r$. Consider the set of $\xi_r$'s with
+> as $n \to \infty$. If so, $l = J$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Leftarrow$) If $f$ is Riemann integrable, then
 >
 > $$
-  f(\xi_r) > \sup_{x \in I_r} f(x) - {\varepsilon \over n}
+  s_{D_n} \le \sum_{r = 1}^{k_n} f(\xi_r) \delta_{I_r} \le S_{D_n}
   $$
 >
-> we have
+> Since both $S_{D_n} \to J$ and $s_{D_n} \to J$ as $n \to \infty$, by Squeeze theorem, the sum tends to the limit $J$.
+>
+> ($\Rightarrow$) Suppose that $\varepsilon > 0$. There exists $\delta$ such that for any dissection $D_n$ with $\delta^\ast(D_n) < \delta$,
 >
 > $$
-  U_D = \sum_{r=1}^n \delta_r \sup_{x \in I_r} f(x) < \sum_{i=1}^n \delta_r f(\xi_r) + \varepsilon < I + 2 \varepsilon
+  J - {\varepsilon \over 4} < \sum_{r = 1}^{k_n} f(\xi_r) \delta_{I_r} < J + {\varepsilon \over 4}
   $$
 >
-> Similarily, we can have another set of $\xi_r$'s to have $L_D > I - 2\varepsilon$.
-> Hence, $U_D - L_D < 4 \varepsilon$ so $U_D - L_D \to 0$ as $\delta^\ast \to 0$.
+> in which $\xi_r$ is arbitrary.
+> Choosing $\xi_r$ such that $f(\xi_r) > M_{I_r} - \varepsilon / 4k_n$ and therefore
+>
+> $$
+  S_{D_n} = \sum_{r=1}^{k_n} M_{I_r} \delta_{I_r} < \sum_{i=1}^{k_n} f(\xi_r) \delta_{I_r} + {\varepsilon \over 4} < J + {\varepsilon \over 2}
+  $$
+>
+> Similarily, choosing another $\xi_r$ such that $f(\xi_r) < m_{I_r} + \varepsilon / 4k_n$ and therefore
+>
+> $$
+  s_{D_n} = \sum_{r=1}^{k_n} m_{I_r} \delta_{I_r} > \sum_{i=1}^{k_n} f(\xi_r) \delta_{I_r} - {\varepsilon \over 4} > J - {\varepsilon \over 2}
+  $$
+>
+> Hence, $S_{D_n} - s_{D_n} < \varepsilon$ and $f$ is integrable.
 
 Note that a function has to be bounded in the interval so to be Riemann integrable, otherwise its upper/lower integrals can't be undefined.
 However, there are definitely unbounded functions that are integrable which leads to more sophisticated definiton such as _Lebesgue integral_.
