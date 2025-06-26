@@ -42,6 +42,24 @@ title: Integration Theorems &#124; Analysis
   S_D - s_D \le \sum_{r=1}^N \left( f(x_r) - f(x_{r-1}) \right) {(b - a) \over N} = {(f(b) - f(a))(b - a) \over N} < \varepsilon
   $$
 
+> *Proposition.*{: .prop}
+> A bounded function $f$ that is continuous on $(a, b)$ is Riemann integrable on $[a, b]$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $\varepsilon > 0$ and $\vert f(x) \vert \le C$ for every $x \in [a, b]$.
+> Choose $a'$ such that $a' - a < \varepsilon / 8C$ and $b'$ such that $b - b' < \varepsilon/8C$.
+> Since $f$ is continuous on $[a', b']$, it is integrable and
+> we can find a dissection $D'$ with points $x_1 = a' < ... < x_{n-1} = b'$ such that $S_{D'} - s_{D'} < \varepsilon/2$.
+>
+> Let $D$ be the dissection with points $a = x_0 < x_1 < ... < x_{n-1} < x_n = b$. Hence,
+>
+> $$
+  S_D - s_D \le (C - (-C)) {\varepsilon \over 8C} + (S_{D'} - s_{D'}) + (C - (-C)) {\varepsilon \over 8C} < \varepsilon
+  $$
+
+It means function needs not be continuous at the endpoint so to be integrable, an example will be $\int_0^1 \sin 1/x \,dx$.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 7
