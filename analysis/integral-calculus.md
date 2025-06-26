@@ -79,7 +79,7 @@ The upper sum is the total area of the red rectangles and lower sum is that of b
 
 We can now define integral using the above machinary.
 
-## Upper and Lower Riemann Integral
+## Upper and Lower Riemann Integrals
 
 > *Definition.*{: .def}
 > The **upper and lower Riemann integral** are defined by
@@ -122,7 +122,7 @@ In fact, we do not need to consider all the dissections to determine the upper a
   M \delta_{I_p} \ge M_{I_p}\delta_{I_p} \ge \sum_{r \in S_p} M_{K_r} \delta_{K_r} \ge m \sum_{r \in S_p} \delta_{K_r} = m \delta_{I_p}
   $$
 >
-> Let $P$ be the set of indices of the subintervals of the later case, we have $\vert P \vert \le k + 1$.
+> Let $P$ be the set of indices of the subintervals of the latter case, we have $\vert P \vert \le k + 1$.
 > Thus,
 >
 > $$
@@ -141,7 +141,7 @@ In fact, we do not need to consider all the dissections to determine the upper a
 >
 > and so $S_{D_n} \to J$ as $n \to \infty$.
 
-## Integrable Functions
+## Riemann Integrals
 
 > *Definition.*{: .def}
 > A bounded function $f$ on $[a, b]$ is **Riemann integrable** if its upper and lower integrals are equal, i.e. $J = j$.
@@ -234,3 +234,4 @@ However, there are definitely unbounded functions that are integrable which lead
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 7
+* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 8.2, 8.3

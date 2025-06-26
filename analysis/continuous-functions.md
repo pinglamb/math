@@ -204,7 +204,7 @@ The statement is only true when $g(y)$ is continuous or $f(x) \not l$ when $x$ i
 
 We can now give the conditions for the existence of inverse functions.
 
-> *Theorem.*{: .thm}
+> *Proposition.*{: .prop}
 > Let $f$ be _continuous_ and _strictly increasing_ for closed interval $[a, b]$ and $f(a) = c$ and $f(b) = d$.
 > Then there is a function $g$, continuous and strictly increasing for $[c, d]$, such that $f(g(x)) = x$.
 >
@@ -216,6 +216,49 @@ We can now give the conditions for the existence of inverse functions.
 > $g$ is strictly increasing since $f$ is strictly increasing.
 > Also, suppose $g(k) = h$. For any $\varepsilon > 0$, $h - \varepsilon < g(y) < h + \varepsilon$ for $f(h - \varepsilon) < y < f(h + \varepsilon)$ and $g$ is continuous.
 
+## Uniform Continuity
+
+> *Definition.*{: .def}
+> Suppose that $f$ is a bounded real-valued function on a non-empty set $S$.
+> The **leap/oscillation** of $f$ on $S$ is defined by
+>
+> $$
+  \Omega(f, S) = \sup \Set{|f(s) - f(t)| : s, t \in S} = \sup_{s \in S} f(s) - \inf_{s \in S} f(s)
+  $$
+
+> *Definition.*{: .def}
+> A function $f$ is **uniformly continuous** in an interval $I$ if
+>
+> $$
+  (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x_1, x_2 \in I : |x_1 - x_2| < \delta)\,|f(x_1) - f(x_2)| < \varepsilon
+  $$
+
+The difference to continuity is that instead of having a $\delta$ that works for a particular value of $x$, it works for every $x$ in the interval.
+
+> *Lemma.*{: .lem}
+> Suppose that $f$ is continuous in the closed interval $[a, b]$.
+> Then, given $\varepsilon$, the interval can be divided into a finite number of parts in each of which the leap of $f$ is less than $\varepsilon$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that the interval cannot be divided as described in the proposition.
+> Bisect the interval $[a, b]$ and choose the half for which it is false (choose the left if both false) and denote it as $[a_1, b_1]$.
+> Repeat this process and we have an increasing sequence $(a_n)$ and decreasing sequence $(b_n)$ with a common limit $\xi$.
+>
+> Since $f$ is continuous at $\xi$, there is an interval $(\xi - \delta, \xi + \delta)$ in which the leap is less than $\varepsilon$.
+> Eventually, for large enough $n$, the interval $(\xi - \delta, \xi + \delta)$ includes $[a_n, b_n]$, which is a contradiction that $[a_n, b_n]$ has leap greater than $\varepsilon$.
+
+> *Theorem.*{: .thm}
+> Let $f$ be continuous in the closed interval $[a, b]$, then $f$ is uniformly continuous.
+>
+> *Proof.*{: .prf}
+>
+> Suppose $\varepsilon > 0$.
+> Divide $[a, b]$ into a finite number of subintervals in each of which the leap of $f$ is less than $\varepsilon/2$.
+> Take $\delta$ be the length of the smallest subintervals.
+> For any $x_1$ and $x_2$ such that $\vert x_1 - x_2 \vert < \delta$, either they are in the same subinterval or in adjacent ones.
+> In former case, $\vert f(x_1) - f(x_2) \vert < \varepsilon/2$.
+> In the latter case, let $c$ be the common point and $\vert f(x_1) - f(x_2) \vert \le \vert f(x_1) - f(c) \vert + \vert f(c) - f(x_2) \vert < \varepsilon$.
 
 ## References
 

@@ -18,7 +18,7 @@ title: Home
 * [Power Series](analysis/power-series.md)
 * [Special Functions of Analysis](analysis/special-functions.md)
 * [Integral Calculus](analysis/integral-calculus.md)
-* [Fundamental Theorem of Calculus](analysis/fundamental-theorem-of-calculus.md)
+* [Integration Theorems](analysis/integration-theorems.md)
 
 ## Groups
 {: .left}
