@@ -1,13 +1,13 @@
 ---
 layout: base
-title: Integral Calculus &#124; Analysis
+title: Integrability &#124; Analysis
 ---
 
-# Integral Calculus
+# Integrability
 {: .page-title}
 
 The concept of a definite integral was developed to represent an area bounded by curved lines.
-This geometrical equivalence is helpful to visualize the meaning of the analytical expressions occura in the defintion and manipulation of integrals.
+This geometrical equivalence is helpful to visualize the meaning of the analytical expressions occur in the defintion and manipulation of integrals.
 
 > *Definition.*{: .def}
 > A **dissection** of an interval $[a, b]$ is a finite set of numbers $a, x_1, x_2, ..., x_{n-1}, b$ such that

@@ -1,12 +1,12 @@
 ---
 layout: base
-title: Differential Calculus &#124; Analysis
+title: Differentiability &#124; Analysis
 ---
 
-# Differential Calculus
+# Differentiability
 {: .page-title}
 
-There are some discussions already in [Differentiability](../differential-equations/differentiability.md) about the definitions of _derivatives_,
+There are some discussions already in [Differential Equations](../differential-equations/differentiability.md) about the definitions of _derivatives_,
 we will recapture some of the ideas here and prove some of the fundamental rules again.
 
 > *Definition.*{: .def}

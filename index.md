@@ -13,11 +13,11 @@ title: Home
 * [Complex Sequences](analysis/complex-sequences.md)
 * [Series](analysis/series.md)
 * [Continuous Functions](analysis/continuous-functions.md)
-* [Differential Calculus](analysis/differential-calculus.md)
+* [Differentiability](analysis/differentiability.md)
 * [Differentiation Theorems](analysis/differentiation-theorems.md)
 * [Power Series](analysis/power-series.md)
 * [Special Functions of Analysis](analysis/special-functions.md)
-* [Integral Calculus](analysis/integral-calculus.md)
+* [Integrability](analysis/integrability.md)
 * [Integration Theorems](analysis/integration-theorems.md)
 
 ## Groups
