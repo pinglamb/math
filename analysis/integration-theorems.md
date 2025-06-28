@@ -43,22 +43,23 @@ title: Integration Theorems &#124; Analysis
   $$
 
 > *Proposition.*{: .prop}
-> A bounded function $f$ that is continuous on $(a, b)$ is Riemann integrable on $[a, b]$.
+> A bounded function $f$ that is continuous except at finitely many points on $[a, b]$ is Riemann integrable.
 >
 > *Proof.*{: .prf}
 >
-> Suppose that $\varepsilon > 0$ and $\vert f(x) \vert \le C$ for every $x \in [a, b]$.
-> Choose $a'$ such that $a' - a < \varepsilon / 8C$ and $b'$ such that $b - b' < \varepsilon/8C$.
-> Since $f$ is continuous on $[a', b']$, it is integrable and
-> we can find a dissection $D'$ with points $x_1 = a' < ... < x_{n-1} = b'$ such that $S_{D'} - s_{D'} < \varepsilon/2$.
+> Assume $\vert f(x) \vert \le C$ for every $x \in [a, b]$ and $f$ is not continuous at points $\Set{c_1, c_2, ..., c_k}$.
 >
-> Let $D$ be the dissection with points $a = x_0 < x_1 < ... < x_{n-1} < x_n = b$. Hence,
+> Suppose that $\varepsilon > 0$.
+> Choose $\delta < \varepsilon / 8kC$, by subtracting the subintervals $(c_r - \delta, c_r + \delta)$ from $[a, b]$,
+> we have a finite disjoint union of closed intervals such that $f$ is continuous and therefore integrable.
+> Thus, we can find a dissection $D'$ of that union of intervals such that $S_{D'} - s_{D'} < \varepsilon/2$.
+> Hence, there exists a dissection $D$ of $[a, b]$ such that
 >
 > $$
-  S_D - s_D \le (C - (-C)) {\varepsilon \over 8C} + (S_{D'} - s_{D'}) + (C - (-C)) {\varepsilon \over 8C} < \varepsilon
+  S_D - s_D \le {2\varepsilon \over 8kC} (k) (C - (-C)) + (S_{D'} - s_{D'}) < {\varepsilon \over 2} + {\varepsilon \over 2} < \varepsilon
   $$
 
-It means function needs not be continuous at the endpoint so to be integrable, an example will be $\int_0^1 \sin 1/x \,dx$.
+For example, $f(x) = \sin(1/x)$ with $f(0) = 0$ is Riemann integrable on $[-1, 1]$ since $f(0)$ is the only point that $f$ is discontinuous.
 
 ## References
 
