@@ -61,6 +61,74 @@ title: Integration Theorems &#124; Analysis
 
 For example, $f(x) = \sin(1/x)$ with $f(0) = 0$ is Riemann integrable on $[-1, 1]$ since $f(0)$ is the only point that $f$ is discontinuous.
 
+## Algebraic Properties
+
+> *Definition.*{: .def}
+> Suppose that $f$ is integrable and if $a < b$,
+>
+> $$
+  \int_a^b f(x) \, dx = - \int_b^a f(x) \, dx
+  $$
+
+> *Proposition.*{: .prop}
+> If $a \le c < d \le b$ and $f$ is integrable in $[a, b]$, then $f$ is integrable in $[c, d]$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $\varepsilon > 0$.
+> There exists $\delta$ such that for all dissection on $[a, b]$ with $\delta^\ast(D) < \delta$, we have
+>
+> $$
+  S_D - s_D < \varepsilon
+  $$
+>
+> Consider a dissection $D'$ on $[c, d]$ with $\delta^\ast(D') < \delta$,
+> we can form a dissection $D$ on $[a, b]$ by adding subintervals with length less than $\delta$ on $[a, c]$ and $[d, b]$ to $D'$.
+> Since $D$ contains all the subintervals of $D'$, we have
+>
+> $$
+  S_{D'} - s_{D'} \le S_D - s_D < \varepsilon
+  $$
+
+> *Proposition.*{: .prop}
+> If $a < c < b$, and $f$ is integrable in $[a, b]$, then
+>
+> $$
+  \int_a^b f = \int_a^c f + \int_c^b f
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $\varepsilon > 0$.
+> Choose a dissection $D$ on $[a, b]$ such that $c$ is a point of division and therefore
+>
+> $$
+  S_D - s_D = \sum_{[a, b]} (M_r - m_r) \delta_r = \sum_{[a, c]} (M_r - m_r) \delta_r + \sum_{[c, b]} (M_r - m_r) \delta_r < \varepsilon
+  $$
+
+> *Proposition.*{: .prop}
+> If $k$ is a constant,
+>
+> $$
+  \int_a^b kf = k \int_a^b f
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $\varepsilon > 0$.
+> Choose a dissection $D$ on $[a, b]$ with $\delta^\ast(D) < \varepsilon/k$, then
+>
+> $$
+  S_D - s_D = \sum (kM_r - km_r) \delta_r = k \sum (M_r - m_r) \delta_r < k \left( { \varepsilon \over k} \right) = \varepsilon
+  $$
+
+> *Proposition.*{: .prop}
+> If $f$ and $g$ are integrable in $[a, b]$, so is their sum $h = f + g$ and
+>
+> $$
+  \int_a^b h = \int_a^b f + \int_a^b g
+  $$
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 7
