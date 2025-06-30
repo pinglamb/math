@@ -76,7 +76,7 @@ For example, $f(x) = \sin(1/x)$ with $f(0) = 0$ is Riemann integrable on $[-1, 1
 > *Proof.*{: .prf}
 >
 > Suppose that $\varepsilon > 0$.
-> There exists $\delta$ such that for all dissection on $[a, b]$ with $\delta^\ast(D) < \delta$, we have
+> There exists $\delta$ such that any dissection on $[a, b]$ with $\delta^\ast(D) < \delta$, we have
 >
 > $$
   S_D - s_D < \varepsilon
@@ -100,34 +100,76 @@ For example, $f(x) = \sin(1/x)$ with $f(0) = 0$ is Riemann integrable on $[-1, 1
 > *Proof.*{: .prf}
 >
 > Suppose that $\varepsilon > 0$.
-> Choose a dissection $D$ on $[a, b]$ such that $c$ is a point of division and therefore
+> Consider a dissection $D$ on $[a, b]$ with $\delta^\ast(D) < \delta$ and form another dissection $D'$ by adding $c$ as point of division to $D$.
+> Further, let $D_1$ and $D_2$ be the dissection on $[a, c]$ and $[c, b]$ base made of points of $D'$.
+> Since $D'$ refines $D$,
 >
 > $$
-  S_D - s_D = \sum_{[a, b]} (M_r - m_r) \delta_r = \sum_{[a, c]} (M_r - m_r) \delta_r + \sum_{[c, b]} (M_r - m_r) \delta_r < \varepsilon
+  S_{D'} - s_{D'} = (S_{D_1} - s_{D_1}) + (S_{D_2} - s_{D_2}) \le S_D - s_D < \varepsilon
+  $$
+>
+> Both $S_{D_1} - s_{D_1}$ and $S_{D_2} - s_{D_2}$ are non-negative, and hence
+>
+> $$
+  S_{D_1} - s_{D_1} < \varepsilon \quad \text{and} \quad S_{D_2} - s_{D_2} < \varepsilon
   $$
 
+Next, we want to prove that integration is linear, i.e.
+
+$$
+\int_a^b (\lambda f + \mu g) = \lambda \int_a^b f + \mu \int_a^b g
+$$
+
 > *Proposition.*{: .prop}
-> If $k$ is a constant,
+> Suppose that $\lambda \ge 0$ is a constant.
+> If $f$ is integrable, then $\lambda f$ is integrable and
 >
 > $$
-  \int_a^b kf = k \int_a^b f
+  \int_a^b \lambda f = \lambda \int_a^b f
   $$
 >
 > *Proof.*{: .prf}
 >
+> $$
+  \sup \lambda f = \lambda \sup f \quad \text{and} \quad \inf \lambda f = \lambda \inf f
+  $$
+>
 > Suppose that $\varepsilon > 0$.
-> Choose a dissection $D$ on $[a, b]$ with $\delta^\ast(D) < \varepsilon/k$, then
+> Consider a dissection $D$ on $[a, b]$ with $S_D(f) - s_D(f) < \varepsilon / \lambda$, then
 >
 > $$
-  S_D - s_D = \sum (kM_r - km_r) \delta_r = k \sum (M_r - m_r) \delta_r < k \left( { \varepsilon \over k} \right) = \varepsilon
+  S_D(\lambda f) - s_D(\lambda f) = \lambda (S_D(f) - s_D(f)) < \lambda \left( { \varepsilon \over \lambda} \right) = \varepsilon
   $$
 
 > *Proposition.*{: .prop}
-> If $f$ and $g$ are integrable in $[a, b]$, so is their sum $h = f + g$ and
+> If $f$ is integrable, then $-f$ is integrable and
 >
 > $$
-  \int_a^b h = \int_a^b f + \int_a^b g
+  \int_a^b -f = - \int_a^b f
   $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \sup -f = -\inf f \quad \text{and} \quad \inf -f = -\sup f
+  $$
+>
+> Suppose that $\varepsilon > 0$.
+> Consider a dissection $D$ on $[a, b]$ with $S_D - s_D < \varepsilon$, then
+>
+> $$
+  S_D(-f) - s_D(-f) = S_D(f) - s_D(f) < \varepsilon
+  $$
+
+> *Proposition.*{: .prop}
+> If $f$ and $g$ are integrable in $[a, b]$, then $f + g$ is integrable and
+>
+> $$
+  \int_a^b (f + g) = \int_a^b f + \int_a^b g
+  $$
+>
+> *Proof.*{: .prf}
+>
 
 ## References
 
