@@ -170,6 +170,17 @@ $$
 >
 > *Proof.*{: .prf}
 >
+> $$
+  \sup (f + g) \le \sup f + \sup g \quad \text{and} \quad \inf (f + g) \ge \inf f + \inf g
+  $$
+>
+> Then,
+>
+> $$
+  \underline{\int_a^b} (f + g) \ge \underline{\int_a^b} f + \underline{\int_a^b} g = \overline{\int_a^b} f + \overline{\int_a^b} g \ge \overline{\int_a^b} (f + g)
+  $$
+>
+> But $\overline{\int_a^b} (f + g) \ge \underline{\int_a^b} (f + g)$ so $\overline{\int_a^b} (f + g) = \underline{\int_a^b} (f + g)$.
 
 ## References
 
