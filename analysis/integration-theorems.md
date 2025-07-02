@@ -351,6 +351,30 @@ $$
 >
 > Since $g(a) = 0$, $g(a) - f(a) = 0 - f(a) = c$ and so $g(x) = f(x) - f(a)$.
 
+> *Theorem.*{: .prop}
+> Suppose that $f$ is differentiable on $[a, b]$ and $f'$ is integrable then
+>
+> $$
+  \int_a^x f'(t) \,dt = f(x) - f(a)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $D$ be a dissection $a = t_0 < t_1 < ... < t_n = x$. We have
+>
+> $$
+  f(x) - f(a) = \sum_{i=1}^n (f(t_i) - f(t_{i-1}))
+  $$
+>
+> By M.V.T., there exists $c_i \in (t_{i-1}, t_i]$ such that $f(t_i) - f(t_{i-1}) = f'(c_i)(t_i - t_{i-1})$.
+> Since $f'$ is integrable, by definition as $\delta^\ast(D) \to 0$,
+>
+> $$
+  f(x) - f(a) = \sum f'(c_i)(t_i - t_{i-1}) = \int_a^x f'(t) \,dt
+  $$
+
+This is a stronger result since it doesn't require the derivative to be continuous.
+
 > *Definition.*{: .def}
 > The **indefinite integral** of $f$, denoted by
 >
@@ -358,18 +382,9 @@ $$
   \int f(x) \,dx
   $$
 >
-> is a function having continuous derivative $f$ and deterministic up to an additive constant.
+> is a function with integrable derivative $f$ that is deterministic up to an additive constant.
 
 The existence of such function is established by F.C.T. and determined by the relationship $\int_a^x f'(t) \,dt = f(x) - f(a)$.
-
-> *Theorem.*{: .prop}
-> Suppose that $f$ is differentiable on $[a, b]$ and $f'$ is integrable then
->
-> $$
-  \int_a^x f'(t) \,dt = f(x) - f(a)
-  $$
-
-This is a stronger result since it doesn't require the derivative to be continuous.
 
 ## References
 
