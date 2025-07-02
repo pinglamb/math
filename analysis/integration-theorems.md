@@ -182,6 +182,43 @@ $$
 >
 > But $\overline{\int_a^b} (f + g) \ge \underline{\int_a^b} (f + g)$ so $\overline{\int_a^b} (f + g) = \underline{\int_a^b} (f + g)$.
 
+We would like to prove that the product of two integrable functions is again integrable.
+If we can prove that the square is integrable, then the result will follow since
+
+$$
+4fg = (f + g)^2 - (f - g)^2
+$$
+
+> *Proposition.*{: .prop}
+> If $f$ is integrable in $[a, b]$, then $f^2$ is integrable.
+>
+> *Proof.*{: .prf}
+>
+> Let $K = \sup \vert f \vert$ in $[a, b]$.
+>
+> Suppose that $\varepsilon > 0$.
+> There exists $\delta$ such that for any dissection $D$ with $\max \delta_r < \delta$,
+>
+> $$
+  S_D(f) - s_D(f) < {\varepsilon \over 2K}
+  $$
+>
+> Suppose that $f^2$ attains its supremum and infimum at $s_r$ and $t_r$ in interval $I_r$.
+> Since $f(s_r) \le M_r$ and $f(t_r) \ge m_r$ and $f(\xi_r) \le K$ for any $\xi_r$,
+>
+> $$
+  \vert f(s_r)^2 - f(t_r)^2 \vert = \vert f(s_r) + f(t_r) \vert \vert f(s_r) - f(t_r) \vert \le 2K(M_r - m_r)
+  $$
+>
+> Hence,
+>
+> $$
+  S_D(f^2) - s_D(f^2) \le 2K (s_D(f) - s_D(f)) < \varepsilon
+  $$
+
+> *Corollary.*{: .cor}
+> If $f$ and $g$ are integrable in $[a, b]$, then $fg$ is integrable.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 7
