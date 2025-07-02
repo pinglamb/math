@@ -231,6 +231,19 @@ We can also characterize Riemann integrability in terms of a sequence of dissect
 Note that a function has to be bounded in the interval so to be Riemann integrable, otherwise its upper/lower integrals can't be undefined.
 However, there are definitely unbounded functions that are integrable which leads to more sophisticated definiton such as _Lebesgue integral_.
 
+## Improper Integral
+
+> *Definition.*{: .def}
+> Suppose that we have a function $f$ such that, for every $\varepsilon > 0$,
+> $f$ is integrable on $[a + \varepsilon, b]$ and $\int_{a + \varepsilon}^b f(x) \,dx \to l$ as $\varepsilon \to 0$.
+> Then we define the **improper integral**
+>
+> $$
+  \int_a^b f(x) \,dx = \lim_{\varepsilon \to 0} \int_{a + \varepsilon}^b f(x) \,dx = l
+  $$
+>
+> We can do similarily for $[a, b - \varepsilon]$ or integral to infinity.
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 7
