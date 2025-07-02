@@ -243,17 +243,13 @@ Base on different conditions that are placed on $f$ and its derivatives, we can 
 > Then there exists $c \in (a, b)$ such that
 >
 > $$
-  \begin{align*}
-  f(b) &= p_{n-1}(b) + {(b - c)^{n-k}(b - a)^{k} \over k(n - 1)!} f^{(n)}(c)
-  \end{align*}
+  f(b) = p_{n-1}(b) + {(b - c)^{n-k}(b - a)^{k} \over k(n - 1)!} f^{(n)}(c)
   $$
 >
 > Let $c = (1 - \theta_n)a + \theta_n b$, it becomes
 >
 > $$
-  \begin{align*}
-  f(b) &= p_{n-1}(b) + {(1 - \theta_n)^{n-k}(b - a)^{n} \over k(n - 1)!} f^{(n)}(c)
-  \end{align*}
+  f(b) = p_{n-1}(b) + {(1 - \theta_n)^{n-k}(b - a)^{n} \over k(n - 1)!} f^{(n)}(c)
   $$
 >
 > *Proof.*{: .prf}
@@ -305,6 +301,35 @@ Base on different conditions that are placed on $f$ and its derivatives, we can 
 
 When $k = n$, we have Cauchy's remainder being the same as Lagrange's remainder.
 
+> *Theorem.*{: .thm}
+> **[Taylor's Theorem with Integral Remainder]**
+> Suppose $f$ is a continuous function on $[a, b]$ which is $n$-times differentiable on $[a, b)$.
+> If $f^{(n)}$ is continuous, then
+>
+> $$
+  f(b) = p_{n-1}(b) + {1 \over (n - 1)!} \int_a^b (b - t)^{n-1} f^{(n)}(t) \,dt
+  $$
+>
+> *Proof.*{: .prf}
+>
+> When $n = 0$, it is just the fundamental theorem of calculus,
+>
+> $$
+  f(b) = f(a) + \int_a^b f(t) \,dt
+  $$
+>
+> Assume it is true for $n = k$ and consider its remainder term,
+>
+> $$
+  \begin{align*}
+  {1 \over (n-1)!} \int_a^b (b - t)^{n-1} f^{(n)}(t) \,dt
+  &= {1 \over (n-1)!} \left( \left[ {-(b - t)^n \over n} f^{(n)}(t) \right]_a^b - \int_a^b {-(b - t)^n \over n} f^{(n+1)}(t) \,dt \right) \\
+  &= {(b - a)^n \over n!} f^{(n)}(a) + {1 \over n!} \int_a^b (b - t)^n f^{(n+1)}(t) \, dt
+  \end{align*}
+  $$
+>
+> By induction, it is true for all $n$.
+
 > *Definition.*{: .def}
 > Suppose that $f$ is infinitely differentiable and let $f(x) = p_n(x) + r_{n+1}(x)$.
 > If $r_n(x) \to 0$ as $n \to \infty$, we can write
@@ -350,4 +375,4 @@ Therefore, we have the following corresponding result.
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 4
-* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 7.6
+* D. J. H. Garling _A Course in Mathematical Analysis Vol.1_, 2013 - Chapter 7.6, 8.7
