@@ -407,10 +407,27 @@ The alternating series test can be extended to other tests, which also apply to 
 
 > *Proposition.*{: .prop}
 > **[Integral Test]**
-> Suppose $f$ is a continuous, positive, decreasing function on $[1, \infty)$ such that $f(n) = a_n$.
-> If $\int_{1}^{\infty} f(x) \mathrm{d}x$ is convergent/divergent, so as $\sum_{n=1}^{\infty} a_n$.
+> Suppose $f$ is a continuous and non-negative decreasing function on $[1, \infty)$ such that $f(n) = a_n$.
+> $\sum a_n$ converges iff $\int_{1}^{\infty} f < \infty$.
+>
+> *Proof.*{: .prf}
+>
+> Since $f$ is decreasing, we have
+>
+> $$
+  \int_n^{n+1} f \le f(n) \le \int_{n-1}^n f
+  $$
+>
+> and therefore
+>
+> $$
+  \int_1^{N+1} f \le \sum_{n=1}^N f(n) \le \int_{1}^N f + f(1)
+  $$
+>
+> If the integral exists, $\sum f(n)$ is increasing and bounded above so it converges.
+> If the integral is unbounded, $\sum f(n)$ is unbounded and does not converge.
 
-For example, consider the series
+To illustrate, consider the series
 
 $$
 \sum_{n=1}^{\infty} {1 \over n^2} = {1 \over 1^2} + {1 \over 2^2} + {1 \over 3^2} + ...
@@ -443,27 +460,6 @@ $$
 So, the series is divergent.
 
 ![Integral Test Above](../images/integral-test-below.png)
-
-We can also use the integral to estimate the sum.
-
-> *Proposition.*{: .prop}
-> Let $R_n$ be the remainder of the partial sum $s_n$, i.e.
->
-> $$
-  R_n = s - s_n = a_{n+1} + a_{n+2} + ...
-  $$
->
-> By forming rectangles with top above/below the curve, we have
->
-> $$
-  \int_{n+1}^{\infty} f(x) \mathrm{d}x \le R_n \le \int_{n}^{\infty} f(x) \mathrm{d}x
-  $$
->
-> By adding $s_n$ to the inequalities, the upper bound and lower bound for $s$ is given by
->
-> $$
-  s_n + \int_{n+1}^{\infty} f(x) \mathrm{d}x \le s \le s_n + \int_{n}^{\infty} f(x) \mathrm{d}x
-  $$
 
 ## Rearrangements
 
