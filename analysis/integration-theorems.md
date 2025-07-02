@@ -197,7 +197,7 @@ $$
 > Let $K = \sup \vert f \vert$ in $[a, b]$.
 >
 > Suppose that $\varepsilon > 0$.
-> There exists $\delta$ such that for any dissection $D$ with $\max \delta_r < \delta$,
+> There exists $\delta$ such that for any dissection $D$ with $\delta^\ast(D) < \delta$,
 >
 > $$
   S_D(f) - s_D(f) < {\varepsilon \over 2K}
@@ -218,6 +218,83 @@ $$
 
 > *Corollary.*{: .cor}
 > If $f$ and $g$ are integrable in $[a, b]$, then $fg$ is integrable.
+
+## Inequalities
+
+> *Proposition.*{: .prop}
+> If $f \le g$ for all $x \in [a, b]$, then
+>
+> $$
+  \int_a^b f \le \int_a^b g
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $\sup f \le \sup g$.
+
+> *Proposition.*{: .prop}
+> If $m \le f \le M$ for all $x \in [a, b]$, then
+>
+> $$
+  m(b - a) \le \int_a^b f \le M(b - a)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  m(b - a) = \int_a^b m \le \int_a^b f \le \int_a^b M = M(b - a)
+  $$
+
+> *Corollary.*{: .cor}
+> **[Mean Value Theorem]**
+> If $f$ is continuous, then there exists $c \in [a, b]$ such that
+>
+> $$
+  \int_a^b f = f(c)(b - a)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> It is obviously true when $a = b$ so assume $a \not= b$, then
+>
+> $$
+  m \le {1 \over b - a} \int_a^b f \le M
+  $$
+>
+> Hence, the result follows from intermediate value theorem.
+
+> *Proposition.*{: .prop}
+> If $f$ is integrable in $[a, b]$, then $\vert f \vert$ is integrable and
+>
+> $$
+  \left| \int_a^b f \right| \le \int_a^b |f|
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $\sup \vert f \vert - \inf \vert f \vert \le \sup f - \inf f$ and $-\vert f \vert \le f \le \vert f \vert$.
+
+> *Proposition.*{: .prop}
+> **[Schwarz's Inequality]**
+>
+> $$
+  \left( \int_a^b fg \right)^2 \le \left( \int_a^b f^2 \right) \left( \int_a^b g^2 \right)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Since
+>
+> $$
+  \int_a^b (f + \lambda g)^2 = \int_a^b f^2 + 2\lambda \int_a^b fg + \lambda^2 \int_a^b g^2 \ge 0
+  $$
+>
+> the quadratic equation in $\lambda$ has at most one root.
+> Hence, the determinant
+>
+> $$
+  \left( 2 \int_a^b fg \right)^2 - 4 \left( \int_a^b f^2 \right) \left( \int_a^b g^2 \right) \le 0
+  $$
 
 ## References
 
