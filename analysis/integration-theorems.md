@@ -296,6 +296,49 @@ $$
   \left( 2 \int_a^b fg \right)^2 - 4 \left( \int_a^b f^2 \right) \left( \int_a^b g^2 \right) \le 0
   $$
 
+## Fundamental Theorem of Calculus
+
+> *Theorem.*{: .prop}
+> **[Fundamental Theorem of Calculus]**
+> Suppose that $f$ is integrable on $[a, b]$. Set
+>
+> $$
+  F(x) = \int_a^x f(t) \,dt
+  $$
+>
+> for $a \le x \le b$. Then
+>
+> + $F$ is continuous.
+>
+> + If $f$ is continuous at $x$ then $F$ is differentiable at $x$, with $F'(x) = f(x)$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  F(x + h) - F(x) = \int_x^{x+h} f(t) \,dt \quad \text{and} \quad \left| \int_x^{x+h} f(t) \,dt \right| \le \int_x^{x+h} |f(t)| \,dt \le \max(|Mh|, |mh|)
+  $$
+>
+> Hence, $F(x + h) - F(x) \to 0$ as $h \to 0$ and $F$ is continuous.
+>
+> Suppose that $\varepsilon > 0$.
+> Since $f$ is continuous at $x$, there exists $\delta$ such that for $\vert t - x \vert < \delta$ implies $\vert f(t) - f(x) \vert < \varepsilon$.
+> If $\vert h \vert < \delta$, then
+>
+> $$
+  \begin{align*}
+  \left| {F(x + h) - F(x) \over h} - f(x) \right| &= \left| {1 \over h} \left( \int_x^{x+h} f(t) \,dt - hf(x) \right) \right| \\
+  &\le {1 \over |h|} \left| \int_x^{x+h} |f(t) - f(x)| \,dt \right| \\
+  &< { \varepsilon |h| \over |h| } = \varepsilon
+  \end{align*}
+  $$
+
+> *Corollary.*{: .cor}
+> Suppose that $f$ is differentiable and $f'$ is continuous on $[a, b]$. Then
+>
+> $$
+  \int_a^x f'(t) \,dt = f(x) - f(a)
+  $$
+
 ## References
 
 * J C Burkill _A First Cource in Mathematical Analysis_, 1978 - Chapter 7
