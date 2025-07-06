@@ -28,14 +28,14 @@ title: Countability &#124; Numbers and Sets
 
 An infinite set can be equinumerous with a proper subset of itself,
 e.g. $\mathbb{N} \sim 2\mathbb{N}$ with the bijection $f: \mathbb{N} \to 2\mathbb{N}$ given by $f(n) = 2n$.
-It is clearly impossible for finite sets so this property is propsed as the definition of infiniteness.
+It is clearly impossible for finite sets so this property is proposed as the definition of infiniteness.
 
 Obviously, a finite set can be counted, and we shall extend the notion of counting to infinite set as follows.
 
 > *Definition.*{: .def}
 > A set $A$ is **countable** if either it is finite or it is infinite and $\mathbb{N} \sim A$.
 
-This definition is cumbersome to apply will lead to two results yield more convenient criteria.
+This definition is cumbersome to apply. The following results will yield more convenient criteria.
 
 > *Definition.*{: .def}
 > For sets $A$ and $B$, $A$ is **dominated** by $B$ if there is an injection from $A$ to $B$, denoted by $A \preceq B$.
