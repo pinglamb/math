@@ -3,6 +3,11 @@ layout: base
 title: Home
 ---
 
+## Vector Calculus
+{: .left}
+
+* [Curves](vector-calculus/curves.md)
+
 ## Analysis
 {: .left}
 
