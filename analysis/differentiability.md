@@ -42,6 +42,7 @@ Alternatively, we can use the following characterization to avoid division in th
   $$
 >
 > for which $\varepsilon(h)/h \to 0$ as $h \to 0$.
+{: #differentiability-linear-approximation}
 
 We will use [small-o notation](../differential-equations/differentiability.md#little-o-notation) to represent function that satisfies $\varepsilon(h)/h \to 0$ as $h \to 0$, i.e.
 
