@@ -48,6 +48,109 @@ It is a generation of [differentiability of scalar function](../analysis/differe
   \end{align*}
   $$
 
+## Arc Length
+
+> *Definition.*{: .def}
+> The **arc length** is the distance between two points along a curve, which is a scalar quantity.
+
+> *Proposition.*{: .prop}
+> The arc length $s$ between $t_1$ to $t_2$ along a curve $\mathbf{x}(t)$ is given by
+>
+> $$
+  s = \int_{t_1}^{t_2} \sqrt{ {d\mathbf{x} \over dt} \cdot {d\mathbf{x} \over dt} } \,dt
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Consider an infinitesimal vector displacement
+>
+> $$
+  d\mathbf{x} = dx^i e_i
+  $$
+>
+> along the curve. The square of the infinitesimal distance moved is then given by
+>
+> $$
+  (ds)^2 = dx^idx^i = d\mathbf{x} \cdot d\mathbf{x}
+  $$
+>
+> and therefore
+>
+> $$
+  \left( ds \over dt \right)^2 = {d\mathbf{x} \over dt} \cdot {d\mathbf{x} \over dt}
+  $$
+>
+> Hence, the arc length between $a$ and $b$ is
+>
+> $$
+  s = \int_{t_1}^{t_2} \sqrt{ {d\mathbf{x} \over dt} \cdot {d\mathbf{x} \over dt} } \,dt
+  $$
+
+From the above, we can see that
+
+$$
+{ds \over dt} = \pm \left| {d\mathbf{x} \over dt} \right|
+$$
+
+The $\pm$ sign depends on which direction we chose as the "positive" direction of $s$ from a reference point.
+If $t$ traces the curve in the "positive" direction of $s$ then $ds/dt = \vert d\mathbf{x}/dt \vert$.
+
+> *Proposition.*{: .prop}
+> The arc length $s$ is independent of the choice of parameterisation.
+>
+> *Proof.*{: .prf}
+>
+> Let $\tau(t)$ be a different parameterisation with $d\tau/dt > 0$. By chain rule,
+>
+> $$
+  {d\mathbf{x} \over dt} = {d\mathbf{x} \over d\tau} {d\tau \over dt}
+  $$
+>
+> Hence,
+>
+> $$
+  s = \int_{t_1}^{t_2} \sqrt{ {d\mathbf{x} \over dt} \cdot {d\mathbf{x} \over dt} } \,dt
+  = \int_{t_1}^{t_2} \sqrt{ {d\mathbf{x} \over d\tau} \cdot {d\mathbf{x} \over d\tau} } { d\tau \over dt} \,dt
+  = \int_{\tau_1}^{\tau_2} \sqrt{ {d\mathbf{x} \over d\tau} \cdot {d\mathbf{x} \over d\tau} } \,d\tau
+  $$
+
+It means that arc length itself is a natural parameterisation of the curve.
+We can set a certain point on the curve as reference point, i.e. $s = 0$, choose the "positive" direction, and every point on the curve will be associated with a unique value of $s$.
+
+> *Proposition.*{: .prop}
+> A curve parameterised by its arc length always has unit tangent vector, i.e. $\vert d\mathbf{x}/ds \vert = 1$, and is denoted by $\mathbf{\hat{t}}$.
+>
+> *Proof.*{: .prf}
+>
+> Base on the fact that $(ds/dt)^2 = \dot{\mathbf{x}} \cdot \dot{\mathbf{x}}$ and chain rule.
+
+> *Definition.*{: .def}
+> The **curvature** $\kappa$ is the magnitude of the rate of change of $\mathbf{\hat{t}}$ with respect to $s$, i.e.
+>
+> $$
+  \kappa(s) = \left| {d\mathbf{\hat{t}} \over ds } \right| = \left| {d^2\mathbf{x} \over ds^2 } \right|
+  $$
+
+> *Definition.*{: .def}
+> The **principal normal** is the unit vector $\mathbf{\hat{n}}$ in the direction perpendicular to $\mathbf{\hat{t}}$.
+
+> *Proposition.*{: .prop}
+> For tangent vector $\mathbf{\hat{t}}$ with curvature $\kappa$ and principal normal $\mathbf{\hat{n}}$, we have
+>
+> $$
+  {d\mathbf{\hat{t}} \over ds} = \kappa \mathbf{\hat{n}}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Since $\mathbf{\hat{t}} \cdot \mathbf{\hat{t}} = \vert \mathbf{\hat{t}} \vert^2 = 1$ which is independent of $s$, we have
+>
+> $$
+  {d \over ds} (\mathbf{\hat{t}} \cdot \mathbf{\hat{t}}) = 2\mathbf{\hat{t}} \cdot {d\mathbf{\hat{t}} \over ds} = 0
+  $$
+>
+> Therefore, $d\mathbf{\hat{t}}/ds$ is perpendicular to $\mathbf{\hat{t}}$ and hence parallel to $\mathbf{\hat{n}}$ and $d\mathbf{\hat{t}}/ds = \kappa \mathbf{\hat{n}}$.
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1
