@@ -54,7 +54,7 @@ By convention, it is usually taken to be such that the region $R$ is on the left
 > and
 >
 > $$
-  \int_A^B \mathbf{F} \cdot d\mathbf{x} = \int_A^C \mathbf{F} \cdot d\mathbf{x} + \int_C^B \mathbf{F} \cdot d\mathbf{x}
+  \int_A^B \mathbf{F} \cdot d\mathbf{x} = \int_A^P \mathbf{F} \cdot d\mathbf{x} + \int_P^B \mathbf{F} \cdot d\mathbf{x}
   $$
 
 In some cases we would like the line integral to give the same answer for any choice of parameterisation of the curve,
