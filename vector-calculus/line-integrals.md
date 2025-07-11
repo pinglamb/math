@@ -57,6 +57,14 @@ By convention, it is usually taken to be such that the region $R$ is on the left
   \int_A^B \mathbf{F} \cdot d\mathbf{x} = \int_A^C \mathbf{F} \cdot d\mathbf{x} + \int_C^B \mathbf{F} \cdot d\mathbf{x}
   $$
 
+In some cases we would like the line integral to give the same answer for any choice of parameterisation of the curve,
+which naturally leads us to integrate the field with respect to arc length and can be evaluated with the substitution
+
+$$
+ds = \sqrt{ {d\mathbf{x} \over dt } \cdot {d\mathbf{x} \over dt } } \,dt
+$$
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.2, 1.3
+* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 11.1
