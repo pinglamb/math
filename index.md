@@ -6,10 +6,10 @@ title: Home
 ## Vector Calculus
 {: .left}
 
+* [Partial Differentiation](vector-calculus/partial-differentiation.md)
+* [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Curves](vector-calculus/curves.md)
 * [Line Integrals](vector-calculus/line-integrals.md)
-* [Conservative Fields](vector-calculus/conservative-fields.md)
-* [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Surface Integrals](vector-calculus/surface-integrals.md)
 
 ## Analysis

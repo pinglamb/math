@@ -189,9 +189,9 @@ Note that the three vectors $\mathbf{t}$, $\mathbf{n}$ and $\mathbf{b}$ define a
 >
 > $$
   {d\mathbf{t} \over ds} = \kappa \mathbf{n}
-  \quad \text{and} \quad
+  \qquad
   {d\mathbf{b} \over ds} = -\tau \mathbf{n}
-  \quad \text{and} \quad
+  \qquad
   {d\mathbf{n} \over ds} = \tau \mathbf{b} - \kappa \mathbf{t}
   $$
 >
