@@ -6,9 +6,9 @@ title: Home
 ## Vector Calculus
 {: .left}
 
-* [Partial Differentiation](vector-calculus/partial-differentiation.md)
-* [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Curves](vector-calculus/curves.md)
+* [Differential Operators](vector-calculus/differential-operators.md)
+* [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Line Integrals](vector-calculus/line-integrals.md)
 * [Surface Integrals](vector-calculus/surface-integrals.md)
 
