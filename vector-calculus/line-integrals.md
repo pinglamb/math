@@ -124,6 +124,24 @@ Such vector fields are called conservative.
 
 This result is closely related to the fundamental theorem of calculus: the line integral of a conservative vector field is the analog of the integral of a total derivative and so is given by the end points.
 
+> *Proposition.*{: .prop}
+> If $\mathbf{F}$ is a conservative field, then for any two components $F_i$ and $F_j$, we have $\partial_j F_i = \partial_i F_j$.
+
+Alternatively, we can use differential to phrase the idea of a conservative vector field.
+
+> *Definition.*{: .def}
+> The **differential** of a function $\phi(\mathbf{x})$ on $\mathbb{R}^n$ is defined to be
+>
+> $$
+  d\phi = { \partial \phi \over \partial x^i } dx^i = \nabla \phi \cdot d\mathbf{x}
+  $$
+
+> *Definition.*{: .def}
+> A differential is **exact** if it can be written as $\mathbf{F} \cdot d\mathbf{x} = d \phi$ for some function $\phi$.
+
+> *Corollary.*{: .cor}
+> A differential is **exact** iff the vector field is conservative.
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.2, 1.3
