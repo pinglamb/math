@@ -27,3 +27,9 @@ Central to all these differential operations is the following vector operator.
 
 > *Definition.*{: .def}
 > The **directional derivative** is the rate of change of $\phi$ in a given direction $\mathbf{n}$, denoted by $D_{\mathbf{n}} \phi$.
+
+> *Proposition.*{: .prop}
+> $D_{\mathbf{n}} \phi = \nabla \phi \cdot \mathbf{n}$.
+
+> *Corollary.*{: .cor}
+> At each point in space, the vector $\nabla \phi(\mathbf{x})$ is pointing in the direction in which $\phi(\mathbf{x})$ changes most quickly.
