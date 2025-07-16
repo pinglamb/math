@@ -64,6 +64,66 @@ $$
 ds = \sqrt{ {d\mathbf{x} \over dt } \cdot {d\mathbf{x} \over dt } } \,dt
 $$
 
+## Conservative Fields
+
+In general, the value of a line integral between two points $A$ and $B$ depends on the path $C$ taken.
+However, there exists a class of vector fields for which the line integral is independent of the path taken.
+Such vector fields are called conservative.
+
+> *Definition.*{: .def}
+> A vector field $\mathbf{F}$ is **conservative** if there exists scalar field $\phi$ such that
+>
+> $$
+  \mathbf{F} = \nabla \phi
+  $$
+
+> *Definition.*{: .def}
+> The scalar field $\phi$ is called the **scalar potential function** of the conservative vector field $\mathbf{F}$,
+> and is unique up to an arbitrary additive constant.
+
+> *Proposition.*{: .prop}
+> The line integral is independent of the path taken, i.e. the integral around any closed loop is zero, iff $\mathbf{F}$ is conservative.
+>
+> *Proof.*{: .prf}
+>
+> ($\Leftarrow$) Suppose that $\mathbf{F} = \nabla \phi$.
+> For any curve $C$ with parameterisation $\mathbf{x}(t)$, when we integrate $\mathbf{F}$ from $\mathbf{a}$ to $\mathbf{b}$, we have
+>
+> $$
+  \begin{align*}
+  \int_C \mathbf{F} \cdot d\mathbf{x} = \int_C \nabla \phi \cdot d\mathbf{x}
+  &= \int_{t_a}^{t_b} { \partial \phi \over \partial x^i } { d x^i \over dt} \,dt \\
+  &= \int_{t_a}^{t_b} { d \over dt } \phi(\mathbf{x}(t)) \,dt \\
+  &= \Bigl[ \phi(\mathbf{x}(t)) \Bigr]_{t_a}^{t_b} \\
+  &= \phi(\mathbf{b}) - \phi(\mathbf{a})
+  \end{align*}
+  $$
+>
+> ($\Rightarrow$) Given the vector field $\mathbf{F}$ whose integral vanishes when taken around any closed curve.
+> Choose a value of $\phi$ at the origin, e.g. $\phi(\mathbf{0}) = 0$.
+> Then define
+>
+> $$
+  \phi(\mathbf{y}) = \int_{C(\mathbf{y})} \mathbf{F} \cdot d\mathbf{x}
+  $$
+>
+> where $C(\mathbf{y})$ is the curve from origin to the point $\mathbf{y}$.
+> It doesn't matter which curve we take since the integral will always give the same answer by assumption.
+> Consider the partial derivative of $\phi$, by definition,
+>
+> $$
+  \begin{align*}
+  {\partial \phi \over \partial x_i} &= \lim_{h \to 0} {1 \over h} \left[ \int_{C(\mathbf{y} + h\mathbf{e_i})} \mathbf{F} \cdot d\mathbf{x} - \int_{C(\mathbf{y})} \mathbf{F} \cdot d\mathbf{x} \right] \\
+  &= \lim_{h \to 0} {F_i h \over h} = F_i
+  \end{align*}
+  $$
+>
+> ![Conservative Field Integration](../images/vector-calculus-line-integral-conservative-field.png)
+>
+> Hence, $\nabla \phi = \mathbf{F}$.
+
+This result is closely related to the fundamental theorem of calculus: the line integral of a conservative vector field is the analog of the integral of a total derivative and so is given by the end points.
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.2, 1.3
