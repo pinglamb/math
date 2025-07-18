@@ -16,6 +16,7 @@ title: Line Integrals &#124; Vector Calculus
   $$
 >
 > where $\phi$ is a scalar field and $\mathbf{F}$ is a vector field.
+> The integrals themselves are respectively vector, scalar and vector in nature.
 
 The formal definition is similar to that of ordinary integrals with the use of dissection and summing over the intervals.
 
@@ -137,7 +138,7 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
   $$
 
 > *Definition.*{: .def}
-> A differential is **exact** if it can be written as $\mathbf{F} \cdot d\mathbf{x} = d \phi$ for some function $\phi$.
+> A differential is **exact** if it can be written as $\mathbf{F} \cdot d\mathbf{x} = d \phi$ for some scalar function $\phi$.
 
 > *Corollary.*{: .cor}
 > A differential is **exact** iff the vector field is conservative.

@@ -151,6 +151,8 @@ We can set a certain point on the curve as reference point, i.e. $s = 0$, choose
 >
 > Therefore, $d\mathbf{t}/ds$ is orthogonal to $\mathbf{t}$ and so as $\mathbf{n}$.
 
+The principal normal indicates the direction of the curve's turn so it always points towards the "inside" or the concave side of the curve.
+
 > *Definition.*{: .def}
 > The **binormal** is the unit vector defined by $\mathbf{b} = \mathbf{t} \times \mathbf{n}$.
 
