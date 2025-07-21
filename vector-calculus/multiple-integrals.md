@@ -44,6 +44,57 @@ Just as we may consider derivatives with respect to multiple variables, we can d
 
 These ideas can be extended to define multiple integrals of higher dimensionality.
 
+## Change of Variables
+
+> *Definition.*{: .def}
+> The **Jacobian** $J(u, v)$ is defined by the matrix
+>
+> $$
+  J(u, v) = { \partial (x, y) \over \partial (u, v) } = \begin{vmatrix}
+  \partial x / \partial u & \partial x / \partial v \\
+  \partial y / \partial u & \partial y / \partial v
+  \end{vmatrix}
+  $$
+
+> *Proposition.*{: .prop}
+> If the region $R$ in the $(x, y)$ plane is mapped into a different region $R'$ in the $(u, v)$ plane.
+> Then
+>
+> $$
+  \int_D dx\,dy \,f(x, y) = \int_{D'} du\,dv \,|J(u, v)| f(x(u, v), y(u, v))
+  $$
+>
+> *Proof.*{: .prf}
+>
+> ![Change of Variable](../images/vector-calculus-change-of-variables.png)
+>
+> The area of a subregion (in red) is approximately a parallelogram.
+> When $u$ and $v$ are varied slightly, then the change in the original $x$ and $y$ is
+>
+> $$
+  \Delta x = {\partial x \over \partial u} \Delta u + {\partial x \over \partial v} \Delta v + \cdots
+  \quad \text{and} \quad
+  \Delta y = {\partial y \over \partial u} \Delta u + {\partial y \over \partial v} \Delta v + \cdots
+  $$
+>
+> where the $\cdots$ are terms of $O(\Delta u^2)$, $O(\Delta v^2)$ and $O(\Delta u \Delta v)$.
+> This means
+>
+> $$
+  \begin{pmatrix} \Delta x \\ \Delta y \end{pmatrix} =
+  \begin{pmatrix}
+  \partial x / \partial u & \partial x / \partial v \\
+  \partial y / \partial u & \partial y / \partial v
+  \end{pmatrix}
+  \begin{pmatrix} \Delta u \\ \Delta v \end{pmatrix}
+  $$
+>
+> and therefore the area of the parallelogram is
+>
+> $$
+  \Delta A = |J(u, v)| \Delta u \Delta v
+  $$
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 2.1
