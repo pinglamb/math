@@ -33,3 +33,7 @@ Central to all these differential operations is the following vector operator.
 
 > *Corollary.*{: .cor}
 > At each point in space, the vector $\nabla \phi(\mathbf{x})$ is pointing in the direction in which $\phi(\mathbf{x})$ changes most quickly.
+
+## References
+
+* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10.7
