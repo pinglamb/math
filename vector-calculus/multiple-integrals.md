@@ -47,28 +47,28 @@ These ideas can be extended to define multiple integrals of higher dimensionalit
 ## Change of Variables
 
 > *Definition.*{: .def}
-> The **Jacobian** $J(u, v)$ is defined by the matrix
+> The **Jacobian** of $(x, y)$ with respect to $(u, v)$ is defined by the determinant
 >
 > $$
-  J = { \partial (x, y) \over \partial (u, v) } = \begin{vmatrix}
-  \partial x / \partial u & \partial x / \partial v \\
-  \partial y / \partial u & \partial y / \partial v
+  J(u, v) = { \partial (x, y) \over \partial (u, v) } = \begin{vmatrix}
+  \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\
+  \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
   \end{vmatrix}
   $$
 
 > *Proposition.*{: .prop}
-> If the region $R$ in the $(x, y)$ plane is mapped into a different region $R'$ in the $(u, v)$ plane.
+> Consider a change of variables $(x, y) \to (u, v)$.
 > Then
 >
 > $$
-  \int_R dx\,dy \,f(x, y) = \int_{R'} du\,dv \, \left|{ \partial (x, y) \over \partial (u, v) }\right| \,f(x(u, v), y(u, v))
+  \iint_R dx\,dy \,f(x, y) = \iint_{R'} du\,dv \, \left|{ \partial (x, y) \over \partial (u, v) }\right| \,f(x(u, v), y(u, v))
   $$
 >
 > *Proof.*{: .prf}
 >
 > ![Change of Variable](../images/vector-calculus-change-of-variables-2d.png)
 >
-> The area of the subregion $KLMN$ is approximately a parallelogram.
+> The new subregion $KLMN$ is approximately a parallelogram.
 >
 > Since $v$ is constant along the line $KL$, we have
 >
@@ -146,6 +146,36 @@ These ideas can be extended to define multiple integrals of higher dimensionalit
 >
 > $$
   \int_{-\infty}^{\infty} e^{-x^2} \,dx = \sqrt{\pi}
+  $$
+
+> *Definition.*{: .def}
+> The **Jacobian** of $(x, y, z)$ with respect to $(u, v, w)$ is defined by the determinant
+>
+> $$
+  J(u, v, w) = { \partial (x, y, z) \over \partial (u, v, w) } = \begin{vmatrix}
+  \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} & \dfrac{\partial x}{\partial w} \\
+  \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v} & \dfrac{\partial y}{\partial w} \\
+  \dfrac{\partial z}{\partial u} & \dfrac{\partial z}{\partial v} & \dfrac{\partial z}{\partial w} \\
+  \end{vmatrix}
+  $$
+
+> *Proposition.*{: .prop}
+> Consider a change of variables $(x, y, z) \to (u, v, w)$.
+> Then
+>
+> $$
+  \iiint_R dx\,dy\,dz \,f(x, y, z) = \iiint_{R'} du\,dv\,dw \, \left|{ \partial (x, y, z) \over \partial (u, v, w) }\right| \,f(x(u, v, w), y(u, v, w), z(u, v, w))
+  $$
+>
+> *Proof.*{: .prf}
+>
+> ![Change of Variables](../images/vector-calculus-change-of-variables-3d.png)
+>
+> Similar to the argument presented in double integral, the new subregion is approximately a parallelepiped.
+> The volume of that is given by the [scalar triple product](../vectors-and-matrices/vectors.md#scalar-triple-product), i.e.
+>
+> $$
+  dV_{uvw} = \left| { \partial (x, y, z) \over \partial (u, v, w) } \right| \,du\,dv\,dw
   $$
 
 ## References
