@@ -94,6 +94,60 @@ These ideas can be extended to define multiple integrals of higher dimensionalit
 >
 > Therefore, when transforming the coordinates from $x, y$ to $u, v$, we can substitute $dx\,dy$ by the above, together with a different integrand and limits.
 
+> *Example.*{: .eg}
+> **[Gaussian Integral]** Let
+>
+> $$
+  I = \int_{-\infty}^{\infty} e^{-x^2} \,dx
+  $$
+>
+> We have
+>
+> $$
+  \begin{align*}
+  I^2 &= \left( \int_{-\infty}^{\infty} e^{-x^2} \,dx \right) \left( \int_{-\infty}^{\infty} e^{-y^2} \,dx \right) \\
+  &= \int_{-\infty}^{\infty} dx \int_{-\infty}^{\infty} dy \, e^{-(x^2 + y^2)} \\
+  &= \iint_R e^{-(x^2 + y^2)} \,dx\,dy
+  \end{align*}
+  $$
+>
+> where the region $R$ is the whole $xy$-plane. By transforming to polar coordinates,
+>
+> $$
+  I^2 = \iint_{R'} e^{-r^2} r \,dr \,d\theta
+  = \int_0^{2\pi} d\theta \int_0^{\infty} dr \,re^{-r^2}
+  = 2\pi \Bigl[ -{1 \over 2}e^{-r^2}\Bigr]_0^{\infty} = \pi
+  $$
+>
+> More rigorously, consider the integral
+>
+> $$
+  I(a) = \int_{-a}^a e^{-x^2} \,dx
+  $$
+>
+> and similarily, we have
+>
+> $$
+  I^2(a) = \iint_R e^{-(x^2 + y^2)} \,dx\,dy
+  $$
+>
+> where the region $R$ is the square of side $2a$ centred on the origin.
+> The value of integral is therefore bounded by inner circle with radius $a$ and outer circle with radius $\sqrt{2}a$.
+>
+> ![Gaussian Integral](../images/vector-calculus-gaussian-integral.png)
+>
+> By transforming to polar coordinates, we have
+>
+> $$
+  \pi \left( 1 - e^{-a^2} \right) < I^2(a) < \pi \left( 1 - e^{-2a^2} \right)
+  $$
+>
+> and hence $I^2(a) \to \pi$ as $a \to \infty$ so
+>
+> $$
+  \int_{-\infty}^{\infty} e^{-x^2} \,dx = \sqrt{\pi}
+  $$
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 2.1
