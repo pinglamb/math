@@ -6,9 +6,10 @@ title: Home
 ## Vector Calculus
 {: .left}
 
-* [Curves](vector-calculus/curves.md)
+* [Vector Functions](vector-calculus/vector-functions.md)
 * [Differential Operators](vector-calculus/differential-operators.md)
 * [Multiple Integrals](vector-calculus/multiple-integrals.md)
+* [Curves](vector-calculus/curves.md)
 * [Polar Coordinate Systems](vector-calculus/polar-coordinates.md)
 * [Line Integrals](vector-calculus/line-integrals.md)
 * [Surface Integrals](vector-calculus/surface-integrals.md)

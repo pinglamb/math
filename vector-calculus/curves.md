@@ -9,61 +9,14 @@ title: Curves &#124; Vector Calculus
 > *Definition.*{: .def}
 > A **parameterised curve** $C$ is a map of the form $f: \mathbb{R} \to \mathbb{R}^n$.
 
-The choice of parameterisation is not unique, e.g. both $\mathbf{f}(u) = (\cos u, \sin u, u)$ and $\mathbf{g}(u) = (\cos \lambda u, \sin \lambda u, \lambda u)$
-represents the same helix. Some of the properties depend on the parameterisation but some are not, in which will be our primary interest.
-
-> *Definition.*{: .def}
-> The vector function $\mathbf{r}(u)$ is _differentiable_ at $u$ if, as $\Delta u \to 0$, we can write
->
-> $$
-  \mathbf{r}(u + \Delta u) = \mathbf{r}(u) + \mathbf{\dot{r}}(u)\Delta u + o(\Delta u)
-  $$
->
-> The derivative $\mathbf{\dot{r}}(u)$ can also be called **tangent vector**.
-
-It is a generation of [differentiability of scalar function](../analysis/differentiability.md#differentiability-linear-approximation) base on linear approximation.
-
 > *Definition.*{: .def}
 > A curve is said to be **smooth** if its derivative exists everywhere.
 
 > *Definition.*{: .def}
 > A parameterisation is said to be **regular** if $\mathbf{\dot{r}}(u) \not= 0$ for any $u$.
 
-> *Proposition.*{: .prop}
-> Given that the basis vectors are independent of $u$, the tangent vector can be found by differentiating the vector function component by component, i.e.
->
-> $$
-  {d\mathbf{u} \over dt} = \mathbf{\dot{r}}(u) = \dot{x}^i(u) \mathbf{e}_i
-  $$
-
-> *Proposition.*{: .prop}
-> Suppose that $f(t)$ is a scalar function and $\mathbf{g}(t)$ and $\mathbf{h}(t)$ are vector functions.
-> Then
->
-> $$
-  \begin{align*}
-  {d \over dt} (f\mathbf{g}) &= f'\mathbf{g} + f\dot{\mathbf{g}} \\
-  {d \over dt} (\mathbf{g \cdot h}) &= \dot{\mathbf{g}} \cdot \mathbf{h} + \mathbf{g} \cdot \dot{\mathbf{h}} \\
-  {d \over dt} (\mathbf{g \times h}) &= \dot{\mathbf{g}} \times \mathbf{h} + \mathbf{g} \times \dot{\mathbf{h}} \\
-  \end{align*}
-  $$
-
-> *Definition.*{: .def}
-> The **differential** of a vector, denoted by $d\mathbf{r}$, is the vector
->
-> $$
-  d\mathbf{r} = {d\mathbf{r} \over du} du
-  $$
-
-> *Definition.*{: .def}
-> The integration of a vector with respect to a scalar can be regarded as the inverse of differentiation,
-> i.e. if $\mathbf{r}(u) = d\mathbf{R}/du$, then
->
-> $$
-  \int_{u_1}^{u_2} \mathbf{r}(u) \,du = \mathbf{R}(u_2) - \mathbf{R}(u_1)
-  $$
->
-> in which the integral is also a vector.
+The choice of parameterisation is not unique, e.g. both $\mathbf{f}(u) = (\cos u, \sin u, u)$ and $\mathbf{g}(u) = (\cos \lambda u, \sin \lambda u, \lambda u)$
+represents the same helix. Some of the properties depend on the parameterisation but some are not, in which will be our primary interest.
 
 ## Arc Length
 
@@ -233,4 +186,4 @@ Note that the three vectors $\mathbf{t}$, $\mathbf{n}$ and $\mathbf{b}$ define a
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.1
-* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10
+* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10.3
