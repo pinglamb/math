@@ -35,6 +35,69 @@ Two most common non-Cartesian coordinate systems are spherical and cylindrical p
 
 ![Cylindrical Polar](../images/vector-calculus-cylindrical-polar.png){: .size-2x}
 
+> *Proposition.*{: .prop}
+> The unit vectors of cylindrical polar coordinates system are
+>
+> $$
+  \begin{align*}
+  \mathbf{e}_\rho &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
+  \mathbf{e}_\phi &= -\sin \phi \mathbf{i} + \cos \phi \mathbf{j} \\
+  \mathbf{z}_\phi &= \mathbf{k}
+  \end{align*}
+  $$
+>
+> and they form an orthonormal basis.
+>
+> *Proof.*{: .prf}
+>
+> The position vector of a point $P$ can be written as $\mathbf{r} = \rho \cos \phi \mathbf{i} + \rho \sin \phi \mathbf{i} + z \mathbf{k}$.
+> Thus,
+>
+> $$
+  \begin{align*}
+  {\partial \mathbf{r} \over \partial \rho} &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
+  {\partial \mathbf{r} \over \partial \phi} &= - \rho \sin \phi \mathbf{i} + \rho \cos \phi \mathbf{j} \\
+  {\partial \mathbf{r} \over \partial z} &= \mathbf{k}
+  \end{align*}
+  $$
+>
+> and the unit vectors can be obtained by dividing each of the above vector by its modulus.
+
+> *Proposition.*{: .prop}
+> An infinitesimal vector displacement $d\mathbf{r}$ in the position of $P$ is given by
+>
+> $$
+  \begin{align*}
+  d\mathbf{r} &= {\partial \mathbf{r} \over \partial \rho} d\rho + {\partial \mathbf{r} \over \partial \phi} d\phi + {\partial \mathbf{r} \over \partial z} dz \\
+  &= d\rho \,\mathbf{e}_\rho + \rho \,d\phi \,\mathbf{e}_\phi + dz \,\mathbf{e}_z
+  \end{align*}
+  $$
+>
+> and its magitude $ds$ is
+>
+> $$
+  (ds)^2 = d\mathbf{r} \cdot d\mathbf{r} = (d\rho)^2 + \rho^2 (d\phi)^2 + (dz)^2
+  $$
+
+> *Proposition.*{: .prop}
+> The volume of the infinitesimal parallelepiped is
+>
+> $$
+  dV = \rho \,d\rho \,d\phi \,dz
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The Jacobian with respect to $(\rho, \phi, z)$ is
+>
+> $$
+  \begin{vmatrix}
+  \cos \phi & -\rho \sin \phi & 0 \\
+  \sin \phi & \rho \cos \phi & 0 \\
+  0 & 0 & 1 \\
+  \end{vmatrix} = \rho
+  $$
+
 ## Spherical Polar Coordinates
 
 > *Definition.*{: .def}
