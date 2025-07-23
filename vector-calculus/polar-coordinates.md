@@ -36,13 +36,13 @@ Two most common non-Cartesian coordinate systems are spherical and cylindrical p
 ![Cylindrical Polar](../images/vector-calculus-cylindrical-polar.png){: .size-2x}
 
 > *Proposition.*{: .prop}
-> The unit vectors of cylindrical polar coordinates system are
+> The unit vectors of cylindrical polars are
 >
 > $$
   \begin{align*}
   \mathbf{e}_\rho &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
   \mathbf{e}_\phi &= -\sin \phi \mathbf{i} + \cos \phi \mathbf{j} \\
-  \mathbf{z}_\phi &= \mathbf{k}
+  \mathbf{e}_z &= \mathbf{k}
   \end{align*}
   $$
 >
@@ -50,7 +50,7 @@ Two most common non-Cartesian coordinate systems are spherical and cylindrical p
 >
 > *Proof.*{: .prf}
 >
-> The position vector of a point $P$ can be written as $\mathbf{r} = \rho \cos \phi \mathbf{i} + \rho \sin \phi \mathbf{i} + z \mathbf{k}$.
+> The position vector of a point $P$ can be written as $\mathbf{r} = \rho \cos \phi \mathbf{i} + \rho \sin \phi \mathbf{j} + z \mathbf{k}$.
 > Thus,
 >
 > $$
@@ -111,6 +111,69 @@ Two most common non-Cartesian coordinate systems are spherical and cylindrical p
 > with $r \ge 0$, $0 \le \theta \le \pi$ and $0 \le \phi < 2\pi$.
 
 ![Spherical Polar](../images/vector-calculus-spherical-polar.png){: .size-2x}
+
+> *Proposition.*{: .prop}
+> The unit vectors of spherical polars are
+>
+> $$
+  \begin{align*}
+  \mathbf{e}_r &= \sin \theta \cos \phi \mathbf{i} + \sin \theta \sin \phi \mathbf{j} + \cos \theta \mathbf{k} \\
+  \mathbf{e}_\theta &= \cos \theta \cos \phi \mathbf{i} + \cos \theta \sin \phi \mathbf{j} - \sin \theta \mathbf{k} \\
+  \mathbf{e}_\phi &= - \sin \phi \mathbf{i} + \cos \phi \mathbf{j}
+  \end{align*}
+  $$
+>
+> and they form an orthonormal basis.
+>
+> *Proof.*{: .prf}
+>
+> The position vector of a point $P$ can be written as $\mathbf{r} = r \sin \theta \cos \phi \mathbf{i} + r \sin \theta \sin \phi \mathbf{j} + r \cos \theta \mathbf{k}$.
+> Thus,
+>
+> $$
+  \begin{align*}
+  {\partial \mathbf{r} \over \partial r} &= \sin \theta \cos \phi \mathbf{i} + \sin \theta \sin \phi \mathbf{j} + \cos \theta \mathbf{k} \\
+  {\partial \mathbf{r} \over \partial \theta} &= r \cos \theta \cos \phi \mathbf{i} + r \cos \theta \sin \phi \mathbf{j} - r \sin \theta \mathbf{k} \\
+  {\partial \mathbf{r} \over \partial \phi} &= - r \sin \theta \sin \phi \mathbf{i} + r \sin \theta \cos \phi \mathbf{j}
+  \end{align*}
+  $$
+>
+> and the unit vectors can be obtained by dividing each of the above vector by its modulus.
+
+> *Proposition.*{: .prop}
+> An infinitesimal vector displacement $d\mathbf{r}$ in the position of $P$ is given by
+>
+> $$
+  \begin{align*}
+  d\mathbf{r} &= {\partial \mathbf{r} \over \partial r} dr + {\partial \mathbf{r} \over \partial \theta} d\theta + {\partial \mathbf{r} \over \partial \phi} d\phi \\
+  &= dr \,\mathbf{e}_r + r \,d\theta \,\mathbf{e}_\theta + r \sin \theta \,d\phi \,\mathbf{e}_\phi
+  \end{align*}
+  $$
+>
+> and its magitude $ds$ is
+>
+> $$
+  (ds)^2 = d\mathbf{r} \cdot d\mathbf{r} = (dr)^2 + r^2 (d\theta)^2 + r^2 \sin^2 \theta (d\phi)^2
+  $$
+
+> *Proposition.*{: .prop}
+> The volume of the infinitesimal parallelepiped is
+>
+> $$
+  dV = r^2 \sin \theta \,dr \,d\theta \,d\phi
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The Jacobian with respect to $(r, \theta, \phi)$ is
+>
+> $$
+  \begin{vmatrix}
+  \sin \theta \cos \phi & \sin \theta \sin \phi & \cos \theta \\
+  r \cos \theta \cos \phi & r \cos \theta \sin \phi & - r \sin \theta \\
+  - r \sin \theta \sin \phi & r \sin \theta \cos \phi & 0
+  \end{vmatrix} = r^2 \sin \theta
+  $$
 
 ## References
 
