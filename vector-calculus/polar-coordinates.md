@@ -12,7 +12,7 @@ Two most common non-Cartesian coordinate systems are spherical and cylindrical p
 ## Plane Polar Coordinates
 
 > *Definition.*{: .def}
-> The position of a point P having Cartesian coordinates $(x, y)$ can be expressed as
+> The position of a point $P$ having Cartesian coordinates $(x, y)$ can be expressed as
 >
 > $$
   x = \rho \cos \phi, \qquad y = \rho \sin \phi
@@ -21,10 +21,70 @@ Two most common non-Cartesian coordinate systems are spherical and cylindrical p
 > where $(\rho, \phi$ is its **plane polar coordinates**,
 > with $\rho \ge 0$, $0 \le \phi < 2\pi$.
 
+> *Proposition.*{: .prop}
+> The unit vectors of plane polars are
+>
+> $$
+  \begin{align*}
+  \mathbf{e}_\rho &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
+  \mathbf{e}_\phi &= -\sin \phi \mathbf{i} + \cos \phi \mathbf{j} \\
+  \end{align*}
+  $$
+>
+> and they form an orthonormal basis.
+>
+> *Proof.*{: .prf}
+>
+> The position vector of a point $P$ can be written as $\mathbf{r} = \rho \cos \phi \mathbf{i} + \rho \sin \phi \mathbf{j}$.
+> Thus,
+>
+> $$
+  \begin{align*}
+  {\partial \mathbf{r} \over \partial \rho} &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
+  {\partial \mathbf{r} \over \partial \phi} &= - \rho \sin \phi \mathbf{i} + \rho \cos \phi \mathbf{j} \\
+  \end{align*}
+  $$
+>
+> and the unit vectors can be obtained by dividing each of the above vector by its modulus.
+
+> *Proposition.*{: .prop}
+> An infinitesimal vector displacement $d\mathbf{r}$ in the position of $P$ is given by
+>
+> $$
+  \begin{align*}
+  d\mathbf{r} &= {\partial \mathbf{r} \over \partial \rho} d\rho + {\partial \mathbf{r} \over \partial \phi} d\phi \\
+  &= d\rho \,\mathbf{e}_\rho + \rho \,d\phi \,\mathbf{e}_\phi
+  \end{align*}
+  $$
+>
+> and its magitude $ds$ is
+>
+> $$
+  (ds)^2 = d\mathbf{r} \cdot d\mathbf{r} = (d\rho)^2 + \rho^2 (d\phi)^2
+  $$
+
+> *Proposition.*{: .prop}
+> The area of the infinitesimal parallelogram is
+>
+> $$
+  dA = \rho \,d\rho \,d\phi
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The Jacobian with respect to $(\rho, \phi)$ is
+>
+> $$
+  \begin{vmatrix}
+  \cos \phi & -\rho \sin \phi \\
+  \sin \phi & \rho \cos \phi \\
+  \end{vmatrix} = \rho
+  $$
+
 ## Cylindrical Polar Coordinates
 
 > *Definition.*{: .def}
-> The position of a point P having Cartesian coordinates $(x, y, z)$ can be expressed as
+> The position of a point $P$ having Cartesian coordinates $(x, y, z)$ can be expressed as
 >
 > $$
   x = \rho \cos \phi, \qquad y = \rho \sin \phi, \qquad z = z
@@ -101,7 +161,7 @@ Two most common non-Cartesian coordinate systems are spherical and cylindrical p
 ## Spherical Polar Coordinates
 
 > *Definition.*{: .def}
-> The position of a point P having Cartesian coordinates $(x, y, z)$ can be expressed as
+> The position of a point $P$ having Cartesian coordinates $(x, y, z)$ can be expressed as
 >
 > $$
   x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \cos \theta
