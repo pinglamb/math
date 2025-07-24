@@ -16,7 +16,33 @@ $$
 $$
 
 > *Definition.*{: .def}
-> A **normal vector** $\mathbf{n}$ of a point on the surface is the vector which points perpendicularly away from the surface.
+> The two curves $u = $ constant and $v = $ constant passing through $P$ on $S$ are called **coordinate curves**.
+
+> *Definition.*{: .def}
+> A **normal vector** $\mathbf{n}$ of $P$ on $S$ is the vector which points perpendicularly away from the surface.
+> For the parameterised surface $\mathbf{r}(u, v) \in \mathbb{R}^3$, the normal direction is
+>
+> $$
+  \mathbf{n} = {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v}
+  $$
+>
+> It is the normal vector of the **tangent plane**.
+
+> *Proposition.*{: .prop}
+> An infinitesimal vector displacement $d\mathbf{r}$ in the position of $P$ is given by
+>
+> $$
+  d\mathbf{r} = {\partial \mathbf{r} \over \partial u} du + {\partial \mathbf{r} \over \partial v} dv
+  $$
+
+> *Proposition.*{: .prop}
+> The area of the infinitesimal parallelogram whose sides are the coordinate curves is
+>
+> $$
+  dS = \left| {\partial \mathbf{r} \over \partial u} du \times {\partial \mathbf{r} \over \partial v} dv \right|
+  = \left| {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v} \right| \,du \,dv
+  = |\mathbf{n}| \,du \,dv
+  $$
 
 ## References
 
