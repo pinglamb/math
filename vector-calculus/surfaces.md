@@ -44,6 +44,9 @@ $$
   = |\mathbf{n}| \,du \,dv
   $$
 
+> *Definition.*{: .def}
+> A parameterisation is **regular** if $\mathbf{n} \not= 0$ anywhere on the surface.
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 2.2

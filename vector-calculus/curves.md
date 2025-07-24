@@ -20,7 +20,7 @@ $$
 > A curve is said to be **smooth** if its derivative exists everywhere.
 
 > *Definition.*{: .def}
-> A parameterisation is said to be **regular** if $\mathbf{\dot{r}}(u) \not= 0$ for any $u$.
+> A parameterisation is **regular** if $\mathbf{\dot{r}}(u) \not= 0$ for any $u$.
 
 The choice of parameterisation is not unique, e.g. both $\mathbf{f}(u) = (\cos u, \sin u, u)$ and $\mathbf{g}(u) = (\cos \lambda u, \sin \lambda u, \lambda u)$
 represents the same helix. Some of the properties depend on the parameterisation but some are not, in which will be our primary interest.
