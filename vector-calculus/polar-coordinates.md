@@ -229,9 +229,9 @@ Two most common non-Cartesian coordinate systems are spherical and cylindrical p
 >
 > $$
   \begin{vmatrix}
-  \sin \theta \cos \phi & \sin \theta \sin \phi & \cos \theta \\
-  r \cos \theta \cos \phi & r \cos \theta \sin \phi & - r \sin \theta \\
-  - r \sin \theta \sin \phi & r \sin \theta \cos \phi & 0
+  \sin \theta \cos \phi & r \cos \theta \cos \phi & - r \sin \theta \sin \phi \\
+  \sin \theta \sin \phi & r \cos \theta \sin \phi & r \sin \theta \cos \phi \\
+  \cos \theta & - r \sin \theta & 0
   \end{vmatrix} = r^2 \sin \theta
   $$
 

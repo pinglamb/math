@@ -7,7 +7,14 @@ title: Curves &#124; Vector Calculus
 {: .page-title}
 
 > *Definition.*{: .def}
-> A **parameterised curve** $C$ is a map of the form $f: \mathbb{R} \to \mathbb{R}^n$.
+> A **parameterised curve** $C$ is a map of the form $\mathbf{r}: \mathbb{R} \to \mathbb{R}^3$.
+
+We can also represent a surface by $y = f(x)$ and $z = g(x)$ or $F(x, y z) = 0$ and $G(x, y, z) = 0$ in which the curve is the intersection of two planes.
+We can convert them into parametric form by for example, having
+
+$$
+\mathbf{r}(u) = u \mathbf{i} + f(u) \mathbf{j} + g(u) \mathbf{k}
+$$
 
 > *Definition.*{: .def}
 > A curve is said to be **smooth** if its derivative exists everywhere.
