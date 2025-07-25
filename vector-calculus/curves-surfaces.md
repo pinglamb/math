@@ -27,8 +27,6 @@ $$
 The choice of parameterisation is not unique, e.g. both $\mathbf{f}(u) = (\cos u, \sin u, u)$ and $\mathbf{g}(u) = (\cos \lambda u, \sin \lambda u, \lambda u)$
 represents the same helix. Some of the properties depend on the parameterisation but some are not, in which will be our primary interest.
 
-## Arc Length
-
 > *Definition.*{: .def}
 > The **arc length** is the distance between two points along a curve, which is a scalar quantity.
 
@@ -192,7 +190,69 @@ Note that the three vectors $\mathbf{t}$, $\mathbf{n}$ and $\mathbf{b}$ define a
   = \tau \mathbf{b} - \kappa \mathbf{t}
   $$
 
+## Surfaces
+
+> *Definition.*{: .def}
+> A **parameterised surface** $S$ is a map of the form $\mathbf{r}: \mathbb{R}^2 \to \mathbb{R}^3$.
+
+We can also represent a surface by $z = f(x, y)$ or $F(x, y, z) = 0$ and convert them to parametric form by for example, having
+
+$$
+\mathbf{r}(u, v) = u \mathbf{i} + v \mathbf{j} + f(u, v) \mathbf{k}
+$$
+
+> *Definition.*{: .def}
+> The two curves $u = $ constant and $v = $ constant passing through $P$ on $S$ are called **coordinate curves**.
+
+> *Definition.*{: .def}
+> A **normal vector** $\mathbf{n}$ of $P$ on $S$ is the vector which points perpendicularly away from the surface.
+> For the parameterised surface $\mathbf{r}(u, v) \in \mathbb{R}^3$, the normal direction is
+>
+> $$
+  \mathbf{n} = {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v}
+  $$
+>
+> It is the normal vector of the **tangent plane**.
+
+The sign of the normal vector determines what we mean by "outside" and "inside" the surface, and
+
+> *Definition.*{: .def}
+> A surface is **orientable** if there is a consistent choice of unit normal which varies smoothly over the surface.
+
+> *Proposition.*{: .prop}
+> An infinitesimal vector displacement $d\mathbf{r}$ in the position of $P$ is given by
+>
+> $$
+  d\mathbf{r} = {\partial \mathbf{r} \over \partial u} du + {\partial \mathbf{r} \over \partial v} dv
+  $$
+
+> *Proposition.*{: .prop}
+> The area of the infinitesimal parallelogram whose sides are the coordinate curves is
+>
+> $$
+  dS = \left| {\partial \mathbf{r} \over \partial u} du \times {\partial \mathbf{r} \over \partial v} dv \right|
+  = \left| {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v} \right| \,du \,dv
+  = |\mathbf{n}| \,du \,dv
+  $$
+
+> *Definition.*{: .def}
+> A parameterisation is **regular** if $\mathbf{n} \not= 0$ anywhere on the surface.
+
+> *Definition.*{: .def}
+> A surface $S$ can have a **boundary** which is a piecewise smooth closed curve, denoted by $\partial S$.
+
+For example, a sphere truncated by the $z = 0$ plane has boundary $x^2 + y^2 = R^2$ in the $z = 0$ plane.
+
+> *Proposition.*{: .prop}
+> The boundary of a boundary has no boundary, i.e. $\partial^2 = 0$.
+
+> *Definition.*{: .def}
+> A surface is **bounded** if it can be contained within some solid sphere of fixed radius, otherwise it is **unbounded**.
+
+> *Definition.*{: .def}
+> A bounded surface with no boundary is **closed**.
+
 ## References
 
-* David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.1
-* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10.3
+* David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.1, 2.2
+* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10.3, 10.5

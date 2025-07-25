@@ -1,13 +1,17 @@
 ---
 layout: base
-title: Line Integrals &#124; Vector Calculus
+title: Line and Surface Integrals &#124; Vector Calculus
 ---
 
-# Line Integrals
+# Line and Surface Integrals
 {: .page-title}
 
+It is often to consider the integration of scalar or vector fields along lines, over surfaces and throughout volumes.
+
+## Line Integrals
+
 > *Definition.*{: .def}
-> Line integrals is the integration of some quantity related to a scalar/vector field
+> Line integral is the integration of some quantity related to a scalar/vector field
 > between two given points, $A$ and $B$, in space along a prescribed curve $C$ that joins them.
 > In general, they will be of the forms
 >
@@ -34,13 +38,13 @@ By convention, it is usually taken to be such that the region $R$ is on the left
 > In case of orthonormal basis, since $d\mathbf{r} = dx^i \mathbf{e}_i$, we have
 >
 > $$
-  \int_C \phi \,d\mathbf{r} = \left( \int_C \phi \, dx^i \right) \mathbf{e}_i
+  \int_C \phi(\mathbf{r}) \,d\mathbf{r} = \left( \int_C \phi(\mathbf{r}) \, dx^i \right) \mathbf{e}_i
   $$
 >
 > Suppose that the vector field $\mathbf{F} = F^i \mathbf{e}_i$. Then
 >
 > $$
-  \int_C \mathbf{F} \cdot d\mathbf{r} = \int_C F_i \, dx_i
+  \int_C \mathbf{F}(\mathbf{r}) \cdot d\mathbf{r} = \int_C F_i(\mathbf{r}) \, dx_i
   $$
 >
 > and similarily procedure can be followed for the integral involving cross product.
@@ -134,7 +138,48 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
 > *Corollary.*{: .cor}
 > A differential is **exact** iff the vector field is conservative.
 
+## Surface Integrals
+
+> *Definition.*{: .def}
+> Surface integral is the integration of some quantity related to a scalar/vector field over a surface.
+> In general, they will be of the forms
+>
+> $$
+  \int_S \phi \,dS \qquad \int_S \phi \,d\mathbf{S} \qquad \int_S \mathbf{F} \cdot d\mathbf{S} \qquad \int_S \mathbf{F} \times d\mathbf{S}
+  $$
+>
+> where $\phi$ is a scalar field and $\mathbf{F}$ is a vector field.
+> The integrals themselves are respectively scalar, vector, scalar and vector in nature.
+
+> *Definition.*{: .def}
+> If $S$ is closed, the line integral will be written as
+>
+> $$
+  \oint_S \mathbf{F} \cdot d\mathbf{S}
+  $$
+
+> *Definition.*{: .def}
+> The vector differential $d\mathbf{S}$ represents a vector area element of the surface $S$ and can also be written as
+>
+> $$
+  d\mathbf{S} = \mathbf{n} \,dS
+  $$
+>
+> in which $\mathbf{n}$ is the _unit normal_.
+> For closed surface, the direction of $\mathbf{n}$ should be pointing outwards.
+> For open surface, it is given by the right-hand sense with respect to the direction in which the perimeter is traversed.
+
+![Normal Directions](../images/vector-calculus-surface-integral-normal-direction.png){: .size-2x}
+
+> *Proposition.*{: .prop}
+> Suppose that $\phi$ is a scalar field and $S$ is a surface parameterised by $\mathbf{r}(u, v)$.
+> Then the surface integral is given by
+>
+> $$
+  \int_S \phi(\mathbf{r}) \,dS = \iint_R du\,dv \left| {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v} \right| \phi(\mathbf{r})
+  $$
+
 ## References
 
-* David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.2, 1.3
-* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 11.1, 11.4
+* David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.2, 1.3, 2.2
+* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 11.1, 11.4, 11.5, 11.6
