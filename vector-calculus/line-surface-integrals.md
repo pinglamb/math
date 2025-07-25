@@ -179,6 +179,49 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
   \int_S \phi(\mathbf{r}) \,dS = \iint_R du\,dv \left| {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v} \right| \phi(\mathbf{r})
   $$
 
+> *Proposition.*{: .prop}
+> Suppose that $\mathbf{F}$ is a vector field and $S$ is a surface parameterised by $\mathbf{r}(u, v)$.
+> Then the scalar surface integral is given by
+>
+> $$
+  \int_S \mathbf{F}(\mathbf{r}) \cdot d\mathbf{S} = \int_S \mathbf{F}(\mathbf{r}) \cdot \mathbf{n} \,dS
+  = \iint_R du\,dv \left( {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v} \right) \cdot \mathbf{F}(\mathbf{r})
+  $$
+>
+> This is called the **flux** of $\mathbf{F}$ through $S$.
+
+> *Proposition.*{: .prop}
+> Surface integral is independent of the choice of parameterisation of the surface.
+
+Sometimes, it is not possible to represent the surface in a simple way in any particular coordinate system (i.e. cannot be parameterised).
+In such cases, we have to consider the projections of the surface onto the Cartesian coordinate planes.
+
+> *Proposition.*{: .prop}
+> Suppose that $S$ is a surface given by the equation $f(x, y, z) = 0$, then
+>
+> $$
+  dS = {|\nabla f| \over \partial f / \partial z} dA
+  $$
+>
+> *Proof.*{: .prf}
+>
+> ![Surface Integral Projection](../images/vector-calculus-surface-integral-projection.png)
+>
+> The unit normal at any point of the surface is given by $\mathbf{n} = \nabla f / \vert \nabla f \vert$.
+>
+> Hence,
+>
+> $$
+  dS = {dA \over |\cos \alpha|} = {dA \over |\mathbf{n} \cdot \mathbf{k}|} = { |\nabla f| \,dA \over \nabla f \cdot \mathbf{k} } = {|\nabla f| \over \partial f / \partial z} dA
+  $$
+
+> *Definition.*{: .def}
+> The **vector area** of a surface $S$ is defined as
+>
+> $$
+  \mathbf{S} = \int_S d\mathbf{S}
+  $$
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.2, 1.3, 2.2
