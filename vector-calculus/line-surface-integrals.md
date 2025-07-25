@@ -222,6 +222,21 @@ In such cases, we have to consider the projections of the surface onto the Carte
   \mathbf{S} = \int_S d\mathbf{S}
   $$
 
+## Volume Integrals
+
+> *Definition.*{: .def}
+> Volume integral is the integration of some quantity related to a scalar/vector field throughout a volume.
+> In general, they will be of the forms
+>
+> $$
+  \int_V \phi \,dV \qquad \int_V \mathbf{F} \,dV
+  $$
+>
+> where $\phi$ is a scalar field and $\mathbf{F}$ is a vector field.
+> The integrals themselves are respectively scalar and vector in nature.
+
+For example, $\int_V \rho(\mathbf{r}) \,dV$ is the total mass of a fluid contained in a volume $V$ and $\int_V \rho(\mathbf{r}) \mathbf{v}(\mathbf{r}) \,dV$ is the total linear momentum of that.
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.2, 1.3, 2.2
