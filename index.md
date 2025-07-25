@@ -10,10 +10,8 @@ title: Home
 * [Differential Operators](vector-calculus/differential-operators.md)
 * [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Polar Coordinate Systems](vector-calculus/polar-coordinates.md)
-* [Curves](vector-calculus/curves.md)
-* [Surfaces](vector-calculus/surfaces.md)
-* [Line Integrals](vector-calculus/line-integrals.md)
-* [Surface and Volume Integrals](vector-calculus/surface-integrals.md)
+* [Curves and Surfaces](vector-calculus/curves-surfaces.md)
+* [Line and Surface Integrals](vector-calculus/line-surface-integrals.md)
 * [Integral Theorems](vector-calculus/integral-theorems.md)
 
 ## Analysis
