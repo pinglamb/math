@@ -77,10 +77,7 @@ By treating $\nabla$ as an vector and an operator that is waiting for a function
   $$
 
 > *Definition.*{: .def}
-> The **Jacobian** matrix of a vector field $\mathbf{F}(\mathbf{x})$ is defined by $T_{ij} = \partial_j F_i$.
-
-> *Proposition.*{: .prop}
-> The divergence is the trace of the Jacobian matrix, i.e. $\nabla \cdot \mathbf{F} = T_{ii}$.
+> A vector field $\mathbf{F}$ is **solenoidal** if $\nabla \cdot \mathbf{F} = 0$.
 
 > *Definition.*{: .def}
 > The **curl** of a vector field $\mathbf{F}: \mathbf{R}^3 \to \mathbf{R}^3$ is a vector field defined by
@@ -95,6 +92,43 @@ By treating $\nabla$ as an vector and an operator that is waiting for a function
      F_x & F_y & F_k \\
      \end{vmatrix} \\
   &= (\partial_y F_z - \partial_z F_y, \partial_z F_x - \partial_x F_z, \partial_x F_y - \partial_y F_x)
+  \end{align*}
+  $$
+
+## Basic Properties
+
+> *Property.*{: .prop}
+> **[Linearity]**
+> Suppose that $\phi$ and $\psi$ are scalar fields and $\mathbf{F}$ and $\mathbf{G}$ are vector fields and $\lambda, \mu \in \mathbf{R}$. Then
+>
+> $$
+  \begin{align*}
+  \nabla (\lambda \phi + \mu \psi) &= \lambda(\nabla \phi) + \mu(\nabla \psi) \\
+  \nabla \cdot (\lambda \mathbf{F} + \mu \mathbf{G}) &= \lambda(\nabla \cdot \mathbf{F}) + \mu(\nabla \cdot \mathbf{G}) \\
+  \nabla \times (\lambda \mathbf{F} + \mu \mathbf{G}) &= \lambda(\nabla \times \mathbf{F}) + \mu(\nabla \times \mathbf{G}) \\
+  \end{align*}
+  $$
+
+> *Property.*{: .prop}
+> **[Leibniz Property]**
+> Suppose that $\phi$ and $\psi$ are scalar fields and $\mathbf{F}$ is a vector field. Then
+>
+> $$
+  \begin{align*}
+  \nabla (\phi \psi) &= (\nabla \phi)\psi + \phi (\nabla \psi) \\
+  \nabla \cdot (\phi \mathbf{F}) &= (\nabla \phi) \cdot \mathbf{F} + \phi(\nabla \cdot \mathbf{F}) \\
+  \nabla \times (\phi \mathbf{F}) &= (\nabla \phi) \times \mathbf{F} + \phi(\nabla \times \mathbf{F}) \\
+  \end{align*}
+  $$
+
+> *Property.*{: .prop}
+> Suppose that $\mathbf{F}$ and $\mathbf{G}$ are vector fields. Then
+>
+> $$
+  \begin{align*}
+  \nabla \cdot (\mathbf{F} \times \mathbf{G}) &= (\nabla \times \mathbf{F}) \cdot \mathbf{G} - \mathbf{F} \cdot (\nabla \times \mathbf{G}) \\
+  \nabla \times (\mathbf{F} \times \mathbf{G}) &= (\nabla \cdot \mathbf{G}) \mathbf{F} - (\nabla \cdot \mathbf{F}) \mathbf{G} + (\mathbf{G} \cdot \nabla) \mathbf{F} - (\mathbf{F} \cdot \nabla) \mathbf{G} \\
+  \nabla (\mathbf{F} \cdot \mathbf{G}) &= \mathbf{F} \times (\nabla \times \mathbf{G}) + \mathbf{G} \times (\nabla \times \mathbf{F}) + (\mathbf{F} \cdot \nabla) \mathbf{G} + (\mathbf{G} \cdot \nabla) \mathbf{F} \\
   \end{align*}
   $$
 
