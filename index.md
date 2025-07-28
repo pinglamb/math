@@ -7,10 +7,10 @@ title: Home
 {: .left}
 
 * [Vector Functions](vector-calculus/vector-functions.md)
+* [Curves and Surfaces](vector-calculus/curves-surfaces.md)
 * [Differential Operators](vector-calculus/differential-operators.md)
 * [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Polar Coordinate Systems](vector-calculus/polar-coordinates.md)
-* [Curves and Surfaces](vector-calculus/curves-surfaces.md)
 * [Line and Surface Integrals](vector-calculus/line-surface-integrals.md)
 * [Integral Theorems](vector-calculus/integral-theorems.md)
 

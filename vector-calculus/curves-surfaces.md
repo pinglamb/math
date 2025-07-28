@@ -252,6 +252,14 @@ For example, a sphere truncated by the $z = 0$ plane has boundary $x^2 + y^2 = R
 > *Definition.*{: .def}
 > A bounded surface with no boundary is **closed**.
 
+## Scalar and Vector Fields
+
+> *Definition.*{: .def}
+> A **scalar field** is a map $\phi: \mathbb{R}^n \to \mathbb{R}$, usually denote as $\phi(\mathbf{x})$.
+
+> *Definition.*{: .def}
+> A **vector field** is a map $\mathbf{F}: \mathbb{R}^n \to \mathbb{R}^n$, usually denote as $\mathbf{F}(\mathbf{x})$.
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.1, 2.2
