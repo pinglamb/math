@@ -31,16 +31,31 @@ there are infinitely many routes for $\mathbf{x}$ to approach $\mathbf{a}$ and t
 
 Similarily, all routes have to agree so for $\mathbf{f}$ to be continuous.
 
+## Vector Functions of One Variable
+
 > *Definition.*{: .def}
 > Suppose $\mathbf{f}(x)$ is a vector function from $\mathbb{R}$ to $\mathbb{R}^n$.
-> The **derivative** of $\mathbf{f}(x)$ at $a$ is defined as
+> The **derivative**/**tangent vector** of $\mathbf{f}(x)$ at $a$ is defined as
 >
 > $$
   \mathbf{f'}(a) = \lim_{x \to a} {\mathbf{f}(x) - \mathbf{f}(a) \over x - a}
   $$
 
+Alternatively, we can generalize the concept of linear approximation in [differentiability of scalar function](../analysis/differentiability.md#differentiability-linear-approximation).
+
+> *Definition.*{: .def}
+> A vector function $\mathbf{f}(x)$ is **differentiable** at $a$ iff we can write
+>
+> $$
+  \mathbf{f}(x + h) = \mathbf{f}(x) + \mathbf{f'}(x)h + o(h)
+  $$
+
 > *Proposition.*{: .prop}
-> Let $\mathbf{f} = f_i \mathbf{e}_i$. Then $\mathbf{f'}(a) = (f_1'(a), f_2'(a), ..., f_n'(a))$.
+> Let $\mathbf{f} = f_i \mathbf{e}_i$, with $\Set{\mathbf{e}_i}$ being the basis vectors independent of $x$. Then
+>
+> $$
+  \mathbf{f'}(a) = (f_1'(a), f_2'(a), ..., f_n'(a))
+  $$
 >
 > *Proof.*{: .prf}
 >
@@ -48,6 +63,23 @@ Similarily, all routes have to agree so for $\mathbf{f}$ to be continuous.
   \mathbf{f'}(a) = \lim_{x \to a} {f_i(x) \mathbf{e}_i - f_i(a) \mathbf{e}_i \over x - a}
   = {df_i \over dx}(a) \mathbf{e}_i = (f_1'(a), f_2'(a), ..., f_n'(a))
   $$
+
+> *Definition.*{: .def}
+> The **differential** of a vector function, denoted by $d\mathbf{f}$, is defined as
+>
+> $$
+  d\mathbf{f} = {d\mathbf{f} \over dx} dx
+  $$
+
+> *Definition.*{: .def}
+> The integration of a vector function with respect to a scalar can be regarded as the inverse of differentiation,
+> i.e. if $\mathbf{f}(x) = d\mathbf{F}/dx$, then
+>
+> $$
+  \int_a^b \mathbf{f}(x) \,dx = \mathbf{F}(b) - \mathbf{F}(a)
+  $$
+>
+> in which the integral is also a vector.
 
 ## References
 
