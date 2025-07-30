@@ -81,6 +81,38 @@ Alternatively, we can generalize the concept of linear approximation in [differe
 >
 > in which the integral is also a vector.
 
+## Partial and Directional Derivatives
+
+Before discussing differentiability of functions of several variables, we need to introduce more tools.
+
+> *Definition.*{: .def}
+> For $\mathbf{f}: \mathbb{R}^m \to \mathbb{R}^n$, the $j$th **partial derivative** of $\mathbf{f}$ at $\mathbf{a}$ is
+>
+> $$
+  {\partial \mathbf{f} \over \partial x_j} = \partial_j \mathbf{f}(\mathbf{a})
+  = \lim_{h_j \to 0} {\mathbf{f}(a_1, ..., a_j + h_j, ..., a_m) - \mathbf{f}(a_1, ..., a_j, ..., a_m) \over h_j}
+  $$
+>
+> whenever the limit exists.
+
+The idea can be generalized to directions other than parallel to the basis vectors.
+
+> *Definition.*{: .def}
+> For $\mathbf{f}: \mathbb{R}^m \to \mathbb{R}^n$, the **directional derivative** of $\mathbf{f}$ at $\mathbf{a}$ in the direction $\mathbf{u}$, where $\mathbf{u}$ is a unit vector, is
+>
+> $$
+  D_{\mathbf{u}}(\mathbf{a}) = \lim_{h \to 0} {\mathbf{f}(\mathbf{a} + h\mathbf{u}) - \mathbf{f}(\mathbf{a}) \over h}
+  $$
+>
+> whenever the limit exists
+
+> *Proposition.*{: .prop}
+> The existence of partial/directional derivatives does not imply differentiability and continuity.
+
+## Vector Functions of Several Variables
+
+## Chain Rule
+
 ## References
 
 * Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 1
