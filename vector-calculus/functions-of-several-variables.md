@@ -233,6 +233,41 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 
 ## Chain Rule
 
+> *Proposition.*{: .prop}
+> For functions $\mathbf{x}(u): \mathbb{R} \to \mathbb{R}^m$ and $f: \mathbf{R}^m \to \mathbf{R}$,
+>
+> $$
+  {d \over du} f(\mathbf{x}(u)) = {\partial f \over \partial x_j} {d x_j \over du}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> When $m = 2$ and let $\mathbf{x} = (x, y)$, we have
+>
+> $$
+  \begin{align*}
+  {d \over du} f(x, y) &= \lim_{\Delta u \to 0} {f(x + \Delta x, y + \Delta y) - f(x, y) \over \Delta u} \\
+  &= \lim_{\Delta u \to 0} {f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) \over \Delta x} {\Delta x \over \Delta u} + {f(x, y + \Delta y) - f(x, y) \over \Delta y} {\Delta y \over \Delta u} \\
+  &= {\partial f \over \partial x} {dx \over du} + {\partial f \over \partial y} {dy \over du}
+  \end{align*}
+  $$
+>
+> where we have written $x(t + \Delta t) = x(t) + \Delta x(t)$.
+
+> *Proposition.*{: .prop}
+> For functions $\mathbf{x}(\mathbf{u}): \mathbb{R}^\ell \to \mathbb{R}^m$ and $f: \mathbf{R}^m \to \mathbf{R}$, where $\mathbf{u} = (u_1, ..., u_\ell)$,
+>
+> $$
+  {\partial \over \partial u_k} f(\mathbf{x}(\mathbf{u})) = {\partial f \over \partial x_j} {\partial x_j \over \partial u_k}
+  $$
+
+> *Proposition.*{: .prop}
+> For functions $\mathbf{x}(\mathbf{u}): \mathbb{R}^\ell \to \mathbb{R}^m$ and $\mathbf{f}: \mathbf{R}^m \to \mathbf{R}^n$, where $\mathbf{u} = (u_1, ..., u_\ell)$,
+>
+> $$
+  \left({\partial \mathbf{f} \over \partial u_k}\right)_i = {\partial \over \partial u_k} f_i(\mathbf{x}(\mathbf{u})) = {\partial f_i \over \partial x_j} {\partial x_j \over \partial u_k}
+  $$
+
 ## References
 
 * Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 1
