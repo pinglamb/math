@@ -3,16 +3,20 @@ layout: base
 title: Curves and Surfaces &#124; Vector Calculus
 ---
 
-# Curves and Surfaces
+# Curves, Surfaces and Fields
 {: .page-title}
+
+Instead of being too abstract, it is better to concentrate the discussion on $\mathbb{R}^3$ first in which we can develop many useful properties that can be applied to other subjects like physics.
+In $\mathbf{R}^3$, some of the scalar/vector functions are of greater importance as they can be used to model real world quantities.
+In case we care, the extensions to $\mathbf{R}^m$ is straightforward.
 
 ## Curves
 
 > *Definition.*{: .def}
-> A **parameterised curve** $C$ is a map of the form $\mathbf{r}: \mathbb{R} \to \mathbb{R}^3$.
+> A **parameterised curve** $C$ is a vector function of the form $\mathbf{r}: \mathbb{R} \to \mathbb{R}^3$.
 
-We can also represent a surface by $y = f(x)$ and $z = g(x)$ or $F(x, y z) = 0$ and $G(x, y, z) = 0$ in which the curve is the intersection of two planes.
-We can convert them into parametric form by for example, having
+We can also represent a curve implicitly by $(x, f(x), g(x))$ or as intersection of two planes $F(x, y, z) = 0$ and $G(x, y, z) = 0$.
+We can easily convert them into parametric form by for example, having
 
 $$
 \mathbf{r}(u) = u \mathbf{i} + f(u) \mathbf{j} + g(u) \mathbf{k}
@@ -39,16 +43,16 @@ represents the same helix. Some of the properties depend on the parameterisation
 >
 > *Proof.*{: .prf}
 >
-> Consider an infinitesimal vector displacement
+> For the curve $\mathbf{r}(u)$, consider an infinitesimal vector displacement
 >
 > $$
-  d\mathbf{r} = dx^i e_i
+  d\mathbf{r} = dx \,\mathbf{i} + dy \,\mathbf{j} + dz \,\mathbf{k}
   $$
 >
 > along the curve. The square of the infinitesimal distance moved is then given by
 >
 > $$
-  (ds)^2 = dx^idx^i = d\mathbf{r} \cdot d\mathbf{r}
+  (ds)^2 = (dx)^2 + (dy)^2 + (dz)^2 = dx_ix_i = d\mathbf{r} \cdot d\mathbf{r}
   $$
 >
 > and therefore
