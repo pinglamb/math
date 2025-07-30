@@ -65,7 +65,7 @@ Alternatively, we can generalize the concept of linear approximation in [differe
   $$
 
 > *Definition.*{: .def}
-> The **differential** of a vector function $f: \mathbf{R} \to \mathbf{R}^n$, denoted by $d\mathbf{f}$, is defined as
+> The **differential** of a vector function $f: \mathbf{R} \to \mathbf{R}^n$ is given by
 >
 > $$
   d\mathbf{f} = {d\mathbf{f} \over dx} dx
@@ -229,6 +229,13 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
   \vdots & \vdots & \ddots & \vdots \\
   \dfrac{\partial f_n}{\partial x_1} & \dfrac{\partial f_n}{\partial x_2} & \cdots & \dfrac{\partial f_n}{\partial x_m} \\
   \end{pmatrix}
+  $$
+
+> *Definition.*{: .def}
+> The **differential** of a vector function $f: \mathbf{R}^m \to \mathbf{R}^n$ is given by
+>
+> $$
+  d\mathbf{f} = {\partial \mathbf{f} \over \partial x_i} dx_i
   $$
 
 ## Chain Rule
