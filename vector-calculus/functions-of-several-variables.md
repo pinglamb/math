@@ -65,7 +65,7 @@ Alternatively, we can generalize the concept of linear approximation in [differe
   $$
 
 > *Definition.*{: .def}
-> The **differential** of a vector function, denoted by $d\mathbf{f}$, is defined as
+> The **differential** of a vector function $f: \mathbf{R} \to \mathbf{R}^n$, denoted by $d\mathbf{f}$, is defined as
 >
 > $$
   d\mathbf{f} = {d\mathbf{f} \over dx} dx
@@ -141,6 +141,28 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
   $$
 >
 > is a tangent plane touching the surface at the point $(a, b, f(a, b))$.
+
+> *Proposition.*{: .prop}
+> The **total differential** of a function $f: \mathbf{R}^2 \to \mathbf{R}$ is given by
+>
+> $$
+  d\mathbf{f} = {\partial f \over \partial x} dx + {\partial f \over \partial y} dy
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Consider the rate of change of $f$ in an arbitrary direction, we can express the change of $f$ as
+>
+> $$
+  \begin{align*}
+  \Delta f &= f(x + \Delta x, y + \Delta y) - f(x, y) \\
+  &= f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) + f(x, y + \Delta y) - f(x, y) \\
+  &= \left[ {f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) \over \Delta x} \right] \Delta x + \left[ {f(x, y + \Delta y) - f(x, y) \over \Delta y} \right] \Delta y \\
+  &\approx {\partial f \over \partial x} \Delta x + {\partial f \over \partial y} \Delta y
+  \end{align*}
+  $$
+>
+> with the first term replaced from $\partial f(x, y + \Delta y) / \partial x$ to $\partial f(x, y) / \partial x$.
 
 ## Vector Functions of Several Variables
 
