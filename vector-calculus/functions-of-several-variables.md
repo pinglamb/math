@@ -109,6 +109,39 @@ The idea can be generalized to directions other than parallel to the basis vecto
 > *Proposition.*{: .prop}
 > The existence of partial/directional derivatives does not imply differentiability and continuity.
 
+## Scalar Functions of Two Variables
+
+> *Definition.*{: .def}
+> A function $f(x, y): \mathbf{R}^2 \to \mathbf{R}$ is **differentiable** at $(a, b)$ if
+>
+> $$
+  f(a + h, b + k) = f(a, b) + T_xh + T_yk + o(|h| + |k|)
+  $$
+>
+> where $T_x$ and $T_y$ are independent of $h$ or $k$.
+
+Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h^2 + k^2})$.
+
+> *Proposition.*{: .prop}
+> $T_x = \partial_x f$ and $T_y = \partial_y f$.
+>
+> *Proof.*{: .prf}
+>
+> Let $h \to 0$ with $k = 0$ and from the definition of partial derivative, we have
+>
+> $$
+  T_x = \lim_{h \to 0} {f(a + h, b) - f(a, b) \over h} = \partial_x f
+  $$
+
+> *Proposition.*{: .prop}
+> Let $z = f(x, y)$ which defines a surface. Then
+>
+> $$
+  z = f(a, b) + [\partial_x f(a, b)](x - a) + [\partial_y f(a, b)](y - b)
+  $$
+>
+> is a tangent plane touching the surface at the point $(a, b, f(a, b))$.
+
 ## Vector Functions of Several Variables
 
 ## Chain Rule
