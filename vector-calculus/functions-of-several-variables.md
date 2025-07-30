@@ -199,6 +199,38 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 
 ## Vector Functions of Several Variables
 
+> *Definition.*{: .def}
+> A function $\mathbf{f}: \mathbf{R}^m \to \mathbf{R}^n$ is **differentiable** at $\mathbf{a} \in \mathbf{R}^m$ if for all $\mathbf{h} \in \mathbf{R}^m$
+>
+> $$
+  \mathbf{f}(\mathbf{a} + \mathbf{h}) = \mathbf{f}(\mathbf{a}) + \mathsf{T}\mathbf{h} + o(\mathbf{h})
+  $$
+>
+> where $\mathsf{T}$ is a $n \times m$ matrix that is independent of $\mathbf{h}$.
+
+> *Proposition.*{: .prop}
+> $T_{ij} = \partial_j f_i$.
+>
+> *Proof.*{: .prf}
+>
+> Similarily, by considering the special case $\mathbf{h} = (0, 0, ..., h_j, 0, ..., 0)$,
+>
+> $$
+  T_{ij} = \lim_{h_j \to 0} {f_i(a_1, ..., a_j + h_j, ..., a_m) - f_i(a_1, ..., a_j, ..., a_m) \over h_j} = \partial_j f_i
+  $$
+
+> *Definition.*{: .def}
+> The $n \times m$ **Jacobian matrix** $\mathsf{T}$ is defined by
+>
+> $$
+  \mathsf{T} = \begin{pmatrix}
+  \dfrac{\partial f_1}{\partial x_1} & \dfrac{\partial f_1}{\partial x_2} & \cdots & \dfrac{\partial f_1}{\partial x_m} \\
+  \dfrac{\partial f_2}{\partial x_1} & \dfrac{\partial f_2}{\partial x_2} & \cdots & \dfrac{\partial f_2}{\partial x_m} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  \dfrac{\partial f_n}{\partial x_1} & \dfrac{\partial f_n}{\partial x_2} & \cdots & \dfrac{\partial f_n}{\partial x_m} \\
+  \end{pmatrix}
+  $$
+
 ## Chain Rule
 
 ## References
