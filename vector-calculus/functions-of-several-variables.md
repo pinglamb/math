@@ -164,6 +164,39 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 >
 > with the first term replaced from $\partial f(x, y + \Delta y) / \partial x$ to $\partial f(x, y) / \partial x$.
 
+> *Proposition.*{: .prop}
+> The directional derivative in the direction $\mathbf{u} = (u_x, u_y)$ is given by
+>
+> $$
+  D_\mathbf{u} f(a, b) = [\partial_x f(a, b)] u_x + [\partial_y f(a, b)] u_y
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By definition, the directional derivative of $f$ at $\mathbf{x} = (a, b)$ in the direction $\mathbf{u}$ is
+>
+> $$
+  D_\mathbf{u}(\mathbf{x}) = \lim_{t \to 0} {f(\mathbf{x} + t\mathbf{u}) - f(\mathbf{x}) \over t} = \lim_{t \to 0} {f(a + tu_x, b + tu_y) - f(a, b) \over t}
+  $$
+>
+> As $f$ is differentiable at $(a, b)$ and let $h = tu_x$ and $k = tu_y$, we have
+>
+> $$
+  f(a + tu_x, b + tu_y) = f(a, b) + T_x tu_x + T_y tu_y + o(\sqrt{(tu_x)^2 + (tu_y)^2})
+  $$
+>
+> Since $\mathbf{u}$ is a unit vector, $o(\sqrt{(tu_x)^2 + (tu_y)^2}) = o(\vert t \vert \sqrt{(u_x)^2 + (u_y)^2}) = o(\vert t \vert)$ and so
+>
+> $$
+  f(a + tu_x, b + tu_y) = f(a, b) + (T_x u_x + T_y u_y)t + o(|t|)
+  $$
+>
+> and hence
+>
+> $$
+  D_\mathbf{u}(a, b) = T_x u_x + T_y u_y = [\partial_x f(a, b)]u_x + [\partial_y f(a, b)]u_y
+  $$
+
 ## Vector Functions of Several Variables
 
 ## Chain Rule
