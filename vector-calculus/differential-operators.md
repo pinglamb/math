@@ -13,7 +13,7 @@ Central to all these differential operations is the following vector operator.
 > The vector operator **del/nabla**, denoted by $\nabla$, in Cartesian coordinate systems is defined by
 >
 > $$
-  \nabla \cong {\partial \over \partial x^i} \mathbf{e}_i
+  \nabla \cong \mathbf{e}_j{\partial \over \partial x_j}
   $$
 
 ## Gradient
@@ -21,49 +21,75 @@ Central to all these differential operations is the following vector operator.
 We start with differentiating a scalar field and assume we are working with Cartesian coordinates.
 
 > *Definition.*{: .def}
-> The **gradient** of a scalar field $\phi$ is a vector field defined by
+> The **gradient** of a scalar field $\phi: \mathbb{R}^m \to \mathbb{R}$ is a vector field defined by
 >
 > $$
-  \text{grad} \,\phi = \nabla \phi \cong { \partial \phi \over \partial x^i } \mathbf{e}_i
+  \text{grad} \,\phi = \nabla \phi \cong \mathbf{e}_j { \partial \phi \over \partial x_j }
+  = \left({\partial \phi \over \partial x_1}, {\partial \phi \over \partial x_2}, ..., {\partial \phi \over \partial x_m} \right)
   $$
 
 > *Proposition.*{: .prop}
-> Suppose that $\mathbf{r}(u)$ is a curve and $\phi$ is a scalar field, then
+> The directional derivative of $\phi$ in the direction of $\mathbf{u}$ is given by
 >
 > $$
-  {d\phi \over du} = \nabla \phi \cdot {d \mathbf{r} \over du}
+  D_\mathbf{u} \,\phi = \nabla \phi \cdot \mathbf{u}
   $$
 >
 > *Proof.*{: .prf}
 >
-> For an infinitesimal vector displacement $d\mathbf{r}$, we have
+> The [directional derivative](functions-of-several-variables.md#directional-derivative-as-partial) is given by
 >
 > $$
-  \nabla \phi \cdot d\mathbf{r} = ({ \partial \phi \over \partial x^i } \mathbf{e}_i) \cdot (dx^j \mathbf{e}_j) = { \partial \phi \over \partial x^i } dx^i = d\phi
+  D_\mathbf{u} \,\phi = {\partial \phi \over \partial x_j} u_j = \mathbf{e_j} {\partial \phi \over \partial x_j} \mathbf{e_i} \,u_i = \nabla \phi \cdot \mathbf{u}
+  $$
+
+> *Corollary.*{: .cor}
+> $\nabla \phi$ lies in the direction of the fastest rate of increase in $\phi$.
+> The largest rate of decrease of $\phi$ is in the direction of $-\nabla \phi$.
+
+> *Proposition.*{: .prop}
+> Suppose that $\mathbf{r}(u)$ is a curve and $\phi: \mathbb{R}^m \to \mathbb{R}$ is a scalar field,
+> then the derivative of $\phi(\mathbf{r}(u))$ along the curve is given by
+>
+> $$
+  {d \over du} \phi(\mathbf{r}(u)) = \nabla \phi \cdot {d \mathbf{r} \over du}
   $$
 >
-> which is the infinitesimal change of $\phi$ in going from position $\mathbf{r}$ to $\mathbf{r} + d\mathbf{r}$ along the curve.
+> If the parameter is the arc length $s$ then $d\phi/ds = \nabla \phi \cdot \mathbf{t}$.
+>
+> *Proof.*{: .prf}
+>
+> By chain rule,
+>
+> $$
+  {d \over du} \phi(\mathbf{r}(u)) = {\partial \phi \over \partial x_j} {dx_j \over du}
+  $$
+>
+> By definition,
+>
+> $$
+  {d\mathbf{r} \over du} = \mathbf{e}_j {dx_j \over du}
+  $$
 >
 > Hence,
 >
 > $$
-  {d\phi \over du} = \nabla \phi \cdot {d\mathbf{r} \over du}
+  \nabla \phi \cdot {d\mathbf{r} \over du} = \mathbf{e}_j {\partial f \over \partial x_j} \mathbf{e}_i {dx_i \over du}
+  = \delta_{ij} {\partial f \over \partial x_j} {dx_i \over du} = {\partial f \over \partial x_j} {dx_j \over du} = {d \over du} \phi(\mathbf{r}(u))
   $$
->
-> and if the parameter is the arc length $s$ along the curve then
+
+> *Proposition.*{: .prop}
+> The differential $d\phi$ along the curve $\mathbf{r}(u)$ is given by
 >
 > $$
-  {d\phi \over ds} = \nabla \phi \cdot \mathbf{t}
+  d\phi = \nabla \phi \cdot d\mathbf{r}
   $$
-
-In the discussion of [directional derivatives](../differential-equations/directional-derivatives.md),
-the rate of change of scalar field $\phi$ in a given direction $\mathbf{u}$ is given by
-
-$$
-D_{\mathbf{u}} \phi = \nabla \phi \cdot \mathbf{u}
-$$
-
-and therefore the vector $\nabla \phi(\mathbf{x})$ is pointing in the direction in which $\phi(\mathbf{x})$ changes most quickly.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \nabla \phi \cdot d\mathbf{r} = \mathbf{e}_j {\partial f \over \partial x_j} \mathbf{e}_i \,dx_i = d\phi
+  $$
 
 ## Divergence and Curl
 

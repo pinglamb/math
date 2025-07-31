@@ -7,7 +7,7 @@ title: Home
 {: .left}
 
 * [Functions of Several Variables](vector-calculus/functions-of-several-variables.md)
-* [Curves and Surfaces](vector-calculus/curves-surfaces.md)
+* [Curves, Surfaces and Fields](vector-calculus/curves-surfaces-fields.md)
 * [Differential Operators](vector-calculus/differential-operators.md)
 * [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Polar Coordinate Systems](vector-calculus/polar-coordinates.md)

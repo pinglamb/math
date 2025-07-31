@@ -196,6 +196,7 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 > $$
   D_\mathbf{u}(a, b) = T_x u_x + T_y u_y = [\partial_x f(a, b)]u_x + [\partial_y f(a, b)]u_y
   $$
+{: #directional-derivative-as-partial}
 
 ## Vector Functions of Several Variables
 
@@ -235,7 +236,7 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 > The **differential** of a vector function $f: \mathbf{R}^m \to \mathbf{R}^n$ is given by
 >
 > $$
-  d\mathbf{f} = {\partial \mathbf{f} \over \partial x_i} dx_i
+  d\mathbf{f} = {\partial \mathbf{f} \over \partial x_j} dx_j
   $$
 
 ## Chain Rule

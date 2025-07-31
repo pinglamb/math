@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Curves and Surfaces &#124; Vector Calculus
+title: Curves, Surfaces and Fields &#124; Vector Calculus
 ---
 
 # Curves, Surfaces and Fields
@@ -52,7 +52,7 @@ represents the same helix. Some of the properties depend on the parameterisation
 > along the curve. The square of the infinitesimal distance moved is then given by
 >
 > $$
-  (ds)^2 = (dx)^2 + (dy)^2 + (dz)^2 = dx_ix_i = d\mathbf{r} \cdot d\mathbf{r}
+  (ds)^2 = (dx)^2 + (dy)^2 + (dz)^2 = dx_jx_j = d\mathbf{r} \cdot d\mathbf{r}
   $$
 >
 > and therefore
@@ -197,7 +197,7 @@ Note that the three vectors $\mathbf{t}$, $\mathbf{n}$ and $\mathbf{b}$ define a
 ## Surfaces
 
 > *Definition.*{: .def}
-> A **parameterised surface** $S$ is a map of the form $\mathbf{r}: \mathbb{R}^2 \to \mathbb{R}^3$.
+> A **parameterised surface** $S$ is a vector function of the form $\mathbf{r}: \mathbb{R}^2 \to \mathbb{R}^3$.
 
 We can also represent a surface by $z = f(x, y)$ or $F(x, y, z) = 0$ and convert them to parametric form by for example, having
 
@@ -217,6 +217,9 @@ $$
   $$
 >
 > It is the normal vector of the **tangent plane**.
+
+> *Definition.*{: .def}
+> A parameterisation is **regular** if $\mathbf{n} \not= 0$ anywhere on the surface.
 
 The sign of the normal vector determines what we mean by "outside" and "inside" the surface, and
 
@@ -240,9 +243,6 @@ The sign of the normal vector determines what we mean by "outside" and "inside" 
   $$
 
 > *Definition.*{: .def}
-> A parameterisation is **regular** if $\mathbf{n} \not= 0$ anywhere on the surface.
-
-> *Definition.*{: .def}
 > A surface $S$ can have a **boundary** which is a piecewise smooth closed curve, denoted by $\partial S$.
 
 For example, a sphere truncated by the $z = 0$ plane has boundary $x^2 + y^2 = R^2$ in the $z = 0$ plane.
@@ -258,13 +258,35 @@ For example, a sphere truncated by the $z = 0$ plane has boundary $x^2 + y^2 = R
 
 ## Scalar and Vector Fields
 
-> *Definition.*{: .def}
-> A **scalar field** is a map $\phi: \mathbb{R}^n \to \mathbb{R}$, usually denote as $\phi(\mathbf{x})$.
+We can also define a particular scalar or vector quantity continuously as a _field_ throughout some region of space.
 
 > *Definition.*{: .def}
-> A **vector field** is a map $\mathbf{F}: \mathbb{R}^n \to \mathbb{R}^n$, usually denote as $\mathbf{F}(\mathbf{x})$.
+> A **scalar field** is a scalar function of the form $\phi(\mathbf{x}): \mathbb{R}^3 \to \mathbb{R}$,
+> which associates a scalar with each point in space.
+
+> *Definition.*{: .def}
+> The **differential** $d\phi$ is given by
+>
+> $$
+  d\phi = {\partial f \over \partial x_j} dx_j
+  $$
+
+For example, the pressure at each point in a fluid is a scalar field.
+
+> *Definition.*{: .def}
+> A **vector field** is a vector function of the form $\mathbf{F}(\mathbf{x}): \mathbb{R}^3 \to \mathbb{R}^3$,
+> which associates a vector with each point in space.
+
+For example, the electric field is a vector field.
+
+> *Definition.*{: .def}
+> The **differential** $d\mathbf{F}$ is given by
+>
+> $$
+  d\mathbf{F} = {\partial \mathbf{F} \over \partial x_j} dx_j
+  $$
 
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.1, 2.2
-* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10.3, 10.5
+* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10.3, 10.5, 10.6
