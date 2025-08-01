@@ -91,19 +91,64 @@ We start with differentiating a scalar field and assume we are working with Cart
   \nabla \phi \cdot d\mathbf{r} = \mathbf{e}_j {\partial f \over \partial x_j} \mathbf{e}_i \,dx_i = d\phi
   $$
 
-## Divergence and Curl
+> *Property.*{: .prop}
+> **[Linearity]**
+> Suppose that $\phi$ and $\psi$ are scalar fields and $\lambda, \mu \in \mathbf{R}$. Then
+>
+> $$
+  \nabla (\lambda \phi + \mu \psi) = \lambda(\nabla \phi) + \mu(\nabla \psi)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \nabla (\lambda \phi + \mu \psi)
+  = \mathbf{e}_j \left[{\partial \over \partial x_j} (\lambda \phi + \mu \psi)\right]
+  = \lambda \left(\mathbf{e}_j {\partial \phi \over \partial x_j}\right) + \mu \left(\mathbf{e}_j {\partial \psi \over \partial x_j}\right)
+  = \lambda(\nabla \phi) + \mu(\nabla \psi)
+  $$
 
-By treating $\nabla$ as an vector and an operator that is waiting for a function to come along and be differentiated, we can see how it interacts with vector fields.
+## Divergence
+
+By treating $\nabla$ as an vector and an operator that is waiting for a function to come along and be differentiated, we can develop how it interacts with vector fields.
 
 > *Definition.*{: .def}
 > The **divergence** of a vector field $\mathbf{F}: \mathbb{R}^n \to \mathbb{R}^n$ is a scalar field defined by
 >
 > $$
-  \text{div} \,\phi = \nabla \cdot \mathbf{F} = (\mathbf{e}_i {\partial \over \partial x^i}) \cdot (\mathbf{e}_j F^j) = {\partial F^i \over \partial x^i}
+  \text{div} \,\phi = \nabla \cdot \mathbf{F} = (\mathbf{e}_i {\partial \over \partial x_i}) \cdot (\mathbf{e}_j \,F_j) = {\partial F_j \over \partial x_j}
   $$
+
+For a vector function $\mathbf{F}: \mathbf{R}^3 \to \mathbf{R}^3 = (F_1, F_2, F_3)$,
+
+$$
+\nabla \cdot \mathbf{F} = {\partial F_1 \over \partial x} + {\partial F_2 \over \partial y} + {\partial F_3 \over \partial z}
+$$
 
 > *Definition.*{: .def}
 > A vector field $\mathbf{F}$ is **solenoidal** if $\nabla \cdot \mathbf{F} = 0$.
+
+> *Proposition.*{: .prop}
+> The divergence of a vector field is the trace of its Jacobian matrix.
+
+> *Property.*{: .prop}
+> **[Linearity]**
+> Suppose that $\mathbf{F}$ and $\mathbf{G}$ are vector fields and $\lambda, \mu \in \mathbf{R}$. Then
+>
+> $$
+  \nabla \cdot (\lambda \mathbf{F} + \mu \mathbf{G}) = \lambda(\nabla \cdot \mathbf{F}) + \mu(\nabla \cdot \mathbf{G})
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \nabla \cdot (\lambda \mathbf{F} + \mu \mathbf{G})
+  = {\partial \over \partial x_j} (\lambda F_j + \mu G_j)
+  = \lambda {\partial F_j \over \partial x_j} + \mu {\partial G_j \over \partial x_j}
+  = \lambda(\nabla \cdot \mathbf{F}) + \mu(\nabla \cdot \mathbf{G})
+  $$
+
+## Curl
 
 > *Definition.*{: .def}
 > The **curl** of a vector field $\mathbf{F}: \mathbf{R}^3 \to \mathbf{R}^3$ is a vector field defined by
@@ -117,25 +162,68 @@ By treating $\nabla$ as an vector and an operator that is waiting for a function
      \partial_x & \partial_y & \partial_k \\
      F_x & F_y & F_k \\
      \end{vmatrix} \\
-  &= (\partial_y F_z - \partial_z F_y, \partial_z F_x - \partial_x F_z, \partial_x F_y - \partial_y F_x)
+  &= (\partial_y F_z - \partial_z F_y, \partial_z F_x - \partial_x F_z, \partial_x F_y - \partial_y F_x) \\
+  &= \varepsilon_{ijk} \,\mathbf{e}_i \,{\partial F_k \over \partial x_j}
   \end{align*}
   $$
 
-## Basic Properties
+> *Proposition.*{: .prop}
+> Let $\mathsf{T}$ be the Jacobian matrix of $\mathbf{F}$. Then
+>
+> $$
+  \nabla \times \mathbf{F} = \varepsilon_{ijk} \,\mathbf{e}_i T_{kj}
+  $$
+
+> *Definition.*{: .def}
+> A vector field $\mathbf{F}$ is **irrotational** if $\nabla \times \mathbf{F} = 0$.
 
 > *Property.*{: .prop}
 > **[Linearity]**
-> Suppose that $\phi$ and $\psi$ are scalar fields and $\mathbf{F}$ and $\mathbf{G}$ are vector fields and $\lambda, \mu \in \mathbf{R}$. Then
+> Suppose that $\mathbf{F}$ and $\mathbf{G}$ are vector fields and $\lambda, \mu \in \mathbf{R}$. Then
+>
+> $$
+  \nabla \times (\lambda \mathbf{F} + \mu \mathbf{G}) = \lambda(\nabla \times \mathbf{F}) + \mu(\nabla \times \mathbf{G})
+  $$
+>
+> *Proof.*{: .prf}
 >
 > $$
   \begin{align*}
-  \nabla (\lambda \phi + \mu \psi) &= \lambda(\nabla \phi) + \mu(\nabla \psi) \\
-  \nabla \cdot (\lambda \mathbf{F} + \mu \mathbf{G}) &= \lambda(\nabla \cdot \mathbf{F}) + \mu(\nabla \cdot \mathbf{G}) \\
-  \nabla \times (\lambda \mathbf{F} + \mu \mathbf{G}) &= \lambda(\nabla \times \mathbf{F}) + \mu(\nabla \times \mathbf{G}) \\
+  \nabla \times (\lambda \mathbf{F} + \mu \mathbf{G})
+  &= \varepsilon_{ijk} \,\mathbf{e}_i \,{\partial \over \partial x_j}(\lambda F_k + \mu G_k) \\
+  &= \lambda \left(\varepsilon_{ijk} \,\mathbf{e}_i \,{\partial F_k \over \partial x_j}\right)
+    + \mu \left(\varepsilon_{ijk} \,\mathbf{e}_i \,{\partial G_k \over \partial x_j}\right) \\
+  &= \lambda(\nabla \times \mathbf{F}) + \mu(\nabla \times \mathbf{G})
   \end{align*}
   $$
 
-> *Property.*{: .prop}
+## Vector Differential Identities
+
+> *Definition.*{: .def}
+> Suppose $\mathbf{F}$ is a vector field, $\mathbf{F} \cdot \nabla$ is the differential _operator_
+>
+> $$
+  \mathbf{F} \cdot \nabla \cong F_j {\partial \over \partial x_j}
+  $$
+
+For a scalar field $\phi: \mathbf{R}^3 \to \mathbf{R}$,
+
+$$
+(\mathbf{F} \cdot \nabla)\phi = F_j {\partial \phi \over \partial x_j} = F_1 {\partial \phi \over \partial x} + F_2 {\partial \phi \over \partial y} + F_3 {\partial \phi \over \partial z} = \mathbf{F} \cdot (\nabla \phi)
+$$
+
+For a vector field $\mathbf{G}: \mathbf{R}^3 \to \mathbf{R}^3$,
+
+$$
+\begin{align*}
+(\mathbf{F} \cdot \nabla)\mathbf{G} = \mathbf{e}_i \,F_j {\partial G_i \over \partial x_j}
+&= \left(F_1 {\partial G_1 \over \partial x} + F_2 {\partial G_1 \over \partial y}+ F_3 {\partial G_1 \over \partial z} \right) \,\mathbf{i} \\
+&\qquad + \left(F_1 {\partial G_2 \over \partial x} + F_2 {\partial G_2 \over \partial y}+ F_3 {\partial G_2 \over \partial z} \right) \,\mathbf{j} \\
+&\qquad + \left(F_1 {\partial G_3 \over \partial x} + F_2 {\partial G_3 \over \partial y}+ F_3 {\partial G_3 \over \partial z} \right) \,\mathbf{k}
+\end{align*}
+$$
+
+> *Proposition.*{: .prop}
 > **[Leibniz Property]**
 > Suppose that $\phi$ and $\psi$ are scalar fields and $\mathbf{F}$ is a vector field. Then
 >
@@ -147,7 +235,7 @@ By treating $\nabla$ as an vector and an operator that is waiting for a function
   \end{align*}
   $$
 
-> *Property.*{: .prop}
+> *Proposition.*{: .prop}
 > Suppose that $\mathbf{F}$ and $\mathbf{G}$ are vector fields. Then
 >
 > $$
