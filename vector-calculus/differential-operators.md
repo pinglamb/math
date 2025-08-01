@@ -246,7 +246,108 @@ $$
   \end{align*}
   $$
 
+## Second Order Differential Operators
+
+There are a number of possible ways to combining the differential operators.
+
+### Divergence of Gradient
+
+Consider the divergence of the gradient of a scalar field $\phi: \mathbb{R}^3 \to \mathbb{R}$, by definition
+
+$$
+\nabla \cdot (\nabla \phi) = {\partial \over \partial x_j} \left({\partial \phi \over \partial x_j }\right)
+= {\partial^2 \phi \over \partial x^2} + {\partial^2 \phi \over \partial y^2} + {\partial^2 \phi \over \partial z^2}
+$$
+
+> *Definition.*{: .def}
+> The **Laplacian operator** $\nabla^2$ is defined by
+>
+> $$
+  \nabla^2 = \nabla \cdot \nabla = { \partial^2 \over \partial x_j \partial x_j }
+  $$
+
+### Divergence of Curl
+
+> *Proposition.*{: .prop}
+> The divergence of the curl of vector field $\mathbf{F}$ with equal mixed partial derivatives is always zero, i.e.
+>
+> $$
+  \nabla \cdot (\nabla \times \mathbf{F}) = 0
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \nabla \cdot (\nabla \times \mathbf{F})
+  = { \partial \over \partial x_i } \left( \varepsilon_{ijk} {\partial F_k \over \partial x_j} \right)
+  = \varepsilon_{ijk} {\partial f_k \over \partial x_i \partial x_j} = 0
+  $$
+>
+> since $\partial_i \partial_j F_k = \partial_j \partial_j F_k$.
+
+> *Proposition.*{: .prop}
+> Conversely, suppose that a vector field $\mathbf{v}$ is solenoidal, i.e. $\nabla \cdot \mathbf{v} = 0$,
+> then there exists a non-unique **vector potential** $\mathbf{A}$ such that $\nabla \times \mathbf{A} = \mathbf{v}$.
+
+It is relatively straightforward to construct a vector potential.
+Let $\mathbf{v} = (v_1, v_2, v_3)$ to be defined throughout $\mathbb{R}^3$, then a possible vector potential is
+
+$$
+\mathbf{A}(\mathbf{x}) = \left( \int_{z_0}^z v_2(x, y, z') \,dz', \int_{x_0}^x v_3(x', y, z_0) \,dx' - \int_{z_0}^z v_1(x, y, z') \,dz', 0 \right)
+$$
+
+where $\mathbf{x}_0 = (x_0, y_0, z_0)$ is a constant.
+
+### Curl of Gradient
+
+> *Proposition.*{: .prop}
+> The curl of the gradient of a scalar field $\phi$ with equal mixed partial derivatives is always zero, i.e.
+>
+> $$
+  \nabla \times (\nabla \phi) = \mathbf{0}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  [\nabla \times (\nabla \phi)]_i
+  = \varepsilon_{ijk} {\partial \over \partial x_j} \left( { \partial \phi \over \partial x_k } \right)
+  = \varepsilon_{ijk} {\partial^2 \phi \over \partial x_j \partial x_k} = 0
+  $$
+>
+> since $\partial_j \partial_k \phi = \partial_k \partial_j \phi$.
+
+The vector potential defined above is not unique since if $\nabla \times \mathbf{A} = \mathbf{v}$, then
+
+$$
+\nabla \times (\mathbf{A} + \nabla \phi) = \nabla \times \mathbf{A} = \mathbf{v}
+$$
+
+for all scalar functions $\phi$.
+
+### Curl of Curl
+
+Consider the curl of the curl of a vector field $\mathbf{F}$ with equal mixed derivatives, then
+
+$$
+\begin{align*}
+[\nabla \times (\nabla \times \mathbf{F})]_i
+&= \varepsilon_{ijk} {\partial \over \partial x_j} \left( \varepsilon_{kpq} { \partial F_q \over \partial x_p } \right) \\
+&= (\delta_{ip}\delta_{jq} - \delta_{iq}\delta_{jp}) {\partial^2 F_q \over \partial x_j \partial x_p} \\
+&= {\partial^2 F_j \over \partial x_j \partial x_i } - {\partial^2 F_i \over \partial x_j \partial x_j } \\
+&= [\nabla(\nabla \cdot \mathbf{F}) - \nabla^2 \mathbf{F}]_i
+\end{align*}
+$$
+
+> *Definition.*{: .def}
+> The **Laplacian operator** $\nabla^2$ acting on a vector function $\mathbf{F}$ is defined by
+>
+> $$
+  \nabla^2 \mathbf{F} = \nabla(\nabla \cdot \mathbf{F}) - \nabla \times (\nabla \times \mathbf{F})
+  $$
+
 ## References
 
-* David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.3.1, 3
-* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10.7
+* Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 5
+* David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 1.3.1, 3.1, 3.2
+* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 10.7, 10.8

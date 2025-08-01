@@ -279,4 +279,3 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 ## References
 
 * Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 1
-
