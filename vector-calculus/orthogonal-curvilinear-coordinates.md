@@ -25,7 +25,45 @@ to the lines defined by keeping the other two variables constants respectively.
   {\partial \mathbf{x} \over \partial w} = h_w \mathbf{e}_w
   $$
 >
-> with **scale factors** $h_u, h_v, h_w > 0$ and $\mathbf{e}_u \times \mathbf{e}_v = \mathbf{e}_w$.
+> with **scale factors** $h_u, h_v, h_w > 0$ and $\mathbf{e}_u \times \mathbf{e}_v = \mathbf{e}_w$ and $\mathbf{e}_i \cdot \mathbf{e}_j = \delta_{ij}$.
+
+> *Proposition.*{: .prop}
+> The Jacobian of the coordinate transformation is positive.
+>
+> *Proof.*{: .prf}
+>
+> Let $\mathbf{x} = (x_1(u_1, u_2, u_3), x_2(u_1, u_2, u_3), x_3(u_1, u_2, u_3))$,
+>
+> $$
+  \begin{align*}
+  J &= \varepsilon_{ijk} {\partial x_i \over \partial u_i} {\partial x_j \over \partial u_j} {\partial x_k \over \partial u_k} \\
+  &= \varepsilon_{ijk} h_1 (\mathbf{e}_1)_i h_2 (\mathbf{e}_1)_j h_3 (\mathbf{e}_1)_k \\
+  &= h_1h_2h_3 (\mathbf{e}_1 \times (\mathbf{e}_2 \times \mathbf{e}_3)) \\
+  &= h_1h_2h_3 \\
+  \end{align*}
+  $$
+
+> *Proposition.*{: .prop}
+> The scale factors are the change in length as we change each of the coordinates.
+>
+> *Proof.*{: .prf}
+>
+> An infinitesimal vector displacement at position $\mathbf{x}$ is
+>
+> $$
+  d\mathbf{x} = h_u \mathbf{e}_u \,du + h_v \mathbf{e}_v \,dv + h_w \mathbf{e}_w \,dw
+  $$
+>
+> Therefore, by squaring this, we have
+>
+> $$
+  (ds)^2 = (d\mathbf{x})^2 = d\mathbf{x} \cdot d\mathbf{x} = h_u^2 \,du^2 + h_v^2 \,dv^2 + h_w^2 \,dw^2
+  $$
+
+## Cartesian Coordinates
+
+Obviously, $\mathbf{x} = (x, y, z)$ and hence $h_x = h_y = h_z = 1$ and
+$\mathbf{e}_x = \mathbf{i}$, $\mathbf{e}_y = \mathbf{j}$ and $\mathbf{e}_z = \mathbf{k}$.
 
 ## Cylindrical Polar Coordinates
 
@@ -38,51 +76,57 @@ to the lines defined by keeping the other two variables constants respectively.
 >
 > where $(\rho, \phi, z)$ is its **cylindrical polar coordinates**,
 > with $\rho \ge 0$, $0 \le \phi < 2\pi$ and $z \in \mathbb{R}$.
+> The inverses are
+>
+> $$
+  \rho = \sqrt{x^2, y^2}
+  ,\qquad
+  \phi = \tan^{-1} {y \over x}
+  ,\qquad
+  z = z
+  $$
 
 ![Cylindrical Polar](../images/vector-calculus-cylindrical-polar.png){: .size-2x}
 
 > *Proposition.*{: .prop}
-> The unit vectors of cylindrical polars are
+> Cylindrical polars are a right-handed orthogonal curvilinear coorindate system.
+> The scale factors and unit vectors of cylindrical polars are
 >
 > $$
   \begin{align*}
-  \mathbf{e}_\rho &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
-  \mathbf{e}_\phi &= -\sin \phi \mathbf{i} + \cos \phi \mathbf{j} \\
-  \mathbf{e}_z &= \mathbf{k}
+  h_\rho &= 1    \,,\quad &\mathbf{e}_\rho &= (\cos \phi, \sin \phi, 0) \\
+  h_\phi &= \rho \,,\quad &\mathbf{e}_\phi &= (-\sin \phi, \cos \phi, 0) \\
+  h_z &= 1       \,,\quad &\mathbf{e}_z    &= (0, 0, 1)
   \end{align*}
   $$
 >
-> and they form an orthonormal basis.
->
 > *Proof.*{: .prf}
 >
-> The position vector of a point $P$ can be written as $\mathbf{r} = \rho \cos \phi \mathbf{i} + \rho \sin \phi \mathbf{j} + z \mathbf{k}$.
+> The position vector of a point $P$ can be written as $\mathbf{x} = (\rho \cos \phi, \rho \sin \phi, z)$.
 > Thus,
 >
 > $$
   \begin{align*}
-  {\partial \mathbf{r} \over \partial \rho} &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
-  {\partial \mathbf{r} \over \partial \phi} &= - \rho \sin \phi \mathbf{i} + \rho \cos \phi \mathbf{j} \\
-  {\partial \mathbf{r} \over \partial z} &= \mathbf{k}
+  {\partial \mathbf{x} \over \partial \rho} &= (\cos \phi, \sin \phi, 0) \\
+  {\partial \mathbf{x} \over \partial \phi} &= (- \rho \sin \phi, \rho \cos \phi, 0) \\
+  {\partial \mathbf{x} \over \partial z} &= (0, 0, 1)
   \end{align*}
   $$
 >
-> and the unit vectors can be obtained by dividing each of the above vector by its modulus.
+> The scale factors and unit vectors can be derived from the above which satisfies
+> $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$ and $\varepsilon\_{ijk} \mathbf{e}\_i = \mathbf{e}\_j \times \mathbf{e}\_k$.
 
 > *Proposition.*{: .prop}
-> An infinitesimal vector displacement $d\mathbf{r}$ in the position of $P$ is given by
+> An infinitesimal vector displacement $d\mathbf{r}$ is given by
 >
 > $$
-  \begin{align*}
-  d\mathbf{r} &= {\partial \mathbf{r} \over \partial \rho} d\rho + {\partial \mathbf{r} \over \partial \phi} d\phi + {\partial \mathbf{r} \over \partial z} dz \\
-  &= d\rho \,\mathbf{e}_\rho + \rho \,d\phi \,\mathbf{e}_\phi + dz \,\mathbf{e}_z
-  \end{align*}
+  d\mathbf{x} = d\rho \,\mathbf{e}_\rho + \rho \,d\phi \,\mathbf{e}_\phi + dz \,\mathbf{e}_z
   $$
 >
 > and its magitude $ds$ is
 >
 > $$
-  (ds)^2 = d\mathbf{r} \cdot d\mathbf{r} = (d\rho)^2 + \rho^2 (d\phi)^2 + (dz)^2
+  (ds)^2 = (d\rho)^2 + \rho^2 (d\phi)^2 + (dz)^2
   $$
 
 > *Proposition.*{: .prop}
