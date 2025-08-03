@@ -79,17 +79,12 @@ $\mathbf{e}_x = \mathbf{i}$, $\mathbf{e}_y = \mathbf{j}$ and $\mathbf{e}_z = \ma
 > The inverses are
 >
 > $$
-  \rho = \sqrt{x^2, y^2}
-  ,\qquad
-  \phi = \tan^{-1} {y \over x}
-  ,\qquad
-  z = z
+  \rho = \sqrt{x^2, y^2} ,\qquad \phi = \tan^{-1} {y \over x} ,\qquad z = z
   $$
 
 ![Cylindrical Polar](../images/vector-calculus-cylindrical-polar.png){: .size-2x}
 
 > *Proposition.*{: .prop}
-> Cylindrical polars are a right-handed orthogonal curvilinear coorindate system.
 > The scale factors and unit vectors of cylindrical polars are
 >
 > $$
@@ -102,7 +97,7 @@ $\mathbf{e}_x = \mathbf{i}$, $\mathbf{e}_y = \mathbf{j}$ and $\mathbf{e}_z = \ma
 >
 > *Proof.*{: .prf}
 >
-> The position vector of a point $P$ can be written as $\mathbf{x} = (\rho \cos \phi, \rho \sin \phi, z)$.
+> The position vector of a point $P$ is $\mathbf{x} = (\rho \cos \phi, \rho \sin \phi, z)$.
 > Thus,
 >
 > $$
@@ -113,7 +108,8 @@ $\mathbf{e}_x = \mathbf{i}$, $\mathbf{e}_y = \mathbf{j}$ and $\mathbf{e}_z = \ma
   \end{align*}
   $$
 >
-> The scale factors and unit vectors can be derived from the above which satisfies
+> The scale factors and unit vectors can be derived from the above.
+> Cylindrical polars are a right-handed orthogonal curvilinear coorindate system since it satisfies
 > $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$ and $\varepsilon\_{ijk} \mathbf{e}\_i = \mathbf{e}\_j \times \mathbf{e}\_k$.
 
 > *Proposition.*{: .prop}
@@ -159,51 +155,53 @@ $\mathbf{e}_x = \mathbf{i}$, $\mathbf{e}_y = \mathbf{j}$ and $\mathbf{e}_z = \ma
 >
 > where $(r, \theta, \phi)$ is its **spherical polar coordinates**,
 > with $r \ge 0$, $0 \le \theta \le \pi$ and $0 \le \phi < 2\pi$.
+> The inverses are
+>
+> $$
+  r = \sqrt{x^2 + y^2 + z^2}, \qquad \theta = \tan^{-1} {\sqrt{x^2 + y^2} \over z}, \qquad \phi = \tan^{-1} {y \over x}
+  $$
 
 ![Spherical Polar](../images/vector-calculus-spherical-polar.png){: .size-2x}
 
 > *Proposition.*{: .prop}
-> The unit vectors of spherical polars are
+> The scale factors and unit vectors of spherical polars are
 >
 > $$
   \begin{align*}
-  \mathbf{e}_r &= \sin \theta \cos \phi \mathbf{i} + \sin \theta \sin \phi \mathbf{j} + \cos \theta \mathbf{k} \\
-  \mathbf{e}_\theta &= \cos \theta \cos \phi \mathbf{i} + \cos \theta \sin \phi \mathbf{j} - \sin \theta \mathbf{k} \\
-  \mathbf{e}_\phi &= - \sin \phi \mathbf{i} + \cos \phi \mathbf{j}
+  h_r &= 1              \,,\quad &\mathbf{e}_r &= (\sin \theta \cos \phi, \sin \theta \sin \phi, \cos \theta) \\
+  h_\theta &= r         \,,\quad &\mathbf{e}_\theta &= (\cos \theta \cos \phi, \cos \theta \sin \phi, - \sin \theta) \\
+  h_\phi &= r\sin\theta \,,\quad &\mathbf{e}_\phi &= (- \sin \phi, \cos \phi, 0)
   \end{align*}
   $$
 >
-> and they form an orthonormal basis.
->
 > *Proof.*{: .prf}
 >
-> The position vector of a point $P$ can be written as $\mathbf{r} = r \sin \theta \cos \phi \mathbf{i} + r \sin \theta \sin \phi \mathbf{j} + r \cos \theta \mathbf{k}$.
+> The position vector of a point $P$ is $\mathbf{x} = (r \sin \theta \cos \phi, r \sin \theta \sin \phi, r \cos \theta)$.
 > Thus,
 >
 > $$
   \begin{align*}
-  {\partial \mathbf{r} \over \partial r} &= \sin \theta \cos \phi \mathbf{i} + \sin \theta \sin \phi \mathbf{j} + \cos \theta \mathbf{k} \\
-  {\partial \mathbf{r} \over \partial \theta} &= r \cos \theta \cos \phi \mathbf{i} + r \cos \theta \sin \phi \mathbf{j} - r \sin \theta \mathbf{k} \\
-  {\partial \mathbf{r} \over \partial \phi} &= - r \sin \theta \sin \phi \mathbf{i} + r \sin \theta \cos \phi \mathbf{j}
+  {\partial \mathbf{x} \over \partial r} &= (\sin \theta \cos \phi, \sin \theta \sin \phi, \cos \theta) \\
+  {\partial \mathbf{x} \over \partial \theta} &= (r \cos \theta \cos \phi, r \cos \theta \sin \phi, - r \sin \theta) \\
+  {\partial \mathbf{x} \over \partial \phi} &= (-r \sin \theta \sin \phi, r \sin \theta \cos \phi, 0)
   \end{align*}
   $$
 >
-> and the unit vectors can be obtained by dividing each of the above vector by its modulus.
+> The scale factors and unit vectors can be derived from the above.
+> Cylindrical polars are a right-handed orthogonal curvilinear coorindate system since it satisfies
+> $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$ and $\varepsilon\_{ijk} \mathbf{e}\_i = \mathbf{e}\_j \times \mathbf{e}\_k$.
 
 > *Proposition.*{: .prop}
-> An infinitesimal vector displacement $d\mathbf{r}$ in the position of $P$ is given by
+> An infinitesimal vector displacement $d\mathbf{r}$ is given by
 >
 > $$
-  \begin{align*}
-  d\mathbf{r} &= {\partial \mathbf{r} \over \partial r} dr + {\partial \mathbf{r} \over \partial \theta} d\theta + {\partial \mathbf{r} \over \partial \phi} d\phi \\
-  &= dr \,\mathbf{e}_r + r \,d\theta \,\mathbf{e}_\theta + r \sin \theta \,d\phi \,\mathbf{e}_\phi
-  \end{align*}
+  d\mathbf{x} = dr \,\mathbf{e}_r + r \,d\theta \,\mathbf{e}_\theta + r \sin \theta \,d\phi \,\mathbf{e}_\phi
   $$
 >
 > and its magitude $ds$ is
 >
 > $$
-  (ds)^2 = d\mathbf{r} \cdot d\mathbf{r} = (dr)^2 + r^2 (d\theta)^2 + r^2 \sin^2 \theta (d\phi)^2
+  (ds)^2 = (dr)^2 + r^2 (d\theta)^2 + r^2 \sin^2 \theta (d\phi)^2
   $$
 
 > *Proposition.*{: .prop}
