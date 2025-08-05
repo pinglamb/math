@@ -47,7 +47,7 @@ These ideas can be extended to define multiple integrals of higher dimensionalit
 ## Change of Variables
 
 > *Definition.*{: .def}
-> The **Jacobian** of $(x, y)$ with respect to $(u, v)$ is defined by the determinant
+> The **Jacobian** of $(x, y)$ with respect to $(u, v)$ is the determinant of Jacobian matrix, i.e.
 >
 > $$
   J(u, v) = { \partial (x, y) \over \partial (u, v) } = \begin{vmatrix}
@@ -149,7 +149,7 @@ These ideas can be extended to define multiple integrals of higher dimensionalit
   $$
 
 > *Definition.*{: .def}
-> The **Jacobian** of $(x, y, z)$ with respect to $(u, v, w)$ is defined by the determinant
+> The **Jacobian** of $(x, y, z)$ with respect to $(u, v, w)$ is the determinant of the Jacobian matrix, i.e.
 >
 > $$
   J(u, v, w) = { \partial (x, y, z) \over \partial (u, v, w) } = \begin{vmatrix}

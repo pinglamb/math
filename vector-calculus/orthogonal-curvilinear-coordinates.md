@@ -25,7 +25,7 @@ to the lines defined by keeping the other two variables constants respectively.
   {\partial \mathbf{x} \over \partial w} = h_w \mathbf{e}_w
   $$
 >
-> with **scale factors** $h_u, h_v, h_w > 0$ and $\mathbf{e}_u \times \mathbf{e}_v = \mathbf{e}_w$ and $\mathbf{e}_i \cdot \mathbf{e}_j = \delta_{ij}$.
+> with **scale factors** $h_u, h_v, h_w > 0$ and $\mathbf{e}\_u \times \mathbf{e}\_v = \mathbf{e}\_w$ and $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$.
 
 > *Proposition.*{: .prop}
 > The Jacobian of the coordinate transformation is positive.
@@ -138,7 +138,12 @@ to the lines defined by keeping the other two variables constants respectively.
 > *Proof.*{: .prf}
 >
 > $$
-  dV = |du \,h_u \mathbf{e}_u \cdot (dv \,h_v \mathbf{e}_v \times dw \,h_w \mathbf{e}_w)| = h_uh_vh_w \,du\,dv\,dw
+  \begin{align*}
+  dV &= \left| du {\partial \mathbf{x} \over \partial u} \cdot \left(dv {\partial \mathbf{x} \over \partial v} \times dw {\partial \mathbf{x} \over \partial w} \right) \right| \\
+  &= |du \,h_u \mathbf{e}_u \cdot (dv \,h_v \mathbf{e}_v \times dw \,h_w \mathbf{e}_w)| \\
+  &= h_uh_vh_w \,du\,dv\,dw \,|\mathbf{e}_u \cdot (\mathbf{e}_v \times \mathbf{e}_w)| \\
+  &= h_uh_vh_w \,du\,dv\,dw
+  \end{align*}
   $$
 
 ## Cartesian Coordinates
