@@ -211,7 +211,33 @@ The expressions for gradient, divergence and curl can easily be verified to matc
 > The gradient is given by
 >
 > $$
-  \nabla = \mathbf{e}_\rho {\partial \over \partial \rho} + \mathbf{e}_\phi {1 \over \rho} {\partial \over \partial \phi} + \mathbf{e}_z {\partial \over \partial z}
+  \nabla f = {\partial f \over \partial \rho} \mathbf{e}_\rho + {1 \over \rho} {\partial f \over \partial \phi} \mathbf{e}_\phi + {\partial f \over \partial z} \mathbf{e}_z
+  $$
+
+> *Proposition.*{: .prop}
+> The divergence of a vector field $\mathbf{F}(\rho, \phi, z)$ is given by
+>
+> $$
+  \nabla \cdot \mathbf{F} = {1 \over \rho} {\partial (\rho F_\rho) \over \partial \rho} + {1 \over \rho} {\partial F_\phi \over \partial \phi} + {\partial F_z \over \partial z}
+  $$
+
+> *Proposition.*{: .prop}
+> The curl of a vector field $\mathbf{F}(\rho, \phi, z)$ is given by
+>
+> $$
+  \nabla \times \mathbf{F} =
+  \left({1 \over \rho} {\partial F_z \over \partial \phi} - {\partial F_\phi \over \partial z} \right) \,\mathbf{e}_\rho +
+  \left({\partial F_\rho \over \partial z} - {\partial F_z \over \partial \rho} \right) \,\mathbf{e}_\phi +
+  {1 \over \rho} \left({\partial (\rho F_\phi) \over \partial \rho} - {\partial F_\rho \over \partial \phi} \right) \,\mathbf{e}_z
+  $$
+
+> *Proposition.*{: .prop}
+> The Laplacian is given by
+>
+> $$
+  \nabla^2 f = {1 \over \rho} {\partial \over \partial \rho} \left( \rho {\partial f \over \partial \rho} \right) +
+  {1 \over \rho^2} {\partial^2 f \over \partial \phi^2} +
+  {\partial^2 f \over \partial z^2}
   $$
 
 > *Proposition.*{: .prop}
