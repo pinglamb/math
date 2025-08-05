@@ -98,6 +98,37 @@ to the lines defined by keeping the other two variables constants respectively.
   $$
 
 > *Proposition.*{: .prop}
+> The divergence $\nabla \cdot \mathbf{F}$ of a vector field $\mathbf{F}(u, v, w)$ is given by
+>
+> $$
+  \nabla \cdot \mathbf{F} = {1 \over h_uh_vh_w} \left(
+  {\partial \over \partial u}(h_vh_wF_u) + {\partial \over \partial v}(h_uh_wF_v) + {\partial \over \partial w}(h_uh_vF_w)
+  \right)
+  $$
+
+> *Proposition.*{: .prop}
+> The curl $\nabla \times \mathbf{F}$ of a vector field $\mathbf{F}(u, v, w)$ is given by
+>
+> $$
+  \nabla \times \mathbf{F} = {1 \over h_uh_vh_w} \begin{vmatrix}
+  h_u \mathbf{e}_u & h_v \mathbf{e}_v & h_w \mathbf{e}_w \\
+  {\partial \over \partial u} & {\partial \over \partial v} & {\partial \over \partial w} \\
+  h_u F_u & h_v F_v & h_w F_w
+  \end{vmatrix}
+  $$
+
+> *Proposition.*{: .prop}
+> The Laplacian $\nabla^2 f$ is given by
+>
+> $$
+  \nabla^2 f = {1 \over h_uh_vh_w} \left[
+  {\partial \over \partial u} \left( {h_vh_w \over h_u} {\partial f \over \partial u} \right) +
+  {\partial \over \partial v} \left( {h_uh_w \over h_v} {\partial f \over \partial v} \right) +
+  {\partial \over \partial w} \left( {h_uh_v \over h_w} {\partial f \over \partial w} \right)
+  \right]
+  $$
+
+> *Proposition.*{: .prop}
 > The volume of an infinitesimal parallelepiped is given by
 >
 > $$
