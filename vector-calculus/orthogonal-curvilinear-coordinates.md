@@ -60,10 +60,48 @@ to the lines defined by keeping the other two variables constants respectively.
   (ds)^2 = (d\mathbf{x})^2 = d\mathbf{x} \cdot d\mathbf{x} = h_u^2 \,du^2 + h_v^2 \,dv^2 + h_w^2 \,dw^2
   $$
 
+> *Definition.*{: .def}
+> For curvilinear coordinates, the gradient $\nabla f$ is defined to be the vector such that for all $d\mathbf{x}$
+>
+> $$
+  df = \nabla f \cdot d\mathbf{x}
+  $$
+>
+> which is a coordinate free definition.
+
+> *Proposition.*{: .prop}
+> The gradient $\nabla f$ of curvilinear coodinates $(u_1, u_2, u_3)$ is given by
+>
+> $$
+  \nabla f = \sum_i {1 \over h_i} {\partial f \over \partial u_i} \mathbf{e}_i
+  = \left( {1 \over h_1} {\partial f \over \partial u_1}, {1 \over h_2} {\partial f \over \partial u_2}, {1 \over h_3} {\partial f \over \partial u_3} \right)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $\nabla f = \sum_i \alpha_i \mathbf{e}_i$, then
+>
+> $$
+  df = \sum_i \alpha_i \mathbf{e}_i \cdot \sum_j h_j \mathbf{e}_j \,du_j = \sum_i \alpha_i h_i \,du_i
+  $$
+>
+> By definition of differential, $df$ is given by
+>
+> $$
+  df = \sum_i {\partial f \over \partial u_i} \,du_i
+  $$
+>
+> Hence,
+>
+> $$
+  \alpha_i = {1 \over h_i} {\partial f \over \partial u_i}
+  $$
+
 ## Cartesian Coordinates
 
 Obviously, $\mathbf{x} = (x, y, z)$ and hence $h_x = h_y = h_z = 1$ and
 $\mathbf{e}_x = \mathbf{i}$, $\mathbf{e}_y = \mathbf{j}$ and $\mathbf{e}_z = \mathbf{k}$.
+The expressions for gradient, divergence and curl can easily be verified to match those written in [differential operators](differential-operators.md).
 
 ## Cylindrical Polar Coordinates
 
@@ -123,6 +161,13 @@ $\mathbf{e}_x = \mathbf{i}$, $\mathbf{e}_y = \mathbf{j}$ and $\mathbf{e}_z = \ma
 >
 > $$
   (ds)^2 = (d\rho)^2 + \rho^2 (d\phi)^2 + (dz)^2
+  $$
+
+> *Proposition.*{: .prop}
+> The gradient is given by
+>
+> $$
+  \nabla = \mathbf{e}_\rho {\partial \over \partial \rho} + \mathbf{e}_\phi {1 \over \rho} {\partial \over \partial \phi} + \mathbf{e}_z {\partial \over \partial z}
   $$
 
 > *Proposition.*{: .prop}
@@ -202,6 +247,13 @@ $\mathbf{e}_x = \mathbf{i}$, $\mathbf{e}_y = \mathbf{j}$ and $\mathbf{e}_z = \ma
 >
 > $$
   (ds)^2 = (dr)^2 + r^2 (d\theta)^2 + r^2 \sin^2 \theta (d\phi)^2
+  $$
+
+> *Proposition.*{: .prop}
+> The gradient is given by
+>
+> $$
+  \nabla = \mathbf{e}_r {\partial \over \partial r} + \mathbf{e}_\theta {1 \over r} {\partial \over \partial \theta} + \mathbf{e}_\phi {1 \over r\sin\theta} {\partial \over \partial \phi}
   $$
 
 > *Proposition.*{: .prop}
