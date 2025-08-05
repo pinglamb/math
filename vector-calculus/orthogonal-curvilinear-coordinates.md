@@ -70,11 +70,11 @@ to the lines defined by keeping the other two variables constants respectively.
 > which is a coordinate free definition.
 
 > *Proposition.*{: .prop}
-> The gradient $\nabla f$ of curvilinear coodinates $(u_1, u_2, u_3)$ is given by
+> The gradient $\nabla f$ is given by
 >
 > $$
   \nabla f = \sum_i {1 \over h_i} {\partial f \over \partial u_i} \mathbf{e}_i
-  = \left( {1 \over h_1} {\partial f \over \partial u_1}, {1 \over h_2} {\partial f \over \partial u_2}, {1 \over h_3} {\partial f \over \partial u_3} \right)
+  = \left( {1 \over h_u} {\partial f \over \partial u_u}, {1 \over h_v} {\partial f \over \partial u_v}, {1 \over h_w} {\partial f \over \partial u_w} \right)
   $$
 >
 > *Proof.*{: .prf}
@@ -95,6 +95,19 @@ to the lines defined by keeping the other two variables constants respectively.
 >
 > $$
   \alpha_i = {1 \over h_i} {\partial f \over \partial u_i}
+  $$
+
+> *Proposition.*{: .prop}
+> The volume of an infinitesimal parallelepiped is given by
+>
+> $$
+  dV = h_uh_vh_w \,du\,dv\,dw
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  dV = |du \,h_u \mathbf{e}_u \cdot (dv \,h_v \mathbf{e}_v \times dw \,h_w \mathbf{e}_w)| = h_uh_vh_w \,du\,dv\,dw
   $$
 
 ## Cartesian Coordinates
@@ -176,18 +189,6 @@ The expressions for gradient, divergence and curl can easily be verified to matc
 > $$
   dV = \rho \,d\rho \,d\phi \,dz
   $$
->
-> *Proof.*{: .prf}
->
-> The Jacobian with respect to $(\rho, \phi, z)$ is
->
-> $$
-  \begin{vmatrix}
-  \cos \phi & -\rho \sin \phi & 0 \\
-  \sin \phi & \rho \cos \phi & 0 \\
-  0 & 0 & 1 \\
-  \end{vmatrix} = \rho
-  $$
 
 ## Spherical Polar Coordinates
 
@@ -262,91 +263,6 @@ The expressions for gradient, divergence and curl can easily be verified to matc
 > $$
   dV = r^2 \sin \theta \,dr \,d\theta \,d\phi
   $$
->
-> *Proof.*{: .prf}
->
-> The Jacobian with respect to $(r, \theta, \phi)$ is
->
-> $$
-  \begin{vmatrix}
-  \sin \theta \cos \phi & r \cos \theta \cos \phi & - r \sin \theta \sin \phi \\
-  \sin \theta \sin \phi & r \cos \theta \sin \phi & r \sin \theta \cos \phi \\
-  \cos \theta & - r \sin \theta & 0
-  \end{vmatrix} = r^2 \sin \theta
-  $$
-
-## Plane Polar Coordinates
-
-> *Definition.*{: .def}
-> The position of a point $P$ having Cartesian coordinates $(x, y)$ can be expressed as
->
-> $$
-  x = \rho \cos \phi, \qquad y = \rho \sin \phi
-  $$
->
-> where $(\rho, \phi$ is its **plane polar coordinates**,
-> with $\rho \ge 0$, $0 \le \phi < 2\pi$.
-
-> *Proposition.*{: .prop}
-> The unit vectors of plane polars are
->
-> $$
-  \begin{align*}
-  \mathbf{e}_\rho &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
-  \mathbf{e}_\phi &= -\sin \phi \mathbf{i} + \cos \phi \mathbf{j} \\
-  \end{align*}
-  $$
->
-> and they form an orthonormal basis.
->
-> *Proof.*{: .prf}
->
-> The position vector of a point $P$ can be written as $\mathbf{r} = \rho \cos \phi \mathbf{i} + \rho \sin \phi \mathbf{j}$.
-> Thus,
->
-> $$
-  \begin{align*}
-  {\partial \mathbf{r} \over \partial \rho} &= \cos \phi \mathbf{i} + \sin \phi \mathbf{j} \\
-  {\partial \mathbf{r} \over \partial \phi} &= - \rho \sin \phi \mathbf{i} + \rho \cos \phi \mathbf{j} \\
-  \end{align*}
-  $$
->
-> and the unit vectors can be obtained by dividing each of the above vector by its modulus.
-
-> *Proposition.*{: .prop}
-> An infinitesimal vector displacement $d\mathbf{r}$ in the position of $P$ is given by
->
-> $$
-  \begin{align*}
-  d\mathbf{r} &= {\partial \mathbf{r} \over \partial \rho} d\rho + {\partial \mathbf{r} \over \partial \phi} d\phi \\
-  &= d\rho \,\mathbf{e}_\rho + \rho \,d\phi \,\mathbf{e}_\phi
-  \end{align*}
-  $$
->
-> and its magitude $ds$ is
->
-> $$
-  (ds)^2 = d\mathbf{r} \cdot d\mathbf{r} = (d\rho)^2 + \rho^2 (d\phi)^2
-  $$
-
-> *Proposition.*{: .prop}
-> The area of the infinitesimal parallelogram is
->
-> $$
-  dA = \rho \,d\rho \,d\phi
-  $$
->
-> *Proof.*{: .prf}
->
-> The Jacobian with respect to $(\rho, \phi)$ is
->
-> $$
-  \begin{vmatrix}
-  \cos \phi & -\rho \sin \phi \\
-  \sin \phi & \rho \cos \phi \\
-  \end{vmatrix} = \rho
-  $$
-
 
 ## References
 
