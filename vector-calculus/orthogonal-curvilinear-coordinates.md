@@ -315,6 +315,34 @@ The expressions for gradient, divergence and curl can easily be verified to matc
   $$
 
 > *Proposition.*{: .prop}
+> The divergence of a vector field $\mathbf{F}(\rho, \phi, z)$ is given by
+>
+> $$
+  \nabla \cdot \mathbf{F} = {1 \over r^2} {\partial (r^2 F_r) \over \partial r} +
+  {1 \over r\sin \theta} {\partial (\sin \theta F_\theta) \over \partial \theta} +
+  {1 \over r\sin \theta} {\partial F_\phi \over \partial \phi}
+  $$
+
+> *Proposition.*{: .prop}
+> The curl of a vector field $\mathbf{F}(\rho, \phi, z)$ is given by
+>
+> $$
+  \nabla \times \mathbf{F} =
+  {1 \over r\sin\theta} \left( {\partial (\sin\theta F_\phi) \over \partial \theta} - {\partial F_\theta \over \partial \phi} \right) \,\mathbf{e}_r +
+  {1 \over r} \left( {1 \over \sin\theta} {\partial F_r \over \partial \phi} - {\partial (r F_\phi) \over \partial r} \right) \,\mathbf{e}_\phi +
+  {1 \over r} \left( {\partial (r F_\theta) \over \partial r} - {\partial F_r \over \partial \theta} \right) \,\mathbf{e}_\phi
+  $$
+
+> *Proposition.*{: .prop}
+> The Laplacian is given by
+>
+> $$
+  \nabla^2 f = {1 \over r^2} {\partial \over \partial r} \left( r^2 {\partial f \over \partial r} \right) +
+  {1 \over r^2 \sin \theta} {\partial \over \partial \theta} \left( \sin \theta {\partial f \over \partial \theta} \right) +
+  {1 \over r^2 \sin^2 \theta} {\partial^2 f \over \partial \phi^2}
+  $$
+
+> *Proposition.*{: .prop}
 > The volume of the infinitesimal parallelepiped is
 >
 > $$
