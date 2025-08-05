@@ -200,7 +200,22 @@ The expressions for gradient, divergence and curl can easily be verified to matc
 > $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$ and $\varepsilon\_{ijk} \mathbf{e}\_i = \mathbf{e}\_j \times \mathbf{e}\_k$.
 
 > *Proposition.*{: .prop}
-> An infinitesimal vector displacement $d\mathbf{r}$ is given by
+> The position vector $\mathbf{x}$ in cylindrical polars of a point is given by
+>
+> $$
+  \mathbf{x} = \rho \mathbf{e}_\rho + z \mathbf{e}_z
+  $$
+>
+> *Proof.*{: .prf}
+>
+> From the above, we can see that
+>
+> $$
+  \mathbf{x} = (\rho\cos\phi, \rho\sin\phi, z) = \rho (\cos\phi, \sin\phi, 0) + z (0, 0, 1) = \rho \mathbf{e}_\rho + z \mathbf{e}_z
+  $$
+
+> *Proposition.*{: .prop}
+> An infinitesimal vector displacement $d\mathbf{x}$ is given by
 >
 > $$
   d\mathbf{x} = d\rho \,\mathbf{e}_\rho + \rho \,d\phi \,\mathbf{e}_\phi + dz \,\mathbf{e}_z
@@ -300,7 +315,22 @@ The expressions for gradient, divergence and curl can easily be verified to matc
 > $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$ and $\varepsilon\_{ijk} \mathbf{e}\_i = \mathbf{e}\_j \times \mathbf{e}\_k$.
 
 > *Proposition.*{: .prop}
-> An infinitesimal vector displacement $d\mathbf{r}$ is given by
+> The position vector $\mathbf{x}$ in spherical polars of a point is given by
+>
+> $$
+  \mathbf{x} = r \mathbf{e}_r
+  $$
+>
+> *Proof.*{: .prf}
+>
+> From the above, we can see that
+>
+> $$
+  \mathbf{x} = (r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta) = r (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta) = r \mathbf{e}_r
+  $$
+
+> *Proposition.*{: .prop}
+> An infinitesimal vector displacement $d\mathbf{x}$ is given by
 >
 > $$
   d\mathbf{x} = dr \,\mathbf{e}_r + r \,d\theta \,\mathbf{e}_\theta + r \sin \theta \,d\phi \,\mathbf{e}_\phi
