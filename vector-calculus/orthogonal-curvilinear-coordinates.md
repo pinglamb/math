@@ -27,6 +27,9 @@ to the lines defined by keeping the other two variables constants respectively.
 >
 > with **scale factors** $h_u, h_v, h_w > 0$ and $\mathbf{e}\_u \times \mathbf{e}\_v = \mathbf{e}\_w$ and $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$.
 
+It is important that the basis vectors $\mathbf{e}_u, \mathbf{e}_v, \mathbf{e}_w$ above are specific to a point in space and are not constant.
+Therefore, the vector identities derived in Cartesian coordiantes might not apply in general, e.g. $\mathbf{a} \cdot \mathbf{b} \not= a_u b_u + a_v b_v + a_w b_w$.
+
 > *Proposition.*{: .prop}
 > The Jacobian of the coordinate transformation is positive.
 >
@@ -200,6 +203,21 @@ The expressions for gradient, divergence and curl can easily be verified to matc
 > $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$ and $\varepsilon\_{ijk} \mathbf{e}\_i = \mathbf{e}\_j \times \mathbf{e}\_k$.
 
 > *Proposition.*{: .prop}
+> The Cartesian basis vectors in terms of cylindrical basis vectors of a point $\mathbf{x}(\rho, \phi, z)$ are
+>
+> $$
+  \begin{align*}
+  \mathbf{i} &= \cos \phi \,\mathbf{e}_\rho - \sin \phi \,\mathbf{e}_\phi \\
+  \mathbf{j} &= \sin \phi \,\mathbf{e}_\rho + \cos \phi \,\mathbf{e}_\phi \\
+  \mathbf{k} &= \mathbf{e}_z
+  \end{align*}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By finding the inverse of the coefficient matrix of the cylindrical basis vectors.
+
+> *Proposition.*{: .prop}
 > The position vector $\mathbf{x}$ in cylindrical polars of a point is given by
 >
 > $$
@@ -313,6 +331,21 @@ The expressions for gradient, divergence and curl can easily be verified to matc
 > The scale factors and unit vectors can be derived from the above.
 > Cylindrical polars are a right-handed orthogonal curvilinear coorindate system since it satisfies
 > $\mathbf{e}\_i \cdot \mathbf{e}\_j = \delta\_{ij}$ and $\varepsilon\_{ijk} \mathbf{e}\_i = \mathbf{e}\_j \times \mathbf{e}\_k$.
+
+> *Proposition.*{: .prop}
+> The Cartesian basis vectors in terms of spherical basis vectors of a point $\mathbf{x}(r, \theta, \phi)$ are
+>
+> $$
+  \begin{align*}
+  \mathbf{i} &= \sin \theta \cos \phi \,\mathbf{e}_r + \cos \theta \cos \phi \,\mathbf{e}_\theta - \sin\phi \,\mathbf{e}_\phi \\
+  \mathbf{j} &= \sin \theta \sin \phi \,\mathbf{e}_r + \cos \theta \sin \phi \,\mathbf{e}_\theta + \cos\phi \,\mathbf{e}_\phi \\
+  \mathbf{k} &= \cos \theta \,\mathbf{e}_r - \sin \theta \,\mathbf{e}_\theta
+  \end{align*}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By finding the inverse of the coefficient matrix of the spherical basis vectors.
 
 > *Proposition.*{: .prop}
 > The position vector $\mathbf{x}$ in spherical polars of a point is given by
