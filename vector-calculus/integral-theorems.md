@@ -91,7 +91,8 @@ To give a rigorous proof of the theorem, we first consider the $\mathbf{R}^2$ ca
   \delta x = \cos \theta \,\delta s = \mathbf{j} \cdot \mathbf{n} \,\delta s
   $$
 >
-> and for lower curve $C_-$ the normal points to the opposite direction so
+> For the lower curve $C_-$, the normal points to the opposite direction so $\mathbf{j} \cdot \mathbf{n}$ is negative,
+> but $\delta x$ and $\delta s$ are both positive therefore
 >
 > $$
   \delta x = - \mathbf{j} \cdot \mathbf{n} \,\delta s
