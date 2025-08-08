@@ -11,19 +11,14 @@ The result can be generalized to vector differential operators which also gives 
 
 ## Divergence Theorem
 
-> *Theorem.*{: .thm}
-> **[Divergence/Gauss' Theorem]**
-> For a smooth vector field $\mathbf{F}(\mathbf{x})$ over $\mathbb{R}^3$,
->
-> $$
-  \int_V \nabla \cdot \mathbf{F} \,dV = \int_S \mathbf{F} \cdot d\mathbf{S}
-  $$
->
-> where $V$ is a bounded region whose boundary $\partial V = S$ is a piecewise smooth closed surface.
-
 The divergence theorem relates the total flux of a vector field out of a closed surface $S$
-to the integral of the divergence of the vector field over the enclosed volume $V$.
-Geometrically, we take the volume $V$ and divide it up into a bunch of small cubes.
+to the integral of the divergence of the vector field over the enclosed volume $V$, in the form of
+
+$$
+\int_V \nabla \cdot \mathbf{F} \,dV = \int_S \mathbf{F} \cdot d\mathbf{S}
+$$
+
+To get some intuition geometrically, we take the volume $V$ and divide it up into a bunch of small cubes.
 A given cube $V_\mathbf{x}$ has one corner sitting at $\mathbf{x}$ and sides of lenght $\delta x$, $\delta y$ and $\delta z$.
 
 ![Flux of two sides](../images/vector-calculus-divergence-theorem-two-sides.png)
@@ -115,6 +110,16 @@ To give a rigorous proof of the theorem, we first consider the $\mathbf{R}^2$ ca
 >
 > In case of the vertical line cutting the boundary $C$ more than twice somewhere,
 > we can decompose the curve into multiple pieces and apply the same strategy.
+
+> *Theorem.*{: .thm}
+> **[Divergence/Gauss' Theorem]**
+> For a smooth vector field $\mathbf{F}(\mathbf{x})$ over $\mathbb{R}^3$,
+>
+> $$
+  \int_V \nabla \cdot \mathbf{F} \,dV = \int_S \mathbf{F} \cdot d\mathbf{S}
+  $$
+>
+> where $V$ is a bounded region whose boundary $\partial V = S$ is a piecewise smooth closed surface.
 
 ## Green's Theorem
 
