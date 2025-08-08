@@ -68,6 +68,53 @@ To give a rigorous proof of the theorem, we first consider the $\mathbf{R}^2$ ca
 > $$
   \int_D \nabla \cdot \mathbf{F} \,dA = \int_C \mathbf{F} \cdot \mathbf{n} \,ds
   $$
+>
+> where $D$ is a region in $\mathbf{R}^2$, bounded by the closed curve $\mathbf{C}$ and $\mathbf{n}$ is the outward normal to $\mathbf{C}$.
+>
+> *Proof.*{: .prf}
+>
+> For simplicity, assume that $\mathbf{F}$ is uni-directional, e.g. $\mathbf{F} = F(x, y) \mathbf{j}$.
+> The same argument applies to $\mathbf{F}$ pointing solely in the $x$-direction and a general $\mathbf{F}$ is a linear sum of the two.
+>
+> We then have
+>
+> $$
+  \begin{align*}
+  \int_D \nabla \cdot \mathbf{F} \,dA
+  &= \int_X dx \int_{y_-(x)}^{y_+(x)} dy \, {\partial F \over \partial y} \\
+  &= \int_X dx \left( F(x, y_+(x)) - F(x, y_-(x)) \right)
+  \end{align*}
+  $$
+>
+> where $y_+(x)$ are values on the upper curve $C_+$ and $y_-(x)$ are that of lower curve $C_-$.
+>
+> ![Divergence Theorem 2D](../images/vector-calculus-divergence-theorem-2d.png)
+>
+> While transversing the upper curve $C_+$, we have
+>
+> $$
+  \delta x = \cos \theta \,\delta s = \mathbf{j} \cdot \mathbf{n} \,\delta s
+  $$
+>
+> and for lower curve $C_-$ the normal points to the opposite direction so
+>
+> $$
+  \delta x = - \mathbf{j} \cdot \mathbf{n} \,\delta s
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  \int_D \nabla \cdot \mathbf{F} \,dA
+  &= \int_X ds \left( \mathbf{n} \cdot \mathbf{F}(x, y_+(x)) + \mathbf{n} \cdot \mathbf{F}(x, y_-(x)) \right) \\
+  &= \int_{C_+} \mathbf{F} \cdot \mathbf{n} \,ds + \int_{C_-} \mathbf{F} \cdot \mathbf{n} \,ds \\
+  &= \int_{C} \mathbf{F} \cdot \mathbf{n} \,ds
+  \end{align*}
+  $$
+>
+> In case of the vertical line cutting the boundary $C$ more than twice somewhere,
+> we can decompose the curve into multiple pieces and apply the same strategy.
 
 ## Green's Theorem
 
