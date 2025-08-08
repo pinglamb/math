@@ -21,11 +21,69 @@ The result can be generalized to vector differential operators which also gives 
 >
 > where $V$ is a bounded region whose boundary $\partial V = S$ is a piecewise smooth closed surface.
 
+The divergence theorem relates the total flux of a vector field out of a closed surface $S$
+to the integral of the divergence of the vector field over the enclosed volume $V$.
+Geometrically, we take the volume $V$ and divide it up into a bunch of small cubes.
+A given cube $V_\mathbf{x}$ has one corner sitting at $\mathbf{x}$ and sides of lenght $\delta x$, $\delta y$ and $\delta z$.
+
+![Flux of two sides](../images/vector-calculus-divergence-theorem-two-sides.png)
+
+The flux of $\mathbf{F}$ through the two colored sides is given by
+
+$$
+[F_x(x + \delta x, y, z) - F_x(x, y, z)] \delta y \delta z \approx { \partial F_x \over \partial x} \delta x \delta y \delta z
+$$
+
+with a minus sign on the second term becaue the the outward normal is pointing at the opposite direction.
+Summing over six sides, the total flux is then
+
+$$
+\int_{V_\mathbf{x}} \mathbf{F} \cdot d\mathbf{S}
+= \left( {\partial F_x \over \partial x} + {\partial F_y \over \partial y} + {\partial F_z \over \partial z} \right) \delta x \delta y \delta z
+= \nabla \cdot \mathbf{F} \,\delta x \,\delta y \,\delta z
+$$
+
+While summing the above expression over these small cubes of the volume $V$, for the R.H.S. we get a volume integral.
+For the L.H.S., since the adjacent cubes share the same side, they cancel out and what left is the boundary surface $\partial V = S$.
+
+![Flux cancel out](../images/vector-calculus-divergence-theorem-cancel-out.png)
+
+Hence, we can claim that
+
+$$
+\int_S \mathbf{F} \cdot d\mathbf{S} = \int_V \nabla \cdot \mathbf{F} \,dV
+$$
+
+However, this argument has an issue that the small cubes might not be able to approximate the smooth boundary
+similar to the fact that we can't approximate a tilted line by our horizontal and vertical line segments.
+
+![Flux cancel out](../images/vector-calculus-divergence-theorem-issue.png)
+
+To give a rigorous proof of the theorem, we first consider the $\mathbf{R}^2$ case which is interesting enough by itself.
+
+> *Theorem.*{: .thm}
+> **[2D Divergence Theorem]**
+> Suppose that $\mathbf{F}: \mathbb{R}^2 \to \mathbf{R}^2$ is a vector field. Then
+>
+> $$
+  \int_D \nabla \cdot \mathbf{F} \,dA = \int_C \mathbf{F} \cdot \mathbf{n} \,ds
+  $$
+
 ## Green's Theorem
 
 ## Stokes' Theorem
 
 ## Integral Form of Differential Operators
+
+The divergence theorem provides a way to define divergence geometrically.
+Consider the integration of $\nabla \cdot \mathbf{F}$ over some region of volume $V$ centered at $\mathbf{x}$.
+If the region is small enough, $\nabla \cdot \mathbf{F}$ is roughly constant and so
+
+$$
+\int_V \nabla \cdot \mathbf{F} \,dV \approx V \nabla \cdot \mathbf{F}(\mathbf{x})
+$$
+
+By divergence theorem, we can conclude the following.
 
 > *Definition.*{: .def}
 > The divergence of a vector field $\mathbf{F}$ can be defined by
@@ -35,6 +93,10 @@ The result can be generalized to vector differential operators which also gives 
   $$
 >
 > which is coordinate independent.
+
+Therefore, divergence of a vector field is the net flow into or out of a region.
+If $\nabla \cdot \mathbf{F} > 0$ at some point $\mathbf{x}$, then there is a net flow out of that point.
+If $\nabla \cdot \mathbf{F} < 0$ at some point $\mathbf{x}$, then there is a net flow inwards.
 
 ## References
 
