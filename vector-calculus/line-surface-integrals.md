@@ -152,7 +152,7 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
 > The integrals themselves are respectively scalar, vector, scalar and vector in nature.
 
 > *Definition.*{: .def}
-> If $S$ is closed, the line integral will be written as
+> If $S$ is closed, the surface integral will be written as
 >
 > $$
   \oint_S \mathbf{F} \cdot d\mathbf{S}
@@ -171,7 +171,7 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
 
 ![Normal Directions](../images/vector-calculus-surface-integral-normal-direction.png){: .size-2x}
 
-> *Proposition.*{: .prop}
+> *Definition.*{: .def}
 > Suppose that $\phi$ is a scalar field and $S$ is a surface parameterised by $\mathbf{r}(u, v)$.
 > Then the surface integral is given by
 >
@@ -179,7 +179,7 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
   \int_S \phi(\mathbf{r}) \,dS = \iint_R du\,dv \left| {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v} \right| \phi(\mathbf{r})
   $$
 
-> *Proposition.*{: .prop}
+> *Definition.*{: .def}
 > Suppose that $\mathbf{F}$ is a vector field and $S$ is a surface parameterised by $\mathbf{r}(u, v)$.
 > Then the scalar surface integral is given by
 >
@@ -189,6 +189,22 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
   $$
 >
 > This is called the **flux** of $\mathbf{F}$ through $S$.
+
+The physical importance of the flux can be seen by thinking about a fluid.
+Let $\mathbf{F}(\mathbf{x})$ be the velocity field of a fluid.
+In a small time $\Delta t$, the amount of fluid flowing through a small surface element $\Delta S$ is given by
+
+$$
+\text{Flow} = \mathbf{F} \Delta t \cdot \mathbf{n} \Delta S
+$$
+
+Integrating over the whole surface, we have
+
+$$
+\text{Flux} = {\text{Flow} \over \text{Time}} = \int_S \mathbf{F} \cdot d\mathbf{S}
+$$
+
+which is the amount of fluid crossing $S$ per unit time, i.e. the rate of fluid flow.
 
 > *Proposition.*{: .prop}
 > Surface integral is independent of the choice of parameterisation of the surface.
