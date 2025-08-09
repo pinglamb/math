@@ -121,6 +121,51 @@ To give a rigorous proof of the theorem, we first consider the $\mathbf{R}^2$ ca
   $$
 >
 > where $V$ is a bounded region whose boundary $\partial V = S$ is a piecewise smooth closed surface.
+>
+> *Proof.*{: .prf}
+>
+> Similarily, consider a vector field with only $z$ component, i.e. $\mathbf{F} = F(x, y, z) \mathbf{k}$.
+> We have
+>
+> $$
+  \begin{align*}
+  \int_V \nabla \cdot \mathbf{F} \,dV
+  &= \int_S dS \int_{z_-(x, y)}^{z_+(x, y)} dz {\partial F \over \partial z} \\
+  &= \int_S dS \left( F(x, y, z_+(x, y)) - F(x, y, z_-(x, y)) \right)
+  \end{align*}
+  $$
+>
+> where $S_+: (x, y, z_+(x, y)$ and $S_-: (x, y, z_-(x, y))$ are the upper and lower surfaces bounding the volume $V$.
+>
+> Since for surface $S: (x, y, z(x, y))$,
+>
+> $$
+  \mathbf{n} = \left| {\partial \mathbf{x} \over \partial x} \times {\partial \mathbf{x} \over \partial y} \right|
+  = |(1, 0, z_x) \times (0, 1, z_y)|
+  = (-z_x, -z_y, 1)
+  $$
+>
+> For the upper surface $S_+$, we have
+>
+> $$
+  \mathbf{F} \cdot d\mathbf{S} = F \,dS \,(\mathbf{k} \cdot \mathbf{n}) = F \,dS
+  $$
+>
+> and for lower surface $S_-$, since the normal is pointing to the opposite direction,
+>
+> $$
+  \mathbf{F} \cdot d\mathbf{S} = - F \,dS
+  $$
+>
+> Hence,
+>
+> $$
+  \int_V \nabla \cdot \mathbf{F} \,dV
+  = \int_{S_+} \mathbf{F} \cdot d\mathbf{S} + \int_{S_-} \mathbf{F} \cdot d\mathbf{S}  \\
+  = \int_S \mathbf{F} \cdot d\mathbf{S}
+  $$
+
+With the same technique, we can generalize divergence theorem for vector field in $\mathbb{R}^n$.
 
 ## Green's Theorem
 
