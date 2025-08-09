@@ -167,6 +167,46 @@ To give a rigorous proof of the theorem, we first consider the $\mathbf{R}^2$ ca
 
 With the same technique, we can generalize divergence theorem for vector field in $\mathbb{R}^n$.
 
+> *Corollary.*{: .cor}
+> **[Divergence Theorem for Scalar Fields]**
+> Suppose that $\phi$ is a scalar field and $S = \partial V$, then
+>
+> $$
+  \int_V \nabla \phi \,dV = \int_S \phi \,d\mathbf{S}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $\mathbf{F} = \phi \mathbf{a}$ where $\mathbf{a}$ is a constant vector, we have
+>
+> $$
+  \int_V \nabla \cdot (\phi \mathbf{a}) \,dV = \int_S \phi \mathbf{a} \cdot d\mathbf{S}
+  \quad\implies\quad
+  \mathbf{a} \cdot \left( \int_V \nabla \phi \,dV - \int_S \phi \,d\mathbf{S} \right) = 0
+  $$
+
+> *Corollary.*{: .cor}
+> Suppose that $\mathbf{F}$ is a vector field and $S = \partial V$, then
+>
+> $$
+  \int_V \nabla \times \mathbf{F} \,dV = \int_S d\mathbf{S} \times \mathbf{F}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Consider the vector field $\mathbf{a} \times \mathbf{F}$ where $\mathbf{a}$ is a constant vector, we have
+> $\nabla \cdot (\mathbf{a} \times \mathbf{F}) = -\mathbf{a} \cdot (\nabla \times \mathbf{F})$.
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  \int_V \nabla \cdot (\mathbf{a} \times \mathbf{F}) \,dV &= \int_S (\mathbf{a} \times \mathbf{F}) \cdot d\mathbf{S} \\
+  - \mathbf{a} \cdot \int_V \nabla \times \mathbf{F} \,dV &= \mathbf{a} \cdot \int_S \mathbf{F} \times d\mathbf{S} \\
+  \int_V \nabla \times \mathbf{F} \,dV &= \int_S d\mathbf{S} \times \mathbf{F}
+  \end{align*}
+  $$
+
 ## Green's Theorem
 
 ## Stokes' Theorem
