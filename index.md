@@ -12,7 +12,8 @@ title: Home
 * [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Line and Surface Integrals](vector-calculus/line-surface-integrals.md)
 * [Orthogonal Curvilinear Coordinates](vector-calculus/orthogonal-curvilinear-coordinates.md)
-* [Integral Theorems](vector-calculus/integral-theorems.md)
+* [Divergence Theorem](vector-calculus/divergence-theorem.md)
+* [Green's and Stokes' Theorems](vector-calculus/green-stokes-theorems.md)
 * [Tensors](vector-calculus/integral-theorems.md)
 
 ## Analysis

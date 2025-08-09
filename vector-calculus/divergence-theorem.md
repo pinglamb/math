@@ -1,15 +1,14 @@
 ---
 layout: base
-title: Integral Theorems &#124; Vector Calculus
+title: Divergence Theorem &#124; Vector Calculus
 ---
 
-# Integral Theorems
+# Divergence Theorem
 {: .page-title}
 
 The fundamental theorem of calculus states that integration is the inverse of differentiation.
 The result can be generalized to vector differential operators which also gives some intuition of their meaning.
-
-## Divergence Theorem
+We start with the divergence theorem.
 
 The divergence theorem relates the total flux of a vector field out of a closed surface $S$
 to the integral of the divergence of the vector field over the enclosed volume $V$, in the form of
@@ -167,6 +166,8 @@ To give a rigorous proof of the theorem, we first consider the $\mathbf{R}^2$ ca
 
 With the same technique, we can generalize divergence theorem for vector field in $\mathbb{R}^n$.
 
+## For Scalar Field
+
 > *Corollary.*{: .cor}
 > **[Divergence Theorem for Scalar Fields]**
 > Suppose that $\phi$ is a scalar field and $S = \partial V$, then
@@ -184,6 +185,8 @@ With the same technique, we can generalize divergence theorem for vector field i
   \quad\implies\quad
   \mathbf{a} \cdot \left( \int_V \nabla \phi \,dV - \int_S \phi \,d\mathbf{S} \right) = 0
   $$
+
+## For Curl
 
 > *Corollary.*{: .cor}
 > Suppose that $\mathbf{F}$ is a vector field and $S = \partial V$, then
@@ -206,10 +209,6 @@ With the same technique, we can generalize divergence theorem for vector field i
   \int_V \nabla \times \mathbf{F} \,dV &= \int_S d\mathbf{S} \times \mathbf{F}
   \end{align*}
   $$
-
-## Green's Theorem
-
-## Stokes' Theorem
 
 ## Integral Form of Differential Operators
 
@@ -254,6 +253,6 @@ Similarily, we have the following integral form for $\nabla \phi$ and $\nabla \t
 
 ## References
 
-* Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 6
-* David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 4
-* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 11
+* Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 6.1
+* David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 4.1, 4.2
+* K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 11.7, 11.8
