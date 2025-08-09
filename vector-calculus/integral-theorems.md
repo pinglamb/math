@@ -236,6 +236,22 @@ Therefore, divergence of a vector field is the net flow into or out of a region.
 If $\nabla \cdot \mathbf{F} > 0$ at some point $\mathbf{x}$, then there is a net flow out of that point.
 If $\nabla \cdot \mathbf{F} < 0$ at some point $\mathbf{x}$, then there is a net flow inwards.
 
+Similarily, we have the following integral form for $\nabla \phi$ and $\nabla \times \mathbf{F}$.
+
+> *Definition.*{: .def}
+> The gradient of a scalar field $\phi$ can be defined by
+>
+> $$
+  \nabla \phi = \lim_{V \to 0} {1 \over V} \int_S \phi \,d\mathbf{S}
+  $$
+
+> *Definition.*{: .def}
+> The gradient of a scalar field $\phi$ can be defined by
+>
+> $$
+  \nabla \times \mathbf{F} = \lim_{V \to 0} {1 \over V} \int_S d\mathbf{S} \times \mathbf{F}
+  $$
+
 ## References
 
 * Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 6
