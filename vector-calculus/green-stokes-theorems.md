@@ -11,9 +11,10 @@ Two of the important ones are _Green's Theorem_ and _Stokes' Theorem_.
 
 ## Green's Theorem
 
-Green's Theorem is equivalent to the 2D divergence theorem.
+Green's Theorem is equivalent to the 2D Divergence Theorem.
 
 > *Theorem.*{: .thm}
+> **[Green's Theorem]**
 > Let $P(x, y)$ and $Q(x, y)$ be smooth functions on $\mathbb{R}^2$. Then
 >
 > $$
@@ -56,6 +57,24 @@ Green's Theorem is equivalent to the 2D divergence theorem.
 > By divergence theorem, the L.H.S of the two equations are equal and so as the R.H.S.
 
 ## Stokes' Theorem
+
+Stokes' Theorem is an extension of Green's Theorem, where the surface is no longer restricted to lie in a plane.
+
+> *Theorem.*{: .thm}
+> **[Stokes' Theorem]**
+> Let $S$ be a smooth surface in $\mathbb{R}^3$ with boundary $C = \partial S$ a piecewise smooth curve.
+> For any smooth vector field $\mathbf{F}(\mathbf{x})$, we have
+>
+> $$
+  \int_S \nabla \times \mathbf{F} \cdot d\mathbf{S} = \int_C \mathbf{F} \cdot d\mathbf{x}
+  $$
+
+The orientations of $\mathbf{S}$ and $\mathbf{C}$ should be compatible.
+If the surface has normals pointing upward, then the orientation of $C$ is anti-clockwise,
+i.e. $\mathbf{t} \times \mathbf{n}$ points out of $S$.
+
+Stokes' Theorem thus states that the flux of $\nabla \times \mathbf{F}$ across an open surface $S$
+is equal to the circulation of $\mathbf{F}$ round the bounding curve $C$.
 
 ## References
 
