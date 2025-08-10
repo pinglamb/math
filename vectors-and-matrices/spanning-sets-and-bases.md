@@ -110,7 +110,7 @@ Hence, $\dim \mathbb{R}^2 = 2$, $\dim \mathbb{R}^3 = 3$ and $\dim \mathbb{R}^n =
   \nu = {[\mathbf{r}, \mathbf{a}, \mathbf{b}] \over [\mathbf{a}, \mathbf{b}, \mathbf{c}]}
   $$
 
-If the set $\Set{\mathbf{a}, \mathbf{b}, \mathbf{c}}$ spans $\mathbf{R}^3$ and is linearly independent, then it is a basis of $\mathbb{R}^3$.
+If the set $\Set{\mathbf{a}, \mathbf{b}, \mathbf{c}}$ spans $\mathbb{R}^3$ and is linearly independent, then it is a basis of $\mathbb{R}^3$.
 
 ### Cartesian/Standard Basis
 

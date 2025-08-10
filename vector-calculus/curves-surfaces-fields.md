@@ -7,8 +7,8 @@ title: Curves, Surfaces and Fields &#124; Vector Calculus
 {: .page-title}
 
 Instead of being too abstract, it is better to concentrate the discussion on $\mathbb{R}^3$ first in which we can develop many useful properties that can be applied to other subjects like physics.
-In $\mathbf{R}^3$, some of the scalar/vector functions are of greater importance as they can be used to model real world quantities.
-In case we care, the extensions to $\mathbf{R}^m$ is straightforward.
+In $\mathbb{R}^3$, some of the scalar/vector functions are of greater importance as they can be used to model real world quantities.
+In case we care, the extensions to $\mathbb{R}^m$ is straightforward.
 
 ## Curves
 

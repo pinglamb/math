@@ -53,17 +53,17 @@ similar to the fact that we can't approximate a tilted line by our horizontal an
 
 ![Flux cancel out](../images/vector-calculus-divergence-theorem-issue.png)
 
-To give a rigorous proof of the theorem, we first consider the $\mathbf{R}^2$ case which is interesting enough by itself.
+To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ case which is interesting enough by itself.
 
 > *Theorem.*{: .thm}
 > **[2D Divergence Theorem]**
-> Suppose that $\mathbf{F}: \mathbb{R}^2 \to \mathbf{R}^2$ is a vector field. Then
+> Suppose that $\mathbf{F}: \mathbb{R}^2 \to \mathbb{R}^2$ is a vector field. Then
 >
 > $$
   \int_D \nabla \cdot \mathbf{F} \,dA = \int_C \mathbf{F} \cdot \mathbf{n} \,ds
   $$
 >
-> where $D$ is a region in $\mathbf{R}^2$, bounded by the closed curve $\mathbf{C}$ and $\mathbf{n}$ is the outward normal to $\mathbf{C}$.
+> where $D$ is a region in $\mathbb{R}^2$, bounded by the closed curve $\mathbf{C}$ and $\mathbf{n}$ is the outward normal to $\mathbf{C}$.
 >
 > *Proof.*{: .prf}
 >

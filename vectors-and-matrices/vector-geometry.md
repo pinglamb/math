@@ -6,7 +6,7 @@ title: Vector Geometry &#124; Vectors and Matrices
 # Vector Geometry
 {: .page-title}
 
-Vectors provide a convenient way for describing geometry in $\mathbf{R}^3$.
+Vectors provide a convenient way for describing geometry in $\mathbb{R}^3$.
 
 ## Lines
 

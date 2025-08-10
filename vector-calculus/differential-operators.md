@@ -93,7 +93,7 @@ We start with differentiating a scalar field and assume we are working with Cart
 
 > *Property.*{: .prop}
 > **[Linearity]**
-> Suppose that $\phi$ and $\psi$ are scalar fields and $\lambda, \mu \in \mathbf{R}$. Then
+> Suppose that $\phi$ and $\psi$ are scalar fields and $\lambda, \mu \in \mathbb{R}$. Then
 >
 > $$
   \nabla (\lambda \phi + \mu \psi) = \lambda(\nabla \phi) + \mu(\nabla \psi)
@@ -119,7 +119,7 @@ By treating $\nabla$ as an vector and an operator that is waiting for a function
   \text{div} \,\phi = \nabla \cdot \mathbf{F} = (\mathbf{e}_i {\partial \over \partial x_i}) \cdot (\mathbf{e}_j \,F_j) = {\partial F_j \over \partial x_j}
   $$
 
-For a vector function $\mathbf{F}: \mathbf{R}^3 \to \mathbf{R}^3 = (F_1, F_2, F_3)$,
+For a vector function $\mathbf{F}: \mathbb{R}^3 \to \mathbb{R}^3 = (F_1, F_2, F_3)$,
 
 $$
 \nabla \cdot \mathbf{F} = {\partial F_1 \over \partial x} + {\partial F_2 \over \partial y} + {\partial F_3 \over \partial z}
@@ -133,7 +133,7 @@ $$
 
 > *Property.*{: .prop}
 > **[Linearity]**
-> Suppose that $\mathbf{F}$ and $\mathbf{G}$ are vector fields and $\lambda, \mu \in \mathbf{R}$. Then
+> Suppose that $\mathbf{F}$ and $\mathbf{G}$ are vector fields and $\lambda, \mu \in \mathbb{R}$. Then
 >
 > $$
   \nabla \cdot (\lambda \mathbf{F} + \mu \mathbf{G}) = \lambda(\nabla \cdot \mathbf{F}) + \mu(\nabla \cdot \mathbf{G})
@@ -151,7 +151,7 @@ $$
 ## Curl
 
 > *Definition.*{: .def}
-> The **curl** of a vector field $\mathbf{F}: \mathbf{R}^3 \to \mathbf{R}^3$ is a vector field defined by
+> The **curl** of a vector field $\mathbf{F}: \mathbb{R}^3 \to \mathbb{R}^3$ is a vector field defined by
 >
 > $$
   \begin{align*}
@@ -179,7 +179,7 @@ $$
 
 > *Property.*{: .prop}
 > **[Linearity]**
-> Suppose that $\mathbf{F}$ and $\mathbf{G}$ are vector fields and $\lambda, \mu \in \mathbf{R}$. Then
+> Suppose that $\mathbf{F}$ and $\mathbf{G}$ are vector fields and $\lambda, \mu \in \mathbb{R}$. Then
 >
 > $$
   \nabla \times (\lambda \mathbf{F} + \mu \mathbf{G}) = \lambda(\nabla \times \mathbf{F}) + \mu(\nabla \times \mathbf{G})
@@ -206,13 +206,13 @@ $$
   \mathbf{F} \cdot \nabla \cong F_j {\partial \over \partial x_j}
   $$
 
-For a scalar field $\phi: \mathbf{R}^3 \to \mathbf{R}$,
+For a scalar field $\phi: \mathbb{R}^3 \to \mathbb{R}$,
 
 $$
 (\mathbf{F} \cdot \nabla)\phi = F_j {\partial \phi \over \partial x_j} = F_1 {\partial \phi \over \partial x} + F_2 {\partial \phi \over \partial y} + F_3 {\partial \phi \over \partial z} = \mathbf{F} \cdot (\nabla \phi)
 $$
 
-For a vector field $\mathbf{G}: \mathbf{R}^3 \to \mathbf{R}^3$,
+For a vector field $\mathbf{G}: \mathbb{R}^3 \to \mathbb{R}^3$,
 
 $$
 \begin{align*}

@@ -9,7 +9,7 @@ title: Orthogonal Curvilinear Coordiantes Systems &#124; Vector Calculus
 Many physical systems possess spherical symmetry or axial symmetry in which it is more natural to use a different choice of coordinates.
 Two most common non-Cartesian coordinate systems are spherical and cylindrical polars.
 
-In general, we can describe a point $\mathbf{x}$ in $\mathbf{R}^3$ using some coordinates $u, v, w$ so that $\mathbf{x} = (u, v, w)$.
+In general, we can describe a point $\mathbf{x}$ in $\mathbb{R}^3$ using some coordinates $u, v, w$ so that $\mathbf{x} = (u, v, w)$.
 By partial differentiation, $\partial_u \mathbf{x}$, $\partial_v \mathbf{x}$ and $\partial_w \mathbf{x}$ are the tangent vectors
 to the lines defined by keeping the other two variables constants respectively.
 

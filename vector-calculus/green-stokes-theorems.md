@@ -11,6 +11,11 @@ Two of the important ones are _Green's Theorem_ and _Stokes' Theorem_.
 
 ## Green's Theorem
 
+Green's Theorem is equivalent to the 2D divergence theorem.
+
+> *Theorem.*{: .thm}
+> Let $P(x, y)$ and $Q(x, y)$ be smooth functions on $\mathbb{R}^2$.
+
 ## Stokes' Theorem
 
 ## References

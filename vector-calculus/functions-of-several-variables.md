@@ -65,7 +65,7 @@ Alternatively, we can generalize the concept of linear approximation in [differe
   $$
 
 > *Definition.*{: .def}
-> The **differential** of a vector function $f: \mathbf{R} \to \mathbf{R}^n$ is given by
+> The **differential** of a vector function $f: \mathbb{R} \to \mathbb{R}^n$ is given by
 >
 > $$
   d\mathbf{f} = {d\mathbf{f} \over dx} dx
@@ -112,7 +112,7 @@ The idea can be generalized to directions other than parallel to the basis vecto
 ## Scalar Functions of Two Variables
 
 > *Definition.*{: .def}
-> A function $f(x, y): \mathbf{R}^2 \to \mathbf{R}$ is **differentiable** at $(a, b)$ if
+> A function $f(x, y): \mathbb{R}^2 \to \mathbb{R}$ is **differentiable** at $(a, b)$ if
 >
 > $$
   f(a + h, b + k) = f(a, b) + T_xh + T_yk + o(|h| + |k|)
@@ -143,7 +143,7 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 > is a tangent plane touching the surface at the point $(a, b, f(a, b))$.
 
 > *Proposition.*{: .prop}
-> The **total differential** of a function $f: \mathbf{R}^2 \to \mathbf{R}$ is given by
+> The **total differential** of a function $f: \mathbb{R}^2 \to \mathbb{R}$ is given by
 >
 > $$
   d\mathbf{f} = {\partial f \over \partial x} dx + {\partial f \over \partial y} dy
@@ -201,7 +201,7 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 ## Vector Functions of Several Variables
 
 > *Definition.*{: .def}
-> A function $\mathbf{f}: \mathbf{R}^m \to \mathbf{R}^n$ is **differentiable** at $\mathbf{a} \in \mathbf{R}^m$ if for all $\mathbf{h} \in \mathbf{R}^m$
+> A function $\mathbf{f}: \mathbb{R}^m \to \mathbb{R}^n$ is **differentiable** at $\mathbf{a} \in \mathbb{R}^m$ if for all $\mathbf{h} \in \mathbb{R}^m$
 >
 > $$
   \mathbf{f}(\mathbf{a} + \mathbf{h}) = \mathbf{f}(\mathbf{a}) + \mathsf{T}\mathbf{h} + o(\mathbf{h})
@@ -233,7 +233,7 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
   $$
 
 > *Definition.*{: .def}
-> The **differential** of a vector function $f: \mathbf{R}^m \to \mathbf{R}^n$ is given by
+> The **differential** of a vector function $f: \mathbb{R}^m \to \mathbb{R}^n$ is given by
 >
 > $$
   d\mathbf{f} = {\partial \mathbf{f} \over \partial x_j} dx_j
@@ -242,7 +242,7 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 ## Chain Rule
 
 > *Proposition.*{: .prop}
-> For functions $\mathbf{x}(u): \mathbb{R} \to \mathbb{R}^m$ and $f: \mathbf{R}^m \to \mathbf{R}$,
+> For functions $\mathbf{x}(u): \mathbb{R} \to \mathbb{R}^m$ and $f: \mathbb{R}^m \to \mathbb{R}$,
 >
 > $$
   {d \over du} f(\mathbf{x}(u)) = {\partial f \over \partial x_j} {d x_j \over du}
@@ -263,14 +263,14 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 > where we have written $x(t + \Delta t) = x(t) + \Delta x(t)$.
 
 > *Proposition.*{: .prop}
-> For functions $\mathbf{x}(\mathbf{u}): \mathbb{R}^\ell \to \mathbb{R}^m$ and $f: \mathbf{R}^m \to \mathbf{R}$, where $\mathbf{u} = (u_1, ..., u_\ell)$,
+> For functions $\mathbf{x}(\mathbf{u}): \mathbb{R}^\ell \to \mathbb{R}^m$ and $f: \mathbb{R}^m \to \mathbb{R}$, where $\mathbf{u} = (u_1, ..., u_\ell)$,
 >
 > $$
   {\partial \over \partial u_k} f(\mathbf{x}(\mathbf{u})) = {\partial f \over \partial x_j} {\partial x_j \over \partial u_k}
   $$
 
 > *Proposition.*{: .prop}
-> For functions $\mathbf{x}(\mathbf{u}): \mathbb{R}^\ell \to \mathbb{R}^m$ and $\mathbf{f}: \mathbf{R}^m \to \mathbf{R}^n$, where $\mathbf{u} = (u_1, ..., u_\ell)$,
+> For functions $\mathbf{x}(\mathbf{u}): \mathbb{R}^\ell \to \mathbb{R}^m$ and $\mathbf{f}: \mathbb{R}^m \to \mathbb{R}^n$, where $\mathbf{u} = (u_1, ..., u_\ell)$,
 >
 > $$
   \left({\partial \mathbf{f} \over \partial u_k}\right)_i = {\partial \over \partial u_k} f_i(\mathbf{x}(\mathbf{u})) = {\partial f_i \over \partial x_j} {\partial x_j \over \partial u_k}
