@@ -62,12 +62,46 @@ Stokes' Theorem is an extension of Green's Theorem, where the surface is no long
 
 > *Theorem.*{: .thm}
 > **[Stokes' Theorem]**
-> Let $S$ be a smooth surface in $\mathbb{R}^3$ with boundary $C = \partial S$ a piecewise smooth curve.
-> For any smooth vector field $\mathbf{F}(\mathbf{x})$, we have
+> Let $S$ be a smooth surface in $\mathbb{R}^3$ parameterised by $\mathbf{r}$ with a piecewise smooth curve $C = \partial S$ as boundary.
+> For any smooth vector field $\mathbf{F}$, we have
 >
 > $$
-  \int_S \nabla \times \mathbf{F} \cdot d\mathbf{S} = \int_C \mathbf{F} \cdot d\mathbf{x}
+  \int_S \nabla \times \mathbf{F} \cdot d\mathbf{S} = \oint_C \mathbf{F} \cdot d\mathbf{r}
   $$
+>
+> *Proof.*{: .prf}
+>
+> For a surface $S$ parameterised by $\mathbf{r}(u, v)$, we have
+>
+> $$
+  d\mathbf{S} = \left( { \partial \mathbf{r} \over \partial u } \times { \partial \mathbf{r} \over \partial v } \right) \,du \,dv
+  $$
+>
+> Therefore, for a vector field $\mathbf{F}$, we have
+>
+> $$
+  \begin{align*}
+  \nabla \times \mathbf{F} \cdot d\mathbf{S}
+  &= \left( \varepsilon_{ijk} {\partial F_k \over \partial x_j} \right) \left( \varepsilon_{ipq} {\partial x_p \over \partial u} {\partial x_q \over \partial v} \right) \,du \,dv \\
+  &= (\delta_{jp}\delta_{kq} - \delta_{jq}\delta_{kp}) {\partial F_k \over \partial x_j} {\partial x_p \over \partial u} {\partial x_q \over \partial v} \,du \,dv \\
+  &= \left({\partial F_k \over \partial x_j} {\partial x_j \over \partial u} {\partial x_k \over \partial v} - {\partial F_k \over \partial x_j} {\partial x_k \over \partial u} {\partial x_j \over \partial v} \right) \,du \,dv \\
+  &= \left({\partial F_k \over \partial u} {\partial x_k \over \partial v} - {\partial F_k \over \partial v} {\partial x_k \over \partial u} \right) \,du \,dv \\
+  &= \left[{\partial \over \partial u} \left( F_k {\partial x_k \over \partial v} \right) - {\partial \over \partial v} \left( F_k {\partial x_k \over \partial u} \right) \right] \,du \,dv
+  \end{align*}
+  $$
+>
+> Hence,
+>
+> $$
+  \begin{align*}
+  \int_S \nabla \times \mathbf{F} \cdot d\mathbf{S}
+  &= \iint_A \left[{\partial \over \partial u} \left( F_k {\partial x_k \over \partial v} \right) - {\partial \over \partial v} \left( F_k {\partial x_k \over \partial u} \right) \right] \,du \,dv \\
+  &= \int_C F_k {\partial x_k \over \partial u} \,du + F_k {\partial x_k \over \partial v} \,dv \\
+  &= \oint_C F_k \,dx_k = \oint_C \mathbf{F} \cdot d\mathbf{r}
+  \end{align*}
+  $$
+>
+> where the second last line follows from Green's Theorem with $P = F_k \partial_u x_k$ and $Q = F_k \partial_v x_k$.
 
 The orientations of $\mathbf{S}$ and $\mathbf{C}$ should be compatible.
 If the surface has normals pointing upward, then the orientation of $C$ is anti-clockwise,
@@ -75,6 +109,8 @@ i.e. $\mathbf{t} \times \mathbf{n}$ points out of $S$.
 
 Stokes' Theorem thus states that the flux of $\nabla \times \mathbf{F}$ across an open surface $S$
 is equal to the circulation of $\mathbf{F}$ round the bounding curve $C$.
+
+![Curl by Stokes' Theorem](../images/vector-calculus-stokes-theorem-curl.png)
 
 ## References
 
