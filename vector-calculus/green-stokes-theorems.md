@@ -110,6 +110,27 @@ i.e. $\mathbf{t} \times \mathbf{n}$ points out of $S$.
 Stokes' Theorem thus states that the flux of $\nabla \times \mathbf{F}$ across an open surface $S$
 is equal to the circulation of $\mathbf{F}$ round the bounding curve $C$.
 
+Stoke's Theorem also gives us another intuition for the meaning of curl.
+By integrating $\nabla \times \mathbf{F}$ over a small enough surface such that $\nabla \times \mathbf{F}$ is approximately constant, we have
+
+$$
+\int_S \nabla \times \mathbf{F} \cdot d\mathbf{S} \approx A \mathbf{n} \cdot (\nabla \times \mathbf{F})
+$$
+
+where $A$ is the area and $\mathbf{n}$ is the normal. By limiting the area $A$ to zero, we can conclude the following.
+
+> *Corollary.*{: .cor}
+> The curl of a vector field $\mathbf{F}$ can be defined by
+>
+> $$
+  \mathbf{n} \cdot (\nabla \times \mathbf{F}) = \lim_{A \to 0} {1 \over A} \int_C \mathbf{F} \cdot d\mathbf{x}
+  $$
+>
+> which is coordinate independent.
+
+Geometrically, it means the value of $\nabla \times \mathbf{F}$ in the direction of $\mathbf{n}$ is the local circulation of $\mathbf{F}$ in the plane normal to $\mathbf{n}$.
+When we integrate this circulation over some surface $S$, most of it cancels out and the only thing that's left is the circulation around the edge.
+
 ![Curl by Stokes' Theorem](../images/vector-calculus-stokes-theorem-curl.png)
 
 ## References
