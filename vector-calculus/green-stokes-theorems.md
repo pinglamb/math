@@ -133,6 +133,66 @@ When we integrate this circulation over some surface $S$, most of it cancels out
 
 ![Curl by Stokes' Theorem](../images/vector-calculus-stokes-theorem-curl.png)
 
+> *Corollary.*{: .cor}
+> A vector field is conservative iff the field is irrotational, i.e.
+>
+> $$
+  \mathbf{F} = \nabla \phi \iff \nabla \times \mathbf{F} = 0
+  $$
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) As shown [before](differential-operators.md#curl-of-gradient), the curl of the gradient field is always zero, i.e. $\nabla \times (\nabla \phi) = 0$
+>
+> ($\Leftarrow$) Suppose that $\nabla \times \mathbf{F} = 0$. By Stoke's Theorem, we have
+>
+> $$
+  \int_S \nabla \times \mathbf{F} \cdot d\mathbf{S} = \oint_C \mathbf{F} \cdot d\mathbf{x} = 0
+  $$
+>
+> which is the definition of conservativity.
+
+> *Corollary.*{: .cor}
+> For a smooth scalar field $\phi$, we have
+>
+> $$
+  \int_S \nabla \phi \times d\mathbf{S} = - \oint_C \phi \,d\mathbf{x}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $\mathbf{a}$ be an arbitrary vector and $\mathbf{F} = \mathbf{a} \phi$, then
+>
+> $$
+  \int_S \nabla \times (\mathbf{a} \phi) \cdot d\mathbf{S}
+  = \oint_C \phi \mathbf{a} \cdot d\mathbf{x}
+  = \mathbf{a} \cdot \oint_C \phi d\mathbf{x}
+  $$
+>
+> But
+>
+> $$
+  \begin{align*}
+  \nabla \times (\mathbf{a} \phi) \cdot d\mathbf{S}
+  &= \left( \varepsilon_{ijk} { \partial a_k \phi \over \partial x_j } \right) n_i \,dS \\
+  &= a_k \left( \varepsilon_{kij} \,n_i { \partial \phi \over \partial x_j } \right) \,dS \\
+  &= \mathbf{a} \cdot (\mathbf{n} \times \nabla \phi) \,dS \\
+  &= - \mathbf{a} \cdot (\nabla \phi \times \mathbf{n}) \,dS
+  \end{align*}
+  $$
+>
+> and hence
+>
+> $$
+  - \mathbf{a} \cdot \int_S \nabla \phi \times d\mathbf{S} = \mathbf{a} \cdot \oint_C \phi \,d\mathbf{x} \\
+  $$
+>
+> and $\mathbf{a}$ is arbitrary so
+>
+> $$
+  \int_S \nabla \phi \times d\mathbf{S} = - \oint_C \phi \,d\mathbf{x}
+  $$
+
 ## References
 
 * Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 6.2, 6.3
