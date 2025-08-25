@@ -257,7 +257,7 @@ To avoid ambiguity, we will use $\Set{\mathbf{f_i}} = \Set{\mathbf{e_j}}$ as the
 >
 > *Proof.*{: .prf}
 >
-> ![General Rotation](../images/vectors-linear-maps-general-rotation.png)
+> ![General Rotation](../images/vectors-and-matrices/linear-maps-general-rotation.png)
 >
 > The image $\mathbf{x}' = \vec{OB} + \vec{BC} + \vec{CA'}$.
 >
@@ -347,7 +347,7 @@ To avoid ambiguity, we will use $\Set{\mathbf{f_i}} = \Set{\mathbf{e_j}}$ as the
 > that displaces points in one direction (e.g. $x_1$ direction)
 > by an amount proportional to the distance in that plane from an axis (e.g. $x_1$-axis).
 
-![Shear](../images/vectors-shear.png)
+![Shear](../images/vectors-and-matrices/linear-maps-shear.png)
 
 For example, $\mathcal{S}_\lambda$ is the transformation such that
 

@@ -185,7 +185,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 
 ### Projection
 
-![Projection](../images/vector-projection.png)
+![Projection](../images/vectors-and-matrices/vector-projection.png)
 
 > *Definition.*{: .def}
 > The projection of $\mathbf{a}$ onto $\mathbf{b}$ is the part of $\mathbf{a}$ that is parallel to $\mathbf{b}$,
@@ -235,7 +235,7 @@ According to the above, the set of $\mathbb{R}^2$ / $\mathbb{R}^3$ vectors form 
 >
 > *Proof.*{: .prf}
 >
-> ![Dot Product Distributive](../images/vector-dot-product-distributive-law.png)
+> ![Dot Product Distributive](../images/vectors-and-matrices/vector-dot-product-distributive-law.png)
 >
 > According to the above, we can see that $\mathbf{b}^{\perp} + \mathbf{c}^{\perp} = (\mathbf{b} + \mathbf{c})^{\perp}$, i.e.
 >
@@ -324,7 +324,7 @@ The vector product is only defined for $\mathbb{R}^3$ space but not all vector s
 >
 > + $\mathbf{a} \times \mathbf{b}$ has the direction defined by "_right-hand rule_" ($\mathbf{a}$ - index finger, $\mathbf{b}$ - second finger, $\mathbf{a} \times \mathbf{b}$ - thumb)
 >
->   ![Vector Product](../images/vectors-vector-product.png)
+>   ![Vector Product](../images/vectors-and-matrices/vector-product.png)
 
 > *Property.*{: .prop}
 > ${1 \over 2} \mathbf{a} \times \mathbf{b}$ is the _vector area_ of triangle $OAB$.
@@ -391,7 +391,7 @@ The vector product is only defined for $\mathbb{R}^3$ space but not all vector s
 > First project $\mathbf{b}$ onto a plane orthogonal to $\mathbf{\hat{a}}$ and then rotate the projection $\mathbf{b'}$ by $\pi/2$ in "anti-clockwise" direction
 > (when looking in the opposite direction of $\mathbf{\hat{a}}$) to form $\mathbf{b''}$.
 >
-> ![Vector Product Distributive](../images/vectors-vector-product-by-projection.png)
+> ![Vector Product Distributive](../images/vectors-and-matrices/vector-product-by-projection.png)
 >
 > We can see that $\|\mathbf{b}''\| = \|\mathbf{b'}\| = \|\mathbf{b}\| \sin \theta$.
 > By construction, $\mathbf{b''} = \mathbf{\hat{a}} \times \mathbf{b}$.
@@ -430,7 +430,7 @@ $$
 >
 > *Proof.*{: .prf}
 >
-> ![Scalar Triple Product](../images/vector-triple-product-parallelepiped.png)
+> ![Scalar Triple Product](../images/vectors-and-matrices/vector-triple-product-parallelepiped.png)
 >
 > $$
   \begin{align*}

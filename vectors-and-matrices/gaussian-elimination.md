@@ -195,7 +195,7 @@ We can therefore have an alternative description about the Gaussian elimination:
 The elimination can also be carried out on $m \times n$ rectangular matrix.
 When there are no pivots for a column, we just move on to the next and we will end up with a "staircase pattern", or **echelon form**.
 
-![Echelon Form](../images/gaussian-elimination-echelon-form.png)
+![Echelon Form](../images/vectors-and-matrices/gaussian-elimination-echelon-form.png)
 
 As the elimination steps have not changed, just like what we do to square matrix, we have the same factorization method:
 

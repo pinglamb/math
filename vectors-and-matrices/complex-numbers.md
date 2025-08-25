@@ -184,7 +184,7 @@ $$
 > An **Argand diagram** is a diagram in which a complex number $z = x + yi$ is represented by a vector $\mathbf{p} = \begin{pmatrix} x \\\ y \end{pmatrix}$ on Cartesian plane.
 > The $xy$ plane is referred as **complex plane** with real axis and imaginary axis.
 
-![Argand Diagram](../images/complex-number-argand-diagram.png)
+![Argand Diagram](../images/vectors-and-matrices/complex-number-argand-diagram.png)
 
 The Argand diagram allows us to interpret complex numbers geometrically, i.e.
 
@@ -231,7 +231,7 @@ By geometry, we observed the following inequalities about modulus:
 >
 > By Pythagoras' theorem.
 
-![Triangle Inequality](../images/complex-number-triangle-inequality.png)
+![Triangle Inequality](../images/vectors-and-matrices/complex-number-triangle-inequality.png)
 
 > *Corollary.*{: .cor}
 > $|z_1 - z_3| \le |z_1 - z_2| + |z_2 + z_3|$.
@@ -240,7 +240,7 @@ By geometry, we observed the following inequalities about modulus:
 >
 > Self-evident by geometry or by substituting $z_1' = z_1 - z_2$ and $z_2' = z_2 - z_3$ into the triangle inequality.
 
-![Triangle Inequality](../images/complex-number-double-circles.png)
+![Triangle Inequality](../images/vectors-and-matrices/complex-number-double-circles.png)
 
 > *Corollary.*{: .cor}
 > $\vert z_1 - z_2 \vert \ge \vert \vert z_1 \vert - \vert z_2 \vert \vert$.
@@ -295,7 +295,7 @@ By geometry, we observed the following inequalities about modulus:
 
 The use of polar coordinates to represent position in Argand diagram is really helpful to understand some of the properties.
 
-![Polar Form](../images/complex-number-polar.png)
+![Polar Form](../images/vectors-and-matrices/complex-number-polar.png)
 
 
 > *Definition.*{: .def}
@@ -424,7 +424,7 @@ $$
 
 Geometrically, the n-th roots of unity are the vertices of a regular n-gon on the complex plane, which are evenly spaced around a circle.
 
-![Roots of Unity](../images/complex-number-roots-of-unity.png)
+![Roots of Unity](../images/vectors-and-matrices/complex-number-roots-of-unity.png)
 
 ## Logarithms and Powers
 

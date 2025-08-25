@@ -33,7 +33,7 @@ The non-singular case is that the three planes intersect at a single point, whic
 
 For the singular case, there are few possibilities for the planes to "go wrong":
 
-![Singular cases for planes](../images/linear-equations-planes-singular.png)
+![Singular cases for planes](../images/vectors-and-matrices/linear-equations-planes-singular.png)
 
 For (a), (b) and (d), they have no solutions and the equations are said to be inconsistent.
 For (c), there is a line of solutions.
@@ -53,7 +53,7 @@ As discussed before, three linear independent vectors span the three dimensional
 
 For the system to be singular, the three column vectors have to lie in a plane, i.e. linearly dependent.
 
-![Singular cases for vectors](../images/linear-equations-vectors-singular.png)
+![Singular cases for vectors](../images/vectors-and-matrices/linear-equations-vectors-singular.png)
 
 If $\mathbf{d}$ is also on the plane, there are infinitely many solutions, otherwise, the system has no solution.
 
