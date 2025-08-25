@@ -20,7 +20,7 @@ Directional derivatives are the generalization of partial derivatives for obtain
 If $\mathbf{u} = \mathbf{i} = (1, 0)$, then $D_\mathbf{i} f = f_x$.
 If $\mathbf{u} = \mathbf{j} = (0, 1)$, then $D_\mathbf{j} f = f_y$.
 
-![Directional Derivative](../images/ode-directional-derivative-geometry.png)
+![Directional Derivative](../images/differential-equations/directional-derivative-geometry.png)
 
 > *Theorem.*{: .thm}
 > If $f$ is a differentiable function of $x$ and $y$,
@@ -106,7 +106,7 @@ and generalize that for higher dimentions.
 > Then $\nabla f(\mathbf{x})$ points in the direction of maximum rate of increase of $f$ at $\mathbf{x}$,
 > i.e. perpendicular to the level curve or level surface of $f$ through $\mathbf{x}$.
 
-![Normal Line](../images/ode-gradient-vector-normal-line.png)
+![Normal Line](../images/differential-equations/gradient-vector-normal-line.png)
 
 ## Stationary Points
 
@@ -143,7 +143,7 @@ Similar to single-variable derivative, the converse is not necessary true.
 Here is an example contour map of $f(x, y) = x^4 + y^4 - 4xy + 1$.
 From that we can see $(1, 1)$ and $(-1, -1)$ are local maximum/minimum and $(0, 0)$ is a saddle point.
 
-![Contour Map](../images/ode-critical-points-contour-map.png){: .size-2x}
+![Contour Map](../images/differential-equations/critical-points-contour-map.png){: .size-2x}
 
 ## References
 

@@ -260,7 +260,7 @@ The theorem provides a good way to find a lower bound of radius of convergence w
 >
 > By rewriting the constants, we have $y(x) = x^{\rho}[A\cos(\omega\ln x) + B\sin(\omega\ln x)]$.
 
-![Euler Equations](../images/ode-euler-equation-behaviour.png){: .size-2x}
+![Euler Equations](../images/differential-equations/euler-equation-behaviour.png){: .size-2x}
 
 > *Proposition.*{: .prop}
 > For the case that $x < 0$, let $x = -\xi$ and $y = u(\xi)$, then

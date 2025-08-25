@@ -93,7 +93,7 @@ Since the half life of carbon 14 is 5700 years, we have $k = \ln 2 / 5700 \appro
 >
 > As $p = 0$ is unstable and $p = M$ is stable, we have the following plot of different solutions of the equation
 >
-> ![Logistic Equation Phase Diagram](../images/ode-example-logistic-equation.png)
+> ![Logistic Equation Phase Diagram](../images/differential-equations/example-logistic-equation.png)
 
 > *Example.*{: .eg}
 > To find an explicit solution, by separating varaibles, we have

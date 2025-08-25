@@ -81,7 +81,7 @@ $$
 
 So, we can say, since $x'(t) > 0$ for all $t$, $x(t)$ increases as $t$ increases and $x(t) \to x_0 + \sqrt{\pi}/2$.
 
-![Gaussian Integral](../images/ode-gaussian-integral.png)
+![Gaussian Integral](../images/differential-equations/gaussian-integral.png)
 
 ## Autonomous Equations
 
@@ -103,7 +103,7 @@ but we can also try to understand the solutions "qualitatively".
 >
 > For example,
 >
-> ![Phase Diagram](../images/ode-phase-diagram.png)
+> ![Phase Diagram](../images/differential-equations/phase-diagram.png)
 
 > *Definition.*{: .def}
 > An equilibrium is **stable** if it is attacting nearby solutions.
@@ -118,12 +118,12 @@ but we can also try to understand the solutions "qualitatively".
 >
 > For example, the equilibria above are labeled with the corresponding stability:
 >
-> ![Phase Diagram with Stability](../images/ode-phase-diagram-stability.png)
+> ![Phase Diagram with Stability](../images/differential-equations/phase-diagram-stability.png)
 
 > *Proposition.*{: .prop}
 > The stability of equilibria is determined by the following conditions:
 >
-> ![Stability Conditions](../images/ode-stability-conditions.png)
+> ![Stability Conditions](../images/differential-equations/stability-conditions.png)
 
 > *Definition.*{: .def}
 > The differential equation has a **bifurcation** near an equilibrium $x^\ast$ if a small change to $f$ will change the phase diagram drastically.

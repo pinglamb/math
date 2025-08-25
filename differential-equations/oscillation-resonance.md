@@ -10,7 +10,7 @@ title: Oscillations and Resonance &#124; Differential Equations
 
 The simplest system that give rise to oscillation is a mass on a spring.
 
-![Spring](../images/ode-spring.png)
+![Spring](../images/differential-equations/spring.png)
 
 > *Proposition.*{: .prop}
 > **[Hooke's Law]**
@@ -61,13 +61,13 @@ The simplest system that give rise to oscillation is a mass on a spring.
   \cos\phi \cos\omega t + \sin\phi \sin\omega t = \cos(\omega t - \phi)
   $$
 
-![Spring Oscillation](../images/ode-spring-oscillation.png)
+![Spring Oscillation](../images/differential-equations/spring-oscillation.png)
 
 ## Pendulum
 
 The oscillation of a simple pendulum is also a good example of second order ODE.
 
-![Pendulum](../images/ode-pendulum.png)
+![Pendulum](../images/differential-equations/pendulum.png)
 
 > *Proposition.*{: .prop}
 > Suppose the pendulum has length $L$ that the bob has mass $m$.
@@ -142,7 +142,7 @@ Damping occurs when we take into account effects of friction or air resistance.
 >
 > which gives rise to three possibilities depending on the nature of the roots.
 
-![Damping](../images/ode-damping.png){: .size-2x}
+![Damping](../images/differential-equations/damping.png){: .size-2x}
 
 > *Definition.*{: .def}
 > **[Over-damping]**
@@ -205,7 +205,7 @@ Damping occurs when we take into account effects of friction or air resistance.
 >
 > Hence, the time between successive maxima is $2\pi / \sigma$, independent of the amplitude.
 
-![Period of Under Damping](../images/ode-under-damping-period.png)
+![Period of Under Damping](../images/differential-equations/under-damping-period.png)
 
 ## Resonance
 
@@ -256,7 +256,7 @@ From the solution, we can see that the amplitude of the second term increases wh
 
 The response by the system is unbounded and result with ideal resonance.
 
-![Unbounded Response](../images/ode-resonance-unbounded-response.png)
+![Unbounded Response](../images/differential-equations/resonance-unbounded-response.png)
 
 In the real world, there is almost invariably some damping in the system so ideal resonance is not possible.
 However, there will still be frequency at which the amplitude of the resulting oscillations is significantly larger than the amplitude of the forcing.
@@ -303,7 +303,7 @@ However, there will still be frequency at which the amplitude of the resulting o
   R_{\text{max}}(\lambda) = {2a \over \lambda \sqrt{4\omega^2 - \lambda^2}}
   $$
 
-![Resonance with Damping](../images/ode-resonance-under-damping.png){: .size-2x}
+![Resonance with Damping](../images/differential-equations/resonance-under-damping.png){: .size-2x}
 
 ## References
 

@@ -114,7 +114,7 @@ The Laplace transform is useful for solving differential equations as it reduces
   \end{cases} \quad c \ge 0
   $$
 
-![Heaviside Function](../images/ode-heaviside-function.png)
+![Heaviside Function](../images/differential-equations/heaviside-function.png)
 
 > *Theorem.*{: .thm}
 > If $F(s) = \mathcal{L}\\{f(t)\\}$ exists for $s > a \ge 0$ and if $c$ is a positive constant, then
@@ -149,7 +149,7 @@ The Laplace transform is useful for solving differential equations as it reduces
 
 A sketch of $y = u_c(t)f(t - c)$ is like this:
 
-![Heaviside Function for Laplace Transform](../images/ode-heaviside-function-laplace-transform.png)
+![Heaviside Function for Laplace Transform](../images/differential-equations/heaviside-function-laplace-transform.png)
 
 > *Theorem.*{: .thm}
 > If $F(s) = \mathcal{L}\\{f(t)\\}$ exists for $s > a \ge 0$ and if $c$ is a constant, then
@@ -194,7 +194,7 @@ $$
 \lim_{\tau \to 0} d_\tau(t) = 0
 $$
 
-![Impulsive Force Function](../images/ode-impulsive-force-function.png)
+![Impulsive Force Function](../images/differential-equations/impulsive-force-function.png)
 
 On the other hand, the total impulse by the forcing function is the integral
 

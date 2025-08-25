@@ -173,7 +173,7 @@ $$
 Graphically, we can produce a picture known as **cobweb diagram** by drawing $y = f(x)$ and the line $y = x$.
 Given $x_n$, we can find $x_{n+1}$ by drawing a line up to $f(x_n)$ then over to $y = x$, and repatedly to find $x_{n+2}, ...$.
 
-![Cobweb Method](../images/ode-cobweb-method.png){: .size-2x}
+![Cobweb Method](../images/differential-equations/cobweb-method.png){: .size-2x}
 
 ## References
 

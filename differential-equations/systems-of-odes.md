@@ -300,14 +300,14 @@ The folowing are different phase portraits for different eigenvalues of a typica
 > *Proposition.*{: .prop}
 > If the eigenvalues are distinct real and opposite signs, the phase portrait will be like
 >
-> ![Phase Portrait](../images/ode-phase-portrait-real-opposite-sign.png)
+> ![Phase Portrait](../images/differential-equations/phase-portrait-real-opposite-sign.png)
 >
 > The origin is called a **saddle point** and is unstable.
 
 > *Proposition.*{: .prop}
 > If the eigenvalues are distinct real and both negative, the phase portrait will be like
 >
-> ![Phase Portrait](../images/ode-phase-portrait-real-same-sign.png)
+> ![Phase Portrait](../images/differential-equations/phase-portrait-real-same-sign.png)
 >
 > The origin is called a **node** and is stable.
 >
@@ -316,7 +316,7 @@ The folowing are different phase portraits for different eigenvalues of a typica
 > *Proposition.*{: .prop}
 > If the eigenvalues are complex with negative real parts, the phase portrait will be like
 >
-> ![Phase Portrait](../images/ode-phase-portrait-complex-negative-real.png)
+> ![Phase Portrait](../images/differential-equations/phase-portrait-complex-negative-real.png)
 >
 > The origin is called a **sprial point** and is asymtotically stable.
 >
@@ -329,7 +329,7 @@ The folowing are different phase portraits for different eigenvalues of a typica
 > *Proposition.*{: .prop}
 > If the system has a repeated positive eigenvalue and only one linearly independent eigenvector, the phase portrait will be like
 >
-> ![Phase Portrait](../images/ode-phase-portrait-repeated.png)
+> ![Phase Portrait](../images/differential-equations/phase-portrait-repeated.png)
 >
 > The origin is called an **improper node** and is asymtotically unstable.
 >
@@ -356,7 +356,7 @@ The nonlinear systems are more complicated than the linear ones for the reason t
 > *Definition.*{: .def}
 > A **separatrix** is a trajectory that bounds a basin of attraction.
 
-![Basin of Attraction](../images/ode-nonlinear-basin-of-attraction.png){: .size-2x}
+![Basin of Attraction](../images/differential-equations/nonlinear-basin-of-attraction.png){: .size-2x}
 
 > *Proposition.*{: .prop}
 > For a general nonlinear autonomous system
