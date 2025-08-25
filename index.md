@@ -11,9 +11,10 @@ title: Home
 * [Differential Operators](vector-calculus/differential-operators.md)
 * [Multiple Integrals](vector-calculus/multiple-integrals.md)
 * [Line and Surface Integrals](vector-calculus/line-surface-integrals.md)
-* [Orthogonal Curvilinear Coordinates](vector-calculus/orthogonal-curvilinear-coordinates.md)
 * [Divergence Theorem](vector-calculus/divergence-theorem.md)
 * [Green's and Stokes' Theorems](vector-calculus/green-stokes-theorems.md)
+* [Orthogonal Curvilinear Coordinates](vector-calculus/orthogonal-curvilinear-coordinates.md)
+* [Poisson and Laplace Equations](vector-calculus/poisson-laplace-equations.md)
 * [Tensors](vector-calculus/integral-theorems.md)
 
 ## Analysis
