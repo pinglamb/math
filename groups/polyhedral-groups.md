@@ -8,7 +8,7 @@ title: Polyhedral Groups &#124; Groups
 
 The polyhedral groups are the symmetrices of the five platonic solids.
 
-![Platonic Solids](../images/groups-platonic-solids.png)
+![Platonic Solids](../images/groups/platonic-solids.png)
 
 | Solid        | Polygon  | Faces | Vertices | Edges |
 | Tetrahedron  | Triangle | 4     | 4        | 6     |
@@ -79,7 +79,7 @@ The polyhedral groups are the symmetrices of the five platonic solids.
 > Put each vertex of the octahedron on the centre of a face of the cube, and vice versa,
 > the group of symmetries is isomorphic to that of cube.
 >
-> ![Cube & Octahedron](../images/groups-cube-octahedron.png)
+> ![Cube & Octahedron](../images/groups/cube-octahedron.png)
 
 ## Tetrahedron
 

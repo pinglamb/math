@@ -149,7 +149,7 @@ We have already shown that [the image of a homomorphism is a subgroup](homomorph
 >
 > *Proof.*{: .prf}
 >
-> ![Isomorphism Theorem](../images/isomorphism-theorem.png)
+> ![Isomorphism Theorem](../images/groups/isomorphism-theorem.png)
 >
 > Define $\bar{f}: G/K \to H$ by $\bar{f}(aK) = f(a)$ (so that $\bar{f}q = f$).
 >

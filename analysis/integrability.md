@@ -35,7 +35,7 @@ This geometrical equivalence is helpful to visualize the meaning of the analytic
 
 The upper sum is the total area of the red rectangles and lower sum is that of black rectangles.
 
-![Upper and Lower Sums](../images/analysis-upper-lower-sums.png)
+![Upper and Lower Sums](../images/analysis/upper-lower-sums.png)
 
 > *Definition.*{: .def}
 > If every point of $D_1$ is a point of $D_2$, then $D_2$ is a **refinement** of $D_1$, i.e. $D_1 \le D_2$.

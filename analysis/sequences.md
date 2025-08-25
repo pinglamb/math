@@ -27,7 +27,7 @@ We want to study what it means for a real sequence to converge.
 >
 > The sequence is said to be **convergent**, otherwise it is **divergent**.
 
-![Convergent Sequence](../images/analysis-convergent-sequence.png)
+![Convergent Sequence](../images/analysis/convergent-sequence.png)
 
 It is similar to the definition of limit of a function $f(x)$, therefore
 
@@ -332,7 +332,7 @@ We can still study its limit by the following technique.
 
 In some cases, the cobweb diagram can be useful as well.
 
-![Cobweb Method](../images/ode-cobweb-method.png){: .size-2x}
+![Cobweb Method](../images/analysis/cobweb-method.png){: .size-2x}
 
 ## References
 

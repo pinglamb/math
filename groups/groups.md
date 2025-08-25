@@ -11,7 +11,7 @@ and symmetry of something is just a way of mapping something to itself preservin
 
 For example, consider the symmetries of an equilateral triangle.
 
-![Equilateral Triangle](../images/equilateral-triangle.png)
+![Equilateral Triangle](../images/groups/equilateral-triangle.png)
 
 If we limit ourselves to preserve everything, we would only be allowed to do nothing.
 When studying the symmetries of the equilateral triangle, we only care about how the resultant objects look,
