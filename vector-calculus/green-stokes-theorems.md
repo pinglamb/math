@@ -40,7 +40,7 @@ Green's Theorem is equivalent to the 2D Divergence Theorem.
 >
 > which points outward provided that the arc length $s$ increases in the anti-clockwise direction.
 >
-> ![Green Theorem](../images/vector-calculus-green-theorem.png)
+> ![Green Theorem](../images/vector-calculus/green-theorem.png)
 >
 > We then have
 >
@@ -131,7 +131,7 @@ where $A$ is the area and $\mathbf{n}$ is the normal. By limiting the area $A$ t
 Geometrically, it means the value of $\nabla \times \mathbf{F}$ in the direction of $\mathbf{n}$ is the local circulation of $\mathbf{F}$ in the plane normal to $\mathbf{n}$.
 When we integrate this circulation over some surface $S$, most of it cancels out and the only thing that's left is the circulation around the edge.
 
-![Curl by Stokes' Theorem](../images/vector-calculus-stokes-theorem-curl.png)
+![Curl by Stokes' Theorem](../images/vector-calculus/stokes-theorem-curl.png)
 
 > *Corollary.*{: .cor}
 > A vector field is conservative iff the field is irrotational, i.e.

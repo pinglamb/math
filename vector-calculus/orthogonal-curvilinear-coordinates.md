@@ -172,7 +172,7 @@ The expressions for gradient, divergence and curl can easily be verified to matc
   \rho = \sqrt{x^2, y^2} ,\qquad \phi = \tan^{-1} {y \over x} ,\qquad z = z
   $$
 
-![Cylindrical Polar](../images/vector-calculus-cylindrical-polar.png){: .size-2x}
+![Cylindrical Polar](../images/vector-calculus/cylindrical-polar.png){: .size-2x}
 
 > *Proposition.*{: .prop}
 > The scale factors and unit vectors of cylindrical polars are
@@ -302,7 +302,7 @@ The expressions for gradient, divergence and curl can easily be verified to matc
   r = \sqrt{x^2 + y^2 + z^2}, \qquad \theta = \tan^{-1} {\sqrt{x^2 + y^2} \over z}, \qquad \phi = \tan^{-1} {y \over x}
   $$
 
-![Spherical Polar](../images/vector-calculus-spherical-polar.png){: .size-2x}
+![Spherical Polar](../images/vector-calculus/spherical-polar.png){: .size-2x}
 
 > *Proposition.*{: .prop}
 > The scale factors and unit vectors of spherical polars are

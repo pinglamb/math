@@ -20,7 +20,7 @@ $$
 To get some intuition geometrically, we take the volume $V$ and divide it up into a bunch of small cubes.
 A given cube $V_\mathbf{x}$ has one corner sitting at $\mathbf{x}$ and sides of lenght $\delta x$, $\delta y$ and $\delta z$.
 
-![Flux of two sides](../images/vector-calculus-divergence-theorem-two-sides.png)
+![Flux of two sides](../images/vector-calculus/divergence-theorem-two-sides.png)
 
 The flux of $\mathbf{F}$ through the two colored sides is given by
 
@@ -40,7 +40,7 @@ $$
 While summing the above expression over these small cubes of the volume $V$, for the R.H.S. we get a volume integral.
 For the L.H.S., since the adjacent cubes share the same side, they cancel out and what left is the boundary surface $\partial V = S$.
 
-![Flux cancel out](../images/vector-calculus-divergence-theorem-cancel-out.png)
+![Flux cancel out](../images/vector-calculus/divergence-theorem-cancel-out.png)
 
 Hence, we can claim that
 
@@ -51,7 +51,7 @@ $$
 However, this argument has an issue that the small cubes might not be able to approximate the smooth boundary
 similar to the fact that we can't approximate a tilted line by our horizontal and vertical line segments.
 
-![Flux cancel out](../images/vector-calculus-divergence-theorem-issue.png)
+![Flux cancel out](../images/vector-calculus/divergence-theorem-issue.png)
 
 To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ case which is interesting enough by itself.
 
@@ -82,7 +82,7 @@ To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ ca
 >
 > where $y_+(x)$ are values on the upper curve $C_+$ and $y_-(x)$ are that of lower curve $C_-$.
 >
-> ![Divergence Theorem 2D](../images/vector-calculus-divergence-theorem-2d.png)
+> ![Divergence Theorem 2D](../images/vector-calculus/divergence-theorem-2d.png)
 >
 > While transversing the upper curve $C_+$, we have
 >

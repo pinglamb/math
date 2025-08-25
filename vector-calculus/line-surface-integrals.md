@@ -169,7 +169,7 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
 > For closed surface, the direction of $\mathbf{n}$ should be pointing outwards.
 > For open surface, it is given by the right-hand sense with respect to the direction in which the perimeter is traversed.
 
-![Normal Directions](../images/vector-calculus-surface-integral-normal-direction.png){: .size-2x}
+![Normal Directions](../images/vector-calculus/surface-integral-normal-direction.png){: .size-2x}
 
 > *Definition.*{: .def}
 > Suppose that $\phi$ is a scalar field and $S$ is a surface parameterised by $\mathbf{r}(u, v)$.
@@ -221,7 +221,7 @@ In such cases, we have to consider the projections of the surface onto the Carte
 >
 > *Proof.*{: .prf}
 >
-> ![Surface Integral Projection](../images/vector-calculus-surface-integral-projection.png)
+> ![Surface Integral Projection](../images/vector-calculus/surface-integral-projection.png)
 >
 > The unit normal at any point of the surface is given by $\mathbf{n} = \nabla f / \vert \nabla f \vert$.
 >

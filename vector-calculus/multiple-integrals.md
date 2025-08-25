@@ -23,7 +23,7 @@ Just as we may consider derivatives with respect to multiple variables, we can d
   I = \int_R f(x, y) dA \cong \iint_R f(x, y) \,dx \,dy
   $$
 
-![Double Integral](../images/vector-calculus-double-integral.png)
+![Double Integral](../images/vector-calculus/double-integral.png)
 
 > *Definition.*{: .def}
 > Suppose that $f(x, y, z)$ is a function and $R$ is a closed three-dimensional region.
@@ -40,7 +40,7 @@ Just as we may consider derivatives with respect to multiple variables, we can d
   I = \int_R f(x, y) dV \cong \iiint_R f(x, y, z) \,dx \,dy \,dz
   $$
 
-![Triple Integral](../images/vector-calculus-triple-integral.png)
+![Triple Integral](../images/vector-calculus/triple-integral.png)
 
 These ideas can be extended to define multiple integrals of higher dimensionality.
 
@@ -66,7 +66,7 @@ These ideas can be extended to define multiple integrals of higher dimensionalit
 >
 > *Proof.*{: .prf}
 >
-> ![Change of Variable](../images/vector-calculus-change-of-variables-2d.png)
+> ![Change of Variable](../images/vector-calculus/change-of-variables-2d.png)
 >
 > The new subregion $KLMN$ is approximately a parallelogram.
 >
@@ -134,7 +134,7 @@ These ideas can be extended to define multiple integrals of higher dimensionalit
 > where the region $R$ is the square of side $2a$ centred on the origin.
 > The value of integral is therefore bounded by inner circle with radius $a$ and outer circle with radius $\sqrt{2}a$.
 >
-> ![Gaussian Integral](../images/vector-calculus-gaussian-integral.png)
+> ![Gaussian Integral](../images/vector-calculus/gaussian-integral.png)
 >
 > By transforming to polar coordinates, we have
 >
@@ -169,7 +169,7 @@ These ideas can be extended to define multiple integrals of higher dimensionalit
 >
 > *Proof.*{: .prf}
 >
-> ![Change of Variables](../images/vector-calculus-change-of-variables-3d.png)
+> ![Change of Variables](../images/vector-calculus/change-of-variables-3d.png)
 >
 > Similar to the argument presented in double integral, the new subregion is approximately a parallelepiped.
 > The volume of that is given by the [scalar triple product](../vectors-and-matrices/vectors.md#scalar-triple-product), i.e.
