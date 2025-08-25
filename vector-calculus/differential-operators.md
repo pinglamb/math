@@ -40,7 +40,7 @@ We start with differentiating a scalar field and assume we are working with Cart
 > The [directional derivative](functions-of-several-variables.md#directional-derivative-as-partial) is given by
 >
 > $$
-  D_\mathbf{u} \,\phi = {\partial \phi \over \partial x_j} u_j = \mathbf{e_j} {\partial \phi \over \partial x_j} \mathbf{e_i} \,u_i = \nabla \phi \cdot \mathbf{u}
+  D_\mathbf{u} \,\phi = {\partial \phi \over \partial x_j} u_j = \mathbf{e}_j {\partial \phi \over \partial x_j} \mathbf{e}_i \,u_i = \nabla \phi \cdot \mathbf{u}
   $$
 
 > *Corollary.*{: .cor}
@@ -74,8 +74,8 @@ We start with differentiating a scalar field and assume we are working with Cart
 > Hence,
 >
 > $$
-  \nabla \phi \cdot {d\mathbf{r} \over du} = \mathbf{e}_j {\partial f \over \partial x_j} \mathbf{e}_i {dx_i \over du}
-  = \delta_{ij} {\partial f \over \partial x_j} {dx_i \over du} = {\partial f \over \partial x_j} {dx_j \over du} = {d \over du} \phi(\mathbf{r}(u))
+  \nabla \phi \cdot {d\mathbf{r} \over du} = \mathbf{e}_j {\partial \phi \over \partial x_j} \mathbf{e}_i {dx_i \over du}
+  = \delta_{ij} {\partial \phi \over \partial x_j} {dx_i \over du} = {\partial \phi \over \partial x_j} {dx_j \over du} = {d \over du} \phi(\mathbf{r}(u))
   $$
 
 > *Proposition.*{: .prop}
@@ -88,7 +88,7 @@ We start with differentiating a scalar field and assume we are working with Cart
 > *Proof.*{: .prf}
 >
 > $$
-  \nabla \phi \cdot d\mathbf{r} = \mathbf{e}_j {\partial f \over \partial x_j} \mathbf{e}_i \,dx_i = d\phi
+  \nabla \phi \cdot d\mathbf{r} = \mathbf{e}_j {\partial \phi \over \partial x_j} \mathbf{e}_i \,dx_i = d\phi
   $$
 
 > *Property.*{: .prop}

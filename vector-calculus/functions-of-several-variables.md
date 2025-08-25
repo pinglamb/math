@@ -101,7 +101,7 @@ The idea can be generalized to directions other than parallel to the basis vecto
 > For $\mathbf{f}: \mathbb{R}^m \to \mathbb{R}^n$, the **directional derivative** of $\mathbf{f}$ at $\mathbf{a}$ in the direction $\mathbf{u}$, where $\mathbf{u}$ is a unit vector, is
 >
 > $$
-  D_{\mathbf{u}}(\mathbf{a}) = \lim_{h \to 0} {\mathbf{f}(\mathbf{a} + h\mathbf{u}) - \mathbf{f}(\mathbf{a}) \over h}
+  D_{\mathbf{u}} \mathbf{f}(\mathbf{a}) = \lim_{h \to 0} {\mathbf{f}(\mathbf{a} + h\mathbf{u}) - \mathbf{f}(\mathbf{a}) \over h}
   $$
 >
 > whenever the limit exists
@@ -130,14 +130,14 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 > Let $h \to 0$ with $k = 0$ and from the definition of partial derivative, we have
 >
 > $$
-  T_x = \lim_{h \to 0} {f(a + h, b) - f(a, b) \over h} = \partial_x f
+  T_x = \lim_{h \to 0} {f(a + h, b) - f(a, b) \over h} = {\partial f \over \partial x}(a, b)
   $$
 
 > *Proposition.*{: .prop}
 > Let $z = f(x, y)$ which defines a surface. Then
 >
 > $$
-  z = f(a, b) + [\partial_x f(a, b)](x - a) + [\partial_y f(a, b)](y - b)
+  z = f(a, b) + {\partial f \over \partial x}(a, b)(x - a) + {\partial f \over \partial y}(a, b)(y - b)
   $$
 >
 > is a tangent plane touching the surface at the point $(a, b, f(a, b))$.
@@ -155,20 +155,20 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 >
 > $$
   \begin{align*}
-  \Delta f &= f(x + \Delta x, y + \Delta y) - f(x, y) \\
-  &= f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) + f(x, y + \Delta y) - f(x, y) \\
-  &= \left[ {f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) \over \Delta x} \right] \Delta x + \left[ {f(x, y + \Delta y) - f(x, y) \over \Delta y} \right] \Delta y \\
-  &\approx {\partial f \over \partial x} \Delta x + {\partial f \over \partial y} \Delta y
+  \delta f &= f(x + \delta x, y + \delta y) - f(x, y) \\
+  &= f(x + \delta x, y + \delta y) - f(x, y + \delta y) + f(x, y + \delta y) - f(x, y) \\
+  &= \left[ {f(x + \delta x, y + \delta y) - f(x, y + \delta y) \over \delta x} \right] \delta x + \left[ {f(x, y + \delta y) - f(x, y) \over \delta y} \right] \delta y \\
+  &\approx {\partial f \over \partial x} \delta x + {\partial f \over \partial y} \delta y
   \end{align*}
   $$
 >
-> with the first term replaced from $\partial f(x, y + \Delta y) / \partial x$ to $\partial f(x, y) / \partial x$.
+> with the first term replaced from $\partial_x f(x, y + \delta y)$ to $\partial_x f(x, y)$.
 
 > *Proposition.*{: .prop}
 > The directional derivative in the direction $\mathbf{u} = (u_x, u_y)$ is given by
 >
 > $$
-  D_\mathbf{u} f(a, b) = [\partial_x f(a, b)] u_x + [\partial_y f(a, b)] u_y
+  D_\mathbf{u} f = {\partial f \over \partial x} u_x + {\partial f \over \partial y} u_y
   $$
 >
 > *Proof.*{: .prf}
@@ -176,7 +176,7 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 > By definition, the directional derivative of $f$ at $\mathbf{x} = (a, b)$ in the direction $\mathbf{u}$ is
 >
 > $$
-  D_\mathbf{u}(\mathbf{x}) = \lim_{t \to 0} {f(\mathbf{x} + t\mathbf{u}) - f(\mathbf{x}) \over t} = \lim_{t \to 0} {f(a + tu_x, b + tu_y) - f(a, b) \over t}
+  D_\mathbf{u} f(\mathbf{x}) = \lim_{t \to 0} {f(\mathbf{x} + t\mathbf{u}) - f(\mathbf{x}) \over t} = \lim_{t \to 0} {f(a + tu_x, b + tu_y) - f(a, b) \over t}
   $$
 >
 > As $f$ is differentiable at $(a, b)$ and let $h = tu_x$ and $k = tu_y$, we have
@@ -194,7 +194,7 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 > and hence
 >
 > $$
-  D_\mathbf{u}(a, b) = T_x u_x + T_y u_y = [\partial_x f(a, b)]u_x + [\partial_y f(a, b)]u_y
+  D_\mathbf{u} f(a, b) = T_x u_x + T_y u_y = {\partial f \over \partial x}(a, b) \,u_x + {\partial f \over \partial y}(a, b) \,u_y
   $$
 {: #directional-derivative-as-partial}
 
@@ -250,17 +250,25 @@ Alternatively, we can put the "error term" in different forms such as $o(\sqrt{h
 >
 > *Proof.*{: .prf}
 >
-> When $m = 2$ and let $\mathbf{x} = (x, y)$, we have
+> By definition, the derivative of $F(u) = f(\mathbf{x}(u))$ is
+>
+> $$
+  {dF \over du} = \lim_{\delta u \to 0} { F(u + \delta u) - F(u) \over \delta u }
+  = \lim_{\delta u \to 0} {f(\mathbf{x}(u + \delta u)) - f(\mathbf{x}(u)) \over \delta u}
+  = \lim_{\delta u \to 0} {f(\mathbf{x}(u) + \delta \mathbf{x}(u)) - f(\mathbf{x}(u)) \over \delta u}
+  $$
+>
+> where we have written $\mathbf{x}(u + \delta u) = \mathbf{x}(u) + \delta \mathbf{x}(u)$.
+>
+> As an example, when $m = 2$ and let $\mathbf{x} = (x, y)$, we have
 >
 > $$
   \begin{align*}
-  {d \over du} f(x, y) &= \lim_{\Delta u \to 0} {f(x + \Delta x, y + \Delta y) - f(x, y) \over \Delta u} \\
-  &= \lim_{\Delta u \to 0} {f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) \over \Delta x} {\Delta x \over \Delta u} + {f(x, y + \Delta y) - f(x, y) \over \Delta y} {\Delta y \over \Delta u} \\
+  {dF \over du} &= \lim_{\delta u \to 0} {f(x + \delta x, y + \delta y) - f(x, y) \over \delta u} \\
+  &= \lim_{\delta u \to 0} {f(x + \delta x, y + \delta y) - f(x, y + \delta y) \over \delta x} {\delta x \over \delta u} + {f(x, y + \delta y) - f(x, y) \over \delta y} {\delta y \over \delta u} \\
   &= {\partial f \over \partial x} {dx \over du} + {\partial f \over \partial y} {dy \over du}
   \end{align*}
   $$
->
-> where we have written $x(t + \Delta t) = x(t) + \Delta x(t)$.
 
 > *Proposition.*{: .prop}
 > For functions $\mathbf{x}(\mathbf{u}): \mathbb{R}^\ell \to \mathbb{R}^m$ and $f: \mathbb{R}^m \to \mathbb{R}$, where $\mathbf{u} = (u_1, ..., u_\ell)$,

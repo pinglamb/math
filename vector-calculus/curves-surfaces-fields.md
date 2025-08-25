@@ -29,7 +29,7 @@ $$
 > A parameterisation is **regular** if $\mathbf{\dot{r}}(u) \not= 0$ for any $u$.
 
 The choice of parameterisation is not unique, e.g. both $\mathbf{f}(u) = (\cos u, \sin u, u)$ and $\mathbf{g}(u) = (\cos \lambda u, \sin \lambda u, \lambda u)$
-represents the same helix. Some of the properties depend on the parameterisation but some are not, in which will be our primary interest.
+represents the same helix. Some of the properties depend on the parameterisation but some are not.
 
 > *Definition.*{: .def}
 > The **arc length** is the distance between two points along a curve, which is a scalar quantity.
@@ -84,7 +84,7 @@ If $u$ traces the curve in the "positive" direction of $s$ then $ds/du = \vert d
 > Let $\mathbf{r}(\tau(u))$ be a different parameterisation with $d\tau/du > 0$. By chain rule,
 >
 > $$
-  {d\mathbf{r} \over du} = {d\mathbf{r} \over d\tau} {d\tau \over dt}
+  {d\mathbf{r} \over du} = {d\mathbf{r} \over d\tau} {d\tau \over du}
   $$
 >
 > Hence,
@@ -146,7 +146,7 @@ The principal normal indicates the direction of the curve's turn so it always po
 > The **osculating plane** is the plane containing $\mathbf{t}$ and $\mathbf{n}$ with normal $\mathbf{b}$.
 > The **osculating circle** is a circle in the plane touching the cursve at $s$ with curvature matches $\kappa(s)$.
 
-![Osculating Circle](../images/vector-calculus-osculating-circle.png)
+![Osculating Circle](../images/vector-calculus/osculating-circle.png)
 
 Note that the three vectors $\mathbf{t}$, $\mathbf{n}$ and $\mathbf{b}$ define an orthonormal basis for $\mathbb{R}^3$ at each point $s$ along the curve, which twists and turns along the curve.
 
