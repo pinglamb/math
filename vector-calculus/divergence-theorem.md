@@ -67,7 +67,13 @@ To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ ca
 >
 > *Proof.*{: .prf}
 >
-> For simplicity, assume that $\mathbf{F}$ is uni-directional, e.g. $\mathbf{F} = F(x, y) \mathbf{j}$.
+> By definition,
+>
+> $$
+  \int_D \nabla \cdot \mathbf{F} \,dA = \int_D \left( {\partial F_x \over \partial x} + {\partial F_y \over \partial y} \right) \,dA
+  $$
+>
+> For simplicity, assume that $\mathbf{F}$ is uni-directional, i.e. $\mathbf{F} = F_y(x, y) \,\mathbf{j}$.
 > The same argument applies to $\mathbf{F}$ pointing solely in the $x$-direction and a general $\mathbf{F}$ is a linear sum of the two.
 >
 > We then have
@@ -75,14 +81,18 @@ To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ ca
 > $$
   \begin{align*}
   \int_D \nabla \cdot \mathbf{F} \,dA
-  &= \int_X dx \int_{y_-(x)}^{y_+(x)} dy \, {\partial F \over \partial y} \\
-  &= \int_X dx \left( F(x, y_+(x)) - F(x, y_-(x)) \right)
+  &= \int_X dx \int_{y_-(x)}^{y_+(x)} dy \, {\partial F_y \over \partial y} \\
+  &= \int_X dx \Big[ F_y(x, y_+(x)) - F_y(x, y_-(x)) \Big]
   \end{align*}
   $$
 >
 > where $y_+(x)$ are values on the upper curve $C_+$ and $y_-(x)$ are that of lower curve $C_-$.
 >
 > ![Divergence Theorem 2D](../images/vector-calculus/divergence-theorem-2d.png)
+>
+> The next part is converting the integral over $\int dx$ to a line integral over $\int ds$.
+>
+> ![Divergence Theorem 2D](../images/vector-calculus/divergence-theorem-2d-normal.png)
 >
 > While transversing the upper curve $C_+$, we have
 >
@@ -102,7 +112,7 @@ To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ ca
 > $$
   \begin{align*}
   \int_D \nabla \cdot \mathbf{F} \,dA
-  &= \int_X ds \left( \mathbf{n} \cdot \mathbf{F}(x, y_+(x)) + \mathbf{n} \cdot \mathbf{F}(x, y_-(x)) \right) \\
+  &= \int_X ds \Big[ \mathbf{n} \cdot \mathbf{F}(x, y_+(x)) + \mathbf{n} \cdot \mathbf{F}(x, y_-(x)) \Big] \\
   &= \int_{C_+} \mathbf{F} \cdot \mathbf{n} \,ds + \int_{C_-} \mathbf{F} \cdot \mathbf{n} \,ds \\
   &= \int_{C} \mathbf{F} \cdot \mathbf{n} \,ds
   \end{align*}

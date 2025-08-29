@@ -16,11 +16,11 @@ It is often to consider the integration of scalar or vector fields along lines, 
 > In general, they will be of the forms
 >
 > $$
-  \int_C \phi \,d\mathbf{r} \qquad \int_C \mathbf{F} \cdot d\mathbf{r} \qquad \int_C \mathbf{F} \times d\mathbf{r}
+  \int_C \phi \,ds \qquad \int_C \mathbf{F} \cdot d\mathbf{s}
   $$
 >
 > where $\phi$ is a scalar field and $\mathbf{F}$ is a vector field.
-> The integrals themselves are respectively vector, scalar and vector in nature.
+> Both of the integrals are scalar in nature.
 
 The formal definition is similar to that of ordinary integrals with the use of dissection and summing over the intervals.
 
@@ -28,46 +28,75 @@ The formal definition is similar to that of ordinary integrals with the use of d
 > If $C$ is closed, the line integral will be written as
 >
 > $$
-  \oint_C \mathbf{F} \cdot d\mathbf{r}
+  \oint_C \phi \,ds \qquad \oint_C \mathbf{F} \cdot d\mathbf{s}
   $$
 
 For a close curve we have to specify the direction around the loop in which the integral is taken.
 By convention, it is usually taken to be such that the region $R$ is on the left, i.e. anticlockwise if viewed from above.
 
+> *Definition.*{: .def}
+> The line integral of a scalar field $\phi(\mathbf{x}): \mathbb{R}^3 \to \mathbb{R}$ along the curve $C: \mathbf{r}(s)$ is defined to be
+>
+> $$
+  \int_C \phi(\mathbf{x}) \,ds = \int_{s_a}^{s_b} \phi(\mathbf{r}(s)) \,ds
+  $$
+
+The line integral is, by convention, defined so that $\int_C ds$ gives the length of the curve in which is positive.
+
 > *Proposition.*{: .prop}
-> In case of orthonormal basis, since $d\mathbf{r} = dx^i \mathbf{e}_i$, we have
+> Suppose that the curve is parameterised by variable $u$ other than the arc length,
+> by the rules governing the change of variable of Riemann integral,
 >
 > $$
-  \int_C \phi(\mathbf{r}) \,d\mathbf{r} = \left( \int_C \phi(\mathbf{r}) \, dx^i \right) \mathbf{e}_i
+  \int_C \phi(\mathbf{x}) \,ds = \int_{s_a}^{s_b} \phi(\mathbf{r}(s)) \,ds = \int_{u_a}^{u_b} \phi(\mathbf{r}(u)) |\dot{\mathbf{r}}(u)| \,du
   $$
->
-> Suppose that the vector field $\mathbf{F} = F^i \mathbf{e}_i$. Then
+
+> *Definition.*{: .def}
+> The scalar line integral of a vector field $\mathbf{F}(\mathbf{x}): \mathbb{R}^3 \to \mathbb{R}^3$ along the curve $C: \mathbf{r}(u)$ is defined to be
 >
 > $$
-  \int_C \mathbf{F}(\mathbf{r}) \cdot d\mathbf{r} = \int_C F_i(\mathbf{r}) \, dx_i
+  \int_C \mathbf{F} \cdot d\mathbf{s} = \int_C \mathbf{F} \cdot d\mathbf{r} = \int_{u_a}^{u_b} \mathbf{F}(\mathbf{r}(u)) \cdot {d \mathbf{r} \over du} \,du
   $$
+
+The vector differential $d\mathbf{s}$ is just an alternative notation of $d\mathbf{r}$.
+It is a more generic and can be used to cater other coordinate systems.
+
+> *Proposition.*{: .prop}
+> In Cartesian coordiante, since $d\mathbf{r} = d\mathbf{x} = (dx, dy, dz)$, we have
 >
-> and similarily procedure can be followed for the integral involving cross product.
+> $$
+  \int_C \mathbf{F} \cdot d\mathbf{x} = \int_C F_1 \,dx + F_2 \,dy + F_3 \,dz
+  $$
 
 > *Proposition.*{: .prop}
 > Similar to ordinary integrals,
 >
 > $$
-  \int_A^B \mathbf{F} \cdot d\mathbf{r} = -\int_B^A \mathbf{F} \cdot d\mathbf{r}
+  \int_{-C} \phi \,ds = -\int_C \phi \,ds
+  \qquad
+  \int_C \phi \,ds = \int_{C_1} \phi \,ds + \int_{C_2} \phi \,ds
   $$
 >
 > and
 >
 > $$
-  \int_A^B \mathbf{F} \cdot d\mathbf{r} = \int_A^P \mathbf{F} \cdot d\mathbf{r} + \int_P^B \mathbf{F} \cdot d\mathbf{r}
+  \int_{-C} \mathbf{F} \cdot d\mathbf{s} = -\int_C \mathbf{F} \cdot d\mathbf{s}
+  \qquad
+  \int_C \mathbf{F} \cdot d\mathbf{s} = \int_{C_1} \mathbf{F} \cdot d\mathbf{s} + \int_{C_2} \mathbf{F} \cdot d\mathbf{s}
   $$
 
-In some cases we would like the line integral to give the same answer for any choice of parameterisation of the curve,
-which naturally leads us to integrate the field with respect to arc length and can be evaluated with the substitution
-
-$$
-ds = \sqrt{ {d\mathbf{r} \over du } \cdot {d\mathbf{r} \over du } } \,du
-$$
+> *Definition.*{: .def}
+> We can also define the vector line integral by evaluating component by component, i.e.
+>
+> $$
+  \int_C \phi \,d\mathbf{r} = \sum_{j=1}^3 \mathbf{e}_j \int \phi \,dx_j
+  $$
+>
+> and
+>
+> $$
+  \int_C \mathbf{F} \,ds = \sum_{j=1}^3 \mathbf{e}_j \int_{s_a}^{s_b} F_j(\mathbf{r}(s)) \,ds
+  $$
 
 ## Conservative Fields
 
