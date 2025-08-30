@@ -90,7 +90,7 @@ To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ ca
 >
 > ![Divergence Theorem 2D](../images/vector-calculus/divergence-theorem-2d.png)
 >
-> On the other hand, for $\mathbf{r}(x) = (x, y(x))$, $\dot{\mathbf{r}}(x) = (1, y'(x))$ and $\mathbf{n} = (-y'(x), 1) / \vert \dot{\mathbf{r}}(x) \vert$ so
+> On the other hand, for a curve $\mathbf{r}(x) = (x, y(x))$, $\dot{\mathbf{r}}(x) = (1, y'(x))$ and $\mathbf{n} = (-y'(x), 1) / \vert \dot{\mathbf{r}}(x) \vert$ so
 >
 > $$
   \mathbf{j} \cdot \mathbf{n} \,ds = { 1 \over |\dot{\mathbf{r}}(x)| } |\dot{\mathbf{r}}(x)| \,dx = dx
@@ -148,45 +148,60 @@ we can decompose the curve into multiple pieces and apply the same strategy.
 >
 > *Proof.*{: .prf}
 >
-> Similarily, consider a vector field with only $z$ component, i.e. $\mathbf{F} = F(x, y, z) \mathbf{k}$.
-> We have
+> Similarily, by definition, we have
+>
+> $$
+  \int_V \nabla \cdot \mathbf{F} \,dV = \int_V {\partial F_1 \over \partial x} + {\partial F_2 \over \partial y} + {\partial F_3 \over \partial z} \,dV
+  $$
+>
+> Focusing on the last term we have
 >
 > $$
   \begin{align*}
-  \int_V \nabla \cdot \mathbf{F} \,dV
-  &= \int_S dS \int_{z_-(x, y)}^{z_+(x, y)} dz {\partial F \over \partial z} \\
-  &= \int_S dS \left( F(x, y, z_+(x, y)) - F(x, y, z_-(x, y)) \right)
+  \int_V { \partial F_3 \over \partial z } \,dV
+  &= \int_D dA \int_{z_-(x, y)}^{z_+(x, y)} dz {\partial F_3 \over \partial z} \\
+  &= \int_D dA \Big[ F_3(x, y, z_+(x, y)) - F_3(x, y, z_-(x, y)) \Big]
   \end{align*}
   $$
 >
-> where $S_+: (x, y, z_+(x, y)$ and $S_-: (x, y, z_-(x, y))$ are the upper and lower surfaces bounding the volume $V$.
+> where $S_+: (x, y, z_+(x, y))$ and $S_-: (x, y, z_-(x, y))$ are the upper and lower surfaces bounding the volume $V$.
 >
-> Since for surface $S: (x, y, z(x, y))$,
+> On the other hand, for a surface $\mathbf{r}(x, y) = (x, y, z(x, y))$,
 >
 > $$
-  \mathbf{n} = \left| {\partial \mathbf{x} \over \partial x} \times {\partial \mathbf{x} \over \partial y} \right|
-  = |(1, 0, z_x) \times (0, 1, z_y)|
-  = (-z_x, -z_y, 1)
+  d\mathbf{S} = \left( {\partial \mathbf{r} \over \partial x} \times {\partial \mathbf{r} \over \partial y} \right) \,dx\,dy = (-z_x, -z_y, 1) \,dx\,dy
   $$
 >
-> For the upper surface $S_+$, we have
+> therefore for the upper surface $S_+$, we have
 >
 > $$
-  \mathbf{F} \cdot d\mathbf{S} = F \,dS \,(\mathbf{k} \cdot \mathbf{n}) = F \,dS
+  \mathbf{k} \cdot d\mathbf{S} = dx\,dy
   $$
 >
 > and for lower surface $S_-$, since the normal is pointing to the opposite direction,
 >
 > $$
-  \mathbf{F} \cdot d\mathbf{S} = - F \,dS
+  \mathbf{k} \cdot d\mathbf{S} = -\,dx\,dy
   $$
 >
 > Hence,
 >
 > $$
-  \int_V \nabla \cdot \mathbf{F} \,dV
-  = \int_{S_+} \mathbf{F} \cdot d\mathbf{S} + \int_{S_-} \mathbf{F} \cdot d\mathbf{S}  \\
-  = \int_S \mathbf{F} \cdot d\mathbf{S}
+  \int_V { \partial F_3 \over \partial z } \,dV = \int_{S_+} F_3 \, \mathbf{k} \cdot d\mathbf{S} + \int_{S_-} F_3 \, \mathbf{k} \cdot d\mathbf{S} = \int_S F_3 \, \mathbf{k} \cdot d\mathbf{S}
+  $$
+>
+> and similarily
+>
+> $$
+  \int_V { \partial F_2 \over \partial y } \,dV = \int_S F_2 \, \mathbf{j} \cdot d\mathbf{S}
+  \qquad
+  \int_V { \partial F_1 \over \partial x } \,dV = \int_S F_1 \, \mathbf{i} \cdot d\mathbf{S}
+  $$
+>
+> so adding the above results we obtain
+>
+> $$
+  \int_V \nabla \cdot \mathbf{F} \,dV = \int_{S} \mathbf{F} \cdot d\mathbf{S}
   $$
 
 With the same technique, we can generalize divergence theorem for vector field in $\mathbb{R}^n$.
