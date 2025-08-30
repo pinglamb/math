@@ -70,19 +70,19 @@ To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ ca
 > By definition,
 >
 > $$
-  \int_D \nabla \cdot \mathbf{F} \,dA = \int_D \left( {\partial F_x \over \partial x} + {\partial F_y \over \partial y} \right) \,dA
+  \int_D \nabla \cdot \mathbf{F} \,dA
+  = \int_D \left( {\partial F_1 \over \partial x} + {\partial F_2 \over \partial y} \right) \,dA
+  = \int_D {\partial F_1 \over \partial x} \,dA + \int_D {\partial F_2 \over \partial y} \,dA
   $$
 >
-> For simplicity, assume that $\mathbf{F}$ is uni-directional, i.e. $\mathbf{F} = F_y(x, y) \,\mathbf{j}$.
-> The same argument applies to $\mathbf{F}$ pointing solely in the $x$-direction and a general $\mathbf{F}$ is a linear sum of the two.
->
+> We will focus on the second term and the same argument applies to the first term and a general $\mathbf{F}$ is a linear sum of the two.
 > We then have
 >
 > $$
   \begin{align*}
-  \int_D \nabla \cdot \mathbf{F} \,dA
-  &= \int_X dx \int_{y_-(x)}^{y_+(x)} dy \, {\partial F_y \over \partial y} \\
-  &= \int_X dx \Big[ F_y(x, y_+(x)) - F_y(x, y_-(x)) \Big]
+  \int_D {\partial F_2 \over \partial y} \,dA
+  &= \int_X dx \int_{y_-(x)}^{y_+(x)} dy \, {\partial F_2 \over \partial y} \\
+  &= \int_X dx \Big[ F_2(x, y_+(x)) - F_2(x, y_-(x)) \Big]
   \end{align*}
   $$
 >
@@ -90,11 +90,17 @@ To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ ca
 >
 > ![Divergence Theorem 2D](../images/vector-calculus/divergence-theorem-2d.png)
 >
-> The next part is converting the integral over $\int dx$ to a line integral over $\int ds$.
+> On the other hand, for $\mathbf{r}(x) = (x, y(x))$, $\dot{\mathbf{r}}(x) = (1, y'(x))$ and $\mathbf{n} = (-y'(x), 1) / \vert \dot{\mathbf{r}}(x) \vert$ so
+>
+> $$
+  \mathbf{j} \cdot \mathbf{n} \,ds = { 1 \over |\dot{\mathbf{r}}(x)| } |\dot{\mathbf{r}}(x)| \,dx = dx
+  $$
+>
+> We can also interpret this geometrically. According to the graph below,
 >
 > ![Divergence Theorem 2D](../images/vector-calculus/divergence-theorem-2d-normal.png)
 >
-> While transversing the upper curve $C_+$, we have
+> while transversing the upper curve $C_+$, we have
 >
 > $$
   \delta x = \cos \theta \,\delta s = \mathbf{j} \cdot \mathbf{n} \,\delta s
@@ -110,16 +116,25 @@ To give a rigorous proof of the theorem, we first consider the $\mathbb{R}^2$ ca
 > Hence,
 >
 > $$
-  \begin{align*}
-  \int_D \nabla \cdot \mathbf{F} \,dA
-  &= \int_X ds \Big[ \mathbf{n} \cdot \mathbf{F}(x, y_+(x)) + \mathbf{n} \cdot \mathbf{F}(x, y_-(x)) \Big] \\
-  &= \int_{C_+} \mathbf{F} \cdot \mathbf{n} \,ds + \int_{C_-} \mathbf{F} \cdot \mathbf{n} \,ds \\
-  &= \int_{C} \mathbf{F} \cdot \mathbf{n} \,ds
-  \end{align*}
+  \int_D {\partial F_2 \over \partial y} \,dA
+  = \int_{C_+} F_2 \,\mathbf{j} \cdot \mathbf{n} \,ds + \int_{C_-} F_2 \,\mathbf{j} \cdot \mathbf{n} \,ds \\
+  = \int_{C} F_2 \,\mathbf{j} \cdot \mathbf{n} \,ds
   $$
 >
-> In case of the vertical line cutting the boundary $C$ more than twice somewhere,
-> we can decompose the curve into multiple pieces and apply the same strategy.
+> and similarily
+>
+> $$
+  \int_D {\partial F_1 \over \partial x} \,dA = \int_{C} F_1 \,\mathbf{i} \cdot \mathbf{n} \,ds
+  $$
+>
+> so adding the above results we obtain
+>
+> $$
+  \int_D \nabla \cdot \mathbf{F} \,dA = \int_{C} \mathbf{F} \cdot \mathbf{n} \,ds
+  $$
+
+In case of the vertical line cutting the boundary $C$ more than twice somewhere,
+we can decompose the curve into multiple pieces and apply the same strategy.
 
 > *Theorem.*{: .thm}
 > **[Divergence/Gauss' Theorem]**
