@@ -11,7 +11,7 @@ Two of the important ones are _Green's Theorem_ and _Stokes' Theorem_.
 
 ## Green's Theorem
 
-Green's Theorem is equivalent to the 2D Divergence Theorem.
+Green's Theorem is equivalent to the 2D Divergence Theorem which focuses more on actual evaluation of the integral.
 
 > *Theorem.*{: .thm}
 > **[Green's Theorem]**
@@ -110,7 +110,7 @@ i.e. $\mathbf{t} \times \mathbf{n}$ points out of $S$.
 Stokes' Theorem thus states that the flux of $\nabla \times \mathbf{F}$ across an open surface $S$
 is equal to the circulation of $\mathbf{F}$ round the bounding curve $C$.
 
-Stoke's Theorem also gives us another intuition for the meaning of curl.
+Stokes' Theorem also gives us another intuition for the meaning of curl.
 By integrating $\nabla \times \mathbf{F}$ over a small enough surface such that $\nabla \times \mathbf{F}$ is approximately constant, we have
 
 $$
@@ -144,7 +144,7 @@ When we integrate this circulation over some surface $S$, most of it cancels out
 >
 > ($\Rightarrow$) As shown [before](differential-operators.md#curl-of-gradient), the curl of the gradient field is always zero, i.e. $\nabla \times (\nabla \phi) = 0$
 >
-> ($\Leftarrow$) Suppose that $\nabla \times \mathbf{F} = 0$. By Stoke's Theorem, we have
+> ($\Leftarrow$) Suppose that $\nabla \times \mathbf{F} = 0$. By Stokes' Theorem, we have
 >
 > $$
   \int_S \nabla \times \mathbf{F} \cdot d\mathbf{S} = \oint_C \mathbf{F} \cdot d\mathbf{x} = 0
