@@ -97,6 +97,12 @@ It is a more generic and can be used to cater other coordinate systems.
 > $$
   \int_C \mathbf{F} \,ds = \sum_{j=1}^3 \mathbf{e}_j \int_{s_a}^{s_b} F_j(\mathbf{r}(s)) \,ds
   $$
+>
+> or cross product, i.e.
+>
+> $$
+  \int_C \mathbf{F} \times d\mathbf{s}
+  $$
 
 ## Conservative Fields
 
@@ -171,31 +177,30 @@ Alternatively, we can use differential to phrase the idea of a conservative vect
 
 > *Definition.*{: .def}
 > Surface integral is the integration of some quantity related to a scalar/vector field over a surface.
-> In general, they will be of the forms
+> The common scalar surface integrals are of the forms
 >
 > $$
-  \int_S \phi \,dS \qquad \int_S \phi \,d\mathbf{S} \qquad \int_S \mathbf{F} \cdot d\mathbf{S} \qquad \int_S \mathbf{F} \times d\mathbf{S}
+  \int_S \phi \,dS \qquad \int_S \mathbf{F} \cdot d\mathbf{S}
   $$
 >
-> where $\phi$ is a scalar field and $\mathbf{F}$ is a vector field.
-> The integrals themselves are respectively scalar, vector, scalar and vector in nature.
+> and vector surface integrals are of the forms
+>
+> $$
+  \int_S \phi \,d\mathbf{S} \qquad \int_S \mathbf{F} \,dS \qquad \int_S \mathbf{F} \times d\mathbf{S}
+  $$
+>
+> where $\phi$ is a scalar field and $\mathbf{F}$ is a vector field and
+> $dS$ and $d\mathbf{S}$ are the infinitesimal scalar and vector areas respectively.
 
 > *Definition.*{: .def}
-> If $S$ is closed, the surface integral will be written as
+> If $S$ is closed, the surface integral will be written as, for example,
 >
 > $$
   \oint_S \mathbf{F} \cdot d\mathbf{S}
   $$
 
 > *Definition.*{: .def}
-> The vector differential $d\mathbf{S}$ represents a vector area element of the surface $S$ and can also be written as
->
-> $$
-  d\mathbf{S} = \mathbf{n} \,dS
-  $$
->
-> in which $\mathbf{n}$ is the _unit normal_.
-> For closed surface, the direction of $\mathbf{n}$ should be pointing outwards.
+> For closed surface, the vector differential $d\mathbf{S}$  of the surface $S$ has direction pointing outwards.
 > For open surface, it is given by the right-hand sense with respect to the direction in which the perimeter is traversed.
 
 ![Normal Directions](../images/vector-calculus/surface-integral-normal-direction.png){: .size-2x}

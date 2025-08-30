@@ -243,6 +243,15 @@ The sign of the normal vector determines what we mean by "outside" and "inside" 
   $$
 
 > *Definition.*{: .def}
+> The infinitesimal vector area is defined to be
+>
+> $$
+  d\mathbf{S} = \mathbf{n} \,dS
+  = \left( {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v} \right) {|\mathbf{n}| \over |\mathbf{n}|} \,du \,dv
+  = \left( {\partial \mathbf{r} \over \partial u} \times {\partial \mathbf{r} \over \partial v} \right) \,du \,dv
+  $$
+
+> *Definition.*{: .def}
 > A surface $S$ can have a **boundary** which is a piecewise smooth closed curve, denoted by $\partial S$.
 
 For example, a sphere truncated by the $z = 0$ plane has boundary $x^2 + y^2 = R^2$ in the $z = 0$ plane.
