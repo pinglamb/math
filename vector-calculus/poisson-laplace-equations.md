@@ -26,10 +26,10 @@ we can now explore differential equations that can be written in the language of
 > Laplace's equation is _linear_, i.e. if $\psi_1$ and $\psi_2$ are solutions,
 > then $\lambda \phi_1 + \mu \psi_2$, where $\lambda$ and $\mu$ are real constants, is another solution.
 
-## Separable Equations
+## Separable Solutions
 
-> *Proposition.*{: .prop}
-> Laplace's equation is _separable_ if it can be written in the form
+> *Definition.*{: .def}
+> The solution of Laplace's equation is **separable** if it can be written in the form
 >
 > $$
   \psi(u, v, w) = U(u)V(v)W(w)
@@ -37,7 +37,7 @@ we can now explore differential equations that can be written in the language of
 >
 > where $(u, v, w)$ are orthogonal curvilinear.
 
-It means that equation that is not separable in Cartesian coordinates can be separable in others and solvable.
+It means that for some functions that is not separable in Cartesian coordinates might be separable in others.
 For example,
 
 $$
@@ -77,6 +77,11 @@ X = C\sin kx + D\cos kx \qquad Y = Ae^{ky} + Be^{-ky}
 $$
 
 We can see that the solutions to separable Laplace's equations tend to grow or decay smoothly in one direction while oscillating in the other.
+
+## Isotropic Solutions
+
+> *Proposition.*{: .prop}
+> The Laplacian oeprator $\nabla^2$ is **isotropic**, meaning it has no preferred direction and unchanged by the rotation of a Cartesian coordinate system.
 
 ## References
 
