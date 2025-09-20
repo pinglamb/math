@@ -239,6 +239,11 @@ Similarily results can be derived for the case of radial symmetry.
 There is a subtle difference that for in general the rotational invariant solution decays to a constant asymptotically
 except for the special case $\mathbb{R}$ and $\mathbb{R}^2$ in which the solution grows asymptotically as $r \to \infty$.
 
+## Harmonic Functions
+
+> *Definition.*{: .def}
+> The function $\psi: \mathbb{R}^m \to \mathbb{R} (m = 2, 3)$ is **harmonic** iff all its seconnd-order partial derivatives exist and are continuous, and $\nabla^2 \psi = 2$.
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 5
