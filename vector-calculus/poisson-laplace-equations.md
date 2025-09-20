@@ -236,6 +236,9 @@ Similarily results can be derived for the case of radial symmetry.
 >
 > is referred to as the potential of the _unit line source_ or as the _fundamental solution_ of Poisson's equation in 2D.
 
+There is a subtle difference that for in general the rotational invariant solution decays to a constant asymptotically
+except for the special case $\mathbb{R}$ and $\mathbb{R}^2$ in which the solution grows asymptotically as $r \to \infty$.
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 5
