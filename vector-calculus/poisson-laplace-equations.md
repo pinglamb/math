@@ -26,6 +26,9 @@ we can now explore differential equations that can be written in the language of
 > Laplace's equation is _linear_, i.e. if $\psi_1$ and $\psi_2$ are solutions,
 > then $\lambda \phi_1 + \mu \psi_2$, where $\lambda$ and $\mu$ are real constants, is another solution.
 
+> *Proposition.*{: .prop}
+> The solution to the Poisson's equation is the sum of the complementary solution to the Laplace equation and a particular solution for the given source $\rho(\mathbf{x})$.
+
 ## Separable Solutions
 
 > *Definition.*{: .def}
@@ -82,6 +85,27 @@ We can see that the solutions to separable Laplace's equations tend to grow or d
 
 > *Proposition.*{: .prop}
 > The Laplacian oeprator $\nabla^2$ is **isotropic**, meaning it has no preferred direction and unchanged by the rotation of a Cartesian coordinate system.
+
+> *Proposition.*{: .prop}
+> In 3D, the spherically symmetric solution to Laplace's equation is of the form
+>
+> $$
+  \psi(\mathbf{x}) = \psi(r) = A - {B \over r}
+  $$
+>
+> which has a singularity at $r = 0$ if $B \not= 0$.
+>
+> *Proof.*{: .prf}
+>
+> For a spherically symmetric solution, we can have $\theta$ and $\phi$ constant in spherical polars and therefore
+>
+> $$
+  \begin{align*}
+  \nabla^2 \psi = {1 \over r^2} { d \over dr } \left( r^2 {d\psi \over dr} \right) &= 0 \\
+  {d\psi \over dr} &= {B \over r^2} \\
+  \psi(r) &= A - {B \over r}
+  \end{align*}
+  $$
 
 ## References
 
