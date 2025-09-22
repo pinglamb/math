@@ -248,19 +248,19 @@ Before discussing what boundary conditions are needed for the uniqueness of solu
 
 > *Theorem.*{: .thm}
 > **[Green's First Formula]**
-> Suppose $\varphi$, $\psi$, $\nabla^2 \varphi$ and $\nabla^2 \psi$ are defined in a region $V$ bounded by a piecewise smooth surface $S$.
+> Suppose $\phi$, $\psi$, $\nabla^2 \phi$ and $\nabla^2 \psi$ are defined in a region $V$ bounded by a piecewise smooth surface $S$.
 > Then
 >
 > $$
-  \int_V (\varphi \nabla^2 \psi + \nabla \varphi \cdot \nabla \psi) \,dV = \int_S \varphi \nabla \psi \cdot d\mathbf{S} = \int_S \varphi {\partial \psi \over \partial n} \,dS
+  \int_V (\phi \nabla^2 \psi + \nabla \phi \cdot \nabla \psi) \,dV = \int_S \phi \nabla \psi \cdot d\mathbf{S} = \int_S \phi {\partial \psi \over \partial n} \,dS
   $$
 >
 > *Proof.*{: .prf}
 >
-> Let $\mathbf{F} = \varphi \nabla \psi$, we have
+> Let $\mathbf{F} = \phi \nabla \psi$, we have
 >
 > $$
-  \nabla \cdot \mathbf{F} = \nabla \varphi \cdot \nabla \psi + \varphi \nabla^2 \psi
+  \nabla \cdot \mathbf{F} = \nabla \phi \cdot \nabla \psi + \phi \nabla^2 \psi
   $$
 >
 > Then the result can be derived from divergence theorem.
@@ -269,19 +269,19 @@ The Green's First Formula is analogous to integration by parts: $\int (fg'' + f'
 
 > *Theorem.*{: .thm}
 > **[Green's Second Formula]**
-> Suppose $\varphi$, $\psi$, $\nabla^2 \varphi$ and $\nabla^2 \psi$ are defined in a region $V$ bounded by a piecewise smooth surface $S$.
+> Suppose $\phi$, $\psi$, $\nabla^2 \phi$ and $\nabla^2 \psi$ are defined in a region $V$ bounded by a piecewise smooth surface $S$.
 > Then
 >
 > $$
-  \int_V (\varphi \nabla^2 \psi - \psi \nabla^2 \varphi) \,dV = \int_S \left( \varphi {\partial \psi \over \partial n} - \psi {\partial \varphi \over \partial n} \right) \,dS
+  \int_V (\phi \nabla^2 \psi - \psi \nabla^2 \phi) \,dV = \int_S \left( \phi {\partial \psi \over \partial n} - \psi {\partial \phi \over \partial n} \right) \,dS
   $$
 >
 > *Proof.*{: .prf}
 >
-> By Green's First Formula, by switching $\varphi$ and $\psi$ we also have
+> By Green's First Formula, by switching $\phi$ and $\psi$ we also have
 >
 > $$
-  \int_V (\psi \nabla^2 \varphi + \nabla \varphi \cdot \nabla \psi) \,dV = \int_S \psi {\partial \varphi \over \partial n} \,dS
+  \int_V (\psi \nabla^2 \phi + \nabla \phi \cdot \nabla \psi) \,dV = \int_S \psi {\partial \phi \over \partial n} \,dS
   $$
 >
 > Then substract this from the Green's First Formula to get the result.
@@ -289,16 +289,48 @@ The Green's First Formula is analogous to integration by parts: $\int (fg'' + f'
 There is a similar result for 2D and can be proved by 2D divergence theorem.
 
 > *Theorem.*{: .thm}
-> Suppose $\varphi$, $\psi$, $\nabla^2 \varphi$ and $\nabla^2 \psi$ are defined on a closed surface $S$ bounded by a simple closed curve $C$.
+> Suppose $\phi$, $\psi$, $\nabla^2 \phi$ and $\nabla^2 \psi$ are defined on a closed surface $S$ bounded by a simple closed curve $C$.
 > Then
 >
 > $$
-  \int_S (\varphi \nabla^2 \psi + \nabla \varphi \cdot \nabla \psi) \,dS = \oint_C \varphi (\nabla \psi \cdot \mathbf{n}) \,d\mathbf{s} = \oint_C \varphi {\partial \psi \over \partial n} \,ds
+  \int_S (\phi \nabla^2 \psi + \nabla \phi \cdot \nabla \psi) \,dS = \oint_C \phi (\nabla \psi \cdot \mathbf{n}) \,d\mathbf{s} = \oint_C \phi {\partial \psi \over \partial n} \,ds
   $$
 >
 > $$
-  \int_S (\varphi \nabla^2 \psi - \psi \nabla^2 \varphi) \,dS = \oint_C \left( \varphi {\partial \psi \over \partial n} - \psi {\partial \varphi \over \partial n} \right) \,ds
+  \int_S (\phi \nabla^2 \psi - \psi \nabla^2 \phi) \,dS = \oint_C \left( \phi {\partial \psi \over \partial n} - \psi {\partial \phi \over \partial n} \right) \,ds
   $$
+
+Assume we know a solution exists for the B.V.P., the following are common boundary conditions to ensure uniqueness.
+
+> *Proposition.*{: .prop}
+> Suppose $\psi$ is a scalar field satisfying $\nabla^2 \psi = \rho(\mathbf{x})$ in $V$ and
+>
+> + **[Dirichlet Condition]**: $\psi = f(\mathbf{x})$ on $\partial V$, then $\psi$ is unique;
+>
+> + **[Neumann Condition]**: $d\psi / dn = \mathbf{n} \cdot \nabla \psi = g(\mathbf{x})$ on $\partial V$, then $\psi$ is unique upto a constant.
+>
+> *Proof.*{: .prf}
+>
+> Let $\psi_1$ and $\psi_2$ both satisfy the Poisson equation, then $\psi = \psi_1 - \psi_2$ also satisfies $\nabla^2 \psi = 0$ and either $\psi = 0$ or $\mathbf{n} \cdot \nabla \psi = 0$ on $\partial V$.
+>
+> From Green's First Formula with both scalar fields being $\psi$, we have
+>
+> $$
+  \int_V (\psi \nabla^2 \psi + \nabla \psi \cdot \nabla \psi \,dV
+  = \int_V |\nabla \psi|^2 \,dV
+  = \int_{\partial V} \psi (\mathbf{n} \cdot \nabla \psi) \,dS = 0
+  $$
+>
+> Since $\vert \nabla \psi \vert^2 \ge 0$, the integral can only vanish when $\nabla \psi = 0$ everywhere in $V$, so $\psi$ must be constant, i.e.
+>
+> $$
+  \psi_1 = \psi_2 + c
+  $$
+>
+> with $c = 0$ under Dirichlet condition.
+
+Sometimes we will also require the solution to be continuous and smooth at the boundaries which provides additional information for finding the unique solution.
+For example, for spherically symmetric solution, we will also require that to be non-singular at $r = 0$ and tends to $0$ when $r \to \infty$.
 
 ## Harmonic Functions
 
