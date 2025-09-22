@@ -332,6 +332,8 @@ Assume we know a solution exists for the B.V.P., the following are common bounda
 Sometimes we will also require the solution to be continuous and smooth at the boundaries which provides additional information for finding the unique solution.
 For example, for spherically symmetric solution, we will also require that to be non-singular at $r = 0$ and tends to $0$ when $r \to \infty$.
 
+Existence of solutions is substantially hard to determine so is skipped here.
+
 ## Harmonic Functions
 
 > *Definition.*{: .def}
