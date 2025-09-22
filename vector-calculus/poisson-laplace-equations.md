@@ -201,6 +201,8 @@ Similarily results can be derived for the case of radial symmetry.
   \end{align*}
   $$
 
+In 3D, the singularity will extend to the whole $z$-axis ($r = 0$) in cylindrical polars.
+
 > *Proposition.*{: .prop}
 > The flux of the vector field $\mathbf{F} = \nabla \psi$ out of a circle $C$ is independent of its radius $r$.
 >
@@ -238,6 +240,65 @@ Similarily results can be derived for the case of radial symmetry.
 
 There is a subtle difference that for in general the rotational invariant solution decays to a constant asymptotically
 except for the special case $\mathbb{R}$ and $\mathbb{R}^2$ in which the solution grows asymptotically as $r \to \infty$.
+
+## Uniqueness Theorems
+
+Similar to ordinary differential equations, Poissons's/Laplace's equations require boundary conditions so to solve for special solutions.
+Before discussing what boundary conditions are needed for the uniqueness of solutions, we first state two theorems that will be useful later.
+
+> *Theorem.*{: .thm}
+> **[Green's First Formula]**
+> Suppose $\varphi$, $\psi$, $\nabla^2 \varphi$ and $\nabla^2 \psi$ are defined in a region $V$ bounded by a piecewise smooth surface $S$.
+> Then
+>
+> $$
+  \int_V (\varphi \nabla^2 \psi + \nabla \varphi \cdot \nabla \psi) \,dV = \int_S \varphi \nabla \psi \cdot d\mathbf{S} = \int_S \varphi {\partial \psi \over \partial n} \,dS
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $\mathbf{F} = \varphi \nabla \psi$, we have
+>
+> $$
+  \nabla \cdot \mathbf{F} = \nabla \varphi \cdot \nabla \psi + \varphi \nabla^2 \psi
+  $$
+>
+> Then the result can be derived from divergence theorem.
+
+The Green's First Formula is analogous to integration by parts: $\int (fg'' + f'g') \,dx = [fg']$.
+
+> *Theorem.*{: .thm}
+> **[Green's Second Formula]**
+> Suppose $\varphi$, $\psi$, $\nabla^2 \varphi$ and $\nabla^2 \psi$ are defined in a region $V$ bounded by a piecewise smooth surface $S$.
+> Then
+>
+> $$
+  \int_V (\varphi \nabla^2 \psi - \psi \nabla^2 \varphi) \,dV = \int_S \left( \varphi {\partial \psi \over \partial n} - \psi {\partial \varphi \over \partial n} \right) \,dS
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By Green's First Formula, by switching $\varphi$ and $\psi$ we also have
+>
+> $$
+  \int_V (\psi \nabla^2 \varphi + \nabla \varphi \cdot \nabla \psi) \,dV = \int_S \psi {\partial \varphi \over \partial n} \,dS
+  $$
+>
+> Then substract this from the Green's First Formula to get the result.
+
+There is a similar result for 2D and can be proved by 2D divergence theorem.
+
+> *Theorem.*{: .thm}
+> Suppose $\varphi$, $\psi$, $\nabla^2 \varphi$ and $\nabla^2 \psi$ are defined on a closed surface $S$ bounded by a simple closed curve $C$.
+> Then
+>
+> $$
+  \int_S (\varphi \nabla^2 \psi + \nabla \varphi \cdot \nabla \psi) \,dS = \oint_C \varphi (\nabla \psi \cdot \mathbf{n}) \,d\mathbf{s} = \oint_C \varphi {\partial \psi \over \partial n} \,ds
+  $$
+>
+> $$
+  \int_S (\varphi \nabla^2 \psi - \psi \nabla^2 \varphi) \,dS = \oint_C \left( \varphi {\partial \psi \over \partial n} - \psi {\partial \varphi \over \partial n} \right) \,ds
+  $$
 
 ## Harmonic Functions
 
