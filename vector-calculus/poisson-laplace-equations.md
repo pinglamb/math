@@ -337,7 +337,63 @@ Existence of solutions is substantially hard to determine so is skipped here.
 ## Harmonic Functions
 
 > *Definition.*{: .def}
-> The function $\psi: \mathbb{R}^m \to \mathbb{R} (m = 2, 3)$ is **harmonic** iff all its seconnd-order partial derivatives exist and are continuous, and $\nabla^2 \psi = 2$.
+> The function $\psi: \mathbb{R}^m \to \mathbb{R} (m = 2, 3)$ is **harmonic** iff all its seconnd-order partial derivatives exist and are continuous, and $\nabla^2 \psi = 0$.
+
+> *Property.*{: .prop}
+> **[Mean Value Property]**
+> Suppose that $\psi$ is harmonic.
+> The value of $\psi$ at a point is equal to the average of the values of $\psi$ on any spherical shell centred at that point, i.e.
+>
+> $$
+  \psi(\mathbf{a}) = {1 \over 4\pi r^2} \int_{S_r} \psi(\mathbf{x}) \,dS
+  $$
+>
+> where $S_r: \vert \mathbf{x} - \mathbf{a} \vert = r$.
+>
+> *Proof.*{: .prf}
+>
+> By divergence theorem,
+>
+> $$
+  \int_S {\partial \psi \over \partial n} \,dS = \int_S \nabla \psi \cdot d\mathbf{S} = \int_V \nabla^2 \psi \,dV = 0
+  $$
+>
+> Consider the function
+>
+> $$
+  \bar{\psi}(r) = {1 \over 4\pi r^2} \int_{S_r} \psi(\mathbf{x}) \,dS = {1 \over 4\pi} \int_0^{\pi} d\theta \int_0^{2\pi} d\phi \,(\sin \theta \,\psi(r, \theta, \phi))
+  $$
+>
+> and
+>
+> $$
+  \begin{align*}
+  {d \bar{\psi}(r) \over dr}
+  &= {1 \over 4\pi} \int_0^{\pi} d\theta \int_0^{2\pi} d\phi \,\sin \theta {\partial \psi \over \partial r} \\
+  &= {1 \over 4\pi r^2} \int_{S_r} {\partial \psi \over \partial n} \,dS \\
+  &= 0
+  \end{align*}
+  $$
+>
+> since $\partial \psi / \partial n = \nabla \psi \cdot \mathbf{e}_r = \partial \psi / \partial r$ in spherical polars.
+>
+> Therefore, $\bar{\psi}(r)$ is constant and as $r \to 0$,
+>
+> $$
+  \bar{\psi}(r) = \psi(\mathbf{a}) = {1 \over 4\pi r^2} \int_{S_r} \psi(\mathbf{x}) \,dS
+  $$
+
+> *Property.*{: .prop}
+> **[Maxima and Minima]**
+> Suppose that $\psi$ is harmonic in a volume $V$.
+> Then $\psi$ attains its maximum and minimum values on the boundary $\partial V$, i.e. $\nabla^2$ is a smooth operator.
+>
+> *Proof.*{: .prf}
+>
+> If $\psi$ has a local maximum at $\mathbf{a}$ in $V$ then there exists $\varepsilon$ such that $\psi(\mathbf{x}) < \psi(\mathbf{a})$ for $\vert \mathbf{x} - \mathbf{a} \vert < \varepsilon$.
+> However, by the mean value property, we have $\bar{\psi}(r) = \psi(\mathbf{a})$ for $0 < r < \varepsilon$.
+> If all the $\psi(\mathbf{x})$ in the region is less than $\psi(\mathbf{a})$, their average can't be $\psi(\mathbf{a})$, which is a contradiction.
+
 
 ## References
 
