@@ -199,7 +199,12 @@ For example, if we want to check if $T_{i_1 i_2 ... i_{p+q}}$ is a tensor, we ca
 
 > *Definition.*{: .def}
 > A tensor is **symmetric** with respect to its first two subscripts if $T_{i_2 i_1 ... i_p} = T_{i_1 i_2 ... i_p}$.
+
+> *Definition.*{: .def}
 > A tensor is **antisymmetric** with respect to its first two subscripts if $T_{i_2 i_1 ... i_p} = -T_{i_1 i_2 ... i_p}$
+
+> *Definition.*{: .def}
+> A tensor is **totally antisymmetric** if it is antisymmetric in all pairs of indices.
 
 > *Proposition.*{: .prop}
 > Any tensor can always be written as the sum of a symmetric tensor $S_{i_1 i_2 ... i_p}$ and an antisymmetric tensor $A_{i_1 i_2 ... i_p}$, i.e.
