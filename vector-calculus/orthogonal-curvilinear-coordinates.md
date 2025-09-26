@@ -420,4 +420,5 @@ The expressions for gradient, divergence and curl can easily be verified to matc
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 2.1.4
+* Stephen J. Cowley _Vector Calculus Lectures Notes_, 2000 - Chapter 7
 * K.F. Riley _Mathematical Methods for Physicists and Engineers_, 1998 - Chapter 6.4, 10.9

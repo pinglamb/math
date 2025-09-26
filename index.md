@@ -15,7 +15,7 @@ title: Home
 * [Green's and Stokes' Theorems](vector-calculus/green-stokes-theorems.md)
 * [Orthogonal Curvilinear Coordinates](vector-calculus/orthogonal-curvilinear-coordinates.md)
 * [Poisson and Laplace Equations](vector-calculus/poisson-laplace-equations.md)
-* [Tensors](vector-calculus/integral-theorems.md)
+* [Tensors](vector-calculus/tensors.md)
 
 ## Analysis
 {: .left}
