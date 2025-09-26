@@ -118,17 +118,6 @@ With tensors, we can define the gradient of vector field (or generalized to any 
 > If $T_{i_1 i_2 ... i_p}$ are the components of a tensor, then so as the set of quantities formed by interchanging the order of indices, e.g. $T_{i_2 i_1 ... i_p}$.
 
 > *Definition.*{: .def}
-> A tensor is **symmetric** with respect to its first two subscripts if $T_{i_2 i_1 ... i_p} = T_{i_1 i_2 ... i_p}$.
-> A tensor is **antisymmetric** with respect to its first two subscripts if $T_{i_2 i_1 ... i_p} = -T_{i_1 i_2 ... i_p}$
-
-> *Proposition.*{: .prop}
-> Any tensor can always be written as the sum of a symmetric tensor $S_{i_1 i_2 ... i_p}$ and an antisymmetric tensor $A_{i_1 i_2 ... i_p}$, i.e.
->
-> $$
-  T_{i_1 i_2 ... i_p} = {1 \over 2} (T_{i_1 i_2 ... i_p} + T_{i_2 i_1 ... i_p}) + {1 \over 2} (T_{i_1 i_2 ... i_p} - T_{i_2 i_1 ... i_p}) = S_{i_1 i_2 ... i_p} + A_{i_1 i_2 ... i_p}
-  $$
-
-> *Definition.*{: .def}
 > Suppose $S$ is a tensor of rank $p$ and $T$ is a tensor of ranks $q$.
 > The **outer/tensor product** of them, denoted by $S \otimes T$, is defined by
 >
@@ -169,6 +158,56 @@ For example, a second-rank tensor can be contracted to a scalar, which we call t
 Another example is the scalar product of two vectors, which we first have the outer product of two vectors and contracting it to produce a scalar (rank $1 + 1 - 2$).
 
 ## Quotient Law
+
+> *Proposition.*{: .prop}
+> **[Quotient Law]**
+> Suppose that $T$ and $U$ are tensors.
+> If
+>
+> $$
+  S_{i_1 ... k ... i_p} T_{j_1 ... k ... j_q} = U_{i_1 ... i_p j_1 ... j_q}
+  $$
+>
+> holds for all rotations then $S$ is a tensor.
+>
+> *Proof.*{: .prf}
+>
+> We use $p = q = 2$ as example to demonstrate the principle.
+> Given that $S_{ik} T_{jk} = U_{ij}$, then
+>
+> $$
+  \begin{align*}
+  S_{ik}' T_{jk}' = U_{ij}' &= R_{il} R_{jm} U_{lm}  \\
+  &= R_{il} R_{jm} S_{ln} T_{mn} \\
+  &= R_{il} R_{jm} S_{ln} R_{om} R_{kn} T_{ok}' \\
+  &= R_{il} R_{kn} S_{ln} T_{jk}'
+  \end{align*}
+  $$
+>
+> Therefore, we have
+>
+> $$
+  (S_{ik}' - R_{il} R_{kn} S_{ln}) T_{jk}' = 0 \quad \implies \quad S_{ik}' = R_{il} R_{kn} S_{ln}
+  $$
+>
+> Similar arguments can be applied for the case $S_{ik} T_{kj} = U_{ij}$.
+
+Quotient law provides a convenient way to test wheater a given quantity is a tensor.
+For example, if we want to check if $T_{i_1 i_2 ... i_{p+q}}$ is a tensor, we can contract it with a rank $q$ tensor and check if the result is a rank $p$ tensor.
+
+## Symmetry and Anti-Symmetry
+
+> *Definition.*{: .def}
+> A tensor is **symmetric** with respect to its first two subscripts if $T_{i_2 i_1 ... i_p} = T_{i_1 i_2 ... i_p}$.
+> A tensor is **antisymmetric** with respect to its first two subscripts if $T_{i_2 i_1 ... i_p} = -T_{i_1 i_2 ... i_p}$
+
+> *Proposition.*{: .prop}
+> Any tensor can always be written as the sum of a symmetric tensor $S_{i_1 i_2 ... i_p}$ and an antisymmetric tensor $A_{i_1 i_2 ... i_p}$, i.e.
+>
+> $$
+  T_{i_1 i_2 ... i_p} = {1 \over 2} (T_{i_1 i_2 ... i_p} + T_{i_2 i_1 ... i_p}) + {1 \over 2} (T_{i_1 i_2 ... i_p} - T_{i_2 i_1 ... i_p}) = S_{i_1 i_2 ... i_p} + A_{i_1 i_2 ... i_p}
+  $$
+
 
 ## References
 
