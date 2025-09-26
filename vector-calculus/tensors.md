@@ -104,6 +104,72 @@ With tensors, we can define the gradient of vector field (or generalized to any 
   T_{ij}' = { \partial v_i' \over \partial x_j'} = R_{ik} { \partial x_l \over \partial x_j'} { \partial v_k \over \partial x_l } = R_{ik} R_{jl} T_{kl}
   $$
 
+## Algebra of Tensors
+
+> *Proposition.*{: .prop}
+> The sum and difference of two tensors of the same rank is also a tensor.
+> Multiplying a tensor by a constant is also a tensor.
+>
+> *Proof.*{: .prf}
+>
+> It follows immediately from the linearity of a rotation of coordinates.
+
+> *Proposition.*{: .prop}
+> If $T_{i_1 i_2 ... i_p}$ are the components of a tensor, then so as the set of quantities formed by interchanging the order of indices, e.g. $T_{i_2 i_1 ... i_p}$.
+
+> *Definition.*{: .def}
+> A tensor is **symmetric** with respect to its first two subscripts if $T_{i_2 i_1 ... i_p} = T_{i_1 i_2 ... i_p}$.
+> A tensor is **antisymmetric** with respect to its first two subscripts if $T_{i_2 i_1 ... i_p} = -T_{i_1 i_2 ... i_p}$
+
+> *Proposition.*{: .prop}
+> Any tensor can always be written as the sum of a symmetric tensor $S_{i_1 i_2 ... i_p}$ and an antisymmetric tensor $A_{i_1 i_2 ... i_p}$, i.e.
+>
+> $$
+  T_{i_1 i_2 ... i_p} = {1 \over 2} (T_{i_1 i_2 ... i_p} + T_{i_2 i_1 ... i_p}) + {1 \over 2} (T_{i_1 i_2 ... i_p} - T_{i_2 i_1 ... i_p}) = S_{i_1 i_2 ... i_p} + A_{i_1 i_2 ... i_p}
+  $$
+
+> *Definition.*{: .def}
+> Suppose $S$ is a tensor of rank $p$ and $T$ is a tensor of ranks $q$.
+> The **outer/tensor product** of them, denoted by $S \otimes T$, is defined by
+>
+> $$
+  (S \otimes T)_{i_1 i_2 ... i_p j_1 j_2 ... j_q} = S_{i_1 i_2 ... i_p} T_{j_1 j_2 ... j_q}
+  $$
+
+> *Proposition.*{: .prop}
+> The outer product of two tensors of rank $p$ and $q$ respectively is also a tensor of rank $p + q$.
+>
+> *Proof.*{: .prf}
+>
+> Using outer product of two first-rank tensors $\mathbf{u}$ and $\mathbf{v}$ as example, we have
+>
+> $$
+  T_{ij}' = u_i' v_j' = R_{ik} R_{jl} u_k v_l = R_{ik} R_{jl} T_{kl}
+  $$
+
+> *Proposition.*{: .prop}
+> Suppose $S$ is a tensor $S$ of rank $p$.
+> Then **contraction** on two indices using $\delta_{ij}$ results with a tensor $T$ of rank $p - 2$, i.e.
+>
+> $$
+  T_{k_1 ... k_{p-2}} = \delta_{ij} S_{ij k_1 ... k_{p-2}}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  T_{i i k_1 .. k_{p-2}}' &= R_{im} R_{in} R_{k_1 l_1} ... R_{k_{p-2} l_{p-2}} T_{m n l_1 ... l_{p-2}} \\
+  &= \delta_{mn} R_{k_1 l_1} ... R_{k_{p-2} l_{p-2}} T_{m n l_1 ... l_{p-2}} \\
+  &= R_{k_1 l_1} ... R_{k_{p-2} l_{p-2}} T_{m m l_1 ... l_{p-2}}
+  \end{align*}
+  $$
+
+For example, a second-rank tensor can be contracted to a scalar, which we call the _trace_, i.e. $\text{Tr}\, T = T_{ii}$.
+Another example is the scalar product of two vectors, which we first have the outer product of two vectors and contracting it to produce a scalar (rank $1 + 1 - 2$).
+
+## Quotient Law
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 6
