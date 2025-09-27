@@ -89,7 +89,7 @@ Following on from rank $0$ tensor with no subscripts and rank $1$ tensor with on
 
 A rank $2$ tensor is geometrically like linear map that transform one vector into another without reference to any coordinate system, and behaves in the same way under orthogonal transformations $\mathsf{T}' = \mathsf{RTR'}$.
 However, not all linear maps are rank $2$ tensors. The critical idea behind tensors is that all the subscripts must refer to the same coordinate system.
-For example, a rank $2$ tensor in 3D has 9 components because the underlying coordinate system has $3$ axes, and therefore $3 \times 3$ combinations among them.
+For example, a rank $2$ tensor in $\mathbb{R}^3$ has 9 components because the underlying coordinate system has $3$ axes, and therefore $3 \times 3$ combinations among them.
 In order to identify a quantity, we will need a value for each of them, i.e. $xx, xy, xz, yx, yy, yz, zx, zy, zz$ and requires two subscripts.
 
 In the discussion of [differential operators](differential-operators.md), we only define the gradient of scalar field.
@@ -217,8 +217,20 @@ For example, if we want to check if $T_{i_1 i_2 ... i_{p+q}}$ is a tensor, we ca
 
 There are two important invariant tensors in $\mathbb{R}^n$.
 
+> *Definition.*{: .def}
+> A tensor is **invariant** under a given rotation $R$ if
+>
+> $$
+  T_{i_1 ... i_p}' = R_{i_1 j_1} ... R_{i_p j_p} T_{j_1 ... j_p} = T_{i_1 ... i_p}
+  $$
+
+> *Definition.*{: .def}
+> A tensor is **isotropic** if it is invariant under all rotations $R$.
+
+Obviously, all tensors of rank $0$ are isotropic.
+
 > *Proposition.*{: .prop}
-> The **Kronecker delta** $\delta_{ij}$ is a rank $2$ invariant tensor.
+> The **Kronecker delta** $\delta_{ij}$ is a rank $2$ isotropic tensor.
 >
 > *Proof.*{: .prf}
 >
@@ -228,6 +240,36 @@ There are two important invariant tensors in $\mathbb{R}^n$.
 
 > *Proposition.*{: .prop}
 > The **Levi-Civita Symbol** $\varepsilon_{i_i i_2 ... i_p}$ is a rank $p$ totally anti-symmetric tensor.
+> It is invariant when $R \in SO(p)$ but not $R \in O(p)$.
+>
+> *Proof.*{: .prf}
+>
+> For a $p \times p$ matrix, we have
+>
+> $$
+  (\det A) \varepsilon_{i_1 i_2 ... i_p} = A_{i_1 j_1} A_{i_2 j_2} ... A_{i_p j_p} \varepsilon_{j_1 j_2 ... j_n}
+  $$
+>
+> It can be verified this with the use of Laplace expansion,
+>
+> + when any two of the indices take the same value, the R.H.S. is the determinant of a matrix with a repeated row, so both side is $0$;
+>
+> + when the indices are of even permutation, the R.H.S. is the determinant of the matrix in Laplace expansion form;
+>
+> + when the indices are of odd permutation, the R.H.S. is the determinant of the same matrix will two rows interchanged, and both side is $- \det A$.
+>
+> Hence,
+>
+> $$
+  \varepsilon_{i_1 i_2 ... i_p}' = R_{i_1 j_1} R_{i_2 j_2} ... R_{i_n j_n} \varepsilon_{j_1 j_2 ... j_n} = \det R \, \varepsilon_{i_1 i_2 ... i_p}
+  $$
+>
+> and whether $\varepsilon_{i_1 i_2 ... i_p}$ is invariant depends on $\det R = \pm 1$.
+
+> *Proposition.*{: .prop}
+> In $\mathbb{R}^3$, $T_{ij} = \alpha \delta_{ij}$ is the only rank $2$ non-zero isotropic tensor,
+> $T_{ijk} = \beta \varepsilon_{ijk}$ is the only rank $3$ isotropic tensor
+> and there are no isotropic tensors of rank $1$.
 
 ## References
 
