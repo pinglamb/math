@@ -267,9 +267,54 @@ Obviously, all tensors of rank $0$ are isotropic.
 > and whether $\varepsilon_{i_1 i_2 ... i_p}$ is invariant depends on $\det R = \pm 1$.
 
 > *Proposition.*{: .prop}
-> In $\mathbb{R}^3$, $T_{ij} = \alpha \delta_{ij}$ is the only rank $2$ non-zero isotropic tensor,
-> $T_{ijk} = \beta \varepsilon_{ijk}$ is the only rank $3$ isotropic tensor
-> and there are no isotropic tensors of rank $1$.
+> In $\mathbb{R}^3$, $T_{ij} = \alpha \delta_{ij}$ is the only rank $2$ non-zero isotropic tensor.
+>
+> *Proof.*{: .prf}
+>
+> Consider the rotation by $2\pi/3$ about $(1, 1, 1)$, we have $(x, y, z) \mapsto (y, z, x)$ and therefore $R_{13} = R_{21} = R_{32} = 1$ and all other $R_{ij} = 0$.
+> This requires
+>
+> + $T_{11} = T_{22} = T_{33}$;
+>
+> + $T_{12} = T_{23} = T_{31}$;
+>
+> + $T_{13} = T_{21} = T_{32}$.
+>
+> Consider another rotation by $\pi/2$ about the $z$-axis, we have $(x, y, z) \mapsto (y, -x, z)$ and therefore $R_{12} = -1$, $R_{21} = R_{33} = 1$ and all other $R_{ij} = 0$.
+> This requires
+>
+> + $T_{13} = (-1)(1)T_{23}$;
+>
+> + $T_{23} = (1)(1)T_{13}$.
+>
+> Concluding from the above, we must have $T_{ij} = 0$ except $T_{11} = T_{22} = T_{33}$.
+
+> *Proposition.*{: .prop}
+> In $\mathbb{R}^3$, $T_{ijk} = \beta \varepsilon_{ijk}$ is the only rank $3$ isotropic tensor.
+>
+> *Proof.*{: .prf}
+>
+> Similarily, rotating by $2\pi/3$ about the $(1, 1, 1)$ direction we have
+>
+> + $T_{111} = T_{222} = T_{333}$;
+>
+> + $T_{112} = T_{223} = T_{331}, ...$;
+>
+> + $T_{123} = T_{231} = T_{312}, ...$.
+>
+> Then rotating by $\pi/2$ about the $z$-axis, we have
+>
+> + $T_{111} = (-1)(-1)(-1) T_{222} = -T_{222}$;
+>
+> + $T_{112} = (-1)(-1)(1) T_{221}$;
+>
+> + $T_{221} = (1)(1)(-1) T_{112}$;
+>
+> + $T_{123} = (-1)(1)(1) T_{213}$.
+>
+> The quantity that matches all of the above these conditions is a multiple of $\varepsilon_{ijk}$.
+
+By using the same procedure, the only rank $1$ isotropic tensor is the trivial one with all elements $0$.
 
 ## References
 
