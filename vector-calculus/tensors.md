@@ -316,6 +316,15 @@ Obviously, all tensors of rank $0$ are isotropic.
 
 By using the same procedure, the only rank $1$ isotropic tensor is the trivial one with all elements $0$.
 
+The following result can be useful but we will not prove here.
+
+> *Proposition.*{: .prop}
+> In $\mathbb{R}^3$, the only rank $4$ isotropic tensor is
+>
+> $$
+  T_{ijkl} = \alpha \delta_{ij} \delta_{kl} + \beta \delta_{ik} \delta_{jl} + \gamma \delta_{il} \delta_{jk}
+  $$
+
 ## Dual Tensors
 
 > *Definition.*{: .def}
@@ -352,6 +361,43 @@ For example,it can be useful to associate an antisymmetric tensor with the Levi-
   &= {1 \over 2} (\delta_{ip} \delta_{jq} - \delta_{iq} \delta_{jp}) A_{pq} \\
   &= {1 \over 2} (A_{ij} - A_{ji}) = {1 \over 2} (A_{ij} + A_{ij}) = A_{ij} \\
   \end{align*}
+  $$
+
+The above provides a way to further decompose a rank $2$ tensor in $\mathbb{R}^3$.
+
+> *Proposition.*{: .prop}
+> In $\mathbb{R}^3$, any rank $2$ tensor $T_{ij}$ can be decomposed as
+>
+> $$
+  T_{ij} = P_{ij} + \varepsilon_{ijk} B_k + {1 \over 3} \delta_{ij} Q
+  $$
+>
+> where $P_{ii} = 0$.
+>
+> *Proof.*{: .prf}
+>
+> From the above, we can decompose a rank $2$ tensor into the symmetric and anti-symmetric piece.
+>
+> $$
+  T_{ij} = S_{ij} + A_{ij}
+  $$
+>
+> Furthermore,
+>
+> $$
+  S_{ij} = P_{ij} + {Q \over 3} \delta_{ij}
+  $$
+>
+> where $Q = S_{ii}$ and $P_{ij}$ is traceless, and
+>
+> $$
+  A_{ij} = \varepsilon_{ijk} B_k
+  $$
+>
+> where $B_k$ is a pseudovector. Hence,
+>
+> $$
+  T_{ij} = P_{ij} + \varepsilon_{ijk} B_k + {1 \over 3} \delta_{ij} Q
   $$
 
 ## References
