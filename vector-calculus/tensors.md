@@ -316,6 +316,44 @@ Obviously, all tensors of rank $0$ are isotropic.
 
 By using the same procedure, the only rank $1$ isotropic tensor is the trivial one with all elements $0$.
 
+## Dual Tensors
+
+> *Definition.*{: .def}
+> A rank $p$ **pseudotensor** is a set of quantities in which its components satisfy
+>
+> $$
+  v_{i_1 i_2 ... i_p}' = \begin{cases}
+  R_{i_1 j_1} R_{i_2 j_2} ... R_{i_p j_p} v_{j_1 j_2 ... j_p} & \text{for } |R| = 1 \\
+  - R_{i_1 j_1} R_{i_2 j_2} ... R_{i_p j_p} v_{j_1 j_2 ... j_p} & \text{for } |R| = -1 \\
+  \end{cases}
+  $$
+
+A rank $1$ pseudotensor is also called **pseudovector**.
+An example is the vector cross product in which it changes sign under a left-handed coordinate system.
+
+It is important that pseudotensors are not themselves appropriate for the description of phyiscal phenomena but sometimes they are needed.
+For example,it can be useful to associate an antisymmetric tensor with the Levi-Civita symbol.
+
+> *Definition.*{: .def}
+> The **dual** of rank $2$ antisymmetric tensor $A_{ij}$ is the pseudovector $\mathbf{p}$ given by
+>
+> $$
+  p_i = {1 \over 2} \varepsilon_{ijk} A_{jk}
+  $$
+
+> *Proposition.*{: .prop}
+> $A_{ij} = \varepsilon_{ijk} p_k$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \varepsilon_{ijk} p_k &= {1 \over 2} \varepsilon_{ijk} \varepsilon_{kpq} A_{pq} \\
+  &= {1 \over 2} (\delta_{ip} \delta_{jq} - \delta_{iq} \delta_{jp}) A_{pq} \\
+  &= {1 \over 2} (A_{ij} - A_{ji}) = {1 \over 2} (A_{ij} + A_{ij}) = A_{ij} \\
+  \end{align*}
+  $$
+
 ## References
 
 * David Tong _Vector Calculus Lecture Notes_, 2024 - Chapter 6
