@@ -3,6 +3,11 @@ layout: base
 title: Home
 ---
 
+## Linear Algebra
+{: .left}
+
+* [Vector Spaces](linear-algebra/vector-spaces.md)
+
 ## Vector Calculus
 {: .left}
 
