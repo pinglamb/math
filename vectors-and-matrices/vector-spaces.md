@@ -69,6 +69,7 @@ This idea can be generalized to different kinds of quantities, not just about ma
 >   $$
     \lambda (\mu a) = (\lambda \mu) a
     $$
+>
 > + scalar multiplication has an _identity_ element, i.e. there exists an element $1 \in \mathbb{F}$ such that
 >
 >   $$
