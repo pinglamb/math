@@ -20,7 +20,7 @@ Linear algebra can then be summarised as the study of vector spaces and linear m
 > + $V$ is _closed_ under addition, i.e.
 >
 >   $$
-    \forall a, b \in V \implies a + b \in V
+    (\forall a, b \in V)\; a + b \in V
     $$
 >
 > + addition is _commutative_, i.e. for all $a, b \in V$
@@ -50,7 +50,7 @@ Linear algebra can then be summarised as the study of vector spaces and linear m
 > + $V$ is _closed_ under scalar multiplication, i.e.
 >
 >   $$
-    \forall \lambda \in F, \forall a \in V \implies \lambda a \in V
+    (\forall \lambda \in F)(\forall a \in V)\; \lambda a \in V
     $$
 >
 > + scalar multiplication is _distributive over scalar addition_, i.e. for all $\lambda, \mu \in \mathbb{F}$ and $a \in V$
@@ -76,6 +76,59 @@ Linear algebra can then be summarised as the study of vector spaces and linear m
 >   $$
     1 a = a
     $$
+
+Note that $(V, +)$ is an abelian group and therefore the additive identity and inverse are unique.
+Some of the other properties are proved in [Vectors and Matrices](../vectors-and-matrices/vector-spaces.md#properties).
+
+## Subspaces
+
+> *Definition.*{: .def}
+> A nonempty subset $U \subset V$ is a **subspace** if
+>
+> + $U$ is _closed_ under addition, i.e.
+>
+>   $$
+    (\forall u_1, u_2 \in U)\; u_1 + u_2 \in U
+    $$
+>
+> + $U$ is _closed_ under scalar multiplication, i.e.
+>
+>   $$
+    (\forall \lambda \in F)(\forall u \in U)\; \lambda u \in U
+    $$
+>
+> In short, $U \subset V$ is a subspace iff $U \not= \emptyset$ and
+>
+> $$
+  (\forall u_1, u_2 \in U)(\lambda, \mu \in \mathbb{F})\; \lambda u_1 + \mu u_2 \in U
+  $$
+
+> *Definition.*{: .def}
+> Suppose that $U$ and $W$ are subspaces of a vector space $V$ over $\mathbb{F}$.
+> Then the **sum** of $U$ and $W$ is the set
+>
+> $$
+  U + W = \Set{u + w : u \in U, w \in W}
+  $$
+
+> *Proposition.*{: .prop}
+> Suppose that $U$ and $W$ are subspaces of a vector space $V$ over $\mathbb{F}$.
+> Then $U \cap W$ and $U + W$ are also subspaces of $V$.
+>
+> *Proof.*{: .prf}
+>
+> $U \cap W$ and $U + W$ is nonempty since $0$ is in them.
+>
+> For $U \cap W$, for all $v_1, v_2 \in U \cap W$,
+> $\lambda v_1 + \mu v_2 \in U$ and $\lambda v_1 + \mu v_2 \in W$ so $\lambda v_1 + \mu v_2 \in U \cap W$.
+>
+> For $U + W$, for all $u_1 + w_1, u_2 + w_2 \in U + W$,
+>
+> $$
+  \lambda (u_1 + w_1) + \mu (u_2 + w_2) = (\lambda u_1 + \mu u_2) + (\lambda w_1 + \mu w_2) \in U + W
+  $$
+
+## Quotient Spaces
 
 ## Reference
 

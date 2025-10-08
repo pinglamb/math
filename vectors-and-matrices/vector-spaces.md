@@ -82,7 +82,7 @@ Base on our study of [vectors](vectors.md) in $\mathbb{R}^2$/$\mathbb{R}^3$, we 
 
 We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove them algebraically.
 
-> *Prop.*{: .prop}
+> *Property.*{: .prop}
 > Vector space is an _abelian group_ under vector addition, hence we have
 >
 > + additive identity $0 \in V$ is unique
@@ -100,7 +100,7 @@ We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove t
   a - b = a + (-b)
   $$
 
-> *Prop.*{: .prop}
+> *Property.*{: .prop}
 > Scalar multiplication by $0 \in \mathbb{F}$ yields the additive identity $0_V \in V$.
 >
 > *Proof.*{: .prf}
@@ -117,7 +117,7 @@ We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove t
   \end{align*}
   $$
 
-> *Prop.*{: .prop}
+> *Property.*{: .prop}
 > Scalar multiplication by $-1 \in \mathbb{F}$ yields the additive inverse $-a \in V$.
 >
 > *Proof.*{: .prf}
@@ -135,7 +135,7 @@ We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove t
   \end{align*}
   $$
 
-> *Prop.*{: .prop}
+> *Property.*{: .prop}
 > Scalar multiplication with zero vector $0\_V$ yields $0\_V$, i.e. $\lambda 0_V = 0_V$.
 >
 > *Proof.*{: .prf}
@@ -148,7 +148,7 @@ We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove t
 >
 > Hence, $\lambda 0_v$ is a zero vector and from the above zero vector is unique, so $\lambda 0_V = 0_V$.
 
-> *Prop.*{: .prop}
+> *Property.*{: .prop}
 > If $\lambda a = 0_V$, either $\lambda = 0\_{\mathbb{F}}$ or $a = 0\_V$.
 >
 > *Proof.*{: .prf}
@@ -161,7 +161,7 @@ We generalize properties of vectors in $\mathbb{R}^2$/$\mathbb{R}^3$ and prove t
 >
 > If $a \not = 0\_V$, then $\lambda a = 0\_V$ for all other $a \in V$ only when $\lambda = 0_\mathbb{F}$.
 
-> *Prop.*{: .prop}
+> *Property.*{: .prop}
 > Negation commutes freely, i.e.
 >
 > $$
