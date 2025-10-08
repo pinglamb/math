@@ -85,6 +85,12 @@ Note that the term "all but finitely many $\lambda_s = 0$" means that there are 
 
 It is not yet clear if a basis is the smallest, which can be proved by showing all bases must have the same size.
 
+> *Theorem.*{: .thm}
+> **[Steinitz Exchange Lemma]**
+> Suppose that $V$ is a vector space over $\mathbb{F}$ and $S = \Set{e_1, ..., e_n}$ is a linearly independent subset of $V$ and $T \subset V$ spans $V$.
+> Then there is a subset $D \subset T$ of order $n$ such that $(T \setminus D) \cup S$ spans $V$.
+> In particular, $\vert S \vert \le \vert T \vert$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 1.2
