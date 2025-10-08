@@ -130,6 +130,56 @@ Some of the other properties are proved in [Vectors and Matrices](../vectors-and
 
 ## Quotient Spaces
 
+> *Definition.*{: .def}
+> Suppose that $V$ is a vector space over $\mathbb{F}$ and $U$ is a subspcae of $V$.
+> Then the **quotient space** $V/U$ is the set $\Set{v + U}$ with addition
+>
+> $$
+  (v_1 + U) + (v_2 + U) = (v_1 + v_2) + U
+  $$
+>
+> and scalar multiplication
+>
+> $$
+  \lambda (v + U) = (\lambda v) + U
+  $$
+
+It is easier to understand the above structure by considering the equivalence relation $v_1 \sim v_2$ if $v_1 - v_2 \in U$.
+Therefore, the equivalence class of $v$ is defined as
+
+$$
+[v] = \Set{v + u : u \in U}
+$$
+
+which is denoted as $v + U$ above and $V/U$ is the set containing all the equivalence classes induced by $\sim$ on $U$ with addition $[v_1] + [v_2] = [v_1 + v_2]$ and $\lambda [v] = [\lambda v]$.
+Note that all the elements in $U$ are in the equivalence class $[0]$ so the quotient space $V/U$ is obtained by "collapsing" $U$ to zero.
+
+> *Proposition.*{: .prop}
+> The quotient space $V/U$ is a vector space over $\mathbb{F}$.
+>
+> *Proof.*{: .prf}
+>
+> For $v_1, v_1', v_2, v_2' \in V$ and $u_1, u_2 \in U$ with $[v_1] = [v_1']$ and $[v_2] = [v_2']$, we have
+>
+> $$
+  v_1' + v_2' = (v_1 + u_1) + (v_2 + u_2) = (v_1 + v_2) + (u_1 + u_2)
+  $$
+>
+> so $[v_1' + v_2'] = [v_1 + v_2]$ since $u_1 + u_2 \in U$. Similarily,
+>
+> $$
+  \lambda v_1' = \lambda (v_1 + u_1) = (\lambda v_1) + (\lambda u_1)
+  $$
+>
+> so $[\lambda v_1'] = [\lambda v_1]$.
+> Thus, both operations are well-defined, i.e. independent of the choice of representatives.
+>
+> The axioms are an almost immediate consequence of the fact that the same axioms hold for $V$ and $U$ being a vector space, e.g.
+>
+> $$
+  \lambda (\mu [v]) = [\lambda (\mu v)] = [(\lambda \mu) v] = (\lambda \mu) [v]
+  $$
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 1
