@@ -58,6 +58,33 @@ If the subset $S$ is linearly dependent, it implies that some vectors in the set
 > *Definition.*{: .def}
 > $S \subset V$ is a **basis** for $V$ if $S$ spans $V$ and is linearly independent.
 
+> *Definition.*{: .def}
+> The **components** of $v \in V$ respect to a ordered basis $S$ are the scalars $\lambda_s \in \mathbb{F}$ such that
+>
+> $$
+  v = \sum_{s \in S} \lambda_s s
+  $$
+>
+> with all but finitely many $\lambda_s = 0$.
+
+Note that the term "all but finitely many $\lambda_s = 0$" means that there are finitely many non-zero $\lambda_s$ so that we are summing over finite terms.
+
+> *Proposition.*{: .prop}
+> Suppose that $V$ is a vector space over $\mathbb{F}$.
+> Then $S \subset V$ is a basis for $V$ iff the component representation of every element $v \in V$ is unique.
+>
+> *Proof.*{: .prf}
+>
+>
+> Since $S$ spans $V$, all $v$ can be written as linear combinations of $S$ in at least one way so we just need to show that there is at most one way.
+>
+> ($\Rightarrow$) If $v = \sum_{s \in S} \lambda_s s = \sum_{s \in S} \mu_s s$, then $\sum_{s \in S} (\lambda_s - \mu_s) = 0$.
+> Since $S$ is linearly independent, $\lambda_s - \mu_s = 0$ for all $s \in S$ and therefore $\lambda_s = \mu_s$.
+>
+> ($\Leftarrow$) If every element $v \in V$ can be written in at most one way, then $\sum_{s \in S} \lambda_s s = 0$ implies $\lambda_s = 0$ and $S$ is linearly independent.
+
+It is not yet clear if a basis is the smallest, which can be proved by showing all bases must have the same size.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 1.2
