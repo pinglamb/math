@@ -7,6 +7,7 @@ title: Home
 {: .left}
 
 * [Vector Spaces](linear-algebra/vector-spaces.md)
+* [Bases](linear-algebra/bases.md)
 
 ## Vector Calculus
 {: .left}

@@ -182,5 +182,5 @@ Note that all the elements in $U$ are in the equivalence class $[0]$ so the quot
 
 ## Reference
 
-* Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 1
-* Charles W. Curtis _Linear Algebra - An Introductory Approach_, 1984 - Chapter 2
+* Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 1.1
+* Charles W. Curtis _Linear Algebra - An Introductory Approach_, 1984 - Chapter 2.3, 2.4
