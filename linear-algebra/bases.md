@@ -129,6 +129,45 @@ After knowing the set of linearly independent vectors being able to represent al
 > Similarily, since $T$ spans $V$ and $S$ is linearly independent, $\vert S \vert \le \vert T \vert$.
 > Hence, $\vert S \vert = \vert T \vert$.
 
+> *Corollary.*{: .cor}
+> Suppose that $V$ is a vector space with a basis of order $n$. Then
+>
+> + any $n$ linearly independent vectors in $V$ form a basis for $V$;
+>
+> + any $n$ vectors in $V$ that span $V$ form a basis for $V$;
+>
+> + any set of linearly independent vectors in $V$ can be extended to a basis for $V$;
+>
+> + any finite spanning set in $V$ contains a basis for $V$.
+>
+> *Proof.*{: .prf}
+>
+> Let $S$ be a basis of $V$.
+>
+> + We can replace the elements of $S$ with the $n$ linearly independent vectors and it still spans $V$ so they form a basis.
+>
+> + If the $n$ vectors are linearly dependent, we can remove one of them and the $n-1$ vectors still spans $V$.
+>   Then we have $\vert S \vert = n > n - 1$ which is a contradiction.
+>
+> + Direct consequence of Steinitz exchange lemma.
+>
+> + For any finite spanning set $T$, if it is linearly independent, then it is a basis for $V$.
+>   If not, it means there exists $t \in T$ such that $T' = T \setminus \Set{t_j}$ still spans $V$ and we can repeat this process.
+>   Since $S$ spans $V$, it terminates when $\vert T' \vert = n$ which form a basis for $V$.
+
+## Dimensions
+
+Since all the bases are of the same order, we can know define the dimension of a vector space.
+
+> *Definition.*{: .def}
+> If a vector space $V$ over $\mathbb{F}$ is finite-dimensional with basis $S$, the **dimension** of $V$ is defined by
+>
+> $$
+  \dim_{\mathbb{F}} = \dim V = |S|
+  $$
+
+Note that although the dimension is independent on the choice of $S$, it does depend on the field $\mathbb{F}$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 1.2
