@@ -82,7 +82,7 @@ Note that the term "all but finitely many $\lambda_s = 0$" means that there are 
 >
 > ($\Leftarrow$) If every element $v \in V$ can be written in at most one way, then $\sum_{s \in S} \lambda_s s = 0$ implies $\lambda_s = 0$ and $S$ is linearly independent.
 
-It is not yet clear if a basis is the smallest, which can be proved by showing all bases must have the same size.
+After knowing the set of linearly independent vectors being able to represent all other vectors uniquely in a vector space, we can now address the properties of the order of these bases.
 
 > *Theorem.*{: .thm}
 > **[Steinitz Exchange Lemma]**
@@ -109,6 +109,25 @@ It is not yet clear if a basis is the smallest, which can be proved by showing a
 >
 > With $T_k = T_{k-1} \setminus \Set{t_k} \cup \Set{e_k} = \Set{e_1, e_2, ..., e_k, t_{k+1}, ..., t_n}$,
 > since $t_k \in \langle T_k \rangle$, by the inductive hypothesis, $\langle T_k \rangle = V$.
+
+> *Corollary.*{: .cor}
+> If $\Set{e_1, ..., e_n} \subset V$ is linearly independent and $\Set{f_1, ..., f_m}$ spans $V$.
+> Then $n \le m$ and possibly after reordering $\Set{e_1, ..., e_n, f_{n+1}, ..., f_m}$ spans $V$.
+>
+> *Proof.*{: .prf}
+>
+> If $m < n$, by Steinitz exchange lemma, we can replace $\Set{f_1, ..., f_m}$ with $\Set{e_1, ..., e_m}$ that still spans $V$.
+> Therefore, we have $e_{m+1} \in \langle \Set{e_1, ..., e_m} \rangle$ which contradicts with $\Set{e_1, ..., e_n}$ being linearly independent.
+
+> *Corollary.*{: .cor}
+> Every basis of a vector space $V$ has the same order.
+>
+> *Proof.*{: .prf}
+>
+> Let $S$ and $T$ be two bases of $V$.
+> Since $S$ spans $V$ and $T$ is linearly independent, $\vert T \vert \le \vert S \vert$.
+> Similarily, since $T$ spans $V$ and $S$ is linearly independent, $\vert S \vert \le \vert T \vert$.
+> Hence, $\vert S \vert = \vert T \vert$.
 
 ## Reference
 
