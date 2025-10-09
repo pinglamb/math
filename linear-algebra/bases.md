@@ -75,7 +75,6 @@ Note that the term "all but finitely many $\lambda_s = 0$" means that there are 
 >
 > *Proof.*{: .prf}
 >
->
 > Since $S$ spans $V$, all $v$ can be written as linear combinations of $S$ in at least one way so we just need to show that there is at most one way.
 >
 > ($\Rightarrow$) If $v = \sum_{s \in S} \lambda_s s = \sum_{s \in S} \mu_s s$, then $\sum_{s \in S} (\lambda_s - \mu_s) = 0$.
@@ -90,6 +89,26 @@ It is not yet clear if a basis is the smallest, which can be proved by showing a
 > Suppose that $V$ is a vector space over $\mathbb{F}$ and $S = \Set{e_1, ..., e_n}$ is a linearly independent subset of $V$ and $T \subset V$ spans $V$.
 > Then there is a subset $D \subset T$ of order $n$ such that $(T \setminus D) \cup S$ spans $V$.
 > In particular, $\vert S \vert \le \vert T \vert$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that we have found a subset $D_r \subset T$ of order $0 \le r < n$ such that $T_r = (T \setminus D_r) \cup \Set{e_1, ... e_r}$ spans $V$.
+> Obviously the statement is true for $r = 0$ with $D_r = \emptyset$.
+> Assume it is true for $r = k - 1$, we can therefore write
+>
+> $$
+  e_k = \sum_{i = 1}^{k-1} \lambda_i e_i + \sum_{i=k}^{n} \lambda_i t_i
+  $$
+>
+> Since $\Set{e_1, ... e_k}$ is linearly independent, there exists $\lambda_i \not= 0$ with $k \le i \le n$.
+> By reordering the terms in the second part of R.H.S., we can assume $\lambda_k \not= 0$ and therefore
+>
+> $$
+  t_k = {1 \over \lambda_k} \left( e_k - \sum_{i=1}^{k-1} \lambda_i e_i - \sum_{i=k+1}^{n} \lambda_i t_i \right)
+  $$
+>
+> With $T_k = T_{k-1} \setminus \Set{t_k} \cup \Set{e_k} = \Set{e_1, e_2, ..., e_k, t_{k+1}, ..., t_n}$,
+> since $t_k \in \langle T_k \rangle$, by the inductive hypothesis, $\langle T_k \rangle = V$.
 
 ## Reference
 
