@@ -103,30 +103,13 @@ Some of the other properties are proved in [Vectors and Matrices](../vectors-and
   (\forall u_1, u_2 \in U)(\lambda, \mu \in \mathbb{F})\; \lambda u_1 + \mu u_2 \in U
   $$
 
-> *Definition.*{: .def}
-> Suppose that $U$ and $W$ are subspaces of a vector space $V$ over $\mathbb{F}$.
-> Then the **sum** of $U$ and $W$ is the set
->
-> $$
-  U + W = \Set{u + w : u \in U, w \in W}
-  $$
-
 > *Proposition.*{: .prop}
-> Suppose that $U$ and $W$ are subspaces of a vector space $V$ over $\mathbb{F}$.
-> Then $U \cap W$ and $U + W$ are also subspaces of $V$.
+> Suppose that $U$ and $W$ are subspaces of a vector space $V$. Then $U \cap W$ is also a subspace of $V$.
 >
 > *Proof.*{: .prf}
 >
-> $U \cap W$ and $U + W$ is nonempty since $0$ is in them.
->
-> For $U \cap W$, for all $v_1, v_2 \in U \cap W$,
-> $\lambda v_1 + \mu v_2 \in U$ and $\lambda v_1 + \mu v_2 \in W$ so $\lambda v_1 + \mu v_2 \in U \cap W$.
->
-> For $U + W$, for all $u_1 + w_1, u_2 + w_2 \in U + W$,
->
-> $$
-  \lambda (u_1 + w_1) + \mu (u_2 + w_2) = (\lambda u_1 + \mu u_2) + (\lambda w_1 + \mu w_2) \in U + W
-  $$
+> $U \cap W$ contains $0$ so it is nonempty.
+> For all $v_1, v_2 \in U \cap W$, $\lambda v_1 + \mu v_2 \in U$ and $\lambda v_1 + \mu v_2 \in W$ so $\lambda v_1 + \mu v_2 \in U \cap W$.
 
 ## Quotient Spaces
 
@@ -179,6 +162,57 @@ Note that all the elements in $U$ are in the equivalence class $[0]$ so the quot
 > $$
   \lambda (\mu [v]) = [\lambda (\mu v)] = [(\lambda \mu) v] = (\lambda \mu) [v]
   $$
+
+## Direct Sums
+
+> *Definition.*{: .def}
+> Suppose that $U$ and $W$ are subspaces of a vector space $V$ over $\mathbb{F}$.
+> Then the **sum** of $U$ and $W$ is defined by the set
+>
+> $$
+  U + W = \Set{u + w : u \in U, w \in W}
+  $$
+
+> *Proposition.*{: .prop}
+> $U + W$ is a subspace of $V$.
+>
+> *Proof.*{: .prf}
+>
+> $U + W$ is nonempty since it contains $0$. For all $u_1 + w_1, u_2 + w_2 \in U + W$,
+>
+> $$
+  \lambda (u_1 + w_1) + \mu (u_2 + w_2) = (\lambda u_1 + \mu u_2) + (\lambda w_1 + \mu w_2) \in U + W
+  $$
+
+> *Definition.*{: .def}
+> $V$ is the **(internal) direct sum** of $U$ and $W$, written $V = U \oplus W$,
+> if every element $v \in V$ can be written uniquely as $u + w$ with $u \in U$ and $w \in W$.
+> $U$ and $W$ are said to be the **complementary subspaces** in $V$.
+
+> *Proposition.*{: .prop}
+> $V = U \oplus W$ iff $V = U + W$ and $U \cap W = \emptyset$.
+>
+> *Proof.*{: .prf}
+>
+> Obviously, $V = U + W$ and if $v \in U \cap W \not= \emptyset$, then $v = 0 + v = v + 0$ which cannot be written uniquely.
+
+> *Definition.*{: .def}
+> The **(external) direct sum** $U \oplus W$ of two vector spaces $U$ and $W$ over $\mathbb{F}$ is defined by the set
+>
+> $$
+  U \oplus W = \Set{(u, w) : u \in U, w \in W}
+  $$
+>
+> with the natural coordinate-wise operations.
+
+> *Proposition.*{: .prop}
+> $U \oplus W$ is a vector space over $\mathbb{F}$ and is the internal direct sum of the subspaces
+>
+> $$
+  \Set{(u, 0) : u \in U} \quad \text{and} \quad \Set{(0, v) : v \in V}
+  $$
+
+The definition can be extended to $n$ vector spaces.
 
 ## Reference
 
