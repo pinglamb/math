@@ -168,6 +168,27 @@ Since all the bases are of the same order, we can know define the dimension of a
 
 Note that although the dimension is independent on the choice of $S$, it does depend on the field $\mathbb{F}$.
 
+> *Proposition.*{: .prop}
+> If $V$ is finite dimensional vector space and $U$ is a proper subspace of $V$ then $U$ is also finite dimensional and
+>
+> $$
+  \dim U < \dim V
+  $$
+
+> *Proposition.*{: .prop}
+> If $V$ is a finite dimensional vector space and $U$ is a subspace then
+>
+> $$
+  \dim V = \dim U + \dim V/U
+  $$
+
+> *Proposition.*{: .prop}
+> If $U$ and $W$ are finite dimensional subspaces of a vector space $V$ then $U \cap W$ and $U + W$ are finite dimensional subspaces and
+>
+> $$
+  \dim (U + W) + \dim (U \cap W) = \dim U + \dim W
+  $$
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 1.2
