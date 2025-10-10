@@ -97,14 +97,14 @@ After knowing the set of linearly independent vectors being able to represent al
 > Assume it is true for $r = k - 1$, we can therefore write
 >
 > $$
-  e_k = \sum_{i = 1}^{k-1} \lambda_i e_i + \sum_{i=k}^{n} \lambda_i t_i
+  e_k = \sum_{i = 1}^{k-1} \lambda_i e_i + \sum_{j=k}^{n} \mu_j t_j
   $$
 >
-> Since $\Set{e_1, ... e_k}$ is linearly independent, there exists $\lambda_i \not= 0$ with $k \le i \le n$.
-> By reordering the terms in the second part of R.H.S., we can assume $\lambda_k \not= 0$ and therefore
+> Since $\Set{e_1, ... e_k}$ is linearly independent, there exists $\mu_j \not= 0$ with $k \le j \le n$.
+> By reordering the terms in the second part of R.H.S., we can assume $\mu_k \not= 0$ and therefore
 >
 > $$
-  t_k = {1 \over \lambda_k} \left( e_k - \sum_{i=1}^{k-1} \lambda_i e_i - \sum_{i=k+1}^{n} \lambda_i t_i \right)
+  t_k = {1 \over \mu_k} \left( e_k - \sum_{i=1}^{k-1} \lambda_i e_i - \sum_{j=k+1}^{n} \mu_j t_j \right)
   $$
 >
 > With $T_k = T_{k-1} \setminus \Set{t_k} \cup \Set{e_k} = \Set{e_1, e_2, ..., e_k, t_{k+1}, ..., t_n}$,
@@ -174,6 +174,19 @@ Note that although the dimension is independent on the choice of $S$, it does de
 > $$
   \dim U < \dim V
   $$
+>
+> *Proof.*{: .prf}
+>
+> Let $S \subset U$ be a linearly independent subset of maximal possible size.
+> If there exists $u \in U \setminus \langle S \rangle$ then $S \cup \Set{u}$ is linearly independent which contradicts the maximality of $S$.
+> Therefore, $\langle S \rangle = U$ and $\dim U = \vert S \vert$.
+>
+> Since $U$ is a proper subspace, there exists $v \in V \setminus U$ such that $S \cup \Set{v}$ is linearly independent subset of $V$.
+> Hence,
+>
+> $$
+  \dim U < \dim U + 1 = |S| + 1 = |S \cup \Set{v}| \le \dim V
+  $$
 
 > *Proposition.*{: .prop}
 > If $V$ is a finite dimensional vector space and $U$ is a subspace then
@@ -181,6 +194,40 @@ Note that although the dimension is independent on the choice of $S$, it does de
 > $$
   \dim V = \dim U + \dim V/U
   $$
+>
+> *Proof.*{: .prf}
+>
+> Let $\Set{u_1, ..., u_m}$ be a basis for $U$ which extended to a basis $\Set{u_1, ..., u_m, v_{m+1}, ..., v_{n}}$ for $V$.
+>
+> For any vector $v + U \in V/U$, we have
+>
+> $$
+  v = \sum_{i = 1}^m \lambda_i u_i + \sum_{j=m+1}^n \mu_j v_j
+  $$
+>
+> and therefore
+>
+> $$
+  v + U = \sum_{i = 1}^m \lambda_i (u_i + U) + \sum_{j=m+1}^n \mu_j (v_j + U) = 0 + \sum_{j=m+1}^n \mu_j (v_j + U)
+  $$
+>
+> It implies $\langle S = \Set{v_{m+1} + U, ..., v_n + U} \rangle = V/U$.
+>
+> Suppose that
+>
+> $$
+  \sum_{j=m+1}^n \mu_j (v_j + U) = 0 + U
+  $$
+>
+> Then $\sum_{j=m+1}^n \mu_j v_j \in U$ so we can write
+>
+> $$
+  \sum_{j=m+1}^n \mu_j v_j = \sum_{i=1}^m \lambda_i u_i
+  $$
+>
+> for some $\lambda_i \in \mathbb{F}$.
+> Since $\Set{u_i, ... u_m, v_{m+1}, ..., v_n}$ is linearly independent, all $\lambda_i$ and $\mu_j$ must be zero and therefore $S$ is linearly independent in $V/U$.
+> Hence, $\dim V/U = \vert S \vert = \dim V - \dim U$.
 
 > *Proposition.*{: .prop}
 > If $U$ and $W$ are finite dimensional subspaces of a vector space $V$ then $U \cap W$ and $U + W$ are finite dimensional subspaces and
