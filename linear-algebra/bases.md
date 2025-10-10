@@ -233,8 +233,47 @@ Note that although the dimension is independent on the choice of $S$, it does de
 > If $U$ and $W$ are finite dimensional subspaces of a vector space $V$ then $U \cap W$ and $U + W$ are finite dimensional subspaces and
 >
 > $$
-  \dim (U + W) + \dim (U \cap W) = \dim U + \dim W
+  \dim (U + W) = \dim U + \dim W - \dim (U \cap W)
   $$
+>
+> *Proof.*{: .prf}
+>
+> Let $\Set{v_1, ..., v_c}$ be a basis for $U \cap W$.
+> Then we can extend it to $\Set{v_1, ..., v_c, u_1, ..., u_m}$ and $\Set{v_1, ..., v_c, w_1, ..., w_n}$ which are bases for $U$ and $W$ respectively.
+> Therefore,
+>
+> $$
+  U + W = \langle S = \Set{v_1, ..., v_c, u_1, ..., u_m, w_1, ..., w_n} \rangle
+  $$
+>
+> Suppose that
+>
+> $$
+  \sum_{i=1}^c \lambda_i v_i + \sum_{j=1}^m \mu_j u_j + \sum_{k=1}^n \nu_k w_k = 0
+  $$
+>
+> Then
+>
+> $$
+  v = \sum_{j=1}^m \mu_j u_j = - \sum_{i=1}^c \lambda_i v_i - \sum_{k=1}^n \nu_k w_k \in U \cap W
+  $$
+>
+> since the L.H.S. and R.H.S. are linear combinations of basis vectors of $U$ and $W$ respectively.
+> Thus, there exists $\lambda_i \in \mathbb{F}$ such that
+>
+> $$
+  v = \sum_{j=1}^m \mu_j u_j = \sum_{i=1}^c \lambda_i v_i
+  $$
+>
+> Since $\Set{v_1, ..., v_c, u_1, ..., u_m}$ is linearly independent, we have all $\mu_j$ being zero and
+>
+> $$
+  v = - \sum_{i=1}^c \lambda_i v_i - \sum_{k=1}^n \nu_k w_k = 0
+  $$
+>
+> implies all $\lambda_i$ and $\nu_k$ must also be zero so $S$ is linearly independent.
+>
+> Hence, $\dim(U + W) = \vert S \vert = \dim U + \dim V - \dim(U \cap V)$.
 
 ## Reference
 
