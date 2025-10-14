@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Special Functions of Analysis &#124; Analysis
+title: Special Functions of Analysis &#124; Analysis I
 ---
 
 # Special Functions of Analysis

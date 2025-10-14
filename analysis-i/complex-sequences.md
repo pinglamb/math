@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Complex Sequences &#124; Analysis
+title: Complex Sequences &#124; Analysis I
 ---
 
 # Complex Sequences

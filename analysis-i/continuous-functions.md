@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Continuous Functions &#124; Analysis
+title: Continuous Functions &#124; Analysis I
 ---
 
 # Continous Functions

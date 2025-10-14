@@ -23,22 +23,22 @@ title: Home
 * [Poisson and Laplace Equations](vector-calculus/poisson-laplace-equations.md)
 * [Tensors](vector-calculus/tensors.md)
 
-## Analysis
+## Analysis I
 {: .left}
 
-* [Sequences](analysis/sequences.md)
-* [Subsequences](analysis/subsequences.md)
-* [General Principle of Convergence](analysis/general-principle-of-convergence.md)
-* [Characterization of Real Numbers](analysis/characterization-of-real-numbers.md)
-* [Complex Sequences](analysis/complex-sequences.md)
-* [Series](analysis/series.md)
-* [Continuous Functions](analysis/continuous-functions.md)
-* [Differentiability](analysis/differentiability.md)
-* [Differentiation Theorems](analysis/differentiation-theorems.md)
-* [Power Series](analysis/power-series.md)
-* [Special Functions of Analysis](analysis/special-functions.md)
-* [Integrability](analysis/integrability.md)
-* [Integration Theorems](analysis/integration-theorems.md)
+* [Sequences](analysis-i/sequences.md)
+* [Subsequences](analysis-i/subsequences.md)
+* [General Principle of Convergence](analysis-i/general-principle-of-convergence.md)
+* [Characterization of Real Numbers](analysis-i/characterization-of-real-numbers.md)
+* [Complex Sequences](analysis-i/complex-sequences.md)
+* [Series](analysis-i/series.md)
+* [Continuous Functions](analysis-i/continuous-functions.md)
+* [Differentiability](analysis-i/differentiability.md)
+* [Differentiation Theorems](analysis-i/differentiation-theorems.md)
+* [Power Series](analysis-i/power-series.md)
+* [Special Functions of Analysis](analysis-i/special-functions.md)
+* [Integrability](analysis-i/integrability.md)
+* [Integration Theorems](analysis-i/integration-theorems.md)
 
 ## Groups
 {: .left}

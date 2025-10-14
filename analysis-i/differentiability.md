@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Differentiability &#124; Analysis
+title: Differentiability &#124; Analysis I
 ---
 
 # Differentiability

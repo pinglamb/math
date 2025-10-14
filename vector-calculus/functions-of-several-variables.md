@@ -6,7 +6,7 @@ title: Functions of Several Variables &#124; Vector Calculus
 # Functions of Several Variables
 {: .page-title}
 
-We have in depth analysis of [differentiability](../analysis/differentiability.md) of scalar functions of a scalar, i.e. $f(x): \mathbb{R} \to \mathbb{R}$.
+We have in depth analysis of [differentiability](../analysis-i/differentiability.md) of scalar functions of a scalar, i.e. $f(x): \mathbb{R} \to \mathbb{R}$.
 However, we may equally well consider scalar or vector functions of multiple variables, i.e.
 $f(\mathbf{x}): \mathbb{R}^m \to \mathbb{R}$, $\mathbf{f}(x): \mathbb{R} \to \mathbb{R}^n$ and $\mathbf{f}(\mathbf{x}): \mathbb{R}^m \to \mathbb{R}^n$.
 
@@ -41,7 +41,7 @@ Similarily, all routes have to agree so for $\mathbf{f}$ to be continuous.
   \mathbf{f'}(a) = \lim_{x \to a} {\mathbf{f}(x) - \mathbf{f}(a) \over x - a}
   $$
 
-Alternatively, we can generalize the concept of linear approximation in [differentiability of scalar function](../analysis/differentiability.md#differentiability-linear-approximation).
+Alternatively, we can generalize the concept of linear approximation in [differentiability of scalar function](../analysis-i/differentiability.md#differentiability-linear-approximation).
 
 > *Definition.*{: .def}
 > A vector function $\mathbf{f}(x)$ is **differentiable** at $a$ iff we can write

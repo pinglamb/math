@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Subsequences &#124; Analysis
+title: Subsequences &#124; Analysis I
 ---
 
 # Subsequences

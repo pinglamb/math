@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Series &#124; Analysis
+title: Series &#124; Analysis I
 ---
 
 # Series
@@ -443,7 +443,7 @@ $$
 
 As the partial sum $\Set{s_n}$ is increasing and bounded above, the series is convergent.
 
-![Integral Test Below](../images/analysis/integral-test-below.png)
+![Integral Test Below](../images/analysis-i/integral-test-below.png)
 
 On the other hand, we can also form rectangles with tops lie above the curve to show the series is divergent. Consider the series
 
@@ -459,7 +459,7 @@ $$
 
 So, the series is divergent.
 
-![Integral Test Above](../images/analysis/integral-test-below.png)
+![Integral Test Above](../images/analysis-i/integral-test-below.png)
 
 ## Rearrangements
 

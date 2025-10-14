@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Characterization of Real Numbers &#124; Analysis
+title: Characterization of Real Numbers &#124; Analysis I
 ---
 
 # Characterization of Real Numbers
