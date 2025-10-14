@@ -8,6 +8,7 @@ title: Home
 
 * [Vector Spaces](linear-algebra/vector-spaces.md)
 * [Bases](linear-algebra/bases.md)
+* [Linear Maps](linear-algebra/linear-maps.md)
 
 ## Vector Calculus
 {: .left}
