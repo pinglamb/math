@@ -190,11 +190,11 @@ Note that all the elements in $U$ are in the equivalence class $[0]$ so the quot
 > $U$ and $W$ are said to be the **complementary subspaces** in $V$.
 
 > *Proposition.*{: .prop}
-> $V = U \oplus W$ iff $V = U + W$ and $U \cap W = \emptyset$.
+> $V = U \oplus W$ iff $V = U + W$ and $U \cap W = \Set{0}$.
 >
 > *Proof.*{: .prf}
 >
-> Obviously, $V = U + W$ and if $v \in U \cap W \not= \emptyset$, then $v = 0 + v = v + 0$ which cannot be written uniquely.
+> Obviously, $V = U + W$ and if $v \in U \cap W \not= 0$, then $v = 0 + v = v + 0$ which cannot be written uniquely.
 
 > *Definition.*{: .def}
 > The **(external) direct sum** $U \oplus W$ of two vector spaces $U$ and $W$ over $\mathbb{F}$ is defined by the set
