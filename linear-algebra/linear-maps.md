@@ -125,7 +125,7 @@ It means that linear map is completely determined by its effect on a set of basi
 Conversely, we can define a unique linear map by assigning arbitrary images for a set of basis vectors.
 
 > *Corollary.*{: .cor}
-> Suppose that $U$ and $V$ are finite dimensional vector spaces and $\Set{u_1, ... u_n}$ is a basis of $U$.
+> Suppose that $U$ and $V$ are vector spaces of the same dimension $n$ and $\Set{u_1, ... u_n}$ is a basis of $U$.
 > Then there is a bijection $\Phi$ between the set of isomorphisms $U \to V$ and the set of (ordered) bases for $V$
 > that sends the isomorphism $\alpha: U \to V$ to the (ordered) basis $(\alpha(u_1), ..., \alpha(u_n))$.
 >
@@ -148,6 +148,30 @@ It can be considered as a special case that if the arbitrary vectors appeared to
   $$
 >
 > that sends a matrix $A$ to the unique linear map $\alpha$ such that $\alpha(e_i) = \sum A_{ji} f_j$.
+>
+> *Proof.*{: .prf}
+>
+> Given a linear map $\alpha \in \mathcal{L}(U, V)$, there exists a unique ordered set of vectors $(v_1, ..., v_m)$ in $V$ such that $\alpha(e_i) = v_i$ for each $1 \le i \le m$.
+> Since $(f_1, ..., f_n)$ is a basis of $V$, we have $v_i = \sum A_{ji} f_j$ with $A_{ji} \in \mathbb{F}$.
+> The $n$-by-$m$ matrix $A = (A\_{ji})$ is therefore uniquely determined by the linear map $\alpha$.
+
+> *Definition.*{: .def}
+> If $\alpha \in \mathcal{L}(U, V)$, $(e_1, ..., e_m)$ is a basis for $U$ and $(f_1, ..., f_n)$ is a basis for $V$,
+> then the $n$-by-$m$ matrix $A$ such that $\alpha(e_i) = \sum A_{ji} f_j$ is the **matrix representation** of $\alpha$ with respect to bases.
+
+In fact, we can choose to write the coefficients by rows ($m$-by-$n$) or columns ($n$-by-$m$) when we form the matrix.
+The reason to have the $i$-th column containing the coefficients of the linear combination of the $i$-th basis vector is that we want to align the result of linear maps composition and matrix multiplication, i.e. $\alpha\beta = (A_{ij})(B_{ij})$.
+
+> *Proposition.*{: .prop}
+> Suppose that $U$, $V$, $W$ are finite dimensional vector spaces over $\mathbb{F}$ with bases $R = (u_1, ..., u_r)$, $S = (v_1, ..., v_s)$ and $T = (w_1, ..., w_t)$ respectively,
+> and $\alpha \in \mathcal{L}(U, V)$ and $\beta \in \mathcal{L}(V, W)$ represented by matrices $A$ and $B$ respectively (with respect to corresponding bases).
+> Then $\beta \alpha$ is the linear map $U \to W$ represented by $BA$ with respect to $R$ and $T$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \beta(\alpha(u_i)) = \beta \left( \sum_j A_{ji} v_j \right) = \sum_j A_{ji} \beta(v_j) = \sum_j A_{ji} \sum_k B_{kj} w_k = \sum_k \left( \sum_j B_{kj} A_{ji} \right) w_k = \sum_k (BA)_{ki} w_k
+  $$
 
 ## Reference
 
