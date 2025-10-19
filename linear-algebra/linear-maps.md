@@ -173,6 +173,49 @@ The reason to have the $i$-th column containing the coefficients of the linear c
   \beta(\alpha(u_i)) = \beta \left( \sum_j A_{ji} v_j \right) = \sum_j A_{ji} \beta(v_j) = \sum_j A_{ji} \sum_k B_{kj} w_k = \sum_k \left( \sum_j B_{kj} A_{ji} \right) w_k = \sum_k (BA)_{ki} w_k
   $$
 
+## Rank and Nullity
+
+> *Definition.*{: .def}
+> Suppose that $\alpha: U \to V$ is a linear map. The **image** of $\alpha$ is defined by
+>
+> $$
+  \text{Im}\, \alpha = \Set{\alpha(u) : u \in U}
+  $$
+>
+> and the **kernel** of $\alpha$ is defined by
+>
+> $$
+  \ker \alpha = \Set{u \in U : \alpha(u) = 0}
+  $$
+
+By definition, $\alpha$ is injective iff $\ker \alpha = 0$ and surjective iff $\text{Im}\, \alpha = V$.
+
+> *Theorem.*{: .thm}
+> **[First Isomorphism Theorem]**
+> Let $\alpha: U \to V$ be a linear map between vector spaces over $\mathbb{F}$.
+> Then $\ker \alpha$ is a subspace of $U$ and $\text{Im}\, \alpha$ is a subspace of $V$.
+> Moreover $\alpha$ induces an isomorphism $\bar{\alpha}: U / \ker \alpha \to \text{Im}\, \alpha$ given by
+>
+> $$
+  \bar{\alpha}(u + \ker \alpha) = \alpha(u)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Since $\alpha(0) = 0$, $0 \in \ker \alpha$. Suppose that $u_1, u_2 \in \ker \alpha$, then
+>
+> $$
+  \alpha(\lambda u_1 + \mu u_2) = \lambda \alpha(u_1) + \mu \alpha(u_2) = 0
+  $$
+>
+> so $\ker \alpha \le U$. Similarily, $0 \in \text{im}\, \alpha$ and for $\alpha(u_1), \alpha(u_2) \in \text{Im}\, \alpha$, we have
+>
+> $$
+  \lambda \alpha(u_1) + \mu \alpha(u_2) = \alpha(\lambda u_1 + \mu u_2) \in \text{Im}\, \alpha
+  $$
+>
+> so $\text{Im}\, \alpha \le V$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 2
