@@ -190,15 +190,9 @@ The reason to have the $i$-th column containing the coefficients of the linear c
 
 By definition, $\alpha$ is injective iff $\ker \alpha = 0$ and surjective iff $\text{Im}\, \alpha = V$.
 
-> *Theorem.*{: .thm}
-> **[First Isomorphism Theorem]**
+> *Proposition.*{: .prop}
 > Let $\alpha: U \to V$ be a linear map between vector spaces over $\mathbb{F}$.
 > Then $\ker \alpha$ is a subspace of $U$ and $\text{Im}\, \alpha$ is a subspace of $V$.
-> Moreover $\alpha$ induces an isomorphism $\bar{\alpha}: U / \ker \alpha \to \text{Im}\, \alpha$ given by
->
-> $$
-  \bar{\alpha}(u + \ker \alpha) = \alpha(u)
-  $$
 >
 > *Proof.*{: .prf}
 >
@@ -215,6 +209,23 @@ By definition, $\alpha$ is injective iff $\ker \alpha = 0$ and surjective iff $\
   $$
 >
 > so $\text{Im}\, \alpha \le V$.
+
+> *Theorem.*{: .thm}
+> **[First Isomorphism Theorem]**
+> A linear map $\alpha: U \to V$ induces an isomorphism $\bar{\alpha}: U / \ker \alpha \to \text{Im}\, \alpha$ given by
+>
+> $$
+  \bar{\alpha}(u + \ker \alpha) = \alpha(u)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> If $u + \ker \alpha = u' + \ker \alpha \in U / \ker \alpha$, then $u - u' \in \ker \alpha$ and $\alpha(u - u') = 0$ which implies $\alpha(u) = \alpha(u')$ so $\bar{\alpha}$ is well-defined.
+>
+> $\bar{\alpha}$ is linear since $\bar{\alpha}(\lambda[u_1] + \mu[u_2]) = \alpha(\lambda u_1 + \mu u_2) = \lambda \alpha(u_1) + \lambda \alpha(u_2) = \lambda \bar{\alpha}([u_1]) + \mu \bar{\alpha}([u_2])$.
+>
+> $\bar{\alpha}(u + \ker \alpha) = 0$ implies $\alpha(u) = 0$ so $u \in \ker \alpha$ and $u + \ker \alpha = 0$. $\ker \bar{\alpha} = 0$ so $\bar{\alpha}$ is injective.
+> By construction, $\bar{\alpha}$ is surjective. Hence, $\bar{\alpha}$ is bijective and is an isomorphism.
 
 ## Reference
 
