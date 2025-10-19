@@ -227,6 +227,93 @@ By definition, $\alpha$ is injective iff $\ker \alpha = 0$ and surjective iff $\
 > $\bar{\alpha}(u + \ker \alpha) = 0$ implies $\alpha(u) = 0$ so $u \in \ker \alpha$ and $u + \ker \alpha = 0$. $\ker \bar{\alpha} = 0$ so $\bar{\alpha}$ is injective.
 > By construction, $\bar{\alpha}$ is surjective. Hence, $\bar{\alpha}$ is bijective and is an isomorphism.
 
+> *Definition.*{: .def}
+> Suppose that $\alpha: U \to V$ is a linear map between finite dimensional vector spaces.
+> The **nullity** of $\alpha$ is defined by $n(\alpha) = \dim \ker \alpha$ and **rank** is defined by $r(\alpha) = \dim \text{Im}\, \alpha$.
+
+> *Theorem.*{: .thm}
+> **[Rank-Nullity Theorem]**
+> If $\alpha: U \to V$ is a linear map between finite dimensional vector spaces over $\mathbb{F}$ then
+>
+> $$
+  r(\alpha) + n(\alpha) = \dim U
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By the isomorphism theorem, $\dim U / \ker \alpha = \dim \text{Im}\, \alpha = r(\alpha)$.
+> For the quotient space $U / \ker \alpha$, $\dim U / \ker \alpha = \dim U - \dim \ker \alpha = \dim U - n(\alpha)$.
+> Hence, $\dim U = n(\alpha) + r(\alpha)$.
+
+The rank-nullity theorem is very important and worth of a more direct proof.
+
+> *Theorem.*{: .thm}
+> **[Rank-Nullity Theorem Again]**
+> If $\alpha: U \to V$ is a linear map between finite dimensional vector spaces over $\mathbb{F}$
+> then there are bases $(e_1, ..., e_n)$ for $U$ and $(f_1, ..., f_m)$ for $V$ such that the matrix representing $\alpha$ is
+>
+> $$
+  \begin{pmatrix}
+  I_r & 0 \\
+  0 & 0
+  \end{pmatrix}
+  $$
+>
+> where $r = r(\alpha)$ and $I_r$ is the identity matrix. In particular, $r(\alpha) + n(\alpha) = \dim U$.
+>
+> *Proof.*{: .prf}
+>
+> Let $(e_{r+1}, ..., e_n)$ be a basis for $\ker \alpha$ and extend it to a basis $(e_1, ..., e_n)$ for $U$.
+> Then $\alpha(e_i) = 0$ for $r+1 \le i \le n$ and let $f_i = \alpha(e_i)$ for $1 \le i \le r$.
+> We have to show that $(f_1, ..., f_r)$ is a basis for $\text{Im}\, \alpha$.
+>
+> If $\sum_{i=1}^r \lambda_i f_i = 0$, then
+>
+> $$
+  \sum_{i=1}^r \lambda_i \alpha(e_i) = \alpha \left( \sum_{i=1}^r \lambda_i e_i \right) = 0
+  $$
+>
+> Since $\ker \alpha \cap \langle e_1, ..., e_r \rangle = 0$ by construction, it implies $\sum_{i=1}^r \lambda_i e_i = 0$ and $\lambda_i = 0$.
+> Therefore, $\Set{f_1, ..., f_r}$ is linearly independent.
+>
+> For any $v \in \text{Im}\, \alpha$, we have
+>
+> $$
+  v = \alpha \left( \sum_{i=1}^n \lambda_i e_i \right) = \sum_{i=1}^n \lambda_i \alpha(e_i) = \sum_{i=1}^r \lambda_i f_i
+  $$
+>
+> so $\langle f_1, ..., f_r \rangle = \text{Im}\, \alpha$ and $(f_1, ..., f_r)$ is a basis for $\text{Im}\, \alpha$.
+> Hence,
+>
+> $$
+  \dim U = n = (n - r) + r = n(\alpha) + r(\alpha)
+  $$
+>
+> We can then extend $\Set{f_1, ..., f_r}$ to a basis $\Set{f_1, ..., f_m}$ for $V$, and
+>
+> $$
+  \alpha(e_i) = \begin{cases}
+  f_i & 1 \le i \le r \\
+  0 & r+1 \le i \le m
+  \end{cases}
+  $$
+>
+> so the matrix representing $\alpha$ with respect to our choice of bases is as in the proposition.
+
+> *Corollary.*{: .cor}
+> Suppose that $\alpha: U \to V$ is a linear map between two vector spaces of the same dimension $n$.
+> Then the following are equivalent:
+>
+> + $\alpha$ is injective;
+>
+> + $\alpha$ is surjective;
+>
+> + $\alpha$ is an isomorphism.
+>
+> *Proof.*{: .prf}
+>
+> $\alpha$ is injective iff $n(\alpha) = 0$ iff $r(\alpha) = n$ iff $\alpha$ is surjective.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 2
