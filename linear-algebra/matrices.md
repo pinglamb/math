@@ -135,6 +135,54 @@ By definition, we can see that column rank is equal to the rank of the correspon
 >
 > and $r(A^\intercal) = r = r(A)$.
 
+## Elementary Matrices
+
+> *Definition.*{: .def}
+> The three **elementary matrices** are the following invertible $n \times n$ matrices
+>
+> $$
+  \begin{align*}
+  S_{ij}^n &= \begin{pmatrix}
+  1 & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0 \\
+  0 & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 0 & \cdots & 1 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 1 & \cdots & 0 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1 \\
+  \end{pmatrix} \\ \\
+  E_{ij}^n(\lambda) &= \begin{pmatrix}
+  1 & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0 \\
+  0 & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 1 & \cdots & \lambda & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 0 & \cdots & 1 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1 \\
+  \end{pmatrix} \\ \\
+  T_{i}^n(\lambda) &= \begin{pmatrix}
+  1 & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0 \\
+  0 & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & \lambda & \cdots & 0 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 0 & \cdots & 1 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1 \\
+  \end{pmatrix}
+  \end{align*}
+  $$
+>
+> If $A$ is an $m \times n$ matrix then
+>
+> + $AS_{ij}^n$ swaps the column $i$ and column $j$, $S_{ij}^mA$ swaps the row $i$ and row $j$;
+>
+> + $AE_{ij}^n(\lambda)$ adds $\lambda \cdot$(column $i$) to column $j$, $E_{ij}^m(\lambda)A$ adds $\lambda \cdot$(row $j$) to row $i$;
+>
+> + $AT_i(\lambda)^n$ multiplies column $i$ by $\lambda$, $T_i^m(\lambda)A$ multiplies column $i$ by $\lambda$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 2
