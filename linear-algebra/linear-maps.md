@@ -22,6 +22,47 @@ For vector spaces, linear maps are the functions that preserve the linearity the
 > *Definition.*{: .def}
 > The set of linear maps from $U$ to $V$ is denoted by $\mathcal{L}(U, V)$.
 
+> *Proposition.*{: .prop}
+> $\mathcal{L}(U, V)$ is a vector space over $\mathbb{F}$, with respect to the operations
+>
+> $$
+  (\alpha + \beta)(u) = \alpha(u) + \beta(u)
+  $$
+>
+> and
+>
+> $$
+  (\lambda \alpha)(u) = \lambda(\alpha(u))
+  $$
+>
+> *Proof.*{: .prf}
+>
+> We have
+>
+> $$
+  (\alpha + \beta)(\lambda u_1 + \mu u_2) = \alpha(\lambda u_1 + \mu u_2) + \beta(\lambda u_1 + \mu u_2) = \lambda (\alpha + \beta)(u_1) + \mu (\alpha + \beta)(u_2)
+  $$
+>
+> so $\alpha + \beta$ is a linear map and $\alpha + \beta$ is well defined.
+>
+> Similarily,
+>
+> $$
+  (\lambda \alpha)(\mu u_1 + \nu u_2) = \lambda (\alpha (\mu u_1 + \nu u_2)) = \mu (\lambda \alpha)(u_1) + \nu (\lambda \alpha)(u_2)
+  $$
+>
+> so $\lambda \alpha$ is a linear map and $\lambda \alpha$ is well defined.
+>
+> The linear transformation $0$ that sends each $u \in U$ into $0$ is the additive identity and $(-\alpha)(u) = -(\alpha(u))$ is the additive inverse of $\alpha$.
+> We can then see that such construction satisfies all the axioms of vector space.
+
+We will later on see that the $\dim \mathcal{L}(U, V) = \dim U \times \dim V$.
+
+$\mathcal{L}(U, V)$ has one more operation: multiplication of linear maps $\alpha \beta$ which satisfies the associative and distributive laws.
+Therefore, $\mathcal{L}(U, V)$ is a _ring_.
+
+## Isomorphism
+
 > *Definition.*{: .def}
 > A linear map $\alpha: U \to V$ is an **isomorphism** if there is a linear map $\beta: V \to U$ such that $\beta \alpha = \mathrm{id}_U$ and $\alpha \beta = \mathrm{id}_V$.
 
@@ -154,6 +195,14 @@ It can be considered as a special case that if the arbitrary vectors appeared to
 > Given a linear map $\alpha \in \mathcal{L}(U, V)$, there exists a unique ordered set of vectors $(v_1, ..., v_m)$ in $V$ such that $\alpha(e_i) = v_i$ for each $1 \le i \le m$.
 > Since $(f_1, ..., f_n)$ is a basis of $V$, we have $v_i = \sum A_{ji} f_j$ with $A_{ji} \in \mathbb{F}$.
 > The $n$-by-$m$ matrix $A = (A\_{ji})$ is therefore uniquely determined by the linear map $\alpha$.
+
+> *Corollary.*{: .cor}
+> $\dim \mathcal{L}(U, V) = \dim U \times \dim V$.
+>
+> *Proof.*{: .prf}
+>
+> For the $\dim U$ basis vectors of $U$, each of them can be mapped to an arbitrary vector in $V$, which is a linear combination of the $\dim V$ basis vectors of $V$.
+> Therefore, each basis vector of $U$ has $\dim V$ free choices of coefficients, and $\dim \mathcal{L}(U, V) = \dim U \times \dim V$.
 
 > *Definition.*{: .def}
 > If $\alpha \in \mathcal{L}(U, V)$, $(e_1, ..., e_m)$ is a basis for $U$ and $(f_1, ..., f_n)$ is a basis for $V$,
