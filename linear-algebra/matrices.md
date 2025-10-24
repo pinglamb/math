@@ -183,6 +183,32 @@ By definition, we can see that column rank is equal to the rank of the correspon
 >
 > + $AT_i(\lambda)^n$ multiplies column $i$ by $\lambda$, $T_i^m(\lambda)A$ multiplies column $i$ by $\lambda$.
 
+> *Proposition.*{: .prop}
+> If $A \in \text{Mat}\_{n,m}(\mathbb{F})$ then there are elementary matrices $E_1^n, ... E_a^n$ and $F_1^m, ..., F_b^m$ such that
+>
+> $$
+  E_a^n \cdots E_1^n A F_1^m \cdot F_b^m
+  = \begin{pmatrix}
+    I_r & 0 \\
+    0 & 0 \\
+    \end{pmatrix}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> If $A = 0$ there is nothing to do. Otherwise, we can ensure $A_{11} \not= 0$ by swapping rows $1$ and $i$ and columns $1$ and $j$ so that $A_{ij} \not= 0 \to A_{11}$.
+> We can further ensure $A_{11} = 1$ by multiplying row $1$ by $\lambda = 1 / A_{11}$.
+> We can then add $-A_{1j}$ times column $1$ to column $j$ for each $j$ and add $-A_{i1}$ times row $1$ to row $i$ for each $i$ so the matrix is of the form
+>
+> $$
+  \begin{pmatrix}
+  1 & 0 \\
+  0 & B \\
+  \end{pmatrix}
+  $$
+>
+> We can then do the same to matrix $B$ and by induction we can reduce $A$ to the required form.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 2
