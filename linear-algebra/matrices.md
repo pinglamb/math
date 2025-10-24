@@ -66,6 +66,75 @@ With matrices being a representation of linear maps, we can study their properti
 >
 > Hence, $QB = AP$. Since $Q$ is invertible, $B = Q^{-1}AP$.
 
+> *Definition.*{: .def}
+> Two matrices $A, B \in \text{Mat}\_{n,m}(\mathbb{F})$ are _equivalent_ if there are invertible matrices
+> $P \in \text{Mat}_m(\mathbb{F})$ and $Q \in \text{Mat}_n(\mathbb{F})$ such that $Q^{-1}AP = B$.
+
+Equivalent matrices can be interpreted as matrices representing the same linear map with respect to different bases.
+One of the particular form among the equivalent matrices is worth a special mention.
+Previously we have proved that there exists bases for domain and codomain such that the matrix representation is of the form
+
+$$
+\begin{pmatrix}
+I_r & 0 \\
+0 & 0 \\
+\end{pmatrix}
+$$
+
+with $r = r(\alpha)$ being independent of the choices of bases. We can rephrase it as
+
+> *Proposition.*{: .prop}
+> If $A \in \text{Mat}\_{n,m}(\mathbb{F})$ then there are invertible matrices $P \in \text{Mat}\_m(\mathbb{F})$ and $Q \in \text{Mat}\_n(\mathbb{F})$
+> such that $Q^{-1}AP$ is of the form
+>
+> $$
+  \begin{pmatrix}
+  I_r & 0 \\
+  0 & 0 \\
+  \end{pmatrix}
+  $$
+>
+> with $r = r(\alpha)$ is uniquely determined by $A$, i.e. every equivalence class contains precisely one matrix of this form.
+
+> *Definition.*{: .def}
+> If $A \in \text{Mat}\_{n,m}(\mathbb{F})$ then
+>
+> + the **column rank** $r(A)$ of $A$ is the dimension of the subspace of $\mathbb{F}^n$ spanned by the columns of $A$;
+>
+> + the **row rank** of $A$ is the column rank of $A^\intercal$.
+
+By definition, we can see that column rank is equal to the rank of the corresponding linear map, i.e. $r(A) = r(\alpha)$ and therefore is constant on equivalence classes.
+
+> *Proposition.*{: .prop}
+> If $A \in \text{Mat}\_{n,m}(\mathbb{F})$ then the row rank is equal to column rank, i.e.
+>
+> $$
+  r(A) = r(A^\intercal)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $r = r(A)$. There exists $P$ and $Q$ such that
+>
+> $$
+  Q^{-1}AP = \begin{pmatrix}
+             I_r & 0 \\
+             0 & 0 \\
+             \end{pmatrix}
+  $$
+>
+> Hence,
+>
+> $$
+  (Q^{-1}AP)^\intercal = P^\intercal A^\intercal (Q^{-1})^\intercal
+  = \begin{pmatrix}
+    I_r & 0 \\
+    0 & 0 \\
+    \end{pmatrix}
+  $$
+>
+> and $r(A^\intercal) = r = r(A)$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 2

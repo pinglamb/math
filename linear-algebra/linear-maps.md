@@ -295,6 +295,8 @@ By definition, $\alpha$ is injective iff $\ker \alpha = 0$ and surjective iff $\
 > Hence, $\dim U = n(\alpha) + r(\alpha)$.
 
 The rank-nullity theorem is very important and worth of a more direct proof.
+This proof relies on the important property that linear map is determined by its effect on the basis vectors and the ability to extend any set of linear independent vectors to a basis.
+With that, we can define a basis for the kernel subspace and extend it to a basis for the domain and study how the linear map transform them.
 
 > *Theorem.*{: .thm}
 > **[Rank-Nullity Theorem Again]**
