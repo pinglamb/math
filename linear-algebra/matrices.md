@@ -209,6 +209,9 @@ By definition, we can see that column rank is equal to the rank of the correspon
 >
 > We can then do the same to matrix $B$ and by induction we can reduce $A$ to the required form.
 
+This process can be used to actually find $P$ and $Q$ that $Q^{-1}AP$ is of the canonical form.
+Also, since the three elementary matrix operations do not alter $r(A)$ and $r(A^\intercal)$, it implies that $r(A) = r(A^\intercal) = r(\alpha)$ is independent of the choices of bases.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 2
