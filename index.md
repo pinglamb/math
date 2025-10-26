@@ -10,6 +10,9 @@ title: Home
 * [Bases](linear-algebra/bases.md)
 * [Linear Maps](linear-algebra/linear-maps.md)
 * [Matrices](linear-algebra/matrices.md)
+* [Quotient Spaces](linear-algebra/quotient-spaces.md)
+* [Dual Spaces](linear-algebra/dual-spaces.md)
+* [Direct Sums](linear-algebra/direct-sums.md)
 
 ## Vector Calculus
 {: .left}

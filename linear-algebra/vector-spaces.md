@@ -114,7 +114,7 @@ Some of the other properties are proved in [Vectors and Matrices](../vectors-and
 ## Quotient Spaces
 
 > *Definition.*{: .def}
-> Suppose that $V$ is a vector space over $\mathbb{F}$ and $U$ is a subspcae of $V$.
+> Suppose that $V$ is a vector space over $\mathbb{F}$ and $U$ is a subspace of $V$.
 > Then the **quotient space** $V/U$ is the set $\Set{v + U}$ with addition
 >
 > $$
