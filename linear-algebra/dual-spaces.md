@@ -47,6 +47,30 @@ there is a vector space $V^\ast$ which mirrors $V$, and a linear map $\alpha^\as
 > *Definition.*{: .def}
 > The basis $(f_1, ..., f_n)$ is called the **dual basis** of $V^\ast$ with respect to $(e_1, ..., e_n)$.
 
+> *Corollary.*{: .cor}
+> If $V$ is finite dimensional, then $\dim V = \dim V^\ast$.
+
+## Annihilator
+
+> *Definition.*{: .def}
+> If $U \subset V$ then the **annihilator** of $U$ is defined by
+>
+> $$
+  U^\circ = \Set{f \in V^\ast : \forall u \in U, f(u) = 0} \subset V^\ast
+  $$
+
+> *Proposition.*{: .prop}
+> Suppose that $V$ is finite dimensional and $U \subset V$ is a subspace.
+> Then $\dim U + \dim U^\circ = \dim V$.
+>
+> *Proof.*{: .prf}
+>
+> Let $(e_1, ..., e_k)$ be a basis for $U$ extend to a basis $(e_1, ..., e_n)$ for $V$, and $(f_1, ..., f_n)$ be the corresponding dual basis for $V^\ast$.
+> Since $f_{k+1}(e_j) = ... = f_n(e_j) = 0$ for $j = 1, ..., k$, we have $f_{k+1}, ..., f_n \in U^\circ$.
+> For any $f \in U^\circ$, $f = \sum_{i=1}^n \lambda_i f_i$. Since $f(e_j) = 0$ for $j = 1, ..., k$, we have $\lambda_1 = ... = \lambda_k = 0$.
+> Therefore, $f = \sum_{i=k+1}^n \lambda_i f_i$ and $\langle f_{k+1}, ..., f_n \rangle = U^\circ$.
+> Hence, $\Set{f_{k+1}, ..., f_n}$ is a basis of $U^\circ$ and $\dim U^\circ = n - k$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 3
