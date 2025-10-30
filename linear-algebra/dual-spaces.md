@@ -92,6 +92,31 @@ there is a vector space $V^\ast$ which mirrors $V$, and a linear map $\alpha^\as
 > so $\alpha^\ast \in \mathcal{L}(W^\ast, V^\ast)$.
 
 > *Proposition.*{: .prop}
+> Suppose that $V$ and $W$ are finite dimensional with bases $(v_1, ..., v_n)$ and $(w_1, ..., w_m)$.
+> Let $(f_1, ..., f_n)$ and $(g_1, ..., g_m)$ be the corresponding dual bases.
+> If $\alpha: V \to W$ is represented by $A$ with respect to $(v_1, ..., v_n)$ and $(w_1, ..., w_m)$,
+> then $\alpha^\ast: W^\ast \to V^\ast$ is represented by $A^\intercal$ with respect to $(g_1, ..., g_m)$ and $(f_1, ..., f_n)$.
+>
+> *Proof.*{: .prf}
+>
+> Given $\alpha(v_j) = \sum A_{kj} w_k$, we have
+>
+> $$
+  \alpha^\ast(g_i)(v_j) = g_i(\alpha(v_j)) = g_i \left( \sum_k A_{kj} w_k \right) = \sum_k A_{kj} g_i(w_k) \\ = \sum_k A_{kj} \delta_{ik} = A_{ij} = \sum_k A_{ik} f_k(v_j)
+  $$
+>
+> Hence, $\alpha^\ast(g_i) = \sum_k A^\intercal_{ki} f_k$.
+
+> *Corollary.*{: .cor}
+> Suppose that $V$ is a finite dimensional vector space over $\mathbb{F}$.
+> If $P$ is the change of basis matrix from $(e_1, ..., e_n)$ to $(e_1', ..., e_n')$ for $V$,
+> Then $(P^{-1})^\intercal$ is the change of basis matrix from $(f_1, ..., f_n)$ to $(f_1', ..., f_n')$ for $V^\ast$.
+>
+> *Proof.*{: .prf}
+>
+> Let $\iota_V: V \to V$ be the identity map, then $\iota_V^\ast: V^\ast \to V^\ast$ such that $\iota_V^\ast(f) = f\iota_V = f$ is also an identity map.
+> Therefore, if $P$ is a matrix representation of $\iota_V$ for bases $(e_i)$ to $(e_i')$, then $P^\intercal$ is that of $\iota_V^\ast$ for bases $(f_i')$ to $(f_i)$.
+> Hence, $(P^{-1})^\intercal$ is that for bases $(f_i)$ to $(f_i')$.
 
 ## Reference
 
