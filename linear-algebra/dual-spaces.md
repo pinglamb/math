@@ -71,6 +71,28 @@ there is a vector space $V^\ast$ which mirrors $V$, and a linear map $\alpha^\as
 > Therefore, $f = \sum_{i=k+1}^n \lambda_i f_i$ and $\langle f_{k+1}, ..., f_n \rangle = U^\circ$.
 > Hence, $\Set{f_{k+1}, ..., f_n}$ is a basis of $U^\circ$ and $\dim U^\circ = n - k$.
 
+## Dual Maps
+
+> *Definition.*{: .def}
+> Let $V$ and $W$ be vector spaces over $\mathbb{F}$ and suppose that $\alpha: V \to W$ is a linear map.
+> The **dual map** to $\alpha$ is the map $\alpha^\ast: W^\ast \to V^\ast$ given by $f \to f\alpha$.
+
+> *Proposition.*{: .prop}
+> The dual map $\alpha^\ast: W^\ast \to V^\ast$ is linear.
+>
+> *Proof.*{: .prf}
+>
+> $f\alpha$ is the composite of two linear maps so $f\alpha: V \to \mathbb{F} \in \mathcal{L}(V, \mathbb{F})$.
+> Also, for $f_1, f_2 \in W^\ast$ and $v \in V$, we have
+>
+> $$
+  \alpha^\ast(\lambda f_1 + \mu f_2)(v) = (\lambda f_1 + \mu f_2)\alpha(v) = \lambda f_1 \alpha(v) + \mu f_2 \alpha(v) = (\lambda \alpha^\ast(f_1) + \mu \alpha^\ast(f_2))(v)
+  $$
+>
+> so $\alpha^\ast \in \mathcal{L}(W^\ast, V^\ast)$.
+
+> *Proposition.*{: .prop}
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 3
