@@ -275,6 +275,19 @@ Note that although the dimension is independent on the choice of $S$, it does de
 >
 > Hence, $\dim(U + W) = \vert S \vert = \dim U + \dim V - \dim(U \cap V)$.
 
+The following argument can be useful for proving two vector spaces are the same.
+
+> *Proposition.*{: .prop}
+> **[Dimension Counting Argument]**
+> Suppose that $V$ and $W$ are finite dimensional vector spaces.
+> If $V \subseteq W$ and $\dim V = \dim W$, then $V = W$.
+>
+> *Proof.*{: .prf}
+>
+> Let $\set{v_i}$ be a basis for $V$. Since $V \subseteq W$, $v_i \in W$ and $\Set{v_i}$ is also linearly independent in $W$.
+> Since $\dim W = \dim V$, $\Set{v_i}$ is also a basis for $W$ and therefore $V = W$.
+{: #dimension-counting-argument}
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 1.2

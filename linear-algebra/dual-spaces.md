@@ -118,6 +118,47 @@ there is a vector space $V^\ast$ which mirrors $V$, and a linear map $\alpha^\as
 > Therefore, if $P$ is a matrix representation of $\iota_V$ for bases $(e_i)$ to $(e_i')$, then $P^\intercal$ is that of $\iota_V^\ast$ for bases $(f_i')$ to $(f_i)$.
 > Hence, $(P^{-1})^\intercal$ is that for bases $(f_i)$ to $(f_i')$.
 
+> *Proposition.*{: .prop}
+> If $\alpha: U \to V$ and $\beta: V \to W$ are linear maps then $(\beta \alpha)^\ast = \alpha^\ast \beta^\ast$.
+>
+> *Proof.*{: .prf}
+>
+> By definition, for $f \in W^\ast$, $(\beta \alpha)^\ast(f)$ = $f(\beta \alpha)$ and $\alpha^\ast(\beta^\ast(f)) = \alpha^\ast(f(\beta)) = (f\beta)(\alpha) = f(\beta\alpha)$.
+
+> *Proposition.*{: .prop}
+> Suppose that $\alpha \in \mathcal{L}(V, W)$ with $V, W$ finite dimensional over $\mathbb{F}$. Then
+>
+> + $\ker \alpha^\ast = (\text{Im}\, \alpha)^\circ$;
+>
+> + $r(\alpha^\ast) = r(\alpha)$;
+>
+> + $\text{Im}\,\alpha^\ast = (\ker \alpha)^\circ$.
+>
+> *Proof.*{: .prf}
+>
+> For $f \in W^\ast$, $f \in \ker \alpha^\ast$ iff $\alpha^\ast(f) = 0$ iff $f(\alpha(v)) = f(w) = 0$ for all $w \in \text{Im}\, \alpha$ iff $f \in (\text{Im}\, \alpha)^\circ$.
+>
+> We have
+>
+> $$
+  r(\alpha) + \dim (\text{Im}\,\alpha)^\circ = \dim W = \dim W^\ast = r(\alpha^\ast) + n(\alpha^\ast)
+  $$
+>
+> and from the above $n(\alpha^\ast) = \dim(\ker \alpha^\ast) = \dim (\text{Im}\,\alpha)^\circ$ so $r(\alpha^\ast) = r(\alpha)$.
+>
+> Suppose that $g \in \text{Im}\, \alpha^\ast$. Then there exist $f \in W^\ast$ such that $\alpha^\ast f = f\alpha = g$.
+> For all $v \in \ker \alpha$, $g(v) = f\alpha(v) = f(0) = 0$ so $g \in (\ker \alpha)^\circ$ and $\text{Im}\,\alpha^\ast \subseteq (\ker \alpha)^\circ$.
+> We have
+>
+> $$
+  \dim (\ker \alpha)^\circ = \dim V - n(\alpha) = r(\alpha) = r(\alpha^\ast) = \dim(\text{Im}\,\alpha^\ast)
+  $$
+>
+> so $\text{Im}\,\alpha^\ast = (\ker \alpha)^\circ$.
+
+The last equality makes use of the [dimension counting argument](bases.md#dimension-counting-argument).
+The second equality gives a more in-depth reason for why the row rank is equal to column rank.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 3
