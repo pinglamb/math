@@ -159,6 +159,36 @@ there is a vector space $V^\ast$ which mirrors $V$, and a linear map $\alpha^\as
 The last equality makes use of the [dimension counting argument](bases.md#dimension-counting-argument).
 The second equality gives a more in-depth reason for why the row rank is equal to column rank.
 
+## Canonical Maps
+
+> *Definition.*{: .def}
+> Suppose that $V$ is a vector space over $\mathbb{F}$.
+> The **canonical map** is defined by $\text{ev}: V \to V^{\ast\ast}$ where $\text{ev}(v)(f) = f(v)$ for each $f \in V^\ast$.
+
+The name "canonical" means it is a map arises natually from the definition of $V$ and $V^{\ast\ast}$ that preserves the widest amount of structure.
+
+> *Proposition.*{: .prop}
+> The canonical map is well-defined and linear.
+>
+> *Proof.*{: .prf}
+>
+> For $f_1, f_2 \in V^\ast$, we have
+>
+> $$
+  \text{ev}(v)(\lambda f_1 + \mu f_2) = (\lambda f_1 + \mu f_2)(v) = \lambda f_1(v) + \mu f_2(v) = \lambda \text{ev}(v)(f_1) + \mu \text{ev}(v)(f_2)
+  $$
+>
+> so $\text{ev}(v) \in \mathcal{L}(V^\ast, \mathbb{F}) = V^{\ast\ast}$.
+> $\text{ev}$ is well-defined since $f \in V^\ast$ is well-defined.
+>
+> For $v_1, v_2 \in V$, we have
+>
+> $$
+  \text{ev}(\lambda v_1 + \mu v_2)(f) = f(\lambda v_1 + \mu v_2) = \lambda f(v_1) + \mu f(v_2) = (\lambda \text{ev}(v_1) + \mu \text{ev}(v_2))(f)
+  $$
+>
+> so $\text{ev}$ is linear.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 3
