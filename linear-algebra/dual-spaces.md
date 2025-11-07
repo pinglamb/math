@@ -189,6 +189,96 @@ The name "canonical" means it is a map arises natually from the definition of $V
 >
 > so $\text{ev}$ is linear.
 
+> *Proposition.*{: .prop}
+> Suppose that $V$ is finite dimensional vector space over $\mathbb{F}$.
+> Then the canonical linear map $\text{ev}$ is an isomorphism.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $\text{ev}(v) = 0 \in V^{\ast\ast}$. Then $\text{ev}(v)(f) = f(v) = 0$ for all $f \in V^\ast$.
+> Thus,
+>
+> $$
+  \langle v \rangle^\circ = \Set{f \in V^\ast : \forall v \in V, f(v) = 0} = V^\ast
+  $$
+>
+> which means $\dim \langle v \rangle^\circ = \dim V^\ast = \dim V$ and $\dim \langle v \rangle = 0$ and $v = 0$.
+> Therefore, $\ker \text{ev} = 0$ and $\text{ev}$ is injective.
+> As $\dim V^{\ast\ast} = \dim V^\ast = \dim V$, injectivity of $\text{ev}$ implies isomorphism.
+
+$\text{ev}$ is generally not an isomorphism if $V$ is not finite dimensional.
+
+> *Proposition.*{: .prop}
+> Suppose that $V$ and $W$ are finite dimensional and $\alpha \in \mathcal{L}(V, W)$ then $\alpha^{\ast\ast} \circ \text{ev}_V = \text{ev}_W \circ \alpha$.
+>
+> *Proof.*{: .prf}
+>
+> Note that $\alpha^{\ast\ast}: V^{\ast\ast} \to W^{\ast\ast}$ so $\alpha^{\ast\ast} \circ \text{ev}_V$ and $\text{ev}_W \circ \alpha$ are both linear maps $V \to W^{\ast\ast}$.
+> Also, $\text{ev}_V$ on the L.H.S. is $V \to V^{\ast\ast}$ and $\text{ev}_W$ on the R.H.S. is $W \to W^{\ast\ast}$.
+>
+> For $v \in V$ and $f \in W^\ast$, we have
+>
+> $$
+  \alpha^{\ast\ast}(\text{ev}_V(v))(f) = \text{ev}_V(v)(\alpha^\ast f) = \text{ev}_V(v)(f \alpha) = f(\alpha(v)) = \text{ev}_W(\alpha(v))(f)
+  $$
+>
+> as required.
+
+> *Proposition.*{: .prop}
+> Suppose that $V$ is finite dimensional and $U, U_1, U_2$ are subspaces of $V$. Then
+>
+> + $U^{\circ \circ} = \text{ev}(U)$;
+>
+> + $\text{ev}(U)^\circ = \text{ev}(U^\circ)$;
+>
+> + $(U_1 + U_2)^\circ = U_1^\circ \cap U_2^\circ$;
+>
+> + $(U_1 \cap U_2)^\circ = U_1^\circ + U_2^\circ$.
+>
+> *Proof.*{: .prf}
+>
+> Note that $U^\circ = \Set{f \in V^\ast : \forall u \in U, f(u) = 0}$ so $U^{\circ\circ} = \Set{g \in V^{\ast\ast} : \forall f \in U^\circ, g(f) = 0}$.
+>
+> Let $g' = \text{ev}(u)$ for $u \in U$. Then $\forall f \in U^\circ$, $g'(f) = f(u) = 0$ so $g' \in U^{\circ\circ}$ and $\text{ev}(U) \subseteq U^{\circ\circ}$. Moreover,
+>
+> $$
+  \dim \text{ev}(U) = \dim U = \dim V - \dim U^\circ = \dim V^\ast - \dim U^\circ = \dim U^{\circ\circ}
+  $$
+>
+> so $U^{\circ\circ} = \text{ev}(U)$.
+>
+> By the above, $\text{ev}(U)^\circ = (U^{\circ\circ})^\circ = (U^\circ)^{\circ\circ} = \text{ev}(U^\circ)$.
+>
+> Note that
+>
+> $$
+  (U_1 + U_2)^\circ = \Set{f \in V^\ast : \forall u_1 \in U_1, \forall u_2 \in U_2, f(u_1 + u_2) = 0}
+  $$
+>
+> and
+>
+> $$
+  U_1^\circ \cap U_2^\circ = \Set{f \in V^\ast : \forall u_1 \in U_1, \forall u_2 \in U_2, f(u_1) = f(u_2) = 0}
+  $$
+>
+> If $f(u_1 + u_2) = 0$ for all $u_1, u_2$, by having $u_2 = 0$, we have $f(u_1 + 0) = f(u_1) = 0$ for all $u_1 \in U_1$.
+> Similarily, $f(u_2) = 0$ for all $u_2 \in U_2$. Therefore, $(U_1 + U_2)^\circ \subseteq U_1^\circ \cap U_2^\circ$.
+> $U_1^\circ \cap U_2^\circ \subseteq (U_1 + U_2)^\circ$ is obvious.
+>
+> Finally, consider
+>
+> $$
+  (U_1^\circ + U_2^\circ)^\circ = U_1^{\circ\circ} \cap U_2^{\circ\circ} = \text{ev}(U_1) \cap \text{ev}(U_2)
+  $$
+>
+> Hence, since $\text{ev}$ is an isomorphism, we have
+>
+> $$
+  \text{ev}((U_1 \cap U_2)^\circ) = \text{ev}((U_1 \cap U_2))^\circ = (\text{ev}(U_1) \cap \text{ev}(U_2))^\circ = (U_1^\circ + U_2^\circ)^{\circ\circ} = \text{ev}(U_1^\circ + U_2^\circ)
+  $$
+>
+> so $(U_1 \cap U_2)^\circ = U_1^\circ + U_2^\circ$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 3

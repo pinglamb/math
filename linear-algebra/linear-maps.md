@@ -237,7 +237,14 @@ The reason to have the $i$-th column containing the coefficients of the linear c
   \ker \alpha = \Set{u \in U : \alpha(u) = 0}
   $$
 
-By definition, $\alpha$ is injective iff $\ker \alpha = 0$ and surjective iff $\text{Im}\, \alpha = V$.
+> *Proposition.*{: .prop}
+> A linear map $\alpha$ is injective iff $\ker \alpha = 0$ and surjective iff $\text{Im}\, \alpha = V$.
+>
+> *Proof.*{: .prf}
+>
+> If $\ker \alpha = 0$, if $\alpha(v_1) = \alpha(v_2)$, $\alpha(v_1 - v_2) = 0$ and $v_1 = v_2$ so $\alpha$ is injective.
+>
+> By definition, $\text{Im}\, \alpha = V$ is equivalent to surjectivity.
 
 > *Proposition.*{: .prop}
 > Let $\alpha: U \to V$ be a linear map between vector spaces over $\mathbb{F}$.
