@@ -22,9 +22,9 @@ there is a vector space $V^\ast$ which mirrors $V$, and a linear map $\alpha^\as
 >
 > *Proof.*{: .prf}
 >
-> The linear functions ${f_i}$ exist because we can always map the basis vectors to arbitrary vectors in the codomain.
+> The linear forms ${f_i}$ exist because we can always map the basis vectors to arbitrary vectors in the codomain.
 > For $(f_1, ..., f_n)$ to be a basis, we need to show that it is linearly independent and spans $V^\ast$.
-> Since they are linear functions, we just need to care about how they transform the basis vectors $(e_1, ..., e_n)$ as
+> Since they are linear forms, we just need to care about how they transform the basis vectors $(e_1, ..., e_n)$ as
 > $f = f'$ iff $f(e_j) = f'(e_j)$ for $j = 1, ..., n$.
 >
 > Suppose that $\sum \lambda_i f_i = 0$, in which $0$ is the zero function $0(v) = 0$ for all $v \in V$.
@@ -36,7 +36,7 @@ there is a vector space $V^\ast$ which mirrors $V$, and a linear map $\alpha^\as
 >
 > for all $j$, $\Set{f_i}$ is linearly independent.
 >
-> For any linear function $f \in V^\ast$, let $f(e_i) = \lambda_i$ for $i = 1, ..., n$. Then
+> For any linear form $f \in V^\ast$, let $f(e_i) = \lambda_i$ for $i = 1, ..., n$. Then
 >
 > $$
   \sum_i \lambda_i f_i(e_j) = \lambda_j = f(e_j)

@@ -12,6 +12,7 @@ title: Home
 * [Matrices](linear-algebra/matrices.md)
 * [Quotient Spaces](linear-algebra/quotient-spaces.md)
 * [Dual Spaces](linear-algebra/dual-spaces.md)
+* [Bilinear Forms](linear-algebra/bilinear-forms.md)
 * [Direct Sums](linear-algebra/direct-sums.md)
 
 ## Vector Calculus
