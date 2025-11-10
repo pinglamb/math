@@ -38,3 +38,21 @@ $$
 > for $v \in V$ and $w \in W$.
 
 Base on the above, we can see that $\phi: V \times V^\ast \to \mathbb{F}, \phi(v, f) = f(v)$ is a bilinear form with $\phi_L: V \to V^{\ast\ast} = \text{ev}$ and $\phi_R: V^\ast \to V^\ast = \iota_{V^\ast}$.
+
+> *Proposition.*{: .prop}
+> $\phi_R = \phi_L^\ast \circ \text{ev}$ and $\phi_L = \phi_R^\ast \circ \text{ev}$.
+>
+> *Proof.*{: .prf}
+>
+> $\phi_L^\ast: W^{\ast\ast} \to V^\ast$ with $\phi_L^\ast(\theta)(v) = \theta(\phi_L(v)) \in \mathbb{F}$ for $\theta \in W^{\ast\ast} = \mathcal{L}(W^\ast, \mathbb{F})$ and $\text{ev}: W \to W^{\ast\ast}$
+> so $\phi_L^\ast \circ \text{ev}: W \to V^\ast$ and the domain and codomain matches that of $\phi_R$.
+> Hence,
+>
+> $$
+  (\phi_L^\ast \circ \text{ev}(w))(v) = \text{ev}(w)(\phi_L(v)) = \phi_L(v)(w) = \phi_R(w)(v)
+  $$
+
+## Reference
+
+* Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 4
+* Charles W. Curtis _Linear Algebra - An Introductory Approach_, 1984 - Chapter 8.27
