@@ -124,9 +124,29 @@ $$
 >
 > *Proof.*{: .prf}
 >
+> $\phi$ is non-degenerate iff $\ker \phi_L = 0$ and $\ker \phi_R = 0$ iff $A$ is invertible.
 
 > *Proposition.*{: .prop}
+> Suppose that $(e_1, ..., e_m)$ and $(e_1', ..., e_m')$ are two bases of $V$ such that $e_i' = \sum P_{ki} e_k$
+> and $(f_1, ..., f_n)$ and $(f_1', ..., f_n')$ are two bases of $W$ such that $f_j' = \sum Q_{lj} f_l$
+> and $\phi: V \times W \to \mathbb{F}$ is a bilinear form represented by $A$ with respect to $(e_i)$ and $(f_i)$ and by $B$ with respect to $(e_i')$ and $(f_i')$.
+> Then
 >
+> $$
+  B = P^\intercal A Q
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  B_{ij} &= \phi(e_i', f_j') \\
+  &= \phi \left( \sum_k P_{ki} e_k, \sum_l Q_{lj} f_l \right) \\
+  &= \sum_{k,l} P_{ki} Q_{lj} \phi(e_k, f_l) \\
+  &= \sum_{k,l} P_{ki} Q_{lj} A_{kl} \\
+  &= (P^\intercal A Q)_{ij}
+  \end{align*}
+  $$
 
 > *Definition.*{: .def}
 > The **rank** of $\phi$, denoted by $r(\phi)$, is defined to be the rank of any matrix representing $\phi$.
