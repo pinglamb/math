@@ -37,7 +37,7 @@ $$
 >
 > for $v \in V$ and $w \in W$.
 
-Base on the above, we can see that $\phi: V \times V^\ast \to \mathbb{F}, \phi(v, f) = f(v)$ is a bilinear form with $\phi_L: V \to V^{\ast\ast} = \text{ev}$ and $\phi_R: V^\ast \to V^\ast = \iota_{V^\ast}$.
+Base on the above, we can see that $\phi: V \times V^\ast \to \mathbb{F}, \phi(v, \theta) = \theta(v)$ is a bilinear form with $\phi_L: V \to V^{\ast\ast} = \text{ev}$ and $\phi_R: V^\ast \to V^\ast = \iota_{V^\ast}$.
 
 > *Proposition.*{: .prop}
 > $\phi_R = \phi_L^\ast \circ \text{ev}$ and $\phi_L = \phi_R^\ast \circ \text{ev}$.
@@ -50,6 +50,48 @@ Base on the above, we can see that $\phi: V \times V^\ast \to \mathbb{F}, \phi(v
 >
 > $$
   (\phi_L^\ast \circ \text{ev}(w))(v) = \text{ev}(w)(\phi_L(v)) = \phi_L(v)(w) = \phi_R(w)(v)
+  $$
+
+> *Proposition.*{: .prop}
+> Let $(e_1, ..., e_m)$ be a basis for $V$ with dual basis $(\epsilon_1, ..., \epsilon_m)$ and $(f_1, ..., f_n)$ be a basis for $W$ with dual basis $(\eta_1, ..., \eta_n)$.
+> If $A$ represents the bilinear form $\phi: V \times W \to \mathbb{F}$ with respect to $(e_i)$ and $(f_i)$
+> then $A$ represents $\phi_R$ with respect to $(f_i)$ and $(\epsilon_i)$ and $A^\intercal$ represents $\phi_L$ with respect to $(e_i)$ and $(\eta_i)$.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $B$ is matrix representing $\phi_R$ and $C$ be that representing $\phi_L$. Then
+>
+> $$
+  A_{ij} = \phi(e_i, f_j) = \phi_R(f_j)(e_i) = \left( \sum_k B_{kj} \epsilon_k \right) (e_i) = \sum_k B_{kj} \delta_{ik} = B_{ij}
+  $$
+>
+> and
+>
+> $$
+  A_{ij} = \phi(e_i, f_j) = \phi_L(e_i)(f_j) = \left( \sum_k C_{ki} \eta_k \right) (f_j) = \sum_k C_{ki} \delta_{kj} = C_{ji} = C_{ij}^\intercal
+  $$
+
+> *Definition.*{: .def}
+> $\ker \phi_L$ is the **left kernel** of $\phi$ and $\ker \phi_R$ is the **right kernel** of $\phi$, i.e.
+>
+> $$
+  \begin{align*}
+  \ker \phi_L &= \Set{v \in V : \forall w \in W, \phi(v, w) = 0} \\
+  \ker \phi_R &= \Set{w \in W : \forall v \in V, \phi(v, w) = 0}
+  \end{align*}
+  $$
+
+By considering the subsets $S \subset V$ and $T \subset W$, it is a more general idea of _annihilator_.
+
+> *Definition.*{: .def}
+> Suppose that $V$ and $W$ are vector spaces with subspaces $S$ and $T$ respectively and $\phi: V \times W \to \mathbb{F}$ is a bilinear form.
+> Then we define
+>
+> $$
+  \begin{align*}
+  S^\perp &= \Set{w \in W : \forall s \in S, \phi(s, w) = 0} \\
+  {}^\perp T  &= \Set{v \in V : \forall t \in T, \phi(v, t) = 0}
+  \end{align*}
   $$
 
 ## Reference
