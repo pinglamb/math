@@ -14,6 +14,8 @@ title: Home
 * [Dual Spaces](linear-algebra/dual-spaces.md)
 * [Bilinear Forms](linear-algebra/bilinear-forms.md)
 * [Direct Sums](linear-algebra/direct-sums.md)
+* [Determinants](linear-algebra/determinants.md)
+* [Endomorphisms](linear-algebra/endomorphisms.md)
 
 ## Vector Calculus
 {: .left}
