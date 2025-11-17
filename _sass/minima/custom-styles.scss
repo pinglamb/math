@@ -113,11 +113,14 @@ a {
       color: #f0f6fc;
     }
 
-    ul {
+    ol, ul {
       li {
         margin-bottom: 1em;
         &:last-child {
           margin-bottom: 0;
+          p:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
