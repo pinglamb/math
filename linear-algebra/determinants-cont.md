@@ -41,12 +41,12 @@ We now focus on actual computation of determinants of matrices. First of all, we
 > Hence,
 >
 > $$
-  \begin{align*}
   D(A^{(1)}, ..., A^{(n)}) = \sum_{\sigma \in S_n} \left( \prod_{j=1}^n A_{\sigma(j) j} \right) D(e_{\sigma(1)}, ..., e_{\sigma(n)})
-  \end{align*}
   $$
 >
 > and $D(e_{\sigma(1)}, ..., e_{\sigma(n)}) = \epsilon(\sigma) D(e_1, ..., e_n)$.
+
+We follow with an important result about determinants.
 
 > *Proposition.*{: .prop}
 > Let $A, B \in \text{Mat}_n(\mathbb{F})$. Then
@@ -76,6 +76,75 @@ We now focus on actual computation of determinants of matrices. First of all, we
   $$
 >
 > and hence $\det AB = \det A \det B$.
+
+## Elementary Row/Column Operations
+
+> *Proposition.*{: .prop}
+> Let $A \in \text{Mat}_n(\mathbb{F})$. Then
+>
+> + Let $A'$ be a matrix obtained by interchanging $A^{(i)}$ and $A^{(j)}$ for $j \not= i$. Then
+>
+>   $$
+    D(A') = - D(A)
+    $$
+>
+> + Let $A'$ be a matrix obtained by replacing $A^{(i)}$ by $\lambda A^{(i)}$. Then
+>
+>   $$
+    D(A') = \lambda D(A)
+    $$
+>
+> + Let $A'$ be a matrix obtained by replacing $A^{(i)}$ by $A^{(i)} + \lambda A^{(j)}$ for $j \not= i$. Then
+>
+>   $$
+    D(A') = D(A)
+    $$
+>
+> *Proof.*{: .prf}
+>
+> Follows immediately from axioms and properties.
+
+With that, we can compute the determinants by applying the elementary row/column operations until we get the upper/lower triangular form in which $\det A = \text{tr}\, A'$.
+
+## Row/Column Expansions
+
+> *Definition.*{: .def}
+> $\widehat{A_{ij}}$ denotes the submatrix of $A$ obtained by deleting the $i$th row and $j$th column.
+
+> *Proposition.*{: .prop}
+> **[Row/Column Expansions]**
+> Let $A \in \text{Mat}_n(\mathbb{F})$. Then
+>
+> $$
+  \det A = \sum_{j=1}^n (-1)^{i+j} A_{ij} \det \widehat{A_{ij}} = \sum_{i=1}^n (-1)^{i+j} A_{ij} \det \widehat{A_{ij}}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \det A &= \det(A^{(1)}, ..., \sum_i A_{ij} e_i, ..., A^{(n)}) \\
+  &= \sum_i A_{ij} \det(A^{(1)}, ..., e_i, ..., A^{(n)}) \\
+  &= \sum_i A_{ij} (-1)^{i+j} \det A'
+  \end{align*}
+  $$
+>
+> where
+>
+> $$
+  A' = \begin{pmatrix}
+  1 & \ast \\
+  0 & \widehat{A_{ij}}
+  \end{pmatrix}
+  $$
+>
+> which is obtained by interchanging $i-1$ times with the rows above and $j-1$ times with the columns on the left, and introduces the $(-1)^{i+j-2} = (-1)^{i+j}$ term.
+>
+> For $\sigma \in S_n$, $\prod A_{i \sigma(i)}' = 0$ unless $\sigma(1) = 1$ so $\det B = \det \widehat{A_{ij}}$ as required.
+
+## Singularity and Inverses
+
+## Block Triangular Matrices
 
 ## References
 
