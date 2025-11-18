@@ -144,6 +144,51 @@ With that, we can compute the determinants by applying the elementary row/column
 
 ## Singularity and Inverses
 
+> *Definition.*{: .def}
+> A matrix $A$ is **singular** if $\det A = 0$.
+
+> *Proposition.*{: .prop}
+> Let $A \in \text{Mat}_n(\mathbb{F})$. Then the following statements are equivalent:
+>
+> + $A$ is invertible;
+>
+> + $A$ is non-singular;
+>
+> + $r(A) = n$.
+>
+> *Proof.*{: .prf}
+>
+
+> *Proposition.*{: .prop}
+> $\det A^{-1} = 1 / \det A$.
+>
+> *Proof.*{: .prf}
+>
+> $1 = \det I_n = \det(A A^{-1}) = \det A \det A^{-1}$.
+
+> *Definition.*{: .def}
+> The **adjugate matrix**, denoted by $\text{adj}\, A$, is the element of $\text{Mat}_n(\mathbb{F}^n)$ such that
+>
+> $$
+  (\text{adj}\, A)_{ij} = (-1)^{i+j} \det \widehat{A_{ji}}
+  $$
+
+> *Proposition.*{: .prop}
+> Let $A \in \text{Mat}_n(\mathbb{F})$. Then
+>
+> $$
+  (\text{adj}\, A)A = A(\text{adj}\, A) = (\det A) I_n
+  $$
+>
+> Thus, if $\det A \not= 0$, then
+>
+> $$
+  A^{-1} = {1 \over \det A} \text{adj}\, A
+  $$
+>
+> *Proof.*{: .prf}
+>
+
 ## Block Triangular Matrices
 
 ## References
