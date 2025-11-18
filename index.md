@@ -15,6 +15,7 @@ title: Home
 * [Bilinear Forms](linear-algebra/bilinear-forms.md)
 * [Direct Sums](linear-algebra/direct-sums.md)
 * [Determinants](linear-algebra/determinants.md)
+* [Determinants of Matrices](linear-algebra/determinants-cont.md)
 * [Endomorphisms](linear-algebra/endomorphisms.md)
 
 ## Vector Calculus

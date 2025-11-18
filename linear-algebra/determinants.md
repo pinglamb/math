@@ -135,8 +135,7 @@ Since the other properties proved above doesn't rely on the third axiom so a vol
 
 ## Existence and Uniqueness
 
-We can now construct the actual function that satisfies the above.
-Before that, we would like to show that if such a function exists, it must be unique.
+Before defining the actual determinant function, we would like to show that if such a function exists, it must be unique.
 
 > *Proposition.*{: .prop}
 > Let $D$ and $D'$ be two functions satisfying the axioms. Then for all $a_1, ..., a_n$ in $\mathbb{F}^n$,
@@ -176,8 +175,54 @@ Before that, we would like to show that if such a function exists, it must be un
   $$
 >
 > If any of $j_1, ..., j_n$ are equal, then $\Delta(e_{j_1}, ..., e_{j_n}) = 0$.
-> If all $j_1, ..., j_n$ are distinct, by interchanging rows repeatedly we have $\Delta(e_{j_1}, ..., e_{j_n}) = \pm \Delta(e_1, ..., e_n) =0$.
+> If all $j_1, ..., j_n$ are distinct, by interchanging rows repeatedly we have $\Delta(e_{j_1}, ..., e_{j_n}) = \pm \Delta(e_1, ..., e_n) = 0$.
 > Hence, $\Delta(a_1, ..., a_n) = 0$ as required.
+
+A matrix $A \in \text{Mat}_n(\mathbb{F})$ can be viewed as having $n$-tuple of elements of $\mathbb{F}^n$ in its columns,
+i.e. $A = \begin{pmatrix} A^{(1)} & \cdots & A^{(n)} \end{pmatrix}$.
+
+> *Definition.*{: .def}
+> If $A \in \text{Mat}_n(\mathbb{F})$ then the **determinant** of $A$ is defined by
+>
+> $$
+  \det A = \sum_{\sigma \in S_n} \epsilon(\sigma) \left( \prod_{i=1}^n A_{i \sigma(i)} \right)
+  $$
+
+> *Proposition.*{: .prop}
+> $\det A = \det A^\intercal$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \det A^\intercal &= \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{i=1}^n A_{\sigma(i) i} \\
+  &= \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{i=1}^n A_{\sigma(\sigma^{-1}(i)) \sigma^{-1}(i)} \\
+  &= \sum_{\sigma \in S_n} \epsilon(\sigma^{-1}) \prod_{i=1}^n A_{i \sigma^{-1}(i)} \\
+  &= \det A
+  \end{align*}
+  $$
+
+Therefore, it doesn't matter if we put the $n$-tuple of elements of $\mathbb{F}^n$ in columns or rows.
+
+> *Proposition.*{: .prop}
+> $\det: \mathbb{F}^n \times \cdots \mathbb{F}^n \to \mathbb{F}$, $\begin{pmatrix} A^{(1)} & \cdots & A^{(n)} \end{pmatrix} \mapsto \det A$ is a volume form.
+>
+> *Proof.*{: .prf}
+>
+> For each product $\prod A_{i \sigma(i)}$, one term from each column appears in that so it is multi-linear.
+> Since $\det$ is a sum of multi-linear functions, it is also multi-linear.
+>
+> Suppose that $A^{(k)} = A^{(l)}$ for some $k \not= l$. Let $\tau$ be the transposition $(kl)$.
+> Then $S_n$ is a disjoint union of the alternating group $A_n$ and $\tau A_n$.
+> For each $\sigma' = \tau \sigma \in \tau A_n$, since $A_{ik} = A_{il}$,
+>
+> $$
+  \prod A_{i \sigma'(i)} = \prod A_{i \sigma(i)}
+  $$
+>
+> but $\epsilon(\sigma') = -\epsilon(\sigma)$ so the terms can be grouped in pair and each of them cancelled each other in the sum, i.e. $\det A = 0$.
+
+Base on the proof above, together with the fact that $\det I_n = 1$, $\det$ is the unique determinant function as defined at the beginning.
 
 ## References
 
