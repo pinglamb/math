@@ -158,6 +158,11 @@ With that, we can compute the determinants by applying the elementary row/column
 >
 > *Proof.*{: .prf}
 >
+> If $A$ is invertible, there exists $A^{-1}$ such that $AA^{-1} = I_n$ therefore $\det A \det A^{-1} = 1$ which implies $\det A \not= 0$ and $A$ is non-singular.
+>
+> If $r(A) < n$, then columns of $A$ are linearly dependent and $\det A = 0$. Contrapositively, if $A$ is non-singular, $r(A) = n$.
+>
+> As proved before, for linear map $\alpha: V \to V$, surjectivity implies isomorphism. Therefore, $r(A) = n$ implies $A$ is invertible.
 
 > *Proposition.*{: .prop}
 > $\det A^{-1} = 1 / \det A$.
@@ -188,6 +193,16 @@ With that, we can compute the determinants by applying the elementary row/column
 >
 > *Proof.*{: .prf}
 >
+> $$
+  ((\text{adj}\, A)A)_{jk} = \sum_i (\text{adj}\, A)_{ji} A_{ik} = \sum_i (-1)^{i + j} \det \widehat{A_{ij}} A_{ik}
+  $$
+>
+> The sum is in column expansion form. If $k = j$, the sum is equal to $\det A$.
+> If $k \not= j$, the sum is the expansion of a matrix obtained by replacing the $j$th column by $k$th column.
+> Since the matrix has two identical column, the sum is equal to $0$.
+> Therefore, $((\text{adj}\, A)A) = (\det A)I_n$ as required.
+
+In general, computing determinant and finding inverse is more efficient with the use of elementary operations instead of finding the adjugate.
 
 ## Block Triangular Matrices
 
