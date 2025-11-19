@@ -206,6 +206,44 @@ In general, computing determinant and finding inverse is more efficient with the
 
 ## Block Triangular Matrices
 
+> *Proposition.*{: .prop}
+> Let $A \in \text{Mat}_k(\mathbb{F})$ and $B \in \text{Mat}_l(\mathbb{F})$ with $k, l \ge 1$. Then
+>
+> $$
+  \det \begin{pmatrix} A & C \\ 0 & B \end{pmatrix} = \det A \det B
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Define
+>
+> $$
+  X = \begin{pmatrix} A & C \\ 0 & B \end{pmatrix}
+  $$
+>
+> which is a $(k + l) \times (k + l)$ matrix. Then
+>
+> $$
+  \det X = \sum_{\sigma \in S_{k+l}} \epsilon(\sigma) \left( \prod_{i=1}^{k+l} X_{i \sigma(i)} \right)
+  $$
+>
+> Since $X_{ij} = 0$ when $i > k$ and $j \le k$. We can restrict the sum to those $\sigma$ such that $\sigma(i) > k$ for $i > k$ (so $X_{i \sigma(i)}$ are entries of $B$).
+> Therefore, we can factorize these $\sigma$ as $\sigma = \sigma_1 \sigma_2$ with $\sigma_1 \in S_k$ and $\sigma_2$ is a permutation of $\Set{k+1, ..., n}$. Thus,
+>
+> $$
+  \begin{align*}
+  \det X &= \sum_{\sigma_1} \sum_{\sigma_2} \epsilon(\sigma_1 \sigma_2) \left( \prod_{i=1}^k X_{i \sigma_1(i)} \right) \left( \prod_{j=1}^l X_{j+k \sigma_2(j + k)} \right) \\
+  &= \left( \sum_{\sigma_1} \epsilon(\sigma_1) \left( \prod_{i=1}^k A_{i \sigma_1(i)} \right) \right) \left( \sum_{\sigma_2} \epsilon(\sigma_2) \left( \prod_{j=1}^l B_{j \sigma_2(j)} \right) \right) \\
+  &= \det A \det B
+  \end{align*}
+  $$
+>
+> The core idea behind is that product term in determinant chooses one entry from each row and then sum over all combinations.
+> The structure of the triangular block matrix makes any choice of entry in $C$ will result with a product of $0$ since we have to choose an entry from the $0$ block.
+> Therefore, the only choices that is non-zero are those choosing $k$ entries from $A$ and $l$ entries from $B$.
+
+In general, it is not true that for a matrix $M \in \text{Mat}_{2n}(\mathbb{F})$, $\det M = \det A \det D - \det B \det C$ where $A, B, C, D \in \text{Mat}_n(\mathbb{F})$.
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 5
