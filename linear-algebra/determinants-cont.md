@@ -204,6 +204,24 @@ With that, we can compute the determinants by applying the elementary row/column
 
 In general, computing determinant and finding inverse is more efficient with the use of elementary operations instead of finding the adjugate.
 
+## Determinantal Rank
+
+> *Definition.*{: .def}
+> The **determinantal rank** of a matrix $A$ is the largest integer $r$ such that there exists $r \times r$ minor of $A$ with non-zero determinant.
+
+> *Proposition.*{: .prop}
+> The determinantal rank of a matrix is equivalent to its rank.
+>
+> *Proof.*{: .prf}
+>
+> Let $A$ be a $n \times n$ matrix of determinantal rank $r$. There exists a $r \times r$ minor $M$ with non-zero determinant, i.e. $r(M) = r$.
+> Therefore, the columns/rows of $M$ are $r$ linearly independent vectors and their extensions to $n \times n$ are also linearly independent, i.e. $r(A) \ge r(M)$.
+>
+> On the other hand, let $A$ be a $n \times n$ matrix of rank $r$. Then there are $r$ rows of linearly independent vectors which can be used to form a $r \times n$ matrix $B$ in which $r(B) = r$.
+> Since the column rank of $B$ is also $r$, we can form a full-rank $r \times r$ minor $M$ in which $\det M \not= 0$, i.e. $r(M) \ge r(A)$.
+
+Therefore, the column, row and determinantal ranks of a matrix are all equivalent.
+
 ## Block Triangular Matrices
 
 > *Proposition.*{: .prop}
