@@ -186,6 +186,11 @@ By definition, we can see that column rank is equal to the rank of the correspon
 > Thus, we have $a = Av = (AB)u$ and $a$ is also in the span of column vectors of $AB$, i.e. $r(A) \le r(AB)$.
 > Combining with the above conclusion that $r(AB) \le r(A)$, we therefore have $r(AB) = r(A)$.
 
+Similarily, we have $r(AB) = r(B)$ with $A$ being a $r \times r$ matrix of full-rank and $B$ being a $r \times n$ matrix.
+
+> *Corollary.*{: .cor}
+> Let $A$ and $B$ be $n \times n$ matrices of full-rank. Then $AB$ and $BA$ are full-rank.
+
 ## Elementary Matrices
 
 > *Definition.*{: .def}
