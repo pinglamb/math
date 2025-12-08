@@ -8,6 +8,23 @@ title: Matrices &#124; Linear Algebra
 
 With matrices being a representation of linear maps, we can study their properties leveraging that.
 
+> *Definition.*{: .def}
+> Let $B$ be a $m \times r$ matrix and $C$ be a $r \times n$ matrix. Then their product $A = BC$ is a $m \times n$ matrix such that
+>
+> $$
+  A_{ij} = \sum_{k=1}^{r} B_{ik} C_{kj}
+  $$
+
+We have seen that this matches the properties of composite of linear maps.
+But on the other hand, if we consider each column of $A$ as a vector $A^{(j)} \in \mathbb{F}^m$ then by the multiplication formula, we have
+
+$$
+A^{(j)} = C_{1j} B^{(1)} + C_{2j} B^{(2)}  + ... + C_{rj} B^{(r)} = B C^{(j)}
+$$
+
+The first expansion means $A^{(j)}$ are linear combinations of column vectors of $B$ with $C_{kj}$ as coefficients.
+The second expansion means $A^{(j)}$ are the image of $C^{(j)}$ under the linear map $B$.
+
 > *Proposition.*{: .prop}
 > Let $A$ be an $n \times n$ matrix over $\mathbb{F}$. The following are equivalent
 >
@@ -103,6 +120,7 @@ with $r = r(\alpha)$ being independent of the choices of bases. We can rephrase 
 >
 > + the **row rank** of $A$ is the column rank of $A^\intercal$.
 
+The column/row ranks are also the number of linearly independent column/row vectors of the matrix.
 By definition, we can see that column rank is equal to the rank of the corresponding linear map, i.e. $r(A) = r(\alpha)$ and therefore is constant on equivalence classes.
 
 > *Proposition.*{: .prop}
@@ -134,6 +152,39 @@ By definition, we can see that column rank is equal to the rank of the correspon
   $$
 >
 > and $r(A^\intercal) = r = r(A)$.
+
+> *Proposition.*{: .prop}
+> Let $A$ be a $m \times r$ matrix and $B$ be a $r \times n$ matrix. Then
+>
+> $$
+  r(AB) \le \min(r(A), r(B))
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $v$ be a vector in the span of the column vectors of $AB$, i.e.
+>
+> $$
+  v = \sum_{i = 1}^n \lambda_i (AB)^{(i)} = \sum_{i = 1}^n \lambda_i A B^{(i)} = A \left( \sum_{i=1}^n \lambda_i B^{(i)} \right) = \sum_{j=1}^r \lambda_j' A^{(j)}
+  $$
+>
+> and $v$ is also in the span of column vectors of $A$ so $r(AB) \le r(A)$.
+>
+> Similarily, by considering $(AB)^\intercal = B^\intercal A^\intercal$, any vectors in the span of row vectors of $AB$ are also in the span of row vectors of $B$ and $r(AB) \le r(B)$.
+
+> *Proposition.*{: .prop}
+> Let $A$ be a $m \times r$ matrix and $B$ be a $r \times r$ matrix of full-rank. Then
+>
+> $$
+  r(AB) = r(A)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $a$ be a vector in the span of column vectors of $A$, we have $a = Av$ where $v$ is a $r \times 1$ column matrix of coefficients.
+> Since the $r$ column vectors of $B$ are linearly independent, $v$ is in the span of $B$ with $v = Bu$ where $u$ is also a $r \times 1$ column matrix of coefficients.
+> Thus, we have $a = Av = (AB)u$ and $a$ is also in the span of column vectors of $AB$, i.e. $r(A) \le r(AB)$.
+> Combining with the above conclusion that $r(AB) \le r(A)$, we therefore have $r(AB) = r(A)$.
 
 ## Elementary Matrices
 
@@ -182,6 +233,12 @@ By definition, we can see that column rank is equal to the rank of the correspon
 > + $AE_{ij}^n(\lambda)$ adds $\lambda \cdot$(column $i$) to column $j$, $E_{ij}^m(\lambda)A$ adds $\lambda \cdot$(row $j$) to row $i$;
 >
 > + $AT_i(\lambda)^n$ multiplies column $i$ by $\lambda$, $T_i^m(\lambda)A$ multiplies column $i$ by $\lambda$.
+
+The elementary matrix represents a column operation when it is on the right and a row operation when it is on the left, base on the matrix multiplication rule that
+
+$$
+B^{(k)} = AS_{ij} = (S_{ij})_{1k} A^{(1)} + (S_{ij})_{2k} A^{(2)} + ... + (S_{ij})_{nk} A^{(n)}
+$$
 
 > *Proposition.*{: .prop}
 > If $A \in \text{Mat}\_{n,m}(\mathbb{F})$ then there are elementary matrices $E_1^n, ... E_a^n$ and $F_1^m, ..., F_b^m$ such that
