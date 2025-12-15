@@ -222,6 +222,11 @@ The reason to have the $i$-th column containing the coefficients of the linear c
   \beta(\alpha(u_i)) = \beta \left( \sum_j A_{ji} v_j \right) = \sum_j A_{ji} \beta(v_j) = \sum_j A_{ji} \sum_k B_{kj} w_k = \sum_k \left( \sum_j B_{kj} A_{ji} \right) w_k = \sum_k (BA)_{ki} w_k
   $$
 
+The columns of $A$ are representing the linear combination of each $u_i$ in terms of $v_j$ and that of $B$ are representing the linear combination of each $v_j$ in terms of $w_k$.
+The columns of their product $BA$ are representing the linear combination of each $u_i$ in terms of $w_k$.
+When looking at a single entry $(BA)_{ki}$ which is the coefficient of the $w_k$ term for $u_i$, we can see that the related entries are obviously the $i$-th column of $A$ ($u_i$) and $k$-th row of $B$ ($w_k$)
+and from the above we can conclude that $(BA)\_{ki} = \sum B\_{kj}A\_{ji}$.
+
 ## Rank and Nullity
 
 > *Definition.*{: .def}
