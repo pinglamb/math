@@ -12,6 +12,42 @@ title: Endomorphisms &#124; Linear Algebra
 
 The key difference while considering endomorphisms as matrices is that the same basis will be used for both the domain and the range which leads to some other properties.
 
+## Basis
+
+The standard basis of $\text{Mat}_n(\mathbb{F})$ can be useful sometimes for proving properties of the corresponding endomorphism.
+
+> *Definition.*{: .def}
+> The standard basis for $\text{Mat}_n(\mathbb{F})$ consists of $n^2$ matrices $\Set{E\_{ij}}$ in which
+>
+> $$
+  (E_{ij})_{kl} = \begin{cases}
+  1 & i = k, j = l \\
+  0 & \text{otherwise}
+  \end{cases}
+  $$
+
+> *Proposition.*{: .prop}
+> $E\_{ij} E\_{kl} = \delta_{jk} E_{il}$.
+>
+> *Proof.*{: .prf}
+>
+> $$
+  (E_{ij} E_{kl})_{pq} = \sum_{r = 1}^n (E_{ij})_{pr} (E_{kl})_{rq}
+  $$
+>
+> $(E\_{ij})\_{pr} = 1$ if $p = i$ and $r = j$ and $(E\_{kl})\_{rq} = 1$ if $q = l$ and $r = k$ so only $(E\_{ij} E\_{kl})_{il}$ can be non-zero provided that $j = k$.
+
+> *Definition.*{: .def}
+> The **commutator** of two elements $a$ and $b$ of a ring is the element $[a, b] = ab - ba$.
+> The elements $a$ and $b$ are said to **commute** if the commutator is zero, i.e. $ab = ba$.
+
+> *Proposition.*{: .prop}
+> Every off-diagonal basis matrices are commutators, specifically $E\_{ij} = E\_{ik}E\_{kj} - E\_{kj}E\_{ik}$ for $i \not= j$.
+>
+> *Proof.*{: .prf}
+>
+> $E\_{ik}E\_{kj} = E_{ij}$ and $E\_{kj}E\_{ik} = 0$ when $i \not= j$.
+
 ## Invariants
 
 We will first address properties of matrices that are invariant up to similarity.
@@ -44,6 +80,16 @@ so $\text{GL}_n(\mathbb{F})$ acts on $\text{Mat}_n(\mathbb{F})$ by conjugation a
 > $$
   \text{tr}\,AB = \sum_{i=1}^n \left( \sum_{j=1}^m A_{ij} B_{ji} \right)  = \sum_{j=1}^m \left( \sum_{i=1}^n B_{ji} A_{ij} \right) = \text{tr}\,BA
   $$
+
+> *Proposition.*{: .prop}
+> Suppose that $f \in \text{Mat}_n(\mathbb{F})^\ast$ such that $f(AB) = f(BA)$ for all $A, B \in \text{Mat}_n(\mathbb{F})$.
+> Then $f$ is a scalar multiple of the trace function.
+>
+> *Proof.*{: .prf}
+>
+> Since every off-diagonal basis matrices are commutators, for $i \not= j$, $f(E\_{ij}) = f(E\_{ik}E\_{kj} - E\_{kj}E\_{ik}) = 0$.
+> For on-diagonal basis matrices, $f(E_{ii}) = f(E\_{ik}E\_{ki} - E\_{ki}E\_{ik}) = 0$ so $f(E_{ii}) = f(E_{kk})$ and all of them have the same scalar value $\lambda$.
+> Hence, for any matrix $A$, $f(A) = \sum A_{ii} f(E_{ii}) = \lambda \text{tr}(A)$.
 
 > *Proposition.*{: .prop}
 > If matrices $A$ and $B$ are similar. Then
