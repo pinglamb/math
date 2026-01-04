@@ -14,10 +14,10 @@ The key difference while considering endomorphisms as matrices is that the same 
 
 ## Basis
 
-The standard basis of $\text{Mat}_n(\mathbb{F})$ can be useful sometimes for proving properties of the corresponding endomorphism.
+The standard basis of $M_n(\mathbf{F})$ can be useful sometimes for proving properties of the corresponding endomorphism.
 
 > *Definition.*{: .def}
-> The standard basis for $\text{Mat}_n(\mathbb{F})$ consists of $n^2$ matrices $\Set{E\_{ij}}$ in which
+> The standard basis for $M_n(\mathbf{F})$ consists of $n^2$ matrices $\Set{E\_{ij}}$ in which
 >
 > $$
   (E_{ij})_{kl} = \begin{cases}
@@ -65,14 +65,14 @@ We will first address properties of matrices that are invariant up to similarity
 > *Definition.*{: .def}
 > Matrices $A$ and $B$ are **similar** (or **conjugate**) if $B = P^{-1}AP$ for some invertible matrix $P$.
 
-In terms of group theory, recall $\text{GL}_n(\mathbb{F})$ denotes all the invertible matrices
-so $\text{GL}_n(\mathbb{F})$ acts on $\text{Mat}_n(\mathbb{F})$ by conjugation and two matrices are similar if they lie in the same orbit, and similarity is an equivalence relation.
+In terms of group theory, recall $\text{GL}_n(\mathbf{F})$ denotes all the invertible matrices
+so $\text{GL}_n(\mathbf{F})$ acts on $M_n(\mathbf{F})$ by conjugation and two matrices are similar if they lie in the same orbit, and similarity is an equivalence relation.
 
 > *Definition.*{: .def}
-> The **trace** of a matrix $A$ is defined by $\text{tr}: \text{Mat}\_n(\mathbb{F}) \to \mathbb{F}$ such that $\text{tr}\,A = \sum A_{ii}$.
+> The **trace** of a matrix $A$ is defined by $\text{tr}: M\_n(\mathbf{F}) \to \mathbf{F}$ such that $\text{tr}\,A = \sum A_{ii}$.
 
 > *Proposition.*{: .prop}
-> Suppose that $A \in \text{Mat}\_{n,m}(\mathbb{F})$ and $B \in \text{Mat}\_{m,n}(\mathbb{F})$.
+> Suppose that $A \in M\_{n,m}(\mathbf{F})$ and $B \in M\_{m,n}(\mathbf{F})$.
 > Then $\text{tr}\,AB = \text{tr}\,BA$.
 >
 > *Proof.*{: .prf}
@@ -82,7 +82,7 @@ so $\text{GL}_n(\mathbb{F})$ acts on $\text{Mat}_n(\mathbb{F})$ by conjugation a
   $$
 
 > *Proposition.*{: .prop}
-> Suppose that $f \in \text{Mat}_n(\mathbb{F})^\ast$ such that $f(AB) = f(BA)$ for all $A, B \in \text{Mat}_n(\mathbb{F})$.
+> Suppose that $f \in M_n(\mathbf{F})^\ast$ such that $f(AB) = f(BA)$ for all $A, B \in M_n(\mathbf{F})$.
 > Then $f$ is a scalar multiple of the trace function.
 >
 > *Proof.*{: .prf}
@@ -116,6 +116,47 @@ Since the trace and determinant are independent of the choice of basis, we can d
 > *Proof.*{: .prf}
 >
 > Since $\det A^\intercal = \det A$ and $\text{tr}\,A^\intercal = \text{tr}\,A$.
+
+## Minimum Polynomials
+
+For a selected basis $\Set{v_i}$ for $V$ over $\mathbf{F}$, we have shown that $\mathcal{L}(V, V) \cong M_n(\mathbf{F})$.
+From the above, the dimension of $M_n(\mathbf{F})$ is $n^2$ so as $\mathcal{L}(V, V)$.
+Therefore, for a fixed linear map $\alpha \in \mathcal{L}(V, V)$, the $n^2 + 1$ powers of $\alpha$, i.e. $\Set{1, \alpha, \alpha^2, ..., \alpha^{n^2}}$ are linearly dependent.
+That means there exists a nonzero polynomial
+
+$$
+f(x) = \lambda_0 + \lambda_1 x + ... + \lambda_{n^2} x^{n^2} \in \mathbf{F}[x]
+$$
+
+such that $f(\alpha) = 0$.
+
+> *Proposition.*{: .prop}
+> There exists a uniquely determined integer $r \le n^2$ such that $\Set{1, \alpha, ..., \alpha^{r-1}}$ are linearly independent but not $\Set{1, \alpha, ..., \alpha^{r}}$.
+> Then
+>
+> $$
+  \alpha^r = \lambda_0 \cdot 1 + \lambda_1 \alpha + ... + \lambda_{r-1} \alpha^{r-1}
+  $$
+>
+> Let $m(x) = x^r - \lambda\_{r-1} x^{r-1} - ... - \lambda_0 \cdot 1 \in \mathbf{F}[x]$. Then
+>
+> + $m(x)$ is nonzero and $m(\alpha) = 0$;
+>
+> + If $f(x)$ is any polynomial such that $f(\alpha) = 0$, then $m(x) \mid f(x)$.
+>
+> *Proof.*{: .prf}
+>
+> Base on the above discussion we can see that $m(x)$ exists. By division theorem, $f(x) = m(x) Q(x) + R(x)$ with $\deg R < r$, and therefore
+>
+> $$
+  R(\alpha) = f(\alpha) - m(\alpha) Q(\alpha) = 0
+  $$
+>
+> Since $\Set{1, \alpha, ..., \alpha^{r-1}}$ are linearly independent, there doesn't exist a nonzero polynomial $R(x)$ such that $\deg R < r$ and $R(\alpha) = 0$ so $R = 0$.
+
+> *Definition.*{: .def}
+> The **minimal polynomial** of linear map $\alpha \in \mathcal{L}(V, V)$ is the nonzero polynomial of least degree such that $m(\alpha) = 0$
+> and it is uniquely determined up to a constant factor.
 
 ## References
 

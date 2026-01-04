@@ -130,7 +130,7 @@ The distinction between polynomials $f$ and polynomial functions $f(x)$ arises f
 
 > *Theorem.*{: .thm}
 > **[Fundamental Theorem of Algebra]**
-> Every polynomial $f \in \mathbf{C}[x]$ of degree at least $1$ has a root in $\mathbf{C}$.
+> Every polynomial $f \in \mathbf{C}[x]$ with $\deg f \ge 1$ has a root in $\mathbf{C}$.
 
 It follows that $f \in mathbf{C}[x]$ has precisely $n$ roots in $\mathbf{C}$ counted with multiplicity and every $f \in \mathbf{R}[x]$ can be written as a product of linear and quadratic factors.
 
