@@ -117,7 +117,7 @@ Since the trace and determinant are independent of the choice of basis, we can d
 >
 > Since $\det A^\intercal = \det A$ and $\text{tr}\,A^\intercal = \text{tr}\,A$.
 
-## Minimum Polynomials
+## Minimal Polynomials
 
 For a selected basis $\Set{v_i}$ for $V$ over $\mathbf{F}$, we have shown that $\mathcal{L}(V, V) \cong M_n(\mathbf{F})$.
 From the above, the dimension of $M_n(\mathbf{F})$ is $n^2$ so as $\mathcal{L}(V, V)$.
@@ -155,8 +155,9 @@ such that $f(\alpha) = 0$.
 > Since $\Set{1, \alpha, ..., \alpha^{r-1}}$ are linearly independent, there doesn't exist a nonzero polynomial $R(x)$ such that $\deg R < r$ and $R(\alpha) = 0$ so $R = 0$.
 
 > *Definition.*{: .def}
-> The **minimal polynomial** of linear map $\alpha \in \mathcal{L}(V, V)$ is the nonzero polynomial of least degree such that $m(\alpha) = 0$
-> and it is uniquely determined up to a constant factor.
+> The **minimal polynomial** of linear map $\alpha \in \mathcal{L}(V, V)$ is the nonzero monic polynomial of least degree such that $m(\alpha) = 0$ and it is well-defined.
+
+The uniqueness of minimal polynomial is the result from the fact that if both $m(x)$ and $m'(x)$ are minimal polynomials then $m \mid m'$ and $m' \mid m$ and hence $m = m'$.
 
 ## References
 
