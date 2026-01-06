@@ -48,6 +48,16 @@ The standard basis of $M_n(\mathbf{F})$ can be useful sometimes for proving prop
 >
 > $E\_{ik}E\_{kj} = E_{ij}$ and $E\_{kj}E\_{ik} = 0$ when $i \not= j$.
 
+Since $\text{End}(V) \cong M_n(\mathbf{F})$ for a given basis $\Set{v_1, ..., v_n}$ for $V$, the $n^2$ linear maps $\Set{\alpha_{ij}}$ in which
+their matrix representations with respect to $\Set{v_i}$ are $\Set{E_{ij}}$ form a basis for $\text{End}(V)$.
+In particular, $\alpha_{ij} \in \text{End}(V)$ defined by
+
+$$
+\alpha_{ij}(v_j) = v_i \quad \alpha_{ij}(v_k) = 0, k \not= j
+$$
+
+form a basis for $\text{End}(V)$.
+
 ## Invariants
 
 We will first address properties of matrices that are invariant up to similarity.
@@ -119,9 +129,7 @@ Since the trace and determinant are independent of the choice of basis, we can d
 
 ## Minimal Polynomials
 
-For a selected basis $\Set{v_i}$ for $V$ over $\mathbf{F}$, we have shown that $\mathcal{L}(V, V) \cong M_n(\mathbf{F})$.
-From the above, the dimension of $M_n(\mathbf{F})$ is $n^2$ so as $\mathcal{L}(V, V)$.
-Therefore, for a fixed linear map $\alpha \in \mathcal{L}(V, V)$, the $n^2 + 1$ powers of $\alpha$, i.e. $\Set{1, \alpha, \alpha^2, ..., \alpha^{n^2}}$ are linearly dependent.
+Since $\dim \text{End}(V) = n^2$, for a fixed linear map $\alpha \in \text{End}(V)$, the $n^2 + 1$ powers of $\alpha$, i.e. $\Set{1, \alpha, \alpha^2, ..., \alpha^{n^2}}$ are linearly dependent.
 That means there exists a nonzero polynomial
 
 $$
@@ -146,18 +154,17 @@ such that $f(\alpha) = 0$.
 >
 > *Proof.*{: .prf}
 >
-> Base on the above discussion we can see that $m(x)$ exists. By division theorem, $f(x) = m(x) Q(x) + R(x)$ with $\deg R < r$, and therefore
+> Base on the above we can see that $m(x)$ exists.
 >
-> $$
-  R(\alpha) = f(\alpha) - m(\alpha) Q(\alpha) = 0
-  $$
->
-> Since $\Set{1, \alpha, ..., \alpha^{r-1}}$ are linearly independent, there doesn't exist a nonzero polynomial $R(x)$ such that $\deg R < r$ and $R(\alpha) = 0$ so $R = 0$.
+> Let $f(x)$ be any polynomial such that $f(\alpha) = 0$. By division theorem, $f(x) = m(x) Q(x) + R(x)$ with $\deg R < r$ and $R(\alpha) = f(\alpha) - m(\alpha) Q(\alpha) = 0$.
+> Since $\Set{1, \alpha, ..., \alpha^{r-1}}$ are linearly independent, there doesn't exist a nonzero polynomial $R(x)$ with $\deg R < r$ such that $R(\alpha) = 0$. Hence, $R = 0$ and $m(x) \mid f(x)$.
 
 > *Definition.*{: .def}
 > The **minimal polynomial** of linear map $\alpha \in \mathcal{L}(V, V)$ is the nonzero monic polynomial of least degree such that $m(\alpha) = 0$ and it is well-defined.
 
 The uniqueness of minimal polynomial is the result from the fact that if both $m(x)$ and $m'(x)$ are minimal polynomials then $m \mid m'$ and $m' \mid m$ and hence $m = m'$.
+
+## Eigenvalues and Eigenvectors
 
 ## References
 
