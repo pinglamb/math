@@ -229,7 +229,26 @@ We can define the same for matrices, i.e. $Av = \lambda v$ and the correspondenc
   \chi_\alpha(\lambda) = \det(\lambda \iota - \alpha)
   $$
 
+## Invariant Subspaces
+
+> *Definition.*{: .def}
+> A subspace $U$ of $V$ is called an **invariant subspace** relative to $\alpha$ (or simply $\alpha$-invariant subspace or $\alpha$-subspace) if $\alpha(u) \in U$ for all $u \in U$.
+
+Therefore, an eigenvector is the generator of an one-dimensional $\alpha$-invariant subspace.
+
+> *Proposition.*{: .prop}
+> For any polynomial $f(x) \in \mathbf{F}[x]$, the kernel of $f(\alpha)$, i.e. the set of vectors such that $f(\alpha)(v) = 0$, is a $\alpha$-invariant subspace.
+>
+> *Proof.*{: .prf}
+>
+> Since $f(\alpha) \in \text{End}(V)$, the nullspace of $f(\alpha)$ is a subspace of $V$.
+> For any $v \in \ker f(\alpha)$, we have to show that $\alpha(v) \in \ker f(\alpha)$ as well which means $f(\alpha)(\alpha(v)) = 0$.
+>
+> $$
+  f(\alpha)(\alpha(v)) = (f(\alpha)\alpha)(v) = (\alpha f(\alpha))(v) = \alpha(f(\alpha)(v)) = 0
+  $$
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 6
-* Charles W. Curtis _Linear Algebra - An Introductory Approach_, 1984 - Chapter 7
+* Charles W. Curtis _Linear Algebra - An Introductory Approach_, 1984 - Section 22, 23

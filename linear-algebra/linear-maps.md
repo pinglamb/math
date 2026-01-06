@@ -236,7 +236,7 @@ and from the above we can conclude that $(BA)\_{ki} = \sum B\_{kj}A\_{ji}$.
   \text{Im}\, \alpha = \Set{\alpha(u) : u \in U}
   $$
 >
-> and the **kernel** of $\alpha$ is defined by
+> and the **kernel**/**nullspace** of $\alpha$ is defined by
 >
 > $$
   \ker \alpha = \Set{u \in U : \alpha(u) = 0}
