@@ -13,7 +13,6 @@ title: Home
 * [Quotient Spaces](linear-algebra/quotient-spaces.md)
 * [Dual Spaces](linear-algebra/dual-spaces.md)
 * [Bilinear Forms](linear-algebra/bilinear-forms.md)
-* [Direct Sums](linear-algebra/direct-sums.md)
 * [Determinants](linear-algebra/determinants.md)
 * [Determinants of Matrices](linear-algebra/determinants-cont.md)
 * [Polynomials](linear-algebra/polynomials.md)

@@ -160,7 +160,7 @@ such that $f(\alpha) = 0$.
 > Since $\Set{1, \alpha, ..., \alpha^{r-1}}$ are linearly independent, there doesn't exist a nonzero polynomial $R(x)$ with $\deg R < r$ such that $R(\alpha) = 0$. Hence, $R = 0$ and $m(x) \mid f(x)$.
 
 > *Definition.*{: .def}
-> The **minimal polynomial** of linear map $\alpha \in \mathcal{L}(V, V)$ is the nonzero monic polynomial of least degree such that $m(\alpha) = 0$ and it is well-defined.
+> The **minimal polynomial** of a linear map $\alpha \in \text{End}(V)$ is the nonzero monic polynomial of least degree such that $m(\alpha) = 0$ and it is well-defined.
 
 The uniqueness of minimal polynomial is the result from the fact that if both $m(x)$ and $m'(x)$ are minimal polynomials then $m \mid m'$ and $m' \mid m$ and hence $m = m'$.
 
@@ -247,6 +247,46 @@ Therefore, an eigenvector is the generator of an one-dimensional $\alpha$-invari
 > $$
   f(\alpha)(\alpha(v)) = (f(\alpha)\alpha)(v) = (\alpha f(\alpha))(v) = \alpha(f(\alpha)(v)) = 0
   $$
+
+> *Lemma.*{: .lem}
+> Suppose that there are nonzero linear maps $\Set{\beta_1, ..., \beta_r}$ in $\text{End}(V)$ such that
+>
+> + $1 = \beta_1 + ... + \beta_r$;
+>
+> + $\beta_i \beta_j = \beta_j \beta_i = 0$ for $i \not= j$.
+>
+> Then
+>
+> + $\beta_i^2 = \beta_i$;
+>
+> + $V = \beta_1 V \oplus \cdots \oplus \beta_r V$ and each subspace $\beta_i V$ is different from zero.
+>
+> *Proof.*{: .prf}
+>
+> $\beta_i = \beta_i \cdot 1 = \beta_i(\beta_1 + ... + \beta_r) = \beta_i^2$.
+>
+> $\beta_i V$ is nonzero subspace since $\beta_i$ is nonzero linear map. For any $v \in V$,
+>
+> $$
+  v = 1(v) = \beta_1(v) + \cdots + \beta_r(v)
+  $$
+>
+> so $V = \beta_1 V + \cdots + \beta_r V$.
+>
+> Let $v_i \in \beta_i V$. Since $\beta_i \beta_j = 0$ and $v_j \in \beta_j V$, $\beta_i v_j = 0$ for $i \not= j$.
+> On the other hand, $\beta_i v_i = \beta_i^2 v = \beta_i v = v_i$.
+> Suppose that $v_1 + \cdots + v_r = 0$. Then for each $1 \le i \le r$,
+>
+> $$
+  \beta_i (v_1 + \cdots + v_r) = \beta_i v_i = v_i = 0
+  $$
+>
+> so $v_1 + \cdots + v_r = 0$ implies $v_1 = \cdots = v_r = 0$. Hence, $V = \beta_1 V \oplus \cdots \oplus \beta_r V$.
+
+> *Definition.*{: .def}
+> A linear map $\alpha \in \text{Env}(V)$ is **idempotent** if $\alpha^2 = \alpha \not= 0$.
+
+We are now ready to connect the minimal polynomial $m(x)$ of a linear map $\alpha \in \text{End}(V)$ with its underlying vector space $V$.
 
 ## References
 

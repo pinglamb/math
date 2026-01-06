@@ -212,7 +212,29 @@ Note that all the elements in $U$ are in the equivalence class $[0]$ so the quot
   \Set{(u, 0) : u \in U} \quad \text{and} \quad \Set{(0, v) : v \in V}
   $$
 
-The definition can be extended to $n$ vector spaces.
+More generally, we can make the following definitions.
+
+> *Definition.*{: .def}
+> If $U_1, ..., U_n$ are subspaces of $V$ then $V$ is the (internal) direct sum of $U_1, ..., U_n$, denoted by
+>
+> $$
+  V = U_1 \oplus \cdots \oplus U_n = \bigoplus_{i=1}^n U_i
+  $$
+>
+> if every element $v \in V$ can be written uniquely as $v = \sum u_i$ with $u_i \in U_i$.
+
+> *Proposition.*{: .prop}
+> $V$ is the direct sum of subspaces $U_1, ..., U_n$ iff
+>
+> + every vector $v \in V$ can be expressed in at least one way as $v = u_1 + ... + u_n$;
+>
+> + If $u_1 + ... + u_n = 0$, then $u_1 = ... = u_n = 0$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) If $V = U_1 \oplus \cdots \oplus U_n$ then obviously both are true.
+>
+> ($\Leftarrow$) Suppose that $u_1 + ... u_n = u_1' + ... + u_n'$, then $(u_1 - u_1') + ... + (u_n - u_n') = 0$ so $u_1 = u_1', ..., u_n = u_n'$ and the expression is unique.
 
 ## Reference
 
