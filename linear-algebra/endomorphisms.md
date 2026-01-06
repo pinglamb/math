@@ -207,6 +207,28 @@ We can define the same for matrices, i.e. $Av = \lambda v$ and the correspondenc
 >
 > Since the $\Set{\lambda_i}$ are distinct, by induction hypothesis, the above is only possible if $\mu_2 = ... = \mu_r = 0$ which implies $\mu_1 = 0$ and $\Set{v_i}$ are linaerly independent.
 
+> *Proposition.*{: .prop}
+> $\lambda$ is an eigenvalue of $\alpha$ iff the determinant $\det(\alpha - \lambda \iota) = 0$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) If $\lambda$ is an eigenvalue of $\alpha$, there exists $v \not= 0$ such that $(\alpha - \lambda \iota) v = 0$ which implies $\det(\alpha - \lambda \iota) = 0$.
+>
+> ($\Leftarrow$) If $\det(\alpha - \lambda \iota) = 0$, then $\alpha - \lambda \iota$ is not one to one and there exists distinct vectors $v_1, v_2$ such that
+>
+> $$
+  (\alpha - \lambda_i \iota) v_1 = (\alpha - \lambda_i \iota) v_2
+  $$
+>
+> and $v = v_1 - v_2 \not= 0$ satisfies $\alpha v = \lambda v$.
+
+> *Definition.*{: .def}
+> The **characteristic polynomial** of $\alpha$ is defined by
+>
+> $$
+  \chi_\alpha(\lambda) = \det(\lambda \iota - \alpha)
+  $$
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 6
