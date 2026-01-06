@@ -166,6 +166,13 @@ The uniqueness of minimal polynomial is the result from the fact that if both $m
 
 ## Eigenvalues and Eigenvectors
 
+It can be hard to determine the minimal polynomials of a given linear map. Instead of studying polynomials such that $f(\alpha)$ sends the whole vector space $V$ to zero,
+it is equally useful to study polynomials which send individual vectors to zero, which leads to the discussion of eigenvalues and eigenvectors.
+
+> *Definition.*{: .def}
+> Let $\alpha \in \text{End}(V)$. An element $\lambda \in \mathbf{F}$ is called a **characteristic root** (or **eigenvalue**) of $\alpha$ if there exists a vector $v \not= 0$ in $V$ such that $\alpha(v) = \lambda v$.
+> That nonzero vector $v$ is called a **characteristic vector** (or **eigenvector**) belonging to $\lambda$.
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 6
