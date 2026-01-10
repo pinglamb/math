@@ -17,7 +17,7 @@ title: Home
 * [Determinants of Matrices](linear-algebra/determinants-cont.md)
 * [Polynomials](linear-algebra/polynomials.md)
 * [Endomorphisms](linear-algebra/endomorphisms.md)
-* [Diagonalization and Triangular Form](linear-algebra/diagonalization-and-triangular-form.md)
+* [Diagonalization and Triangular Form](linear-algebra/diagonalization-triangular-form.md)
 * [Jordan Normal Form](linear-algebra/jordan-normal-form.md)
 
 ## Vector Calculus
