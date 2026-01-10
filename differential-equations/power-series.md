@@ -70,7 +70,7 @@ $$
 \end{align*}
 $$
 
-Substitude $x = 0$, we have $C = \ln 1 = 0$ and the radius of convergence is $R = 1$.
+Substitute $x = 0$, we have $C = \ln 1 = 0$ and the radius of convergence is $R = 1$.
 
 ## Taylor Series
 

@@ -44,7 +44,7 @@ The concept of the divisibility of one integer by another is central in number t
 >
 > Assume $a = bq + r = bq' + r'$, we have $b(q - q') = r' - r$.
 > So $b \mid r' - r$ and it is only possible when $r' - r = 0$ and thus $r' = r$.
-> Substituding it back, we have $q = q'$ as well and hence $q$ and $r$ are unique.
+> Substituting it back, we have $q = q'$ as well and hence $q$ and $r$ are unique.
 
 ## Greatest Common Divisors
 

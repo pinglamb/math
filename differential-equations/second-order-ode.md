@@ -301,7 +301,7 @@ This is the technique for finding the second linearly independent solution in ca
   x' = u'y + uy' \quad \text{and} \quad x'' = u''y + 2u'y' + uy''
   $$
 >
-> Substituding it back and grouping the terms containing $y$, we have
+> Substituting it back and grouping the terms containing $y$, we have
 >
 > $$
   \begin{align*}
@@ -353,7 +353,7 @@ This is the technique for finding the particular integral in case we already kno
   x_p''(t) = u_1(t)x_1''(t) + u_1'(t)x_1'(t) + u_2'(t)x_2'(t) + u_2(t)x_2''(t)
   $$
 >
-> Substituding them back to the original equation to get
+> Substituting them back to the original equation to get
 >
 > $$
   u_1[x_1'' + p(t)x_1' + q(t)x_1] + u_2[x_2'' + p(t)x_2' + q(t)x_2] + u_1'x_1' + u_2'x_2' = f(t)

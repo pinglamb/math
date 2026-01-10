@@ -67,7 +67,7 @@ The power series definition is consistent with the intuition described above.
 >
 > + $\exp(a)\exp(b) = \exp(a + b)$ as proved above.
 >
-> + Substituding $x = 0$ into the definition, we have $\exp(0) = 1$.
+> + Substituting $x = 0$ into the definition, we have $\exp(0) = 1$.
 >
 > + Let $\exp(1) = e$. As $\exp(0) = \exp(1 - 1) = \exp(1)\exp(-1) = (e)\exp(-1) = 1$, we have
 >

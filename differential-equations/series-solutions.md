@@ -288,7 +288,7 @@ The theorem provides a good way to find a lower bound of radius of convergence w
   \end{cases}
   $$
 >
-> To obtain the solutions in $x$, we just need to Substitude $\xi = -x$.
+> To obtain the solutions in $x$, we just need to substitute $\xi = -x$.
 > Hence, combining the solutions for $x > 0$ and $x < 0$, we have
 >
 > $$

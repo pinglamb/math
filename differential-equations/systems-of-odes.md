@@ -160,7 +160,7 @@ There is also a similar existence and uniqueness theorem which is omitted here.
 >
 > so $\lambda^\ast$ and $\mathbf{v}^\ast$ are also eigenvalue and eigenvector of $\mathbf{A}$.
 >
-> Substitude them into the general solution gives us
+> Substitute them into the general solution gives us
 >
 > $$
   \mathbf{x}(t) = c_1 \mathbf{v} e^{(\rho + i\omega)t} + c_2 \mathbf{v}^\ast e^{(\rho - i\omega)t}
