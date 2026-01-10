@@ -236,7 +236,7 @@ We can define the same for matrices, i.e. $Av = \lambda v$ and the correspondenc
 
 Therefore, an eigenvector is the generator of an one-dimensional $\alpha$-invariant subspace.
 
-> *Proposition.*{: .prop}
+> *Lemma.*{: .lem}
 > For any polynomial $f(x) \in \mathbf{F}[x]$, the kernel of $f(\alpha)$, i.e. the set of vectors such that $f(\alpha)(v) = 0$, is a $\alpha$-invariant subspace.
 >
 > *Proof.*{: .prf}
@@ -265,7 +265,9 @@ Therefore, an eigenvector is the generator of an one-dimensional $\alpha$-invari
 >
 > $\beta_i = \beta_i \cdot 1 = \beta_i(\beta_1 + ... + \beta_r) = \beta_i^2$.
 >
-> $\beta_i V$ is nonzero subspace since $\beta_i$ is nonzero linear map. For any $v \in V$,
+> $\beta_i V$ is nonzero subspace since $\beta_i$ is nonzero linear map.
+>
+> For any $v \in V$,
 >
 > $$
   v = 1(v) = \beta_1(v) + \cdots + \beta_r(v)
@@ -286,7 +288,117 @@ Therefore, an eigenvector is the generator of an one-dimensional $\alpha$-invari
 > *Definition.*{: .def}
 > A linear map $\alpha \in \text{Env}(V)$ is **idempotent** if $\alpha^2 = \alpha \not= 0$.
 
-We are now ready to connect the minimal polynomial $m(x)$ of a linear map $\alpha \in \text{End}(V)$ with its underlying vector space $V$.
+We are now ready to connect the minimal polynomial of a linear map with its underlying vector space, which is often called the _primary decomposition theorem_.
+
+> *Theorem.*{: .thm}
+> Let $m(x) = p_1(x)^{e_1} \cdots p_r(x)^{e_r}$ be the minimal polynomial of $\alpha \in \text{End}(V)$ factored into powers of distinct primes.
+> Then the subspaces $\ker p_i(\alpha)^{e_i}$ are $\alpha$-invariant subspaces and
+>
+> $$
+  V = \bigoplus_{i=1}^r \ker p_i(\alpha)^{e_i}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> By showing that there exists polynomials $\Set{f_1, ..., f_r}$ such that the linear maps $\beta_i = f_i(\alpha)$ satisfy
+>
+> + $\beta_i \not= 0$;
+>
+> + $1 = \beta_1 + ... + \beta_r$;
+>
+> + $\beta_i \beta_j = \beta_j \beta_i = 0$ for $i \not= j$;
+>
+> + $\beta_i V = \ker p_i(\alpha)^{e_i}$,
+>
+> we can prove the statement using the above lemmas.
+>
+> Let
+>
+> $$
+  q_i(x) = {m(x) \over p_i(x)^{e_i}}
+  $$
+>
+> Since all the $\Set{q_i(x)}$ are relatively prime, there exists polynomials $a_i(x)$ such that
+>
+> $$
+  1 = q_1(x) a_1(x) + \cdots + q_r(x) a_r(x)
+  $$
+>
+> Let $f_i(x) = q_i(x) a_i(x)$ and $\beta_i = f_i(\alpha) = q_i(\alpha) a_i(\alpha)$, we have
+>
+> $$
+  1 = \beta_1 + \cdots + \beta_r
+  $$
+>
+> and similar to the above lemma, $V = \beta_1 V + \cdots + \beta_r V$.
+>
+> Next, since $m(x) \mid q_i(x) q_j(x)$ for $i \not= j$, we have
+>
+> $$
+  \beta_i \beta_j = \beta_j \beta_i = q_i(\alpha) a_i(\alpha) q_j(\alpha) a_j(\alpha) = 0
+  $$
+>
+> Furthermore, if $\beta_i V = 0$ for some $i$, then $V = \sum_{j \not= i} \beta_j V$ and
+>
+> $$
+  q_i(\alpha) V = q_i(\alpha) \sum_{j \not= i} \beta_j V = \sum_{j \not= i} q_i(\alpha) q_j(\alpha) a_j(\alpha) V = 0
+  $$
+>
+> since $m(x) \mid q_i(x) q_j(x)$. Thus, $q_i(\alpha) = 0$ contradicting the assumption that $m(x)$ is the minimal polynomial and therefore $\beta_i V \not= 0$ and $\beta_i \not= 0$.
+>
+> By the above lemma, we can conclude that
+>
+> $$
+  V = \beta_1 V \oplus \cdots \oplus \beta_r V
+  $$
+>
+> Moreover,
+>
+> $$
+  \alpha(\beta_i V) = (\alpha f_i(\alpha)) V = (f_i(\alpha) \alpha) V = \beta_i (\alpha V) \subseteq \beta_i V
+  $$
+>
+> so $\beta_i V$ is a $\alpha$-invariant subspace.
+>
+> Finally, for all $v \in V$, we have
+>
+> $$
+  p_i(\alpha)^{e_i}(\beta_i(v)) = (p_i(\alpha)^{e_i} q_i(\alpha) a_i(\alpha))(v) = (m(\alpha)a_i(\alpha))(v) = 0
+  $$
+>
+> so $\beta_i V \subseteq \ker p_i(\alpha)^{e_i}$.
+>
+> On the other hand, let $v \in \ker p_i(\alpha)^{e_i}$ and express $v$ in the form $v = \beta_1 v_1 + \cdots + \beta_r v_r$, then
+>
+> $$
+  p_i(\alpha)^{e_i}(v) = p_i(\alpha)^{e_i} \beta_1 v_1 + \cdots + p_i(\alpha)^{e_i} \beta_r v_r = 0
+  $$
+>
+> Since $V$ is the direct sum of the subspaces $\beta_i V$, we have
+>
+> $$
+  p_i(\alpha)^{e_i} \beta_1 v_1 = \cdots = p_i(\alpha)^{e_i} \beta_r v_r = 0
+  $$
+>
+> For $j \not= i$, since $p_i(x)$ and $p_j(x)$ are distinct primes, there exists $a_i(x)$ and $a_j(x)$ such that
+>
+> $$
+  1 = p_i(x)^{e_i} a_i(x) + p_j(x)^{e_j} a_j(x)
+  $$
+>
+> and by substituting $\alpha$ and applying both sides to $\beta_j v_j$, we have
+>
+> $$
+  \beta_j v_j = a_i(\alpha)(p_i(\alpha)^{e_i} \beta_j v_j) + a_j(\alpha)(p_j(\alpha)^{e_j} \beta_j v_j) = 0
+  $$
+>
+> so
+>
+> $$
+  v = \beta_1 v_1 + \cdots + \beta_r v_r = \beta_i v_i \in \beta_i V
+  $$
+>
+> and $\ker p_i(\alpha)^{e_i} \subseteq \beta_i V$. Hence, $\beta_i V = \ker p_i(\alpha)^{e_i}$.
 
 ## References
 
