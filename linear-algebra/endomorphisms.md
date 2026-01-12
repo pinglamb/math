@@ -133,7 +133,7 @@ Since $\dim \text{End}(V) = n^2$, for a fixed linear map $\alpha \in \text{End}(
 That means there exists a nonzero polynomial
 
 $$
-f(x) = \lambda_0 + \lambda_1 x + ... + \lambda_{n^2} x^{n^2} \in \mathbf{F}[x]
+f(x) = a_0 + a_1 x + ... + a_{n^2} x^{n^2} \in \mathbf{F}[x]
 $$
 
 such that $f(\alpha) = 0$.
@@ -143,10 +143,10 @@ such that $f(\alpha) = 0$.
 > Then
 >
 > $$
-  \alpha^r = \lambda_0 \cdot 1 + \lambda_1 \alpha + ... + \lambda_{r-1} \alpha^{r-1}
+  \alpha^r = a_0 \iota + a_1 \alpha + ... + a_{r-1} \alpha^{r-1}
   $$
 >
-> Let $m(x) = x^r - \lambda\_{r-1} x^{r-1} - ... - \lambda_0 \cdot 1 \in \mathbf{F}[x]$. Then
+> Let $m(x) = x^r - a\_{r-1} x^{r-1} - ... - a_0 \iota \in \mathbf{F}[x]$. Then
 >
 > + $m(x)$ is nonzero and $m(\alpha) = 0$;
 >
@@ -163,6 +163,21 @@ such that $f(\alpha) = 0$.
 > The **minimal polynomial** of a linear map $\alpha \in \text{End}(V)$ is the nonzero monic polynomial of least degree such that $m(\alpha) = 0$ and it is well-defined.
 
 The uniqueness of minimal polynomial is the result from the fact that if both $m(x)$ and $m'(x)$ are minimal polynomials then $m \mid m'$ and $m' \mid m$ and hence $m = m'$.
+Also, the bijective correspondence between linear maps and matrices allows us to define same for matrices.
+
+> *Proposition.*{: .prop}
+> The minimal polynomials of a linear map $\alpha$ and its matrix representation $A$ with respect any basis of $V$ are the same, i.e.
+> if matrices $A$ and $B$ are similar, then they have the same minimal polynomial.
+>
+> *Proof.*{: .prf}
+>
+> $A$ and $B$ are similar means $B = P^{-1}AP$. Let $m_A(x)$ and $m_B(x)$ be the minimal polynomial of $A$, then
+>
+> $$
+  m_A(B) = m_A(P^{-1}AP) = P^{-1} m_A(A) P = 0
+  $$
+>
+> since $a_k(P^{-1}AP)^k = P^{-1}(a_kA^k)P$ and $a_0 I = P^{-1} (a_0 I) P$. Hence, $m_B(x) \mid m_A(x)$ and similarily $m_A(x) \mid m_B(x)$ so $m_A(x) = m_B(x)$.
 
 ## Eigenvalues and Eigenvectors
 
@@ -251,7 +266,7 @@ Therefore, an eigenvector is the generator of an one-dimensional $\alpha$-invari
 > *Lemma.*{: .lem}
 > Suppose that there are nonzero linear maps $\Set{\beta_1, ..., \beta_r}$ in $\text{End}(V)$ such that
 >
-> + $1 = \beta_1 + ... + \beta_r$;
+> + $\beta_1 + ... + \beta_r = \iota$;
 >
 > + $\beta_i \beta_j = \beta_j \beta_i = 0$ for $i \not= j$.
 >
@@ -263,17 +278,11 @@ Therefore, an eigenvector is the generator of an one-dimensional $\alpha$-invari
 >
 > *Proof.*{: .prf}
 >
-> $\beta_i = \beta_i \cdot 1 = \beta_i(\beta_1 + ... + \beta_r) = \beta_i^2$.
+> $\beta_i = \beta_i \iota = \beta_i(\beta_1 + ... + \beta_r) = \beta_i^2$.
 >
 > $\beta_i V$ is nonzero subspace since $\beta_i$ is nonzero linear map.
 >
-> For any $v \in V$,
->
-> $$
-  v = 1(v) = \beta_1(v) + \cdots + \beta_r(v)
-  $$
->
-> so $V = \beta_1 V + \cdots + \beta_r V$.
+> For any $v \in V$, $v = \iota(v) = \beta_1(v) + \cdots + \beta_r(v)$ so $V = \beta_1 V + \cdots + \beta_r V$.
 >
 > Let $v_i \in \beta_i V$. Since $\beta_i \beta_j = 0$ and $v_j \in \beta_j V$, $\beta_i v_j = 0$ for $i \not= j$.
 > On the other hand, $\beta_i v_i = \beta_i^2 v = \beta_i v = v_i$.
@@ -304,7 +313,7 @@ We are now ready to connect the minimal polynomial of a linear map with its unde
 >
 > + $\beta_i \not= 0$;
 >
-> + $1 = \beta_1 + ... + \beta_r$;
+> + $\beta_1 + ... + \beta_r = \iota$;
 >
 > + $\beta_i \beta_j = \beta_j \beta_i = 0$ for $i \not= j$;
 >
@@ -321,13 +330,13 @@ We are now ready to connect the minimal polynomial of a linear map with its unde
 > Since all the $\Set{q_i(x)}$ are relatively prime, there exists polynomials $a_i(x)$ such that
 >
 > $$
-  1 = q_1(x) a_1(x) + \cdots + q_r(x) a_r(x)
+  q_1(x) a_1(x) + \cdots + q_r(x) a_r(x) = 1
   $$
 >
 > Let $f_i(x) = q_i(x) a_i(x)$ and $\beta_i = f_i(\alpha) = q_i(\alpha) a_i(\alpha)$, we have
 >
 > $$
-  1 = \beta_1 + \cdots + \beta_r
+  \beta_1 + \cdots + \beta_r = \iota
   $$
 >
 > and similar to the above lemma, $V = \beta_1 V + \cdots + \beta_r V$.
@@ -383,7 +392,7 @@ We are now ready to connect the minimal polynomial of a linear map with its unde
 > For $j \not= i$, since $p_i(x)$ and $p_j(x)$ are distinct primes, there exists $a_i(x)$ and $a_j(x)$ such that
 >
 > $$
-  1 = p_i(x)^{e_i} a_i(x) + p_j(x)^{e_j} a_j(x)
+  p_i(x)^{e_i} a_i(x) + p_j(x)^{e_j} a_j(x) = 1
   $$
 >
 > and by substituting $\alpha$ and applying both sides to $\beta_j v_j$, we have

@@ -56,6 +56,8 @@ Note that the theorem doesn't require the linear map has $n$ distinct eigenvalue
   E(\lambda) = \ker (\alpha - \lambda \iota)
   $$
 
+In the proof of the theorem we can see that $V = E(\lambda_1) \oplus \cdots \oplus E(\lambda_r)$.
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 6
