@@ -48,6 +48,7 @@ With the relationship between endomorphism and its minimal polynomial establishe
 > For any $v\_{ij} \in \ker (\alpha - \lambda_i \cdot \iota)$ with $v\_{ij} \not= 0$, $(\alpha - \lambda_i \cdot \iota) v\_{ij} = 0$ implies $\alpha v\_{ij} = \lambda_i v\_{ij}$ so $\Set{v\_{ij}}$ are indeed eigenvectors of the endomorphism $\alpha$.
 
 Note that the theorem doesn't require the linear map has $n$ distinct eigenvalues to be diagonalizable.
+Also, we give a special name to these kernels.
 
 > *Definition.*{: .def}
 > The $\lambda$-**eigenspace** of $\alpha$, denoted by $E_\alpha(\lambda)$ or simply $E(\lambda)$, is the subspace of $\lambda$-eigenvectors of $\alpha$, i.e.
@@ -57,6 +58,17 @@ Note that the theorem doesn't require the linear map has $n$ distinct eigenvalue
   $$
 
 In the proof of the theorem we can see that $V = E(\lambda_1) \oplus \cdots \oplus E(\lambda_r)$.
+We can translate the above theorem into a similar one for matrices.
+
+> *Corollary.*{: .cor}
+> A matrix $A \in \text{Mat}_n(\mathbf{F})$ is similar to a diagonal matrix $D$ iff the minimal polynomial of $A$ has the form
+>
+> $$
+  m(x) = (x - \lambda_1) \cdots (x - \lambda_r)
+  $$
+>
+> with distinct $\lambda_i \in \mathbf{F}$, i.e. $D = P^{-1}AP$.
+> $D$ has diagonal entries $\Set{\lambda_i, ..., \lambda_n}$ given by the eigenvalues of $A$, repeated if necessary; and $P$ is the invertible matrix whose columns are the corresponding eigenvectors.
 
 ## References
 
