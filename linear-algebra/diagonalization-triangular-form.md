@@ -58,6 +58,8 @@ Also, we give a special name to these kernels.
   $$
 
 In the proof of the theorem we can see that $V = E(\lambda_1) \oplus \cdots \oplus E(\lambda_r)$.
+Also note that the $E(0)$ is equivalent to the nullspace of the linear map so $\dim E(0) = n(\alpha)$.
+
 We can translate the above theorem into a similar one for matrices.
 
 > *Corollary.*{: .cor}
