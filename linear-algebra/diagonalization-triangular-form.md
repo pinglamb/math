@@ -70,6 +70,38 @@ We can translate the above theorem into a similar one for matrices.
 > with distinct $\lambda_i \in \mathbf{F}$, i.e. $D = P^{-1}AP$.
 > $D$ has diagonal entries $\Set{\lambda_i, ..., \lambda_n}$ given by the eigenvalues of $A$, repeated if necessary; and $P$ is the invertible matrix whose columns are the corresponding eigenvectors.
 
+> *Theorem.*{: .thm}
+> Let $\alpha_1, ..., \alpha_k \in \text{End}(V)$ be diagonalizable.
+> Then there exists a basis of $V$ such that the basis vectors are eigenvectors simultaneously for the endomorphisms iff $\alpha_i \alpha_j = \alpha_j \alpha_i$ for $1 \le i, j \le k$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) If $\alpha_1, ..., \alpha_k$ are diagonalizable, then for sure they commute.
+>
+> ($\Leftarrow$) For $\dim V = 1$, it is obviously true since any vectors are eigenvectors and any matrix representations are diagonal.
+> Assume the statement is true for sets of linear maps acting on lower dimensional vector spaces.
+> Suppose that $\alpha_i$ are ordered in a way that $\alpha_1$ has the most number of eigenvalues.
+> If all the linear maps $\alpha_i$ have only one eigenvalue, then $\alpha_i = \lambda_i \iota$ so any basis will consist of eigenvectors for $\Set{\alpha_i}$.
+>
+> Let $\lambda_1, ..., \lambda_r$ be the distinct eigenvalues of $\alpha_1$ with $r > 1$ and $E_i = E\_{\alpha_1}(\lambda_i)$ for $1 \le i \le r$.
+> Since $\alpha_1$ is diagonalizable, we have
+>
+> $$
+  V = E_1 \oplus \cdots \oplus E_r
+  $$
+>
+> For any $v \in E_i$, we have
+>
+> $$
+  \alpha_1(\alpha_j v) = \alpha_j \alpha_1 v = \alpha_j(\lambda_i v) = \lambda_i (\alpha_j(v))
+  $$
+>
+> so $\alpha_j(v) \in E_i$ and $\alpha_j\|_{E_i} \in \text{End}(E_i)$.
+>
+> Let $m_j\|\_{E_i}(x)$ be the minimal polynomial of $\alpha_j\|\_{E_i}$, we have $m_j\|\_{E_i}(\alpha_j) = 0$ so $m_j\|\_{E_i} \mid m_j\|\_V$.
+> Since $\alpha_j$ is diagonalizable, $m_j\|\_V$ consists of distinct linear factors and so as $m_j\|\_{E_i}$ and therefore $\alpha_j\|\_{E_i}$ is diagonalizable.
+> By induction hypothesis, each of the subspace $E_i$ has a basis such that the basis vectors are eigenvectors simultaneously for the endomorphisms and their union is the required basis for $V$.
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 6
