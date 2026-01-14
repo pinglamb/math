@@ -401,7 +401,8 @@ We are now ready to connect the minimal polynomial of a linear map with its unde
   \beta_j v_j = a_i(\alpha)(p_i(\alpha)^{e_i} \beta_j v_j) + a_j(\alpha)(p_j(\alpha)^{e_j} \beta_j v_j) = 0
   $$
 >
-> so
+> which means every $\beta_j v_j$ can be expressed as a sum of the above two terms in which the second term is always zero and first term being zero is concluded earlier.
+> Hence,
 >
 > $$
   v = \beta_1 v_1 + \cdots + \beta_r v_r = \beta_i v_i \in \beta_i V
