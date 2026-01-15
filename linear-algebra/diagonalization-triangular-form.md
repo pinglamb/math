@@ -185,6 +185,41 @@ We can translate the above theorem into a similar one for matrices.
 
 When a linear map fails to diagonalize, we would still want a way to come as close to that.
 
+Before addressing the main theorem, we will visit some preliminary concepts which is useful in the proof.
+
+> *Definition.*{: .def}
+> A linear map $\alpha \in \text{End}(V)$ is **nilpotent** if $\alpha^k = 0$ for some positive integer $k$.
+
+> *Proposition.*{: .prop}
+> Suppose that $V$ is finite dimensional and $\alpha \in \text{End}(V)$ is nilpotent. Then $V$ has a basis $\Set{v_1, ..., v_n}$ such that
+>
+> $$
+  \alpha(v_1) = 0, \qquad \alpha(v_i) = \langle v_1, ..., v_{i-1} \rangle, \; 2 \le i \le n
+  $$
+>
+> *Proof.*{: .prf}
+>
+> There is trivial if $\alpha = 0$. If $\alpha \not= 0$, there exist $k \ge 1$ such that $\alpha^k \not= 0$ but $\alpha^{k+1} = 0$.
+> Therefore, we can always find $v \in V$ such that $v_1 = \alpha^k(v) \not= 0$ but $\alpha(v_1) = 0$.
+>
+> Assume we have found $\Set{v_1, ..., v_k}$ satisfying the above conditions such that $S = \langle v_1, ..., v_k \rangle \not= V$.
+> If $\text{Im}(\alpha) \subset S$, then any vector not in $S$ can be taken for $v_{k+1}$ since $\alpha(v_{k+1}) \in S$ as required.
+> If $\text{Im}(\alpha) \not\subset S$, then there is an integer $u$ such that $\text{Im}(\alpha^u) \not\subset S$ but $\text{Im}(\alpha^{u+1}) \subset S$.
+> Then pick any vector $v_{k+1} \in \text{Im}(\alpha^u)$ such that $v_{k+1} \not \in S$ and $\Set{v_1, ..., v_{k+1}}$ is linearly independent and $\alpha(v_{k+1}) \in S$.
+> The proof completes when $S = V$.
+
+Note that the matrix of $\alpha$ with respect to such basis will be of the form
+
+$$
+\begin{pmatrix}
+0 & \ast & \ast & \cdots & \ast \\
+0 & 0 & \ast & \cdots & \ast \\
+\vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & 0 & 0 & \ast \\
+0 & 0 & 0 & 0 & 0 \\
+\end{pmatrix}
+$$
+
 > *Definition.*{: .def}
 > An endomorphism $\alpha \in \text{End}(V)$ is **triangulable** if there exists a basis for $V$ such that the corresponding matrix is upper triangular.
 
@@ -207,6 +242,57 @@ When a linear map fails to diagonalize, we would still want a way to come as clo
 >
 > *Proof.*{: .prf}
 >
+> Let $V_i = \ker(\alpha - \lambda_i)^{e_i}$ for $1 \le i \le r$. Then we have $V = V_1 \oplus \cdots \oplus V_r$.
+> Let $d_i = \dim V_i$. Then $(v_{11}, ..., v_{1 d_1}, v_{21}, ...)$ is a basis for $V$.
+> Since each subspace $V_i$ is $\alpha$-invariant, the matrix representing $\alpha$ with respect to this basis is of the form
+>
+> $$
+  A = \begin{pmatrix}
+  A_1 & & 0 \\
+  & \ddots \\
+  0 & & A_r
+  \end{pmatrix}
+  $$
+>
+> For each space $V_i$, let $\mu_i = \alpha - \lambda_i \iota$. $\mu_i \in \text{End}(V_i, V_i)$ since for $v \in V_i$,
+>
+> $$
+  (\alpha - \lambda_i \iota)^{e_i} (\mu_i v) = (\alpha - \lambda_i \iota)^{e_i + 1}(v) = 0
+  $$
+>
+> so $\mu_i(v) \in V_i$. Also, $\mu_i$ is nilpotent since $\mu_i^{e_i} = 0$.
+> Thus, $V_i$ has a basis $\Set{v\_{i1}, ..., v_{i d_i}}$ such that $\mu_i(v_{i1}) = 0$ and $\mu_i(v_{ij}) = \langle v_{i1}, ... v_{i\,j-1} \rangle$.
+> By substituting $\mu_i = \alpha - \lambda_i \iota$ back, we have
+>
+> $$
+  \begin{align*}
+  \alpha v_{i1} &= \lambda_i v_{i1} \\
+  \alpha v_{i2} &= a_{21} v_{i1} + \lambda_i v_{i2} \\
+  &\vdots \\
+  \alpha v_{i d_i} &= a_{d_i 1} v_{i1} + a_{d_i 2} v_{i2} + \cdots + \lambda_i v_{i d_i} \\
+  \end{align*}
+  $$
+>
+> so the corresponding matrix with respect to the basis is of the upper triangular form
+>
+> $$
+  A_i = \begin{pmatrix}
+  \lambda_i & a_{21} & \cdots & a_{d_i 1} \\
+  0 & \lambda_i & \cdots & a_{d_i 2} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  0 & \cdots & 0 & \lambda_i
+  \end{pmatrix}
+  $$
+>
+> Since $\mu_i^{d_i} = (\alpha - \lambda_i \iota)^{d_i} = 0$ for each $V_i$ and $V$ is direct sum of $\Set{V_i}$, we have
+>
+> $$
+  f(\alpha) = (\alpha - \lambda_1)^{d_1} \cdots (\alpha - \lambda_r)^{d_r} = 0
+  $$
+>
+> so $m(x) \mid f(x)$ which implies $d_i \ge e_i$.
+
+It means that if $\mathbf{F}$ is algebraically closed, e.g. $\mathbf{C}$, then the linear map is always triangulable.
 
 ## Cayley-Hamilton Theorem
 
