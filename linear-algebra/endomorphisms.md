@@ -179,77 +179,10 @@ Also, the bijective correspondence between linear maps and matrices allows us to
 >
 > since $a_k(P^{-1}AP)^k = P^{-1}(a_kA^k)P$ and $a_0 I = P^{-1} (a_0 I) P$. Hence, $m_B(x) \mid m_A(x)$ and similarily $m_A(x) \mid m_B(x)$ so $m_A(x) = m_B(x)$.
 
-## Eigenvalues and Eigenvectors
-
-It can be hard to determine the minimal polynomials of a given linear map. Instead of studying polynomials such that $f(\alpha)$ sends the whole vector space $V$ to zero,
-it is equally useful to study polynomials which send individual vectors to zero, which leads to the discussion of eigenvalues and eigenvectors.
-
-> *Definition.*{: .def}
-> Let $\alpha \in \text{End}(V)$. An element $\lambda \in \mathbf{F}$ is called a **characteristic root** (or **eigenvalue**) of $\alpha$ if there exists a vector $v \not= 0$ in $V$ such that $\alpha(v) = \lambda v$.
-> That nonzero vector $v$ is called a **characteristic vector** (or **eigenvector**) belonging to $\lambda$.
-
-We can define the same for matrices, i.e. $Av = \lambda v$ and the correspondence between linear maps and matrices show that $\lambda$ is a eigenvalue of $\alpha$ iff $\lambda$ is a eigenvalue of the matrix of $\alpha$ with respect to any basis.
-
-> *Proposition.*{: .prop}
-> Let $v_1, ..., v_r$ be eigenvectors belonging to distinct eigenvalues $\lambda_1, ..., \lambda_r$ of $\alpha \in \text{End}(V)$. Then $\Set{v_1, ..., v_r}$ are linearly independent.
->
-> *Proof.*{: .prf}
->
-> It is obviously true for $r = 1$. Assume it is true for any set fewer than $r$ vectors. Suppose that
->
-> $$
-  \mu_1 v_1 + \mu_2 v_2 + ... + \mu_r v_r = 0
-  $$
->
-> If any of the $\Set{\mu_i}$ are zero, all of them must be zero due to the induction hypothesis and $\Set{v_i}$ are linearly independent.
-> Suppose all $\mu_i \not= 0$, we have
->
-> $$
-  \alpha(\mu_1 v_1 + \mu_2 v_2 + ... + \mu_r v_r) = \mu_1 \lambda_1 v_1 + \mu_2 \lambda_2 v_2 + ... + \mu_r \lambda_r v_r = 0
-  $$
->
-> and
->
-> $$
-  \lambda_1(\mu_1 v_1 + \mu_2 v_2 + ... + \mu_r v_r) = \mu_1 \lambda_1 v_1 + \mu_2 \lambda_1 v_2 + ... + \mu_r \lambda_1 v_r = 0
-  $$
->
-> so by subtracting one from the other, we have
->
-> $$
-  \mu_2 (\lambda_2 - \lambda_1) v_2 + \mu_3 (\lambda_3 - \lambda_1) v_3 + ... + \mu_r (\lambda_r - \lambda_1) v_r = 0
-  $$
->
-> Since the $\Set{\lambda_i}$ are distinct, by induction hypothesis, the above is only possible if $\mu_2 = ... = \mu_r = 0$ which implies $\mu_1 = 0$ and $\Set{v_i}$ are linaerly independent.
-
-> *Proposition.*{: .prop}
-> $\lambda$ is an eigenvalue of $\alpha$ iff the determinant $\det(\alpha - \lambda \iota) = 0$.
->
-> *Proof.*{: .prf}
->
-> ($\Rightarrow$) If $\lambda$ is an eigenvalue of $\alpha$, there exists $v \not= 0$ such that $(\alpha - \lambda \iota) v = 0$ which implies $\det(\alpha - \lambda \iota) = 0$.
->
-> ($\Leftarrow$) If $\det(\alpha - \lambda \iota) = 0$, then $\alpha - \lambda \iota$ is not one to one and there exists distinct vectors $v_1, v_2$ such that
->
-> $$
-  (\alpha - \lambda_i \iota) v_1 = (\alpha - \lambda_i \iota) v_2
-  $$
->
-> and $v = v_1 - v_2 \not= 0$ satisfies $\alpha v = \lambda v$.
-
-> *Definition.*{: .def}
-> The **characteristic polynomial** of $\alpha$ is defined by
->
-> $$
-  \chi_\alpha(\lambda) = \det(\lambda \iota - \alpha)
-  $$
-
 ## Invariant Subspaces
 
 > *Definition.*{: .def}
 > A subspace $U$ of $V$ is called an **invariant subspace** relative to $\alpha$ (or simply $\alpha$-invariant subspace or $\alpha$-subspace) if $\alpha(u) \in U$ for all $u \in U$.
-
-Therefore, an eigenvector is the generator of an one-dimensional $\alpha$-invariant subspace.
 
 > *Lemma.*{: .lem}
 > For any polynomial $f(x) \in \mathbf{F}[x]$, the kernel of $f(\alpha)$, i.e. the set of vectors such that $f(\alpha)(v) = 0$, is a $\alpha$-invariant subspace.
