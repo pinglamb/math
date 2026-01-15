@@ -252,6 +252,51 @@ The result has many imporatnt implications regarding eigenvalues, minimal polyno
 > Alternatively, if $m_\alpha(\lambda) = 0$, then $m_\alpha(x) = (x - \lambda)q(x)$ where $q(\alpha) \not= 0$.
 > Therefore, there exists $v \in V$ such that $q(\alpha)(v) \not= 0$ and $(\alpha - \lambda \iota)(q(\alpha)(v)) = m_\alpha(\alpha)(v) = 0$ so $q(\alpha)(v)$ is an $\lambda$-eigenvector and (3) implies (1).
 
+## Multiplicities of Eigenvalues
+
+> *Definition.*{: .def}
+> Suppose that $\alpha \in \text{End}(V)$ and $\lambda$ is an eigenvalue of $\alpha$:
+>
+> + the **algebraic multiplicity** $a_\lambda$ is the multiplicity of $\lambda$ as a root of $\chi_\alpha(x)$;
+>
+> + the **geometric multiplicity** $g_\lambda$ is the dimension of its eigenspace, i.e. $\dim E(\lambda)$;
+>
+> + the multiplicity of $\lambda$ as a root of $m_\alpha(x)$ is denoted by $c_\lambda$.
+
+> *Proposition.*{: .prop}
+> Suppose that $\alpha \in \text{End}(V)$ and $\lambda$ is an eigenvalue of $\alpha$. Then
+>
+> + $1 \le g_\lambda \le a_\lambda$;
+>
+> + $1 \le c_\lambda \le a_\lambda$.
+>
+> *Proof.*{: .prf}
+>
+> By definition if $\lambda$ is an eigenvalue then $E(\lambda) \not= 0$ so $g_\lambda \ge 1$.
+> Moreover, $\chi_\alpha(x) = (x - \lambda)^{g_\lambda} \chi_{\bar{\alpha}}(x)$ where $\bar{\alpha} \in \text{End}(V / E(\lambda))$ so $a_\lambda \ge g_\lambda$.
+>
+> By Cayley-Hamilton Theorem, $\lambda$ is a root of $m_\alpha(x)$ so $c_\lambda \ge 1$. $m_\alpha(x) \mid \chi_\alpha(x)$ so $a_\lambda \ge c_\lambda$.
+
+> *Proposition.*{: .prop}
+> Suppose that $V$ is a vector space of an algebraic closed field $\mathbf{F}$, e.g. $\mathbf{F} = \mathbf{C}$, and $\alpha \in \text{End}(V)$. Then the following are equivalent:
+>
+> + $\alpha$ is diagonalizable;
+>
+> + $a_\lambda = g_\lambda$ for all eigenvalues of $\alpha$;
+>
+> + $c_\lambda = 1$ for all eigenvalues of $\alpha$.
+>
+> *Proof.*{: .prf}
+>
+> (1) and (3) are equivalent since $m_\alpha(x)$ consists of distinct linear factors iff $\alpha$ is diagonalizable.
+> Let $\lambda_1, ..., \lambda_r$ be distinct eigenvalues of $\alpha$, then $\alpha$ is diagonalizable iff $V = E(\lambda_1) \oplus \cdots \oplus E(\lambda_r)$ so
+>
+> $$
+  \dim V = \sum \dim E(\lambda_i) = \sum g_{\lambda_i}
+  $$
+>
+> But each $g_{\lambda_i} \le a_{\lambda_i}$ and $\sum a_{\lambda_i} = \deg \chi_\alpha(x) = \dim V$ so $a_\lambda = g_\lambda$.
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 6
