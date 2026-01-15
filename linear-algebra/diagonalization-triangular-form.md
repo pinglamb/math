@@ -77,9 +77,10 @@ We can define the same for matrices, i.e. $Av = \lambda v$ and the correspondenc
 > The **characteristic polynomial** of $\alpha$ is defined by
 >
 > $$
-  \chi_\alpha(\lambda) = \det(\lambda \iota - \alpha)
+  \chi_\alpha(x) = \det(x \iota - \alpha)
   $$
 
+We can define the same for matrices, i.e. $\chi_A(x) = \det(xI - A)$.
 Similar to minimal polynomial, the characteristic polynomial is independent of the choice of basis, i.e. the characteristic polynomial of $\alpha$ is well-defined.
 
 > *Proposition.*{: .prop}
@@ -90,7 +91,7 @@ Similar to minimal polynomial, the characteristic polynomial is independent of t
 > Let $A$ and $B$ be similar, i.e. $B = P^{-1}AP$. Then
 >
 > $$
-  \det(\lambda I - B) = \det(\lambda I - P^{-1}AP) = \det P^{-1} (\lambda I - A) P = \det P^{-1} \det (\lambda I - A) \det P = \det(\lambda I - A)
+  \det(xI - B) = \det(xI - P^{-1}AP) = \det P^{-1} (xI - A) P = \det P^{-1} \det (xI - A) \det P = \det(xI - A)
   $$
 
 ## Diagonalization
