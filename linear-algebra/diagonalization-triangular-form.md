@@ -6,8 +6,7 @@ title: Diagonalization and Triangular Form &#124; Linear Algebra
 # Diagonalization and Triangular Form
 {: .page-title}
 
-It can be hard to find the minimal polynomials of a given linear map. Instead of studying polynomials such that $f(\alpha)$ sends the whole vector space $V$ to zero,
-it is equally useful to study polynomials which send individual vectors to zero, which leads to the discussion of eigenvalues and eigenvectors.
+It can be equally useful to study polynomials which send individual vectors to zero, which leads to the discussion of eigenvalues and eigenvectors.
 
 ## Eigenvalues and Eigenvectors
 
@@ -181,6 +180,77 @@ We can translate the above theorem into a similar one for matrices.
 > Let $m_j\|\_{E_i}(x)$ be the minimal polynomial of $\alpha_j\|\_{E_i}$, we have $m_j\|\_{E_i}(\alpha_j) = 0$ so $m_j\|\_{E_i} \mid m_j\|\_V$.
 > Since $\alpha_j$ is diagonalizable, $m_j\|\_V$ consists of distinct linear factors and so as $m_j\|\_{E_i}$ and therefore $\alpha_j\|\_{E_i}$ is diagonalizable.
 > By induction hypothesis, each of the subspace $E_i$ has a basis such that the basis vectors are eigenvectors simultaneously for the endomorphisms and their union is the required basis for $V$.
+
+## Triangular Form
+
+When a linear map fails to diagonalize, we would still want a way to come as close to that.
+
+> *Definition.*{: .def}
+> An endomorphism $\alpha \in \text{End}(V)$ is **triangulable** if there exists a basis for $V$ such that the corresponding matrix is upper triangular.
+
+> *Theorem.*{: .thm}
+> **[Triangular Form Theorem]**
+> An endomorphism $\alpha \in \text{End}(V)$ is triangulable iff the minimal polynomial $m(x)$ of $\alpha$ is a product of linear factors.
+> Let $m(x) = (x - \lambda_1)^{e_1} \cdots (x - \lambda_r)^{e_r}$ where $\Set{e_i}$ are positive integers and $\Set{\lambda_i}$ are distinct.
+> Then there exists a basis of $V$ such that the matrix $A$ of $\alpha$ with respect to this basis has the form
+>
+> $$
+  A = \begin{pmatrix}
+  A_1 & & & 0 \\
+  & A_2 \\
+  & & \ddots \\
+  0 & & & A_r
+  \end{pmatrix}
+  $$
+>
+> where the matrices $\Set{A_i}$ is $d_i$-by-$d_i$ for $d_i \ge e_i$ and upper triangular and therefore $A$ is also upper triangular.
+>
+> *Proof.*{: .prf}
+>
+
+## Cayley-Hamilton Theorem
+
+It can be hard to determine the minimal polynomial of a given linear map, but there is an important theorem to estabish its relationship with the characteristic polynomial.
+
+> *Theorem.*{: .thm}
+> **[Cayley-Hamilton Theorem]**
+> Suppose that $V$ is a finite dimensional vector space over $\mathbf{F}$ and $\alpha \in \text{End}(V)$. Then $\chi_\alpha(\alpha) = 0$.
+>
+> *Proof.*{: .prf}
+>
+
+The result has many imporatnt implications regarding eigenvalues, minimal polynomials and characteristic polynomials.
+
+> *Corollary.*{: .cor}
+> Suppose that $V$ is a finite dimensional vector space over $\mathbf{F}$ and $\alpha \in \text{End}(V)$. Then
+>
+> $$
+  m_\alpha(x) \mid \chi_\alpha(x)
+  $$
+>
+> and so $\deg m_\alpha \le \dim V$.
+
+> *Proposition.*{: .cor}
+> Let $\alpha \in \text{End}(V)$ and $\lambda \in \mathbf{F}$. Then the following are equivalent:
+>
+> + $\lambda$ is an eigenvalue of $\alpha$;
+>
+> + $\lambda$ is a root of $\chi_\alpha(x)$;
+>
+> + $\lambda$ is a root of $m_\alpha(x)$.
+>
+> *Proof.*{: .prf}
+>
+> (1) and (2) are equivalent as proved before. If $\alpha v = \lambda v$ for $v \not= 0$, then for any polynomial $p(x) \in \mathbf{F}[x]$, $p(\alpha) v = p(\lambda) v$. Thus,
+>
+> $$
+  m_\alpha(\lambda) v = m_\alpha(\alpha) v = 0
+  $$
+>
+> so $m(\lambda) = 0$ and (1) implies (3). $m_\alpha(x) \mid \chi_\alpha(x)$ so (3) implies (2).
+>
+> Alternatively, if $m_\alpha(\lambda) = 0$, then $m_\alpha(x) = (x - \lambda)q(x)$ where $q(\alpha) \not= 0$.
+> Therefore, there exists $v \in V$ such that $q(\alpha)(v) \not= 0$ and $(\alpha - \lambda \iota)(q(\alpha)(v)) = m_\alpha(\alpha)(v) = 0$ so $q(\alpha)(v)$ is an $\lambda$-eigenvector and (3) implies (1).
 
 ## References
 
