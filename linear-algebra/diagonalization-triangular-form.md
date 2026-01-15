@@ -304,6 +304,48 @@ It can be hard to determine the minimal polynomial of a given linear map, but th
 >
 > *Proof.*{: .prf}
 >
+> If $\mathbf{F} = \mathbf{C}$, by expressing $\alpha$ in triangular form matrix as shown above, we have $\chi_\alpha(x) = (x - \lambda_1)^{d_i} \cdots (x - \lambda_1)^{d_r}$ with $d_i \ge e_i$
+> so $m(x) \mid \chi_\alpha(x)$ and $\chi_\alpha(\alpha) = 0$.
+>
+> For general field $\mathbf{F}$, let $A \in \text{Mat}_n(\mathbf{F})$ and $B = xI_n - A$.
+> $B$ is a matrix with diagonal containing the variable $x$ and entries of $\text{adj}\,B$ are elements of $\mathbf{F}[x]$ of degree at most $n - 1$.
+> Thus, we can write
+>
+> $$
+  \text{adj}\,B = B_{n-1} t^{n-1} + B_{n-2} t^{n-2} + \cdots + B_1 t + B_0
+  $$
+>
+> with each $B_i \in \text{Mat}_n(\mathbf{F})$. Since $B \text{adj}\,B = \det B I_n = \chi_A(x) I_n$,
+>
+> $$
+  (xI_n - A)(B_{n-1} x^{n-1} + B_{n-2} x^{n-2} + \cdots + B_1 x + B_0) = (x^n + a_{n-1}x^{n-1} + \cdots + a_0)I_n
+  $$
+>
+> By comparing the coefficients of each powers of $x$, we have
+>
+> $$
+  \begin{align*}
+  B_{n-1} - 0 &= I_n \\
+  B_{n-2} - AB_{n-1} &= a_{n-1}I_n \\
+  B_{n-3} - AB_{n-2} &= a_{n-2}I_n \\
+  &\vdots \\
+  0 - AB_0 &= a_0 I_n \\
+  \end{align*}
+  $$
+>
+> Multiplying both side of the $n + 1$ equations by $A^{n-k}$ for $0 \le k \le n$, we have
+>
+> $$
+  \begin{align*}
+  A^nB_{n-1} - 0 &= A^n \\
+  A^{n-1}B_{n-2} - A^nB_{n-1} &= a_{n-1}A^{n-1} \\
+  A^{n-2}B_{n-3} - A^{n-1}B_{n-2} &= a_{n-2}A^{n-2} \\
+  &\vdots \\
+  0 - AB_0 &= a_0 I_n \\
+  \end{align*}
+  $$
+>
+> Summing both side we can see the terms in L.H.S. cancelled each other and terms in R.H.S. is $\chi_A(A)$, therefore $\chi_A(A) = 0$ as required.
 
 The result has many imporatnt implications regarding eigenvalues, minimal polynomials and characteristic polynomials.
 
