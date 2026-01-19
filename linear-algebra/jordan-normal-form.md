@@ -199,7 +199,7 @@ We will now see that the elementary divisors describe the matrix of $\alpha$ wit
   C = \begin{pmatrix}
   C_1 & 0 & \cdots & 0 \\
   0 & C_2 & \cdots & 0 \\
-  \vdots & \vdots & \cdots & \vdots \\
+  \vdots & \vdots & \ddots & \vdots \\
   0 & 0 & \cdots & C_r \\
   \end{pmatrix}
   $$
@@ -220,6 +220,59 @@ We will now see that the elementary divisors describe the matrix of $\alpha$ wit
 >
 > $C = P^{-1}AP$ and $C = Q^{-1}BP$ so $B = (PQ^{-1})^{-1}A(PQ^{-1})$.
 
+## Jordan Normal Form
+
+> *Proposition.*{: .prop}
+> The **Jordan normal form** of a linear map is defined to be the rational canonical form in case all the eigenvalues belong to the field $\mathbf{F}$.
+> In that case the elementary divisors all have the form $(x - \lambda_i)^{e_i}$ and the $e_i$-by-$e_i$ companion matrix / **Jordan block** is of the form
+>
+> $$
+  J_{e_i}(\lambda_i) = \begin{pmatrix}
+  \lambda_i & 1 & 0 & \cdots & 0 & 0 \\
+  0 & \lambda_i & 1 & \cdots & 0 & 0 \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & 0 & \cdots & \lambda_i & 1 \\
+  0 & 0 & 0 & \cdots & 0 & \lambda_i \\
+  \end{pmatrix}
+  $$
+>
+> The matrix representing the linear map is a block diagonal matrix
+>
+> $$
+  A = \begin{pmatrix}
+  J_{e_1}(\lambda_1) & 0 & \cdots & 0 \\
+  0 & J_{e_2}(\lambda_2) & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & J_{e_r}(\lambda_r) \\
+  \end{pmatrix}
+  $$
+
+Note that $J_m(\lambda) = \lambda I_m + J_m(0)$.
+
+Consider a single Jordan block $J_n(\lambda)$, i.e.
+
+$$
+J_n(\lambda) = \begin{pmatrix}
+\lambda & 1 & 0 & 0 \\
+0 & \lambda & \ddots & 0 \\
+0 & 0 & \ddots & 1 \\
+0 & 0 & 0 & \lambda \\
+\end{pmatrix}
+$$
+
+For the standard basis, we have $(J_n(\lambda) - \lambda I_n)e_1 = 0$ and $(J_n(\lambda) - \lambda I_n)e_i = e_{i-1}$ for $1 < i \le n$.
+Thus, $(J_n(\lambda) - \lambda I_n)^k$ maps $\Set{e_1, ..., e_n}$ to $\Set{0, ..., e_1, ..., e_{n-k}}$, i.e.
+
+$$
+(J_n(\lambda) - \lambda I_n)^k = \begin{pmatrix}
+0 & I_{n-k} \\
+0 & 0 \\
+\end{pmatrix}
+$$
+
+for $k < n$ and $(J_n(\lambda) - \lambda I_n)^k = 0$ for $k \ge n$. Thus, $\chi_{J_n(\lambda)}(x) = m_{J_n(\lambda)}(x) = (x - \lambda)^n$.
+Moreover, $\dim E(\lambda) = 1$ since $J_n(\lambda) - \lambda I_n$ only maps $e_1$ to $0$.
+Hence, $\lambda$ is the only eigenvalue with $a_\lambda = c_\lambda = n$ and $g_\lambda = 1$.
 
 ## References
 
