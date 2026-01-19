@@ -1,9 +1,9 @@
 ---
 layout: base
-title: Jordan Normal Form &#124; Linear Algebra
+title: Jordan Normal Forms &#124; Linear Algebra
 ---
 
-# Jordan Normal Form
+# Jordan Normal Forms
 {: .page-title}
 
 This section addresses the question regarding how we determine if two matrices are similar.

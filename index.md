@@ -17,8 +17,11 @@ title: Home
 * [Determinants of Matrices](linear-algebra/determinants-cont.md)
 * [Polynomials](linear-algebra/polynomials.md)
 * [Endomorphisms](linear-algebra/endomorphisms.md)
-* [Diagonalization and Triangular Form](linear-algebra/diagonalization-triangular-form.md)
-* [Jordan Normal Form](linear-algebra/jordan-normal-form.md)
+* [Diagonal and Triangular Forms](linear-algebra/diagonal-triangular-forms.md)
+* [Jordan Normal Forms](linear-algebra/jordan-normal-forms.md)
+* [Quadratic Forms](linear-algebra/quadratic-forms.md)
+* [Hermitian Forms](linear-algebra/hermitian-forms.md)
+* [Inner Product Spaces](linear-algebra/inner-product-spaces.md)
 
 ## Vector Calculus
 {: .left}

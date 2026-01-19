@@ -1,9 +1,9 @@
 ---
 layout: base
-title: Diagonalization and Triangular Form &#124; Linear Algebra
+title: Diagonal and Triangular Forms &#124; Linear Algebra
 ---
 
-# Diagonalization and Triangular Form
+# Diagonal and Triangular Forms
 {: .page-title}
 
 It can be equally useful to study polynomials which send individual vectors to zero, which leads to the discussion of eigenvalues and eigenvectors.
@@ -94,7 +94,7 @@ Similar to minimal polynomial, the characteristic polynomial is independent of t
   \det(xI - B) = \det(xI - P^{-1}AP) = \det P^{-1} (xI - A) P = \det P^{-1} \det (xI - A) \det P = \det(xI - A)
   $$
 
-## Diagonalization
+## Diagonal Forms
 
 The minimal polynomial determines if we can find a basis such that the matrix representation of the endomorphism is as simple as possible.
 
@@ -182,7 +182,7 @@ We can translate the above theorem into a similar one for matrices.
 > Since $\alpha_j$ is diagonalizable, $m_j\|\_V$ consists of distinct linear factors and so as $m_j\|\_{E_i}$ and therefore $\alpha_j\|\_{E_i}$ is diagonalizable.
 > By induction hypothesis, each of the subspace $E_i$ has a basis such that the basis vectors are eigenvectors simultaneously for the endomorphisms and their union is the required basis for $V$.
 
-## Triangular Form
+## Triangular Forms
 
 When a linear map fails to diagonalize, we would still want a way to come as close to that.
 
