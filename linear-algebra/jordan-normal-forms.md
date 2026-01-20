@@ -274,6 +274,9 @@ for $k < n$ and $(J_n(\lambda) - \lambda I_n)^k = 0$ for $k \ge n$. Thus, $\chi_
 Moreover, $\dim E(\lambda) = 1$ since $J_n(\lambda) - \lambda I_n$ only maps $e_1$ to $0$.
 Hence, $\lambda$ is the only eigenvalue with $a_\lambda = c_\lambda = n$ and $g_\lambda = 1$.
 
+In general, $a_\lambda$ is the sum of the sizes of the blocks with eigenvalue $\lambda$, i.e. the number of $\lambda$s in the diagonal.
+$g_\lambda$ is the number of blocks with eigenvalue $\lambda$ and $c_\lambda$ is the size of the largest block with eigenvalue $\lambda$.
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 6
