@@ -343,6 +343,9 @@ We are now ready to connect the minimal polynomial of a linear map with its unde
 >
 > and $\ker p_i(\alpha)^{e_i} \subseteq \beta_i V$. Hence, $\beta_i V = \ker p_i(\alpha)^{e_i}$.
 
+> *Definition.*{: .def}
+> $\ker (\alpha - \lambda \iota)^e$ is called the generalized $\lambda$-eigenspace of $\alpha$.
+
 ## References
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 6

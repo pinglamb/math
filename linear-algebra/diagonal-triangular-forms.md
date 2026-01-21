@@ -23,6 +23,7 @@ It can be equally useful to study polynomials which send individual vectors to z
 
 An eigenspace is a one-dimensional $\alpha$-invariant subspace resulting from the polynomial $f(x) = x - \lambda$.
 Also, a small note that the eigenspace $E(0)$ is equivalent to the nullspace of the linear map so $\dim E(0) = n(\alpha)$.
+In particular, the $\lambda$-eigenspace might be different from the corresponding generalized eigenspace if the multiplicity of $\lambda$ as a root of the minimal polynomial is greater than $1$.
 
 We can define the same for matrices, i.e. $Av = \lambda v$ and the correspondence between linear maps and matrices show that $\lambda$ is a eigenvalue of $\alpha$ iff $\lambda$ is a eigenvalue of the matrix of $\alpha$ with respect to any basis.
 
@@ -391,6 +392,8 @@ The result has many imporatnt implications regarding eigenvalues, minimal polyno
 > + the **geometric multiplicity** $g_\lambda$ is the dimension of its eigenspace, i.e. $\dim E(\lambda)$;
 >
 > + the multiplicity of $\lambda$ as a root of $m_\alpha(x)$ is denoted by $c_\lambda$.
+
+By the primary decomposition theorem, $c_\lambda$ is the smallest positive integer such that $(\alpha - \lambda \iota)^k = 0$ for its corresponding generalized eigenspace (not the whole $V$).
 
 > *Proposition.*{: .prop}
 > Suppose that $\alpha \in \text{End}(V)$ and $\lambda$ is an eigenvalue of $\alpha$. Then
