@@ -37,6 +37,47 @@ Similar to endomorphisms, we can restrict bilinear forms on a single vector spac
   \phi(x, y) = \sum_{i,j=1}^n x_i M_{ij} y_j = \sum_{i,j=1}^n j_i M_{ji} x_i = \phi(y, x)
   $$
 
+> *Definition.*{: .def}
+> A **quadratic form** on $V$ is the map $q: V \to \mathbf{F}, q(v) = \phi(v, v)$ where $\phi: V \times V \to \mathbf{F}$ is a bilinear form.
+
+For example, if $V = \mathbf{R^2}$ and $\phi$ is represented by $A$ with respect to the standard basis then
+
+$$
+q(v) = \begin{pmatrix} x & y \end{pmatrix} A \begin{pmatrix} x \\ y \end{pmatrix} = A_{11} x^2 + (A_{12} + A_{21}) xy + A_{22} y^2
+$$
+
+Note that quadratic form is not linear.
+
+> *Proposition.*{: .prop}
+> **[Polarization Identity]**
+> If $q: V \to \mathbf{F}$ is a quadratic form then there exists a unique symmetric bilinear form $\phi: V \times V \to \mathbf{F}$ such that $q(v) = \phi(v, v)$ for all $v \in V$.
+>
+> *Proof.*{: .prf}
+>
+> Let $\psi: V \times V \to \mathbf{F}$ be the bilinear form such that $\phi(v, v) = q(v)$. Then
+>
+> $$
+  \phi(v, w) = {1 \over 2} (\psi(v, w) + \psi(w, v))
+  $$
+>
+> is a symmetric bilinear form such that $\phi(v, v) = q(v)$.
+>
+> Suppose that $\phi$ is symmetric bilinear form such that $\phi(v, v) = q(v)$, then
+>
+> $$
+  q(v + w) = \phi(v + w, v + w) = \phi(v, v + w) + \phi(w, v + w) = \phi(v, v) + 2 \phi(v, w) + \phi(w, w)
+  $$
+>
+> and hence
+>
+> $$
+  \phi(v, w) = {1 \over 2} (q(v + w) - q(v) - q(w))
+  $$
+>
+> is unique.
+
+To conclude, there is a one-to-one mapping between symmetric bilinear form and quadratic form in which the above formula can be used to determine the matrix of the corresponding bilinear form given a quadratic form.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 7
