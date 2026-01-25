@@ -78,6 +78,8 @@ Note that quadratic form is not linear.
 
 To conclude, there is a one-to-one mapping between symmetric bilinear form and quadratic form in which the above formula can be used to determine the matrix of the corresponding bilinear form given a quadratic form.
 
+## Matrix Representation
+
 > *Proposition.*{: .prop}
 > **[Diagonalization of symmetric bilinear forms]**
 > If $\phi: V \times V \to \mathbf{F}$ is a symmetric bilinear form of a finite dimensional vector space $V$
@@ -97,6 +99,40 @@ To conclude, there is a one-to-one mapping between symmetric bilinear form and q
 >
 > The bilinear map $\phi_{U \times U} : U \times U \to \mathbf{F}$ is also symmetric so by the induction hypothesis, there exists basis $\Set{e_2, ..., e_n}$ such that the matrix representing $\phi_{U \times U}$ is diagonal.
 > Hence, the basis $\Set{e_1, ..., e_n}$ satisfies $\phi(e_i, e_j) = 0$ for $i \not= j$ as required.
+
+> *Corollary.*{: .cor}
+> Let $\phi$ be a symmetric bilinear form on a finite dimensional $\mathbf{C}$-vector space $V$.
+> Then there is basis $(v_1, ..., v_n)$ for $V$ such that $\phi$ is represented by a matrix of the form
+>
+> $$
+  \begin{pmatrix}
+  I_r & 0 \\
+  0 & 0 \\
+  \end{pmatrix}
+  $$
+>
+> with $r = r(\phi)$ or equivalently such that the corresponding quadratic form $q$ is given by
+>
+> $$
+  q(v) = q(\sum_{i=1}^n a_i v_i) = \sum_{i=1}^r a_i^2
+  $$
+>
+> *Proof.*{: .prf}
+>
+> From the above, there is basis $(e_1, ..., e_n)$ such that $\phi(e_i, e_j) = \delta_{ij} \lambda_i$ for $1 \le i \le n$.
+> By reordering the $e_i$'s we can assume $\lambda_i \not= 0$ for $1 \le i \le r$ and $\lambda_i = 0$ for $r+1 \le i \le n$.
+> Since we are working with $\mathbf{C}$, each $\lambda_i \not= 0 $ has a non-zero square root $\mu_i$ and by having $v_i = e_i / \mu_i$ for $1 \le i \le r$
+> and $v_i = e_i$ for $r+1 \le i \le n$ we have $\phi(v_i, v_j) = 0$ for $i \not= j$ or $i = j > r$ and $\phi(v_i, v_i) = 1$ for $1 \le i \le r$ as required.
+
+> *Corollary.*{: .cor}
+> Every symmetric matrix $S \in \text{Mat}_n(\mathbf{C}$ is congruent to a unique matrix of the form
+>
+> $$
+  \begin{pmatrix}
+  I_r & 0 \\
+  0 & 0 \\
+  \end{pmatrix}
+  $$
 
 ## Reference
 
