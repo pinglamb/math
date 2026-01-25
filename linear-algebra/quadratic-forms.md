@@ -141,7 +141,7 @@ To conclude, there is a one-to-one mapping between symmetric bilinear form and q
 > so that $\phi(v_i, v_j) = 0$ for $i \not= j$ or $i = j > r$ and $\phi(v_i, v_i) = 1$ for $1 \le i \le r$ as required.
 
 > *Corollary.*{: .cor}
-> Every symmetric matrix $S \in \text{Mat}_n(\mathbf{C}$ is congruent to a unique matrix of the form
+> Every symmetric matrix $S \in \text{Mat}_n(\mathbf{C})$ is congruent to a unique matrix of the form
 >
 > $$
   \begin{pmatrix}
@@ -193,7 +193,59 @@ To conclude, there is a one-to-one mapping between symmetric bilinear form and q
 >
 > so that the matrix representing $\phi$ with respect to $(v_1, ..., v_n)$ is of the required form.
 
+> *Definition.*{: .def}
+> A symmetric bilinear form $\phi$ on a $\mathbf{R}$-vector space $V$ is
+>
+> + **positive definite** if $\phi(v, v) > 0$ for all $v \in V \setminus 0$;
+>
+> + **positive semi-definite** if $\phi(v, v) \ge 0$ for all $v \in V$;
+>
+> + **negative definite** if $\phi(v, v) < 0$ for all $v \in V \setminus 0$;
+>
+> + **negative semi-definite** if $\phi(v, v) \le 0$ for all $v \in V$.
+
+From the above we can see that it depends on the value of $p$ and $q$, e.g. $\phi$ is positive definite if $p = n$ and $q = 0$.
+
+> *Theorem.*{: .thm}
+> **[Sylvester's Law of Inertia]**
+> Let $\phi$ be a symmetric bilinear form on a finite dimensional $\mathbf{R}$-vector space $V$.
+> Then there are unique integers $p, q$ such that $V$ has basis $(v_1, ..., v_n)$ such that the matrix representing $\phi$ with respect to it is of the form
+>
+> $$
+  \begin{pmatrix}
+  I_p & 0 & 0 \\
+  0 & -I_q & 0 \\
+  0 & 0 & 0 \\
+  \end{pmatrix}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> We have proved the existence of such a basis and $p + q = r(\phi)$ is unique.
+> Suppose that we have found a certain $p$ such that the matrix of the corresponding basis $(v_1, ..., v_n)$ is of the form shown.
+> Then $\phi$ is positive definite on the space spanned by $v_1, ..., v_p$.
+>
+> Let $P$ be any subspace of $V$ such that $\phi_{P \times P}$ is positive definite and let $Q = \langle v_{p+1}, ... v_n \rangle$.
+> $\phi_{Q \times Q}$ is negative semi-definite so $P \cap Q = 0$ and therefore $\dim P + \dim Q = \dim(P + Q) \le n$.
+> Thus, $\dim P \le p$. It means that if both $\phi_{P \times P}$ and $\phi_{P' \times P'}$ are positive definite, then we have $p \le p'$ and $p' \le p$ so $p = p'$ is unique.
+
+> *Definition.*{: .def}
+> The **signature** of the symmetric bilinear form is defined to be $p - q$.
+
+> *Corollary.*{: .cor}
+> Every symmetric matrix $S \in \text{Mat}_n(\mathbf{R})$ is congruent to a unique matrix of the form
+>
+> $$
+  \begin{pmatrix}
+  I_p & 0 & 0 \\
+  0 & -I_q & 0 \\
+  0 & 0 & 0 \\
+  \end{pmatrix}
+  $$
+
+To conclude, congruence of real matrices preserves the signature, i.e. the number of positive, negative and zero eigenvalues is constant.
+We can determine the congruence of symmetric matrices by computing their eigenvalues.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 7
-* Charles W. Curtis _Linear Algebra - An Introductory Approach_, 1984 - Section 31
