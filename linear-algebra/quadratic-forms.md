@@ -248,4 +248,4 @@ We can determine the congruence of symmetric matrices by computing their eigenva
 
 ## Reference
 
-* Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 7
+* Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 7.1
