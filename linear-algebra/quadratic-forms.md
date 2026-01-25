@@ -78,6 +78,26 @@ Note that quadratic form is not linear.
 
 To conclude, there is a one-to-one mapping between symmetric bilinear form and quadratic form in which the above formula can be used to determine the matrix of the corresponding bilinear form given a quadratic form.
 
+> *Proposition.*{: .prop}
+> **[Diagonalization of symmetric bilinear forms]**
+> If $\phi: V \times V \to \mathbf{F}$ is a symmetric bilinear form of a finite dimensional vector space $V$
+> then there is a basis $(e_1, ..., e_n)$ for $V$ such that $\phi$ is represented by a diagonal matrix.
+>
+> *Proof.*{: .prf}
+>
+> By induction on $n = \dim V$. When $n = 0, 1$, every matrix is diagonal matrix. Assume it is true for all spaces of dimension strictly smaller than $n$.
+> If $\phi(v, v) = 0$ for all $v \in V$ then by polarization identity $\phi(v, w) = 0$ so $\phi$ is represented by the zero matrix when is diagonal.
+> Otherwise, we can choose $e_1$ such that $\phi(e_1, e_1) \not= 0$. Consider the subspace
+>
+> $$
+  U = \Set{ u \in V : \phi(e_1, u) = 0 } = \ker \phi(e_1, -): V \to \mathbf{F}
+  $$
+>
+> Since the codomain $\mathbf{F}$ is one-dimensional, by rank-nullity theorem, $\dim U = n - 1$. Also, $e_1 \not= U$ so $V = \langle e_1 \rangle \oplus U$.
+>
+> The bilinear map $\phi_{U \times U} : U \times U \to \mathbf{F}$ is also symmetric so by the induction hypothesis, there exists basis $\Set{e_2, ..., e_n}$ such that the matrix representing $\phi_{U \times U}$ is diagonal.
+> Hence, the basis $\Set{e_1, ..., e_n}$ satisfies $\phi(e_i, e_j) = 0$ for $i \not= j$ as required.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 7
