@@ -114,15 +114,31 @@ To conclude, there is a one-to-one mapping between symmetric bilinear form and q
 > with $r = r(\phi)$ or equivalently such that the corresponding quadratic form $q$ is given by
 >
 > $$
-  q(v) = q(\sum_{i=1}^n a_i v_i) = \sum_{i=1}^r a_i^2
+  q(v) = q \left( \sum_{i=1}^n a_i v_i \right) = \sum_{i=1}^r a_i^2
   $$
 >
 > *Proof.*{: .prf}
 >
-> From the above, there is basis $(e_1, ..., e_n)$ such that $\phi(e_i, e_j) = \delta_{ij} \lambda_i$ for $1 \le i \le n$.
-> By reordering the $e_i$'s we can assume $\lambda_i \not= 0$ for $1 \le i \le r$ and $\lambda_i = 0$ for $r+1 \le i \le n$.
-> Since we are working with $\mathbf{C}$, each $\lambda_i \not= 0 $ has a non-zero square root $\mu_i$ and by having $v_i = e_i / \mu_i$ for $1 \le i \le r$
-> and $v_i = e_i$ for $r+1 \le i \le n$ we have $\phi(v_i, v_j) = 0$ for $i \not= j$ or $i = j > r$ and $\phi(v_i, v_i) = 1$ for $1 \le i \le r$ as required.
+> From the above, there is basis $(e_1, ..., e_n)$ such that $\phi(e_i, e_j) = \delta_{ij} \lambda_i$ for $\lambda_i \in \mathbf{C}$.
+> By reordering the $e_i$'s we can assume
+>
+> $$
+  \begin{cases}
+  \lambda_i \not= 0 &\qquad 1 \le i \le r \\
+  \lambda_i = 0 &\qquad i > r \\
+  \end{cases}
+  $$
+>
+> Since we are working with $\mathbf{C}$, we can define
+>
+> $$
+  v_i = \begin{cases}
+  {1 \over \sqrt{\lambda_i}} e_i &\qquad 1 \le i \le r \\
+  e_i &\qquad i > r \\
+  \end{cases}
+  $$
+>
+> so that $\phi(v_i, v_j) = 0$ for $i \not= j$ or $i = j > r$ and $\phi(v_i, v_i) = 1$ for $1 \le i \le r$ as required.
 
 > *Corollary.*{: .cor}
 > Every symmetric matrix $S \in \text{Mat}_n(\mathbf{C}$ is congruent to a unique matrix of the form
@@ -133,6 +149,49 @@ To conclude, there is a one-to-one mapping between symmetric bilinear form and q
   0 & 0 \\
   \end{pmatrix}
   $$
+
+> *Corollary.*{: .cor}
+> Let $\phi$ be a symmetric bilinear form on a finite dimensional $\mathbf{R}$-vector space $V$.
+> Then there is basis $(v_1, ..., v_n)$ for $V$ such that $\phi$ is represented by a matrix of the form
+>
+> $$
+  \begin{pmatrix}
+  I_p & 0 & 0 \\
+  0 & -I_q & 0 \\
+  0 & 0 & 0 \\
+  \end{pmatrix}
+  $$
+>
+> with $p, q \ge 0$ and $p + q = r(\phi)$ or equivalently such that the corresponding quadratic form $q$ is given by
+>
+> $$
+  q(v) = q \left( \sum_{i=1}^n a_i v_i \right) = \sum_{i=1}^p a_i^2 - \sum_{i=p+1}^{p+q} a_i^2
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Similarily, there is basis $(e_1, ..., e_n)$ such that $\phi(e_i, e_j) = \delta_{ij} \lambda_i$ for $\lambda_i \in \mathbf{R}$.
+> By reordering the $e_i$'s we can assume
+>
+> $$
+  \begin{cases}
+  \lambda_i > 0 &\qquad 1 \le i \le p \\
+  \lambda_i < 0 &\qquad p+1 < i < p+q = r(\phi) \\
+  \lambda_i = 0 &\qquad i > p+q \\
+  \end{cases}
+  $$
+>
+> for some $p, q \ge 0$. Since we are working with $\mathbf{R}$, we can define
+>
+> $$
+  v_i = \begin{cases}
+  {1 \over \sqrt{\lambda_i}} e_i &\qquad 1 \le i \le p \\
+  {1 \over \sqrt{-\lambda_i}} e_i &\qquad p+1 < i < p+q \\
+  e_i &\qquad i > p+q \\
+  \end{cases}
+  $$
+>
+> so that the matrix representing $\phi$ with respect to $(v_1, ..., v_n)$ is of the required form.
 
 ## Reference
 
