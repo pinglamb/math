@@ -39,6 +39,18 @@ However, it is linear up to complex conjugate in which we can develop similar pr
 
 Therefore, it is also meaning to speak of positive/negative (semi-)definite Hermitian forms.
 
+> *Proposition.*{: .prop}
+> **[Polarization Identity]**
+> A Hermitian form $\phi$ on a vector space $V$ over $\mathbf{C}$ is determined by the function $\psi: V \to \mathbf{R}, v \mapsto \phi(v, v)$.
+>
+> *Proof.*{: .prf}
+>
+> The proof is nearly identical to that of quadratic form with the following equality
+>
+> $$
+  \phi(x, y) = {1 \over 4} (\psi(x + y) - i \psi(x + iy) - \psi(x - y) + i \psi(x - iy))
+  $$
+
 ## Matrix Representation
 
 > *Definition.*{: .def}
@@ -84,6 +96,25 @@ $$
 > $$
   B_{ij} = \phi(f_i, f_j) = \phi \left( \sum_k P_{ki} e_k, \sum_l P_{lj} e_l \right) = \sum_{k, l} \overline{P_{ki}} A_{kl} P_{lj} = (P^\dagger A P)_{ij}
   $$
+
+> *Proposition.*{: .prop}
+> **[Sylvester's Law of Inertia]**
+> Let $\phi$ be a Hermitian form on a finite dimensional $\mathbf{C}$-vector space $V$.
+> Then there are unique integers $p, q$ such that $V$ has basis $(v_1, ..., v_n)$ such that the matrix representing $\phi$ with respect to it is of the form
+>
+> $$
+  \begin{pmatrix}
+  I_p & 0 & 0 \\
+  0 & -I_q & 0 \\
+  0 & 0 & 0 \\
+  \end{pmatrix}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The proof is nearly identical to the real case.
+> By choosing some $v_1$ such that $\phi(v_1, v_1) \not= 0$ then we can normalize it by $v_1 / \vert \phi(v_1, v_1) \vert^{1/2}$ and then followed by induction on $U = \ker \phi(v_1, -)$.
+> We also have $p + q = r(\phi)$ and $p$ is the maximum dimension of positive definite subspace as in real symmetric case.
 
 ## Reference
 
