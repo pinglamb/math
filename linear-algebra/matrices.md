@@ -83,6 +83,33 @@ The second expansion means $A^{(j)}$ are the image of $C^{(j)}$ under the linear
 >
 > Hence, $QB = AP$. Since $Q$ is invertible, $B = Q^{-1}AP$.
 
+The change of basis $P$ will be confusing when we are dealing with coordinates. For example, in some cases we might be able to express the coordinates under new basis in terms of that of old basis
+in the form of system of linear equations, i.e.
+
+$$
+\begin{cases}
+x' = ax + by \\
+y' = cx + dy \\
+\end{cases}
+\qquad \implies \qquad
+\begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}
+$$
+
+and it looks like we have found the change of basis $P$ we need. However, it is wrong because the equations represent the relationship between coordinates but not the basis vectors.
+To find the right change of basis matrix, we should consider a vector $v$ that is expected to be equal under both basis, i.e.
+
+$$
+v = x' f_1 + y' f_2 = x e_1 + y e_2
+$$
+
+Substituting the equations into the equality we have
+
+$$
+(ax + by) f_1 + (cx + dy) f_2 = x e_1 + y e_2
+$$
+
+and by setting the coefficients of each $f_i$ to $1$ with others being $0$ we will be able to find the right matrix $P$ satisfying $f_i = \sum P_{ki} e_k$.
+
 > *Definition.*{: .def}
 > Two matrices $A, B \in \text{Mat}\_{n,m}(\mathbb{F})$ are _equivalent_ if there are invertible matrices
 > $P \in \text{Mat}_m(\mathbb{F})$ and $Q \in \text{Mat}_n(\mathbb{F})$ such that $Q^{-1}AP = B$.
