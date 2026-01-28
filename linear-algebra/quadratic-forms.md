@@ -244,7 +244,15 @@ From the above we can see that it depends on the value of $p$ and $q$, e.g. $\ph
   $$
 
 To conclude, congruence of real matrices preserves the signature, i.e. the number of positive, negative and zero eigenvalues is constant.
-We can determine the congruence of symmetric matrices by computing their eigenvalues.
+One way we can determine the congruence of symmetric matrices by computing their eigenvalues.
+If we know the quadratic form we can find the completing the squares, i.e. making it of the form
+
+$$
+q(v) = a_1 y_1^2 + a_2 y_2^2 + ... + a_n y_n^2
+$$
+
+where each $y_i$ is in terms of the original $x_i$. This process is precisely changing basis and the $a_i$ are the entries in the resulting diagonal matrix.
+Therefore, we can find the rank ($p + q$) and signature ($p - q$) by counting the number of postiive, negative and zero coefficients.
 
 ## Reference
 
