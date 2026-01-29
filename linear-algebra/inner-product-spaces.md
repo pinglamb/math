@@ -85,6 +85,40 @@ which allows us to define the angle $\theta$ between two vectors by inner produc
   \cos \theta = { \langle u, v \rangle \over \Vert u \Vert \Vert v \Vert }
   $$
 
+## Orthonormal Basis
+
+> *Definition.*{: .def}
+> Suppose that $V$ is an inner product space. Then $u, v \in V$ are **orthogonal** if $\langle v, w \rangle = 0$.
+
+> *Definition.*{: .def}
+> A set $\Set{v_i}$ is **orthonormal** if $\langle v_i, v_j \rangle = \delta_{ij}$ and an **orthonormal basis** for $V$ is a basis that is orthonormal.
+
+Suppose that $(v_1, ..., v_n)$ is a orthonormal basis. We have $v = \sum \lambda_i v_i$ therefore $\langle v_j, v \rangle = \sum \lambda_i \langle v_j, v_i \rangle = \lambda_j$ and
+
+$$
+v = \sum_{i=1}^n \langle v_i, v \rangle v_i
+$$
+
+> *Proposition.*{: .prop}
+> **[Parseval's Identity]**
+> Suppose that $V$ is a finite dimensional inner product space with orthonormal basis $(v_1, ..., v_n)$ then
+>
+> $$
+  \langle u, v \rangle = \sum_{i=1}^n \overline{\langle v_i, u \rangle} \langle v_i, v \rangle
+  $$
+>
+> In particular,
+>
+> $$
+  \Vert v \Vert^2 = \sum_{i=1}^n \vert \langle v_i, u \rangle \vert^2
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \langle u, v \rangle = \langle \sum_{i=1}^n \langle v_i, u \rangle v_i, \sum_{j=1}^n \langle v_j, v \rangle v_j \rangle = sum_{i=1}^n \overline{\langle v_i, u \rangle} \langle v_i, v \rangle
+  $$
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.1
