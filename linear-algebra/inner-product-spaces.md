@@ -51,6 +51,40 @@ Note that $\Vert v \Vert \ge 0$ with equality iff $v = 0$. Also, the norm determ
 >
 > so $\vert \langle u, v \rangle \vert \le \Vert u \Vert \Vert v \Vert$.
 
+> *Corollary.*{: .cor}
+> **[Triangle Inequality]**
+> Suppose that $V$ is an inner product space. For any $u, v \in V$,
+>
+> $$
+  \Vert u + v \Vert \le \Vert u \Vert + \Vert v \Vert
+  $$
+>
+> *Proof.*{: .prf}
+>
+> $$
+  \begin{align*}
+  \Vert u + v \Vert^2 &= \langle u + v, u + v \rangle \\
+  &= \Vert u \Vert^2 + \Vert v \Vert^2 + 2 \langle u, v \rangle \\
+  &\le \Vert u \Vert^2 + \Vert v \Vert^2 + 2 \Vert u \Vert \Vert v \Vert \\
+  &= (\Vert u \Vert + \Vert v \Vert)^2
+  \end{align*}
+  $$
+
+The law of cosines assets that
+
+$$
+\Vert u - v \Vert^2 = \Vert u \Vert^2 + \Vert v \Vert^2 - 2 \Vert u \Vert \Vert v \Vert \cos \theta
+$$
+
+which allows us to define the angle $\theta$ between two vectors by inner product.
+
+> *Definition.*{: .def}
+> The **angle** $\theta$ between $u, v \in V$ is defined by
+>
+> $$
+  \cos \theta = { \langle u, v \rangle \over \Vert u \Vert \Vert v \Vert }
+  $$
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.1
