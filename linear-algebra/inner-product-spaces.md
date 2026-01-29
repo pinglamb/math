@@ -119,6 +119,30 @@ $$
   \langle u, v \rangle = \langle \sum_{i=1}^n \langle v_i, u \rangle v_i, \sum_{j=1}^n \langle v_j, v \rangle v_j \rangle = sum_{i=1}^n \overline{\langle v_i, u \rangle} \langle v_i, v \rangle
   $$
 
+> *Theorem.*{: .thm}
+> **[Gram-Schmidt Orthogonalization Process]**
+> Suppose that $V$ is an inner product space and $v_1, v_2, ...$ are linearly independent vectors.
+> Then there is a sequence $e_1, e_2, ...$ of orthonormal vectors such that $\langle e_1, ..., e_k \rangle = \langle v_1, ..., v_k \rangle $ for each $k \ge 0$.
+> In particular,
+>
+> $$
+  e_{k+1} = {v \over \Vert v \Vert} \quad \text{where} \quad v = v_{k+1} - \sum_{i = 1}^k (e_i, v_{k+1}) e_i
+  $$
+>
+> *Proof.*{: .prf}
+>
+> The result is obvious when $k = 0$. Assume we have found $e_1, ..., e_k$ accordingly.
+> Since $v_1, ..., v_{k+1}$ are linearly independent, $v$ defined above is non-zero so $\Vert e_{k+1} \Vert = 1$.
+> Then for $j \le k$,
+>
+> $$
+  \langle e_j, v \rangle = \langle e_j, v_{k+1} \rangle - \sum_{i=1}^k \langle e_i, v_{k+1} \rangle \langle e_j, e_i \rangle = \langle e_j, v_{k+1} \rangle - \langle e_j, v_{k+1} \rangle = 0
+  $$
+>
+> so $\Set{e_1, ..., e_{k+1}}$ is orthonormal.
+> Since $\langle e_1, ..., e_k \rangle = \langle v_1, ..., v_k \rangle$ by induction hypothesis
+> and $v_{k+1} \in \langle e_1, ..., e_{k+1} \rangle$ and $e_{k+1} \in \langle v_1, ..., v_{k+1} \rangle$ by construction, $\langle e_1, ..., e_{k+1} \rangle = \langle v_1, ..., v_{k+1} \rangle$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.1
