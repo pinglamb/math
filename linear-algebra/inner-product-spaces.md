@@ -91,12 +91,29 @@ which allows us to define the angle $\theta$ between two vectors by inner produc
 > Suppose that $V$ is an inner product space. Then $u, v \in V$ are **orthogonal** if $\langle v, w \rangle = 0$.
 
 > *Definition.*{: .def}
-> A set $\Set{v_i}$ is **orthonormal** if $\langle v_i, v_j \rangle = \delta_{ij}$ and an **orthonormal basis** for $V$ is a basis that is orthonormal.
+> A set $\Set{e_i}$ is **orthonormal** if $\langle e_i, e_j \rangle = \delta_{ij}$ and an **orthonormal basis** for $V$ is a basis that is orthonormal.
 
-Suppose that $(v_1, ..., v_n)$ is a orthonormal basis. We have $v = \sum \lambda_i v_i$ therefore $\langle v_j, v \rangle = \sum \lambda_i \langle v_j, v_i \rangle = \lambda_j$ and
+> *Proposition.*{: .prop}
+> Every orthonormal set of vectors is linearly independent.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $(e_1, ..., e_k)$ is a orthonormal set. Then
+>
+> $$
+  \begin{align*}
+  \lambda_1 e_1 + \cdots + \lambda_k e_k &= 0 \\
+  \langle e_i, \lambda_1 e_1 + \cdots + \lambda_k e_k \rangle &= \langle e_i, 0 \rangle \\
+  \lambda_i &= 0
+  \end{align*}
+  $$
+>
+> for $i = 1, ..., k$ so $(e_1, ..., e_k)$ is linearly independent.
+
+Suppose that $(e_1, ..., e_n)$ is a orthonormal basis for $V$. Then $v = \sum \lambda_i e_i \in V$ and $\langle e_j, v \rangle = \sum \lambda_i \langle e_j, e_i \rangle = \lambda_j$ so
 
 $$
-v = \sum_{i=1}^n \langle v_i, v \rangle v_i
+v = \sum_{i=1}^n \langle e_i, v \rangle e_i
 $$
 
 > *Proposition.*{: .prop}
@@ -142,6 +159,15 @@ $$
 > so $\Set{e_1, ..., e_{k+1}}$ is orthonormal.
 > Since $\langle e_1, ..., e_k \rangle = \langle v_1, ..., v_k \rangle$ by induction hypothesis
 > and $v_{k+1} \in \langle e_1, ..., e_{k+1} \rangle$ and $e_{k+1} \in \langle v_1, ..., v_{k+1} \rangle$ by construction, $\langle e_1, ..., e_{k+1} \rangle = \langle v_1, ..., v_{k+1} \rangle$.
+
+> *Corollary.*{: .cor}
+> Suppose that $V$ is a finite dimensional inner product space.
+> Then any orthonormal set $(e_1, ..., e_k)$ can be extended to an orthonormal basis.
+>
+> *Proof.*{: .prf}
+>
+> The orthonormal set $(e_1, ..., e_k)$ is linearly independent and can be extend to a basis $(e_1, ..., e_k, v_{k+1}, ..., v_n)$ for $V$.
+> By the Gram-Schmidt process, we can obtain an orthonormal basis $(f_1, ..., f_n)$ such that $f_i = e_i$ for $i = 1, ... k$.
 
 ## Reference
 
