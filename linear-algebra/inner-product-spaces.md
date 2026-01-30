@@ -169,6 +169,60 @@ $$
 > The orthonormal set $(e_1, ..., e_k)$ is linearly independent and can be extend to a basis $(e_1, ..., e_k, v_{k+1}, ..., v_n)$ for $V$.
 > By the Gram-Schmidt process, we can obtain an orthonormal basis $(f_1, ..., f_n)$ such that $f_i = e_i$ for $i = 1, ... k$.
 
+## Orthogonal Complements
+
+> *Definition.*{: .def}
+> The **orthogonal complement** of a subspace $U \subset V$ of an inner product space $V$, denoted by $U^\perp$, is the subspace of $V$ defined by
+>
+> $$
+  U^\perp = \Set{v \in V : \forall u \in U, \langle u, v \rangle = 0}
+  $$
+
+> *Definition.*{: .def}
+> Suppose that $V$ is an inner product space and $V_1, V_2$ are subspaces of $V$.
+> Then $V$ is _orthogonal (internal) direct sum_ of $V_1$ and $V_2$, denoted by $V = V_1 \perp V_2$, if
+>
+> + $V = V_1 + V_2$;
+>
+> + $V_1 \cap V_2 = 0$;
+>
+> + $\langle v_1, v_2 \rangle = 0$ for all $v_1 \in V_1$ and $v_2 \in V_2$.
+
+> *Proposition.*{: .prop}
+> Suppose that $V$ is a finite dimensional inner product space and $U$ is a subspace of $V$. Then
+>
+> $$
+  V = U \perp U^\perp
+  $$
+>
+> *Proof.*{: .prf}
+>
+> For any $u \in U$ and $u^\perp \in U^\perp$, by definition, $\langle u, u^\perp \rangle = 0$.
+> For $v \in U \cap U^\perp$, $\langle v, v \rangle = 0$ so $v = 0$ and $U \cap U^\perp = 0$.
+>
+> Let $(e_1, ..., e_k)$ be an orthonormal basis for $U$. For any $v \in V$ and $1 \le i \le k$,
+>
+> $$
+  \langle e_i, v - \sum_{j=1}^k \langle e_j, v \rangle e_j \rangle = \langle e_i, v \rangle - \langle e_i, \sum_{j=1}^k \langle e_j, v \rangle e_j \rangle = 0
+  $$
+>
+> Therefore, for all $u = \sum_{i=1}^k \lambda_i e_i \in U$, $\langle u, v - \sum_{j=1}^k \langle e_j, v \rangle e_j = 0$ so
+>
+> $$
+  v - \sum_{j=1}^k \langle e_j, v \rangle e_j \in U^\perp
+  $$
+>
+> and $V = U + U^\perp$.
+
+It implies that orthogonal complements are unique.
+
+> *Definition.*{: .def}
+> The _orthogonal (external) direct sum_ of two inner product spaces $V$ and $W$ is the direct sum $V \oplus W$ with the inner product
+>
+> $$
+  \langle (v_1, w_1), (v_2, w_2) \rangle = \langle v_1, v_2 \rangle + \langle w_1, w_2 \rangle
+  $$
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.1
