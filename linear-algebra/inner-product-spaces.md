@@ -223,6 +223,42 @@ It implies that orthogonal complements are unique.
   \langle (v_1, w_1), (v_2, w_2) \rangle = \langle v_1, v_2 \rangle + \langle w_1, w_2 \rangle
   $$
 
+> *Definition.*{: .def}
+> Suppose that $V = U \oplus U'$. The **projection map** $\pi: V \to U$ onto $U$ along $U'$ is given by $\pi(u + u') = u$ for $u \in U$ and $u' \in U'$.
+> If $U' = U^\perp$ then $\pi$ is called the **orthogonal projection** onto $U$.
+
+> *Proposition.*{: .prop}
+> Suppose that $V$ is a finite dimensional inner product space and $U \subset V$ is a subspace with orthonormal basis $(e_1, ..., e_k)$ and $\pi$ is an orthogonal projection onto $U$.
+> Then
+>
+> + $\pi(v) = \sum_{i=1}^k \langle e_i, v \rangle e_i$ for each $v \in V$;
+>
+> + $\Vert v - \pi(v) \Vert \le \Vert v - u \Vert$ for all $u \in U$ with equality iff $\pi(v) = u$, i.e. $\pi(v)$ is the closest point to $v$ in $U$.
+>
+> *Proof.*{: .prf}
+>
+> Let $u' = \sum_{i=1}^k \langle e_i, v \rangle e_i \in U$. Then
+>
+> $$
+  \langle e_j, v - u' \rangle = \langle e_j, v \rangle - \sum_{i=1}^k \langle e_i, v \rangle \langle e_j, e_i \rangle = 0
+  $$
+>
+> for $1 \le j \le k$ so $v - u' \in U^\perp$. Therefore, $v = u' + (v - u')$ so $\pi(v) = u'$ as required.
+>
+> Let $u \in U$, consider the vectors $v - \pi(v)$ and $\pi(v) - u$.
+> From the above, we have $\pi(v) \in U$ so $\pi(v) - u \in U$. Also, $v - \pi(v) \in U^\perp$ so they are orthogonal to each other.
+> Hence,
+>
+> $$
+  \begin{align*}
+  \Vert v - u \Vert^2 &= \Vert (v - \pi(v)) + (\pi(v) - u) \Vert^2 \\
+  &= \Vert v - \pi(v) \Vert^2 + \Vert \pi(v) - u \Vert^2 + 2 \langle v - \pi(v), \pi(v) - u \rangle \\
+  &= \Vert v - \pi(v) \Vert^2 + \Vert \pi(v) - u \Vert^2
+  \end{align*}
+  $$
+>
+> and $\Vert v - u \Vert^2 \ge \Vert v - \pi(v) \Vert^2$ with equality iff $\Vert \pi(v) - u \Vert^2 = 0$, i.e. $\pi(v) = u$.
+
 ## Reference
 
-* Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.1
+* Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.1, 8.2

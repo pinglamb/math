@@ -22,6 +22,7 @@ title: Home
 * [Quadratic Forms](linear-algebra/quadratic-forms.md)
 * [Hermitian Forms](linear-algebra/hermitian-forms.md)
 * [Inner Product Spaces](linear-algebra/inner-product-spaces.md)
+* [Adjoints](linear-algebra/adjoints.md)
 
 ## Vector Calculus
 {: .left}
