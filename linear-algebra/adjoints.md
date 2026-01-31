@@ -92,7 +92,7 @@ A square real (resp. complex) matrix is therefore orthogonal (resp. unitary) iff
 The result of the theorem is that normal linear maps are always diagonalizable and the corresponding eigenvectors belonging to distinct eigenvalues are orthogonal.
 
 > *Lemma.*{: .lem}
-> Let $\alpha \in \text{End}(V)$ be a normal linear map. Then there exist common eigenvectors $v$ for $\alpha$ and $\alpha^\ast$ such that $\alpha v = \lambda v$ and $\alpha^\ast v = \bar{\lambda} v$.
+> Let $\alpha \in \text{End}(V)$ be normal. Then there exist common eigenvectors $v$ for $\alpha$ and $\alpha^\ast$ such that $\alpha v = \lambda v$ and $\alpha^\ast v = \bar{\lambda} v$.
 >
 > *Proof.*{: .prf}
 >
@@ -112,6 +112,21 @@ The result of the theorem is that normal linear maps are always diagonalizable a
   $$
 >
 > so $\mu = \bar{\lambda}$ as required.
+
+> *Lemma.*{: .lem}
+> Let $\alpha \in \text{End}(V)$ be normal and $v$ and $v'$ be eigenvectors for $\alpha$ and $\alpha^\ast$ simultaneously such that $v$ and $v'$ belong to distinct eigenvalues for $\alpha$.
+> Then $\langle v, v' \rangle = 0$.
+>
+> *Proof.*{: .prf}
+>
+> Let $\alpha v = \lambda v$ and $\alpha v' = \mu v'$ with $\lambda \not= \mu$. Then $\alpha^\ast v = \bar{\lambda v}$ and $\alpha^\ast v' = \bar{\mu} v'$.
+> Therefore, we have
+>
+> $$
+  \bar{\lambda} \langle v, v' \rangle = \langle \alpha(v), v' \rangle = \langle v, \alpha^\ast(v') \rangle = \langle v, \bar{\mu} v' \rangle = \bar{\mu} \langle v, v' \rangle
+  $$
+>
+> and $\langle v, v' \rangle = 0$ since $\lambda \not= \mu$.
 
 ## Reference
 
