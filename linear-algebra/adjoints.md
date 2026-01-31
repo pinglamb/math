@@ -157,6 +157,20 @@ The result of the theorem is that normal linear maps are always diagonalizable a
 >
 > so $\beta_i^\ast = \beta_i$ and $\beta_i$ is self-adjoint.
 
+> *Theorem.*{: .thm}
+> **[Spectral Theorem]**
+> Suppose that $V$ is an inner product space and $\alpha \in \text{End}(V)$ is normal.
+> Let $\Set{\lambda_1, ..., \lambda_s}$ be distinct eigenvalues of $\alpha$.
+> Then there exists polynomials $\Set{f_i(x)}$ such that the linear maps $\Set{\beta_i = f_i(\alpha)}$ are self-adjoint
+> and satisfy the conditions $1 = \sum \beta_i$ and $\beta_i \beta_j = 0$ if $i \not= j$. Moreoever, $\alpha$ has a **spectral decomposition** of the form
+>
+> $$
+  \alpha = a_1 \beta_1 + \cdots + a_s \beta_s
+  $$
+
+> *Corollary.*{: .cor}
+> Let $\alpha \in \text{End}(V)$ be normal. Then there exists an orthonormal basis of $V$ consisting of eigenvectors of $\alpha$.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.3, 8.4
