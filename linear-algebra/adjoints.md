@@ -51,9 +51,15 @@ Adjoint is the analog of the transpose of a linear map for inner product spaces.
 > Hence, $\langle \alpha(v), w \rangle = \langle v, \alpha^\ast(w) \rangle$ as required.
 
 > *Definition.*{: .def}
-> Suppose that $V$ is an inner product space. Then $\alpha \in \text{End}(V)$ is **self-adjoint** if $\alpha = \alpha^\ast$, i.e. if $\langle \alpha(v_1), v_2 \rangle = \langle v_1, \alpha(v_2)$ for all $v_1, v_2 \in V$.
+> Suppose that $V$ is an inner product space. Then $\alpha \in \text{End}(V)$ is **self-adjoint** if $\alpha = \alpha^\ast$,
+> i.e. if $\langle \alpha(v_1), v_2 \rangle = \langle v_1, \alpha(v_2) \rangle$ for all $v_1, v_2 \in V$.
 
 Therefore, a complex matrix $A$ is self-adjoint iff $A = A^\dagger$, i.e. Hermitian.
+
+> *Definition.*{: .def}
+> Suppose that $V$ is an inner product space. Then $\alpha \in \text{End}(V)$ is **normal** if $\alpha \alpha^\ast = \alpha^\ast \alpha$.
+
+Self-adjoint maps are always normal but normal maps might not be self-adjoint, like the _unitary_ map.
 
 > *Definition.*{: .def}
 > Suppose that $V$ is real (resp. complex) inner product space and $\alpha \in \text{End}(V)$.
@@ -81,6 +87,33 @@ A square real (resp. complex) matrix is therefore orthogonal (resp. unitary) iff
 > *Corollary.*{: .cor}
 > $\alpha \in \text{End}(V)$ is orthogonal/unitary iff $\alpha$ is represented by an orthogonal/unitary matrix with respect to any orthonormal basis.
 
+## Spectral Theorem
+
+The result of the theorem is that normal linear maps are always diagonalizable and the corresponding eigenvectors belonging to distinct eigenvalues are orthogonal.
+
+> *Lemma.*{: .lem}
+> Let $\alpha \in \text{End}(V)$ be a normal linear map. Then there exist common eigenvectors $v$ for $\alpha$ and $\alpha^\ast$ such that $\alpha v = \lambda v$ and $\alpha^\ast v = \bar{\lambda} v$.
+>
+> *Proof.*{: .prf}
+>
+> Let $\lambda$ be an eigenvalue of $\alpha$ which always exist since $\mathbf{C}$ is algebraically closed and $v \in E_\alpha(\lambda)$. Then
+>
+> $$
+  \alpha (\alpha^\ast v) = \alpha^\ast \alpha v = \alpha^\ast \lambda v = \lambda(\alpha^\ast v)
+  $$
+>
+> so $\alpha^\ast v \in E_\alpha(\lambda)$ and $\lambda$-eigenspace is $\alpha^\ast$-invariant.
+> Therefore, $\alpha^\ast_{E_\alpha(\lambda)} \in \text{End}(E_\alpha(\lambda))$ has an eigenvector in $E_\alpha(\lambda)$ and so as $\alpha^\ast$ and such a vector is a common eigenvector of $\alpha$ and $\alpha^\ast$.
+>
+> Let $\alpha(v) = \lambda v$ and $\alpha^\ast(v) = \mu v$. Then
+>
+> $$
+  \bar{\lambda} \langle v, v \rangle = \langle \alpha(v), v \rangle = \langle v, \alpha^\ast(v) \rangle = \mu \langle v, v \rangle
+  $$
+>
+> so $\mu = \bar{\lambda}$ as required.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.3, 8.4
+* Charles W. Curtis _Linear Algebra - An Introductory Approach_, 1984 - Chapter 32
