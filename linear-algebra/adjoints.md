@@ -50,6 +50,37 @@ Adjoint is the analog of the transpose of a linear map for inner product spaces.
 >
 > Hence, $\langle \alpha(v), w \rangle = \langle v, \alpha^\ast(w) \rangle$ as required.
 
+> *Definition.*{: .def}
+> Suppose that $V$ is an inner product space. Then $\alpha \in \text{End}(V)$ is **self-adjoint** if $\alpha = \alpha^\ast$, i.e. if $\langle \alpha(v_1), v_2 \rangle = \langle v_1, \alpha(v_2)$ for all $v_1, v_2 \in V$.
+
+Therefore, a complex matrix $A$ is self-adjoint iff $A = A^\dagger$, i.e. Hermitian.
+
+> *Definition.*{: .def}
+> Suppose that $V$ is real (resp. complex) inner product space and $\alpha \in \text{End}(V)$.
+> Then $\alpha$ is **orthogonal** (resp. **unitary**) if $\langle \alpha(v_1), \alpha(v_2) \rangle = \langle v_1, v_2 \rangle$ for all $v_1, v_2 \in V$.
+
+By polarization identity, $\alpha$ is orthogonal/unitary iff $\Vert \alpha(v) \Vert = \Vert v \Vert$ for all $v \in V$.
+
+> *Proposition.*{: .prop}
+> $\alpha \in \text{End}(V)$ is orthogonal/unitary iff $\alpha$ is invertible and $\alpha^\ast = \alpha^{-1}$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Let $(e_1, ..., e_n)$ be an orthonormal basis for $V$. Then
+>
+> $$
+  \delta_{ij} = \langle e_i, e_j \rangle = \langle \alpha(e_i), \alpha(e_j) \rangle = \langle e_i, \alpha^\ast \alpha(e_j) \rangle
+  $$
+>
+> so $\alpha^\ast \alpha = \iota$ as required.
+>
+> ($\Leftarrow$) If $\alpha^\ast = \alpha^{-1}$, then $\langle v_1, v_2 \rangle = \langle v_1, \alpha^\ast \alpha(v_2) \rangle = \langle \alpha(v_1), \alpha(v_2) \rangle$.
+
+A square real (resp. complex) matrix is therefore orthogonal (resp. unitary) iff $A^\intercal A = I$ (resp. $A^\dagger A = I$) or equivalently iff the columns of $A$ form an orthonormal basis.
+
+> *Corollary.*{: .cor}
+> $\alpha \in \text{End}(V)$ is orthogonal/unitary iff $\alpha$ is represented by an orthogonal/unitary matrix with respect to any orthonormal basis.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.3, 8.4
