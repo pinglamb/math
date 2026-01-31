@@ -128,6 +128,35 @@ The result of the theorem is that normal linear maps are always diagonalizable a
 >
 > and $\langle v, v' \rangle = 0$ since $\lambda \not= \mu$.
 
+> *Lemma.*{: .lem}
+> Let $\Set{\beta_1, ..., \beta_s}$ a set of linear maps of $V$ such that $\iota = \sum \beta_i$ and $\beta_i \beta_j = 0$ if $i \not= j$.
+> Then $\Set{\beta_i}$ are self-adjoint iff the subspaces $\Set{\beta_i V}$ are mutually orthogonal.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) For any $w_i = \beta_i(v)$ and $w_j \in \beta_j(v')$ with $i \not= j$,
+>
+> $$
+  \langle w_i, w_j \rangle = \langle \beta_i(v), \beta_j(v') \rangle = \langle v, \beta_i \beta_j(v') \rangle = 0
+  $$
+>
+> since $\beta_i = \beta_i^\ast$ and $\beta_i \beta_j = 0$.
+>
+> ($\Leftarrow$) Suppose that $\beta_i V$ and $\beta_j V$ are orthogonal for $i \not= j$, then $V$ and $\beta_i^\ast \beta_j V$ are orthogonal which implies $\beta_i^\ast \beta_j = 0$.
+> Since $\iota = \sum \beta_i$ and $\beta_i \beta_j = 0$, we also have $\iota = \sum \beta_i^\ast$ and $\beta_i^\ast \beta_j^\ast = 0$ for $i \not= j$. Then
+>
+> $$
+  \beta_i = \iota \beta_i = \left( \sum_k \beta^\ast_k \right) \beta_i = \beta_i^\ast \beta_i
+  $$
+>
+> and
+>
+> $$
+  \beta^\ast_i = \beta^\ast_i \iota = \beta^\ast_i \left( \sum_k \beta_k \right)= \beta_i^\ast \beta_i
+  $$
+>
+> so $\beta_i^\ast = \beta_i$ and $\beta_i$ is self-adjoint.
+
 ## Reference
 
 * Simon Wadsley _Linear Algebra Lectures Notes_, 2016 - Chapter 8.3, 8.4
