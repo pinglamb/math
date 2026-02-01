@@ -167,6 +167,31 @@ The result of the theorem is that normal linear maps are always diagonalizable a
 > $$
   \alpha = a_1 \beta_1 + \cdots + a_s \beta_s
   $$
+>
+> *Proof.*{: .prf}
+>
+> If $\dim V = 1$, $\alpha$ is diagonalizable. Assume it is true for inner product space with $\dim V < n$.
+> For $\dim V = n$, there exists a common eigenvector $u$ for $\alpha$ and $\alpha'$ such that $\alpha u = \lambda u$ and $\alpha^\ast u = \bar{\lambda} u$.
+> Let $U = \langle u \rangle$ and $u^\perp \in U^\perp$. Then
+>
+> $$
+  \langle u, \alpha(u^\perp) \rangle = \langle \alpha^\ast(u), u^\perp \rangle = \lambda \langle u, u^\perp \rangle = 0
+  $$
+>
+> Similarily, $\langle u, \alpha^\ast(u^\perp) \rangle = 0$ so $\alpha(u^\perp), \alpha^\ast(u^\perp) \in U^\perp$ and $U^\perp$ is $\alpha$ and $\alpha^\ast$ invariant.
+> Thus, since $\alpha$ is normal in $V$, the restriction of $\alpha$ to $U^\perp$ is also normal. By induction hypothesis, $U^\perp$ is diagonalizable and so as $V = U \oplus U^\perp$.
+>
+> Since $V$ is diagonalizable, there exists polynomials $\Set{f_i(x)}$ such that the linear maps $\Set{\beta_i = f_i(\alpha)}$ satisfy the conditions stated except for being self-adjoint,
+> which is true if the subspaces $\beta_i V$ are mutually orthogonal. Since $\alpha$ and $\alpha'$ commutes and $\beta_i = f_i(\alpha)$, for any $v_i \in \beta_i V$, we have
+>
+> $$
+  \alpha^\ast(v_i) = \alpha^\ast(\beta_i(v)) = \beta_i(\alpha^\ast(v)) \in \beta_i V
+  $$
+>
+> so $\beta_i V$ is $\alpha^\ast$ invariant as well. Therefore, the restriction of $\alpha^\ast$ to $\beta_i V$ is normal and is diagonalizable.
+> All the eigenvalues of $\alpha^\ast$ on $\beta_i V$ are therefore $\overline{\lambda_i}$ and every vector in $\beta_i V$ is a eigenvector for both $\alpha$ and $\alpha^\ast$.
+> Hence, for $i \not= j$, $v_i \in \beta_i V$ and $v_j \in \beta_j V$ are both eigenvectors for $\alpha$ and $\alpha^\ast$ belonging to distinct eigenvalues $\lambda_i$ and $\lambda_j$
+> so $\langle v_i, v_j \rangle = 0$ and $\beta_i V$ and $\beta_j V$ are orthogonal so $\Set{\beta_i}$ are self-adjoint.
 
 > *Corollary.*{: .cor}
 > Let $\alpha \in \text{End}(V)$ be normal. Then there exists an orthonormal basis of $V$ consisting of eigenvectors of $\alpha$.
