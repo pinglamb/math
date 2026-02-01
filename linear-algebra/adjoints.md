@@ -61,6 +61,19 @@ Therefore, a complex matrix $A$ is self-adjoint iff $A = A^\dagger$, i.e. Hermit
 
 Self-adjoint maps are always normal but normal maps might not be self-adjoint, like the _unitary_ map.
 
+> *Proposition.*{: .prop}
+> Suppose that $\alpha \in \text{End}(V)$ is self-adjoint then all eigenvalues of $\alpha$ are real.
+>
+> *Proof.*{: .prf}
+>
+> Suppose that $\alpha v = \lambda v$, then
+>
+> $$
+  \lambda \langle v, v \rangle = \langle v, \lambda v \rangle = \langle v, \alpha(v) \rangle = \langle \alpha(v), v \rangle = \langle \lambda v, v \rangle = \bar{\lambda} \langle v, v \rangle
+  $$
+>
+> so $\lambda \in \mathbf{R}$.
+
 > *Definition.*{: .def}
 > Suppose that $V$ is real (resp. complex) inner product space and $\alpha \in \text{End}(V)$.
 > Then $\alpha$ is **orthogonal** (resp. **unitary**) if $\langle \alpha(v_1), \alpha(v_2) \rangle = \langle v_1, v_2 \rangle$ for all $v_1, v_2 \in V$.
@@ -194,7 +207,46 @@ The result of the theorem is that normal linear maps are always diagonalizable a
 > so $\langle v_i, v_j \rangle = 0$ and $\beta_i V$ and $\beta_j V$ are orthogonal so $\Set{\beta_i}$ are self-adjoint.
 
 > *Corollary.*{: .cor}
-> Let $\alpha \in \text{End}(V)$ be normal. Then there exists an orthonormal basis of $V$ consisting of eigenvectors of $\alpha$.
+> Let $\alpha \in \text{End}(V)$ be normal. Then there exists an orthonormal basis of consisting of eigenvectors of $\alpha$.
+
+> *Corollary.*{: .cor}
+> Let $\alpha \in \text{End}(V)$ be self-adjoint. Then $V$ is the orthogonal direct sum of the $\alpha$-eigenspaces (and all eigenvalues are real).
+
+Being able to derive orthonormal basis from eigenvectors whenever $\alpha$ is normal has many useful implications.
+
+> *Corollary.*{: .cor}
+> Let $A \in \text{Mat}_n(\mathbf{R})$ (resp. $\text{Mat}_n(\mathbf{C})$) be a symmetric bilinear matrix (resp. Hermitian).
+> Then there is orthogonal (resp. unitary) matrix $P$ such that $P^\intercal A P$ (resp. $P^\dagger A P$) is diagonal with real entries.
+>
+> *Proof.*{: .prf}
+>
+> $\mathbf{F}^n$ has standard inner product so $A \in \text{End}(\mathbf{F}^n)$ is self-adjoint since $A$ is symmetric/Hermitian.
+> Thus, there is an orthonormal basis $(e_1, ..., e_n)$ consisting of eigenvectors of $A$ and let $P$ be the matrix whose columns are given by $e_1, ..., e_n$.
+> Then $P$ is orthogonal (resp. unitary), i.e. $P^{-1} = P^\intercal$ (resp. $P^{-1} = P^\dagger$),
+> and $D = P^{-1} A P = P^\intercal A P$ (resp. $D = P^{-1} A P = P^\dagger A P$) is diagonal with real entries (the eigenvalues).
+
+> *Corollary.*{: .cor}
+> Suppose that $V$ is a finite dimensional real (resp. complex) inner product space and $\psi: V \times V \to \mathbf{F}$ a symmetric bilinear (resp. Hermitian) form.
+> Then there is an orthonormal basis of $V$ such that $\psi$ is represented by a diagonal matrix.
+>
+> *Proof.*{: .prf}
+>
+> This is similar to the previous corollary but for symmetric bilinear (resp. Hermitian) form.
+> Let $(e_1, ..., e_n)$ be any basis for $V$ and $A$ be the matrix representing $\psi$ with respect to this basis.
+> Then there exists $P$ such that $D = P^\intercal A P$ (resp. $D = P^\dagger A P$) where $D$ is diagonal representing $\psi$ with respect to the basis $(f_i = \sum_k P_{ki} e_k)$.
+
+Since the diagonal entries of $P^\intercal A P$ are the eigenvalues of $A$, we can find the signature of $A$ by counting the number of positive and negative eigenvalues of $A$.
+
+> *Corollary.*{: .cor}
+> Let $V$ be a finite dimensional real (resp. complex) vector space and let $\phi$ and $\psi$ be symmetric bilinear (resp. Hermitian) forms on $V$.
+> If $\phi$ is positive definite then there is a basis $(e_1, ..., e_n)$ for $V$ with respect to which both forms are represented by a diagonal matrix.
+>
+> *Proof.*{: .prf}
+>
+> Use $\phi$ to make $V$ an inner product space and there is an orthonormal basis with respect to which $\psi$ is represented by a diagonal matrix.
+> Then $\phi$ is represented by $I_n$ with respect to this basis.
+
+Therefore, for $A, B \in \text{Mat}_n(\mathbf{R})$ be symmetric matrices such that $A$ is positive definite. Then there is invertible matrix $P$ such that $P^\intercal A P$ and $P^\intercal B P$ are both diagonal.
 
 ## Reference
 
