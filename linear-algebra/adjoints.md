@@ -178,7 +178,7 @@ The result of the theorem is that normal linear maps are always diagonalizable a
 > and satisfy the conditions $1 = \sum \beta_i$ and $\beta_i \beta_j = 0$ if $i \not= j$. Moreoever, $\alpha$ has a **spectral decomposition** of the form
 >
 > $$
-  \alpha = a_1 \beta_1 + \cdots + a_s \beta_s
+  \alpha = \lambda_1 \beta_1 + \cdots + \lambda_s \beta_s
   $$
 >
 > *Proof.*{: .prf}
@@ -205,6 +205,8 @@ The result of the theorem is that normal linear maps are always diagonalizable a
 > All the eigenvalues of $\alpha^\ast$ on $\beta_i V$ are therefore $\overline{\lambda_i}$ and every vector in $\beta_i V$ is a eigenvector for both $\alpha$ and $\alpha^\ast$.
 > Hence, for $i \not= j$, $v_i \in \beta_i V$ and $v_j \in \beta_j V$ are both eigenvectors for $\alpha$ and $\alpha^\ast$ belonging to distinct eigenvalues $\lambda_i$ and $\lambda_j$
 > so $\langle v_i, v_j \rangle = 0$ and $\beta_i V$ and $\beta_j V$ are orthogonal so $\Set{\beta_i}$ are self-adjoint.
+
+It means that $\alpha$ can be decomposed to a sum of projection maps $\beta_i$ onto the each eigenspace $E_i$ and each projection is scaled by the corresponding eigenvalue $\lambda_i$.
 
 > *Corollary.*{: .cor}
 > Let $\alpha \in \text{End}(V)$ be normal. Then there exists an orthonormal basis of consisting of eigenvectors of $\alpha$.
@@ -247,6 +249,69 @@ Since the diagonal entries of $P^\intercal A P$ are the eigenvalues of $A$, we c
 > Then $\phi$ is represented by $I_n$ with respect to this basis.
 
 Therefore, for $A, B \in \text{Mat}_n(\mathbf{R})$ be symmetric matrices such that $A$ is positive definite. Then there is invertible matrix $P$ such that $P^\intercal A P$ and $P^\intercal B P$ are both diagonal.
+
+## Polar Decomposition
+
+Each complex number can be expressed in polar form, i.e. $z = r(\cos \theta + i \sin \theta)$, where $r$ is positive real number and $\cos \theta + i \sin \theta$ is unitary.
+The following demonstrates the use of the Spectral Theorem to prove the analogy of that to endomorphisms, i.e. $\alpha = \beta \gamma$ where $\beta$ is _unitary_ and $\gamma$ is _positive_.
+
+> *Definition.*{: .def}
+> $\alpha \in \text{End}(V)$ is _positive_ if $\alpha$ is self-adjoint and $\langle \alpha(v), v \rangle$ is real and positive for all vectors $v \not= 0$.
+
+> *Lemma.*{: .lem}
+> A self-adjoint endomorphism $\alpha \in \text{End}(V)$ is positive iff all the eigenvalues are positive.
+>
+> *Proof.*{: .prf}
+>
+> Note that $\alpha$ is self-adjoint so all the eigenvalues are real.
+>
+> ($\Rightarrow$) Since $\langle \alpha(v), v \rangle = \lambda \langle v, v \rangle$ so if $\langle \alpha(v), v \rangle > 0$
+>
+> $$
+  \lambda = {\langle \alpha(v), v \rangle \over \langle v, v \rangle} > 0
+  $$
+>
+> ($\Leftarrow$) Consider the spertral decomposition of $\alpha = \sum \lambda_i \beta_i$, all $\lambda_i$ are real and positive.
+> Also, any $v \in V$ can be expressed in the form $v = \sum \beta_i v_i$ for some $v_i \in V$ since $V$ is the direct sum of the eigenspaces.
+> Then
+>
+> $$
+  \langle \alpha(v), v \rangle = \langle \sum_i \lambda_i \beta_i^2(v_i), \sum_j \beta_j v_j \rangle = \sum_{i,j} \lambda_i \langle \beta_i(v_i), \beta_j(v_j) \rangle = \sum_i \lambda_i \langle \beta_i(v_i), \beta_i(v_i) \rangle > 0
+  $$
+>
+> except for $v = 0$, so $\alpha$ is positive.
+
+> *Theorem.*{: .thm}
+> **[Polar Decomposition]**
+> Suppose that $V$ is an inner product space and $\alpha \in \text{End}(V)$ is invertible.
+> Then $\alpha$ can be expressed in the form $\alpha = \beta \gamma$, where $\beta$ is unitary and $\gamma$ is positive.
+>
+> *Proof.*{: .prf}
+>
+> Since $\alpha$ is invertible, $\ker \alpha = 0$ so $\langle \alpha(v), \alpha(v) \rangle$ is real and positive for all $v \not= 0$.
+> Then $\langle \alpha^\ast \alpha v, v \rangle = \langle \alpha(v), \alpha(v) \rangle$ is also real and positive for $v \not= 0$.
+> Also, $(\alpha^\ast \alpha)^\ast = \alpha^\ast \alpha$ so $\alpha^\ast \alpha$ is self-adjoint.
+> Therefore, $\alpha^\ast \alpha$ is positive and it can be decomposed to
+>
+> $$
+  \alpha^\ast \alpha = \sum_i \lambda_i \beta_i
+  $$
+>
+> where $\Set{\lambda_i}$ are positive and real. Let
+>
+> $$
+  \gamma = \sum_i \sqrt{\lambda_i} \beta_i
+  $$
+>
+> since $\beta_i^2 = \beta_i$ and $\beta_i \beta_j = 0$ for $i \not= j$, we have $\gamma^2 = \alpha$.
+> Morever, $\gamma$ is self-adjoint, invertible and positive since $\Set{\sqrt{\lambda_i}}$ are positive and $\beta_i$ are self-adjoint, in which $\gamma^{-1}$ is also self-adjoint.
+> Let $\beta = \alpha \gamma^{-1}$, then
+>
+> $$
+  \beta^\ast \beta = (\gamma^{-1})^\ast \alpha^\ast \alpha \gamma^{-1} = \gamma^{-1} \gamma^2 \gamma^{-1} = \iota
+  $$
+>
+> so $\beta$ is unitary and $\alpha = \beta \gamma$ is the required decomposition.
 
 ## Reference
 
