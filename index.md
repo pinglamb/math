@@ -3,6 +3,12 @@ layout: base
 title: Home
 ---
 
+## Analysis II
+{: .left}
+
+## Methods
+{: .left}
+
 ## Linear Algebra
 {: .left}
 
