@@ -6,6 +6,8 @@ title: Home
 ## Analysis II
 {: .left}
 
+* [Metric Spaces](analysis-ii/metric-spaces.md)
+
 ## Methods
 {: .left}
 
