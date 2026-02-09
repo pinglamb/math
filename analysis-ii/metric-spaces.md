@@ -66,15 +66,23 @@ We can now then extend the definition of convergence of sequences of real number
 > Suppose that $\rho$ and $\sigma$ are both metrics on the set $X$ such that a sequence converges in $(X, \rho)$ iff it converges in $(X, \sigma)$.
 > Then $\rho$ and $\sigma$ are said to be **equivalent metrics**.
 
-A sufficient but not necessary condition for metrics to be equivalent is the existence of positive constants $\lambda$ and $\mu$ such that
+A sufficient but not necessary condition for metrics to be equivalent is stated below.
 
-$$
-\lambda \rho(x, y) \le \sigma(x, y) \le \mu \rho(x, y)
-$$
+> *Definition.*{: .def}
+> Suppose that $\rho$ and $\sigma$ are both metrics on the set $X$.
+> Then $\rho$ and $\sigma$ are **Lipschitz equivalent** if there exists positive real constants $\lambda$ and $\mu$ such that
+>
+> $$
+  \lambda \rho(x, y) \le \sigma(x, y) \le \mu \rho(x, y)
+  $$
+>
+> for all $x, y \in X$.
+
+If two metrics are equivalent, the topological properties are preserved between them.
 
 ## Normed Vector Spaces
 
-We will state the basic algebraic ideas about vector spaces that are related to analysis and more in-depth study of vector spaces can be found in [linear algebra](../linear-algebra/vector-spaces.md).
+We will generalize the basic algebraic ideas about vector spaces that are related to analysis and more in-depth study of vector spaces can be found in [linear algebra](../linear-algebra/vector-spaces.md).
 
 > *Definition.*{: .def}
 > Let $V$ be a vector space over a field $\mathbf{F}$. The real valued function $\Vert \cdot \Vert: V \to \mathbf{R}$ on $V$ is called a **norm** on $V$ and $V$ is called a **normed vector space** if
@@ -88,8 +96,17 @@ We will state the basic algebraic ideas about vector spaces that are related to 
 In a normed vector space, a metric $\rho$ may be defined by $\rho(x, y) = \Vert x - y \Vert$.
 
 + For $\mathbf{R}^n$, the usual norm is given by $\Vert x \Vert = \sqrt{x_1^2 + ... + x_n^2}$.
+  We can in general define $p$ norm by
+
+  $$
+  \Vert x \Vert_p = (x_1^p + ... + x_n^p)^{1/p}
+  $$
+
+  and as $p \to \infty$, $\Vert x \Vert_{\infty} = \max\Set{\vert x_i \vert : 1 \le i \le n}$.
 
 + For bounded functions $B[a, b]$, $\Vert f \Vert = \sup \vert f(x) \vert$.
+
+Even though we can define many different norms for the same space like $\mathbf{R}^n$, these norms can be _Lipschitz equivalent_ which simplifies the study of their topological structure.
 
 For $\mathbf{R}$ and $\mathbf{C}$, we can have more specialized normed vector spaces which is called _inner product spaces_.
 
