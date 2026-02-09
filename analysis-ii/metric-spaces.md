@@ -116,6 +116,14 @@ For inner product spaces, the triangle inequality can be written as the followin
 >
 > with equality holds iff $x, y$ is a scalar multiple of the other.
 
+We can go further by restricting our attention to finite-dimensional spaces.
+
+> *Definition.*{: .def}
+> A **Euclidean space** is a finite-dimensional real inner product space.
+> A **unitary space** is a finite-dimensional complex inner product space.
+
+More results regarding these specialized spaces can be found in [inner product spaces](../linear-algebra/inner-product-spaces.md).
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 2
