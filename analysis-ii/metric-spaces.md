@@ -161,9 +161,9 @@ More results regarding these specialized spaces can be found in [inner product s
 > i.e. $(B_\varepsilon(a) - \Set{a}) \cap E \not= \emptyset$ for all $\varepsilon > 0$.
 
 > *Proposition.*{: .prop}
-> $a \in X$ is a limit point of $E \subseteq X$ iff
+> $a \in X$ is a limit point of $E \subseteq X$ iff either
 >
-> + every open ball $B_\varepsilon(a)$ contains infinitely many points of $E$;
+> + every open ball $B_\varepsilon(a)$ contains infinitely many points of $E$; or
 >
 > + there is a sequence of points $\Set{e_n \in E}$ such that $e_n \not= a$ and $e_n \to a$ as $n \to \infty$.
 >
@@ -177,7 +177,29 @@ More results regarding these specialized spaces can be found in [inner product s
 >
 > The sequence $\Set{x_n}$ satisfies the second condition, in which implies the first.
 >
-> ($\Leftarrow$)
+> ($\Leftarrow$) First condition obviously implies $a$ is a limit point. By definition, the second condition implies that
+>
+> $$
+  (\forall \varepsilon > 0)(\exists N)(\forall n > N)\; \rho(a, e_n) < \varepsilon
+  $$
+>
+> so there must be $e = e_n \not= a$ satisfying $0 < \rho(a, e) < \varepsilon$.
+
+These conditions show that a finite set cannot have a limit point. Also, a limit point of $E$ may or may not belong to $E$.
+
+> *Definition.*{: .def}
+> A point $e \in E$ is an **isolated point** of $E$ if it is not a limit point, i.e.
+>
+> $$
+  (\exists \delta > 0)\; B_\delta(e) \cap E = \emptyset
+  $$
+
+> *Definition.*{: .def}
+> Given $E \subseteq X$, then a point $e \in E$ is an **interior point** of $E$ if
+>
+> $$
+  (\exists \delta > 0)\; B_\delta(e) \subset E
+  $$
 
 ## References
 
