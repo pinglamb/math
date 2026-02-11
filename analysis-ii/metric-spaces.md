@@ -141,6 +141,44 @@ We can go further by restricting our attention to finite-dimensional spaces.
 
 More results regarding these specialized spaces can be found in [inner product spaces](../linear-algebra/inner-product-spaces.md).
 
+## Open and Closed Sets
+
+> *Definition.*{: .def}
+> Let $(X, \rho)$ be a metric space and $a \in X$ and $r \in \mathbf{R}_{> 0}$.
+> The **open ball** with centre $a$ and radius $r$ is defined by
+>
+> $$
+  B_r(a) = \Set{x \in X : \rho(a, x) < r}
+  $$
+
+> *Definition.*{: .def}
+> Given $E \subseteq X$, then $a \in X$ is said to be a **limit point** of $E$ if
+>
+> $$
+  (\forall \varepsilon > 0)(\exists e \in E)\; 0 < \rho(a, e) < \varepsilon
+  $$
+>
+> i.e. $(B_\varepsilon(a) - \Set{a}) \cap E \not= \emptyset$ for all $\varepsilon > 0$.
+
+> *Proposition.*{: .prop}
+> $a \in X$ is a limit point of $E \subseteq X$ iff
+>
+> + every open ball $B_\varepsilon(a)$ contains infinitely many points of $E$;
+>
+> + there is a sequence of points $\Set{e_n \in E}$ such that $e_n \not= a$ and $e_n \to a$ as $n \to \infty$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) If $a$ is a limit point, then for every $n$, there exists a point $e_n \in E$ such that
+>
+> $$
+  0 < \rho(a, e_n) < 1/n
+  $$
+>
+> The sequence $\Set{x_n}$ satisfies the second condition, in which implies the first.
+>
+> ($\Leftarrow$)
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 2
