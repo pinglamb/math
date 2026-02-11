@@ -63,7 +63,7 @@ We can now then extend the definition of convergence of sequences of real number
 > By definition, we have both $\rho(L_1, x_n) \to 0$ and $\rho(x_n, L_2) \to 0$ so $\rho(L_1, L_2) \to 0$ which implies $L_1 = L_2$.
 
 > *Definition.*{: .def}
-> Suppose that $\rho$ and $\sigma$ are both metrics on the set $X$ such that a sequence converges in $(X, \rho)$ iff it converges in $(X, \sigma)$.
+> Suppose that $\rho$ and $\sigma$ are both metrics on the set $X$ such that a sequence converges in $(X, \rho)$ iff it converges in $(X, \sigma)$ (to the same limit).
 > Then $\rho$ and $\sigma$ are said to be **equivalent metrics**.
 
 A sufficient but not necessary condition for metrics to be equivalent is stated below.
@@ -152,7 +152,7 @@ More results regarding these specialized spaces can be found in [inner product s
   $$
 
 > *Definition.*{: .def}
-> Given $E \subseteq X$, then $a \in X$ is said to be a **limit point** of $E$ if
+> Given $E \subseteq X$, $a \in X$ is said to be a **limit point** of $E$ if
 >
 > $$
   (\forall \varepsilon > 0)(\exists e \in E)\; 0 < \rho(a, e) < \varepsilon
@@ -161,7 +161,7 @@ More results regarding these specialized spaces can be found in [inner product s
 > i.e. $(B_\varepsilon(a) - \Set{a}) \cap E \not= \emptyset$ for all $\varepsilon > 0$.
 
 > *Proposition.*{: .prop}
-> $a \in X$ is a limit point of $E \subseteq X$ iff either
+> Given $E \subseteq X$, $a \in X$ is a limit point of $E \subseteq X$ iff either
 >
 > + every open ball $B_\varepsilon(a)$ contains infinitely many points of $E$; or
 >
@@ -188,18 +188,54 @@ More results regarding these specialized spaces can be found in [inner product s
 These conditions show that a finite set cannot have a limit point. Also, a limit point of $E$ may or may not belong to $E$.
 
 > *Definition.*{: .def}
-> A point $e \in E$ is an **isolated point** of $E$ if it is not a limit point, i.e.
+> Given $E \subseteq X$, $e \in E$ is an **isolated point** of $E$ if it is not a limit point, i.e.
 >
 > $$
   (\exists \delta > 0)\; B_\delta(e) \cap E = \emptyset
   $$
 
 > *Definition.*{: .def}
-> Given $E \subseteq X$, then a point $e \in E$ is an **interior point** of $E$ if
+> Given $E \subseteq X$, $e \in E$ is an **interior point** of $E$ if
 >
 > $$
   (\exists \delta > 0)\; B_\delta(e) \subset E
   $$
+
+The property of being a limit point or interior point is not intrinsic to the subset but it is relative to the parent set $X$ and the choice of metric $\rho$.
+For example, a subset of rational numbers has no interior points in $\mathbf{R}$ but all the points of the same subset are interior points in $\mathbf{Q}$.
+
+> *Definition.*{: .def}
+> A subset $F \subseteq X$ is **closed** if $F$ contains all its limit points.
+> A subset $G \subseteq X$ is **open** if every point of $F$ is an interior point of $G$.
+
+From the above, since finite sets have no limit points, they are closed. It is possible for a subset to be both open and closed or neither open nor closed.
+For example, the empty set and the whole space is both open and closed and the interval $[0, 1)$ of $\mathbf{R}$ is neither open nor closed.
+
+> *Proposition.*{: .prop}
+> A set $F$ is closed iff whenever $(x_n)$ is a convergent sequence of points in $F$, $\lim_{n \to \infty} x_n \in F$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Suppose that $F$ is closed and let $x_n \in F \to x$ as $n \to \infty$.
+> If $x_n = x$ for some $n$ then for sure $x \in F$. Otherwise, $x$ is a limit point of $F$ and again $x \in F$.
+>
+> ($\Rightarrow$) Suppose that $F$ has the described property. If $F$ has no limit points, then for sure $F$ is closed.
+> Otherwise, let $x$ be a limit point of $F$ then there is a sequence $x_n \to x$ such that $x \in F$, so $F$ contains all its limit points.
+
+> *Proposition.*{: .prop}
+> A set $G$ is open iff $G'$ is closed. A set $F$ is closed iff $F'$ is open.
+>
+> *Proof.*{: .prf}
+>
+> Let $G$ be open. If $G'$ has no limit points, then $G'$ is closed.
+> Let $x$ be a limit point of $G'$. Then every open ball $B_\varepsilon(x)$ contains a point in $G'$ so $x$ cannot be an interior point of $G$ and $x \in G'$.
+>
+> Let $F$ be closed. If $F'$ is empty, then $F'$ is open.
+> For any point $x \in F'$, $x$ is not a limit point of $F$ and there exists $\delta$ such that $B_\delta(x)$ contains no point in $F$.
+> Thus, $B_\delta(x) \subset F'$ and $x$ is an interior point of $F'$.
+
+Since convergence of sequences to the same limit is preserved between equivalent metrics, together with the above two propositions,
+we can see that metric spaces with equivalent metrics have the same set of open and closed sets, and therefore preserve the topological properties.
 
 ## References
 
