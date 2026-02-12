@@ -237,6 +237,25 @@ For example, the empty set and the whole space is both open and closed and the i
 Since convergence of sequences to the same limit is preserved between equivalent metrics, together with the above two propositions,
 we can see that metric spaces with equivalent metrics have the same set of open and closed sets, and therefore preserve the topological properties.
 
+> *Proposition.*{: .prop}
+> The union of any collection of open sets is open. The intersection of any collection of closed sets is closed.
+>
+> *Proof.*{: .prf}
+>
+> Let $x \in \bigcup G$, then $x$ is an interior point of at least one of the open set, say $G^\ast$.
+> Thus, $B_\delta(x) \subset G^\ast$ which implies $B_\delta(x) \subset \bigcup G$ and every point is an interior point.
+>
+> If $F$ is closed, $F'$ is open. Therefore, the complement of the intersection of closed sets, i.e.
+>
+> $$
+  \left( \bigcap F \right)' = \bigcup F'
+  $$
+>
+> is a collection of open sets which is open. Hence the intersection itself is closed.
+
+> *Proposition.*{: .prop}
+> The intersection of finite collection of open sets is open. The union of finite collection of closed sets is closed.
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 2
