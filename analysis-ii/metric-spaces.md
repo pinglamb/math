@@ -256,6 +256,27 @@ we can see that metric spaces with equivalent metrics have the same set of open 
 > *Proposition.*{: .prop}
 > The intersection of finite collection of open sets is open. The union of finite collection of closed sets is closed.
 
+> *Proposition.*{: .prop}
+> Let $(Y, \sigma)$ be a metric subspace of $(X, \rho)$. Then a set is open in $(Y, \sigma)$ iff there exists an open set $G$ in $(X, \rho)$ such that $E = Y \cap G$.
+> A similar result holds for closed sets.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Let $E$ be a open set in $Y$. For every $x \in E$, there exists $\delta_x$ such that $B_{\delta\_x}(x) \subset E$.
+> It means that these open balls only contain elements in $E$, and therefore the set
+>
+> $$
+  G = \bigcup_{x \in E} B_{\delta_x}(x)
+  $$
+>
+> is open in $X$ and $E = Y \cap G$.
+>
+> ($\Leftarrow$) Let $G$ be open in $X$. For every $x \in Y \cap G$, there exists $\delta_x$ such that $B_{\delta\_x}(x) \subset G$.
+> Therefore $B_{\delta\_x}(x) \cap Y \subset Y \cap G$ and $x$ is an interior point of $Y \cap G$.
+
+> *Corollary.*{: .cor}
+> If $Y$ is open/closed in $X$, then $Z$ is open/closed in $Y$ iff it is open/closed in $X$.
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 2
