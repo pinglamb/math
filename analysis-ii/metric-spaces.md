@@ -277,6 +277,46 @@ we can see that metric spaces with equivalent metrics have the same set of open 
 > *Corollary.*{: .cor}
 > If $Y$ is open/closed in $X$, then $Z$ is open/closed in $Y$ iff it is open/closed in $X$.
 
+> *Definition.*{: .def}
+> The **interior** of $E \subseteq X$, denoted by $E^\circ$, is the set of interior points of $E$.
+
+> *Definition.*{: .def}
+> The **closure** of $E \subseteq X$, denoted by $\bar{E}$, is the union of $E$ and the set of limit points of $E$.
+> Thus, $\bar{E}$ is the set of $x$ such that every $B_\varepsilon(x)$ contains at least one point of $E$ or $x \in \bar{E}$ iff $x$ is the limit of a sequence of points of $E$.
+
+Alternatively, $E^\circ$ is the union of all open sets contained in $E$ and so is the _largest_ open set contained in $E$
+and $\bar{E}$ is the intersection of all closed sets containing $E$ and so is the _smallest_ closed set containing $E$.
+
+> *Proposition.*{: .prop}
+> $(\bar{E})' = (E')^\circ$.
+>
+> *Proof.*{: .prf}
+>
+> By definition, $x \in \bar{E}$ iff for all $\varepsilon > 0$, $B_\varepsilon(x) \cap E \not= \emptyset$, so if $y \in (\bar{E})'$ then $B_\varepsilon(y) \cap E = \emptyset$.
+> Therefore, $y \in E'$ and there exists $\delta$ such that $B_\delta(y) \subset E'$ so $y \in (E')^\circ$.
+
+> *Proposition.*{: .prop}
+> For any $E \subseteq X$, $E^\circ$ is open and $\bar{E}$ is closed.
+>
+> *Proof.*{: .prf}
+>
+> If $E^\circ$ is empty, it is open. For any $x \in E^\circ$, there exists $\delta$ such that $B_\delta(x) \subset E$.
+> Since every $y \in B_\delta(x)$ is an interior point of $B_\delta(x)$ so of $E$, $B_\delta(x) \subset E^\circ$ and $x$ is an interior point of $E^\circ$.
+> By $(\bar{E})' = (E')^\circ$, $\bar{E}$ is closed.
+
+We can also define open and closed sets by interiors and closures, $G$ is open iff $G^\circ = G$ and $F$ is closed iff $\bar{F} = F$.
+
+> *Definition.*{: .def}
+> A **frontier** of $E \subseteq X$, denoted by $\text{fr}\, E$, is the set of points such that every open ball $B_\varepsilon(x)$ contains at least one point of $E$ and at least one point of $E'$.
+
+In other words, since a point $x$ cannot be in both $E$ and $E'$, $x$ is either a point in $E$ and a limit point in $E'$ or vice versa, so
+
+$$
+\text{fr}\, E = \bar{E} - E^\circ
+$$
+
+We also have $X = E^\circ \cup \text{fr}\, E \cup (E')^\circ$, where $(E')^\circ$ is called the _exterior_ of $E$.
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 2
