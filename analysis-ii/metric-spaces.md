@@ -20,6 +20,15 @@ Metric spaces provide a more general setup for analysis, in which the fundamenta
 >
 > Then the function $\rho$ is called a **metric/distance** on $X$ and $(X, \rho)$ is called a **metric space**.
 
+* Any set can be equipped with the _discrete metric_:
+
+  $$
+  \rho(x, y) = \begin{cases}
+  0 & \text{if}\; x = y \\
+  1 & \text{if}\; x \not= y \\
+  \end{cases}
+  $$
+
 + For $\mathbf{R}$, the usual metric is given by $\rho(x, y) = \vert x - y \vert$.
 
 + For $\mathbf{R}^n$, the usual metric is the _norm_, i.e. $\rho(x, y) = \sqrt{(x_1 - y_1)^2 + ... + (x_n - y_n)^2}$.
