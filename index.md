@@ -7,6 +7,8 @@ title: Home
 {: .left}
 
 * [Metric Spaces](analysis-ii/metric-spaces.md)
+* [Normed Spaces](analysis-ii/normed-spaces.md)
+* [Continuous Functions](analysis-ii/continuous-functions.md)
 
 ## Methods
 {: .left}
