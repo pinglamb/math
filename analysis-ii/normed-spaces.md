@@ -79,7 +79,7 @@ We can now explore some important examples.
 
 ## Finite-dimensional Spaces
 
-All finite-dimensional vector spaces are isomorphic to $\mathbf{R}^n$ so we will focus on that.
+All finite-dimensional vector spaces are isomorphic to $\mathbf{R}^n$ so we will focus on that. We start with something familiar.
 
 > *Proposition.*{: .prop}
 > The **Euclidean/usual norm** defined by
@@ -103,7 +103,7 @@ All finite-dimensional vector spaces are isomorphic to $\mathbf{R}^n$ so we will
   \end{align*}
   $$
 
-We can also have the following norms on $\mathbf{R}^n$.
+We can also have the following norms on $\mathbf{R}^n$:
 
 $$
 \begin{align*}
@@ -114,6 +114,74 @@ $$
 $$
 
 in which as $p \to \infty$, $\Vert x \Vert_p \to \Vert x \Vert_\infty$.
+
+## Infinite-dimensional Spaces
+
+We will extend the notions on $\mathbf{R}^n$ to infinite sequences with some care.
+Let $\mathbf{R}^{\mathbf{N}}$ be the set of all infinite real sequences $(x_n)$ which is a vector space with termwise addition and scalar multiplication.
+By considering subspaces of $\mathbf{R}^{\mathbf{N}}$ with some restrictions, we can define different norms accordingly.
+The vector subspaces are
+
+$$
+\begin{align*}
+\ell^1 &= \Set{(x_n) \in \mathbf{R}^{\mathbf{N}} : \sum \vert x_n \vert < \infty } \\
+\ell^2 &= \Set{(x_n) \in \mathbf{R}^{\mathbf{N}} : \sum \vert x_n \vert^2 < \infty } \\
+\ell^p &= \Set{(x_n) \in \mathbf{R}^{\mathbf{N}} : \sum \vert x_n \vert^p < \infty } \\
+\ell^\infty &= \Set{(x_n) \in \mathbf{R}^{\mathbf{N}} : \sup \vert x_n \vert < \infty }
+\end{align*}
+$$
+
+and the corresponding norms are
+
+$$
+\begin{align*}
+\Vert (x_n) \Vert_1 &= \Vert (x_n) \Vert_{\ell^1} = \sum \vert x_n \vert \\
+\Vert (x_n) \Vert_2 &= \Vert (x_n) \Vert_{\ell^2} = \left( \sum \vert x_n \vert^2 \right)^{1/2} \\
+\Vert (x_n) \Vert_p &= \Vert (x_n) \Vert_{\ell^p} = \left( \sum \vert x_n \vert^p \right)^{1/p} \\
+\Vert (x_n) \Vert_\infty &= \Vert (x_n) \Vert_{\ell^\infty} = \sup \vert x_n \vert
+\end{align*}
+$$
+
+## Function Spaces
+
+Consider the set of continuous real functions on $[a, b]$, denoted by $C[a, b]$, we can define the norms by
+
+$$
+\begin{align*}
+\Vert f \Vert_{L^1} &= \Vert f \Vert_1 = \int_a^b \vert f \vert \,dx \\
+\Vert f \Vert_{L^2} &= \Vert f \Vert_2 = \left( \int_a^b \vert f \vert^2 \,dx \right)^{1/2} \\
+\Vert f \Vert_{L^p} &= \Vert f \Vert_p = \left( \int_a^b \vert f \vert^p \,dx \right)^{1/p} \\
+\Vert f \Vert_{L^\infty} &= \Vert f \Vert_\infty = \sup \vert f \vert
+\end{align*}
+$$
+
+The $L^\infty$ norm is also called the _uniform norm_ or _supremum norm_.
+
+> *Proposition.*{: .prop}
+> **[Cauchy-Schwarz inequality for integrals]**
+> Suppose that $f, g \in C[a, b]$ with $f, g \ge 0$, then
+>
+> $$
+  \int_a^b fg \,dx \le \left( \int_a^b f^2 \,dx \right)^{1/2} \left( \int_a^b g^2 \,dx \right)^{1/2}
+  $$
+>
+> *Proof.*{: .prf}
+>
+> If $\int_a^b f^2 \,dx = 0$, then $f = 0$ since $f$ is continuous. The inequality is obviously true.
+>
+> Let $A^2 = \int_a^b f^2 \,dx \not= 0$ and $B^2 = \int_a^b g^2 \,dx$. For all $t$, we have
+>
+> $$
+  \int_a^b (g - tf)^2 \,dx = B^2 - 2t \int_a^b fg \,dx + t^2 A^2 \ge 0
+  $$
+>
+> and therefore
+>
+> $$
+  \left( \int_a^b fg \,dx \right)^2 - A^2 B^2 \le 0
+  $$
+
+The Cauchy-Schwarz inequality again implies the triangle inequality and therefore the $L_2$ norm is actually a norm.
 
 ## Inner Product Spaces
 
