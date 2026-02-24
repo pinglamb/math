@@ -142,6 +142,24 @@ $$
 \end{align*}
 $$
 
+> *Proposition.*{: .prop}
+> The $\Vert (x_n) \Vert_{\ell^2}$ satisfies the triangle inequality.
+>
+> *Proof.*{: .prf}
+>
+> Since we can write
+>
+> $$
+  \Vert (x_n) \Vert_{\ell^2} = \lim_{n \to \infty} \Vert (x_1, ..., x_n) \Vert_2
+  $$
+>
+> so the triangle inequality of Euclidean norm implies triangle inequality for $\ell^2$.
+
+Unlike the norms defined for finite-dimensional spaces, the similar norms for infinite-dimensional spaces are not necessary equivalent.
+
+> *Proposition.*{: .prop}
+> For the space $\ell^2$, the norms $\Vert (x_n) \Vert_2$ and $\Vert (x_n) \Vert_\infty$ are not equivalent.
+
 ## Function Spaces
 
 Consider the set of continuous real functions on $[a, b]$, denoted by $C[a, b]$, we can define the norms by
@@ -183,6 +201,11 @@ The $L^\infty$ norm is also called the _uniform norm_ or _supremum norm_.
 
 The Cauchy-Schwarz inequality again implies the triangle inequality and therefore the $L_2$ norm is actually a norm.
 
+Similar to infinite-dimensional spaces, the norms are not necessary equivalent.
+
+> *Proposition.*{: .prop}
+> Let $V = C[0, 1]$. The norms $\Vert f \Vert_1$ and $\Vert f \Vert_\infty$ are not equivalent.
+
 ## Inner Product Spaces
 
 For $\mathbf{R}$ and $\mathbf{C}$, we can have more specialized normed vector spaces which is called _inner product spaces_.
@@ -201,4 +224,5 @@ The inner product associated with a given norm is unique. More results regarding
 
 ## References
 
+* [Dexter Chua _Part IB - Analysis II_, 2015 - Chapter 4](https://dec41.user.srcf.net/notes/IB_M/analysis_ii.pdf)
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 2.2
