@@ -73,45 +73,49 @@ Equivalent norms on the same space preserve boundedness and convergence.
 >
 > *Proof.*{: .prf}
 >
-> Both are direct from the definition of equivalence.
+> Both are direct from the definition of equivalence and the sandwich principle.
 
-## $\mathbf{R}^n$
+We can now explore some important examples.
 
-For $\mathbf{R}^n$, the _Euclidean_/_usual_ norm is defined by
+## Finite-dimensional Spaces
 
-$$
-\Vert x \Vert_2 = \sqrt{x_1^2 + ... + x_n^2}
-$$
+All finite-dimensional vector spaces are isomorphic to $\mathbf{R}^n$ so we will focus on that.
 
-The triangle inequality can be proved by using Cauchy-Schwarz inequality, i.e.
+> *Proposition.*{: .prop}
+> The **Euclidean/usual norm** defined by
+>
+> $$
+  \Vert x \Vert_2 = \sqrt{x_1^2 + ... + x_n^2}
+  $$
+>
+> is a norm on $\mathbf{R}^n$.
+>
+> *Proof.*{: .prf}
+>
+> We will just prove the triangle inequality by the Cauchy-Schwarz inequality, i.e.
+>
+> $$
+  \begin{align*}
+  \Vert x + y \Vert^2 &= \sum_{i=1}^n (x_i + y_i)^2 \\
+  &= \Vert x \Vert^2 + \Vert y \Vert^2 + 2 \sum_{i=1}^n x_i y_i \\
+  &\le \Vert x \Vert^2 + \Vert y \Vert^2 + 2 \Vert x \Vert \Vert y \Vert \\
+  &= \left( \Vert x \Vert + \Vert y \Vert \right)^2
+  \end{align*}
+  $$
+
+We can also have the following norms on $\mathbf{R}^n$.
 
 $$
 \begin{align*}
-\Vert x + y \Vert^2 &= \sum_{i=1}^n (x_i + y_i)^2 \\
-&= \Vert x \Vert^2 + \Vert y \Vert^2 + 2 \sum_{i=1}^n x_i y_i \\
-&\le \Vert x \Vert^2 + \Vert y \Vert^2 + 2 \Vert x \Vert \Vert y \Vert \\
-&= \left( \Vert x \Vert + \Vert y \Vert \right)^2
+\Vert x \Vert_1 &= \sum \vert x_i \vert \\
+\Vert x \Vert_p &= \left( \sum \vert x_i \vert^p \right)^{1/p} \\
+\Vert x \Vert_\infty &= \max\Set{\vert x_i \vert : 1 \le i \le n}
 \end{align*}
 $$
 
-We can also have the following norm
+in which as $p \to \infty$, $\Vert x \Vert_p \to \Vert x \Vert_\infty$.
 
-$$
-\Vert x \Vert_1 = \sum_{i=1}^n \vert x_i \vert
-$$
-
-+ For , the usual norm is given by .
-  We can in general define $p$ norm by
-
-  $$
-  \Vert x \Vert_p = (x_1^p + ... + x_n^p)^{1/p}
-  $$
-
-  and as $p \to \infty$, $\Vert x \Vert_{\infty} = \max\Set{\vert x_i \vert : 1 \le i \le n}$.
-
-+ For bounded functions $B[a, b]$, $\Vert f \Vert = \sup \vert f(x) \vert$.
-
-Even though we can define many different norms for the same space like $\mathbf{R}^n$, these norms can be _Lipschitz equivalent_ which simplifies the study of their topological structure.
+## Inner Product Spaces
 
 For $\mathbf{R}$ and $\mathbf{C}$, we can have more specialized normed vector spaces which is called _inner product spaces_.
 
@@ -125,26 +129,7 @@ For $\mathbf{R}$ and $\mathbf{C}$, we can have more specialized normed vector sp
 >
 > + $x \cdot x = \Vert x \Vert^2$ for all $x \in V$.
 
-The inner product associated with a given norm is unique.
-For inner product spaces, the triangle inequality can be written as the following famous result.
-
-> *Theorem.*{: .thm}
-> **[Cauthy-Schwarz Inequality]**
-> Suppose that $V$ is a inner product space then for all $x, y \in V$,
->
-> $$
-  \vert x \cdot y \vert \le \Vert x \Vert \Vert y \Vert
-  $$
->
-> with equality holds iff $x, y$ is a scalar multiple of the other.
-
-We can go further by restricting our attention to finite-dimensional spaces.
-
-> *Definition.*{: .def}
-> A **Euclidean space** is a finite-dimensional real inner product space.
-> A **unitary space** is a finite-dimensional complex inner product space.
-
-More results regarding these specialized spaces can be found in [inner product spaces](../linear-algebra/inner-product-spaces.md).
+The inner product associated with a given norm is unique. More results regarding these specialized spaces can be found in [inner product spaces](../linear-algebra/inner-product-spaces.md).
 
 ## References
 
