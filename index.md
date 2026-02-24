@@ -8,6 +8,8 @@ title: Home
 
 * [Metric Spaces](analysis-ii/metric-spaces.md)
 * [Normed Spaces](analysis-ii/normed-spaces.md)
+* [Completeness](analysis-ii/completeness.md)
+* [Compactness](analysis-ii/completeness.md)
 * [Continuous Functions](analysis-ii/continuous-functions.md)
 
 ## Methods

@@ -20,8 +20,87 @@ More in-depth study of vector spaces itself can be found in [linear algebra](../
 > + $\Vert \lambda x \Vert = \vert \lambda \vert \Vert x \Vert$ for $\lambda \in \mathbf{F}$ and $x \in V$.
 
 In a normed vector space, a metric $\rho$ may be defined by $\rho(x, y) = \Vert x - y \Vert$.
+Similarily, two norms on the same space can be equivalent and the topological properties of the space do not depend on which norm we choose.
 
-+ For $\mathbf{R}^n$, the usual norm is given by $\Vert x \Vert = \sqrt{x_1^2 + ... + x_n^2}$.
+> *Definition.*{: .def}
+> Let $V$ be a vector space. Two norms $\Vert \cdot \Vert$ and $\Vert \cdot \Vert'$ on $V$ are **Lipschitz equivalent** if there exists positive real constants $\lambda$ and $\mu$ such that
+>
+> $$
+  \lambda \Vert x \Vert \le \Vert x \Vert' \le \mu \Vert x \Vert
+  $$
+>
+> for all $x \in V$.
+
+> *Definition.*{: .def}
+> Let $(V, \Vert \cdot \Vert)$ be a normed space. A subset $E \subseteq V$ is **bounded** if there is some $r > 0$ such that
+>
+> $$
+  E \subseteq B_r(0)
+  $$
+
+> *Definition.*{: .def}
+> Let $(V, \Vert \cdot \Vert)$ be a normed space. A sequence $(x_n)$ in $V$ is **convergent** to $x \in V$, denoted by $x_n \to x$, if $\Vert x_n - x \Vert \to 0$, i.e.
+>
+> $$
+  (\forall \varepsilon > 0)(\exists N)(\forall n > N)\; \Vert x_n - x \Vert < \varepsilon
+  $$
+
+> *Proposition.*{: .prop}
+> Let $(V, \Vert \cdot \Vert)$ be a normed space. Then
+>
+> + $x_n \to x$ and $x_n \to y$ implies $x = y$;
+>
+> + $x_n \to x$ implies $\lambda x_n \to \lambda x$;
+>
+> + $x_n \to x$ and $y_n \to y$ implies $x_n + y_n \to x + y$.
+>
+> *Proof.*{: .prf}
+>
+> + $\Vert x - y \Vert \le \Vert x - x_n \Vert + \Vert x_n - y \Vert \to 0$ so $\Vert x - y \Vert = 0$ and $x = y$.
+>
+> + $\Vert \lambda x_n - \lambda x \Vert = \vert \lambda \vert \Vert x_n - x \Vert \to 0$.
+>
+> + $\Vert (x_n + y_n) - (x + y) \Vert \le \Vert x_n - x \Vert + \Vert y_n - y \Vert \to 0$.
+
+Equivalent norms on the same space preserve boundedness and convergence.
+
+> *Proposition.*{: .prop}
+> If $\Vert \cdot \Vert$ and $\Vert \cdot \Vert'$ are Lipschitz equivalent norms on a vector space $V$, then
+>
+> + A subset $E \subseteq V$ is bounded with respect to $\Vert \cdot \Vert$ iff it is bounded with respect to $\Vert \cdot \Vert'$;
+>
+> + A sequence $(x_n)$ converges to $x$ with respect to $\Vert \cdot \Vert$ iff it converges to $x$ with respect to $\Vert \cdot \Vert'$.
+>
+> *Proof.*{: .prf}
+>
+> Both are direct from the definition of equivalence.
+
+## $\mathbf{R}^n$
+
+For $\mathbf{R}^n$, the _Euclidean_/_usual_ norm is defined by
+
+$$
+\Vert x \Vert_2 = \sqrt{x_1^2 + ... + x_n^2}
+$$
+
+The triangle inequality can be proved by using Cauchy-Schwarz inequality, i.e.
+
+$$
+\begin{align*}
+\Vert x + y \Vert^2 &= \sum_{i=1}^n (x_i + y_i)^2 \\
+&= \Vert x \Vert^2 + \Vert y \Vert^2 + 2 \sum_{i=1}^n x_i y_i \\
+&\le \Vert x \Vert^2 + \Vert y \Vert^2 + 2 \Vert x \Vert \Vert y \Vert \\
+&= \left( \Vert x \Vert + \Vert y \Vert \right)^2
+\end{align*}
+$$
+
+We can also have the following norm
+
+$$
+\Vert x \Vert_1 = \sum_{i=1}^n \vert x_i \vert
+$$
+
++ For , the usual norm is given by .
   We can in general define $p$ norm by
 
   $$

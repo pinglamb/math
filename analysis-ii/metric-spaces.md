@@ -54,7 +54,7 @@ We can now then extend the definition of convergence of sequences of real number
 > Alternatively, we can also define it as
 >
 > $$
-  (\forall \varepsilon > 0)(\exists N)(\forall n > N)\,\rho(x_n, x) < \varepsilon
+  (\forall \varepsilon > 0)(\exists N)(\forall n > N)\;\rho(x_n, x) < \varepsilon
   $$
 
 > *Proposition.*{: .prop}
