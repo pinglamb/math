@@ -159,6 +159,12 @@ Unlike the norms defined for finite-dimensional spaces, the similar norms for in
 
 > *Proposition.*{: .prop}
 > For the space $\ell^2$, the norms $\Vert (x_n) \Vert_2$ and $\Vert (x_n) \Vert_\infty$ are not equivalent.
+>
+> *Proof.*{: .prf}
+>
+> Obviously, we have $\Vert (x_n) \Vert_\infty \le \Vert (x_n) \Vert_2$.
+> However, there is no constant $mu$ such that $\Vert (x_n) \Vert_2 \le \mu \Vert (x_n) \Vert_\infty$.
+> For example, the sequence with first $b^2 + 1$ terms $1$ and $0$ for the rest doesn't satisfy the inequality.
 
 ## Function Spaces
 
@@ -205,6 +211,16 @@ Similar to infinite-dimensional spaces, the norms are not necessary equivalent.
 
 > *Proposition.*{: .prop}
 > Let $V = C[0, 1]$. The norms $\Vert f \Vert_1$ and $\Vert f \Vert_\infty$ are not equivalent.
+>
+> *Proof.*{: .prf}
+>
+> Obviously, we have $\Vert f \Vert_1 \le (1 - 0) \Vert f \Vert_\infty$.
+> Howver, there is no constant $\mu$ such that $\Vert f \Vert_\infty \le \mu \Vert f \Vert_1$ for all $f$.
+> For example, consider the sequence of functions $f_n$ of the form
+>
+> ![Function Norms](../images/analysis-ii/function-norms-equivalence.png)
+>
+> and we have $\Vert f_n \Vert_\infty = 1$ but $\Vert f_n \Vert_1 = 1/n \to 0$.
 
 ## Inner Product Spaces
 
