@@ -115,6 +115,26 @@ $$
 
 in which as $p \to \infty$, $\Vert x \Vert_p \to \Vert x \Vert_\infty$.
 
+> *Proposition.*{: .prop}
+> Convergence in $\mathbf{R}^n$ is equivalent to coordinate-wise convergence, i.e. $x_n \to x$ iff $(x_n)_i \to (x)_i$ for $1 \le i \le n$.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Let $\varepsilon > 0$. There exists $N$ such that for all $n > N$,
+>
+> $$
+  \Vert x_n - x \Vert^2 = \sum_{i=1}^n ((x_n)_i - (x)_i)^2 < \varepsilon^2
+  $$
+>
+> so each of the term $\vert (x_n)_i - (x)_i \vert < \varepsilon$.
+>
+> ($\Leftarrow$) Let $\varepsilon > 0$. There exists $N_i$ such that for all $n > N_i$, $\vert (x_n)_i - (x)_i \vert < \varepsilon / \sqrt{n}$.
+> By having $N = \max \Set{N_i}$, we have for all $n > n$,
+>
+> $$
+  \Vert x_n - x \Vert = \left( \sum_{i=1}^n ((x_n)_i - (x)_i)^2 \right)^{1/2} < \varepsilon
+  $$
+
 ## Infinite-dimensional Spaces
 
 We will extend the notions on $\mathbf{R}^n$ to infinite sequences with some care.
@@ -221,6 +241,31 @@ Similar to infinite-dimensional spaces, the norms are not necessary equivalent.
 > ![Function Norms](../images/analysis-ii/function-norms-equivalence.png)
 >
 > and we have $\Vert f_n \Vert_\infty = 1$ but $\Vert f_n \Vert_1 = 1/n \to 0$.
+
+## Bolzano-Weierstrass Theorem
+
+The Bolzano-Weierstrass Theorem can be generalized for finite-dimensional normed spaces.
+
+> *Theorem.*{: .thm}
+> **[Bolzano-Weierstrass Theorem in $\mathbf{R}^n$]**
+> Suppose that $(x_n)$ is a bounded sequence of $\mathbb{R}^n$ (with respect to say the Euclidean norm). Then there is a subsequence $(x_{n_k})$ which converges.
+>
+> *Proof.*{: .prf}
+>
+> For $n = 1$, we have proved [before](../analysis-i/subsequences.md#bolzano-weierstrass-theorem) using bisection.
+> Asumme it is true for $\mathbf{R}^{n-1}$. Let $(x\_k) = (((x\_k)\_1, ..., (x\_k)\_{n-1}, (x\_k)\_n))$ be a bounded sequence in $\mathbf{R}^n$.
+> Let $(y\_k) = (((x\_k)\_1, ..., (x\_k)\_{n-1}))$ and we have
+>
+> $$
+  \Vert y_k \Vert^2 + \vert (x_k)_n \vert^2 = \Vert x_k \Vert^2
+  $$
+>
+> so both $(y_k)$ and $((x_k)_n)$ are bounded.
+> By induction hypothesis, there is a subsequence $(y\_{n\_k})$ converges to $y$ and by Bolzano-Weierstrass theorem in $\mathbf{R}$ there is a further subsequence $((x\_{n_k'})\_n)$ of $((x\_{n_k})\_n)$ that converges to $x_n$.
+> Therefore, $x\_{n_k'} \to (y, x_n)$.
+
+The theorem however is generally not true for normed spaces. For example, consider $(\ell^\infty, \Vert \cdot \Vert_\infty)$.
+The sequence $((x\_k)\_n) = ((\delta\_{nk}))$ converges component-wise to the zero element $0 = (0, ...)$ but the sequence itself doesn't converge to the zero element since $\Vert (x_n) - (0) \Vert_\infty = 1$.
 
 ## Inner Product Spaces
 
