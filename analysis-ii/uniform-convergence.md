@@ -20,7 +20,7 @@ We will now consider a sequence of functions and study what convergence means.
 > Alternatively, the sequence is pointwise convergent if
 >
 > $$
-  (\forall \varepsilon)(\forall x \in X)(\exists N)(\forall n > N) \; \sigma(f_n(x), f(x)) < \varepsilon
+  (\forall \varepsilon > 0)(\forall x \in X)(\exists N)(\forall n > N) \; \sigma(f_n(x), f(x)) < \varepsilon
   $$
 
 This is a rather simple definition of convergence but there is a critical shortfall that properties of the functions $f_n$ isn't carried over to the limit function $f$.
@@ -47,15 +47,46 @@ Therefore, we need a stronger notion of convergence in which we require all the 
 > Alternatively, the sequence is uniformly convergent if
 >
 > $$
-  (\forall \varepsilon)(\exists N)(\forall n > N) \; \sup_{x \in X} \sigma(f_n(x), f(x)) < \varepsilon
+  (\forall \varepsilon > 0)(\exists N)(\forall n > N) \; \sup_{x \in X} \sigma(f_n(x), f(x)) < \varepsilon
   $$
 
 The difference is that for pointwise convergence, we can choose a different $N = N(\varepsilon, x)$ for each point but for uniform convergence, we need to choose $N = N(\varepsilon)$ independent of $x$, such that it works for all points.
-It is obvious that uniform convergence implies pointwise convergence, but the converse is not true. Considering the example above, $f_n(x) = x^n$ is pointwise convergent but not uniformly convergent since $\sup \vert f_n(x) - f(x) \vert = 1$.
+It is obvious that uniform convergence implies pointwise convergence, but the converse is not true.
+Considering the example above, $f_n(x) = x^n$ is pointwise convergent but not uniformly convergent since
+
+$$
+\sup_{0 \le x < 1} \vert f_n(x) - f(x) \vert = \lim_{x \to 1} \vert x^n - 0 \vert = 1
+$$
 
 In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representation of uniform convergence is that for $n > N(\varepsilon)$, $y = f_n(x)$ lies inside the strip between $y = f(x) \pm \varepsilon$.
 
 ![Uniform Convergence](../images/analysis-ii/uniform-convergence.png){: .size-2x}
+
+> *Definition.*{: .def}
+> A sequence $f_n: X \to Y$ of functions is **uniformly Cauchy** if
+>
+> $$
+  (\forall \varepsilon > 0)(\exists N)(\forall m, n > N) \; \sup_{x \in X} \sigma(f_m(x), f_n(x)) < \varepsilon
+  $$
+
+> *Proposition.*{: .prop}
+> Let $f_n: X \to Y$ be a sequence of functions. Then $(f_n)$ converges uniformly iff $(f_n)$ is uniformly Cauchy.
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Suppose that $f_n \to f$ uniformly. Let $\varepsilon > 0$, there exists $N$ such that for all $n > N$,
+>
+> $$
+  \sup_{x \in X} \sigma(f_n(x), f(x)) < {\varepsilon \over 2}
+  $$
+>
+> Therefore, for $m, n > N$, by triangle inequality,
+>
+> $$
+  \sigma(f_m(x), f_n(x)) \le \sigma(f_m(x), f(x)) + \sigma(f(x), f_n(x)) < \varepsilon
+  $$
+>
+> ($\Leftarrow$)
 
 ## References
 
