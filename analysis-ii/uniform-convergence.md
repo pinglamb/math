@@ -70,23 +70,39 @@ In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representati
   $$
 
 > *Proposition.*{: .prop}
-> Let $f_n: X \to Y$ be a sequence of functions. Then $(f_n)$ converges uniformly iff $(f_n)$ is uniformly Cauchy.
+> **[General Principle of Uniform Convergence]**
+> Let $(f_n)$ be a sequence of real or complex valued functions. Then $(f_n)$ converges uniformly iff $(f_n)$ is uniformly Cauchy.
 >
 > *Proof.*{: .prf}
 >
 > ($\Rightarrow$) Suppose that $f_n \to f$ uniformly. Let $\varepsilon > 0$, there exists $N$ such that for all $n > N$,
 >
 > $$
-  \sup_{x \in X} \sigma(f_n(x), f(x)) < {\varepsilon \over 2}
+  \sup_{x \in X} \vert f_n(x) - f(x) \vert < {\varepsilon \over 2}
   $$
 >
 > Therefore, for $m, n > N$, by triangle inequality,
 >
 > $$
-  \sigma(f_m(x), f_n(x)) \le \sigma(f_m(x), f(x)) + \sigma(f(x), f_n(x)) < \varepsilon
+  \vert f_m(x) - f_n(x) \vert \le \vert f_m(x) - f(x) \vert + \vert f(x) - f_n(x) \vert < \varepsilon
   $$
 >
-> ($\Leftarrow$)
+> ($\Leftarrow$) Since the sequence of functions are uniformly Cauchy, for each $x \in X$, $(f_n(x))$ is a Cauchy sequence that converges to some real or complex value.
+> The pointwise convergence implies that there is a function $f$ such that $f_n \to f$ and we need to show that it converges uniformly.
+>
+> Let $\varepsilon > 0$. There exists $N$ such that for all $m, n > N$, $\vert f_m(x) - f_n(x) \vert < \varepsilon / 2$. Therefore,
+>
+> $$
+  \vert f(x) - f_n(x) \vert = \lim_{m \to \infty} \vert f_m(x) - f_n(x) \vert \le { \varepsilon \over 2 } < \varepsilon
+  $$
+>
+> Since it is true for all $x \in X$,
+>
+> $$
+  \sup_{x \in X} \vert f(x) - f_n(x) \vert < \varepsilon
+  $$
+>
+> for $n \ge N$ and $f_n \to f$ uniformly.
 
 ## References
 
