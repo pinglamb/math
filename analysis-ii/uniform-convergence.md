@@ -60,7 +60,7 @@ $$
 
 In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representation of uniform convergence is that for $n > N(\varepsilon)$, $y = f_n(x)$ lies inside the strip between $y = f(x) \pm \varepsilon$.
 
-![Uniform Convergence](../images/analysis-ii/uniform-convergence.png){: .size-2x}
+![Uniform Convergence](../images/analysis-ii/uniform-convergence.png)
 
 > *Definition.*{: .def}
 > A sequence $f_n: X \to Y$ of functions is **uniformly Cauchy** if
@@ -103,6 +103,50 @@ In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representati
   $$
 >
 > for $n \ge N$ and $f_n \to f$ uniformly.
+
+## Continuity
+
+> *Proposition.*{: .prop}
+> **[Uniform Convergence and Continuity]**
+> Let $(X, \rho)$ and $(Y, \sigma)$ be metric spaces. Let the sequence of functions $f_n: X \to Y$ converge to $f$ uniformly on $X$.
+> If $c$ is a point of $X$ at which each $f_n$ is continuous, then $f$ is continuous at $c$.
+>
+> *Proof.*{: .prf}
+>
+> We have $\delta > 0$ such that
+>
+> $$
+  \sigma(f_n(x), f_n(c)) < {\varepsilon \over 3} \qquad \text{for} \qquad \rho(x, c) < \delta
+  $$
+>
+> and $N$ such that
+>
+> $$
+  \sigma(f_n(x), f(x)) < {\varepsilon \over 3} \qquad \text{for} \qquad n > N
+  $$
+>
+> therefore
+>
+> $$
+  \sigma(f(x), f(c)) \le \sigma(f(x), f_n(x)) + \sigma(f_n(x), f_n(c)) + \sigma(f_n(c), f(c)) < \varepsilon
+  $$
+>
+> so $f$ is continuous at $c$.
+
+Uniform convergence is a sufficient condition but not a necessary condition for the limit function to be continuous.
+Consider the sequence of functions $f_n: [0, 1] \to \mathbf{R}$ formed by joining $(0, 0), (1/n, n), (2/n, 0), (1, 0)$, i.e.
+
+![Uniform Convergence and Continuity](../images/analysis-ii/uniform-convergence-continuity.png)
+
+We have $f_n(x) \to f(x) = 0$ as $n \to \infty$ in which $f_n$ and $f$ are continuous but the convergence is not uniform.
+
+Also, the uniform convergence implies continuity means that we have
+
+$$
+\lim_{x \to c} \lim_{n \to \infty} f_n(x) = \lim_{x \to c} f(x) = f(c) = \lim_{n \to \infty} \lim_{x \to c} f_n(x)
+$$
+
+so it can be used to justify the inversion of the order of repeated limits.
 
 ## References
 
