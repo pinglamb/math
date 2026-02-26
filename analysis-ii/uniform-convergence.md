@@ -75,7 +75,7 @@ In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representati
 >
 > *Proof.*{: .prf}
 >
-> ($\Rightarrow$) Suppose that $f_n \to f$ uniformly. Let $\varepsilon > 0$, there exists $N$ such that for all $n > N$,
+> ($\Rightarrow$) Suppose that $f_n \to f$ uniformly. Given $\varepsilon > 0$, there exists $N$ such that for all $n > N$,
 >
 > $$
   \sup_{x \in X} \vert f_n(x) - f(x) \vert < {\varepsilon \over 2}
@@ -90,7 +90,7 @@ In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representati
 > ($\Leftarrow$) Since the sequence of functions are uniformly Cauchy, for each $x \in X$, $(f_n(x))$ is a Cauchy sequence that converges to some real or complex value.
 > The pointwise convergence implies that there is a function $f$ such that $f_n \to f$ and we need to show that it converges uniformly.
 >
-> Let $\varepsilon > 0$. There exists $N$ such that for all $m, n > N$, $\vert f_m(x) - f_n(x) \vert < \varepsilon / 2$. Therefore,
+> Given $\varepsilon > 0$. There exists $N$ such that for all $m, n > N$, $\vert f_m(x) - f_n(x) \vert < \varepsilon / 2$. Therefore,
 >
 > $$
   \vert f(x) - f_n(x) \vert = \lim_{m \to \infty} \vert f_m(x) - f_n(x) \vert \le { \varepsilon \over 2 } < \varepsilon
@@ -105,6 +105,8 @@ In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representati
 > for $n \ge N$ and $f_n \to f$ uniformly.
 
 ## Continuity
+
+The example of $f_n(x) = x^n$ shows that continuity is not preserved with pointwise convergence, but it is not the case for uniform convergence.
 
 > *Proposition.*{: .prop}
 > **[Uniform Convergence and Continuity]**
@@ -148,6 +150,81 @@ $$
 
 so it can be used to justify the inversion of the order of repeated limits.
 
+## Integrability
+
+Again, pointwise convergence is not enough to preverse integrability. Suppose that $(r_n)$ is a sequence consisting all the rational numbers in $[0, 1]$ and consider the sequence of $f_n$ on $[0, 1]$ defined by
+
+$$
+f_n(x) = \begin{cases}
+1 & x = r_1, ..., r_n \\
+0 & \text{otherwise}
+\end{cases}
+$$
+
+then
+
+$$
+f_n(x) \to f(x) = \begin{cases}
+1 & x \in \mathbb{Q} \\
+0 & x \not\in \mathbb{Q}
+\end{cases}
+$$
+
+In this case, we have all $f_n$ being Riemann integrable since there are only finite number of points mapped to $1$ but $f$ being not integrable.
+
+We also have $g_n(x) = nxe^{-nx^2} \to g(x) = 0$ being an example that even the limit function is integrable but the sequence of integrals need to converge to it.
+
+> *Proposition.*{: .prop}
+> **[Uniform Convergence and Integrability]**
+> Let $(f_n)$ be a sequence of real functions integrable over the finite interval $[a, b]$.
+> If $f_n \to f$ uniformly on $[a, b]$, then $f$ is integrable over $[a, b]$ and
+>
+> $$
+  \int_a^b f_n \to \int_a^b f
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Given $\varepsilon > 0$. There exists $N$ such that
+>
+> $$
+  \sup_{a \le x \le b} \vert f_n(x) - f(x) \vert < \varepsilon \qquad \text{for} \qquad n \ge N
+  $$
+>
+> For $a \le x \le b$, we have
+>
+> $$
+  f_N(x) - \varepsilon < f(x) < f_N(x) + \varepsilon
+  $$
+>
+> so for any dissection $D$ of $[a, b]$,
+>
+> $$
+  s_D(f_N) - \varepsilon(b - a) \le s_D(f) \le S_D(f) \le S_D(f_N) + \varepsilon(b - a)
+  $$
+>
+> Thus,
+>
+> $$
+  S_D(f) - s_D(f) \le S_D(f_N) - s_D(f_N) + 2 \varepsilon (b - a)
+  $$
+>
+> and $f_N$ is integrable so
+>
+> $$
+  S_D(f) - s_D(f) \le \varepsilon (1 + 2 (b - a))
+  $$
+>
+> and $f$ is integrable.
+>
+> Moreoever, for $n > N$,
+>
+> $$
+  \left| \int_a^b f_n(x) - \int_a^b f(x) \right| = \int_a^b \vert f_n(x) - f(x) \vert \le \sup_{a \le x \le b} \vert f_n(x) - f(x) \vert (b - a) \to 0
+  $$
+
+Note that the proposition is only proved for finite interval, and is false for an infinite interval.
+
 ## References
 
-* J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 5
+* J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 5.1, 5.2, 5.3
