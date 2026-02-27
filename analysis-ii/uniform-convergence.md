@@ -209,28 +209,28 @@ We also have $g_n(x) = nxe^{-nx^2} \to g(x) = 0$ being an example that even the 
 > Given $\varepsilon > 0$. There exists $N$ such that
 >
 > $$
-  \sup_{a \le x \le b} \vert f_n(x) - f(x) \vert < \varepsilon \qquad \text{for} \qquad n \ge N
+  \sup_{a \le x \le b} \vert f_n(x) - f(x) \vert < \varepsilon \qquad \text{for} \qquad n > N
   $$
 >
 > For $a \le x \le b$, we have
 >
 > $$
-  f_N(x) - \varepsilon < f(x) < f_N(x) + \varepsilon
+  f_n(x) - \varepsilon < f(x) < f_n(x) + \varepsilon
   $$
 >
 > so for any dissection $D$ of $[a, b]$,
 >
 > $$
-  s_D(f_N) - \varepsilon(b - a) \le s_D(f) \le S_D(f) \le S_D(f_N) + \varepsilon(b - a)
+  s_D(f_n) - \varepsilon(b - a) \le s_D(f) \le S_D(f) \le S_D(f_n) + \varepsilon(b - a)
   $$
 >
 > Thus,
 >
 > $$
-  S_D(f) - s_D(f) \le S_D(f_N) - s_D(f_N) + 2 \varepsilon (b - a)
+  S_D(f) - s_D(f) \le S_D(f_n) - s_D(f_n) + 2 \varepsilon (b - a)
   $$
 >
-> and $f_N$ is integrable so
+> and $f_n$ is integrable so if the supremum norm is sufficiently small, $S_D(f_n) - s_D(f_n) < \varepsilon$ and
 >
 > $$
   S_D(f) - s_D(f) \le \varepsilon (1 + 2 (b - a))
