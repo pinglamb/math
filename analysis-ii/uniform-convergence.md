@@ -62,6 +62,27 @@ In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representati
 
 ![Uniform Convergence](../images/analysis-ii/uniform-convergence.png)
 
+> *Proposition.*{: .prop}
+> Suppose that $(f_n: X \to \mathbf{R})$ and $(g_n: X \to \mathbf{R})$ converges uniformly to $f$ and $g$ respectively. Then
+>
+> + for any $\lambda, \mu \in \mathbf{R}$, $(\lambda f_n + \mu g_n) \to \lambda f + \mu g$ uniformly;
+>
+> + for any bounded function $h: X \to \mathbf{R}$, $(hf_n) \to hf$ uniformly.
+>
+> *Proof.*{: .prf}
+>
+> Given $\varepsilon > 0$. For $n > \max(N_f, N_g)$,
+>
+> $$
+  \sup \vert (\lambda f_n + \mu g_n) - (\lambda f + \mu g) \vert \le \lambda \sup \vert f_n - f \vert + \mu \sup \vert g_n - g \vert < 2 \varepsilon
+  $$
+>
+> Let $\vert g \vert < M$. Then
+>
+> $$
+  \sup \vert g f_n - g f \vert \le M \sup \vert f_n - f \vert \to 0
+  $$
+
 > *Definition.*{: .def}
 > A sequence $f_n: X \to Y$ of functions is **uniformly Cauchy** if
 >
