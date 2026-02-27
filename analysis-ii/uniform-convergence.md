@@ -225,6 +225,77 @@ We also have $g_n(x) = nxe^{-nx^2} \to g(x) = 0$ being an example that even the 
 
 Note that the proposition is only proved for finite interval, and is false for an infinite interval.
 
+## Differentiability
+
+The relationship between uniform convergence and Differentiability is more subtle that uniform limit of differentiable functions need not be differentiable.
+Even if it were, the derivative is not necessary the same as the limit. For example, consider $f_n(x) = \vert x \vert^{1 + 1/n}$ where $f_n(x) \to f(x) = \vert x \vert$.
+For $x = 0$, the derivative of $f_n(x)$ is
+
+$$
+f_n'(0) = \lim_{x \to 0} {f_n(x) - f_n(0) \over x} = \lim_{x \to 0} {\vert x \vert \over x} \vert x \vert^{1/n} = 0
+$$
+
+but $f(x)$ is not differentiable at $x = 0$. Therefore, we need a stronger condition.
+
+> *Proposition.*{: .prop}
+> Let $(f_n)$ be a sequence of real functions differentiable on a finite closed interval $[a, b]$.
+> Suppose that $(f_n(x))$ converges for at least one $x \in [a, b]$ and that $(f_n')$ converges uniformly on $[a, b]$.
+> Then $(f_n)$ converges uniformly on $[a, b]$ and the limit function $f$ is differentiable in $[a, b]$ with derivative $f' = \lim f_n'$.
+>
+> *Proof.*{: .prf}
+>
+> Given $\varepsilon > 0$. The sequence $(f_n')$ is uniformly Cauchy, i.e. there exists $N$ such that
+>
+> $$
+  \sup_{a \le x \le b} \vert f_m'(x) - f_n'(x) \vert < \varepsilon \quad \text{for} \quad m, n > N
+  $$
+>
+> For any $\xi_1, \xi_2 \in [a, b]$, by mean value theorem for $f_m - f_n$, we have for some $\xi$ between $\xi_1$ and $\xi_2$,
+>
+> $$
+  (f_m(\xi_1) - f_n(\xi_1)) - (f_m(\xi_2) - f_n(\xi_2)) = (\xi_1 - \xi_2) (f_m'(\xi) - f_n'(\xi)) < \vert \xi_1 - \xi_2 \vert \varepsilon
+  $$
+>
+> Let $x_0$ be the point such that $(f_n(x_0))$ converges, then there exists $N'$ such that
+>
+> $$
+  \vert f_m(x_0) - f_n(x_0) \vert < \varepsilon \quad \text{for} \quad m, n > N'
+  $$
+>
+> Let $\xi_1 = x$ be any point in $[a, b]$ and $\xi_2 = x_0$, combining the above we have for $m, n > \max(N, N')$,
+>
+> $$
+  \sup \vert f_m(x) - f_n(x) \vert < \varepsilon + \vert x - x_0 \vert \varepsilon \le (1 + (b - a))\varepsilon
+  $$
+>
+> so $(f_n)$ is uniformly Cauchy and converges uniformly.
+>
+> Let $\xi_1 = x$ be any interior point of $[a, b]$ and $\xi_2 = x + h$ where $h \not= 0$ and $x + h \in [a, b]$. Then we have
+>
+> $$
+  \left\vert {f_m(x + h) - f_m(x) \over h} - {f_n(x + h) - f_n(x) \over h} \right\vert < \varepsilon \quad \text{for} \quad m, n > N
+  $$
+>
+> Since we have already shown that $f_n \to f$, we have $f_m(x + h) - f_m(x) \to f(x + h) - f(x)$.
+> On the other hand, $f_n$ is differentiable at $x$ so by definition there exists $\delta > 0$ such that
+>
+> $$
+  \left\vert {f_n(x + h) - f_n(x) \over h} - f_n'(x) \right\vert < \varepsilon \quad \text{for} \quad 0 < \vert h \vert < \delta
+  $$
+>
+> Let $\lim f_n'(x) = g(x)$. Combining all the above we have
+>
+> $$
+  \begin{align*}
+  &\left\vert {f(x + h) - f(x) \over h} - g(x) \right\vert \\
+  &\qquad \le \left\vert {f(x + h) - f(x) \over h} - {f_n(x + h) - f_n(x) \over h} \right\vert
+  + \left\vert {f_n(x + h) - f_n(x) \over h} - f_n'(x) \right\vert
+  + \left\vert f_n'(x) - g(x) \right\vert < 3\varepsilon
+  \end{align*}
+  $$
+>
+> for $0 < \vert h \vert < \delta$ and $n > N$. Hence, $f'(x)$ exists and $f'(x) = \lim f_n'(x)$.
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 5.1, 5.2, 5.3
