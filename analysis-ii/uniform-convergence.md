@@ -67,21 +67,35 @@ In case of $X \subseteq \mathbf{R}$ and $Y = \mathbf{R}$, graphical representati
 >
 > + for any $\lambda, \mu \in \mathbf{R}$, $(\lambda f_n + \mu g_n) \to \lambda f + \mu g$ uniformly;
 >
-> + for any bounded function $h: X \to \mathbf{R}$, $(hf_n) \to hf$ uniformly.
+> + for any bounded function $h: X \to \mathbf{R}$, $(hf_n) \to hf$ uniformly;
+>
+> + $f_n g_n \to fg$ uniformly if $f$ and $g$ are bounded;
 >
 > *Proof.*{: .prf}
 >
-> Given $\varepsilon > 0$. For $n > \max(N_f, N_g)$,
+> + Given $\varepsilon > 0$. For $n > \max(N_f, N_g)$,
 >
-> $$
-  \sup \vert (\lambda f_n + \mu g_n) - (\lambda f + \mu g) \vert \le \lambda \sup \vert f_n - f \vert + \mu \sup \vert g_n - g \vert < 2 \varepsilon
-  $$
+>   $$
+    \sup \vert (\lambda f_n + \mu g_n) - (\lambda f + \mu g) \vert \le \lambda \sup \vert f_n - f \vert + \mu \sup \vert g_n - g \vert < 2 \varepsilon
+    $$
 >
-> Let $\vert g \vert < M$. Then
+> + Let $\vert h \vert \le M$. Then
 >
-> $$
-  \sup \vert g f_n - g f \vert \le M \sup \vert f_n - f \vert \to 0
-  $$
+>   $$
+    \sup \vert h f_n - h f \vert \le M \sup \vert f_n - f \vert \to 0
+    $$
+>
+> + Suppose that $\vert f \vert \le M$. Then there exists $N$ such that for all $n > N$,
+>
+>   $$
+    \sup \vert f_n \vert = \sup \vert f_n - f + f \vert \le \sup (\vert f_n - f \vert + \vert f \vert) \le M + \varepsilon
+    $$
+>
+>   so $(f_n)$ is eventually bounded. Therefore, we have
+>
+>   $$
+    \sup \vert f_n g_n - fg \vert = \sup \vert f_n g_n - f_n g + f_n g - fg \vert \le \sup (\vert f_n \vert \vert g_n - g \vert + \vert g \vert \vert f_n - f \vert) \to 0
+    $$
 
 > *Definition.*{: .def}
 > A sequence $f_n: X \to Y$ of functions is **uniformly Cauchy** if
