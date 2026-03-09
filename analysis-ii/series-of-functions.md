@@ -86,6 +86,75 @@ Similar to real number series, we have the following result.
 >
 > then $\sum a_n f_n$ converges uniformly on $X$.
 
+## Power Series
+
+With uniformity we can prove some deeper results about [power series](../analysis-i/power-series.md).
+
+> *Proposition.*{: .prop}
+> If the power series $\sum a_n z^n$ has radius of convergence $R$ and $0 < r < R$, then $\sum a_n z^n$ converges uniformly for $\vert z \vert \le r$.
+>
+> *Proof.*{: .prf}
+>
+> When $\vert z \vert \le r$, we have $\vert a_n z^n \vert \le \vert a_n \vert r^n$ in which the series $\sum a_n r^n$ converges since $0 < r < R$.
+> By Weierstrass M-test, $\sum a_n z^n$ converges uniformly for $\vert z \vert \le r$.
+
+> *Corollary.*{: .cor}
+> The sum of a power series is continuous within its circle of convergence.
+>
+> *Proof.*{: .prf}
+>
+> Let $z_0$ be any point such that $\vert z_0 \vert < R$. If $\vert z_0 < r < R$, $\sum a_n z^n$ converges uniformly for $\vert z \vert \le r$ so $\sum a_n z^n$ is continuous at $z_0$.
+
+> *Proposition.*{: .prop}
+> **[Principle of equating coefficients]**
+> If $\sum a_n z^n = \sum b_n z^n$ for a sequence of non-zero values of $z$ tending to $0$ as limit, then $a_n = b_n$ for all $n$.
+>
+> *Proof.*{: .prf}
+>
+> Let $(z_k)$ be the non-zero complex sequence satisfying the conditions.
+> Assume the contrary that $a_m, b_m$ being the first pair of unequal coefficients. Then
+>
+> $$
+  z_m \sum_{n = 0}^\infty (a_{m+n} - b_{m+n}) z^n = 0
+  $$
+>
+> and therefore
+>
+> $$
+  \sum_{n = 0}^\infty (a_{m+n} - b_{m+n}) z^n = 0
+  $$
+>
+> for all non-zero $z_k$. The last power series clearly has a positive radius of convergence so it is continuous at $z = 0$.
+> Hence, by substituting $z = 0$ we have $a_m - b_m = 0$ which is a contradiction.
+
+> *Proposition.*{: .prop}
+> **[Termwise differentiation]**
+> Suppose that $\sum a_n x^n$ is a real power series converges to $f(x)$ with radius of convergence $R > 0$.
+> Then $f(x)$ is differentiable in $(-R, R)$ where $f'(x) = \sum n a_n x^{n-1}$ has the same radius of convergence $R$.
+>
+> *Proof.*{: .prf}
+>
+> Let $R'$ be the radius of convergence for $g(x) = \sum n a_n x^{n-1}$. We have
+>
+> $$
+  \vert a_n x^n \vert = \vert a_n x^{n-1} \vert \vert x \vert \le \vert n a_n x^{n-1} \vert \vert x \vert
+  $$
+>
+> so by comparison test, if $g(x)$ converges absolutely for some $x$ then $f(x)$ also converges and $R' \le R$.
+>
+> If $R' < R$, then there are $R' < r' < r < R$ such that $\sum n a_n (r')^{n-1}$ diverges but $\sum a_n r^n$ converges.
+> But
+>
+> $$
+  { \vert a_n r^n \vert \over \vert n a_n (r')^{n-1} \vert } = \left( {r \over r'} \right)^{n-1} {r \over n} \ge 1
+  $$
+>
+> so $\vert n a_n (r')^{n-1} \vert \le \vert a_n r^n \vert$ for sufficiently large $n$ so we must have $R' = R$.
+>
+> Let $f_n(x) = \sum_{j=0}^n a_j x^j$ and $f_n'(x) = \sum_{j=1}^n j a_j x^j$.
+> $f_n(x)$ is obviously convergent at a point and $f_n'(x)$ is uniformly convergent for $\vert x \vert \le r < R$.
+> So on any closed subinterval of $(-R, R)$, $f(x) = \lim_{n \to \infty} f_n(x)$ is differentiable with $f'(x) = \lim_{n \to \infty} f_n'(x)$.
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 5.3, 5.4
