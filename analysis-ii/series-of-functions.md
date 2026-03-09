@@ -36,3 +36,57 @@ Similar to real number series, we have the following result.
   $$
 >
 > Since $\sup \vert h_n - h_m \vert \to 0$, $\sup \vert g_n - g_m \vert \to 0$ so $\sum f_n$ converges uniformly.
+
+> *Proposition.*{: .prop}
+> **[Weierstrass M-test]**
+> Let $(f_n: X \to \mathbf{R}$ be a sequence of functions.
+> If, for each $n$, there is a constant $M_n$ such that
+>
+> $$
+  \sup_{x \in X} \vert f_n(x) \vert \le M_n
+  $$
+>
+> and $\sum M_n$ converges, then $\sum f_n$ converges (absolutely and) uniformly on $X$.
+>
+> *Proof.*{: .prf}
+>
+> Given $\varepsilon > 0$. Since $\sum M_n$ converges, there exists $N$ such that for all $N < m < n$,
+>
+> $$
+  \vert M_n - M_m \vert \le \vert M_{m+1} \vert + \cdots + \vert M_n \vert < \varepsilon
+  $$
+>
+> Let $g_n = \sum_{j=1}^n \vert f_n \vert$. For the same $N$, we have for all $N < m < n$,
+>
+> $$
+  \sup \vert g_n - g_m \vert \le \sup(\vert f_{m+1} \vert + \cdots + \vert f_n \vert) \le \vert M_{m+1} \vert + \cdots + \vert M_n \vert < \varepsilon
+  $$
+
+> *Proposition.*{: .prop}
+> **[Dirichlet Test]**
+> Let $(a_n: X \to \mathbf{R})$ and $(f_n: X \to \mathbf{R})$ be sequences of functions. If
+>
+> + $s_n = \sum a_j$ is uniformly bounded on $X$, i.e. there is $M$ such that $\vert s_n \vert < M$ for all $n$ and $x \in X$;
+>
+> + for each $x$, $(f_n(x))$ is a monotonic sequence;
+>
+> + $f_n \to 0$ uniformly on $X$,
+>
+> then $\sum a_n f_n$ converges uniformly on $X$.
+
+> *Proposition.*{: .prop}
+> **[Abel Test]**
+> Let $(a_n: X \to \mathbf{R})$ and $(f_n: X \to \mathbf{R})$ be sequences of functions. If
+>
+> + the series $\sum a_j$ converges uniformly on $X$;
+>
+> + for each $x$, $(f_n(x))$ is a monotonic sequence;
+>
+> + $f_n(x)$ is uniformly bounded on $X$,
+>
+> then $\sum a_n f_n$ converges uniformly on $X$.
+
+## References
+
+* J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 5.3, 5.4
+* [Dexter Chua _Part IB - Analysis II_, 2015 - Chapter 2](https://dec41.user.srcf.net/notes/IB_M/analysis_ii.pdf)

@@ -285,5 +285,5 @@ The inner product associated with a given norm is unique. More results regarding
 
 ## References
 
-* [Dexter Chua _Part IB - Analysis II_, 2015 - Chapter 4](https://dec41.user.srcf.net/notes/IB_M/analysis_ii.pdf)
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 2.2
+* [Dexter Chua _Part IB - Analysis II_, 2015 - Chapter 4](https://dec41.user.srcf.net/notes/IB_M/analysis_ii.pdf)
