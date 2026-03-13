@@ -139,7 +139,7 @@ These conditions show that a finite set cannot have a limit point. Also, a limit
 > Given $E \subseteq X$, $e \in E$ is an **isolated point** of $E$ if it is not a limit point, i.e.
 >
 > $$
-  (\exists \delta > 0)\; B_\delta(e) \cap E = \emptyset
+  (\exists \delta > 0)\; B_\delta(e) \cap E = \Set{e}
   $$
 
 > *Definition.*{: .def}

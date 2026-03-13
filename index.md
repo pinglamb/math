@@ -8,11 +8,10 @@ title: Home
 
 * [Metric Spaces](analysis-ii/metric-spaces.md)
 * [Normed Spaces](analysis-ii/normed-spaces.md)
-* [Completeness](analysis-ii/completeness.md)
-* [Compactness](analysis-ii/compactness.md)
-* [Continuous Functions](analysis-ii/continuous-functions.md)
+* [Completeness and Compactness](analysis-ii/completeness-compactness.md)
 * [Uniform Convergence](analysis-ii/uniform-convergence.md)
 * [Series of Functions](analysis-ii/series-of-functions.md)
+* [Continuous Functions](analysis-ii/continuous-functions.md)
 
 ## Methods
 {: .left}
