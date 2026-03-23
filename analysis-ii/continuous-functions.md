@@ -46,6 +46,62 @@ $$
 
 ## Continuity
 
+We can now naturally extend the definition of continuity to functions of metric spaces.
+
+> *Definition.*{: .def}
+> Let $(X, \rho)$ and $(Y, \sigma)$ be metric spaces and $f: X \to Y$ be a function.
+> Then $f$ is **continuous** at the point $x_0 \in X$ if
+>
+> $$
+  (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in X: \rho(x, x_0) < \delta) \; \sigma(f(x), f(x_0)) < \varepsilon
+  $$
+>
+> (or $f(B_\delta(x_0)) \subset B_\varepsilon(f(x_0))$).
+
+The definition implies that $f$ is continuous at a limit point $x_0$ if $f(x) \to f(x_0)$ as $x \to x_0$.
+Also, $f$ is continuous at all isolated points of $X$ since there is always $\delta$ such that $x_0$ is the only point in $B_\delta(x_0)$.
+
+Similarily, continuity can be characterized by sequences just like limits using similar proof.
+
+> *Proposition.*{: .prop}
+> $f: X \to Y$ is continuous at the point $x_0$ iff for every sequence $(x_n)$ in $X$ such that $x_n \to x_0$, $f(x_n) \to f(x_0)$ as $n \to \infty$.
+
+From the above we can see that continuity is a topological property which we can also characterized that by open/closed sets.
+
+> *Proposition.*{: .prop}
+> $f: X \to Y$ is continuous on $X$ iff
+>
+> + whenver $G$ is open in $Y$, then $f^{-1}(G)$ is open in $X$; or
+>
+> + whenver $F$ is closed in $Y$, then $f^{-1}(F)$ is closed in $X$; or
+>
+> *Proof.*{: .prf}
+>
+> ($\Rightarrow$) Suppose that $f$ is continuous and $G$ is open in $Y$. If $f^{-1}(G)$ is empty then it is open.
+> Let $x_0 \in f^{-1}(G)$ so that $f(x_0) \in G$, then there exists $\varepsilon$ such that $B_\varepsilon(f(x_0)) \subset G$.
+> Since $f$ is continuous, there exists $\delta$ such that $\sigma(f(x_0), f(x)) < \varepsilon$ whenever $\rho(x_0, x) < \delta$,
+> therefore $f(x) \in G$ and $x \in f^{-1}(G)$ so $B_\delta(x_0) \subset X$ and $x_0$ is an interior point. Hence, $f^{-1}(G)$ is open.
+>
+> ($\Leftarrow$) Suppose that $G$ is open implies $f^{-1}(G)$ is open. Given $x_0 \in X$ and $\varepsilon > 0$.
+> Since $B_\varepsilon(f(x_0))$ is open in $Y$, $f^{-1}(B_\varepsilon(f(x_0)))$ is open in $X$.
+> Therefore, there exists $\delta$ such that $x \in B_\delta(x_0)$ then $f(x) \in B_\varepsilon(f(x_0))$ which implies $f$ is continuous.
+>
+> The case for closed set can be derived from complements, i.e. if $E$ is any set, $f^{-1}(E) \cap f^{-1}(E') = \emptyset$ and $f^{-1}(E) \cup f^{-1}(E') = X$.
+
+Note that it is not true that $S$ being open in $X$ implies $f(S)$ being open in $Y$.
+
+In general for a bijective continuous function $f$, its inverse $f^{-1}$ needs not be continuous. We have a special notion if that is the case.
+
+> *Definition.*{: .def}
+> A continuous function $f: X \to Y$ is called a **homeomorphism** if its inverse $f^{-1}$ is also continuous.
+> The metric spaces $X$ and $Y$ are said to be **homeomorphic** if there exists a homeomorphism between them.
+
+By the above theorem we can see that if two metric spaces are homeomorphic then there is a bijection between the open (respectively closed) sets in the two spaces.
+
+> *Definition.*{: .def}
+> A bijection $f: X \to Y$ such that $\sigma(f(x_1), f(x_2)) = \rho(x_1, x_2)$ for all $x_1, x_2 \in X$ is called an **isometry**.
+> The metric spaces $X$ and $Y$ are said to be **isometric** if there eixsts an isometry between them.
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 3

@@ -154,7 +154,7 @@ For example, a subset of rational numbers has no interior points in $\mathbf{R}$
 
 > *Definition.*{: .def}
 > A subset $F \subseteq X$ is **closed** if $F$ contains all its limit points.
-> A subset $G \subseteq X$ is **open** if every point of $F$ is an interior point of $G$.
+> A subset $G \subseteq X$ is **open** if every point of $G$ is an interior point of $G$.
 
 From the above, since finite sets have no limit points, they are closed. It is possible for a subset to be both open and closed or neither open nor closed.
 For example, the empty set and the whole space is both open and closed and the interval $[0, 1)$ of $\mathbf{R}$ is neither open nor closed.
