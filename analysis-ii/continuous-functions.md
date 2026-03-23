@@ -102,6 +102,19 @@ By the above theorem we can see that if two metric spaces are homeomorphic then 
 > A bijection $f: X \to Y$ such that $\sigma(f(x_1), f(x_2)) = \rho(x_1, x_2)$ for all $x_1, x_2 \in X$ is called an **isometry**.
 > The metric spaces $X$ and $Y$ are said to be **isometric** if there eixsts an isometry between them.
 
+## Uniform Continuity
+
+Similar to pointwise convergence and uniform convergence of functions, we can do the same to define uniform continuity.
+
+> *Definition.*{: .def}
+> **[Uniform Continuity]**
+> Suppose that $f: X \to Y$ is a function of metric spaces $X$ and $Y$.
+> Then $f$ is said to be **uniformly continuous** on $X$ if
+>
+> $$
+  (\forall \varepsilon > 0)(\exists \delta)(\forall x_1, x_2 : \rho(x_1, x_2) < \delta) \; \sigma(f(x_1), f(x_2)) < \varepsilon
+  $$
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 3
