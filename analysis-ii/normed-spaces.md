@@ -281,7 +281,47 @@ For $\mathbf{R}$ and $\mathbf{C}$, we can have more specialized normed vector sp
 >
 > + $x \cdot x = \Vert x \Vert^2$ for all $x \in V$.
 
-The inner product associated with a given norm is unique. More results regarding these specialized spaces can be found in [inner product spaces](../linear-algebra/inner-product-spaces.md).
+The inner product associated with a given norm is unique. One particular important result is as follow.
+
+> *Theorem.*{: .thm}
+> **[Cauchy's Inequality]**
+> Let $V$ be a real or complex inner product space. Then for all $x, y \in V$,
+>
+> $$
+  \vert x \cdot y \vert \le \Vert x \Vert \Vert y \Vert
+  $$
+>
+> with equality holds iff $x, y$ are scalar multiple of each other.
+>
+> *Proof.*{: .prf}
+>
+> We have proved this couple of times for real inner product space. The case is trivial if either $x, y = 0_V$ so assume the contrary.
+>
+> To prove that using general setting of inner product space, we need some geometric intuition first.
+> Consider the fact that $\Vert \lambda x + y \Vert \ge 0$ for all $\lambda \in \mathbf{C}$, we need to first find $\lambda$ such that the norm is minimal.
+>
+> ![Vector Addition Optimization](../images/analysis-ii/cauchy-inequaility-visual.png)
+>
+> Using $\mathbf{R}^2$ as example, we can see that the norm is minimal if $(\lambda x + y) \perp x$ so we have
+>
+> $$
+  (\lambda x + y) \cdot x = \lambda \Vert x \Vert^2 + y \cdot x = 0 \qquad \implies \qquad \lambda = - { y \cdot x \over \Vert x \Vert^2 }
+  $$
+>
+> Therefore, with this particular value of $\lambda$, we have
+>
+> $$
+  \begin{align*}
+  0 \le \Vert \lambda x + y \Vert^2 &= (\lambda x + y) \cdot (\lambda x + y) \\
+  &= \vert \lambda \vert^2 \Vert x \Vert^2 + \lambda x \cdot y + \overline{ \lambda x \cdot y } + \Vert y \Vert^2 \\
+  &= {\vert x \cdot y \vert^2 \over \Vert x \Vert^2} - 2 { \vert x \cdot y \vert^2 \over \Vert x \Vert^2} + \Vert y \Vert^2 \\
+  \vert x \cdot y \vert &\le \Vert x \Vert \Vert y \Vert
+  \end{align*}
+  $$
+>
+> Moreover, $\Vert \lambda x + y \Vert = 0$ iff $y = - \lambda x$, i.e. a scalar multiple of each other.
+
+More results regarding these specialized spaces can be found in [inner product spaces](../linear-algebra/inner-product-spaces.md).
 
 ## References
 
