@@ -310,7 +310,7 @@ We can now bootstrap to higher dimensional spaces base on the standard basis of 
 > Non-zero vectors $\mathbf{x}, \mathbf{y}$ is defined to be **orthogonal** if $\mathbf{x} \cdot \mathbf{y} = 0$.
 
 > *Proposition.*{: .prop}
-> The Cauthy-Schwarz inequality holds.
+> The Cauchy-Schwarz inequality holds.
 
 The definition is consistent with that of $\mathbb{R}^3$ only when the $x_i$ and $y_i$ are components with respect to an orthonormal basis.
 
@@ -398,7 +398,7 @@ hence we can't derive the linearity of the first argument.
 > Non-zero vectors $\mathbf{u}, \mathbf{v}$ is defined to be **orthogonal** if $\mathbf{u} \cdot \mathbf{v} = 0$.
 
 > *Proposition.*{: .prop}
-> The Cauthy-Schwarz inequality holds.
+> The Cauchy-Schwarz inequality holds.
 
 ## Reference
 

@@ -265,7 +265,7 @@ Be noted that $\mathbf{e}_i$ means one of the basis vector for $i = 1, 2, 3$ ins
 {: #vector-triple-product}
 
 > *Proposition.*{: .prop}
-> Cauthy-Schwarz inequality can be proved by suffix notation.
+> Cauchy-Schwarz inequality can be proved by suffix notation.
 >
 > *Proof.*{: .prf}
 >

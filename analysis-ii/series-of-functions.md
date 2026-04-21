@@ -39,7 +39,7 @@ Similar to real number series, we have the following result.
 
 > *Proposition.*{: .prop}
 > **[Weierstrass M-test]**
-> Let $(f_n: X \to \mathbf{R}$ be a sequence of functions.
+> Let $(f_n: X \to \mathbf{R})$ be a sequence of functions.
 > If, for each $n$, there is a constant $M_n$ such that
 >
 > $$

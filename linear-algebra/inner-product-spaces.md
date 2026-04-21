@@ -20,7 +20,7 @@ title: Inner Product Spaces &#124; Linear Algebra
 Note that $\Vert v \Vert \ge 0$ with equality iff $v = 0$. Also, the norm determines the inner product because of the polarization identity.
 
 > *Theorem.*{: .thm}
-> **[Cauthy-Schwarz Inequality]**
+> **[Cauchy-Schwarz Inequality]**
 > Suppose that $V$ is an inner product space. For any $u, v \in V$,
 >
 > $$
