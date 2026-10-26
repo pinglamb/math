@@ -185,6 +185,24 @@ $$
 
 so it can be used to justify the inversion of the order of repeated limits.
 
+Note that for $f$ to be continuous at a point $c$, it doesn't require all the $f_n$ to be continuous.
+
+> *Proposition.*{: .prop}
+> Let the sequence of functions $f_n: X \to Y$ converge to $f$ uniformly on $X$.
+> If there are infinitely many $f_n$ being continuous at $c$, then $f$ is continuous at $c$.
+>
+> *Proof.*{: .prf}
+>
+> It is similar to the continuity proof instead of $\forall n > N$, we can always find $n_0 > N$ such that $f_{n_0}$ is continuous and therefore
+>
+> $$
+  \sigma(f(x), f(c)) \le \sigma(f(x), f_{n_0}(x)) + \sigma(f_{n_0}(x), f_{n_0}(c)) + \sigma(f_{n_0}(c), f(c)) < \varepsilon
+  $$
+>
+> so $f$ is continuous at $c$.
+
+It is true even if there are infinitely many $f_n$ being discontinuous at the same point.
+
 ## Integrability
 
 Again, pointwise convergence is not enough to preverse integrability. Suppose that $(r_n)$ is a sequence consisting all the rational numbers in $[0, 1]$ and consider the sequence of $f_n$ on $[0, 1]$ defined by
