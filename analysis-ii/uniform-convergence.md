@@ -280,7 +280,7 @@ Note that the proposition is only proved for finite interval, and is false for a
 
 ## Differentiability
 
-The relationship between uniform convergence and Differentiability is more subtle that uniform limit of differentiable functions need not be differentiable.
+The relationship between uniform convergence and differentiability is more subtle that uniform limit of differentiable functions need not be differentiable.
 Even if it were, the derivative is not necessary the same as the limit. For example, consider $f_n(x) = \vert x \vert^{1 + 1/n}$ where $f_n(x) \to f(x) = \vert x \vert$.
 For $x = 0$, the derivative of $f_n(x)$ is
 
@@ -292,7 +292,12 @@ but $f(x)$ is not differentiable at $x = 0$. Therefore, we need a stronger condi
 
 > *Proposition.*{: .prop}
 > Let $(f_n)$ be a sequence of real functions differentiable on a finite closed interval $[a, b]$.
-> Suppose that $(f_n(x))$ converges for at least one $x \in [a, b]$ and that $(f_n')$ converges uniformly on $[a, b]$.
+> Suppose that
+>
+> + $(f_n(x))$ converges for at least one $x \in [a, b]$; and
+>
+> + $(f_n')$ converges uniformly on $[a, b]$.
+>
 > Then $(f_n)$ converges uniformly on $[a, b]$ and the limit function $f$ is differentiable in $[a, b]$ with derivative $f' = \lim f_n'$.
 >
 > *Proof.*{: .prf}
@@ -348,6 +353,14 @@ but $f(x)$ is not differentiable at $x = 0$. Therefore, we need a stronger condi
   $$
 >
 > for $0 < \vert h \vert < \delta$ and $n > N$. Hence, $f'(x)$ exists and $f'(x) = \lim f_n'(x)$.
+
+To understand the two conditions, consider for any point $x$ in the interval, we can express it as
+
+$$
+f_n(x) = f_n(c) + \int_c^x f_n'(t)\,dt
+$$
+
+so for $f_n(x) \to f(x)$ uniformly we need to fix a reference point $c$ (first condition) and the slopes need to behave nicely (second condition).
 
 ## References
 
