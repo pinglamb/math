@@ -16,6 +16,8 @@ title: Home
 ## Methods
 {: .left}
 
+* [Fourier Series](methods/fourier-series.md)
+
 ## Linear Algebra
 {: .left}
 
