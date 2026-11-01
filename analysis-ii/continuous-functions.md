@@ -115,6 +115,65 @@ Similar to pointwise convergence and uniform convergence of functions, we can do
   (\forall \varepsilon > 0)(\exists \delta)(\forall x_1, x_2 : \rho(x_1, x_2) < \delta) \; \sigma(f(x_1), f(x_2)) < \varepsilon
   $$
 
+Apart from proving uniform continuity by the $\delta-\varepsilon$ condition, there are few other sufficient conditions we can check.
+
+> *Proposition.*{: .prop}
+> Any continuous function on a closed and bounded interval (i.e. compact) is uniformly continuous.
+>
+> *Proof.*{:. prf}
+>
+> Suppose $f: X \to Y$ is a continuous function with $X$ being compact. Suppose $f$ is not uniformly continuous,
+> then there is some $\varepsilon > 0$ such that for all $\delta = 1/n$, there is some $x_n, y_n$ such that
+> $\vert x_n - y_n \vert < 1/n$ but $\vert f(x_n) - f(y_n) \vert > \varepsilon$.
+>
+> Since $X$ is compact, by Bolzano-Weierstrass, there are subsequences $(x_{n_i}) \to x$ and $(y_{n_i}) \to x$.
+> By continuity, we have $f(x_{n_i}) \to f(x)$ and $f(y_{n_i}) \to f(x)$ but $\vert f(x_{n_i}) - f(y_{n_i}) \vert > \varepsilon$ for all $n_i$ which is a contradiction.
+
+> *Proposition.*{: .prop}
+> Suppose that $(f_n: X \to Y)$ is a sequence of uniformly continuous functions.
+> If $f_n \to f: X \to Y$ uniformly, then $f$ is uniformly continuous.
+>
+> *Proof.*{:. prf}
+>
+> Given $\varepsilon > 0$, $\exists \delta$ such that $\forall x, y$ with $\vert x - y \vert < \delta$, $\vert f_n(x) - f_n(y) \vert < \varepsilon$.
+> Also, $\exists N$ such that $\forall n \ge N$ and $\forall x$, $\vert f_n(x) - f(x) \vert < \varepsilon$.
+> Therefore,
+>
+> $$
+  \vert f(x) - f(y) \vert \le \vert f(x) - f_N(x) \vert + \vert f_N(x) - f_N(y) \vert + \vert f_N(y) - f(y) \vert < 3 \varepsilon
+  $$
+
+The following works for real-valued functions on $\mathbb{R}$.
+
+> *Proposition.*{: .prop}
+> **[Domain Splitting]** Suppose that $f: [a, \infty) \to \mathbb{R}$ is continuous and $f(x)$ tends to a finite limit as $x \to \infty$.
+> Then $f$ is uniformly continuous on $[a, \infty)$.
+>
+> *Proof.*{:. prf}
+>
+> Since $f(x) \to L$ as $x \to \infty$, $\exists X$ such that $\forall x > X$, $\vert f(x) - L \vert < \varepsilon$.
+> Therefore, $\exists \delta$ such that $\vert x - y \vert < \delta$ and $x, y > X$,
+>
+> $$
+  \vert f(x) - f(y) \vert \le \vert f(x) - L \vert + \vert L - f(y) \vert < 2\varepsilon
+  $$
+>
+> and $f$ is uniformly continuous on $(X, \infty)$. Since $[a, X+1]$ is compact, we also have $f$ being uniformly continuous on $[a, X+1]$.
+> Hence, $f$ is uniformly continuous on $[a, \infty)$.
+
+> *Proposition.*{: .prop}
+> Suppose that $f$ be differentiable and $f'$ is bounded. Then $f$ is uniformly continuous.
+>
+> *Proof.*{:. prf}
+>
+> By Mean Value Theorem, $\forall x, y$, there exists $c \in [x, y]$ such that $f(x) - f(y) = f'(c) (x - y) \le M (x - y)$.
+> Therefore, $\forall x, y$ such that $\vert x - y \vert < \varepsilon / \vert M \vert$, we have
+>
+> $$
+  \vert f(x) - f(y) \vert \le \vert M \vert \vert x - y \vert < M \left( {\varepsilon \over M} \right) = \varepsilon
+  $$
+
 ## References
 
 * J C Burkill _A Second Cource in Mathematical Analysis_, 1970 - Chapter 3
+* [Dexter Chua _Part IB - Analysis II_, 2015 - Chapter 3.1](https://dec41.user.srcf.net/notes/IB_M/analysis_ii.pdf)
