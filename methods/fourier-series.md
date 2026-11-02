@@ -46,7 +46,7 @@ so they form a basis of the function vector space.
   c_n = \cos \left( 2\pi n\theta \over L \right) \,,\qquad s_n = \sin \left( 2\pi n\theta \over L \right)
   $$
 >
-> The elements of the set $\Set{1, c_n, s_n}$ are mutually orthogonal to each other, with
+> The elements of the set $\Set{1, c_n, s_n}_{n=1}^\infty$ are mutually orthogonal to each other, with
 >
 > $$
   (c_n, c_m) = (s_n, s_m) = {1 \over 2} L \delta_{m,n} \,,\qquad (1, c_n) = (1, s_m) = (c_n, s_m) = 0
@@ -62,9 +62,9 @@ so they form a basis of the function vector space.
   \begin{align*}
   (1, c_n) &= \int_0^L \cos \left( 2\pi n\theta \over L \right) d\theta = \left[ {L \over 2\pi n } \sin \left( 2\pi n\theta \over L \right) \right]^L_0 = 0 \\
   (1, s_n) &= \int_0^L \sin \left( 2\pi n\theta \over L \right) d\theta = \left[ -{L \over 2\pi n } \cos \left( 2\pi n\theta \over L \right) \right]^L_0 = 0 \\
-  (c_n, s_m) &= {1 \over 2 } \int_0^L \sin \left( 2\pi (m+n)\theta \over L \right) + \sin \left( 2\pi (m-n)\theta \over L \right) d\theta = 0 \\
-  (c_n, c_m) &= {1 \over 2 } \int_0^L \cos \left( 2\pi (m-n)\theta \over L \right) + \cos \left( 2\pi (m+n)\theta \over L \right) d\theta = {1 \over 2} L \delta_{m,n} \\
-  (s_n, s_m) &= {1 \over 2 } \int_0^L \cos \left( 2\pi (m-n)\theta \over L \right) - \cos \left( 2\pi (m+n)\theta \over L \right) d\theta = {1 \over 2} L \delta_{m,n} \\
+  (c_n, s_m) &= {1 \over 2} \int_0^L \sin \left( 2\pi (m+n)\theta \over L \right) + \sin \left( 2\pi (m-n)\theta \over L \right) d\theta = 0 \\
+  (c_n, c_m) &= {1 \over 2} \int_0^L \cos \left( 2\pi (m-n)\theta \over L \right) + \cos \left( 2\pi (m+n)\theta \over L \right) d\theta = {1 \over 2} L \delta_{m,n} \\
+  (s_n, s_m) &= {1 \over 2} \int_0^L \cos \left( 2\pi (m-n)\theta \over L \right) - \cos \left( 2\pi (m+n)\theta \over L \right) d\theta = {1 \over 2} L \delta_{m,n} \\
   \end{align*}
   $$
 
@@ -75,20 +75,87 @@ $$
 $$
 
 > *Definition.*{: .def}
-> For a periodic function $f(x)$ of period $L$, the **Fourier coefficients** are given by
+> For a periodic function $f(\theta)$ of period $L$, the **real Fourier coefficients** are given by
 >
 > $$
   \begin{align*}
-  a_n = {2 \over L} \int_0^L f(x) \cos \left( 2\pi n\theta \over L \right) d\theta \\
-  b_n = {2 \over L} \int_0^L f(x) \sin \left( 2\pi n\theta \over L \right) d\theta \\
+  a_n = {2 \over L} \int_0^L f(\theta) \cos \left( 2\pi n\theta \over L \right) d\theta \\
+  b_n = {2 \over L} \int_0^L f(\theta) \sin \left( 2\pi n\theta \over L \right) d\theta \\
   \end{align*}
   $$
 >
 > with
 >
 > $$
-  f(x) = {a_0 \over 2} + \sum_{n=1}^\infty \left[ a_n \cos \left( 2\pi n\theta \over L \right) + b_n \sin \left( 2\pi n\theta \over L \right) \right]
+  f(\theta) = {a_0 \over 2} + \sum_{n=1}^\infty \left[ a_n \cos \left( 2\pi n\theta \over L \right) + b_n \sin \left( 2\pi n\theta \over L \right) \right]
   $$
+
+The expansion above contains both sine and cosine terms so it is naturally to write it more compactly using complex exponential expansion.
+
+> *Proposition.*{: .prop}
+> Define
+>
+> $$
+  e_n = \exp \left( 2\pi in\theta \over L \right)
+  $$
+>
+> The elements of the set $\Set{1, e_n}_{n=-\infty}^\infty$ are mutually orthogonal to each other, with
+>
+> $$
+  (e_n, e_m) = L \delta_{m,n}
+  $$
+>
+> with $(f, g) = \int_0^L f(\theta)^\ast g(\theta) d\theta$.
+>
+> *Proof.*{: .prf}
+>
+> When $m \not= n$,
+>
+> $$
+  \begin{align*}
+  (e_n, e_m) &= \int_0^L \exp \left( 2\pi i(m-n)\theta \over L \right) d\theta \\
+  &= \left[ {L \over 2\pi i (m-n)} \exp \left( {2\pi i(m-n)\theta \over L} \right) \right]_0^L = 0
+  \end{align*}
+  $$
+>
+> When $m = n$, $(e_n, e_n) = \int_0^L d\theta = L$.
+
+> *Definition.*{: .def}
+> For a periodic function $f(\theta)$ of period $L$, the **complex Fourier coefficients** are given by
+>
+> $$
+  c_n = {1 \over L} \int_0^L f(\theta) \exp \left( -2\pi in\theta \over L \right) d\theta
+  $$
+>
+> with
+>
+> $$
+  f(\theta) = \sum_{n=-\infty}^\infty c_n \exp \left( 2\pi in\theta \over L \right)
+  $$
+
+> *Proposition.*{: .prop}
+> Let $a_n, b_n$ be the real Fourier coefficients and $c_n$ be the complex Fourier coefficients of the same function $f$.
+> Then
+>
+> $$
+  c_n = {1 \over 2} (a_n - i b_n) \,,\quad c_{-n} = {1 \over 2} (a_n + i b_n)
+  $$
+>
+> and $c_{-n} = c_n^\ast$ if $f$ is real-valued.
+>
+> *Proof.*{: .prf}
+>
+> By de Moivre's theorem, $\exp(in\theta) = \cos n\theta + i \sin n\theta$. Therefore,
+>
+> $$
+  \begin{align*}
+  c_n &= {1 \over L} \int_0^L f(\theta) \exp \left( -2\pi in\theta \over L \right) d\theta \\
+  &= {1 \over 2} \left( {2 \over L} \int_0^L f(\theta) \cos \left( -2\pi n\theta \over L \right) d\theta +  {2i \over L} \int_0^L f(\theta) \sin \left( -2\pi n\theta \over L \right) d\theta \right) \\
+  &= {1 \over 2} (a_n - i b_n)
+  \end{align*}
+  $$
+>
+> If $f$ is real-valued, $a_n = a_n^\ast$ and $b_n = b_n^\ast$ so $c_n^\ast = c_{-n}$.
 
 A full discussion about the possiblity to expand a function as sum of mutually orthogonal functions will be provided later.
 
