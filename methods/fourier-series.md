@@ -159,6 +159,78 @@ The expansion above contains both sine and cosine terms so it is naturally to wr
 
 A full discussion about the possiblity to expand a function as sum of mutually orthogonal functions will be provided later.
 
+## Convergence
+
+> *Theorem.*{: .thm}
+> **[Dirichlet Conditions]**
+> If a function $f(x)$ fulfills the following conditions:
+>
+> + the function must be periodic;
+>
+> + it must be single-valued and continuous except possibly at a finite number of finite discontinuities;
+>
+> + it must have only a finite number of maxima and minima within one period;
+>
+> + the integral over one period of $\vert f(x) \vert$ must converge,
+>
+> then the Fourier series converges to $f(x)$ at all points where $f(x)$ is continuous.
+
+The behaviour of the Fourier series at the point of discontinuity is stated below.
+
+> *Proposition.*{: .prop}
+> Suppose that $f(\theta)$ is discontinuous at $\theta_0$, then its Fourier series converges to
+>
+> $$
+  {1 \over 2} f(\theta_0^+) + f(\theta_0^-)
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Consider the _sawtooth function_ defined by
+>
+> $$
+  g(\theta) = \theta \quad \text{for} \quad \theta \in [-\pi, \pi)
+  $$
+>
+> which is discontinuous at $\theta = -\pi$. We then found that
+>
+> $$
+  g(\theta) = 2 \sum_{n=1}^\infty {(-1)^{n+1} \over n} \sin n\theta
+  $$
+>
+> which converges to $0$ at $\theta = -\pi$. Suppose that $f(\theta)$ is a function that is discontinuous, say at $\theta = \pi$.
+> Define
+>
+> $$
+  F(\theta) = \begin{cases}
+  f(\theta) + \dfrac{f(\pi^+) - f(\pi^-)}{2\pi} g(\theta) & \text{for } \theta \not= \pi \\[2ex]
+  \dfrac{f(\pi^+) + f(\pi^-)}{2} & \text{for } \theta = \pi
+  \end{cases}
+  $$
+>
+> and it is continuous at $x = \pi$.
+> Since $F(\theta)$ is a linear combination of $f$ and $g$ so its Fourier series converges as long as those of $f$ and $g$ converges,
+> and it converges to $F(\pi)$ at $x = \pi$. Let $S_n F$, $S_n f$ and $S_n g$ be the corresponding partial Fourier series, we have
+>
+> $$
+  S_n F(\pi) = S_n f(\pi) + \dfrac{f(\pi^+) - f(\pi^-)}{2\pi} S_n g(\pi) = S_n f(\pi)
+  $$
+>
+> since $S_n g(\pi) = 0$ as shown above. Hence, $S_n f(\pi) \to (f(\pi^+) + f(\pi^-))/2$ as $n \to \infty$.
+
+For function that is not periodic, we can first restirct the domain to a certain range, e.g. $[-\pi, \pi)$ and define $f(\theta) = f(\theta + 2n\pi)$ so to make it $2\pi$-periodic.
+There are two points to consider when doing so. We might want to choose the range in a way that the endpoints are continuous when it got extended.
+As shown above, if that is not the case, the Fourier series will converge to the average instead of the original value.
+Also, we would want to extend it in the way that the resulting function is either odd or even so to make the Fourier series contain only sine (odd) or cosine (even) terms for simplicity.
+
+Integration and differentiation can be used to derive new Fourier series from known ones.
+Since integration is a smoothing operation, the new series is guaranteed to converge to the integral as long as original function converges.
+However, for differentiation, the resulting series might not converge as each time we are adding an extra $n$ to each term.
+In general, the convergence of series we got after differentiation is related to the rate of decay of Fourier coefficients of the original function.
+Through integration by parts, we will find that if we meet a discontinuity after differentiating $k$ times then the Fourier coefficients decays at $O(1/n^{k+1})$.
+
+## Parseval's Theorem
+
 ## Refernces
 
 * K.F. Riley _Mathematical Methods for Physics and Engineering, 2006 - Chapter 12
