@@ -218,8 +218,8 @@ The behaviour of the Fourier series at the point of discontinuity is stated belo
 >
 > since $S_n g(\pi) = 0$ as shown above. Hence, $S_n f(\pi) \to (f(\pi^+) + f(\pi^-))/2$ as $n \to \infty$.
 
-For function that is not periodic, we can first restirct the domain to a certain range, e.g. $[-\pi, \pi)$ and define $f(\theta) = f(\theta + 2n\pi)$ so to make it $2\pi$-periodic.
-There are two points to consider when doing so. We might want to choose the range in a way that the endpoints are continuous when it got extended.
+For function that is not periodic, we can first restirct the domain to a certain interval, e.g. $[-\pi, \pi)$ and define $f(\theta) = f(\theta + 2n\pi)$ so to make it $2\pi$-periodic.
+There are two points to consider when doing so. We might want to choose the interval in a way that the endpoints are continuous when it got extended.
 As shown above, if that is not the case, the Fourier series will converge to the average instead of the original value.
 Also, we would want to extend it in the way that the resulting function is either odd or even so to make the Fourier series contain only sine (odd) or cosine (even) terms for simplicity.
 
@@ -230,6 +230,48 @@ In general, the convergence of series we got after differentiation is related to
 Through integration by parts, we will find that if we meet a discontinuity after differentiating $k$ times then the Fourier coefficients decays at $O(1/n^{k+1})$.
 
 ## Parseval's Theorem
+
+Parseval's theorem states that the sum of moduli squared of the complex Fourier coefficients is equal to the average value of $\vert f(\theta) \vert^2$ over one period.
+
+> *Theorem.*{: .thm}
+> **[Parseval's Theorem]**
+>
+> $$
+  {1 \over L} \int_0^L \vert f(\theta) \vert^2 d\theta = \sum_{n=-\infty}^\infty |c_n|^2 = \left({a_0 \over 2}\right)^2 + {1 \over 2} \sum_{n=1}^\infty (a_n + b_n)^2
+  $$
+>
+> *Proof.*{: .prf}
+>
+> Let $f(\theta)$ and $g(\theta)$ be two periodic functions with period $L$ in which
+>
+> $$
+  \begin{align*}
+  f(\theta) &= \sum_{n=-\infty}^\infty c_r \exp \left( {2\pi in\theta \over L} \right) \\
+  g(\theta) &= \sum_{n=-\infty}^\infty \gamma_r \exp \left( {2\pi in\theta \over L} \right) \\
+  \end{align*}
+  $$
+>
+> Thus,
+>
+> $$
+  f(\theta)g^\ast(\theta) = \sum_{n=-\infty}^\infty c_r g^\ast(\theta) \exp \left( {2\pi in\theta \over L} \right) \\
+  $$
+>
+> and
+>
+> $$
+  \begin{align*}
+  {1 \over L} \int_0^L f(\theta)g^\ast(\theta) d\theta
+  &= \sum_{n=-\infty}^\infty c_r { 1 \over L } \int_0^L g^\ast(\theta) \exp \left( {2\pi in\theta \over L} \right) d\theta \\
+  &= \sum_{n=-\infty}^\infty c_r \left[ { 1 \over L } \int_0^L g(\theta) \exp \left( {-2\pi in\theta \over L} \right) d\theta \right]^\ast \\
+  &= \sum_{n=-\infty}^\infty c_r \gamma_r^\ast
+  \end{align*}
+  $$
+>
+> By having $g(\theta) = f(\theta)$, we obtain Parseval's Theorem.
+
+Parseval's theorem can be viewed as an infinite dimensional version of Pythagoras' theorem, and it can be used to find the sum of some series, e.g. $\sum 1/n^4 = \pi^4/90$.
+
 
 ## Refernces
 
