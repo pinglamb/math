@@ -123,7 +123,7 @@ If two metrics are equivalent, the topological properties are preserved between 
   0 < \rho(a, e_n) < 1/n
   $$
 >
-> The sequence $\Set{x_n}$ satisfies the second condition, in which implies the first.
+> The sequence $\Set{e_n}$ satisfies the second condition, in which implies the first.
 >
 > ($\Leftarrow$) First condition obviously implies $a$ is a limit point. By definition, the second condition implies that
 >
@@ -134,6 +134,7 @@ If two metrics are equivalent, the topological properties are preserved between 
 > so there must be $e = e_n \not= a$ satisfying $0 < \rho(a, e) < \varepsilon$.
 
 These conditions show that a finite set cannot have a limit point. Also, a limit point of $E$ may or may not belong to $E$.
+Therefore, limit points of a subset, as the name suggested, are elements in the parent set such that they are limits of some sequences in the subset.
 
 > *Definition.*{: .def}
 > Given $E \subseteq X$, $e \in E$ is an **isolated point** of $E$ if it is not a limit point, i.e.
@@ -171,7 +172,7 @@ For example, the empty set and the whole space is both open and closed and the i
 > Otherwise, let $x$ be a limit point of $F$ then there is a sequence $x_n \to x$ such that $x \in F$, so $F$ contains all its limit points.
 
 > *Proposition.*{: .prop}
-> A set $G$ is open iff $G'$ is closed. A set $F$ is closed iff $F'$ is open.
+> A set $G$ is open iff $G' = (X - G)$ is closed. A set $F$ is closed iff $F'$ is open.
 >
 > *Proof.*{: .prf}
 >

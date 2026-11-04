@@ -9,11 +9,12 @@ title: Continuous Functions &#124; Analysis II
 The notion of continuity is based on that of limit so we define that for functions of arbitrary metric spaces first.
 
 > *Definition.*{: .def}
+> **[Limit of Function]**
 > Let $(X, \rho)$ and $(Y, \sigma)$ be metric spaces and $f: E \to Y$ with $E \subseteq X$ be a function and $x_0$ be a limit point of $E$ and $y_0 \in Y$.
 > Then $f(x) \to y_0$ as $x \to x_0$ or $\lim_{x \to x_0} f(x) = y_0$ if
 >
 > $$
-  (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in E : 0 < \rho(x, x_0) < \delta) \; \sigma(f(x), y_0) < \varepsilon
+  (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in E) \; 0 < \rho(x, x_0) < \delta \implies \sigma(f(x), y_0) < \varepsilon
   $$
 
 The point $x_0$ doesn't have to be in the domain of the function.
@@ -30,7 +31,7 @@ The point $x_0$ doesn't have to be in the domain of the function.
   0 < \rho(x, x_0) < \delta \implies \sigma(f(x), y_0) < \varepsilon
   $$
 >
-> On the other hand, for a sequence such that $x_n to x_0$ as $n \to \infty$, there exists $N > 0$ such that for all $n > N$,
+> On the other hand, for a sequence such that $x_n \to x_0$ as $n \to \infty$, there exists $N > 0$ such that for all $n > N$,
 > $\rho(x_n, x_0) < \delta$ and therefore $f(x_n) \to y_0$ as $n \to \infty$.
 >
 > ($\Leftarrow$) Suppose that whenever $x_n \to x_0$, $f(x_n) \to y_0$. Assume $f(x) \not\to y_0$ as $x \to x_0$,
@@ -53,10 +54,10 @@ We can now naturally extend the definition of continuity to functions of metric 
 > Then $f$ is **continuous** at the point $x_0 \in X$ if
 >
 > $$
-  (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in X: \rho(x, x_0) < \delta) \; \sigma(f(x), f(x_0)) < \varepsilon
+  (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in X) \; \rho(x, x_0) < \delta \implies \sigma(f(x), f(x_0)) < \varepsilon
   $$
 >
-> (or $f(B_\delta(x_0)) \subset B_\varepsilon(f(x_0))$).
+> or equivalently $f(B_\delta(x_0)) \subset B_\varepsilon(f(x_0))$.
 
 The definition implies that $f$ is continuous at a limit point $x_0$ if $f(x) \to f(x_0)$ as $x \to x_0$.
 Also, $f$ is continuous at all isolated points of $X$ since there is always $\delta$ such that $x_0$ is the only point in $B_\delta(x_0)$.
@@ -112,7 +113,7 @@ Similar to pointwise convergence and uniform convergence of functions, we can do
 > Then $f$ is said to be **uniformly continuous** on $X$ if
 >
 > $$
-  (\forall \varepsilon > 0)(\exists \delta)(\forall x_1, x_2 : \rho(x_1, x_2) < \delta) \; \sigma(f(x_1), f(x_2)) < \varepsilon
+  (\forall \varepsilon > 0)(\exists \delta)(\forall x_1, x_2) \; \rho(x_1, x_2) < \delta \implies \sigma(f(x_1), f(x_2)) < \varepsilon
   $$
 
 Apart from proving uniform continuity by the $\delta-\varepsilon$ condition, there are few other sufficient conditions we can check.
@@ -164,7 +165,7 @@ The following works for real-valued functions on $\mathbb{R}$.
 > *Proposition.*{: .prop}
 > Suppose that $f$ be differentiable and $f'$ is bounded. Then $f$ is uniformly continuous.
 >
-> *Proof.*{:. prf}
+> *proof.*{:. prf}
 >
 > By Mean Value Theorem, $\forall x, y$, there exists $c \in [x, y]$ such that $f(x) - f(y) = f'(c) (x - y) \le M (x - y)$.
 > Therefore, $\forall x, y$ such that $\vert x - y \vert < \varepsilon / \vert M \vert$, we have
@@ -172,6 +173,34 @@ The following works for real-valued functions on $\mathbb{R}$.
 > $$
   \vert f(x) - f(y) \vert \le \vert M \vert \vert x - y \vert < M \left( {\varepsilon \over M} \right) = \varepsilon
   $$
+
+## Lipschitz Functions
+
+> *Definition.*{: .def}
+> **[Lipschitz Function]**
+> Suppose that $f: X \to Y$ is a function of metric spaces $X$ and $Y$.
+> Then $f$ is said to be **Lipschitz** on $X$ if
+>
+> $$
+  (\exists K \in [0, \infty))(\forall x_1, x_2 \in X) \; \sigma(f(x_1), f(x_2)) \le K \rho(x_1, x_2)
+  $$
+>
+> Any such $K$ is called a **Lipschitz constant**.
+
+> *Proposition.*{: .prop}
+> All Lipschitz functions are uniformly continuous.
+>
+> *proof.*{:. prf}
+>
+> By choosing $\delta < \varepsilon / K$, for all $x, y$ such that $\rho(x, y) < \varepsilon / K$,
+>
+> $$
+  \sigma(f(x), f(y)) \le K \rho(x, y) < \varepsilon
+  $$
+
+The converse is not true similar to continuity doesn't imply uniform continuity.
+
+For two metrics to be Lipschitz equivalent is the same of saying the two identity maps $i : (X, \rho\_1) \to (X, \rho\_2)$ and $i' : (X, \rho\_2) \to (X, \rho\_1)$ are Lipschitz, hence the name.
 
 ## References
 
