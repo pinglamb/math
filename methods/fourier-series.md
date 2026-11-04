@@ -226,7 +226,9 @@ Also, we would want to extend it in the way that the resulting function is eithe
 Integration and differentiation can be used to derive new Fourier series from known ones.
 Since integration is a smoothing operation, the new series is guaranteed to converge to the integral as long as original function converges.
 However, for differentiation, the resulting series might not converge as each time we are adding an extra $n$ to each term.
-In general, the convergence of series we got after differentiation is related to the rate of decay of Fourier coefficients of the original function.
+In general, for the differentiated Fourier series to equal to the Fourier series of the derivatives,
+we need $f(\theta)$ to be everywhere continuous and $f'(\theta)$ satisfy the Dirichlet conditions.
+The convergence of series we got after differentiation is related to the rate of decay of Fourier coefficients of the original function.
 Through integration by parts, we will find that if we meet a discontinuity after differentiating $k$ times then the Fourier coefficients decays at $O(1/n^{k+1})$.
 
 ## Parseval's Theorem
@@ -271,7 +273,6 @@ Parseval's theorem states that the sum of moduli squared of the complex Fourier 
 > By having $g(\theta) = f(\theta)$, we obtain Parseval's Theorem.
 
 Parseval's theorem can be viewed as an infinite dimensional version of Pythagoras' theorem, and it can be used to find the sum of some series, e.g. $\sum 1/n^4 = \pi^4/90$.
-
 
 ## Refernces
 
