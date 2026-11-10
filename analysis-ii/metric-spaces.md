@@ -41,6 +41,8 @@ Metric spaces provide a more general setup for analysis, in which the fundamenta
 > Let $(X, \rho)$ be a metric space and $Y \subset X$ and $\sigma: Y \times Y \to \mathbf{R}$ be the restriction of $\rho$ to $Y \times Y$, i.e. $\sigma(y, y') = \rho(y, y')$ for $y, y' \in Y$.
 > Then $\sigma$ is a metric _induced_ by $(X, \rho)$ on $Y$ and $(Y, \sigma)$ is a **metric subspace** of $(X, \rho)$.
 
+## Convergence
+
 We can now then extend the definition of convergence of sequences of real numbers to sequences of points in a metric space.
 
 > *Definition.*{: .def}
@@ -88,6 +90,20 @@ A sufficient but not necessary condition for metrics to be equivalent is stated 
 > for all $x, y \in X$.
 
 If two metrics are equivalent, the topological properties are preserved between them.
+
+By extracting the concept of distance out, the underlying elements become a set of labels, and then the metric function describes the spatial arrangement of them.
+Therefore, we have full control of which limit (i.e. element/label) a sequence converges to.
+For example, for the set $[0, 1]$, under usual metric $\vert x - y \vert$, $1/n \to 0$ as $n \to \infty$. If we define
+
+$$
+\sigma(x) = \begin{cases}
+0 & x = 1 \\
+1 & x = 0 \\
+x & 0 < x < 1
+\end{cases}
+$$
+
+and $\rho(x, y) = \vert \sigma(x) - \sigma(y) \vert$, it swaps the "position" of $0$ and $1$ and now we will have $1/n \to 1$ as $n \to \infty$.
 
 ## Open and Closed Sets
 
