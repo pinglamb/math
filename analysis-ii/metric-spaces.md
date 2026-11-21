@@ -41,6 +41,20 @@ Metric spaces provide a more general setup for analysis, in which the fundamenta
 > Let $(X, \rho)$ be a metric space and $Y \subset X$ and $\sigma: Y \times Y \to \mathbf{R}$ be the restriction of $\rho$ to $Y \times Y$, i.e. $\sigma(y, y') = \rho(y, y')$ for $y, y' \in Y$.
 > Then $\sigma$ is a metric _induced_ by $(X, \rho)$ on $Y$ and $(Y, \sigma)$ is a **metric subspace** of $(X, \rho)$.
 
+## Open Ball
+
+The following definition is handy when we study topological properties.
+
+> *Definition.*{: .def}
+> Let $(X, \rho)$ be a metric space and $a \in X$ and $r \in \mathbf{R}_{> 0}$.
+> The **open ball** with centre $a$ and radius $r$ is defined by
+>
+> $$
+  B_r(a) = \Set{x \in X : \rho(a, x) < r}
+  $$
+
+The open ball might not be exactly a ball, for example the open "ball" of metric space $(B[a, b], \rho)$ above is a strip.
+
 ## Convergence
 
 We can now then extend the definition of convergence of sequences of real numbers to sequences of points in a metric space.

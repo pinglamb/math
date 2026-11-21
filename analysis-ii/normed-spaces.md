@@ -182,9 +182,10 @@ Unlike the norms defined for finite-dimensional spaces, the similar norms for in
 >
 > *Proof.*{: .prf}
 >
-> Obviously, we have $\Vert (x_n) \Vert_\infty \le \Vert (x_n) \Vert_2$.
-> However, there is no constant $mu$ such that $\Vert (x_n) \Vert_2 \le \mu \Vert (x_n) \Vert_\infty$.
-> For example, the sequence with first $b^2 + 1$ terms $1$ and $0$ for the rest doesn't satisfy the inequality.
+> We have $\Vert (x_n) \Vert_\infty \le \Vert (x_n) \Vert_2$ since $\Vert (x_n) \Vert_2 = \sqrt{ (\sup \vert x_n \vert)^2 + ... } \ge \sup \vert x_n \vert$.
+>
+> However, there is no constant $\mu$ such that $\Vert (x_n) \Vert_2 \le \mu \Vert (x_n) \Vert_\infty$.
+> For example, for a fixed $\mu$, the sequence with first $\mu^2 + 1$ terms $1$ and $0$ for the rest doesn't satisfy the inequality.
 
 ## Function Spaces
 
