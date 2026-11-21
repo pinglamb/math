@@ -8,6 +8,7 @@ title: Home
 
 * [Metric Spaces](analysis-ii/metric-spaces.md)
 * [Normed Spaces](analysis-ii/normed-spaces.md)
+* [Open Sets](analysis-ii/open-sets.md)
 * [Completeness and Compactness](analysis-ii/completeness-compactness.md)
 * [Uniform Convergence](analysis-ii/uniform-convergence.md)
 * [Series of Functions](analysis-ii/series-of-functions.md)
