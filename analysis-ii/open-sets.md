@@ -5,6 +5,8 @@ title: Open Sets &#124; Analysis II
 
 # Open Sets
 
+Open sets generalize the idea of open ball that will more widely applicable to the study of topology.
+
 > *Definition.*{: .def}
 > Let $(X, \rho)$ be a metric space and $a \in X$ and $r \in \mathbf{R}_{> 0}$.
 > The **open ball** with centre $a$ and radius $r$ is defined by
@@ -12,6 +14,99 @@ title: Open Sets &#124; Analysis II
 > $$
   B_r(a) = \Set{x \in X : \rho(a, x) < r}
   $$
+
+The open ball might not be exactly a ball, for example the open "ball" of $B\_\varepsilon(f)$ in $C[a, b]$ with $\sup$ metric is a strip with width $2\varepsilon$.
+
+> *Definition.*{: .def}
+> Let $(X, \rho)$ be a metric space and $U \subseteq X$.
+> Then $U$ is **open** if for every $x \in U$ there exists $\varepsilon_x > 0$ such that $B_{\varepsilon_x}(x) \subseteq U$.
+
+> *Proposition.*{: .prop}
+> Every open ball is an open set.
+>
+> *Proof.*{: .prf}
+>
+> By definition, for every $x \in B\_r(a)$, we have $\rho(a, x) < r$. Therefore, by having $0 < \varepsilon < r - \rho(a, x)$,
+> every $y \in B\_\varepsilon(x)$ has $\rho(a, y) \le \rho(a, x) + \rho(x, y) < r$ so $y \in B\_r(a)$.
+> Hence, $B\_\varepsilon(x) \subseteq B\_r(a)$.
+
+The geometric meaning of open set is that there are no "boundary" points, i.e. any point in the set can go some positive distance without going outside.
+A set being open or not is with respect to the underlying metric space (the set and the metric).
+For example, the interval $[0, 1)$ is not open in $\mathbb{R}$ but open in $[0, 1)$.
+
+> *Proposition.*{: .prop}
+> The intersection of a finite number of open sets is open.
+>
+> *Proof.*{: .prf}
+>
+> Let $U\_1, ..., U\_n$ be open sets. For any $x \in \bigcap U\_i$, there exists $\varepsilon_i > 0$ such that $B\_{\varepsilon_i}(x) \subseteq U\_i$.
+> Take $\varepsilon = \min \varepsilon\_i > 0$, for any $y \in B\_{\varepsilon}(x)$, $d(x, y) < \varepsilon \le \varepsilon_i$ so $y \in U\_i$ for all $i$ and $y$ is in the intersection.
+> Hence, $B\_{\varepsilon}(x) \subseteq \bigcap U\_i$.
+
+It is generally not true for infinite number of open sets. For example, the intervals $(-1/n, 1/n)$ is open in $\mathbb{R}$ while their intersection $\set{0}$ is not open.
+
+> *Proposition.*{: .prop}
+> The union of any collection of open sets is open.
+>
+> *Proof.*{: .prf}
+>
+> Let $I$ be an indexing set. For any $x \in \bigcup_{i \in I} U\_i$, we have $x \in U\_{i_0}$ for some $i\_0 \in U\_i$
+> so there exists $\varepsilon > 0$ such that $B\_\varepsilon(x) \subseteq U\_i$ and hence $B\_\varepsilon(x) \subseteq \bigcup U\_i$.
+
+It shows that open sets are more flexible then open balls since union or intersection of open balls need not be open ball again.
+
+## Closed Sets
+
+> *Definition.*{: .def}
+> A subset $U \subseteq X$ is **closed** in $X$ if its complement $X \setminus U$ is open in $X$.
+
+Intuitively, a set is closed if it contains all its "boundary" points.
+Note that a set can be both open and closed such as $\emptyset$ and $X$ in $X$ or neither open or closed such as $[0, 1)$ in $\mathbb{R}$.
+
+Apart from typical example like $[0, 1]$ being closed in $\mathbb{R}$, we also have subset $\set{f \in C[0, 1] : f(1) = 0}$ being closed in $C[0, 1]$ under $\sup$ metric.
+It is because for any function $f \in \set{f \in C[0, 1] : f(1) \not= 0}$, $g \in B\_{\vert g(1) \vert / 2}(f)$ also satisfies $g(1) \not= 0$.
+
+> *Proposition.*{: .prop}
+> The union of a finite number of closed sets is closed.
+> The intersection of any collection of closed sets is closed.
+>
+> *Proof.*{: .prf}
+>
+> By taking complements and De Morgan's Laws.
+
+## Closure
+
+Since general subsets of a metric space $X$ is likely to be neither open or closed in $X$, we shall discuss how we can derive the related open and closed sets.
+
+> *Definition.*{: .def}
+> Suppose that $U$ is a subset of a metric space $X$ and $x \in X$.
+> Then $x$ is a **point of closure** of $U$ in $X$ if for any $\varepsilon > 0$, we have $B\_\varepsilon(x) \cap U \not= \emptyset$.
+> The **closure** of $U$ in $X$, denoted by $\overline{U}$, is the set of all points of closure of $U$ in $X$.
+
+The following concept is often important in analysis.
+
+> *Definition.*{: .def}
+> A subset $U$ of a metric space $X$ is said to be **dense** in $X$ if $\overline{U} = X$.
+
+> *Proposition.*{: .prop}
+> Let $U, V$ be subsets of a metric space $X$. Then
+>
+> + $U \subseteq \overline{U}$;
+>
+> + $U \subseteq V$ implies $\overline{U} \subseteq \overline{V}$;
+>
+> + $U$ is closed in $X$ iff $\overline{U} = U$;
+>
+> + $\overline{\overline{U}} = \overline{U}$;
+>
+> + $\overline{U}$ is closed in $X$;
+>
+> + $\overline{U}$ is the smallest closed subset of $X$ containing $U$.
+
+## Limit Points
+
+## Bounded Sets
+
 
 > *Definition.*{: .def}
 > Given $E \subseteq X$, $a \in X$ is said to be a **limit point** of $E$ if
@@ -99,25 +194,6 @@ For example, the empty set and the whole space is both open and closed and the i
 
 Since convergence of sequences to the same limit is preserved between equivalent metrics, together with the above two propositions,
 we can see that metric spaces with equivalent metrics have the same set of open and closed sets, and therefore preserve the topological properties.
-
-> *Proposition.*{: .prop}
-> The union of any collection of open sets is open. The intersection of any collection of closed sets is closed.
->
-> *Proof.*{: .prf}
->
-> Let $x \in \bigcup G$, then $x$ is an interior point of at least one of the open set, say $G^\ast$.
-> Thus, $B_\delta(x) \subset G^\ast$ which implies $B_\delta(x) \subset \bigcup G$ and every point is an interior point.
->
-> If $F$ is closed, $F'$ is open. Therefore, the complement of the intersection of closed sets, i.e.
->
-> $$
-  \left( \bigcap F \right)' = \bigcup F'
-  $$
->
-> is a collection of open sets which is open. Hence the intersection itself is closed.
-
-> *Proposition.*{: .prop}
-> The intersection of finite collection of open sets is open. The union of finite collection of closed sets is closed.
 
 > *Proposition.*{: .prop}
 > Let $(Y, \sigma)$ be a metric subspace of $(X, \rho)$. Then a set is open in $(Y, \sigma)$ iff there exists an open set $G$ in $(X, \rho)$ such that $E = Y \cap G$.

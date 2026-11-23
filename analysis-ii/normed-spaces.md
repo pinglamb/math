@@ -262,8 +262,9 @@ The Bolzano-Weierstrass Theorem can be generalized for finite-dimensional normed
   $$
 >
 > so both $(y_k)$ and $((x_k)_n)$ are bounded.
-> By induction hypothesis, there is a subsequence $(y\_{n\_k})$ converges to $y$ and by Bolzano-Weierstrass theorem in $\mathbf{R}$ there is a further subsequence $((x\_{n_k'})\_n)$ of $((x\_{n_k})\_n)$ that converges to $x_n$.
-> Therefore, $x\_{n_k'} \to (y, x_n)$.
+> By induction hypothesis, there is a subsequence $(y\_{k\_j})$ of $(y\_k)$ converges to $y \in \mathbb{R}^{n-1}$ and
+> by Bolzano-Weierstrass theorem in $\mathbf{R}$ there is a further subsequence $((x\_{k\_{jl}})\_n)$ of $((x\_{k\_j})\_n)$ that converges to $y_n \in \mathbb{R}$.
+> Therefore, $x\_{k\_{jl}} \to (y, y_n)$.
 
 The theorem however is generally not true for normed spaces. For example, consider $(\ell^\infty, \Vert \cdot \Vert_\infty)$.
 The sequence $((x\_k)\_n) = ((\delta\_{nk}))$ converges component-wise to the zero element $0 = (0, ...)$ but the sequence itself doesn't converge to the zero element since $\Vert (x_n) - (0) \Vert_\infty = 1$.

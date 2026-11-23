@@ -53,8 +53,6 @@ The following definition is handy when we study topological properties.
   B_r(a) = \Set{x \in X : \rho(a, x) < r}
   $$
 
-The open ball might not be exactly a ball, for example the open "ball" of metric space $(B[a, b], \rho)$ above is a strip.
-
 ## Convergence
 
 We can now then extend the definition of convergence of sequences of real numbers to sequences of points in a metric space.
